@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Irving W. Washington — executive, board leader, speaker, writer, husband, dad and lifelong learner." />
+  <title>Irving W. Washington</title>
+  <style>
+    :root{
+      --ink:#101722;
+      --navy:#071522;
+      --navy-2:#10273d;
+      --blue:#4d84ba;
+      --blue-light:#dbe8f3;
+      --cream:#f6f2eb;
+      --paper:#fffdf9;
+      --line:#d8d9d7;
+      --muted:#636970;
+      --white:#ffffff;
+      --max:1180px;
+      --serif:Georgia,"Times New Roman",serif;
+      --sans:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased}
+    a{color:inherit}
+    img{display:block;max-width:100%}
+    button{font:inherit}
+    .wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+    .eyebrow{font-size:.69rem;letter-spacing:.22em;text-transform:uppercase;font-weight:800}
+    .serif{font-family:var(--serif)}
+    .nav{
+      position:absolute;z-index:10;left:0;right:0;top:0;color:#fff;
+    }
+    .nav-inner{
+      max-width:var(--max);margin:0 auto;padding:22px 28px;
+      display:flex;align-items:center;gap:28px;
+    }
+    .brand{font-size:1rem;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap;text-decoration:none}
+    .nav-links{display:flex;align-items:center;gap:27px;margin-left:auto;font-size:.82rem}
+    .nav-links a{text-decoration:none;opacity:.88}
+    .nav-links a:hover{opacity:1}
+    .nav-social{display:flex;gap:12px;margin-left:12px}
+    .nav-social a{width:28px;height:28px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.35);border-radius:50%;text-decoration:none;font-size:.72rem;font-weight:800}
+    .menu-btn{display:none;margin-left:auto;border:1px solid rgba(255,255,255,.5);background:transparent;color:#fff;padding:8px 10px;border-radius:999px}
+    .hero{
+      min-height:650px;background:var(--navy);color:white;position:relative;overflow:hidden;
+    }
+    .hero-grid{display:grid;grid-template-columns:1.02fr .98fr;min-height:650px}
+    .hero-copy{
+      position:relative;z-index:2;display:flex;flex-direction:column;justify-content:flex-end;
+      padding:150px 54px 70px max(28px,calc((100vw - var(--max))/2 + 28px));
+      background:linear-gradient(90deg,rgba(6,19,31,.98),rgba(6,19,31,.88) 72%,rgba(6,19,31,.08));
+    }
+    .hero-copy h1{font-family:var(--serif);font-size:clamp(4rem,7vw,6.8rem);line-height:.92;font-weight:400;margin:0 0 22px;letter-spacing:-.055em}
+    .hero-copy p{font-size:1.08rem;line-height:1.65;max-width:540px;color:#e8edf1;margin:0}
+    .hero-copy .cta{display:inline-flex;margin-top:26px;align-items:center;gap:14px;padding:13px 18px;background:white;color:var(--ink);width:max-content;text-decoration:none;font-size:.74rem;letter-spacing:.13em;text-transform:uppercase;font-weight:800}
+    .hero-photo{position:relative;min-height:650px;background:#1b2936}
+    .hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center 22%}
+    .hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,21,34,.34),rgba(7,21,34,0) 38%),linear-gradient(0deg,rgba(7,21,34,.2),transparent 45%)}
+    .hero-note{
+      position:absolute;z-index:2;right:6%;bottom:10%;max-width:250px;
+      font-family:"Bradley Hand","Segoe Print",cursive;font-size:1.25rem;line-height:1.35;transform:rotate(-4deg);
+      color:rgba(255,255,255,.9);
+    }
+    .hero-note span{display:block;text-align:right;margin-top:12px;font-size:.95rem}
+    .about-strip{background:var(--cream);border-bottom:1px solid var(--line)}
+    .about-grid{display:grid;grid-template-columns:1fr 1.28fr 1.85fr;gap:0;align-items:stretch}
+    .about-photo{padding:26px 28px 26px 0}
+    .about-photo img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:center 20%;filter:saturate(.9)}
+    .about-copy{padding:32px 34px;border-left:1px solid var(--line);border-right:1px solid var(--line)}
+    .about-copy h2{font-family:var(--serif);font-size:2.25rem;font-weight:400;margin:8px 0 10px}
+    .about-copy p{font-size:.94rem;line-height:1.65;margin:0;color:#2c3137}
+    .text-link{display:inline-flex;gap:12px;align-items:center;margin-top:18px;text-transform:uppercase;letter-spacing:.11em;font-size:.7rem;font-weight:800;text-decoration:none;border-bottom:1px solid}
+    .focus{padding:33px 0 30px 34px}
+    .focus-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:24px}
+    .focus-item svg{width:34px;height:34px;stroke:var(--ink);fill:none;stroke-width:1.5}
+    .focus-item b{display:block;margin-top:12px;font-size:.87rem;line-height:1.3}
+    .life-grid{display:grid;grid-template-columns:repeat(5,1fr);background:var(--navy);gap:2px}
+    .life-card{position:relative;aspect-ratio:4/4.55;overflow:hidden;background:#172638;color:#fff;text-decoration:none}
+    .life-card img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease,filter .5s ease;filter:saturate(.88)}
+    .life-card:hover img{transform:scale(1.025);filter:saturate(1)}
+    .life-card .shade{position:absolute;inset:0;background:linear-gradient(0deg,rgba(2,10,17,.64),transparent 48%)}
+    .life-card .label{position:absolute;left:22px;bottom:20px;letter-spacing:.15em;text-transform:uppercase;font-size:.83rem;font-weight:800}
+    .placeholder{height:100%;display:grid;place-items:center;background:
+      linear-gradient(135deg,rgba(76,132,186,.42),rgba(7,21,34,.88)),
+      radial-gradient(circle at 72% 28%,#5c7690 0 10%,transparent 10.5%);
+      color:#e8eef4;text-align:center;padding:22px;font-size:.75rem;letter-spacing:.08em;text-transform:uppercase
+    }
+    .work{padding:86px 0}
+    .section-head{display:grid;grid-template-columns:.72fr 1.28fr;gap:50px;margin-bottom:40px}
+    .section-head h2{font-family:var(--serif);font-size:clamp(2.8rem,5vw,4.4rem);font-weight:400;line-height:.98;margin:10px 0 0;letter-spacing:-.04em}
+    .section-head p{font-size:1rem;line-height:1.72;color:var(--muted);max-width:590px;margin:0}
+    .record{border-top:1px solid var(--line)}
+    .record-item{display:grid;grid-template-columns:160px 1fr auto;gap:30px;padding:28px 0;border-bottom:1px solid var(--line);align-items:start}
+    .record-year{font-size:.78rem;color:var(--muted);font-weight:700}
+    .record-item h3{font-family:var(--serif);font-weight:400;font-size:1.65rem;margin:0 0 7px}
+    .record-item p{margin:0;color:var(--muted);line-height:1.65;font-size:.92rem;max-width:730px}
+    .record-proof{font-size:.72rem;background:var(--blue-light);color:#214f77;padding:7px 10px;border-radius:999px;font-weight:800;white-space:nowrap}
+    .governance{background:#eef3f7;padding:78px 0}
+    .gov-grid{display:grid;grid-template-columns:1fr 2fr;gap:56px}
+    .gov-grid h2{font-family:var(--serif);font-weight:400;font-size:3rem;line-height:1.03;margin:12px 0}
+    .gov-list{border-top:1px solid #c9d3dc}
+    .gov-row{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;padding:22px 0;border-bottom:1px solid #c9d3dc}
+    .gov-row b{font-size:1rem}
+    .gov-row span{display:block;color:var(--muted);font-size:.82rem;margin-top:5px}
+    .gov-row p{margin:0;color:var(--muted);font-size:.88rem;line-height:1.55}
+    .speaking{padding:82px 0;background:var(--paper)}
+    .speaking-grid{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:stretch}
+    .speaking-photo{min-height:460px;background:#182433}
+    .speaking-photo img{width:100%;height:100%;object-fit:cover}
+    .speaking-copy{background:var(--navy);color:#fff;padding:52px;display:flex;flex-direction:column;justify-content:center}
+    .speaking-copy h2{font-family:var(--serif);font-size:3.25rem;font-weight:400;line-height:1.02;margin:12px 0 18px}
+    .speaking-copy p{line-height:1.7;color:#d7e0e8;margin:0}
+    .speaking-copy .text-link{color:#fff}
+    .recent{padding:72px 0}
+    .recent-grid{display:grid;grid-template-columns:.9fr 1.2fr .9fr;gap:50px}
+    .recent-list{border-top:1px solid var(--line);margin-top:16px}
+    .recent-list a{display:flex;justify-content:space-between;gap:15px;padding:14px 0;border-bottom:1px solid var(--line);text-decoration:none;font-size:.9rem}
+    .quote{font-family:var(--serif);font-size:2rem;line-height:1.24;font-style:italic;padding-top:24px}
+    .quote small{font-family:var(--sans);display:block;font-size:.67rem;font-style:normal;letter-spacing:.14em;text-transform:uppercase;margin-top:18px}
+    .based{border-left:1px solid var(--line);padding-left:28px}
+    .based .place{font-family:var(--serif);font-size:2rem;line-height:1.05;margin:10px 0 6px}
+    .based p{color:var(--muted);line-height:1.6;font-size:.9rem}
+    .footer{background:var(--navy);color:#fff;padding:34px 0}
+    .footer-inner{display:flex;justify-content:space-between;gap:25px;align-items:center}
+    .footer-brand{letter-spacing:.12em;text-transform:uppercase}
+    .footer-note{font-family:var(--serif);font-size:1.15rem;color:#dce6ed}
+    .footer a{color:#fff}
+    @media(max-width:900px){
+      .nav-links,.nav-social{display:none}.menu-btn{display:block}
+      .nav.open .nav-links{display:flex;position:absolute;top:70px;left:18px;right:18px;flex-direction:column;background:rgba(7,21,34,.97);padding:22px;border:1px solid rgba(255,255,255,.15);align-items:flex-start}
+      .hero-grid{grid-template-columns:1fr}.hero{min-height:auto}.hero-copy{padding:145px 28px 52px;background:linear-gradient(180deg,rgba(7,21,34,.97),rgba(7,21,34,.88))}
+      .hero-photo{min-height:490px}.hero-note{font-size:1rem;right:7%;bottom:8%;max-width:190px}
+      .about-grid{grid-template-columns:1fr 1.4fr}.focus{grid-column:1/-1;border-top:1px solid var(--line);padding-left:0}.about-photo{padding-right:22px}.about-copy{border-right:0}
+      .life-grid{grid-template-columns:repeat(2,1fr)}.life-card:last-child{grid-column:span 2;aspect-ratio:2/1}
+      .section-head,.gov-grid,.speaking-grid,.recent-grid{grid-template-columns:1fr}
+      .record-item{grid-template-columns:115px 1fr}.record-proof{grid-column:2;width:max-content}
+      .based{border-left:0;padding-left:0;border-top:1px solid var(--line);padding-top:26px}
+    }
+    @media(max-width:600px){
+      .wrap{padding:0 20px}.nav-inner{padding:20px}.brand{font-size:.82rem}
+      .hero-copy{padding-left:20px;padding-right:20px}.hero-copy h1{font-size:3.55rem}.hero-photo{min-height:430px}
+      .about-grid{grid-template-columns:1fr}.about-photo{padding:24px 0}.about-copy{border:0;border-top:1px solid var(--line);padding:28px 0}.focus{padding:28px 0}.focus-grid{grid-template-columns:repeat(2,1fr)}
+      .life-grid{grid-template-columns:1fr 1fr}.life-card{aspect-ratio:1/1.08}
+      .work,.governance,.speaking,.recent{padding:58px 0}.section-head{gap:24px}.gov-grid{gap:24px}
+      .record-item{grid-template-columns:1fr;gap:8px}.record-proof{grid-column:1}
+      .gov-row{grid-template-columns:1fr;gap:10px}.speaking-copy{padding:34px 26px}.speaking-copy h2{font-size:2.55rem}
+      .footer-inner{flex-direction:column;align-items:flex-start}
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a class="brand" href="#home">Irving W. Washington</a>
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu">Menu</button>
+      <div class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#speaking">Speaking</a>
+        <a href="#recent">Writing</a>
+        <a href="#life">Life</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="nav-social">
+        <a href="https://www.linkedin.com/in/irvingwashington" target="_blank" rel="noreferrer" aria-label="LinkedIn">in</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow" style="color:#bdd1e5;margin-bottom:18px">Personal site</div>
+          <h1>People.<br>Ideas.<br>In Motion.</h1>
+          <p>I’m interested in people, institutions and the choices that shape what happens next — at work and well beyond it.</p>
+          <a class="cta" href="#about">Get to know me <span>→</span></a>
+        </div>
+        <div class="hero-photo">
+          <img
+            src="https://www.kff.org/wp-content/uploads/sites/7/2022/12/Washington-Irving.jpg?crop=1&h=900&w=900"
+            alt="Irving Washington"
+            onerror="this.src='https://avatars.githubusercontent.com/u/331153227?v=4'">
+          <div class="hero-note">Work matters. So do the people, places and life around it.<span>— IW</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-strip" id="about">
+      <div class="wrap about-grid">
+        <div class="about-photo">
+          <img
+            src="https://avatars.githubusercontent.com/u/331153227?v=4"
+            alt="Portrait of Irving Washington">
+        </div>
+        <div class="about-copy">
+          <div class="eyebrow">About</div>
+          <h2>Hi, I’m Irving.</h2>
+          <p>I’m a husband, dad, executive, board member and lifelong learner. I care about people, strong institutions and work that holds up in the real world.</p>
+          <a class="text-link" href="#work">My story <span>→</span></a>
+        </div>
+        <div class="focus">
+          <div class="eyebrow">A few things I care about</div>
+          <div class="focus-grid">
+            <div class="focus-item">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="9" r="3"/><circle cx="16" cy="9" r="3"/><path d="M2 20c.6-4 2.6-6 6-6s5.4 2 6 6M10 20c.5-3.4 2.4-5.2 6-5.2 3.4 0 5.3 1.8 6 5.2"/></svg>
+              <b>People &<br>leadership</b>
+            </div>
+            <div class="focus-item">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-8-4.7-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 6.3-8 11-8 11z"/><path d="M8 12h2l1-3 2 6 1-3h2"/></svg>
+              <b>Health &<br>information</b>
+            </div>
+            <div class="focus-item">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18V6m5 12V9m5 9V4m5 14v-7"/></svg>
+              <b>Institutions &<br>governance</b>
+            </div>
+            <div class="focus-item">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6M10 22h4M8 14c-2-1.6-3-3.5-3-5.6A7 7 0 0 1 19 8.4c0 2.1-1 4-3 5.6-1.2 1-1.6 1.8-1.7 2H9.7c-.1-.2-.5-1-1.7-2z"/></svg>
+              <b>Ideas &<br>possibility</b>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="life-grid" id="life" aria-label="Life interests">
+      <a class="life-card" href="#speaking">
+        <img src="https://ona18.journalists.org/wp-content/uploads/sites/16/2018/08/ONA17_Thursday-6716-e1535461382272.jpg?w=1200" alt="Irving Washington speaking at an Online News Association event">
+        <span class="shade"></span><span class="label">Speaking</span>
+      </a>
+      <div class="life-card"><div class="placeholder">Photo slot<br>Travel</div><span class="shade"></span><span class="label">Travel</span></div>
+      <div class="life-card"><div class="placeholder">Photo slot<br>Fitness</div><span class="shade"></span><span class="label">Fitness</span></div>
+      <div class="life-card"><div class="placeholder">Photo slot<br>Food</div><span class="shade"></span><span class="label">Food</span></div>
+      <div class="life-card"><div class="placeholder">Photo slot<br>Family</div><span class="shade"></span><span class="label">Family</span></div>
+    </section>
+
+    <section class="work" id="work">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Work</div>
+            <h2>Different rooms. Different responsibilities.</h2>
+          </div>
+          <p>I’ve spent much of my career inside organizations responsible for information people rely on. The work has ranged from running an organization to starting something new inside a larger one to governing institutions at greater scale.</p>
+        </div>
+
+        <div class="record">
+          <article class="record-item">
+            <div class="record-year">2017–2022</div>
+            <div>
+              <h3>Online News Association</h3>
+              <p>Washington spent 11 years at ONA, including six as CEO. In that role, he was responsible for operations, strategy, partnerships, programs, revenue and the board relationship. ONA20 Everywhere drew about 2,000 participants from roughly 40 countries; in 2022, more than 5,200 people engaged in ONA programs beyond annual membership.</p>
+            </div>
+            <div class="record-proof">6 years as CEO</div>
+          </article>
+          <article class="record-item">
+            <div class="record-year">Current</div>
+            <div>
+              <h3>KFF</h3>
+              <p>Senior vice president and executive director of KFF’s Health Information and Trust Initiative, a new core program focused on health information, misinformation and trust. Public filings document philanthropic support to KFF for planning and implementation of the initiative.</p>
+            </div>
+            <div class="record-proof">SVP / Executive Director</div>
+          </article>
+          <article class="record-item">
+            <div class="record-year">2018–present</div>
+            <div>
+              <h3>American Journalism Project</h3>
+              <p>Board member since 2018, vice chair beginning in 2021 and chair since 2025. AJP reports more than $270 million raised since launch, investments in 58 nonprofit news organizations and a portfolio serving 105 communities across 38 states and Puerto Rico.</p>
+            </div>
+            <div class="record-proof">Board Chair</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="governance" id="governance">
+      <div class="wrap gov-grid">
+        <div>
+          <div class="eyebrow">Boards & governance</div>
+          <h2>Both sides of the board table.</h2>
+        </div>
+        <div class="gov-list">
+          <div class="gov-row">
+            <div><b>American Journalism Project</b><span>Board Chair · Chair since 2025</span></div>
+            <p>National nonprofit local-news philanthropy with more than $270 million raised since launch.</p>
+          </div>
+          <div class="gov-row">
+            <div><b>ABIM Foundation</b><span>Trustee since 2024</span></div>
+            <p>Health-professions foundation; FY2025 public filings report approximately $100 million in assets.</p>
+          </div>
+          <div class="gov-row">
+            <div><b>ASAE</b><span>Former at-large director</span></div>
+            <p>Three-year board term beginning in 2020, with concurrent service on the ASAE Research Foundation board.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="speaking" id="speaking">
+      <div class="wrap speaking-grid">
+        <div class="speaking-photo">
+          <img src="https://ona18.journalists.org/wp-content/uploads/sites/16/2018/08/ONA17_Thursday-6716-e1535461382272.jpg?w=1200" alt="Irving Washington speaking">
+        </div>
+        <div class="speaking-copy">
+          <div class="eyebrow" style="color:#abc6df">Speaking & facilitation</div>
+          <h2>I like the rooms where the answer isn’t obvious.</h2>
+          <p>Board retreats, executive conversations and professional convenings have been part of my work for years. I’m most useful when people need to get beyond the polished answers and make an actual choice.</p>
+          <a class="text-link" href="#contact">Selected conversations <span>→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="recent" id="recent">
+      <div class="wrap recent-grid">
+        <div>
+          <div class="eyebrow">Recently</div>
+          <div class="recent-list">
+            <a href="https://www.linkedin.com/in/irvingwashington" target="_blank" rel="noreferrer"><span>Local news and stronger communities</span><span>→</span></a>
+            <a href="https://www.linkedin.com/in/irvingwashington" target="_blank" rel="noreferrer"><span>What trust asks of institutions</span><span>→</span></a>
+            <a href="#life"><span>Life outside the work</span><span>→</span></a>
+          </div>
+        </div>
+        <div class="quote">“The interesting part is usually what happens after the easy answer runs out.”<small>— Irving W. Washington</small></div>
+        <div class="based">
+          <div class="eyebrow">Based in</div>
+          <div class="place">Washington, D.C.</div>
+          <p>By way of Indianapolis. Usually thinking about work, family, travel, fitness, food — or whatever has my attention that week.</p>
+          <a class="text-link" href="#contact">Get in touch <span>→</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="contact">
+    <div class="wrap footer-inner">
+      <div class="footer-brand">Irving W. Washington</div>
+      <div class="footer-note">People. Ideas. In Motion.</div>
+      <div><a href="https://www.linkedin.com/in/irvingwashington" target="_blank" rel="noreferrer">LinkedIn</a></div>
+    </div>
+  </footer>
+
+  <script>
+    const nav=document.getElementById('nav');
+    const menuBtn=document.getElementById('menuBtn');
+    menuBtn.addEventListener('click',()=>nav.classList.toggle('open'));
+    document.querySelectorAll('#navLinks a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+  </script>
+</body>
+</html>
