@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-19T07:24:26.603807+00:00",
+  "generated_at": "2026-09-19T10:28:17.033704+00:00",
   "events": [
     {
       "at": "2026-09-19T06:41:48.620945+00:00",
@@ -3786,6 +3786,318 @@
       "source": "The Moran Company",
       "title": "Chief Executive Officer",
       "organization": "Alpha Chi Omega"
+    },
+    {
+      "at": "2026-09-19T10:28:17.033704+00:00",
+      "type": "reopened",
+      "job_id": "cd8e2ddeeff80f73",
+      "source": "DSG Global",
+      "title": "GreenLight Fund Kansas City Executive Director Kansas City",
+      "organization": "MO"
+    },
+    {
+      "at": "2026-09-19T10:28:17.033704+00:00",
+      "type": "reopened",
+      "job_id": "ef47b9fbceb603a2",
+      "source": "DSG Global",
+      "title": "Hendrix College Executive Director",
+      "organization": "Career Success Conway, AR"
+    },
+    {
+      "at": "2026-09-19T10:28:17.033704+00:00",
+      "type": "reopened",
+      "job_id": "f3123cff48c6e191",
+      "source": "DSG Global",
+      "title": "Higher Ground USA Chief Executive Officer Ketchum",
+      "organization": "ID"
+    },
+    {
+      "at": "2026-09-19T10:28:17.033704+00:00",
+      "type": "updated",
+      "job_id": "d467e89870eb6c86",
+      "source": "DSG Global",
+      "title": "La Casa de las Madres Executive Director San Francisco",
+      "organization": "CA",
+      "changes": {
+        "sector": {
+          "from": "Unclassified",
+          "to": "Health"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T10:28:17.033704+00:00",
+      "type": "updated",
+      "job_id": "bc58056ebebe36cd",
+      "source": "DSG Global",
+      "title": "Mid-America Science Museum Chief Executive Officer Hot Springs",
+      "organization": "AR",
+      "changes": {
+        "sector": {
+          "from": "Health",
+          "to": "Arts / Culture"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T10:28:17.033704+00:00",
+      "type": "updated",
+      "job_id": "8c641b590796573b",
+      "source": "DSG Global",
+      "title": "Modern Language Association of America Executive Director New York",
+      "organization": "NY",
+      "changes": {
+        "sector": {
+          "from": "Education",
+          "to": "Associations"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T10:28:17.033704+00:00",
+      "type": "reopened",
+      "job_id": "49f75552443c5f30",
+      "source": "DSG Global",
+      "title": "Monmouth Conservation Foundation Executive Director Monmouth County",
+      "organization": "NJ"
+    },
+    {
+      "at": "2026-09-19T10:28:17.033704+00:00",
+      "type": "updated",
+      "job_id": "931f0e066b405e88",
+      "source": "DSG Global",
+      "title": "North Penn Legal Services Executive Director Pittston",
+      "organization": "PA",
+      "changes": {
+        "sector": {
+          "from": "Justice / Rights",
+          "to": "Health"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T10:28:17.033704+00:00",
+      "type": "reopened",
+      "job_id": "f5bc4e867a71ad2c",
+      "source": "DSG Global",
+      "title": "Parnassus Preparatory School Executive Director Maple Grove",
+      "organization": "MN"
+    },
+    {
+      "at": "2026-09-19T10:28:17.033704+00:00",
+      "type": "updated",
+      "job_id": "ab71cb3af44e1692",
+      "source": "DSG Global",
+      "title": "Renewable Thermal Collaborative Chief Executive Officer Remote",
+      "organization": "Washington D.C. preferred",
+      "changes": {
+        "sector": {
+          "from": "Unclassified",
+          "to": "Education"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T10:28:17.033704+00:00",
+      "type": "updated",
+      "job_id": "ec7b07956d0ad276",
+      "source": "DSG Global",
+      "title": "Sigler Western Museum Executive Director Wickenburg",
+      "organization": "AZ",
+      "changes": {
+        "sector": {
+          "from": "Health",
+          "to": "Arts / Culture"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T10:28:17.033704+00:00",
+      "type": "reopened",
+      "job_id": "632a676c24f8733e",
+      "source": "DSG Global",
+      "title": "Spur Community Foundation Executive Director Sun Valley",
+      "organization": "ID"
+    },
+    {
+      "at": "2026-09-19T10:28:17.033704+00:00",
+      "type": "updated",
+      "job_id": "ea9bc4fdfb418be8",
+      "source": "DSG Global",
+      "title": "The Alliance for Community Development Executive Director Bay Area",
+      "organization": "CA",
+      "changes": {
+        "sector": {
+          "from": "Unclassified",
+          "to": "Education"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T10:28:17.033704+00:00",
+      "type": "updated",
+      "job_id": "b19059a69536f998",
+      "source": "DSG Global",
+      "title": "The Education Fund Executive Director Miami",
+      "organization": "FL",
+      "changes": {
+        "sector": {
+          "from": "Health",
+          "to": "Education"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T10:28:17.033704+00:00",
+      "type": "reopened",
+      "job_id": "2c1fa6c78f24db96",
+      "source": "DSG Global",
+      "title": "The Players Alliance Executive Director Fort Lee",
+      "organization": "NJ"
+    },
+    {
+      "at": "2026-09-19T10:28:17.033704+00:00",
+      "type": "reopened",
+      "job_id": "b3b40c1d22c20bf2",
+      "source": "DSG Global",
+      "title": "The University of Toledo Foundation President and CEO Toledo",
+      "organization": "OH"
+    },
+    {
+      "at": "2026-09-19T10:28:17.033704+00:00",
+      "type": "closed",
+      "job_id": "1df67fd09be4b769",
+      "source": "DSG Global",
+      "title": "Every Woman CEO Remote",
+      "organization": "Organization not parsed"
+    },
+    {
+      "at": "2026-09-19T10:28:17.033704+00:00",
+      "type": "closed",
+      "job_id": "77f71d8c619a0ca1",
+      "source": "DSG Global",
+      "title": "Essex County Habitat for Humanity Executive Director Danvers",
+      "organization": "MA"
+    },
+    {
+      "at": "2026-09-19T10:28:17.033704+00:00",
+      "type": "updated",
+      "job_id": "bdb4fab450cecd43",
+      "source": "Kittleman Associates",
+      "title": "President and CEO",
+      "organization": "Viability, Inc.",
+      "changes": {
+        "organization": {
+          "from": "Mid-Ohio Food Collective",
+          "to": "Viability, Inc."
+        },
+        "location": {
+          "from": "Grove City, OH, United States",
+          "to": "Springfield, MA, United States"
+        },
+        "url": {
+          "from": "https://www.kittlemansearch.com/opportunities/president-ceo-mid-ohio-food-collective",
+          "to": "https://www.kittlemansearch.com/opportunities/president-ceo-viability"
+        },
+        "posted_date": {
+          "from": "2026-09-10",
+          "to": "2026-09-16"
+        },
+        "sector": {
+          "from": "Education",
+          "to": "Philanthropy"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T10:28:17.033704+00:00",
+      "type": "updated",
+      "job_id": "bdb4fab450cecd43",
+      "source": "Kittleman Associates",
+      "title": "President and CEO",
+      "organization": "Schoodic Institute at Acadia National Park",
+      "changes": {
+        "organization": {
+          "from": "Mid-Ohio Food Collective",
+          "to": "Schoodic Institute at Acadia National Park"
+        },
+        "location": {
+          "from": "Grove City, OH, United States",
+          "to": "Winter Harbor, ME, United States"
+        },
+        "url": {
+          "from": "https://www.kittlemansearch.com/opportunities/president-ceo-mid-ohio-food-collective",
+          "to": "https://www.kittlemansearch.com/opportunities/president-ceo-schoodic-institute"
+        },
+        "posted_date": {
+          "from": "2026-09-10",
+          "to": "2026-09-14"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T10:28:17.033704+00:00",
+      "type": "updated",
+      "job_id": "8036fffc6de66e8a",
+      "source": "The Batten Group",
+      "title": "Executive Director",
+      "organization": "Nonprofit Development & Fundraising Talent",
+      "changes": {
+        "organization": {
+          "from": "McLean, Virginia, USA",
+          "to": "Nonprofit Development & Fundraising Talent"
+        },
+        "location": {
+          "from": "Full Time, Hybrid",
+          "to": "Hybrid"
+        },
+        "url": {
+          "from": "https://thebattengroup.com/jobs/executive-director-3593439/",
+          "to": "https://thebattengroup.com/jobs/#content"
+        },
+        "sector": {
+          "from": "Health",
+          "to": "Philanthropy"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T10:28:17.033704+00:00",
+      "type": "updated",
+      "job_id": "8036fffc6de66e8a",
+      "source": "The Batten Group",
+      "title": "Executive Director",
+      "organization": "Charlotte, North Carolina, USA",
+      "changes": {
+        "organization": {
+          "from": "McLean, Virginia, USA",
+          "to": "Charlotte, North Carolina, USA"
+        },
+        "location": {
+          "from": "Full Time, Hybrid",
+          "to": "Hybrid"
+        },
+        "url": {
+          "from": "https://thebattengroup.com/jobs/executive-director-3593439/",
+          "to": "https://thebattengroup.com/jobs/executive-director-3659418/"
+        },
+        "posted_date": {
+          "from": "2026-05-05",
+          "to": "2026-08-25"
+        },
+        "compensation_text": {
+          "from": "on McLean, Virginia, USA Salary $149k/year - 165k/year Job Type Full Time, Hybrid Posted May 5, 2026 About National Kidney Foundation Fuele",
+          "to": "ensation The Executive Director will receive an annual base salary of $90,000 - $100,000 and will be eligible for a performance-based bonus of up to 30% of base salary, tied to e"
+        },
+        "compensation_min": {
+          "from": 65000,
+          "to": 90000
+        },
+        "compensation_max": {
+          "from": 65000,
+          "to": 100000
+        }
+      }
     }
   ]
 }

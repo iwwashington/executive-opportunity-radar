@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-19T07:24:26.603807+00:00",
+  "generated_at": "2026-09-19T10:28:17.033704+00:00",
   "baseline_initialized_at": "2026-09-19T05:58:00+00:00",
   "source_count": 33,
   "sources": [
@@ -14,7 +14,7 @@
       "count": 0,
       "prior_count": 0,
       "error": "",
-      "checked_at": "2026-09-19T07:24:26.608661+00:00",
+      "checked_at": "2026-09-19T10:28:17.038164+00:00",
       "fetch_mode": "",
       "preserved": false
     },
@@ -29,7 +29,7 @@
       "count": 6,
       "prior_count": 6,
       "error": "",
-      "checked_at": "2026-09-19T07:24:26.608679+00:00",
+      "checked_at": "2026-09-19T10:28:17.038182+00:00",
       "fetch_mode": "static",
       "preserved": false
     },
@@ -44,7 +44,7 @@
       "count": 0,
       "prior_count": 0,
       "error": "",
-      "checked_at": "2026-09-19T07:24:31.433269+00:00",
+      "checked_at": "2026-09-19T10:28:21.834752+00:00",
       "fetch_mode": "",
       "preserved": false
     },
@@ -59,7 +59,7 @@
       "count": 7,
       "prior_count": 7,
       "error": "",
-      "checked_at": "2026-09-19T07:24:31.433284+00:00",
+      "checked_at": "2026-09-19T10:28:21.834765+00:00",
       "fetch_mode": "static",
       "preserved": false
     },
@@ -74,7 +74,7 @@
       "count": 2,
       "prior_count": 2,
       "error": "",
-      "checked_at": "2026-09-19T07:24:33.341989+00:00",
+      "checked_at": "2026-09-19T10:28:23.549709+00:00",
       "fetch_mode": "static",
       "preserved": false
     },
@@ -89,7 +89,7 @@
       "count": 9,
       "prior_count": 9,
       "error": "",
-      "checked_at": "2026-09-19T07:24:34.067763+00:00",
+      "checked_at": "2026-09-19T10:28:24.289379+00:00",
       "fetch_mode": "static",
       "preserved": false
     },
@@ -104,7 +104,7 @@
       "count": 3,
       "prior_count": 3,
       "error": "",
-      "checked_at": "2026-09-19T07:24:39.699452+00:00",
+      "checked_at": "2026-09-19T10:28:31.185912+00:00",
       "fetch_mode": "static",
       "preserved": false
     },
@@ -119,7 +119,7 @@
       "count": 8,
       "prior_count": 8,
       "error": "",
-      "checked_at": "2026-09-19T07:24:46.351412+00:00",
+      "checked_at": "2026-09-19T10:28:37.861636+00:00",
       "fetch_mode": "static",
       "preserved": false
     },
@@ -134,7 +134,7 @@
       "count": 3,
       "prior_count": 3,
       "error": "",
-      "checked_at": "2026-09-19T07:25:10.552011+00:00",
+      "checked_at": "2026-09-19T10:29:00.028308+00:00",
       "fetch_mode": "static",
       "preserved": false
     },
@@ -149,7 +149,7 @@
       "count": 8,
       "prior_count": 8,
       "error": "",
-      "checked_at": "2026-09-19T07:25:13.484715+00:00",
+      "checked_at": "2026-09-19T10:29:03.086077+00:00",
       "fetch_mode": "static",
       "preserved": false
     },
@@ -164,7 +164,7 @@
       "count": 2,
       "prior_count": 2,
       "error": "",
-      "checked_at": "2026-09-19T07:25:18.420900+00:00",
+      "checked_at": "2026-09-19T10:29:09.163976+00:00",
       "fetch_mode": "static+browser",
       "preserved": false
     },
@@ -176,10 +176,10 @@
       "notes": "Current DSG Global Active Searches. Detail pages are checked for explicit closed/no-longer-accepting language before a role is treated as active.",
       "status": "ok",
       "ok": true,
-      "count": 40,
-      "prior_count": 69,
+      "count": 46,
+      "prior_count": 40,
       "error": "",
-      "checked_at": "2026-09-19T07:25:24.527283+00:00",
+      "checked_at": "2026-09-19T10:29:15.113379+00:00",
       "fetch_mode": "static",
       "preserved": false
     },
@@ -194,7 +194,7 @@
       "count": 26,
       "prior_count": 24,
       "error": "",
-      "checked_at": "2026-09-19T07:25:46.144461+00:00",
+      "checked_at": "2026-09-19T10:29:32.798974+00:00",
       "fetch_mode": "static",
       "preserved": false
     },
@@ -209,7 +209,7 @@
       "count": 0,
       "prior_count": 0,
       "error": "static HTTPError: 403 Client Error: Forbidden for url: https://www.wittkieffer.com/search-open-positions/",
-      "checked_at": "2026-09-19T07:25:46.379489+00:00",
+      "checked_at": "2026-09-19T10:29:32.954858+00:00",
       "fetch_mode": "browser",
       "preserved": false
     },
@@ -224,7 +224,7 @@
       "count": 9,
       "prior_count": 7,
       "error": "",
-      "checked_at": "2026-09-19T07:26:01.895582+00:00",
+      "checked_at": "2026-09-19T10:29:48.333268+00:00",
       "fetch_mode": "static",
       "preserved": false
     },
@@ -239,7 +239,7 @@
       "count": 5,
       "prior_count": 5,
       "error": "",
-      "checked_at": "2026-09-19T07:26:04.637055+00:00",
+      "checked_at": "2026-09-19T10:29:52.540396+00:00",
       "fetch_mode": "static",
       "preserved": false
     },
@@ -254,7 +254,7 @@
       "count": 3,
       "prior_count": 3,
       "error": "",
-      "checked_at": "2026-09-19T07:26:09.601128+00:00",
+      "checked_at": "2026-09-19T10:30:04.991684+00:00",
       "fetch_mode": "static+browser",
       "preserved": false
     },
@@ -269,7 +269,7 @@
       "count": 1,
       "prior_count": 1,
       "error": "",
-      "checked_at": "2026-09-19T07:26:17.375312+00:00",
+      "checked_at": "2026-09-19T10:30:12.779891+00:00",
       "fetch_mode": "static",
       "preserved": false
     },
@@ -284,7 +284,7 @@
       "count": 13,
       "prior_count": 13,
       "error": "",
-      "checked_at": "2026-09-19T07:26:17.534810+00:00",
+      "checked_at": "2026-09-19T10:30:12.905423+00:00",
       "fetch_mode": "static",
       "preserved": false
     },
@@ -299,7 +299,7 @@
       "count": 3,
       "prior_count": 3,
       "error": "",
-      "checked_at": "2026-09-19T07:26:20.690339+00:00",
+      "checked_at": "2026-09-19T10:30:15.921316+00:00",
       "fetch_mode": "static",
       "preserved": false
     },
@@ -312,9 +312,9 @@
       "status": "ok",
       "ok": true,
       "count": 6,
-      "prior_count": 13,
+      "prior_count": 6,
       "error": "",
-      "checked_at": "2026-09-19T07:26:21.642887+00:00",
+      "checked_at": "2026-09-19T10:30:16.892998+00:00",
       "fetch_mode": "static",
       "preserved": false
     },
@@ -329,7 +329,7 @@
       "count": 2,
       "prior_count": 2,
       "error": "",
-      "checked_at": "2026-09-19T07:26:21.920269+00:00",
+      "checked_at": "2026-09-19T10:30:17.301003+00:00",
       "fetch_mode": "static",
       "preserved": false
     },
@@ -344,7 +344,7 @@
       "count": 0,
       "prior_count": 0,
       "error": "",
-      "checked_at": "2026-09-19T07:26:25.411306+00:00",
+      "checked_at": "2026-09-19T10:30:20.645418+00:00",
       "fetch_mode": "",
       "preserved": false
     },
@@ -359,7 +359,7 @@
       "count": 0,
       "prior_count": 0,
       "error": "",
-      "checked_at": "2026-09-19T07:26:25.411318+00:00",
+      "checked_at": "2026-09-19T10:30:20.645428+00:00",
       "fetch_mode": "",
       "preserved": false
     },
@@ -374,7 +374,7 @@
       "count": 0,
       "prior_count": 0,
       "error": "",
-      "checked_at": "2026-09-19T07:26:25.411323+00:00",
+      "checked_at": "2026-09-19T10:30:20.645433+00:00",
       "fetch_mode": "",
       "preserved": false
     },
@@ -389,7 +389,7 @@
       "count": 0,
       "prior_count": 0,
       "error": "",
-      "checked_at": "2026-09-19T07:26:25.411327+00:00",
+      "checked_at": "2026-09-19T10:30:20.645437+00:00",
       "fetch_mode": "",
       "preserved": false
     },
@@ -404,7 +404,7 @@
       "count": 0,
       "prior_count": 0,
       "error": "",
-      "checked_at": "2026-09-19T07:26:25.411332+00:00",
+      "checked_at": "2026-09-19T10:30:20.645441+00:00",
       "fetch_mode": "",
       "preserved": false
     },
@@ -419,7 +419,7 @@
       "count": 3,
       "prior_count": 3,
       "error": "",
-      "checked_at": "2026-09-19T07:26:25.411336+00:00",
+      "checked_at": "2026-09-19T10:30:20.645445+00:00",
       "fetch_mode": "static",
       "preserved": false
     },
@@ -434,7 +434,7 @@
       "count": 2,
       "prior_count": 2,
       "error": "",
-      "checked_at": "2026-09-19T07:26:30.043670+00:00",
+      "checked_at": "2026-09-19T10:30:25.386917+00:00",
       "fetch_mode": "static",
       "preserved": false
     },
@@ -449,7 +449,7 @@
       "count": 0,
       "prior_count": 0,
       "error": "",
-      "checked_at": "2026-09-19T07:26:30.408768+00:00",
+      "checked_at": "2026-09-19T10:30:25.635734+00:00",
       "fetch_mode": "",
       "preserved": false
     },
@@ -464,7 +464,7 @@
       "count": 0,
       "prior_count": 0,
       "error": "",
-      "checked_at": "2026-09-19T07:26:30.408781+00:00",
+      "checked_at": "2026-09-19T10:30:25.635749+00:00",
       "fetch_mode": "static+browser",
       "preserved": false
     },
@@ -479,7 +479,7 @@
       "count": 5,
       "prior_count": 5,
       "error": "",
-      "checked_at": "2026-09-19T07:26:36.893054+00:00",
+      "checked_at": "2026-09-19T10:30:31.583049+00:00",
       "fetch_mode": "static",
       "preserved": false
     },
@@ -494,7 +494,7 @@
       "count": 0,
       "prior_count": 0,
       "error": "",
-      "checked_at": "2026-09-19T07:26:38.342346+00:00",
+      "checked_at": "2026-09-19T10:30:37.221820+00:00",
       "fetch_mode": "static",
       "preserved": false
     }
