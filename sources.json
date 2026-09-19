@@ -17,13 +17,16 @@
     "url": "https://www.odgers.com/en-us/opportunities/",
     "mode": "automated",
     "group": "Could not aggregate in prior version",
-    "notes": "Previously unsupported. Current U.S. opportunities page is now public and is included in the automated pass.",
+    "notes": "Current opportunities only. Parser is scoped to CURRENT OPPORTUNITIES so function/service pages cannot enter the feed.",
     "date_policy": "source",
     "render_fallback": false,
     "allow_zero": false,
     "urls": [
       "https://www.odgers.com/en-us/opportunities/"
-    ]
+    ],
+    "parser": "odgers",
+    "authoritative_parser": true,
+    "close_after_misses": 1
   },
   {
     "name": "Campbell & Company",
@@ -125,33 +128,42 @@
     "url": "https://www.lindauerglobal.com/searches/open-searches/",
     "mode": "automated",
     "group": "Previously kind-of working",
-    "notes": "Open Searches. Do not invent a posted date when the site does not expose one; use first-seen date instead.",
+    "notes": "Open Searches only. Service pages and recent placements are excluded; use first-seen when no trustworthy posted date is published.",
     "date_policy": "first_seen",
     "render_fallback": false,
     "allow_zero": false,
     "urls": [
       "https://www.lindauerglobal.com/searches/open-searches/"
-    ]
+    ],
+    "parser": "lindauer",
+    "authoritative_parser": true,
+    "close_after_misses": 1,
+    "max_detail_requests": 80,
+    "allowed_detail_path_regex": "^/searches/open-searches/[^/]+/?$"
   },
   {
     "name": "Korn Ferry Search Jobs",
     "url": "https://jobs.candidate.kornferry.com/jobs/",
     "mode": "automated",
     "group": "Working in prior aggregator",
-    "notes": "Korn Ferry candidate job listings; individual postings often expose exact Posted dates.",
+    "notes": "Korn Ferry client opportunity board. Browser-first crawl scrolls the rendered board, captures direct client-job URLs, and verifies each CEO/president/executive-director detail page for posted date, compensation and expiration.",
     "date_policy": "source",
     "render_fallback": true,
     "allow_zero": false,
     "urls": [
       "https://jobs.candidate.kornferry.com/jobs/"
-    ]
+    ],
+    "parser": "korn",
+    "browser_first": true,
+    "authoritative_parser": false,
+    "max_detail_requests": 160
   },
   {
     "name": "DSG Global",
     "url": "https://www.dsgco.com/active-searches/",
     "mode": "automated",
     "group": "Working in prior aggregator",
-    "notes": "Current DSG Global Active Searches. Detail pages are checked for explicit closed/no-longer-accepting language before a role is treated as active.",
+    "notes": "Active Searches. Only numbered /search/ assignment pages are eligible; detail pages are checked for closure and labeled Date Posted.",
     "date_policy": "source",
     "render_fallback": false,
     "allow_zero": false,
@@ -161,7 +173,9 @@
     "parser": "dsg",
     "verify_detail_status": true,
     "max_detail_requests": 120,
-    "close_after_misses": 1
+    "close_after_misses": 1,
+    "authoritative_parser": true,
+    "allowed_detail_path_regex": "^/search/\\d+(?:-|/)"
   },
   {
     "name": "Kittleman Associates",
@@ -198,13 +212,17 @@
     "url": "https://thebattengroup.com/jobs/",
     "mode": "automated",
     "group": "Working in prior aggregator",
-    "notes": "Jobs archive/current search page.",
+    "notes": "Jobs page only. Only /open-searches/ assignment links are eligible; service-type pages are excluded.",
     "date_policy": "source",
     "render_fallback": false,
     "allow_zero": false,
     "urls": [
       "https://thebattengroup.com/jobs/"
-    ]
+    ],
+    "parser": "batten",
+    "authoritative_parser": true,
+    "close_after_misses": 1,
+    "allowed_detail_path_regex": "^/open-searches/[^/]+/?$"
   },
   {
     "name": "DRiWaterstone",

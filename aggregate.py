@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Executive Opportunity Radar v4 updater.
+"""Executive Opportunity Radar v5 updater.
 
 Capture first, enrich second.
 
@@ -41,7 +41,7 @@ META_PATH = ROOT / "meta.json"
 HEADERS = {
     "User-Agent": (
         "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
-        "AppleWebKit/537.36 Chrome/124 Safari/537.36 ExecutiveOpportunityRadar/4.0"
+        "AppleWebKit/537.36 Chrome/124 Safari/537.36 ExecutiveOpportunityRadar/5.0"
     )
 }
 TIMEOUT = 30
@@ -94,6 +94,20 @@ SECTOR_RULES = [
     ("International", r"\b(international|global development|humanitarian|refugee|foreign policy)\b"),
     ("Animal Welfare", r"\b(animal|humane society|veterinary|wildlife rescue)\b"),
     ("Faith", r"\b(church|faith|religio|ministry|diocese|synagogue)\b"),
+]
+
+ORGANIZATION_TYPE_RULES = [
+    ("Association / Professional Society", r"\b(association|professional society|membership organization|chamber of commerce|federation|academy of|bar association|trade association)\b"),
+    ("Foundation / Philanthropy", r"\b(foundation|philanthrop|grantmaking|charitable trust|community foundation)\b"),
+    ("College / University", r"\b(university|college|higher education|campus|chancellor)\b"),
+    ("K-12 / Education", r"\b(school district|public schools?|independent school|charter school|education association|school boards?)\b"),
+    ("Health System / Provider", r"\b(health system|hospital|medical center|clinic|physician|healthcare|health care|patient care)\b"),
+    ("Government / Public Entity", r"\b(city of|county of|state of|public authority|government agency|municipal|board of examiners)\b"),
+    ("Media / Journalism", r"\b(public radio|journalis|news|media organization|broadcast|publisher|press)\b"),
+    ("Arts / Culture", r"\b(museum|theatre|theater|symphony|opera|arts center|cultural)\b"),
+    ("Advocacy / Civil Rights", r"\b(advocacy|civil rights|justice|legal services|policy organization|immigrant rights)\b"),
+    ("Human Services / Community", r"\b(human services|social services|housing|food bank|community services|youth development|family services)\b"),
+    ("Other Nonprofit", r"\b(nonprofit|not-for-profit|501\(c\)|charitable organization|mission-driven)\b"),
 ]
 
 
@@ -281,6 +295,14 @@ def infer_sector(organization: str, text: str) -> tuple[str, str]:
     return "Unclassified", "unclassified"
 
 
+def infer_organization_type(organization: str, text: str) -> tuple[str, str]:
+    corpus=clean(f"{organization} {text}")[:12000]
+    for label, pattern in ORGANIZATION_TYPE_RULES:
+        if re.search(pattern, corpus, re.I):
+            return label, "inferred"
+    return "Unclassified", "unclassified"
+
+
 def safe_date(year: int, month: int, day: int) -> date | None:
     try:
         return date(year, month, day)
@@ -313,6 +335,61 @@ def extract_date(text: str, today: date) -> tuple[date | None, str]:
     return None, "unavailable"
 
 
+def extract_labeled_posted_date(text: str, today: date) -> tuple[date | None, str]:
+    """Extract a posting date only when the page labels it as a posting date."""
+    s = clean(text)
+    patterns = [
+        r"\bdate\s+posted\s*:?\s*([^|;]{3,45})",
+        r"\bposted\s+date\s*:?\s*([^|;]{3,45})",
+        r"\bposted\s*:?\s*([^|;]{3,45})",
+    ]
+    for pattern in patterns:
+        m = re.search(pattern, s, re.I)
+        if not m:
+            continue
+        parsed, status = extract_date(clean(m.group(1)), today)
+        if parsed:
+            return parsed, status
+    m = re.search(r"\bposted\s+(\d+)\s+(hour|day|week|month)s?\s+ago\b", s, re.I)
+    if m:
+        return extract_date(m.group(0), today)
+    m = re.search(r"\bposted\s+(?:today|yesterday|just now)\b", s, re.I)
+    if m:
+        return extract_date(m.group(0), today)
+    return None, "unavailable"
+
+
+NONLISTING_PATH = re.compile(
+    r"/(?:service(?:s|-types)?|our-services|expertise|functions?|about|team|people|"
+    r"insights?|news|contact|practice(?:-areas)?|industr(?:y|ies)|role)/",
+    re.I,
+)
+
+def blocked_nonlisting_url(url: str, source_url: str = "") -> bool:
+    """Reject obvious marketing/service/navigation URLs as job detail pages."""
+    if not url:
+        return False
+    if canonical_url(url) == canonical_url(source_url):
+        return False
+    try:
+        path = urlparse(url).path or "/"
+    except Exception:
+        return False
+    return bool(NONLISTING_PATH.search(path))
+
+
+def allowed_candidate_url(url: str, source: dict) -> bool:
+    """Apply a source-specific detail URL allowlist when one is configured."""
+    pattern = source.get("allowed_detail_path_regex")
+    if not pattern:
+        return not blocked_nonlisting_url(url, source.get("url", ""))
+    try:
+        path = urlparse(url).path or "/"
+    except Exception:
+        return False
+    return bool(re.search(pattern, path, re.I))
+
+
 def money_value(token: str) -> int | None:
     t = token.lower().replace("$", "").replace(",", "").strip()
     mult = 1000 if t.endswith("k") else 1
@@ -328,24 +405,32 @@ def money_value(token: str) -> int | None:
 
 
 def extract_compensation(text: str) -> tuple[str, int | None, int | None, str]:
-    """Return source wording + normalized min/max without requiring it for capture."""
-    s = clean(text)
-    token = r"\$?\s*(?:\d{2,3}(?:,\d{3})+|\d{2,4}(?:\.\d+)?\s*[kK])"
-    range_re = re.compile(rf"({token})\s*(?:-|–|—|to|through)\s*({token})", re.I)
-    for m in range_re.finditer(s):
-        lo, hi = money_value(m.group(1)), money_value(m.group(2))
-        if lo and hi and hi >= lo:
-            start=max(0,m.start()-70); end=min(len(s),m.end()+90)
-            snippet=clean(s[start:end])
-            return snippet, lo, hi, "published_range"
-    single_re = re.compile(rf"\b(?:salary|compensation|pay range|annual salary|base salary)[^.;:]{{0,80}}({token})", re.I)
-    m = single_re.search(s)
+    """Extract compensation only from salary/pay-labeled context, not arbitrary dollar ranges."""
+    s=clean(text)
+    token=r"\$?\s*(?:\d{2,3}(?:,\d{3})+|\d{2,4}(?:\.\d+)?\s*[kK])"
+    labels=r"(?:compensation|salary|base salary|base compensation|pay range|annual salary|anticipated (?:base )?(?:salary|compensation)|estimated base compensation|salary range)"
+    patterns=[
+        rf"{labels}[^$\d]{{0,120}}({token})\s*(?:-|–|—|to|through)\s*({token})",
+        rf"Compensation\s*:?\s*(?:USD|US\$)?\s*({token})\s*(?:-|–|—|to|through)\s*({token})",
+    ]
+    for pat in patterns:
+        m=re.search(pat,s,re.I)
+        if m:
+            lo,hi=money_value(m.group(1)),money_value(m.group(2))
+            if lo and hi and hi>=lo:
+                return clean(s[max(0,m.start()-20):min(len(s),m.end()+120)]),lo,hi,"published_range"
+    for lm in re.finditer(labels,s,re.I):
+        window=s[lm.start():lm.start()+420]
+        rm=re.search(rf"({token})\s*(?:-|–|—|to|through)\s*({token})",window,re.I)
+        if rm:
+            lo,hi=money_value(rm.group(1)),money_value(rm.group(2))
+            if lo and hi and hi>=lo:
+                return clean(window[:min(len(window),rm.end()+100)]),lo,hi,"published_range"
+    m=re.search(rf"{labels}[^.;:]{{0,120}}({token})",s,re.I)
     if m:
         v=money_value(m.group(1))
-        if v:
-            start=max(0,m.start()-25); end=min(len(s),m.end()+90)
-            return clean(s[start:end]), v, v, "published_single"
-    return "", None, None, "not_published"
+        if v: return clean(s[max(0,m.start()-20):min(len(s),m.end()+100)]),v,v,"published_single"
+    return "",None,None,"not_published"
 
 
 def evidence_excerpt(text: str, role: str, organization: str) -> str:
@@ -408,6 +493,29 @@ def valid_url(url: str) -> bool:
         return False
 
 
+def extract_pdf_text(url: str, max_bytes: int = 8_000_000) -> str:
+    """Best-effort text extraction for linked leadership/position profiles."""
+    try:
+        r=fetch(url)
+        if len(r.content)>max_bytes: return ""
+        from io import BytesIO
+        from pypdf import PdfReader
+        reader=PdfReader(BytesIO(r.content))
+        return clean(" ".join((page.extract_text() or "") for page in reader.pages[:80]))[:80000]
+    except Exception:
+        return ""
+
+
+def enrich_context_from_linked_profile(dsoup, base_url: str, context: str) -> str:
+    if extract_compensation(context)[0]: return context
+    for a in dsoup.find_all("a",href=True):
+        href=urljoin(base_url,a.get("href")); label=clean(a.get_text(" ",strip=True))
+        if href.lower().split("?",1)[0].endswith(".pdf") and re.search(r"profile|position|leadership|prospectus|job description|search",label+" "+href,re.I):
+            extra=extract_pdf_text(href)
+            if extra: return clean(context+" "+extra)
+    return context
+
+
 @dataclass
 class Job:
     id: str
@@ -429,7 +537,16 @@ class Job:
     compensation_status: str = "not_published"
     sector: str = "Unclassified"
     sector_status: str = "unclassified"
+    organization_type: str = "Unclassified"
+    organization_type_status: str = "unclassified"
     work_arrangement: str = "Unknown"
+    latest_reported_ceo_comp: int | None = None
+    latest_reported_ceo_comp_year: int | None = None
+    latest_reported_ceo_name: str = ""
+    latest_reported_ceo_comp_source: str = ""
+    org_revenue: int | None = None
+    org_assets: int | None = None
+    org_ein: str = ""
     location_status: str = "unavailable"
     posted_date_status: str = "unavailable"
     evidence: str = ""
@@ -449,6 +566,7 @@ def build_job(*, source: dict, title: str, organization: str, location: str, url
     location=clean(location); context=clean(context)
     comp_text, comp_min, comp_max, comp_status=extract_compensation(context)
     sector, sector_status=infer_sector(organization,context)
+    organization_type, organization_type_status=infer_organization_type(organization,context)
     now=now_iso(); source_url=source["url"]
     direct=bool(url and canonical_url(url)!=canonical_url(source_url))
     return Job(
@@ -459,7 +577,7 @@ def build_job(*, source: dict, title: str, organization: str, location: str, url
         date_basis="posted_relative" if posted_status=="approximate" else "posted" if posted else "first_seen",
         status="open",role_type=role_type(role),compensation_text=comp_text,
         compensation_min=comp_min,compensation_max=comp_max,compensation_status=comp_status,
-        sector=sector,sector_status=sector_status,work_arrangement=infer_work_arrangement(location,context),
+        sector=sector,sector_status=sector_status,organization_type=organization_type,organization_type_status=organization_type_status,work_arrangement=infer_work_arrangement(location,context),
         location_status="extracted" if location else "unavailable",
         posted_date_status=posted_status if posted else "unavailable",
         evidence=evidence_excerpt(context,role,organization),updated_at=now,missing_runs=0,
@@ -579,6 +697,176 @@ def parse_npag(html: str, source: dict, today: date) -> list[Job]:
     return dedupe(out)
 
 
+def _unique_detail_links(soup, source: dict, path_regex: str) -> list[tuple[str, object]]:
+    seen=set(); out=[]
+    for a in soup.find_all("a", href=True):
+        url=urljoin(source["url"], a.get("href"))
+        try:
+            path=urlparse(url).path or "/"
+        except Exception:
+            continue
+        if not re.search(path_regex, path, re.I):
+            continue
+        cu=canonical_url(url)
+        if cu in seen:
+            continue
+        seen.add(cu); out.append((url,a))
+    return out
+
+
+def _detail_text_soup(url: str):
+    r=fetch(url)
+    dsoup=BeautifulSoup(r.text,"lxml")
+    pipe=clean(dsoup.get_text(" | ",strip=True))
+    plain=clean(dsoup.get_text(" ",strip=True))
+    plain=enrich_context_from_linked_profile(dsoup,url,plain)
+    return dsoup, pipe, plain
+
+
+def _field_from_pipe(pipe: str, label: str) -> str:
+    m=re.search(rf"\b{re.escape(label)}\s*:\s*([^|]{{1,180}})",pipe,re.I)
+    return clean(m.group(1)) if m else ""
+
+
+def parse_dsg(html: str, source: dict, today: date) -> list[Job]:
+    """Only numbered DSG assignment pages count as searches."""
+    soup=BeautifulSoup(html,"lxml")
+    links=_unique_detail_links(soup,source,r"^/search/\d+(?:-|/)")
+    if not links:
+        raise ValueError("DSG active-search page contained no assignment detail links")
+    out=[]; budget=int(source.get("max_detail_requests",120))
+    for url,a in links:
+        raw=clean(a.get_text(" ",strip=True))
+        if not ROLE_SIGNAL.search(raw):
+            continue
+        if budget<=0: break
+        budget-=1
+        try:
+            dsoup,pipe,plain=_detail_text_soup(url)
+        except Exception:
+            continue
+        if has_closed_signal(plain):
+            continue
+        h1=dsoup.find("h1")
+        title=clean(h1.get_text(" ",strip=True)) if h1 else ""
+        if not is_target_role(title):
+            continue
+        org=_field_from_pipe(pipe,"Company") or infer_organization(title,[clean(x) for x in dsoup.stripped_strings])
+        loc=_field_from_pipe(pipe,"Location") or infer_location([pipe])
+        posted,posted_status=extract_labeled_posted_date(pipe,today)
+        out.append(build_job(source=source,title=title,organization=org,location=loc,url=url,today=today,context=plain,posted=posted,posted_status=posted_status))
+    return dedupe(out)
+
+
+def parse_lindauer(html: str, source: dict, today: date) -> list[Job]:
+    """Only Lindauer open-search assignment links count; service/recent-placement pages do not."""
+    soup=BeautifulSoup(html,"lxml")
+    links=_unique_detail_links(soup,source,r"^/searches/open-searches/[^/]+/?$")
+    if not links:
+        raise ValueError("Lindauer open-search page contained no assignment detail links")
+    out=[]; budget=int(source.get("max_detail_requests",80))
+    for url,a in links:
+        title=clean(a.get_text(" ",strip=True))
+        if not is_target_role(title):
+            continue
+        lines=context_lines(a); org=infer_organization(title,lines); loc=infer_location(lines)
+        context=" | ".join(lines[:35])
+        if budget>0:
+            try:
+                budget-=1
+                dsoup,pipe,plain=_detail_text_soup(url)
+                if has_closed_signal(plain):
+                    continue
+                if org=="Organization not parsed":
+                    m=re.search(r"\b([A-Z][^.;|]{2,120}?)\s+seeks\s+(?:an?|its next)\s+"+re.escape(title),plain,re.I)
+                    if m:
+                        candidate=clean(m.group(1))
+                        if likely_org(candidate,title): org=candidate
+                if not loc: loc=infer_location([pipe])
+                context=plain
+            except Exception:
+                pass
+        out.append(build_job(source=source,title=title,organization=org,location=loc,url=url,today=today,context=context))
+    return dedupe(out)
+
+
+def _target_phrase(text: str) -> str:
+    s=clean(text)
+    for p in [
+        r"\bPresident\s*(?:&|and|/)\s*(?:Chief Executive Officer|CEO)\b",
+        r"\bChief Executive Officer\b",
+        r"\bExecutive Director\b(?!\s+of\b)",
+        r"(?<!Vice\s)(?<!Assistant\s)(?<!Associate\s)\bPresident\b",
+        r"\bCEO\b",
+    ]:
+        m=re.search(p,s,re.I)
+        if m: return clean(m.group(0))
+    return ""
+
+
+def parse_batten(html: str, source: dict, today: date) -> list[Job]:
+    """Only Batten /open-searches/ assignment cards count; service-type pages are excluded."""
+    soup=BeautifulSoup(html,"lxml")
+    links=_unique_detail_links(soup,source,r"^/open-searches/[^/]+/?$")
+    if not links:
+        raise ValueError("Batten jobs page contained no /open-searches/ assignment links")
+    out=[]
+    for url,a in links:
+        raw=clean(a.get_text(" ",strip=True)); title=_target_phrase(raw)
+        if not is_target_role(title): continue
+        loc=infer_location([raw]); org="Organization not parsed"; context=raw
+        m=re.search(r"\bAbout\s+(.{2,120}?)(?=\s+(?:Since|Founded|Established|Fueled|Headquartered|Based|With|The organization|The Foundation|The Association|is a|was founded)\b)",raw,re.I)
+        if m:
+            candidate=clean(m.group(1))
+            if likely_org(candidate,title): org=candidate
+        try:
+            dsoup,pipe,plain=_detail_text_soup(url)
+            if has_closed_signal(plain): continue
+            h1=dsoup.find("h1")
+            if h1 and is_target_role(clean(h1.get_text(" ",strip=True))): title=clean(h1.get_text(" ",strip=True))
+            if org=="Organization not parsed":
+                m=re.search(r"\bAbout\s+(.{2,120}?)(?=\s+(?:Since|Founded|Established|Fueled|Headquartered|Based|With|The organization|The Foundation|The Association|is a|was founded)\b)",plain,re.I)
+                if m:
+                    candidate=clean(m.group(1))
+                    if likely_org(candidate,title): org=candidate
+            if not loc: loc=infer_location([pipe])
+            context=plain
+        except Exception:
+            pass
+        out.append(build_job(source=source,title=title,organization=org,location=loc,url=url,today=today,context=context))
+    return dedupe(out)
+
+
+def parse_odgers(html: str, source: dict, today: date) -> list[Job]:
+    """Scope Odgers strictly to its CURRENT OPPORTUNITIES section."""
+    soup=BeautifulSoup(html,"lxml"); headings=soup.find_all(["h2","h3","h4"])
+    in_section=False; marker_seen=False; out=[]
+    for h in headings:
+        txt=clean(h.get_text(" ",strip=True))
+        if re.search(r"\bcurrent opportunities\b",txt,re.I):
+            in_section=True; marker_seen=True; continue
+        if in_section and re.fullmatch(r"join us",txt,re.I): break
+        if not in_section: continue
+        title,org=split_title_org(txt)
+        if not is_target_role(title): continue
+        lines,tags=sibling_block_text(h,("h2","h3","h4"),60); context=" | ".join([txt]+lines[:40])
+        href=""
+        for tag in tags:
+            for a in tag.find_all("a",href=True) if getattr(tag,"find_all",None) else []:
+                if re.search(r"find out more|learn more|position brief|apply",clean(a.get_text(" ",strip=True)),re.I):
+                    href=urljoin(source["url"],a.get("href")); break
+            if href: break
+        if not href:
+            a=h.find_next("a",href=True)
+            if a and re.search(r"find out more|learn more|position brief|apply",clean(a.get_text(" ",strip=True)),re.I): href=urljoin(source["url"],a.get("href"))
+        loc=infer_location(lines)
+        if not org: org=infer_organization(title,[txt]+lines)
+        out.append(build_job(source=source,title=title,organization=org,location=loc,url=href or source["url"],today=today,context=context))
+    if not marker_seen:
+        raise ValueError("Odgers page did not expose a CURRENT OPPORTUNITIES section")
+    return dedupe(out)
+
+
 def node_href(node, source_url: str) -> str:
     if getattr(node,"name",None)=="a" and node.get("href"):
         href=node.get("href")
@@ -614,6 +902,8 @@ def candidate_from_node(node, source: dict, today: date, detail_budget: list[int
     location=infer_location(lines)
     list_text=" | ".join(lines[:40])
     url=node_href(node,source["url"])
+    if url != source["url"] and not allowed_candidate_url(url, source):
+        return None
 
     use_source_dates=source.get("date_policy","source")!="first_seen"
     posted, posted_status=extract_date(list_text,today) if use_source_dates else (None,"unavailable")
@@ -626,9 +916,11 @@ def candidate_from_node(node, source: dict, today: date, detail_budget: list[int
             time.sleep(0.08)
             dr=fetch(url)
             dsoup=BeautifulSoup(dr.text,"lxml")
-            detail_text=clean(dsoup.get_text(" ",strip=True))[:30000]
+            detail_text=clean(dsoup.get_text(" ",strip=True))[:50000]
+            detail_text=enrich_context_from_linked_profile(dsoup,url,detail_text)
             if use_source_dates and posted is None:
-                posted, posted_status=extract_date(detail_text,today)
+                # Detail pages may contain many unrelated dates. Trust only a labeled posting date.
+                posted, posted_status=extract_labeled_posted_date(detail_text,today)
             if not location:
                 location=infer_location([detail_text])
             if organization=="Organization not parsed":
@@ -650,6 +942,7 @@ def candidate_from_node(node, source: dict, today: date, detail_budget: list[int
         return None
     comp_text, comp_min, comp_max, comp_status=extract_compensation(combined)
     sector, sector_status=infer_sector(organization,combined)
+    organization_type, organization_type_status=infer_organization_type(organization,combined)
     now=now_iso()
     return Job(
         id=stable_id(source["name"],role,organization,url),
@@ -660,7 +953,7 @@ def candidate_from_node(node, source: dict, today: date, detail_budget: list[int
         date_basis="posted_relative" if posted_status=="approximate" else "posted" if posted else "first_seen",
         status="open", role_type=role_type(role),
         compensation_text=comp_text,compensation_min=comp_min,compensation_max=comp_max,
-        compensation_status=comp_status,sector=sector,sector_status=sector_status,
+        compensation_status=comp_status,sector=sector,sector_status=sector_status,organization_type=organization_type,organization_type_status=organization_type_status,
         work_arrangement=infer_work_arrangement(location,combined),
         location_status="extracted" if location else "unavailable",
         posted_date_status=posted_status if posted else "unavailable",
@@ -670,11 +963,44 @@ def candidate_from_node(node, source: dict, today: date, detail_budget: list[int
     )
 
 
+def parse_korn(html: str, source: dict, today: date) -> list[Job]:
+    """Parse the rendered Korn Ferry client job board and verify executive detail pages."""
+    soup=BeautifulSoup(html,"lxml"); seen=set(); out=[]; links=[]
+    for a in soup.find_all("a",href=True):
+        url=urljoin(source["url"],a.get("href"))
+        if not re.search(r"/job/Korn-Ferry-Executive-Search-[^?#]+/\d+/?$",urlparse(url).path,re.I): continue
+        cu=canonical_url(url)
+        if cu not in seen: seen.add(cu); links.append(url)
+    if not links: raise ValueError("Korn Ferry rendered board exposed no client job detail links")
+    for url in links[:int(source.get("max_detail_requests",160))]:
+        try: dsoup,pipe,plain=_detail_text_soup(url)
+        except Exception: continue
+        if re.search(r"Job Expired or Not Found",plain,re.I) or has_closed_signal(plain): continue
+        h1=dsoup.find("h1"); title=clean(h1.get_text(" ",strip=True)) if h1 else ""
+        if not is_target_role(title): continue
+        loc=_field_from_pipe(pipe,"Location") or infer_location([pipe])
+        posted,posted_status=extract_labeled_posted_date(pipe,today)
+        org=""
+        for pat in [r"\bAbout (?:the Organization\s+)?([^|]{2,120})",r"\bThe Organization\s+([^|]{2,120})",r"\b([A-Z][^.|]{2,100})\s+is (?:one of|a |an )"]:
+            m=re.search(pat,pipe,re.I)
+            if m:
+                cand=clean(m.group(1))
+                if likely_org(cand,title): org=cand; break
+        if not org: org=infer_organization(title,[clean(x) for x in dsoup.stripped_strings])
+        out.append(build_job(source=source,title=title,organization=org,location=loc,url=url,today=today,context=plain,posted=posted,posted_status=posted_status))
+    return dedupe(out)
+
+
 def candidates_from_html(html: str, source: dict, today: date) -> list[Job]:
     parser=source.get("parser")
     if parser=="moran": return parse_moran(html,source,today)
     if parser=="kittleman": return parse_kittleman(html,source,today)
     if parser=="npag": return parse_npag(html,source,today)
+    if parser=="dsg": return parse_dsg(html,source,today)
+    if parser=="lindauer": return parse_lindauer(html,source,today)
+    if parser=="batten": return parse_batten(html,source,today)
+    if parser=="odgers": return parse_odgers(html,source,today)
+    if parser=="korn": return parse_korn(html,source,today)
     soup=BeautifulSoup(html,"lxml")
     budget=[int(source.get("max_detail_requests",MAX_DETAIL_REQUESTS_PER_SOURCE))]
     found=[]
@@ -755,7 +1081,7 @@ def carry_forward(job: Job, prior: dict) -> Job:
     job.missing_runs=0
     job.closed_date=None
     # Do not lose previously known metadata just because today's parser missed a field.
-    for attr in ["organization","location","posted_date","compensation_text","compensation_min","compensation_max","sector"]:
+    for attr in ["organization","location","posted_date","compensation_text","compensation_min","compensation_max","sector","organization_type","latest_reported_ceo_comp","latest_reported_ceo_comp_year","latest_reported_ceo_name","latest_reported_ceo_comp_source","org_revenue","org_assets","org_ein"]:
         new=getattr(job,attr)
         old=prior.get(attr)
         missing=new in (None,"","Organization not parsed","Unclassified")
@@ -766,6 +1092,7 @@ def carry_forward(job: Job, prior: dict) -> Job:
         job.posted_date_status=prior.get("posted_date_status") if prior.get("posted_date")==job.posted_date else job.posted_date_status
     job.compensation_status = prior.get("compensation_status",job.compensation_status) if not job.compensation_text else job.compensation_status
     job.sector_status = prior.get("sector_status",job.sector_status) if job.sector==prior.get("sector") else job.sector_status
+    job.organization_type_status = prior.get("organization_type_status",job.organization_type_status) if job.organization_type==prior.get("organization_type") else job.organization_type_status
     job.location_status = "extracted" if job.location else prior.get("location_status","unavailable")
     job.work_arrangement=infer_work_arrangement(job.location,job.evidence)
     job.link_quality="direct" if job.url and job.url!=job.source_url else prior.get("link_quality",job.link_quality)
@@ -774,7 +1101,7 @@ def carry_forward(job: Job, prior: dict) -> Job:
 
 def changed_fields(prior: dict, current: Job) -> dict:
     changes={}
-    for fieldname in ["title","organization","location","url","posted_date","compensation_text","compensation_min","compensation_max","sector","work_arrangement"]:
+    for fieldname in ["title","organization","location","url","posted_date","compensation_text","compensation_min","compensation_max","sector","organization_type","work_arrangement","latest_reported_ceo_comp","org_revenue","org_assets"]:
         before=prior.get(fieldname); after=getattr(current,fieldname)
         if before not in (None,"") and after not in (None,"") and before!=after:
             changes[fieldname]={"from":before,"to":after}
@@ -791,7 +1118,7 @@ def scrape_source(source: dict, today: date, prior_count: int) -> tuple[list[Job
     }
     if source["mode"]!="automated": return [],health
 
-    errors=[]; all_found=[]; fetch_modes=[]
+    errors=[]; all_found=[]; fetch_modes=[]; parse_successes=0
     urls=source.get("urls") or [source["url"]]
     for url in urls:
         html=""; page_found=[]
@@ -799,6 +1126,7 @@ def scrape_source(source: dict, today: date, prior_count: int) -> tuple[list[Job
             try:
                 html=browser_html(url); fetch_modes.append("browser")
                 page_found=candidates_from_html(html,{**source,"url":url},today)
+                parse_successes+=1
                 all_found.extend(page_found)
             except Exception as exc:
                 errors.append(f"browser {type(exc).__name__}: {exc}")
@@ -806,6 +1134,7 @@ def scrape_source(source: dict, today: date, prior_count: int) -> tuple[list[Job
             try:
                 r=fetch(url); html=r.text; fetch_modes.append("static")
                 page_found=candidates_from_html(html,{**source,"url":url},today)
+                parse_successes+=1
                 all_found.extend(page_found)
             except Exception as exc:
                 errors.append(f"static {type(exc).__name__}: {exc}")
@@ -814,18 +1143,20 @@ def scrape_source(source: dict, today: date, prior_count: int) -> tuple[list[Job
             try:
                 html=browser_html(url); fetch_modes.append("browser")
                 page_found=candidates_from_html(html,{**source,"url":url},today)
+                parse_successes+=1
                 all_found.extend(page_found)
             except Exception as exc:
                 errors.append(f"browser {type(exc).__name__}: {exc}")
 
     found=dedupe(all_found)
     health["count"]=len(found); health["fetch_mode"]="+".join(dict.fromkeys(fetch_modes))
-    if not fetch_modes:
-        health["ok"]=False; health["status"]="failed"; health["error"]=" | ".join(errors)[:500]
+    if not fetch_modes or parse_successes==0:
+        health["ok"]=False; health["status"]="failed"; health["preserved"]=True
+        health["error"]=("No source page parsed successfully. " + " | ".join(errors))[:500]
         return [],health
 
     # Unexpected collapses are treated as partial, not as mass closures.
-    if prior_count>=5 and len(found)<max(2,int(prior_count*0.35)) and not source.get("allow_zero",False):
+    if prior_count>=5 and len(found)<max(2,int(prior_count*0.35)) and not source.get("allow_zero",False) and not source.get("authoritative_parser",False):
         health["ok"]=False; health["status"]="partial-suspected"; health["preserved"]=True
         health["error"]=(f"Found {len(found)} vs {prior_count} previously open; preserving prior roles pending another healthy parse. " + " | ".join(errors))[:500]
         return found,health
@@ -834,6 +1165,73 @@ def scrape_source(source: dict, today: date, prior_count: int) -> tuple[list[Job
     health["status"]="ok" if found else "checked-no-matches"
     health["error"]=" | ".join(errors)[:500]
     return found,health
+
+
+def _state_from_location(location: str) -> str:
+    m=re.search(r",\s*([A-Z]{2})\b",location or "")
+    return m.group(1) if m else ""
+
+
+def enrich_nonprofit_990(jobs: list[dict], limit: int = 15) -> None:
+    """Best-effort public Form 990 enrichment; never gates a listing."""
+    done=0
+    for j in jobs:
+        if done>=limit: break
+        if j.get("latest_reported_ceo_comp") or j.get("org_ein"): continue
+        org=j.get("organization","")
+        if not org or org=="Organization not parsed": continue
+        ot=j.get("organization_type","")
+        eligible=any(x in ot for x in ["Association","Foundation","University","Education","Health","Media","Arts","Advocacy","Human Services","Nonprofit"])
+        if not eligible: continue
+        try:
+            q=requests.utils.quote(org[:120])
+            data=fetch(f"https://projects.propublica.org/nonprofits/api/v2/search.json?q={q}").json()
+            orgs=data.get("organizations") or []
+            if not orgs: continue
+            target=normalized(org); state=_state_from_location(j.get("location","")); scored=[]
+            for o in orgs[:25]:
+                name=normalized(o.get("name","")); score=0
+                if name==target: score+=100
+                elif target in name or name in target: score+=65
+                score+=len(set(target.split()) & set(name.split()))*5
+                if state and str(o.get("state","")).upper()==state: score+=15
+                scored.append((score,o))
+            score,o=max(scored,key=lambda x:x[0])
+            if score<55: continue
+            ein=str(o.get("ein") or "")
+            if not ein: continue
+            j["org_ein"]=ein
+            detail=fetch(f"https://projects.propublica.org/nonprofits/api/v2/organizations/{ein}.json").json()
+            filings=detail.get("filings_with_data") or []
+            if filings:
+                f=filings[0]
+                j["org_revenue"]=f.get("totrevenue") or f.get("totrev")
+                j["org_assets"]=f.get("totassetsend") or f.get("totassets")
+            page=fetch(f"https://projects.propublica.org/nonprofits/organizations/{ein}").text
+            ps=BeautifulSoup(page,"lxml")
+            best=None
+            for tr in ps.find_all("tr"):
+                cells=[clean(x.get_text(" ",strip=True)) for x in tr.find_all(["th","td"])]
+                if len(cells)<2: continue
+                name_role=cells[0]
+                if not re.search(r"\b(CEO|Chief Executive|President|Executive Director)\b",name_role,re.I): continue
+                vals=[]
+                for c in cells[1:4]:
+                    m=re.search(r"\$([\d,]+)",c)
+                    if m: vals.append(int(m.group(1).replace(",","")))
+                if vals:
+                    total=sum(vals)
+                    if best is None or total>best[0]: best=(total,name_role)
+            if best:
+                j["latest_reported_ceo_comp"]=best[0]
+                j["latest_reported_ceo_name"]=best[1]
+                j["latest_reported_ceo_comp_source"]=f"https://projects.propublica.org/nonprofits/organizations/{ein}"
+                years=re.findall(r"Fiscal Year Ending[^0-9]*(20\d{2})",clean(ps.get_text(" ",strip=True)))
+                if years: j["latest_reported_ceo_comp_year"]=int(years[0])
+            done+=1
+            time.sleep(.08)
+        except Exception:
+            continue
 
 
 def main() -> int:
@@ -913,6 +1311,9 @@ def main() -> int:
             except ValueError:
                 j["posted_date"]=None; j["date_basis"]="first_seen"; j["posted_date_status"]="unavailable"
         current.append(j)
+
+    # Enrich a bounded number of eligible nonprofit records per run with public 990 data.
+    enrich_nonprofit_990(current,limit=15)
 
     def recency(j): return j.get("posted_date") or (j.get("first_seen") or "")[:10] or "0000-00-00"
     current.sort(key=lambda j:(recency(j),j.get("source",""),j.get("organization","")),reverse=True)

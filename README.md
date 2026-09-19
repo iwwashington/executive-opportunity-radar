@@ -1,29 +1,22 @@
-# Executive Opportunity Radar — v4 patch
+# Executive Opportunity Radar v5
 
-This is a **code/config patch** for the live radar. It intentionally does not include `jobs.json`, `history.json`, `changes.json`, or `meta.json`, so uploading it will not overwrite the history already collected by the live site.
+This patch supersedes the unuploaded v4/v4.1 patches. Upload these files together, then run the existing GitHub Action once.
 
-## v4 fixes
-
-- Fixes the **All firms** and **All sectors** dropdowns on Opportunities.
-- Uses the source-reported **Posted date** as the primary date; `First seen` is only the fallback.
-- Does **not** remove a role merely because it is old. If a source still presents it as active, it remains visible and is labeled `Open N days` after 90 days.
-- Avoids a misleading `New` badge when the radar discovers a role that has an older published posting date.
-- Adds `Verified <date>` to cards from the most recent healthy observation.
-- Adds source-specific handling for **The Moran Company**, **Kittleman Associates**, and **NPAG**.
-- **Moran:** reads only Open Positions into the active feed; Positions Filled are excluded immediately.
-- **NPAG:** excludes cards that say `No Longer Accepting Applications`.
-- **DSG:** follows detail pages and rejects explicit closed/no-longer-accepting language.
-- **Kittleman:** preserves exact posted dates and prefers the role-specific link.
-- **WittKieffer:** tries browser rendering first to work around the static 403.
-- Sources with explicit status handling can close known false-active records after one healthy miss; failed/partial source checks still preserve prior roles.
+## v5 additions
+- Korn Ferry is now browser-first with a dedicated parser for direct client-job detail URLs; it scrolls the rendered board and verifies each CEO/president/executive-director page.
+- Compensation extraction is stricter and richer: it reads labeled salary/compensation ranges on detail pages and, when needed, linked position/leadership-profile PDFs.
+- Organization Type is separate from Sector, enabling filters such as Association / Professional Society, Foundation / Philanthropy, College / University, Health System / Provider, and other nonprofit types.
+- The Compensation disclosed market card is clickable and opens the filtered opportunity feed.
+- A compensation filter supports posted compensation and latest reported CEO compensation.
+- Best-effort nonprofit enrichment uses public ProPublica Nonprofit Explorer / IRS Form 990 data for latest reported CEO compensation, revenue, and assets. These are explicitly historical reported figures, never labeled as current salary. Enrichment is bounded per run and never gates a role.
+- Existing v4.1 protections remain: direct assignment URLs, closed/filled detection, posted-date semantics, stale-source preservation, and source-specific DSG/Moran/NPAG/Lindauer/Batten/Odgers logic.
 
 ## Upload
+Replace these files in the repository root:
+- aggregate.py
+- sources.json
+- index.html
+- requirements.txt
+- README.md
 
-Upload the four files in this patch to the root of the GitHub repository and replace the existing files:
-
-- `index.html`
-- `aggregate.py`
-- `sources.json`
-- `README.md`
-
-Then run **Actions → Update Executive Opportunity Radar → Run workflow** once. The existing workflow does not need to be replaced.
+Do not replace jobs.json, history.json, changes.json, meta.json, or the workflow. Run the Action once after upload.
