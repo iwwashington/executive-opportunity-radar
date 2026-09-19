@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-19T10:28:17.033704+00:00",
+  "generated_at": "2026-09-19T12:02:10.355913+00:00",
   "events": [
     {
       "at": "2026-09-19T06:41:48.620945+00:00",
@@ -4096,6 +4096,918 @@
         "compensation_max": {
           "from": 65000,
           "to": 100000
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "updated",
+      "job_id": "dfae6a784f47fae6",
+      "source": "Odgers",
+      "title": "Chief Executive Officer",
+      "organization": "Universal Service Administrative Company (USAC)",
+      "changes": {
+        "url": {
+          "from": "https://www.odgers.com/en-us/about-us/candidate-charter/",
+          "to": "https://www.odgers.com/en-us/opportunities/"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "closed",
+      "job_id": "353cf0f832ee2e0a",
+      "source": "Odgers",
+      "title": "CEO",
+      "organization": "Board Chair & Directors"
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "closed",
+      "job_id": "5d9d9e8f2271483c",
+      "source": "Odgers",
+      "title": "CEO",
+      "organization": "Board, Chair & NED"
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "closed",
+      "job_id": "796884e96850deb9",
+      "source": "Odgers",
+      "title": "Explore Board + CEO Services",
+      "organization": "Capstone"
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "closed",
+      "job_id": "8acafe2849539bf8",
+      "source": "Odgers",
+      "title": "Board + CEO Advisory",
+      "organization": "Board Succession"
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "closed",
+      "job_id": "01f7e5b62a1556c9",
+      "source": "Odgers",
+      "title": "Board + CEO Services",
+      "organization": "Executive Search"
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "updated",
+      "job_id": "acf48ae0f359e233",
+      "source": "BoardWalk Consulting",
+      "title": "Executive Director",
+      "organization": "Florida Rights Restoration Coalition",
+      "changes": {
+        "sector": {
+          "from": "Civic / Public",
+          "to": "Education"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "updated",
+      "job_id": "b31f942adf5dca3b",
+      "source": "BoardWalk Consulting",
+      "title": "Executive Director",
+      "organization": "Gateway Early Childhood Alliance",
+      "changes": {
+        "sector": {
+          "from": "Education",
+          "to": "Health"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "updated",
+      "job_id": "dfcd1a39e5a39154",
+      "source": "BoardWalk Consulting",
+      "title": "President & CEO",
+      "organization": "Community Foundation for Greater Atlanta",
+      "changes": {
+        "sector": {
+          "from": "Philanthropy",
+          "to": "Health"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "updated",
+      "job_id": "02c92a3fb8587a5a",
+      "source": "BoardWalk Consulting",
+      "title": "President & CEO",
+      "organization": "North Carolina Community Foundation",
+      "changes": {
+        "sector": {
+          "from": "Philanthropy",
+          "to": "Health"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "updated",
+      "job_id": "2927463d94d4b795",
+      "source": "Scion Executive Search",
+      "title": "Executive Director",
+      "organization": "Health Affairs Publishing",
+      "changes": {
+        "compensation_text": {
+          "from": "competitive compensation package with an anticipated salary range of $220,000–$250,000 , commensurate with experience and qualifications. The comprehensive benefits package inc",
+          "to": "pline is preferred. COMPENSATION AND BENEFITS This position offers a competitive compensation package with an anticipated salary range of $220,000–$250,000 , commensurate with experience and qualifications. The comprehensive benefits package includes health, dental, vision,"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "updated",
+      "job_id": "01ffeb85a0e24b02",
+      "source": "Scion Executive Search",
+      "title": "Executive Director",
+      "organization": "Location:",
+      "changes": {
+        "compensation_text": {
+          "from": "chapter of impact. The position offers a competitive salary range of $150,000 to $170,000 (DOE), along with relocation assistance, a comprehensive benefits package that includes m",
+          "to": "ffers a competitive salary range of $150,000 to $170,000 (DOE), along with relocation assistance, a comprehensive benefits package that includes medical, dental, and vision cov"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "updated",
+      "job_id": "1ae253d1667bd31d",
+      "source": "Scion Executive Search",
+      "title": "Chief Executive Officer",
+      "organization": "Location:",
+      "changes": {
+        "compensation_text": {
+          "from": "AND BENEFITS: This position offers a competitive base salary range of $275,000 – $315,000, commensurate with experience, along with a comprehensive benefits package. APPLICATIONS",
+          "to": "service innovation. COMPENSATION AND BENEFITS: This position offers a competitive base salary range of $275,000 – $315,000, commensurate with experience, along with a comprehensive benefits package. APPLICATIONS AND NOMINATIONS: Vayu Health h"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "updated",
+      "job_id": "4ab2e84d73594bee",
+      "source": "Scion Executive Search",
+      "title": "Senior Executive Director",
+      "organization": "Location:",
+      "changes": {
+        "compensation_text": {
+          "from": "TION AND BENEFITS: This rewarding role offers a competitive salary of $171,000–$190,000 (DOE) with eligibility for an incentive opportunity of up to 25% based on achievement of",
+          "to": "bitious objectives. COMPENSATION AND BENEFITS: This rewarding role offers a competitive salary of $171,000–$190,000 (DOE) with eligibility for an incentive opportunity of up to 25% based on achievement of revenue goals. The American He"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "new",
+      "job_id": "b565b85c0356c4f6",
+      "source": "Lindauer",
+      "title": "Executive Director, Bertarelli Institute for Family Entrepreneurship",
+      "organization": "Bertarelli Institute for Family Entrepreneurship"
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "closed",
+      "job_id": "66526004e3303581",
+      "source": "Lindauer",
+      "title": "Executive Director and Chief Operating Officer",
+      "organization": "Higher Education"
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "closed",
+      "job_id": "e17dced85b6e05d8",
+      "source": "Lindauer",
+      "title": "Vice President of External Affairs and Executive Director",
+      "organization": "Lee College Foundation"
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "closed",
+      "job_id": "c598c234babcdecb",
+      "source": "Lindauer",
+      "title": "Executive Director",
+      "organization": "Arts + Culture"
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "closed",
+      "job_id": "46186819ac48e195",
+      "source": "Lindauer",
+      "title": "Executive Director",
+      "organization": "Bertarelli Institute for Family Entrepreneurship"
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "closed",
+      "job_id": "1b0c3783b9d866cf",
+      "source": "Lindauer",
+      "title": "Executive Director",
+      "organization": "Community Impact"
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "closed",
+      "job_id": "24d2f6e4b4b7b768",
+      "source": "Lindauer",
+      "title": "CEO Search",
+      "organization": "Search Process"
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "closed",
+      "job_id": "248242a393f070b0",
+      "source": "Lindauer",
+      "title": "Chief Executive Officer",
+      "organization": "Healthcare + Academic Medicine"
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "closed",
+      "job_id": "d7ba9d782af0ea73",
+      "source": "Lindauer",
+      "title": "President",
+      "organization": "Advocacy + Public Policy"
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "new",
+      "job_id": "fc19e4b6b0436647",
+      "source": "DSG Global",
+      "title": "President/Chief Executive Officer",
+      "organization": "DSG Global"
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "new",
+      "job_id": "b8e982953accafdb",
+      "source": "DSG Global",
+      "title": "Chief Executive Officer",
+      "organization": "DSG Global"
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "new",
+      "job_id": "8cbe95a1133c0bc5",
+      "source": "DSG Global",
+      "title": "President and CEO",
+      "organization": "DSG Global"
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "new",
+      "job_id": "64ee69a30199e1a8",
+      "source": "DSG Global",
+      "title": "CEO",
+      "organization": "DSG Global"
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "new",
+      "job_id": "9d9450d05842e801",
+      "source": "DSG Global",
+      "title": "Executive Director",
+      "organization": "DSG Global"
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "closed",
+      "job_id": "6cd8a9c8e76d8765",
+      "source": "DSG Global",
+      "title": "Wildpath Chief Executive Officer Tampa, Florida",
+      "organization": "Wildpath will selectively consider a hybrid work model as needed for strong candidates."
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "closed",
+      "job_id": "74c04611618b70ad",
+      "source": "DSG Global",
+      "title": "Vitalyst Health Foundation President and Chief Executive Officer Phoenix",
+      "organization": "AZ"
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "closed",
+      "job_id": "5d11ec437bcbf237",
+      "source": "DSG Global",
+      "title": "University of Miami Health System Executive Director, Senior Human Resources Partner Coral Gables, FL",
+      "organization": "UHealth"
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "closed",
+      "job_id": "b3b40c1d22c20bf2",
+      "source": "DSG Global",
+      "title": "The University of Toledo Foundation President and CEO Toledo",
+      "organization": "OH"
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "closed",
+      "job_id": "2c1fa6c78f24db96",
+      "source": "DSG Global",
+      "title": "The Players Alliance Executive Director Fort Lee",
+      "organization": "NJ"
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "closed",
+      "job_id": "475953f9caa29d9a",
+      "source": "DSG Global",
+      "title": "The Joslyn Center Executive Director Palm Desert",
+      "organization": "CA"
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "closed",
+      "job_id": "b19059a69536f998",
+      "source": "DSG Global",
+      "title": "The Education Fund Executive Director Miami",
+      "organization": "FL"
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "closed",
+      "job_id": "dc323559a8524e27",
+      "source": "DSG Global",
+      "title": "The Doctors Clinic Executive Director Silverdale",
+      "organization": "WA"
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "closed",
+      "job_id": "47ae2d70065b92cb",
+      "source": "DSG Global",
+      "title": "The Butler Institute of American Art Executive Director Youngstown",
+      "organization": "OH"
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "closed",
+      "job_id": "ea9bc4fdfb418be8",
+      "source": "DSG Global",
+      "title": "The Alliance for Community Development Executive Director Bay Area",
+      "organization": "CA"
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "closed",
+      "job_id": "632a676c24f8733e",
+      "source": "DSG Global",
+      "title": "Spur Community Foundation Executive Director Sun Valley",
+      "organization": "ID"
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "closed",
+      "job_id": "ec7b07956d0ad276",
+      "source": "DSG Global",
+      "title": "Sigler Western Museum Executive Director Wickenburg",
+      "organization": "AZ"
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "closed",
+      "job_id": "9876f9121bb468a4",
+      "source": "DSG Global",
+      "title": "SCGA Junior Golf Foundation Executive Director Studio City",
+      "organization": "CA"
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "closed",
+      "job_id": "ab71cb3af44e1692",
+      "source": "DSG Global",
+      "title": "Renewable Thermal Collaborative Chief Executive Officer Remote",
+      "organization": "Washington D.C. preferred"
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "closed",
+      "job_id": "f5bc4e867a71ad2c",
+      "source": "DSG Global",
+      "title": "Parnassus Preparatory School Executive Director Maple Grove",
+      "organization": "MN"
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "closed",
+      "job_id": "c1d0817c747abc35",
+      "source": "DSG Global",
+      "title": "Nuestros Pequenos Hermanos International Chief Executive Officer Flexible",
+      "organization": "Latin America-based preferred"
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "closed",
+      "job_id": "931f0e066b405e88",
+      "source": "DSG Global",
+      "title": "North Penn Legal Services Executive Director Pittston",
+      "organization": "PA"
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "closed",
+      "job_id": "2a9a8035f5c0010c",
+      "source": "DSG Global",
+      "title": "North Carolina A&T State University Executive Director for Housing and Residence Life Greensboro",
+      "organization": "NC"
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "closed",
+      "job_id": "74117d53f9ba6ec8",
+      "source": "DSG Global",
+      "title": "Newtrax Executive Director White Bear Lake",
+      "organization": "MN"
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "closed",
+      "job_id": "f03ea33b790b03e1",
+      "source": "DSG Global",
+      "title": "National Alliance of State and Territorial AIDS Directors (NASTAD) Executive Director Washington",
+      "organization": "DC"
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "closed",
+      "job_id": "49f75552443c5f30",
+      "source": "DSG Global",
+      "title": "Monmouth Conservation Foundation Executive Director Monmouth County",
+      "organization": "NJ"
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "closed",
+      "job_id": "8c641b590796573b",
+      "source": "DSG Global",
+      "title": "Modern Language Association of America Executive Director New York",
+      "organization": "NY"
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "closed",
+      "job_id": "bc58056ebebe36cd",
+      "source": "DSG Global",
+      "title": "Mid-America Science Museum Chief Executive Officer Hot Springs",
+      "organization": "AR"
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "closed",
+      "job_id": "7843a1adaf6f7fc5",
+      "source": "DSG Global",
+      "title": "La Clinica de La Raza Chief Executive Officer Oakland",
+      "organization": "CA"
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "closed",
+      "job_id": "d467e89870eb6c86",
+      "source": "DSG Global",
+      "title": "La Casa de las Madres Executive Director San Francisco",
+      "organization": "CA"
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "closed",
+      "job_id": "632ecde5efc161bd",
+      "source": "DSG Global",
+      "title": "Kin On Chief Executive Officer Seattle",
+      "organization": "WA"
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "closed",
+      "job_id": "fed7bc5e9bca94ef",
+      "source": "DSG Global",
+      "title": "Keiro President & CEO Los Angeles",
+      "organization": "CA"
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "closed",
+      "job_id": "c2e58986134aa0b3",
+      "source": "DSG Global",
+      "title": "Iowa Public Radio Chief Executive Officer Des Moines",
+      "organization": "IA"
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "closed",
+      "job_id": "862592b1fbbda9ee",
+      "source": "DSG Global",
+      "title": "Illinois Board of Examiners Executive Director Naperville",
+      "organization": "IL"
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "closed",
+      "job_id": "46476312810b6ade",
+      "source": "DSG Global",
+      "title": "IJ & Jeanné Wagner Jewish Community Center Chief Executive Officer Salt Lake City",
+      "organization": "UT"
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "closed",
+      "job_id": "332d81cfddefb79a",
+      "source": "DSG Global",
+      "title": "Homeowners of Tomorrow Alliance Executive Director Flexible with preference for Bay Area",
+      "organization": "CA or New York, NY"
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "closed",
+      "job_id": "f9f84d4a0816c58b",
+      "source": "DSG Global",
+      "title": "HIPS Executive Director Washington",
+      "organization": "DC"
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "closed",
+      "job_id": "d0428c6966855f95",
+      "source": "DSG Global",
+      "title": "Museum & Gardens Executive Director Washington, DC",
+      "organization": "Hillwood Estate"
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "closed",
+      "job_id": "f3123cff48c6e191",
+      "source": "DSG Global",
+      "title": "Higher Ground USA Chief Executive Officer Ketchum",
+      "organization": "ID"
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "closed",
+      "job_id": "ef47b9fbceb603a2",
+      "source": "DSG Global",
+      "title": "Hendrix College Executive Director",
+      "organization": "Career Success Conway, AR"
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "closed",
+      "job_id": "cbaea6350aed4273",
+      "source": "DSG Global",
+      "title": "Health Federation of Philadelphia Chief Executive Officer Philadelphia",
+      "organization": "PA"
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "closed",
+      "job_id": "cd8e2ddeeff80f73",
+      "source": "DSG Global",
+      "title": "GreenLight Fund Kansas City Executive Director Kansas City",
+      "organization": "MO"
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "closed",
+      "job_id": "b42af966e0a35806",
+      "source": "DSG Global",
+      "title": "GreenLight Fund Executive Director",
+      "organization": "Washington D.C. Metro Washington D.C. Metro"
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "closed",
+      "job_id": "2900c0750b7a01f6",
+      "source": "DSG Global",
+      "title": "Gilda's Club Chicago CEO Chicago",
+      "organization": "IL"
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "closed",
+      "job_id": "a9d67489d0cc2624",
+      "source": "DSG Global",
+      "title": "Fort Worth Report CEO Fort Worth",
+      "organization": "TX"
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "closed",
+      "job_id": "180d40c99aa3433b",
+      "source": "DSG Global",
+      "title": "DataKind Chief Executive Officer Remote within the US",
+      "organization": "Organization not parsed"
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "closed",
+      "job_id": "46bb81a96616ef25",
+      "source": "DSG Global",
+      "title": "Counseling and Support Services for Youth (CASSY) Executive Director Milpitas",
+      "organization": "CA"
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "closed",
+      "job_id": "536b86ff57d3919f",
+      "source": "DSG Global",
+      "title": "Aspiranet CEO South San Francisco",
+      "organization": "CA"
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "closed",
+      "job_id": "69dbce135cc7f43b",
+      "source": "DSG Global",
+      "title": "American Board of Surgery (ABS) President and CEO Remote or Philadelphia",
+      "organization": "PA"
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "closed",
+      "job_id": "06c626d7c0514e0c",
+      "source": "DSG Global",
+      "title": "Aeris Insight Chief Executive Officer Remote",
+      "organization": "Organization not parsed"
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "closed",
+      "job_id": "716118a23e93ec02",
+      "source": "DSG Global",
+      "title": "ACC Senior Services President/Chief Executive Officer Sacramento",
+      "organization": "CA"
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "updated",
+      "job_id": "bdb4fab450cecd43",
+      "source": "Kittleman Associates",
+      "title": "President and CEO",
+      "organization": "Viability, Inc.",
+      "changes": {
+        "organization": {
+          "from": "Mid-Ohio Food Collective",
+          "to": "Viability, Inc."
+        },
+        "location": {
+          "from": "Grove City, OH, United States",
+          "to": "Springfield, MA, United States"
+        },
+        "url": {
+          "from": "https://www.kittlemansearch.com/opportunities/president-ceo-mid-ohio-food-collective",
+          "to": "https://www.kittlemansearch.com/opportunities/president-ceo-viability"
+        },
+        "posted_date": {
+          "from": "2026-09-10",
+          "to": "2026-09-16"
+        },
+        "sector": {
+          "from": "Education",
+          "to": "Philanthropy"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "updated",
+      "job_id": "bdb4fab450cecd43",
+      "source": "Kittleman Associates",
+      "title": "President and CEO",
+      "organization": "Schoodic Institute at Acadia National Park",
+      "changes": {
+        "organization": {
+          "from": "Mid-Ohio Food Collective",
+          "to": "Schoodic Institute at Acadia National Park"
+        },
+        "location": {
+          "from": "Grove City, OH, United States",
+          "to": "Winter Harbor, ME, United States"
+        },
+        "url": {
+          "from": "https://www.kittlemansearch.com/opportunities/president-ceo-mid-ohio-food-collective",
+          "to": "https://www.kittlemansearch.com/opportunities/president-ceo-schoodic-institute"
+        },
+        "posted_date": {
+          "from": "2026-09-10",
+          "to": "2026-09-14"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "updated",
+      "job_id": "4278454b3196f6b1",
+      "source": "DRiWaterstone",
+      "title": "Chief Executive Officer",
+      "organization": "Armed Services YMCA",
+      "changes": {
+        "sector": {
+          "from": "Education",
+          "to": "Health"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "updated",
+      "job_id": "4c0e511f1cff3c0e",
+      "source": "LeaderFit",
+      "title": "Chief Executive Officer",
+      "organization": "Active Search",
+      "changes": {
+        "compensation_text": {
+          "from": "xth & I has budgeted the salary range for this role starting at $230,000. FLSA Status: Exempt Benefits: Sixth & I has a competitive benefits package that includes",
+          "to": "I has budgeted the salary range for this role starting at $230,000. FLSA Status: Exempt Benefits: Sixth & I has a competitive benefits package that includes Health, V"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "updated",
+      "job_id": "49c7bc19349cb51f",
+      "source": "LeaderFit",
+      "title": "Executive Director",
+      "organization": "Active Search",
+      "changes": {
+        "compensation_text": {
+          "from": "ff, and the overall stewardship of Elohee. Compensation Salary Range: $95,000 to $120,000, commensurate with experience. A private, on-site mountain home (3 bedrooms, 2 bathrooms)",
+          "to": "wardship of Elohee. Compensation Salary Range: $95,000 to $120,000, commensurate with experience. A private, on-site mountain home (3 bedrooms, 2 bathrooms) is provided as part of the ov"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "updated",
+      "job_id": "f97a9ce4a62f6b8a",
+      "source": "LeaderFit",
+      "title": "Executive Director (Part-Time)",
+      "organization": "Active Search",
+      "changes": {
+        "compensation_text": {
+          "from": "d commitment to the work. Compensation The estimated annual salary is $80,000 to $110,000, depending on the selected candidate’s experience. How to Apply Please submit your resume",
+          "to": "itment to the work. Compensation The estimated annual salary is $80,000 to $110,000, depending on the selected candidate’s experience. How to Apply Please submit your resume, a cover letter, and a statem"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "updated",
+      "job_id": "64157b1b229dd896",
+      "source": "DRG Talent",
+      "title": "Chief Executive Officer",
+      "organization": "American Friends of Shalva",
+      "changes": {
+        "compensation_text": {
+          "from": "comprehensive compensation package for this role. The salary range is $300,000 - $350,000. The benefits package includes medical, dental, and vision coverage, flexible paid time o",
+          "to": "e and comprehensive compensation package for this role. The salary range is $300,000 - $350,000. The benefits package includes medical, dental, and vision coverage, flexible paid time off, as well as a generous reti"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "updated",
+      "job_id": "709a87dc8a739cf1",
+      "source": "DRG Talent",
+      "title": "Chief Executive Officer",
+      "organization": "Triple C Housing, Inc.",
+      "changes": {
+        "compensation_text": {
+          "from": "weekend responsibilities as needed. COMPENSATION AND BENEFITS Salary: $230,000-250,000 Benefits · Medical, Dental, Vision, 401(k) · Medical and Dependent Care Spending Accounts",
+          "to": "bilities as needed. COMPENSATION AND BENEFITS Salary: $230,000-250,000 Benefits · Medical, Dental, Vision, 401(k) · Medical and Dependent Care Spending Accounts · Life Accidental Death, and"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "updated",
+      "job_id": "4aa383eb3953a071",
+      "source": "DRG Talent",
+      "title": "Chief Executive Officer",
+      "organization": "Birch Family Services",
+      "changes": {
+        "compensation_text": {
+          "from": "COMPENSATION AND BENEFITS The base salary range for this position is $475,000 to $550,000 plus benefits, including opportunity for a discretionary incentive. Birch offers a compet",
+          "to": "bilities as needed. COMPENSATION AND BENEFITS The base salary range for this position is $475,000 to $550,000 plus benefits, including opportunity for a discretionary incentive. Birch offers a competitive benefits package includi"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "updated",
+      "job_id": "6a1aa5a4c9a42c45",
+      "source": "DRG Talent",
+      "title": "Chief Executive Officer",
+      "organization": "Alpert Jewish Family Service",
+      "changes": {
+        "compensation_text": {
+          "from": "mily Service Chief Executive Officer West Palm Beach, Florida Salary: $275,000- $325,000 BACKGROUND About Palm Beach County Palm Beach County is home to a dynamic, growing, and h",
+          "to": "Palm Beach, Florida Salary: $275,000- $325,000 BACKGROUND About Palm Beach County Palm Beach County is home to a dynamic, growing, and highly engaged Jewish community"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "updated",
+      "job_id": "1a284673ef197f80",
+      "source": "DRG Talent",
+      "title": "Chief Executive Officer",
+      "organization": "Camp Tawonga",
+      "changes": {
+        "compensation_text": {
+          "from": "job Camp Tawonga Chief Executive Officer Bay Area, California Salary: $245,000-$275,000 BACKGROUND The Organization For 100 years, Camp Tawonga has served as a leader in Jewish",
+          "to": "ay Area, California Salary: $245,000-$275,000 BACKGROUND The Organization For 100 years, Camp Tawonga has served as a leader in Jewish camping, fostering in children"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "updated",
+      "job_id": "b14f96d79ec259dd",
+      "source": "DRG Talent",
+      "title": "Executive Director",
+      "organization": "Jewish Council on Urban Affairs",
+      "changes": {
+        "compensation_text": {
+          "from": "on Urban Affairs (JCUA) Executive Director Chicago, Illinois Salary: $135,000-$145,000 BACKGROUND The Organization The Jewish Council on Urban Affairs (JCUA) organizes Chicagol",
+          "to": "r Chicago, Illinois Salary: $135,000-$145,000 BACKGROUND The Organization The Jewish Council on Urban Affairs (JCUA) organizes Chicagoland’s Jewish community to purs"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "updated",
+      "job_id": "b6849e5e69992613",
+      "source": "DRG Talent",
+      "title": "Executive Director",
+      "organization": "Generation Patient",
+      "changes": {
+        "compensation_text": {
+          "from": "ply for this job Generation Patient Executive Director Remote Salary: $125,000-$140,000 BACKGROUND The Organization Generation Patient represents the 25 million+ young adults wi",
+          "to": "ive Director Remote Salary: $125,000-$140,000 BACKGROUND The Organization Generation Patient represents the 25 million+ young adults with chronic and rare conditions"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "updated",
+      "job_id": "5d2b798b45af9873",
+      "source": "DRG Talent",
+      "title": "President",
+      "organization": "Yeshivat Chovevei Torah Rabbinical School",
+      "changes": {
+        "compensation_text": {
+          "from": "comprehensive compensation package for this role. The salary range is $300,000-$350,000 . The benefits package includes an “as needed” PTO program, paid state and Jewish holiday",
+          "to": "e and comprehensive compensation package for this role. The salary range is $300,000-$350,000 . The benefits package includes an “as needed” PTO program, paid state and Jewish holidays, professional development fu"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "updated",
+      "job_id": "fa0af00ca3bb6cb6",
+      "source": "Sandler Search",
+      "title": "Executive Director Bronx",
+      "organization": "New York",
+      "changes": {
+        "compensation_text": {
+          "from": "field is a plus. COMPENSATION: The salary range for this position is $205,000–$255,000 , commensurate with experience. LOCATION: This position is based in person in the Bronx,",
+          "to": "ed field is a plus. COMPENSATION: The salary range for this position is $205,000–$255,000 , commensurate with experience. LOCATION: This position is based in person in the Bronx, New York . TO APPLY: Please su"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "updated",
+      "job_id": "66ec336dff3720ca",
+      "source": "Sandler Search",
+      "title": "Executive Director New York",
+      "organization": "NY Preferred",
+      "changes": {
+        "compensation_text": {
+          "from": "ut North America and Israel is expected. Compensation Salary range of $375,000 – $425,000 , commensurate with experience. To Apply Please submit a resume and thoughtful cover lett",
+          "to": "Israel is expected. Compensation Salary range of $375,000 – $425,000 , commensurate with experience. To Apply Please submit a resume and thoughtful cover letter in confidence here . RootOn"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T12:02:10.355913+00:00",
+      "type": "updated",
+      "job_id": "f7175611cc49e366",
+      "source": "Sandler Search",
+      "title": "Executive Director",
+      "organization": "Riverdale Neighborhood House",
+      "changes": {
+        "compensation_text": {
+          "from": "on, monitoring, and partner engagement. COMPENSATION: Salary range is $160,000 to $190,000, commensurate with experience. TO APPLY: Please submit a resume and thoughtful cover lett",
+          "to": "partner engagement. COMPENSATION: Salary range is $160,000 to $190,000, commensurate with experience. TO APPLY: Please submit a resume and thoughtful cover letter in confidence here . ABC va"
         }
       }
     }
