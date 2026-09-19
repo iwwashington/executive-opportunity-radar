@@ -1,44 +1,235 @@
 [
   {
-    "name": "Isaacson, Miller",
-    "url": "https://www.imsearch.com/current-searches/open-searches",
-    "type": "generic",
-    "enabled": true,
-    "notes": "Mission-driven executive search; large open-search database."
+    "name": "Diversified Search Group (legacy)",
+    "url": "https://www.dsgco.com/active-searches/",
+    "mode": "legacy",
+    "group": "Could not aggregate in prior version",
+    "notes": "Legacy Diversified Search Group entry. Current public searches are tracked under DSG Global to avoid duplicates."
   },
   {
-    "name": "Vetted Solutions",
-    "url": "https://www.vettedsolutions.com/current-searches-accessible",
-    "type": "generic",
-    "enabled": true,
-    "notes": "Association and nonprofit executive search."
+    "name": "Odgers",
+    "url": "https://www.odgers.com/en-us/opportunities/",
+    "mode": "automated",
+    "group": "Could not aggregate in prior version",
+    "notes": "Previously unsupported. Current U.S. opportunities page is now public and is included in the automated pass."
   },
   {
-    "name": "Sterling Martin",
-    "url": "https://smartinsearch.com/searches/",
-    "type": "generic",
-    "enabled": true,
-    "notes": "Associations and nonprofits."
+    "name": "Campbell & Company",
+    "url": "https://www.campbellcompany.com/executive-search/",
+    "mode": "retired",
+    "group": "Could not aggregate in prior version",
+    "notes": "Executive search service line/page is no longer an active current-search source."
   },
   {
-    "name": "DRG Talent",
-    "url": "https://app.loxo.co/drg-talent-advisory-group",
-    "type": "generic",
-    "enabled": true,
-    "notes": "Nonprofit and mission-driven executive roles."
+    "name": "Aspen Leadership Group",
+    "url": "https://opportunities.aspenleadershipgroup.com/",
+    "mode": "automated",
+    "group": "Added after original aggregator",
+    "notes": "Current Opportunities. Also appeared on the manual-check list in Check #2."
   },
   {
-    "name": "NPAG",
-    "url": "https://www.npag.com/current-searches",
-    "type": "generic",
-    "enabled": true,
-    "notes": "Social-impact and philanthropy searches."
+    "name": "PBR Executive Search",
+    "url": "https://www.pbrsearch.com/active-searches/",
+    "mode": "automated",
+    "group": "Previously not working",
+    "notes": "Active Searches. Re-enabled in the rebuild."
   },
   {
     "name": "BoardWalk Consulting",
     "url": "https://boardwalkconsulting.com/opportunities/",
-    "type": "generic",
-    "enabled": true,
-    "notes": "Nonprofit CEO and senior leadership searches."
+    "mode": "automated",
+    "group": "Previously stopped working",
+    "notes": "Opportunities. Re-enabled in the rebuild."
+  },
+  {
+    "name": "Bridge Partners",
+    "url": "https://bridgepartnersllc.com/searches/",
+    "mode": "automated",
+    "group": "Previously stopped working",
+    "notes": "Searches. Re-enabled in the rebuild."
+  },
+  {
+    "name": "Scion Executive Search",
+    "url": "https://scionexecutivesearch.com/search-jobs/?_page=1",
+    "mode": "automated",
+    "group": "Previously stopped working",
+    "notes": "Current job search page; individual postings expose Date Posted."
+  },
+  {
+    "name": "Isaacson, Miller",
+    "url": "https://www.imsearch.com/current-searches/open-searches",
+    "mode": "automated",
+    "group": "Previously kind-of working",
+    "notes": "Open Searches. Do not invent a posted date when the site does not expose one; use first-seen date instead.",
+    "date_policy": "first_seen"
+  },
+  {
+    "name": "Lindauer",
+    "url": "https://www.lindauerglobal.com/searches/open-searches/",
+    "mode": "automated",
+    "group": "Previously kind-of working",
+    "notes": "Open Searches. Do not invent a posted date when the site does not expose one; use first-seen date instead.",
+    "date_policy": "first_seen"
+  },
+  {
+    "name": "Korn Ferry Search Jobs",
+    "url": "https://jobs.candidate.kornferry.com/jobs/",
+    "mode": "automated",
+    "group": "Working in prior aggregator",
+    "notes": "Korn Ferry candidate job listings; individual postings often expose exact Posted dates."
+  },
+  {
+    "name": "DSG Global",
+    "url": "https://www.dsgco.com/active-searches/",
+    "mode": "automated",
+    "group": "Working in prior aggregator",
+    "notes": "Current DSG Global Active Searches."
+  },
+  {
+    "name": "Kittleman Associates",
+    "url": "https://www.kittlemansearch.com/opportunities/kittleman-for-candidates",
+    "mode": "automated",
+    "group": "Working in prior aggregator",
+    "notes": "Current opportunities; page exposes exact Posted dates."
+  },
+  {
+    "name": "WittKieffer",
+    "url": "https://www.wittkieffer.com/search-open-positions/",
+    "mode": "automated",
+    "group": "Working in prior aggregator",
+    "notes": "Open positions. Site/candidate portal changes may require parser maintenance; source health will flag failures."
+  },
+  {
+    "name": "The Batten Group",
+    "url": "https://thebattengroup.com/jobs/",
+    "mode": "automated",
+    "group": "Working in prior aggregator",
+    "notes": "Jobs archive/current search page."
+  },
+  {
+    "name": "DRiWaterstone",
+    "url": "https://driwaterstonehc.com/available-positions/",
+    "mode": "automated",
+    "group": "Working in prior aggregator",
+    "notes": "Available Positions."
+  },
+  {
+    "name": "LeaderFit",
+    "url": "https://leaderfit.org/home/active-searches/",
+    "mode": "automated",
+    "group": "Working in prior aggregator",
+    "notes": "Active Searches; page may be dynamically rendered. Source health will show if no parseable results are returned."
+  },
+  {
+    "name": "NPAG",
+    "url": "https://www.npag.com/current-searches",
+    "mode": "automated",
+    "group": "Working in prior aggregator",
+    "notes": "Current Searches."
+  },
+  {
+    "name": "DRG Talent",
+    "url": "https://app.loxo.co/drg-talent-advisory-group",
+    "mode": "automated",
+    "group": "Working in prior aggregator",
+    "notes": "DRG current opportunities/job board. Dynamic provider may require parser maintenance."
+  },
+  {
+    "name": "Development Guild",
+    "url": "https://www.developmentguild.com/current-searches/",
+    "mode": "automated",
+    "group": "Working in prior aggregator",
+    "notes": "Current Executive Searches."
+  },
+  {
+    "name": "The Moran Company",
+    "url": "https://morancompany.com/current-searches/",
+    "mode": "automated",
+    "group": "Working in prior aggregator",
+    "notes": "Current Searches."
+  },
+  {
+    "name": "Bryant Group",
+    "url": "https://www.bryantgrp.com/current-listings",
+    "mode": "automated",
+    "group": "Working in prior aggregator",
+    "notes": "Current Listings. Date parser ignores old listings beyond the six-month window."
+  },
+  {
+    "name": "Heidrick & Struggles",
+    "url": "https://www.heidrick.com/",
+    "mode": "no-public-list",
+    "group": "No public current-search list",
+    "notes": "Check #2 says the firm does not post a usable current-search list on its site."
+  },
+  {
+    "name": "Spencer Stuart",
+    "url": "https://www.spencerstuart.com/",
+    "mode": "no-public-list",
+    "group": "No public current-search list",
+    "notes": "Check #2 says the firm does not post a usable current-search list on its site."
+  },
+  {
+    "name": "Russell Reynolds",
+    "url": "https://www.russellreynolds.com/",
+    "mode": "no-public-list",
+    "group": "No public current-search list",
+    "notes": "Check #2 says the firm does not post a usable current-search list on its site."
+  },
+  {
+    "name": "Egon Zehnder",
+    "url": "https://www.egonzehnder.com/",
+    "mode": "no-public-list",
+    "group": "No public current-search list",
+    "notes": "Check #2 says the firm does not post a usable current-search list on its site."
+  },
+  {
+    "name": "CarterBaldwin Executive Search",
+    "url": "https://carterbaldwin.com/",
+    "mode": "no-public-list",
+    "group": "No public current-search list",
+    "notes": "Check #2 says the firm does not post a usable current-search list on its site."
+  },
+  {
+    "name": "Sandler Search",
+    "url": "https://sandlersearch.org/current-opportunities/",
+    "mode": "automated",
+    "group": "Additional sites to check",
+    "notes": "Current Opportunities."
+  },
+  {
+    "name": "Spano Pratt",
+    "url": "https://spanopratt.com/careers/",
+    "mode": "automated",
+    "group": "Additional sites to check",
+    "notes": "Executive Opportunities/Careers."
+  },
+  {
+    "name": "GoodCitizen",
+    "url": "https://www.goodcitizen.com/",
+    "mode": "manual",
+    "group": "Additional sites to check",
+    "notes": "Check #2 lists GoodCitizen Open Searches. Current public site does not expose a stable dedicated openings page to this scraper, so it remains on the manual-watch list."
+  },
+  {
+    "name": "Association Strategies",
+    "url": "https://assnstrategies.com/active-searches/",
+    "mode": "automated",
+    "group": "Additional sites to check",
+    "notes": "Active/Open Searches. Page may be dynamically rendered."
+  },
+  {
+    "name": "Nonprofit HR",
+    "url": "https://www.nonprofithr.com/openexecutivesearches/",
+    "mode": "automated",
+    "group": "Additional sites to check",
+    "notes": "Open Executive Searches."
+  },
+  {
+    "name": "POLIHIRE",
+    "url": "https://polihire.com/current-searches/",
+    "mode": "automated",
+    "group": "Additional sites to check",
+    "notes": "Current Searches. The strict role filter may legitimately yield zero CEO/President/Executive Director roles on a given day."
   }
 ]
