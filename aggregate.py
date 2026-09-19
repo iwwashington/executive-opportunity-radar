@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Executive Opportunity Radar v3 updater.
+"""Executive Opportunity Radar v4 updater.
 
 Capture first, enrich second.
 
@@ -41,12 +41,11 @@ META_PATH = ROOT / "meta.json"
 HEADERS = {
     "User-Agent": (
         "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
-        "AppleWebKit/537.36 Chrome/124 Safari/537.36 ExecutiveOpportunityRadar/3.0"
+        "AppleWebKit/537.36 Chrome/124 Safari/537.36 ExecutiveOpportunityRadar/4.0"
     )
 }
 TIMEOUT = 30
 MAX_DETAIL_REQUESTS_PER_SOURCE = 18
-SIX_MONTH_DAYS = 183
 CLOSE_AFTER_MISSES = 2
 MAX_CHANGE_EVENTS = 500
 
@@ -71,6 +70,15 @@ LOCATIONISH = re.compile(
 ROLE_SIGNAL = re.compile(
     r"\b(chief executive officer|ceo|executive director|president)\b", re.I
 )
+
+CLOSED_SIGNAL = re.compile(
+    r"\b(no longer accepting applications?|position filled|positions? filled|search (?:is )?closed|"
+    r"applications? (?:are )?closed|application period (?:is )?closed|"
+    r"this search has concluded|search concluded|position has been filled)\b", re.I
+)
+
+def has_closed_signal(text: str) -> bool:
+    return bool(CLOSED_SIGNAL.search(clean(text)))
 
 SECTOR_RULES = [
     ("Health", r"\b(health|hospital|medical|clinic|care|medicine|patient|wellness|public health)\b"),
@@ -433,6 +441,144 @@ class Job:
     link_quality: str = "source_page"
 
 
+def build_job(*, source: dict, title: str, organization: str, location: str, url: str,
+              today: date, context: str = "", posted: date | None = None,
+              posted_status: str = "unavailable") -> Job:
+    """Build one normalized role without requiring optional metadata."""
+    role=clean(title); organization=clean(organization) or "Organization not parsed"
+    location=clean(location); context=clean(context)
+    comp_text, comp_min, comp_max, comp_status=extract_compensation(context)
+    sector, sector_status=infer_sector(organization,context)
+    now=now_iso(); source_url=source["url"]
+    direct=bool(url and canonical_url(url)!=canonical_url(source_url))
+    return Job(
+        id=stable_id(source["name"],role,organization,url or source_url),
+        title=role,organization=organization,source=source["name"],location=location,
+        url=url or source_url,source_url=source_url,
+        posted_date=posted.isoformat() if posted else None,first_seen=now,last_seen=now,
+        date_basis="posted_relative" if posted_status=="approximate" else "posted" if posted else "first_seen",
+        status="open",role_type=role_type(role),compensation_text=comp_text,
+        compensation_min=comp_min,compensation_max=comp_max,compensation_status=comp_status,
+        sector=sector,sector_status=sector_status,work_arrangement=infer_work_arrangement(location,context),
+        location_status="extracted" if location else "unavailable",
+        posted_date_status=posted_status if posted else "unavailable",
+        evidence=evidence_excerpt(context,role,organization),updated_at=now,missing_runs=0,
+        closed_date=None,change_count=0,baseline_seed=False,
+        link_quality="direct" if direct else "source_page",
+    )
+
+
+def sibling_block_text(node, stop_tags=("h1","h2","h3"), limit=40) -> tuple[list[str], list]:
+    """Collect nearby text/tags after a heading without spilling into the next listing."""
+    lines=[]; tags=[]; cur=node.next_sibling; n=0
+    while cur is not None and n<limit:
+        name=getattr(cur,"name",None)
+        if name in stop_tags: break
+        if name:
+            tags.append(cur)
+            for x in cur.stripped_strings:
+                c=clean(x)
+                if c and (not lines or c!=lines[-1]): lines.append(c)
+        cur=cur.next_sibling; n+=1
+    return lines,tags
+
+
+def parse_org_location_line(line: str) -> tuple[str,str]:
+    s=clean(line)
+    # Moran commonly uses Organization, City, State (remote/hybrid).
+    parts=[clean(x) for x in s.split(',')]
+    if len(parts)>=3:
+        org=', '.join(parts[:-2]); loc=', '.join(parts[-2:])
+        if org and loc: return org,loc
+    return s,""
+
+
+def parse_moran(html: str, source: dict, today: date) -> list[Job]:
+    soup=BeautifulSoup(html,"lxml"); out=[]
+    for h in soup.find_all(["h3","h2"]):
+        rt,ro=split_title_org(clean(h.get_text(" ",strip=True)))
+        if not is_target_role(rt): continue
+        section=h.find_previous(["h1","h2"])
+        section_text=clean(section.get_text(" ",strip=True)) if section else ""
+        if section_text.lower()!="open positions": continue
+        lines,tags=sibling_block_text(h,("h1","h2","h3"),50)
+        if not lines: continue
+        org_line=lines[0]; org,loc=parse_org_location_line(org_line)
+        if ro: org=ro
+        href=""
+        for tag in tags:
+            a=tag.find("a",href=True) if getattr(tag,"find",None) else None
+            if a and re.search(r"position profile|full profile|learn more|apply",clean(a.get_text(" ",strip=True)),re.I):
+                href=urljoin(source["url"],a.get("href")); break
+        context=" | ".join([clean(h.get_text(" ",strip=True))]+lines[:20])
+        out.append(build_job(source=source,title=rt,organization=org,location=loc,url=href or source["url"],today=today,context=context))
+    return dedupe(out)
+
+
+def parse_kittleman(html: str, source: dict, today: date) -> list[Job]:
+    soup=BeautifulSoup(html,"lxml"); out=[]
+    for h in soup.find_all(["h2","h3"]):
+        rt,org=split_title_org(clean(h.get_text(" ",strip=True)))
+        if not is_target_role(rt): continue
+        lines=[]; tags=[]
+        for el in h.next_siblings:
+            if getattr(el,"name",None) in {"h1","h2","h3"}: break
+            if getattr(el,"name",None):
+                tags.append(el)
+                for x in el.stripped_strings:
+                    c=clean(x)
+                    if c and (not lines or c!=lines[-1]): lines.append(c)
+            if len(lines)>35: break
+        # Squarespace can wrap each entry; fall back to local card context.
+        if not lines: lines=context_lines(h)
+        context=" | ".join([clean(h.get_text(" ",strip=True))]+lines[:35])
+        posted,posted_status=extract_date(context,today)
+        loc=""
+        m=re.search(r"Posted\s+\d{1,2}/\d{1,2}/\d{2,4}\s*[·|\-]\s*([^|]{2,120})",context,re.I)
+        if m: loc=clean(m.group(1))
+        if not loc: loc=infer_location(lines)
+        href=""
+        for tag in tags:
+            for a in tag.find_all("a",href=True) if getattr(tag,"find_all",None) else []:
+                if re.search(r"click here|learn more|apply|position",clean(a.get_text(" ",strip=True)),re.I):
+                    href=urljoin(source["url"],a.get("href")); break
+            if href: break
+        if not href:
+            container=local_container(h)
+            if container:
+                a=container.find("a",href=True,string=re.compile(r"click here|learn more|apply",re.I))
+                if a: href=urljoin(source["url"],a.get("href"))
+        out.append(build_job(source=source,title=rt,organization=org or infer_organization(rt,lines),location=loc,url=href or source["url"],today=today,context=context,posted=posted,posted_status=posted_status))
+    return dedupe(out)
+
+
+def parse_npag(html: str, source: dict, today: date) -> list[Job]:
+    soup=BeautifulSoup(html,"lxml"); out=[]
+    for a in soup.find_all("a",href=True):
+        rt,ro=split_title_org(clean(a.get_text(" ",strip=True)))
+        if not is_target_role(rt): continue
+        container=a
+        best=a.parent
+        # Prefer the *smallest* ancestor that looks like one result card.
+        # Keeping the first suitable ancestor prevents a closed neighboring card
+        # from contaminating an otherwise active listing.
+        for _ in range(7):
+            container=getattr(container,"parent",None)
+            if not container: break
+            txt=clean(container.get_text(" ",strip=True))
+            if 28<=len(txt)<=900:
+                best=container
+                break
+            if len(txt)>1800: break
+        text=clean(best.get_text(" | ",strip=True)) if best else clean(a.get_text(" ",strip=True))
+        if has_closed_signal(text): continue
+        lines=[clean(x) for x in best.stripped_strings] if best else [rt]
+        org=ro or infer_organization(rt,lines); loc=infer_location(lines)
+        url=urljoin(source["url"],a.get("href"))
+        out.append(build_job(source=source,title=rt,organization=org,location=loc,url=url,today=today,context=text))
+    return dedupe(out)
+
+
 def node_href(node, source_url: str) -> str:
     if getattr(node,"name",None)=="a" and node.get("href"):
         href=node.get("href")
@@ -498,6 +644,10 @@ def candidate_from_node(node, source: dict, today: date, detail_budget: list[int
             pass
 
     combined=clean(f"{list_text} {detail_text}")[:35000]
+    # Explicit closure language outranks page presence. This is deliberately narrow
+    # so words such as "close collaboration" do not create false closures.
+    if has_closed_signal(combined):
+        return None
     comp_text, comp_min, comp_max, comp_status=extract_compensation(combined)
     sector, sector_status=infer_sector(organization,combined)
     now=now_iso()
@@ -521,8 +671,12 @@ def candidate_from_node(node, source: dict, today: date, detail_budget: list[int
 
 
 def candidates_from_html(html: str, source: dict, today: date) -> list[Job]:
+    parser=source.get("parser")
+    if parser=="moran": return parse_moran(html,source,today)
+    if parser=="kittleman": return parse_kittleman(html,source,today)
+    if parser=="npag": return parse_npag(html,source,today)
     soup=BeautifulSoup(html,"lxml")
-    budget=[MAX_DETAIL_REQUESTS_PER_SOURCE]
+    budget=[int(source.get("max_detail_requests",MAX_DETAIL_REQUESTS_PER_SOURCE))]
     found=[]
     # Anchors are best because they preserve direct job URLs.
     for a in soup.find_all("a",href=True):
@@ -640,17 +794,27 @@ def scrape_source(source: dict, today: date, prior_count: int) -> tuple[list[Job
     errors=[]; all_found=[]; fetch_modes=[]
     urls=source.get("urls") or [source["url"]]
     for url in urls:
-        html=""
-        try:
-            r=fetch(url); html=r.text; fetch_modes.append("static")
-            all_found.extend(candidates_from_html(html,{**source,"url":url},today))
-        except Exception as exc:
-            errors.append(f"static {type(exc).__name__}: {exc}")
-        # Browser rendering is a fallback when static returned no useful roles for this page.
-        if source.get("render_fallback") and not any(j.source==source["name"] for j in all_found):
+        html=""; page_found=[]
+        if source.get("browser_first"):
             try:
                 html=browser_html(url); fetch_modes.append("browser")
-                all_found.extend(candidates_from_html(html,{**source,"url":url},today))
+                page_found=candidates_from_html(html,{**source,"url":url},today)
+                all_found.extend(page_found)
+            except Exception as exc:
+                errors.append(f"browser {type(exc).__name__}: {exc}")
+        if not source.get("browser_first") or not page_found:
+            try:
+                r=fetch(url); html=r.text; fetch_modes.append("static")
+                page_found=candidates_from_html(html,{**source,"url":url},today)
+                all_found.extend(page_found)
+            except Exception as exc:
+                errors.append(f"static {type(exc).__name__}: {exc}")
+        # Browser rendering is a fallback when static returned no useful roles for this page.
+        if source.get("render_fallback") and not page_found and not source.get("browser_first"):
+            try:
+                html=browser_html(url); fetch_modes.append("browser")
+                page_found=candidates_from_html(html,{**source,"url":url},today)
+                all_found.extend(page_found)
             except Exception as exc:
                 errors.append(f"browser {type(exc).__name__}: {exc}")
 
@@ -673,7 +837,7 @@ def scrape_source(source: dict, today: date, prior_count: int) -> tuple[list[Job
 
 
 def main() -> int:
-    today=datetime.now(timezone.utc).date(); now=now_iso(); cutoff=today-timedelta(days=SIX_MONTH_DAYS)
+    today=datetime.now(timezone.utc).date(); now=now_iso()
     sources=load_json(SOURCES_PATH,[])
     history_payload=load_json(HISTORY_PATH,{"jobs":[]}); history_jobs=history_payload.get("jobs",[])
     changes_payload=load_json(CHANGES_PATH,{"events":[]}); events=changes_payload.get("events",[])
@@ -730,20 +894,22 @@ def main() -> int:
             current=dict(by_id.get(pid,prior))
             misses=int(current.get("missing_runs",0) or 0)+1
             current["missing_runs"]=misses
-            if misses>=CLOSE_AFTER_MISSES:
+            close_after=int(source.get("close_after_misses",CLOSE_AFTER_MISSES))
+            if misses>=close_after:
                 current["status"]="closed"; current["closed_date"]=today.isoformat(); current["updated_at"]=now
                 events.append({"at":now,"type":"closed","job_id":pid,"source":current.get("source"),"title":current.get("title"),"organization":current.get("organization")})
             by_id[pid]=current
 
-    # Rebuild history and current-open feed.
+    # Rebuild history and current-open feed. Age alone never removes a role.
+    # If a source still presents an old search as active, it remains market data;
+    # closure comes from explicit source status or repeated healthy disappearance.
     all_history=list(by_id.values())
-    # Keep known posted dates within six months on current feed; first-seen-only roles are retained while open.
     current=[]
     for j in all_history:
         if j.get("status")!="open": continue
         if j.get("posted_date"):
             try:
-                if date.fromisoformat(j["posted_date"])<cutoff: continue
+                date.fromisoformat(j["posted_date"])
             except ValueError:
                 j["posted_date"]=None; j["date_basis"]="first_seen"; j["posted_date_status"]="unavailable"
         current.append(j)
@@ -754,7 +920,7 @@ def main() -> int:
     events=events[-MAX_CHANGE_EVENTS:]
 
     baseline=history_payload.get("baseline_initialized_at") or history_payload.get("generated_at") or now
-    JOBS_PATH.write_text(json.dumps({"generated_at":now,"cutoff":cutoff.isoformat(),"baseline_initialized_at":baseline,"jobs":current},indent=2,ensure_ascii=False),encoding="utf-8")
+    JOBS_PATH.write_text(json.dumps({"generated_at":now,"baseline_initialized_at":baseline,"jobs":current},indent=2,ensure_ascii=False),encoding="utf-8")
     HISTORY_PATH.write_text(json.dumps({"generated_at":now,"baseline_initialized_at":baseline,"jobs":all_history},indent=2,ensure_ascii=False),encoding="utf-8")
     CHANGES_PATH.write_text(json.dumps({"generated_at":now,"events":events},indent=2,ensure_ascii=False),encoding="utf-8")
     META_PATH.write_text(json.dumps({"generated_at":now,"baseline_initialized_at":baseline,"source_count":len(sources),"sources":health_rows},indent=2,ensure_ascii=False),encoding="utf-8")

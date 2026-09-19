@@ -151,39 +151,47 @@
     "url": "https://www.dsgco.com/active-searches/",
     "mode": "automated",
     "group": "Working in prior aggregator",
-    "notes": "Current DSG Global Active Searches.",
+    "notes": "Current DSG Global Active Searches. Detail pages are checked for explicit closed/no-longer-accepting language before a role is treated as active.",
     "date_policy": "source",
     "render_fallback": false,
     "allow_zero": false,
     "urls": [
       "https://www.dsgco.com/active-searches/"
-    ]
+    ],
+    "parser": "dsg",
+    "verify_detail_status": true,
+    "max_detail_requests": 120,
+    "close_after_misses": 1
   },
   {
     "name": "Kittleman Associates",
     "url": "https://www.kittlemansearch.com/opportunities/kittleman-for-candidates",
     "mode": "automated",
     "group": "Working in prior aggregator",
-    "notes": "Current opportunities; page exposes exact Posted dates.",
+    "notes": "Current opportunities; exact Posted dates are retained even for long-running searches, and role-specific links are preferred.",
     "date_policy": "source",
     "render_fallback": false,
     "allow_zero": false,
     "urls": [
       "https://www.kittlemansearch.com/opportunities/kittleman-for-candidates"
-    ]
+    ],
+    "parser": "kittleman",
+    "max_detail_requests": 50
   },
   {
     "name": "WittKieffer",
     "url": "https://www.wittkieffer.com/search-open-positions/",
     "mode": "automated",
     "group": "Working in prior aggregator",
-    "notes": "Open positions. Site/candidate portal changes may require parser maintenance; source health will flag failures.",
+    "notes": "Open positions. Browser rendering is used first because the static endpoint may return 403; prior roles are preserved if the site still blocks access.",
     "date_policy": "source",
-    "render_fallback": false,
+    "render_fallback": true,
     "allow_zero": false,
     "urls": [
       "https://www.wittkieffer.com/search-open-positions/"
-    ]
+    ],
+    "browser_first": true,
+    "max_detail_requests": 60
   },
   {
     "name": "The Batten Group",
@@ -229,13 +237,16 @@
     "url": "https://www.npag.com/current-searches",
     "mode": "automated",
     "group": "Working in prior aggregator",
-    "notes": "Current Searches.",
+    "notes": "Current Searches. Roles marked No Longer Accepting Applications are excluded from the active feed and retained in history.",
     "date_policy": "source",
     "render_fallback": false,
     "allow_zero": false,
     "urls": [
       "https://www.npag.com/current-searches"
-    ]
+    ],
+    "parser": "npag",
+    "close_after_misses": 1,
+    "max_detail_requests": 40
   },
   {
     "name": "DRG Talent",
@@ -268,20 +279,23 @@
     "url": "https://morancompany.com/current-searches/",
     "mode": "automated",
     "group": "Working in prior aggregator",
-    "notes": "Current Searches.",
-    "date_policy": "source",
+    "notes": "Current Searches. Open Positions are parsed separately from Positions Coming Soon and Positions Filled so filled roles do not enter the active feed.",
+    "date_policy": "first_seen",
     "render_fallback": false,
     "allow_zero": false,
     "urls": [
       "https://morancompany.com/current-searches/"
-    ]
+    ],
+    "parser": "moran",
+    "close_after_misses": 1,
+    "max_detail_requests": 50
   },
   {
     "name": "Bryant Group",
     "url": "https://www.bryantgrp.com/current-listings",
     "mode": "automated",
     "group": "Working in prior aggregator",
-    "notes": "Current Listings. Date parser ignores old listings beyond the six-month window.",
+    "notes": "Current Listings. Older roles remain visible while the source still presents them as current; posting date is preserved when available.",
     "date_policy": "source",
     "render_fallback": false,
     "allow_zero": false,

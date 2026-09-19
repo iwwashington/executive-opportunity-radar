@@ -1,49 +1,29 @@
-# Executive Opportunity Radar
+# Executive Opportunity Radar — v4 patch
 
-A public-source market monitor for CEO, president and executive director searches across tracked executive-search firms.
+This is a **code/config patch** for the live radar. It intentionally does not include `jobs.json`, `history.json`, `changes.json`, or `meta.json`, so uploading it will not overwrite the history already collected by the live site.
 
-## What v3 changes
+## v4 fixes
 
-- Market-intelligence homepage plus a date-first opportunity feed.
-- Mobile-first responsive layout.
-- Entire opportunity card is clickable; the updater prefers a direct job posting URL whenever the source exposes one.
-- Missing compensation, location, sector or posted date never excludes a legitimate role.
-- Posted dates are used only when the source provides them; otherwise the site shows `First seen`.
-- `history.json` retains closed roles instead of deleting them, so trend analysis improves over time.
-- Jobs are archived only after two healthy checks fail to find them.
-- Failed or suspiciously partial source checks preserve previously known roles.
-- `changes.json` records new, updated, reopened and closed search events.
-- Favorites are stored only in the visitor's browser via local storage.
+- Fixes the **All firms** and **All sectors** dropdowns on Opportunities.
+- Uses the source-reported **Posted date** as the primary date; `First seen` is only the fallback.
+- Does **not** remove a role merely because it is old. If a source still presents it as active, it remains visible and is labeled `Open N days` after 90 days.
+- Avoids a misleading `New` badge when the radar discovers a role that has an older published posting date.
+- Adds `Verified <date>` to cards from the most recent healthy observation.
+- Adds source-specific handling for **The Moran Company**, **Kittleman Associates**, and **NPAG**.
+- **Moran:** reads only Open Positions into the active feed; Positions Filled are excluded immediately.
+- **NPAG:** excludes cards that say `No Longer Accepting Applications`.
+- **DSG:** follows detail pages and rejects explicit closed/no-longer-accepting language.
+- **Kittleman:** preserves exact posted dates and prefers the role-specific link.
+- **WittKieffer:** tries browser rendering first to work around the static 403.
+- Sources with explicit status handling can close known false-active records after one healthy miss; failed/partial source checks still preserve prior roles.
 
-## Files
+## Upload
 
-- `index.html` — public dashboard
-- `jobs.json` — current active roles
-- `history.json` — open + archived role history
-- `changes.json` — recent data-change events
-- `meta.json` — source health from the most recent run
-- `sources.json` — tracked source configuration
-- `aggregate.py` — scraper, enrichment, history and health logic
-- `requirements.txt` — Python dependencies
-- `.github/workflows/update-radar.yml` — daily GitHub Actions updater
+Upload the four files in this patch to the root of the GitHub repository and replace the existing files:
 
-## Automation
+- `index.html`
+- `aggregate.py`
+- `sources.json`
+- `README.md`
 
-The GitHub workflow runs daily at 10:17 UTC and can also be run manually from the Actions tab. It:
-
-1. visits each automated public source;
-2. uses normal HTTP parsing first and browser rendering for configured dynamic sites;
-3. captures qualifying CEO / president / executive director roles even when optional fields are missing;
-4. enriches fields when possible;
-5. compares the result with prior history;
-6. preserves roles when a source fails or appears suspiciously incomplete;
-7. updates the JSON data files; and
-8. commits only when the data changes.
-
-## Link behavior
-
-The card itself opens the opportunity. `link_quality: direct` means the scraper found a role-specific URL. `link_quality: source_page` means the public source did not expose a reliable role-specific URL in the captured markup, so the card opens the source listing instead. The site labels those cards `Source listing` rather than pretending the link is direct.
-
-## Coverage caveat
-
-This project monitors public listings from configured executive-search sources. It does not imply exhaustive coverage of all executive searches, including confidential searches and firms that do not publish active searches.
+Then run **Actions → Update Executive Opportunity Radar → Run workflow** once. The existing workflow does not need to be replaced.
