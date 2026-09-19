@@ -85,43 +85,85 @@
     "url": "https://bridgepartnersllc.com/searches/",
     "mode": "automated",
     "group": "Previously stopped working",
-    "notes": "Searches. Re-enabled in the rebuild.",
+    "notes": "Searches page only. Dedicated parser captures role + client organization + direct position-profile link; function/practice pages are excluded.",
     "date_policy": "source",
     "render_fallback": false,
     "allow_zero": false,
     "urls": [
       "https://bridgepartnersllc.com/searches/"
-    ]
+    ],
+    "parser": "bridge",
+    "authoritative_parser": true,
+    "close_after_misses": 1
   },
   {
     "name": "Scion Executive Search",
     "url": "https://scionexecutivesearch.com/search-jobs/?_page=1",
     "mode": "automated",
     "group": "Previously stopped working",
-    "notes": "Current job search page; individual postings expose Date Posted.",
+    "notes": "Current job board only. Detail-page parser extracts the client organization from retained-search prose such as “on behalf of” or “retained by.”",
     "date_policy": "source",
     "render_fallback": true,
     "allow_zero": false,
     "urls": [
       "https://scionexecutivesearch.com/search-jobs/?_page=1",
-      "https://scionexecutivesearch.com/search-jobs/?_page=2",
-      "https://scionexecutivesearch.com/search-jobs/?_page=3",
-      "https://scionexecutivesearch.com/search-jobs/?_page=4",
-      "https://scionexecutivesearch.com/search-jobs/?_page=5"
-    ]
+      "https://scionexecutivesearch.com/search-jobs/?_page=2"
+    ],
+    "parser": "scion",
+    "authoritative_parser": true,
+    "close_after_misses": 1,
+    "allowed_detail_path_regex": "^/job/\\d+/?$"
   },
   {
     "name": "Isaacson, Miller",
     "url": "https://www.imsearch.com/current-searches/open-searches",
     "mode": "automated",
     "group": "Previously kind-of working",
-    "notes": "Open Searches. Do not invent a posted date when the site does not expose one; use first-seen date instead.",
+    "notes": "Dedicated Open Searches pages only; Insights/Results pages are excluded. Client organization comes from the detail-page organization heading; dates use first-seen when no reliable source date is exposed.",
     "date_policy": "first_seen",
     "render_fallback": false,
     "allow_zero": false,
     "urls": [
-      "https://www.imsearch.com/current-searches/open-searches"
-    ]
+      "https://www.imsearch.com/current-searches/open-searches?page=0",
+      "https://www.imsearch.com/current-searches/open-searches?page=1",
+      "https://www.imsearch.com/current-searches/open-searches?page=2",
+      "https://www.imsearch.com/current-searches/open-searches?page=3",
+      "https://www.imsearch.com/current-searches/open-searches?page=4",
+      "https://www.imsearch.com/current-searches/open-searches?page=5",
+      "https://www.imsearch.com/current-searches/open-searches?page=6",
+      "https://www.imsearch.com/current-searches/open-searches?page=7",
+      "https://www.imsearch.com/current-searches/open-searches?page=8",
+      "https://www.imsearch.com/current-searches/open-searches?page=9",
+      "https://www.imsearch.com/current-searches/open-searches?page=10",
+      "https://www.imsearch.com/current-searches/open-searches?page=11",
+      "https://www.imsearch.com/current-searches/open-searches?page=12",
+      "https://www.imsearch.com/current-searches/open-searches?page=13",
+      "https://www.imsearch.com/current-searches/open-searches?page=14",
+      "https://www.imsearch.com/current-searches/open-searches?page=15",
+      "https://www.imsearch.com/current-searches/open-searches?page=16",
+      "https://www.imsearch.com/current-searches/open-searches?page=17",
+      "https://www.imsearch.com/current-searches/open-searches?page=18",
+      "https://www.imsearch.com/current-searches/open-searches?page=19",
+      "https://www.imsearch.com/current-searches/open-searches?page=20",
+      "https://www.imsearch.com/current-searches/open-searches?page=21",
+      "https://www.imsearch.com/current-searches/open-searches?page=22",
+      "https://www.imsearch.com/current-searches/open-searches?page=23",
+      "https://www.imsearch.com/current-searches/open-searches?page=24",
+      "https://www.imsearch.com/current-searches/open-searches?page=25",
+      "https://www.imsearch.com/current-searches/open-searches?page=26",
+      "https://www.imsearch.com/current-searches/open-searches?page=27",
+      "https://www.imsearch.com/current-searches/open-searches?page=28",
+      "https://www.imsearch.com/current-searches/open-searches?page=29",
+      "https://www.imsearch.com/current-searches/open-searches?page=30",
+      "https://www.imsearch.com/current-searches/open-searches?page=31",
+      "https://www.imsearch.com/current-searches/open-searches?page=32",
+      "https://www.imsearch.com/current-searches/open-searches?page=33",
+      "https://www.imsearch.com/current-searches/open-searches?page=34"
+    ],
+    "parser": "isaacson",
+    "authoritative_parser": true,
+    "close_after_misses": 1,
+    "allowed_detail_path_regex": "^/open-searches/[^/]+/[^/]+/?$"
   },
   {
     "name": "Lindauer",
@@ -146,7 +188,7 @@
     "url": "https://jobs.candidate.kornferry.com/jobs/",
     "mode": "automated",
     "group": "Working in prior aggregator",
-    "notes": "Korn Ferry client opportunity board. Browser-first crawl scrolls the rendered board, captures direct client-job URLs, and verifies each CEO/president/executive-director detail page for posted date, compensation and expiration.",
+    "notes": "Korn Ferry client opportunity board. Browser-first deep crawl collects direct executive-search job URLs; detail pages supply client organization, exact posted date, compensation, category and closure status. A low-result run is flagged partial instead of trusted.",
     "date_policy": "source",
     "render_fallback": true,
     "allow_zero": false,
@@ -156,7 +198,10 @@
     "parser": "korn",
     "browser_first": true,
     "authoritative_parser": false,
-    "max_detail_requests": 160
+    "max_detail_requests": 240,
+    "browser_max_scrolls": 40,
+    "min_expected_matches": 6,
+    "allowed_detail_path_regex": "^/job/Korn-Ferry-Executive-Search-[^/]+/\\d+/?$"
   },
   {
     "name": "DSG Global",
@@ -242,13 +287,20 @@
     "url": "https://leaderfit.org/home/active-searches/",
     "mode": "automated",
     "group": "Working in prior aggregator",
-    "notes": "Active Searches; page may be dynamically rendered. Source health will show if no parseable results are returned.",
+    "notes": "Active Searches only. Dedicated CATS detail parser captures client organization from the job title/body and published compensation.",
     "date_policy": "source",
     "render_fallback": true,
     "allow_zero": false,
     "urls": [
       "https://leaderfit.org/home/active-searches/"
-    ]
+    ],
+    "parser": "leaderfit",
+    "authoritative_parser": true,
+    "close_after_misses": 1,
+    "browser_first": true,
+    "browser_max_scrolls": 12,
+    "allowed_detail_path_regex": "^/careers/\\d+/jobs/\\d+",
+    "max_detail_requests": 80
   },
   {
     "name": "NPAG",
@@ -284,13 +336,17 @@
     "url": "https://www.developmentguild.com/current-searches/",
     "mode": "automated",
     "group": "Working in prior aggregator",
-    "notes": "Current Executive Searches.",
+    "notes": "Current Executive Searches only. About/news pages cannot enter the feed.",
     "date_policy": "source",
     "render_fallback": false,
     "allow_zero": false,
     "urls": [
       "https://www.developmentguild.com/current-searches/"
-    ]
+    ],
+    "parser": "developmentguild",
+    "authoritative_parser": true,
+    "close_after_misses": 1,
+    "allowed_detail_path_regex": "^/current-searches/[^/]+/?$"
   },
   {
     "name": "The Moran Company",
@@ -391,13 +447,17 @@
     "url": "https://sandlersearch.org/current-opportunities/",
     "mode": "automated",
     "group": "Additional sites to check",
-    "notes": "Current Opportunities.",
+    "notes": "Current Opportunities only. Detail labels POSITION / ORGANIZATION / LOCATION are parsed directly; program brands such as RootOne retain parent-organization provenance.",
     "date_policy": "source",
     "render_fallback": false,
     "allow_zero": false,
     "urls": [
       "https://sandlersearch.org/current-opportunities/"
-    ]
+    ],
+    "parser": "sandler",
+    "authoritative_parser": true,
+    "close_after_misses": 1,
+    "allowed_detail_path_regex": "^/job/[^/]+/?$"
   },
   {
     "name": "Spano Pratt",

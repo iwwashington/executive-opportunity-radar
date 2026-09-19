@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Executive Opportunity Radar v5 updater.
+"""Executive Opportunity Radar v6 updater.
 
 Capture first, enrich second.
 
@@ -41,7 +41,7 @@ META_PATH = ROOT / "meta.json"
 HEADERS = {
     "User-Agent": (
         "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
-        "AppleWebKit/537.36 Chrome/124 Safari/537.36 ExecutiveOpportunityRadar/5.0"
+        "AppleWebKit/537.36 Chrome/124 Safari/537.36 ExecutiveOpportunityRadar/6.0"
     )
 }
 TIMEOUT = 30
@@ -84,11 +84,11 @@ SECTOR_RULES = [
     ("Health", r"\b(health|hospital|medical|clinic|care|medicine|patient|wellness|public health)\b"),
     ("Philanthropy", r"\b(foundation|philanthrop|grantmaking|charitable trust|community foundation)\b"),
     ("Education", r"\b(university|college|school|education|academy|student|learning|museum of science)\b"),
-    ("Associations", r"\b(association|society|council|institute of|federation|membership organization|professional society)\b"),
+    ("Associations", r"\b(association|society|council|federation|membership organization|professional society|trade organization|member organization)\b"),
     ("Civic / Public", r"\b(city|county|public authority|civic|government|municipal|downtown alliance|chamber)\b"),
     ("Environment", r"\b(environment|climate|conservation|sustainab|energy|wildlife|natural resources)\b"),
     ("Human Services", r"\b(housing|homeless|food bank|hunger|human services|social services|family services|community services)\b"),
-    ("Justice / Rights", r"\b(justice|rights|legal|law|civil liberties|immigrant|advocacy)\b"),
+    ("Justice / Rights", r"\b(social justice|racial justice|civil rights|civil liberties|immigrant rights|legal services|access to justice|human rights)\b"),
     ("Arts / Culture", r"\b(arts|theatre|theater|museum|symphony|opera|culture|cultural)\b"),
     ("Media / Journalism", r"\b(media|journalis|news|press|broadcast|publishing)\b"),
     ("International", r"\b(international|global development|humanitarian|refugee|foreign policy)\b"),
@@ -287,21 +287,77 @@ def infer_work_arrangement(location: str, text: str = "") -> str:
     return "Unknown"
 
 
-def infer_sector(organization: str, text: str) -> tuple[str, str]:
-    corpus = clean(f"{organization} {text}")[:9000]
+def infer_sector_tags(organization: str, text: str) -> tuple[list[str], str]:
+    """Return every supported sector tag that the public text supports.
+
+    Tags intentionally overlap: e.g. an association can also be Health or Education.
+    """
+    corpus = clean(f"{organization} {text}")[:16000]
+    tags=[]
     for label, pattern in SECTOR_RULES:
-        if re.search(pattern, corpus, re.I):
-            return label, "inferred"
-    return "Unclassified", "unclassified"
+        if re.search(pattern, corpus, re.I) and label not in tags:
+            tags.append(label)
+    return (tags or ["Unclassified"]), ("inferred" if tags else "unclassified")
+
+
+def infer_organization_types(organization: str, text: str) -> tuple[list[str], str]:
+    """Return overlapping organization-type tags rather than forcing one bucket."""
+    corpus=clean(f"{organization} {text}")[:18000]
+    tags=[]
+    for label, pattern in ORGANIZATION_TYPE_RULES:
+        if re.search(pattern, corpus, re.I) and label not in tags:
+            tags.append(label)
+    return (tags or ["Unclassified"]), ("inferred" if tags else "unclassified")
+
+
+def infer_sector(organization: str, text: str) -> tuple[str, str]:
+    tags,status=infer_sector_tags(organization,text)
+    return tags[0],status
 
 
 def infer_organization_type(organization: str, text: str) -> tuple[str, str]:
-    corpus=clean(f"{organization} {text}")[:12000]
-    for label, pattern in ORGANIZATION_TYPE_RULES:
-        if re.search(pattern, corpus, re.I):
-            return label, "inferred"
-    return "Unclassified", "unclassified"
+    tags,status=infer_organization_types(organization,text)
+    return tags[0],status
 
+
+def infer_mandate_tags(text: str) -> list[str]:
+    corpus=clean(text)[:24000]
+    rules=[
+        ("Growth / scale",r"\b(scale|scaling|growth|expand|expansion|grow the organization|new markets?)\b"),
+        ("Fundraising / revenue",r"\b(fundrais|development|philanthrop|donor|earned revenue|revenue diversification|capital campaign)\b"),
+        ("Strategy / transformation",r"\b(strategic plan|strategy|transform|transformation|turnaround|organizational change|change management)\b"),
+        ("Operations / infrastructure",r"\b(operational excellence|operations|infrastructure|systems|process improvement|internal controls)\b"),
+        ("External affairs / advocacy",r"\b(advocacy|government relations|public policy|external affairs|public affairs|coalition|legislative)\b"),
+        ("Membership / stakeholders",r"\b(membership|members|stakeholder|member engagement|chapter|constituent engagement)\b"),
+        ("Culture / talent",r"\b(culture|talent|staff development|organizational culture|employee engagement|team building)\b"),
+        ("Digital / AI",r"\b(digital transformation|technology strategy|artificial intelligence|\bAI\b|data strategy|modernize technology)\b"),
+        ("Financial sustainability",r"\b(financial sustainability|fiscal sustainability|financial stewardship|budget discipline|long-term sustainability)\b"),
+    ]
+    return [label for label,pat in rules if re.search(pat,corpus,re.I)]
+
+
+def infer_succession_reason(text: str) -> str:
+    corpus=clean(text)[:20000]
+    rules=[
+        ("Retirement",r"\b(retir(?:e|es|ed|ement|ing))\b"),
+        ("Planned succession",r"\b(planned succession|succession process|succession planning|leadership transition)\b"),
+        ("Founder transition",r"\b(founder|founding (?:ceo|president|executive director)).{0,90}\b(transition|depart|step down|retir)\b"),
+        ("Interim leadership",r"\b(interim (?:ceo|president|executive director)|currently led by an interim)\b"),
+        ("Newly created role",r"\b(newly created|new position|new role|inaugural)\b"),
+    ]
+    for label,pat in rules:
+        if re.search(pat,corpus,re.I): return label
+    return ""
+
+
+def extract_application_deadline(text: str, today: date) -> str | None:
+    s=clean(text)
+    for pat in [r"(?:application|apply|priority consideration|applications? received by|deadline)\s*(?:deadline|by|through|until|:)??\s*([^|.;]{3,55})"]:
+        m=re.search(pat,s,re.I)
+        if m:
+            d,_=extract_date(m.group(1),today)
+            if d: return d.isoformat()
+    return None
 
 def safe_date(year: int, month: int, day: int) -> date | None:
     try:
@@ -339,9 +395,9 @@ def extract_labeled_posted_date(text: str, today: date) -> tuple[date | None, st
     """Extract a posting date only when the page labels it as a posting date."""
     s = clean(text)
     patterns = [
-        r"\bdate\s+posted\s*:?\s*([^|;]{3,45})",
-        r"\bposted\s+date\s*:?\s*([^|;]{3,45})",
-        r"\bposted\s*:?\s*([^|;]{3,45})",
+        r"\bdate\s+posted\s*:?\s*(?:\|\s*)?([^|;]{3,45})",
+        r"\bposted\s+date\s*:?\s*(?:\|\s*)?([^|;]{3,45})",
+        r"\bposted\s*:?\s*(?:\|\s*)?([^|;]{3,45})",
     ]
     for pattern in patterns:
         m = re.search(pattern, s, re.I)
@@ -361,7 +417,7 @@ def extract_labeled_posted_date(text: str, today: date) -> tuple[date | None, st
 
 NONLISTING_PATH = re.compile(
     r"/(?:service(?:s|-types)?|our-services|expertise|functions?|about|team|people|"
-    r"insights?|news|contact|practice(?:-areas)?|industr(?:y|ies)|role)/",
+    r"insights?(?:-results)?|results|news|contact|practice(?:-areas)?|industr(?:y|ies)|role)/",
     re.I,
 )
 
@@ -391,47 +447,47 @@ def allowed_candidate_url(url: str, source: dict) -> bool:
 
 
 def money_value(token: str) -> int | None:
-    t = token.lower().replace("$", "").replace(",", "").strip()
-    mult = 1000 if t.endswith("k") else 1
-    if t.endswith("k"):
-        t = t[:-1].strip()
+    t=clean(token).lower().replace("usd","").replace("us$","").replace("$","").replace(",","").strip()
+    mult=1000 if t.endswith("k") else 1
+    if t.endswith("k"): t=t[:-1].strip()
     try:
-        v = float(t) * mult
-        if 30000 <= v <= 5000000:
-            return int(round(v))
+        v=float(t)*mult
+        if 30000 <= v <= 5000000: return int(round(v))
     except ValueError:
         pass
     return None
 
 
 def extract_compensation(text: str) -> tuple[str, int | None, int | None, str]:
-    """Extract compensation only from salary/pay-labeled context, not arbitrary dollar ranges."""
+    """Extract compensation only from salary/pay-labeled context.
+
+    Supports ranges such as USD 425,000.00 - 475,000.00, $340k-$375k,
+    and single/starting figures such as salary starting at $230,000.
+    """
     s=clean(text)
-    token=r"\$?\s*(?:\d{2,3}(?:,\d{3})+|\d{2,4}(?:\.\d+)?\s*[kK])"
-    labels=r"(?:compensation|salary|base salary|base compensation|pay range|annual salary|anticipated (?:base )?(?:salary|compensation)|estimated base compensation|salary range)"
-    patterns=[
-        rf"{labels}[^$\d]{{0,120}}({token})\s*(?:-|–|—|to|through)\s*({token})",
-        rf"Compensation\s*:?\s*(?:USD|US\$)?\s*({token})\s*(?:-|–|—|to|through)\s*({token})",
-    ]
-    for pat in patterns:
-        m=re.search(pat,s,re.I)
-        if m:
-            lo,hi=money_value(m.group(1)),money_value(m.group(2))
-            if lo and hi and hi>=lo:
-                return clean(s[max(0,m.start()-20):min(len(s),m.end()+120)]),lo,hi,"published_range"
+    token=r"(?:USD\s*)?(?:US\$\s*)?\$?\s*(?:\d{2,3}(?:,\d{3})+(?:\.\d{1,2})?|\d{2,4}(?:\.\d+)?\s*[kK])"
+    labels=r"(?:compensation|salary|base salary|base compensation|pay range|annual salary|anticipated (?:base )?(?:salary|compensation)|estimated base compensation|salary range|base pay)"
+    # Labeled range first.
     for lm in re.finditer(labels,s,re.I):
-        window=s[lm.start():lm.start()+420]
+        window=s[lm.start():lm.start()+650]
         rm=re.search(rf"({token})\s*(?:-|–|—|to|through)\s*({token})",window,re.I)
         if rm:
             lo,hi=money_value(rm.group(1)),money_value(rm.group(2))
             if lo and hi and hi>=lo:
-                return clean(window[:min(len(window),rm.end()+100)]),lo,hi,"published_range"
-    m=re.search(rf"{labels}[^.;:]{{0,120}}({token})",s,re.I)
+                return clean(window[:min(len(window),rm.end()+140)]),lo,hi,"published_range"
+        sm=re.search(rf"(?:starting at|from|minimum of|minimum|at least)?\s*({token})",window,re.I)
+        if sm:
+            v=money_value(sm.group(1))
+            if v:
+                status="published_minimum" if re.search(r"starting at|from|minimum|at least",window[:sm.start()+20],re.I) else "published_single"
+                return clean(window[:min(len(window),sm.end()+120)]),v,(None if status=="published_minimum" else v),status
+    # Korn Ferry and similar tables sometimes say "Compensation: USD ...".
+    m=re.search(rf"Compensation\s*:?\s*({token})\s*(?:-|–|—|to|through)\s*({token})",s,re.I)
     if m:
-        v=money_value(m.group(1))
-        if v: return clean(s[max(0,m.start()-20):min(len(s),m.end()+100)]),v,v,"published_single"
+        lo,hi=money_value(m.group(1)),money_value(m.group(2))
+        if lo and hi and hi>=lo:
+            return clean(s[max(0,m.start()-20):min(len(s),m.end()+160)]),lo,hi,"published_range"
     return "",None,None,"not_published"
-
 
 def evidence_excerpt(text: str, role: str, organization: str) -> str:
     s=clean(text)
@@ -451,39 +507,113 @@ def fetch(url: str) -> requests.Response:
     return r
 
 
-def browser_html(url: str) -> str:
+def browser_html(url: str, max_scrolls: int = 8) -> str:
     if sync_playwright is None:
         raise RuntimeError("Playwright not installed")
     with sync_playwright() as p:
         browser=p.chromium.launch(headless=True)
         page=browser.new_page(user_agent=HEADERS["User-Agent"],viewport={"width":1440,"height":1200})
         page.goto(url,wait_until="domcontentloaded",timeout=60000)
-        try:
-            page.wait_for_load_state("networkidle",timeout=12000)
-        except Exception:
-            pass
-        # Trigger lazy/infinite lists and common load-more controls.
-        for _ in range(6):
+        try: page.wait_for_load_state("networkidle",timeout=12000)
+        except Exception: pass
+        stable=0; last_sig=None
+        for _ in range(max_scrolls):
             page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
-            page.wait_for_timeout(450)
+            page.wait_for_timeout(650)
             clicked=False
-            for selector in [
-                "button:has-text('Load more')","a:has-text('Load more')",
-                "button:has-text('Show more')","a:has-text('Show more')",
-                "button:has-text('More jobs')","a:has-text('More jobs')"
-            ]:
+            for selector in ["button:has-text('Load more')","a:has-text('Load more')","button:has-text('Show more')","a:has-text('Show more')","button:has-text('More jobs')","a:has-text('More jobs')","button:has-text('View more')","a:has-text('View more')"]:
                 try:
                     loc=page.locator(selector).first
                     if loc.count() and loc.is_visible():
-                        loc.click(timeout=1500); page.wait_for_timeout(650); clicked=True; break
+                        loc.click(timeout=1800); page.wait_for_timeout(750); clicked=True; break
+                except Exception: pass
+            try:
+                sig=(page.evaluate("document.body.scrollHeight"),page.locator("a").count())
+            except Exception:
+                sig=None
+            if not clicked and sig==last_sig: stable+=1
+            else: stable=0
+            last_sig=sig
+            if stable>=3: break
+        html=page.content(); browser.close(); return html
+
+def browser_korn_html(url: str) -> str:
+    """Search Korn Ferry's rendered candidate portal for each target title and aggregate direct job links.
+
+    This avoids trusting a single initial result page, which materially undercounted Korn Ferry in prior versions.
+    """
+    if sync_playwright is None:
+        raise RuntimeError("Playwright not installed")
+    collected=set()
+    with sync_playwright() as p:
+        browser=p.chromium.launch(headless=True)
+        page=browser.new_page(user_agent=HEADERS["User-Agent"],viewport={"width":1440,"height":1200})
+
+        def collect_links():
+            try:
+                hrefs=page.locator("a[href]").evaluate_all("els => els.map(e => e.href)")
+            except Exception:
+                hrefs=[]
+            for href in hrefs:
+                try:
+                    if re.search(r"/job/Korn-Ferry-Executive-Search-[^?#]+/\d+/?$",urlparse(href).path,re.I):
+                        collected.add(href)
                 except Exception:
                     pass
-            if not clicked:
-                # Continue a few scrolls for lazy loading, then stop.
-                continue
-        html=page.content()
+
+        def sweep():
+            # collect lazy-loaded results on the current result page
+            stable=0; last=-1
+            for _ in range(18):
+                collect_links(); page.evaluate("window.scrollTo(0, document.body.scrollHeight)"); page.wait_for_timeout(450)
+                n=len(collected); stable=stable+1 if n==last else 0; last=n
+                if stable>=3: break
+            # Some deployments paginate instead of lazy-loading. Collect before moving on.
+            for _ in range(20):
+                collect_links(); nxt=None
+                for sel in ["a:has-text('Next')","button:has-text('Next')","[aria-label='Next']","[aria-label*='next' i]"]:
+                    try:
+                        loc=page.locator(sel).last
+                        if loc.count() and loc.is_visible() and not loc.is_disabled(): nxt=loc; break
+                    except Exception:
+                        pass
+                if nxt is None: break
+                before=page.url
+                try:
+                    nxt.click(timeout=2500); page.wait_for_timeout(900)
+                    try: page.wait_for_load_state("networkidle",timeout=5000)
+                    except Exception: pass
+                    if page.url==before:
+                        # JS pagination is fine; if no new links appear twice, the outer loop will terminate on disabled/absent Next.
+                        pass
+                except Exception:
+                    break
+
+        queries=[None,"Chief Executive Officer","CEO","President","Executive Director"]
+        for q in queries:
+            page.goto(url,wait_until="domcontentloaded",timeout=60000)
+            try: page.wait_for_load_state("networkidle",timeout=10000)
+            except Exception: pass
+            if q:
+                box=None
+                for sel in ["input[placeholder*='Job Title' i]","input[aria-label*='Job Title' i]","input[placeholder*='Keyword' i]","input[type='text']"]:
+                    try:
+                        loc=page.locator(sel).first
+                        if loc.count() and loc.is_visible(): box=loc; break
+                    except Exception:
+                        pass
+                if box is not None:
+                    try:
+                        box.fill(q); box.press("Enter"); page.wait_for_timeout(1100)
+                        try: page.wait_for_load_state("networkidle",timeout=6000)
+                        except Exception: pass
+                    except Exception:
+                        pass
+            sweep()
         browser.close()
-        return html
+    if not collected:
+        raise ValueError("Korn Ferry browser search exposed no client job detail links")
+    return "<html><body>"+"".join(f'<a href="{u}">candidate</a>' for u in sorted(collected))+"</body></html>"
 
 
 def valid_url(url: str) -> bool:
@@ -536,10 +666,16 @@ class Job:
     compensation_max: int | None = None
     compensation_status: str = "not_published"
     sector: str = "Unclassified"
+    sector_tags: list[str] = field(default_factory=list)
     sector_status: str = "unclassified"
     organization_type: str = "Unclassified"
+    organization_types: list[str] = field(default_factory=list)
     organization_type_status: str = "unclassified"
     work_arrangement: str = "Unknown"
+    parent_organization: str = ""
+    application_deadline: str | None = None
+    mandate_tags: list[str] = field(default_factory=list)
+    succession_reason: str = ""
     latest_reported_ceo_comp: int | None = None
     latest_reported_ceo_comp_year: int | None = None
     latest_reported_ceo_name: str = ""
@@ -557,16 +693,15 @@ class Job:
     baseline_seed: bool = False
     link_quality: str = "source_page"
 
-
 def build_job(*, source: dict, title: str, organization: str, location: str, url: str,
               today: date, context: str = "", posted: date | None = None,
-              posted_status: str = "unavailable") -> Job:
+              posted_status: str = "unavailable", parent_organization: str = "") -> Job:
     """Build one normalized role without requiring optional metadata."""
     role=clean(title); organization=clean(organization) or "Organization not parsed"
     location=clean(location); context=clean(context)
-    comp_text, comp_min, comp_max, comp_status=extract_compensation(context)
-    sector, sector_status=infer_sector(organization,context)
-    organization_type, organization_type_status=infer_organization_type(organization,context)
+    comp_text,comp_min,comp_max,comp_status=extract_compensation(context)
+    sector_tags,sector_status=infer_sector_tags(organization,context)
+    org_types,organization_type_status=infer_organization_types(organization,context)
     now=now_iso(); source_url=source["url"]
     direct=bool(url and canonical_url(url)!=canonical_url(source_url))
     return Job(
@@ -577,14 +712,17 @@ def build_job(*, source: dict, title: str, organization: str, location: str, url
         date_basis="posted_relative" if posted_status=="approximate" else "posted" if posted else "first_seen",
         status="open",role_type=role_type(role),compensation_text=comp_text,
         compensation_min=comp_min,compensation_max=comp_max,compensation_status=comp_status,
-        sector=sector,sector_status=sector_status,organization_type=organization_type,organization_type_status=organization_type_status,work_arrangement=infer_work_arrangement(location,context),
+        sector=sector_tags[0],sector_tags=sector_tags,sector_status=sector_status,
+        organization_type=org_types[0],organization_types=org_types,organization_type_status=organization_type_status,
+        work_arrangement=infer_work_arrangement(location,context),parent_organization=clean(parent_organization),
+        application_deadline=extract_application_deadline(context,today),
+        mandate_tags=infer_mandate_tags(context),succession_reason=infer_succession_reason(context),
         location_status="extracted" if location else "unavailable",
         posted_date_status=posted_status if posted else "unavailable",
         evidence=evidence_excerpt(context,role,organization),updated_at=now,missing_runs=0,
         closed_date=None,change_count=0,baseline_seed=False,
         link_quality="direct" if direct else "source_page",
     )
-
 
 def sibling_block_text(node, stop_tags=("h1","h2","h3"), limit=40) -> tuple[list[str], list]:
     """Collect nearby text/tags after a heading without spilling into the next listing."""
@@ -724,7 +862,8 @@ def _detail_text_soup(url: str):
 
 
 def _field_from_pipe(pipe: str, label: str) -> str:
-    m=re.search(rf"\b{re.escape(label)}\s*:\s*([^|]{{1,180}})",pipe,re.I)
+    # Supports "Label: Value", "Label: | Value", and "Label | Value" table renderings.
+    m=re.search(rf"\b{re.escape(label)}(?:\s*:\s*(?:\|\s*)?|\s*\|\s*)([^|]{{1,180}})",pipe,re.I)
     return clean(m.group(1)) if m else ""
 
 
@@ -867,6 +1006,206 @@ def parse_odgers(html: str, source: dict, today: date) -> list[Job]:
     return dedupe(out)
 
 
+def parse_bridge(html: str, source: dict, today: date) -> list[Job]:
+    """Parse only Bridge Partners' Searches-page assignments, never function/practice pages."""
+    soup=BeautifulSoup(html,"lxml"); out=[]; seen=set()
+    for a in soup.find_all("a",href=True):
+        raw=clean(a.get_text(" ",strip=True)); title,_=split_title_org(raw)
+        if not is_target_role(title): continue
+        href=urljoin(source["url"],a.get("href")); cu=canonical_url(href)
+        # On this page Full Description links are frequently PDFs; role anchors may point to the same PDF.
+        if cu in seen: continue
+        lines=context_lines(a); org=""
+        # Nearby all-caps client line is the strongest signal on Bridge's Searches page.
+        for line in lines[:14]:
+            c=clean(line)
+            if c.upper()==c and 2<=len(c)<=120 and likely_org(c,title): org=c.title() if c.isupper() else c; break
+        if not org:
+            joined=" | ".join(lines[:20])
+            m=re.search(r"Bridge Partners is (?:again )?partnering with\s+(.{2,120}?)\s+to recruit",joined,re.I)
+            if m: org=clean(m.group(1))
+        if not org: org=infer_organization(title,lines)
+        context=" | ".join([title]+lines[:35]); direct=href
+        # Find the nearest PDF/full-description link in the same card if role anchor itself is not useful.
+        container=local_container(a)
+        if container:
+            for link in container.find_all("a",href=True):
+                u=urljoin(source["url"],link.get("href")); lab=clean(link.get_text(" ",strip=True))
+                if u.lower().split("?",1)[0].endswith(".pdf") or re.search(r"full description|position profile",lab,re.I): direct=u; break
+        if direct.lower().split("?",1)[0].endswith(".pdf"):
+            extra=extract_pdf_text(direct)
+            if extra: context=clean(context+" "+extra)
+        seen.add(canonical_url(direct))
+        out.append(build_job(source=source,title=title,organization=org,location=infer_location(lines),url=direct or source["url"],today=today,context=context))
+    return dedupe(out)
+
+
+def extract_org_from_detail(title: str, plain: str, pipe: str = "") -> tuple[str,str]:
+    """Return (organization,parent organization) from common retained-search prose."""
+    text=clean(plain); parent=""
+    patterns=[
+        r"(?:on behalf of)\s+(?:our client,?\s+)?(?:the\s+)?(.{2,130}?)(?=,\s+(?:an?|the)\b|\s+to\s+(?:identify|recruit|conduct|lead)\b|[.;])",
+        r"(?:exclusively retained by|retained by|partnering with|in partnership with)\s+(?:our client,?\s+)?(?:the\s+)?(.{2,130}?)(?=\s+to\s+(?:identify|recruit|conduct|lead)\b|,\s+(?:an?|the)\b|[.;])",
+        r"(?:Executive Director|Chief Executive Officer|President(?:\s*&\s*CEO)?)\s+of\s+(.{2,130}?)(?=,\s+(?:an?|the)\b|[.;])",
+        r"\b([A-Z][A-Za-z0-9&'’.,()\- ]{2,130})\s+(?:seeks|is seeking|has retained|is recruiting)\s+(?:an?|its next|a new)\s+(?:Chief Executive Officer|CEO|President(?:\s*&\s*CEO)?|Executive Director)",
+    ]
+    for pat in patterns:
+        m=re.search(pat,text,re.I)
+        if m:
+            cand=clean(m.group(1))
+            if likely_org(cand,title): return cand,parent
+    return "",parent
+
+
+def parse_scion(html: str, source: dict, today: date) -> list[Job]:
+    soup=BeautifulSoup(html,"lxml"); out=[]; seen=set()
+    for a in soup.find_all("a",href=True):
+        url=urljoin(source["url"],a.get("href"))
+        if not re.search(r"^/job/\d+/?$",urlparse(url).path,re.I): continue
+        raw=clean(a.get_text(" ",strip=True))
+        if not ROLE_SIGNAL.search(raw): continue
+        cu=canonical_url(url)
+        if cu in seen: continue
+        seen.add(cu)
+        try: dsoup,pipe,plain=_detail_text_soup(url)
+        except Exception: continue
+        if has_closed_signal(plain): continue
+        h1=dsoup.find("h1"); raw=clean(h1.get_text(" ",strip=True)) if h1 else clean(a.get_text(" ",strip=True))
+        title,_=split_title_org(raw)
+        if not is_target_role(title):
+            # CATS pages often show title separately in the body.
+            for h in dsoup.find_all(["h1","h2","h3"]):
+                t=clean(h.get_text(" ",strip=True)); rt,_=split_title_org(t)
+                if is_target_role(rt): title=rt; break
+        if not is_target_role(title): continue
+        org,_=extract_org_from_detail(title,plain,pipe)
+        if not org: org=infer_organization(title,[clean(x) for x in dsoup.stripped_strings])
+        loc=_field_from_pipe(pipe,"Location") or infer_location([pipe])
+        posted,ps=extract_labeled_posted_date(pipe,today)
+        out.append(build_job(source=source,title=title,organization=org,location=loc,url=url,today=today,context=plain,posted=posted,posted_status=ps))
+    return dedupe(out)
+
+
+def parse_leaderfit(html: str, source: dict, today: date) -> list[Job]:
+    soup=BeautifulSoup(html,"lxml"); out=[]; seen=set()
+    for a in soup.find_all("a",href=True):
+        url=urljoin(source["url"],a.get("href"))
+        if "leaderfit.catsone.com" not in urlparse(url).netloc.lower() or not re.search(r"/careers/\d+/jobs/\d+",urlparse(url).path,re.I): continue
+        cu=canonical_url(url)
+        if cu in seen: continue
+        seen.add(cu)
+        try: dsoup,pipe,plain=_detail_text_soup(url)
+        except Exception: continue
+        if has_closed_signal(plain): continue
+        h1=dsoup.find("h1"); raw=clean(h1.get_text(" ",strip=True)) if h1 else clean(a.get_text(" ",strip=True))
+        title,org=split_title_org(raw)
+        # Example: Chief Executive Officer, Sixth & I
+        if not is_target_role(title):
+            m=re.search(r"(Chief Executive Officer|Executive Director|President(?:\s*&\s*CEO)?)[,:\-]\s*([^|]{2,120})",plain,re.I)
+            if m: title,org=clean(m.group(1)),clean(m.group(2))
+        if not is_target_role(title): continue
+        if not org:
+            m=re.search(r"\bABOUT\s+([^|]{2,100})",pipe,re.I)
+            if m and likely_org(m.group(1),title): org=clean(m.group(1))
+        if not org: org,_=extract_org_from_detail(title,plain,pipe)
+        if not org: org=infer_organization(title,[clean(x) for x in dsoup.stripped_strings])
+        loc=_field_from_pipe(pipe,"Location") or infer_location([pipe])
+        posted,ps=extract_labeled_posted_date(pipe,today)
+        out.append(build_job(source=source,title=title,organization=org,location=loc,url=url,today=today,context=plain,posted=posted,posted_status=ps))
+    return dedupe(out)
+
+
+def parse_developmentguild(html: str, source: dict, today: date) -> list[Job]:
+    soup=BeautifulSoup(html,"lxml"); out=[]; seen=set()
+    for a in soup.find_all("a",href=True):
+        url=urljoin(source["url"],a.get("href")); path=urlparse(url).path
+        if not re.search(r"^/current-searches/[^/]+/?$",path,re.I): continue
+        cu=canonical_url(url)
+        if cu in seen: continue
+        seen.add(cu)
+        raw=clean(a.get_text(" ",strip=True)); title,_=split_title_org(raw)
+        if not is_target_role(title): continue
+        org=""
+        prev=a.find_previous(["h3","h4","h5","h6"])
+        if prev:
+            cand=clean(prev.get_text(" ",strip=True))
+            if likely_org(cand,title): org=cand
+        lines=context_lines(a); loc=infer_location(lines); context=" | ".join(lines[:40])
+        try:
+            dsoup,pipe,plain=_detail_text_soup(url)
+            if has_closed_signal(plain): continue
+            if org=="Organization not parsed" or not org:
+                org=infer_organization(title,[clean(x) for x in dsoup.stripped_strings])
+            if not loc: loc=infer_location([pipe])
+            context=plain
+        except Exception: pass
+        out.append(build_job(source=source,title=title,organization=org,location=loc,url=url,today=today,context=context))
+    return dedupe(out)
+
+
+def parse_isaacson(html: str, source: dict, today: date) -> list[Job]:
+    soup=BeautifulSoup(html,"lxml"); out=[]; seen=set()
+    for a in soup.find_all("a",href=True):
+        url=urljoin(source["url"],a.get("href")); path=urlparse(url).path
+        if not re.search(r"^/open-searches/[^/]+/[^/]+/?$",path,re.I): continue
+        raw=clean(a.get_text(" ",strip=True))
+        if not ROLE_SIGNAL.search(raw): continue
+        cu=canonical_url(url)
+        if cu in seen: continue
+        seen.add(cu)
+        try: dsoup,pipe,plain=_detail_text_soup(url)
+        except Exception: continue
+        if has_closed_signal(plain): continue
+        h1=dsoup.find("h1"); title=clean(h1.get_text(" ",strip=True)) if h1 else clean(a.get_text(" ",strip=True))
+        if not is_target_role(title): continue
+        org=""
+        # Isaacson detail convention: h1 role, first h2 client organization | location.
+        for h2 in dsoup.find_all("h2"):
+            txt=clean(h2.get_text(" ",strip=True))
+            if not txt or is_target_role(txt): continue
+            left=clean(txt.split("|",1)[0])
+            if likely_org(left,title): org=left; break
+        if not org: org=infer_organization(title,[clean(x) for x in dsoup.stripped_strings])
+        loc=infer_location([pipe])
+        # IM dates are known to be unreliable/missing; first seen is the honest fallback.
+        out.append(build_job(source=source,title=title,organization=org,location=loc,url=url,today=today,context=plain,posted=None,posted_status="unavailable"))
+    return dedupe(out)
+
+
+def parse_sandler(html: str, source: dict, today: date) -> list[Job]:
+    soup=BeautifulSoup(html,"lxml"); out=[]; seen=set()
+    for a in soup.find_all("a",href=True):
+        url=urljoin(source["url"],a.get("href")); path=urlparse(url).path
+        if not re.search(r"^/job/[^/]+/?$",path,re.I): continue
+        cu=canonical_url(url)
+        if cu in seen: continue
+        seen.add(cu)
+        try: dsoup,pipe,plain=_detail_text_soup(url)
+        except Exception: continue
+        if has_closed_signal(plain): continue
+        title=_field_from_pipe(pipe,"POSITION")
+        org=_field_from_pipe(pipe,"ORGANIZATION")
+        loc=_field_from_pipe(pipe,"LOCATION")
+        if not is_target_role(title):
+            h1=dsoup.find("h1"); title=clean(h1.get_text(" ",strip=True)) if h1 else clean(a.get_text(" ",strip=True))
+        if not is_target_role(title): continue
+        parent=""
+        # RootOne is a program/brand; preserve The Jewish Education Project as parent org if present.
+        h1=dsoup.find("h1")
+        brand=""
+        for h in dsoup.find_all(["h2","h3","h4","h5"]):
+            cand=clean(h.get_text(" ",strip=True))
+            if cand and cand.lower()!=title.lower() and likely_org(cand,title):
+                brand=cand; break
+        if brand and brand.lower() not in {title.lower(),org.lower()}:
+            if brand.lower()=="rootone" and org: parent=org; org=brand
+        if not org: org,_=extract_org_from_detail(title,plain,pipe)
+        if not org: org=infer_organization(title,[clean(x) for x in dsoup.stripped_strings])
+        posted,ps=extract_labeled_posted_date(pipe,today)
+        out.append(build_job(source=source,title=title,organization=org,location=loc,url=url,today=today,context=plain,posted=posted,posted_status=ps,parent_organization=parent))
+    return dedupe(out)
+
+
 def node_href(node, source_url: str) -> str:
     if getattr(node,"name",None)=="a" and node.get("href"):
         href=node.get("href")
@@ -940,31 +1279,11 @@ def candidate_from_node(node, source: dict, today: date, detail_budget: list[int
     # so words such as "close collaboration" do not create false closures.
     if has_closed_signal(combined):
         return None
-    comp_text, comp_min, comp_max, comp_status=extract_compensation(combined)
-    sector, sector_status=infer_sector(organization,combined)
-    organization_type, organization_type_status=infer_organization_type(organization,combined)
-    now=now_iso()
-    return Job(
-        id=stable_id(source["name"],role,organization,url),
-        title=clean(role), organization=organization, source=source["name"],
-        location=location, url=url, source_url=source["url"],
-        posted_date=posted.isoformat() if posted else None,
-        first_seen=now,last_seen=now,
-        date_basis="posted_relative" if posted_status=="approximate" else "posted" if posted else "first_seen",
-        status="open", role_type=role_type(role),
-        compensation_text=comp_text,compensation_min=comp_min,compensation_max=comp_max,
-        compensation_status=comp_status,sector=sector,sector_status=sector_status,organization_type=organization_type,organization_type_status=organization_type_status,
-        work_arrangement=infer_work_arrangement(location,combined),
-        location_status="extracted" if location else "unavailable",
-        posted_date_status=posted_status if posted else "unavailable",
-        evidence=evidence_excerpt(combined,role,organization), updated_at=now,
-        missing_runs=0, closed_date=None, change_count=0, baseline_seed=False,
-        link_quality="direct" if url and url != source["url"] else "source_page",
-    )
+    return build_job(source=source,title=role,organization=organization,location=location,url=url,today=today,context=combined,posted=posted,posted_status=posted_status)
 
 
 def parse_korn(html: str, source: dict, today: date) -> list[Job]:
-    """Parse the rendered Korn Ferry client job board and verify executive detail pages."""
+    """Parse Korn Ferry's rendered client board and verify every target-role detail page."""
     soup=BeautifulSoup(html,"lxml"); seen=set(); out=[]; links=[]
     for a in soup.find_all("a",href=True):
         url=urljoin(source["url"],a.get("href"))
@@ -972,24 +1291,44 @@ def parse_korn(html: str, source: dict, today: date) -> list[Job]:
         cu=canonical_url(url)
         if cu not in seen: seen.add(cu); links.append(url)
     if not links: raise ValueError("Korn Ferry rendered board exposed no client job detail links")
-    for url in links[:int(source.get("max_detail_requests",160))]:
+    for url in links[:int(source.get("max_detail_requests",240))]:
         try: dsoup,pipe,plain=_detail_text_soup(url)
         except Exception: continue
         if re.search(r"Job Expired or Not Found",plain,re.I) or has_closed_signal(plain): continue
-        h1=dsoup.find("h1"); title=clean(h1.get_text(" ",strip=True)) if h1 else ""
+        h1=dsoup.find("h1"); raw=clean(h1.get_text(" ",strip=True)) if h1 else ""
+        title,org_from_title=split_title_org(raw)
+        if not org_from_title:
+            for sep in (" - "," – "," — "):
+                if sep in raw:
+                    left,right=[clean(x) for x in raw.rsplit(sep,1)]
+                    if is_target_role(right) and len(right)<=60:
+                        title,org_from_title=right,left; break
         if not is_target_role(title): continue
         loc=_field_from_pipe(pipe,"Location") or infer_location([pipe])
         posted,posted_status=extract_labeled_posted_date(pipe,today)
-        org=""
-        for pat in [r"\bAbout (?:the Organization\s+)?([^|]{2,120})",r"\bThe Organization\s+([^|]{2,120})",r"\b([A-Z][^.|]{2,100})\s+is (?:one of|a |an )"]:
-            m=re.search(pat,pipe,re.I)
+        org=org_from_title
+        # Korn details often use explicit 'The Organization' or an opening descriptive paragraph.
+        if not org:
+            m=re.search(r"(?:The Organization|About the Organization|The Company|About the Company)\s*[|:]?\s*([^|]{2,140})",pipe,re.I)
             if m:
                 cand=clean(m.group(1))
-                if likely_org(cand,title): org=cand; break
+                # If the first chunk is generic prose, take leading proper-name phrase before 'is'.
+                mm=re.match(r"(.{2,120}?)\s+is\s+(?:one of|a |an |the )",cand,re.I)
+                cand=clean(mm.group(1)) if mm else cand
+                if likely_org(cand,title): org=cand
+        if not org:
+            m=re.search(r"(?:The Organization|About the Organization|The Company|About the Company)\s+([A-Z][^.!?]{2,140}?)\s+is\s+(?:one of|a |an |the )",plain,re.I)
+            if m and likely_org(m.group(1),title): org=clean(m.group(1))
+        if not org:
+            # 'The Design-Build Institute of America (DBIA) is...' style opening paragraph.
+            for pat in [r"\b([A-Z][A-Za-z0-9&'’.,()\- ]{3,130}\([A-Z]{2,10}\))\s+is\s+",r"\b([A-Z][A-Za-z0-9&'’.,()\- ]{3,130})\s+is\s+(?:one of|a |an |the nation)"]:
+                m=re.search(pat,plain)
+                if m:
+                    cand=clean(m.group(1))
+                    if likely_org(cand,title): org=cand; break
         if not org: org=infer_organization(title,[clean(x) for x in dsoup.stripped_strings])
         out.append(build_job(source=source,title=title,organization=org,location=loc,url=url,today=today,context=plain,posted=posted,posted_status=posted_status))
     return dedupe(out)
-
 
 def candidates_from_html(html: str, source: dict, today: date) -> list[Job]:
     parser=source.get("parser")
@@ -1000,6 +1339,12 @@ def candidates_from_html(html: str, source: dict, today: date) -> list[Job]:
     if parser=="lindauer": return parse_lindauer(html,source,today)
     if parser=="batten": return parse_batten(html,source,today)
     if parser=="odgers": return parse_odgers(html,source,today)
+    if parser=="bridge": return parse_bridge(html,source,today)
+    if parser=="scion": return parse_scion(html,source,today)
+    if parser=="leaderfit": return parse_leaderfit(html,source,today)
+    if parser=="developmentguild": return parse_developmentguild(html,source,today)
+    if parser=="isaacson": return parse_isaacson(html,source,today)
+    if parser=="sandler": return parse_sandler(html,source,today)
     if parser=="korn": return parse_korn(html,source,today)
     soup=BeautifulSoup(html,"lxml")
     budget=[int(source.get("max_detail_requests",MAX_DETAIL_REQUESTS_PER_SOURCE))]
@@ -1050,15 +1395,22 @@ def old_open_by_source(history_jobs: list[dict]) -> dict[str,list[dict]]:
 
 
 def compatible_job(raw: dict) -> Job:
-    fields=Job.__dataclass_fields__
-    kwargs={k:raw.get(k,fields[k].default if fields[k].default is not None else None) for k in fields}
-    # Required string fallbacks for older files.
+    fields=Job.__dataclass_fields__; kwargs={}
+    from dataclasses import MISSING
+    for k,f in fields.items():
+        if k in raw: kwargs[k]=raw[k]
+        elif f.default is not MISSING: kwargs[k]=f.default
+        elif f.default_factory is not MISSING: kwargs[k]=f.default_factory()
+        else: kwargs[k]=None
     for key in ["id","title","organization","source","location","url","source_url","first_seen","last_seen","date_basis"]:
         if kwargs.get(key) is None: kwargs[key]=""
     if not kwargs.get("role_type"): kwargs["role_type"]=role_type(kwargs.get("title",""))
     if not kwargs.get("updated_at"): kwargs["updated_at"]=kwargs.get("last_seen","")
+    if not kwargs.get("sector_tags"):
+        kwargs["sector_tags"]=[kwargs.get("sector") or "Unclassified"]
+    if not kwargs.get("organization_types"):
+        kwargs["organization_types"]=[kwargs.get("organization_type") or "Unclassified"]
     return Job(**kwargs)
-
 
 def find_prior(job: Job, history_jobs: list[dict]) -> dict | None:
     for old in history_jobs:
@@ -1081,7 +1433,7 @@ def carry_forward(job: Job, prior: dict) -> Job:
     job.missing_runs=0
     job.closed_date=None
     # Do not lose previously known metadata just because today's parser missed a field.
-    for attr in ["organization","location","posted_date","compensation_text","compensation_min","compensation_max","sector","organization_type","latest_reported_ceo_comp","latest_reported_ceo_comp_year","latest_reported_ceo_name","latest_reported_ceo_comp_source","org_revenue","org_assets","org_ein"]:
+    for attr in ["organization","location","posted_date","compensation_text","compensation_min","compensation_max","sector","sector_tags","organization_type","organization_types","parent_organization","application_deadline","mandate_tags","succession_reason","latest_reported_ceo_comp","latest_reported_ceo_comp_year","latest_reported_ceo_name","latest_reported_ceo_comp_source","org_revenue","org_assets","org_ein"]:
         new=getattr(job,attr)
         old=prior.get(attr)
         missing=new in (None,"","Organization not parsed","Unclassified")
@@ -1101,7 +1453,7 @@ def carry_forward(job: Job, prior: dict) -> Job:
 
 def changed_fields(prior: dict, current: Job) -> dict:
     changes={}
-    for fieldname in ["title","organization","location","url","posted_date","compensation_text","compensation_min","compensation_max","sector","organization_type","work_arrangement","latest_reported_ceo_comp","org_revenue","org_assets"]:
+    for fieldname in ["title","organization","location","url","posted_date","compensation_text","compensation_min","compensation_max","sector_tags","organization_types","work_arrangement","application_deadline","mandate_tags","succession_reason","latest_reported_ceo_comp","org_revenue","org_assets"]:
         before=prior.get(fieldname); after=getattr(current,fieldname)
         if before not in (None,"") and after not in (None,"") and before!=after:
             changes[fieldname]={"from":before,"to":after}
@@ -1124,7 +1476,7 @@ def scrape_source(source: dict, today: date, prior_count: int) -> tuple[list[Job
         html=""; page_found=[]
         if source.get("browser_first"):
             try:
-                html=browser_html(url); fetch_modes.append("browser")
+                html=(browser_korn_html(url) if source.get("parser")=="korn" else browser_html(url,int(source.get("browser_max_scrolls",8)))); fetch_modes.append("browser")
                 page_found=candidates_from_html(html,{**source,"url":url},today)
                 parse_successes+=1
                 all_found.extend(page_found)
@@ -1141,7 +1493,7 @@ def scrape_source(source: dict, today: date, prior_count: int) -> tuple[list[Job
         # Browser rendering is a fallback when static returned no useful roles for this page.
         if source.get("render_fallback") and not page_found and not source.get("browser_first"):
             try:
-                html=browser_html(url); fetch_modes.append("browser")
+                html=(browser_korn_html(url) if source.get("parser")=="korn" else browser_html(url,int(source.get("browser_max_scrolls",8)))); fetch_modes.append("browser")
                 page_found=candidates_from_html(html,{**source,"url":url},today)
                 parse_successes+=1
                 all_found.extend(page_found)
@@ -1154,6 +1506,12 @@ def scrape_source(source: dict, today: date, prior_count: int) -> tuple[list[Job
         health["ok"]=False; health["status"]="failed"; health["preserved"]=True
         health["error"]=("No source page parsed successfully. " + " | ".join(errors))[:500]
         return [],health
+
+    min_expected=int(source.get("min_expected_matches",0) or 0)
+    if min_expected and len(found)<min_expected:
+        health["ok"]=False; health["status"]="partial-suspected"; health["preserved"]=True
+        health["error"]=(f"Found only {len(found)} matching roles; this source is expected to expose at least {min_expected}. Preserving prior roles and flagging coverage for review. " + " | ".join(errors))[:500]
+        return found,health
 
     # Unexpected collapses are treated as partial, not as mass closures.
     if prior_count>=5 and len(found)<max(2,int(prior_count*0.35)) and not source.get("allow_zero",False) and not source.get("authoritative_parser",False):
@@ -1172,7 +1530,7 @@ def _state_from_location(location: str) -> str:
     return m.group(1) if m else ""
 
 
-def enrich_nonprofit_990(jobs: list[dict], limit: int = 15) -> None:
+def enrich_nonprofit_990(jobs: list[dict], limit: int = 20) -> None:
     """Best-effort public Form 990 enrichment; never gates a listing."""
     done=0
     for j in jobs:
@@ -1180,8 +1538,8 @@ def enrich_nonprofit_990(jobs: list[dict], limit: int = 15) -> None:
         if j.get("latest_reported_ceo_comp") or j.get("org_ein"): continue
         org=j.get("organization","")
         if not org or org=="Organization not parsed": continue
-        ot=j.get("organization_type","")
-        eligible=any(x in ot for x in ["Association","Foundation","University","Education","Health","Media","Arts","Advocacy","Human Services","Nonprofit"])
+        ots=j.get("organization_types") or [j.get("organization_type","")]
+        eligible=any(any(x in ot for x in ["Association","Foundation","University","Education","Health","Media","Arts","Advocacy","Human Services","Nonprofit"]) for ot in ots)
         if not eligible: continue
         try:
             q=requests.utils.quote(org[:120])
@@ -1244,6 +1602,22 @@ def main() -> int:
     by_id={x.get("id"):x for x in updated_history if x.get("id")}
     health_rows=[]
     seen_ids=set()
+
+    # v6 hygiene: immediately archive legacy false positives that are obviously
+    # marketing/service/insight URLs or violate a source-specific detail allowlist.
+    source_map={x.get("name"):x for x in sources}
+    for row in updated_history:
+        if row.get("status")!="open": continue
+        cfg=source_map.get(row.get("source"),{})
+        url=row.get("url","")
+        bad=blocked_nonlisting_url(url,cfg.get("url",""))
+        allow=cfg.get("allowed_detail_path_regex")
+        if allow and url and canonical_url(url)!=canonical_url(cfg.get("url","")):
+            try: bad=bad or not bool(re.search(allow,urlparse(url).path or "/",re.I))
+            except Exception: pass
+        if bad:
+            row["status"]="closed"; row["closed_date"]=today.isoformat(); row["updated_at"]=now
+            events.append({"at":now,"type":"removed_false_positive","job_id":row.get("id"),"source":row.get("source"),"title":row.get("title"),"organization":row.get("organization"),"url":url})
 
     for source in sources:
         prior_source=old_open.get(source["name"],[])
@@ -1313,7 +1687,7 @@ def main() -> int:
         current.append(j)
 
     # Enrich a bounded number of eligible nonprofit records per run with public 990 data.
-    enrich_nonprofit_990(current,limit=15)
+    enrich_nonprofit_990(current,limit=20)
 
     def recency(j): return j.get("posted_date") or (j.get("first_seen") or "")[:10] or "0000-00-00"
     current.sort(key=lambda j:(recency(j),j.get("source",""),j.get("organization","")),reverse=True)
