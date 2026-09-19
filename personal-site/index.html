@@ -88,6 +88,18 @@
       radial-gradient(circle at 72% 28%,#5c7690 0 10%,transparent 10.5%);
       color:#e8eef4;text-align:center;padding:22px;font-size:.75rem;letter-spacing:.08em;text-transform:uppercase
     }
+    .moments{padding:72px 0;background:#fff}
+    .moments-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:28px}
+    .moments-head h2{font-family:var(--serif);font-size:2.8rem;font-weight:400;line-height:1;margin:10px 0 0;letter-spacing:-.035em}
+    .moments-head p{max-width:470px;margin:0;color:var(--muted);font-size:.9rem;line-height:1.6}
+    .moments-grid{display:grid;grid-template-columns:1.2fr .8fr .8fr 1.2fr;gap:3px;background:var(--navy)}
+    .moment{position:relative;min-height:330px;overflow:hidden;background:#172638;color:#fff;text-decoration:none}
+    .moment img{width:100%;height:100%;object-fit:cover;transition:transform .45s ease;filter:saturate(.88)}
+    .moment:hover img{transform:scale(1.025)}
+    .moment::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(4,12,21,.72),transparent 48%)}
+    .moment-copy{position:absolute;z-index:2;left:20px;right:20px;bottom:18px}
+    .moment-copy b{display:block;font-size:.84rem;letter-spacing:.09em;text-transform:uppercase}
+    .moment-copy span{display:block;margin-top:5px;font-size:.72rem;color:#d9e3ec}
     .work{padding:86px 0}
     .section-head{display:grid;grid-template-columns:.72fr 1.28fr;gap:50px;margin-bottom:40px}
     .section-head h2{font-family:var(--serif);font-size:clamp(2.8rem,5vw,4.4rem);font-weight:400;line-height:.98;margin:10px 0 0;letter-spacing:-.04em}
@@ -135,7 +147,7 @@
       .hero-photo{min-height:490px}.hero-note{font-size:1rem;right:7%;bottom:8%;max-width:190px}
       .about-grid{grid-template-columns:1fr 1.4fr}.focus{grid-column:1/-1;border-top:1px solid var(--line);padding-left:0}.about-photo{padding-right:22px}.about-copy{border-right:0}
       .life-grid{grid-template-columns:repeat(2,1fr)}.life-card:last-child{grid-column:span 2;aspect-ratio:2/1}
-      .section-head,.gov-grid,.speaking-grid,.recent-grid{grid-template-columns:1fr}
+      .section-head,.gov-grid,.speaking-grid,.recent-grid{grid-template-columns:1fr}.moments-grid{grid-template-columns:1fr 1fr}.moments-head{align-items:flex-start;flex-direction:column}
       .record-item{grid-template-columns:115px 1fr}.record-proof{grid-column:2;width:max-content}
       .based{border-left:0;padding-left:0;border-top:1px solid var(--line);padding-top:26px}
     }
@@ -144,7 +156,7 @@
       .hero-copy{padding-left:20px;padding-right:20px}.hero-copy h1{font-size:3.55rem}.hero-photo{min-height:430px}
       .about-grid{grid-template-columns:1fr}.about-photo{padding:24px 0}.about-copy{border:0;border-top:1px solid var(--line);padding:28px 0}.focus{padding:28px 0}.focus-grid{grid-template-columns:repeat(2,1fr)}
       .life-grid{grid-template-columns:1fr 1fr}.life-card{aspect-ratio:1/1.08}
-      .work,.governance,.speaking,.recent{padding:58px 0}.section-head{gap:24px}.gov-grid{gap:24px}
+      .work,.governance,.speaking,.recent,.moments{padding:58px 0}.moments-grid{grid-template-columns:1fr}.moment{min-height:360px}.section-head{gap:24px}.gov-grid{gap:24px}
       .record-item{grid-template-columns:1fr;gap:8px}.record-proof{grid-column:1}
       .gov-row{grid-template-columns:1fr;gap:10px}.speaking-copy{padding:34px 26px}.speaking-copy h2{font-size:2.55rem}
       .footer-inner{flex-direction:column;align-items:flex-start}
@@ -194,8 +206,8 @@
       <div class="wrap about-grid">
         <div class="about-photo">
           <img
-            src="https://avatars.githubusercontent.com/u/331153227?v=4"
-            alt="Portrait of Irving Washington">
+            src="https://bsu-wpe-blogs.s3.amazonaws.com/wp-content/uploads/sites/23/2023/05/22141936/washington-e1684779612653.jpg"
+            alt="Irving Washington, Ball State Hall of Beneficence honoree">
         </div>
         <div class="about-copy">
           <div class="eyebrow">About</div>
@@ -236,6 +248,36 @@
       <div class="life-card"><div class="placeholder">Photo slot<br>Fitness</div><span class="shade"></span><span class="label">Fitness</span></div>
       <div class="life-card"><div class="placeholder">Photo slot<br>Food</div><span class="shade"></span><span class="label">Food</span></div>
       <div class="life-card"><div class="placeholder">Photo slot<br>Family</div><span class="shade"></span><span class="label">Family</span></div>
+    </section>
+
+    <section class="moments" aria-label="Selected public photographs">
+      <div class="wrap">
+        <div class="moments-head">
+          <div>
+            <div class="eyebrow">Selected moments</div>
+            <h2>Somewhere between the bio and real life.</h2>
+          </div>
+          <p>A few public photographs from different chapters of the work. For the finished site, I’ll replace or supplement these with images Irving owns outright.</p>
+        </div>
+      </div>
+      <div class="moments-grid">
+        <a class="moment" href="https://whyy.org/articles/black-men-media-summit/" target="_blank" rel="noreferrer">
+          <img src="https://whyy.org/wp-content/uploads/2025/06/WHYYNewsSarahGloverBlackMeninMedia-768x695.jpeg" alt="Irving Washington in conversation at WHYY's Black Men in Media Summit">
+          <div class="moment-copy"><b>In conversation</b><span>WHYY · 2025</span></div>
+        </a>
+        <a class="moment" href="https://theajp.org/jim-brady-joins-the-american-journalism-projects-board-of-directors-irving-washington-named-chair/" target="_blank" rel="noreferrer">
+          <img src="https://theajp.org/wp-content/uploads/2025/11/LinkedIn-Small-Headshot-e1742850810682.jpg" alt="Irving Washington, American Journalism Project board chair">
+          <div class="moment-copy"><b>Board leadership</b><span>American Journalism Project</span></div>
+        </a>
+        <a class="moment" href="https://blogs.bsu.edu/ccim/2023/05/19/2023-hall-of-beneficence-award-winners-announced/" target="_blank" rel="noreferrer">
+          <img src="https://bsu-wpe-blogs.s3.amazonaws.com/wp-content/uploads/sites/23/2023/05/22141936/washington-e1684779612653.jpg" alt="Irving Washington, Ball State Hall of Beneficence honoree">
+          <div class="moment-copy"><b>Back at Ball State</b><span>Alumni recognition · 2023</span></div>
+        </a>
+        <a class="moment" href="https://www.ted.com/talks/irving_washington_authentic_leadership_for_the_future" target="_blank" rel="noreferrer">
+          <img src="https://talkstar-photos.s3.amazonaws.com/uploads/ab7eab2e-1547-43ec-b995-a9d9ca13b437/maxresdefault.jpg" alt="Irving Washington speaking on a TED stage">
+          <div class="moment-copy"><b>On stage</b><span>Authentic Leadership for the Future</span></div>
+        </a>
+      </div>
     </section>
 
     <section class="work" id="work">
