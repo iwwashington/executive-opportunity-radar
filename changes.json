@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-19T06:41:48.620945+00:00",
+  "generated_at": "2026-09-19T06:55:07.681031+00:00",
   "events": [
     {
       "at": "2026-09-19T06:41:48.620945+00:00",
@@ -2296,6 +2296,424 @@
           "to": "On-site / unspecified"
         }
       }
+    },
+    {
+      "at": "2026-09-19T06:55:07.681031+00:00",
+      "type": "closed",
+      "job_id": "3c34bdade7548b2a",
+      "source": "Aspen Leadership Group",
+      "title": "Executive Director",
+      "organization": "Symphony Tacoma"
+    },
+    {
+      "at": "2026-09-19T06:55:07.681031+00:00",
+      "type": "closed",
+      "job_id": "13960370364997a2",
+      "source": "Aspen Leadership Group",
+      "title": "Chief Executive Officer",
+      "organization": "Savannah Philharmonic"
+    },
+    {
+      "at": "2026-09-19T06:55:07.681031+00:00",
+      "type": "closed",
+      "job_id": "3596aac49d443191",
+      "source": "Aspen Leadership Group",
+      "title": "Executive Director",
+      "organization": "Portland Baroque Orchestra"
+    },
+    {
+      "at": "2026-09-19T06:55:07.681031+00:00",
+      "type": "closed",
+      "job_id": "88e2c33ed742973d",
+      "source": "Aspen Leadership Group",
+      "title": "Executive Director",
+      "organization": "Great Basin Water Network"
+    },
+    {
+      "at": "2026-09-19T06:55:07.681031+00:00",
+      "type": "closed",
+      "job_id": "3aca58b5c90dcc25",
+      "source": "PBR Executive Search",
+      "title": "Chief Executive Officer",
+      "organization": "New York Transit Museum"
+    },
+    {
+      "at": "2026-09-19T06:55:07.681031+00:00",
+      "type": "closed",
+      "job_id": "b22e3d6d0a6b5d77",
+      "source": "BoardWalk Consulting",
+      "title": "Chief Executive Officer",
+      "organization": "The Colorado Health Foundation"
+    },
+    {
+      "at": "2026-09-19T06:55:07.681031+00:00",
+      "type": "closed",
+      "job_id": "7827ce5815b2354f",
+      "source": "Bridge Partners",
+      "title": "Executive Director",
+      "organization": "Community Foundation of South Jersey"
+    },
+    {
+      "at": "2026-09-19T06:55:07.681031+00:00",
+      "type": "updated",
+      "job_id": "2927463d94d4b795",
+      "source": "Scion Executive Search",
+      "title": "Executive Director",
+      "organization": "Health Affairs Publishing",
+      "changes": {
+        "work_arrangement": {
+          "from": "Hybrid",
+          "to": "On-site / unspecified"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T06:55:07.681031+00:00",
+      "type": "updated",
+      "job_id": "68edc02998881b46",
+      "source": "Scion Executive Search",
+      "title": "Interim Executive Director",
+      "organization": "Location:",
+      "changes": {
+        "work_arrangement": {
+          "from": "Remote",
+          "to": "On-site / unspecified"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T06:55:07.681031+00:00",
+      "type": "closed",
+      "job_id": "ebf3efa5db23b41c",
+      "source": "Scion Executive Search",
+      "title": "Chief Executive Officer",
+      "organization": "Great Plains Institute"
+    },
+    {
+      "at": "2026-09-19T06:55:07.681031+00:00",
+      "type": "closed",
+      "job_id": "d00ce9cc27972e03",
+      "source": "Lindauer",
+      "title": "Executive Director",
+      "organization": "LISC LA"
+    },
+    {
+      "at": "2026-09-19T06:55:07.681031+00:00",
+      "type": "closed",
+      "job_id": "462606925fc5a436",
+      "source": "Lindauer",
+      "title": "Executive Director",
+      "organization": "Boston Children’s Chorus"
+    },
+    {
+      "at": "2026-09-19T06:55:07.681031+00:00",
+      "type": "closed",
+      "job_id": "65a722ffca1140a5",
+      "source": "Lindauer",
+      "title": "Executive Director",
+      "organization": "Access Opportunity"
+    },
+    {
+      "at": "2026-09-19T06:55:07.681031+00:00",
+      "type": "closed",
+      "job_id": "5522103436e7d2d0",
+      "source": "Korn Ferry Search Jobs",
+      "title": "Chief Executive Officer",
+      "organization": "Immigrant Justice Corps"
+    },
+    {
+      "at": "2026-09-19T06:55:07.681031+00:00",
+      "type": "updated",
+      "job_id": "bdb4fab450cecd43",
+      "source": "Kittleman Associates",
+      "title": "President and CEO",
+      "organization": "Viability, Inc.",
+      "changes": {
+        "organization": {
+          "from": "Mid-Ohio Food Collective",
+          "to": "Viability, Inc."
+        },
+        "location": {
+          "from": "Grove City, OH",
+          "to": "Springfield, MA"
+        },
+        "url": {
+          "from": "https://www.kittlemansearch.com/opportunities/president-ceo-mid-ohio-food-collective",
+          "to": "https://www.kittlemansearch.com/opportunities/president-ceo-viability"
+        },
+        "posted_date": {
+          "from": "2026-09-10",
+          "to": "2026-09-16"
+        },
+        "sector": {
+          "from": "Health",
+          "to": "Philanthropy"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T06:55:07.681031+00:00",
+      "type": "updated",
+      "job_id": "bdb4fab450cecd43",
+      "source": "Kittleman Associates",
+      "title": "President and CEO",
+      "organization": "Schoodic Institute at Acadia National Park",
+      "changes": {
+        "organization": {
+          "from": "Mid-Ohio Food Collective",
+          "to": "Schoodic Institute at Acadia National Park"
+        },
+        "location": {
+          "from": "Grove City, OH",
+          "to": "Winter Harbor, ME"
+        },
+        "url": {
+          "from": "https://www.kittlemansearch.com/opportunities/president-ceo-mid-ohio-food-collective",
+          "to": "https://www.kittlemansearch.com/opportunities/president-ceo-schoodic-institute"
+        },
+        "posted_date": {
+          "from": "2026-09-10",
+          "to": "2026-09-14"
+        },
+        "sector": {
+          "from": "Health",
+          "to": "Philanthropy"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T06:55:07.681031+00:00",
+      "type": "updated",
+      "job_id": "8036fffc6de66e8a",
+      "source": "The Batten Group",
+      "title": "Executive Director",
+      "organization": "Nonprofit Development & Fundraising Talent",
+      "changes": {
+        "organization": {
+          "from": "McLean, Virginia, USA",
+          "to": "Nonprofit Development & Fundraising Talent"
+        },
+        "location": {
+          "from": "Full Time, Hybrid",
+          "to": "Hybrid"
+        },
+        "url": {
+          "from": "https://thebattengroup.com/jobs/executive-director-3593439/",
+          "to": "https://thebattengroup.com/jobs/#content"
+        },
+        "sector": {
+          "from": "Health",
+          "to": "Philanthropy"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T06:55:07.681031+00:00",
+      "type": "updated",
+      "job_id": "8036fffc6de66e8a",
+      "source": "The Batten Group",
+      "title": "Executive Director",
+      "organization": "Charlotte, North Carolina, USA",
+      "changes": {
+        "organization": {
+          "from": "McLean, Virginia, USA",
+          "to": "Charlotte, North Carolina, USA"
+        },
+        "location": {
+          "from": "Full Time, Hybrid",
+          "to": "Hybrid"
+        },
+        "url": {
+          "from": "https://thebattengroup.com/jobs/executive-director-3593439/",
+          "to": "https://thebattengroup.com/jobs/executive-director-3659418/"
+        },
+        "posted_date": {
+          "from": "2026-05-05",
+          "to": "2026-08-25"
+        },
+        "compensation_text": {
+          "from": "on McLean, Virginia, USA Salary $149k/year - 165k/year Job Type Full Time, Hybrid Posted May 5, 2026 About National Kidney Foundation Fuele",
+          "to": "ensation The Executive Director will receive an annual base salary of $90,000 - $100,000 and will be eligible for a performance-based bonus of up to 30% of base salary, tied to e"
+        },
+        "compensation_min": {
+          "from": 65000,
+          "to": 90000
+        },
+        "compensation_max": {
+          "from": 65000,
+          "to": 100000
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T06:55:07.681031+00:00",
+      "type": "updated",
+      "job_id": "49c7bc19349cb51f",
+      "source": "LeaderFit",
+      "title": "Executive Director",
+      "organization": "Active Search",
+      "changes": {
+        "work_arrangement": {
+          "from": "Remote",
+          "to": "On-site / unspecified"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T06:55:07.681031+00:00",
+      "type": "updated",
+      "job_id": "f97a9ce4a62f6b8a",
+      "source": "LeaderFit",
+      "title": "Executive Director (Part-Time)",
+      "organization": "Active Search",
+      "changes": {
+        "work_arrangement": {
+          "from": "Remote",
+          "to": "On-site / unspecified"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T06:55:07.681031+00:00",
+      "type": "updated",
+      "job_id": "4153453dfa2e6819",
+      "source": "DRG Talent",
+      "title": "Chief Executive Officer",
+      "organization": "JFS Cincinnati",
+      "changes": {
+        "work_arrangement": {
+          "from": "Hybrid",
+          "to": "On-site / unspecified"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T06:55:07.681031+00:00",
+      "type": "updated",
+      "job_id": "1a284673ef197f80",
+      "source": "DRG Talent",
+      "title": "Chief Executive Officer",
+      "organization": "Camp Tawonga",
+      "changes": {
+        "work_arrangement": {
+          "from": "Hybrid",
+          "to": "On-site / unspecified"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T06:55:07.681031+00:00",
+      "type": "updated",
+      "job_id": "b14f96d79ec259dd",
+      "source": "DRG Talent",
+      "title": "Executive Director",
+      "organization": "Jewish Council on Urban Affairs",
+      "changes": {
+        "work_arrangement": {
+          "from": "Remote",
+          "to": "Unknown"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T06:55:07.681031+00:00",
+      "type": "updated",
+      "job_id": "18f3a23825bdff3b",
+      "source": "The Moran Company",
+      "title": "Executive Director",
+      "organization": "Association Leadership",
+      "changes": {
+        "organization": {
+          "from": "The Arc Connecticut",
+          "to": "Association Leadership"
+        },
+        "location": {
+          "from": "Canton Center, CT / remote",
+          "to": "Founded on the Clubhouse model of psycho-social rehabilitation, IC"
+        },
+        "url": {
+          "from": "https://morancompany.com/current-searches/",
+          "to": "https://morancompany.com/current-searches/#fl-main-content"
+        },
+        "sector": {
+          "from": "Unclassified",
+          "to": "Health"
+        },
+        "work_arrangement": {
+          "from": "Remote",
+          "to": "On-site / unspecified"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T06:55:07.681031+00:00",
+      "type": "new",
+      "job_id": "975d67cf4134bb4e",
+      "source": "The Moran Company",
+      "title": "Executive Director",
+      "organization": "(opens in new tab)"
+    },
+    {
+      "at": "2026-09-19T06:55:07.681031+00:00",
+      "type": "new",
+      "job_id": "3d82be695340fef5",
+      "source": "The Moran Company",
+      "title": "Chief Executive Officer",
+      "organization": "See Full Position Profile"
+    },
+    {
+      "at": "2026-09-19T06:55:07.681031+00:00",
+      "type": "new",
+      "job_id": "bbc35acef76957b1",
+      "source": "The Moran Company",
+      "title": "President & CEO",
+      "organization": "(opens in new tab)"
+    },
+    {
+      "at": "2026-09-19T06:55:07.681031+00:00",
+      "type": "new",
+      "job_id": "4238b968bf6a2ce6",
+      "source": "The Moran Company",
+      "title": "President",
+      "organization": "(opens in new tab)"
+    },
+    {
+      "at": "2026-09-19T06:55:07.681031+00:00",
+      "type": "updated",
+      "job_id": "66ec336dff3720ca",
+      "source": "Sandler Search",
+      "title": "Executive Director New York",
+      "organization": "NY Preferred",
+      "changes": {
+        "work_arrangement": {
+          "from": "Remote",
+          "to": "Hybrid"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T06:55:07.681031+00:00",
+      "type": "closed",
+      "job_id": "2707737e03f5a105",
+      "source": "Sandler Search",
+      "title": "Executive Director",
+      "organization": "RootOne"
+    },
+    {
+      "at": "2026-09-19T06:55:07.681031+00:00",
+      "type": "closed",
+      "job_id": "770fd2cbbc5441d4",
+      "source": "Spano Pratt",
+      "title": "Executive Director",
+      "organization": "The West Foundation"
+    },
+    {
+      "at": "2026-09-19T06:55:07.681031+00:00",
+      "type": "closed",
+      "job_id": "f3ac4c6a6084a73e",
+      "source": "Spano Pratt",
+      "title": "Chief Executive Officer",
+      "organization": "Emergency Nurses Association"
     }
   ]
 }
