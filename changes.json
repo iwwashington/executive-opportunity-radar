@@ -1,4 +1,2301 @@
 {
-  "generated_at": "2026-09-19T05:58:00+00:00",
-  "events": []
+  "generated_at": "2026-09-19T06:41:48.620945+00:00",
+  "events": [
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "01f7e5b62a1556c9",
+      "source": "Odgers",
+      "title": "Board + CEO Services",
+      "organization": "Executive Search"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "8acafe2849539bf8",
+      "source": "Odgers",
+      "title": "Board + CEO Advisory",
+      "organization": "Board Succession"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "796884e96850deb9",
+      "source": "Odgers",
+      "title": "Explore Board + CEO Services",
+      "organization": "Capstone"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "5d9d9e8f2271483c",
+      "source": "Odgers",
+      "title": "CEO",
+      "organization": "Board, Chair & NED"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "updated",
+      "job_id": "dfae6a784f47fae6",
+      "source": "Odgers",
+      "title": "Chief Executive Officer",
+      "organization": "Universal Service Administrative Company (USAC)",
+      "changes": {
+        "url": {
+          "from": "https://www.odgers.com/en-us/opportunities/",
+          "to": "https://www.odgers.com/en-us/about-us/candidate-charter/"
+        },
+        "sector": {
+          "from": "Unclassified",
+          "to": "Philanthropy"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "353cf0f832ee2e0a",
+      "source": "Odgers",
+      "title": "CEO",
+      "organization": "Board Chair & Directors"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "updated",
+      "job_id": "4fedffb8a71af110",
+      "source": "Aspen Leadership Group",
+      "title": "Chief Executive Officer",
+      "organization": "Indianapolis Symphony Orchestra",
+      "changes": {
+        "location": {
+          "from": "Indianapolis, IN",
+          "to": "Columbia, MD"
+        },
+        "url": {
+          "from": "https://opportunities.aspenleadershipgroup.com/",
+          "to": "https://opportunities.aspenleadershipgroup.com/opportunities/8474"
+        },
+        "sector": {
+          "from": "Unclassified",
+          "to": "Philanthropy"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "updated",
+      "job_id": "8bd24074a0e2375a",
+      "source": "Aspen Leadership Group",
+      "title": "Executive Director",
+      "organization": "Pelham Art Center",
+      "changes": {
+        "location": {
+          "from": "Village of Pelham, NY",
+          "to": "Columbia, MD"
+        },
+        "url": {
+          "from": "https://opportunities.aspenleadershipgroup.com/",
+          "to": "https://opportunities.aspenleadershipgroup.com/opportunities/8870"
+        },
+        "sector": {
+          "from": "Unclassified",
+          "to": "Philanthropy"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "updated",
+      "job_id": "86bbc2923bfd7d49",
+      "source": "Aspen Leadership Group",
+      "title": "Executive Director",
+      "organization": "Capital Area Housing Partnership",
+      "changes": {
+        "location": {
+          "from": "Lansing, MI",
+          "to": "Duvall, WA"
+        },
+        "url": {
+          "from": "https://opportunities.aspenleadershipgroup.com/",
+          "to": "https://opportunities.aspenleadershipgroup.com/opportunities/9035"
+        },
+        "sector": {
+          "from": "Unclassified",
+          "to": "Philanthropy"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "updated",
+      "job_id": "c0de870c95052a8d",
+      "source": "Aspen Leadership Group",
+      "title": "Executive Director",
+      "organization": "Ronald McDonald House Los Angeles",
+      "changes": {
+        "location": {
+          "from": "Los Angeles, CA",
+          "to": "Duvall, WA"
+        },
+        "url": {
+          "from": "https://opportunities.aspenleadershipgroup.com/",
+          "to": "https://opportunities.aspenleadershipgroup.com/opportunities/8837"
+        },
+        "sector": {
+          "from": "Unclassified",
+          "to": "Health"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "updated",
+      "job_id": "7c8727910769bca9",
+      "source": "Aspen Leadership Group",
+      "title": "Executive Director",
+      "organization": "Endless Frontiers",
+      "changes": {
+        "url": {
+          "from": "https://opportunities.aspenleadershipgroup.com/",
+          "to": "https://opportunities.aspenleadershipgroup.com/opportunities/9200"
+        },
+        "sector": {
+          "from": "Unclassified",
+          "to": "Philanthropy"
+        },
+        "work_arrangement": {
+          "from": "Unknown",
+          "to": "On-site / unspecified"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "updated",
+      "job_id": "3a1d9aefe35149a8",
+      "source": "Aspen Leadership Group",
+      "title": "President & CEO",
+      "organization": "Fetzer Institute",
+      "changes": {
+        "location": {
+          "from": "Kalamazoo, MI",
+          "to": "Washington, DC"
+        },
+        "url": {
+          "from": "https://opportunities.aspenleadershipgroup.com/",
+          "to": "https://opportunities.aspenleadershipgroup.com/opportunities/6560"
+        },
+        "sector": {
+          "from": "Unclassified",
+          "to": "Philanthropy"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "updated",
+      "job_id": "130558212f1c261e",
+      "source": "Aspen Leadership Group",
+      "title": "President",
+      "organization": "Fetzer Institute",
+      "changes": {
+        "organization": {
+          "from": "William Davidson Institute",
+          "to": "Fetzer Institute"
+        },
+        "location": {
+          "from": "Ann Arbor, MI",
+          "to": "Washington, DC"
+        },
+        "url": {
+          "from": "https://opportunities.aspenleadershipgroup.com/",
+          "to": "https://opportunities.aspenleadershipgroup.com/opportunities/9068"
+        },
+        "sector": {
+          "from": "Unclassified",
+          "to": "Philanthropy"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "updated",
+      "job_id": "6ab1748ee533b824",
+      "source": "PBR Executive Search",
+      "title": "Chief Executive Officer",
+      "organization": "Greenwich House",
+      "changes": {
+        "location": {
+          "from": "New York, NY",
+          "to": "(Remote; New York, NY/Tri-State area or Washington, DC preferred)"
+        },
+        "url": {
+          "from": "https://www.pbrsearch.com/active-searches/",
+          "to": "https://www.pbrsearch.com/wps/wp-content/uploads/2026/07/BCOCEO.pdf"
+        },
+        "sector": {
+          "from": "Unclassified",
+          "to": "Philanthropy"
+        },
+        "work_arrangement": {
+          "from": "On-site / unspecified",
+          "to": "Remote"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "updated",
+      "job_id": "a63e7ba330bd187c",
+      "source": "PBR Executive Search",
+      "title": "Executive Director",
+      "organization": "Studio Museum in Harlem",
+      "changes": {
+        "location": {
+          "from": "New York, NY",
+          "to": "(Remote; New York, NY/Tri-State area or Washington, DC preferred)"
+        },
+        "url": {
+          "from": "https://www.pbrsearch.com/active-searches/",
+          "to": "https://www.pbrsearch.com/wps/wp-content/uploads/2026/06/NYTMED.pdf"
+        },
+        "sector": {
+          "from": "Unclassified",
+          "to": "Philanthropy"
+        },
+        "work_arrangement": {
+          "from": "On-site / unspecified",
+          "to": "Remote"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "updated",
+      "job_id": "acf48ae0f359e233",
+      "source": "BoardWalk Consulting",
+      "title": "Executive Director",
+      "organization": "Florida Rights Restoration Coalition",
+      "changes": {
+        "location": {
+          "from": "Florida",
+          "to": "Atlanta, GA"
+        },
+        "url": {
+          "from": "https://boardwalkconsulting.com/opportunities/",
+          "to": "https://boardwalkconsulting.com/jobs/frrc-executive-director/"
+        },
+        "sector": {
+          "from": "Unclassified",
+          "to": "Civic / Public"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "updated",
+      "job_id": "b31f942adf5dca3b",
+      "source": "BoardWalk Consulting",
+      "title": "Executive Director",
+      "organization": "Gateway Early Childhood Alliance",
+      "changes": {
+        "url": {
+          "from": "https://boardwalkconsulting.com/opportunities/",
+          "to": "https://boardwalkconsulting.com/jobs/gateway-early-childhood-alliance/"
+        },
+        "sector": {
+          "from": "Unclassified",
+          "to": "Education"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "e39688bc3548ed3e",
+      "source": "BoardWalk Consulting",
+      "title": "CEO",
+      "organization": "The Colorado Health Foundation"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "updated",
+      "job_id": "dfcd1a39e5a39154",
+      "source": "BoardWalk Consulting",
+      "title": "President & CEO",
+      "organization": "Community Foundation for Greater Atlanta",
+      "changes": {
+        "url": {
+          "from": "https://boardwalkconsulting.com/opportunities/",
+          "to": "https://boardwalkconsulting.com/jobs/cfga-ceo/"
+        },
+        "posted_date": {
+          "from": "2026-07-19",
+          "to": "2026-07-21"
+        },
+        "sector": {
+          "from": "Unclassified",
+          "to": "Philanthropy"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "updated",
+      "job_id": "02c92a3fb8587a5a",
+      "source": "BoardWalk Consulting",
+      "title": "President & CEO",
+      "organization": "North Carolina Community Foundation",
+      "changes": {
+        "url": {
+          "from": "https://boardwalkconsulting.com/opportunities/",
+          "to": "https://boardwalkconsulting.com/jobs/president-ceo/"
+        },
+        "posted_date": {
+          "from": "2026-06-19",
+          "to": "2026-06-21"
+        },
+        "sector": {
+          "from": "Unclassified",
+          "to": "Philanthropy"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "updated",
+      "job_id": "9bc079973dda6ba0",
+      "source": "BoardWalk Consulting",
+      "title": "Chief Executive Officer",
+      "organization": "The Greenville Housing Authority",
+      "changes": {
+        "url": {
+          "from": "https://boardwalkconsulting.com/opportunities/",
+          "to": "https://boardwalkconsulting.com/jobs/tgha-ceo/"
+        },
+        "posted_date": {
+          "from": "2026-05-19",
+          "to": "2026-05-22"
+        },
+        "sector": {
+          "from": "Unclassified",
+          "to": "Human Services"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "updated",
+      "job_id": "e2e14dc19e50a789",
+      "source": "BoardWalk Consulting",
+      "title": "President & CEO",
+      "organization": "Downtown Atlanta Inc.",
+      "changes": {
+        "url": {
+          "from": "https://boardwalkconsulting.com/opportunities/",
+          "to": "https://boardwalkconsulting.com/jobs/downtown-atlanta-inc/"
+        },
+        "posted_date": {
+          "from": "2026-05-19",
+          "to": "2026-05-22"
+        },
+        "sector": {
+          "from": "Unclassified",
+          "to": "Civic / Public"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "updated",
+      "job_id": "2007bb09370d8128",
+      "source": "BoardWalk Consulting",
+      "title": "Executive Director",
+      "organization": "Pete M. Hanna Charitable Foundation",
+      "changes": {
+        "url": {
+          "from": "https://boardwalkconsulting.com/opportunities/",
+          "to": "https://boardwalkconsulting.com/jobs/pmhcf-executive-director/"
+        },
+        "posted_date": {
+          "from": "2026-05-19",
+          "to": "2026-05-22"
+        },
+        "sector": {
+          "from": "Unclassified",
+          "to": "Philanthropy"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "updated",
+      "job_id": "70879d341e410a6b",
+      "source": "BoardWalk Consulting",
+      "title": "Executive Director",
+      "organization": "Atlanta Ballet",
+      "changes": {
+        "url": {
+          "from": "https://boardwalkconsulting.com/opportunities/",
+          "to": "https://boardwalkconsulting.com/jobs/atlanta-ballet-executive-director/"
+        },
+        "posted_date": {
+          "from": "2026-04-19",
+          "to": "2026-04-22"
+        },
+        "sector": {
+          "from": "Unclassified",
+          "to": "Philanthropy"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "62e62841416b764c",
+      "source": "Bridge Partners",
+      "title": "CEO and Executive Director",
+      "organization": "Functional Expertise"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "updated",
+      "job_id": "01b6e7a8382fc43c",
+      "source": "Bridge Partners",
+      "title": "Executive Director",
+      "organization": "HUDSON RIVER PARK FRIENDS",
+      "changes": {
+        "organization": {
+          "from": "Hudson River Park Friends",
+          "to": "HUDSON RIVER PARK FRIENDS"
+        },
+        "url": {
+          "from": "https://bridgepartnersllc.com/searches/",
+          "to": "https://bridgepartnersllc.com/wp-content/uploads/2026/09/Hudson-River-Park-Friends-ED-position-description.pdf"
+        },
+        "sector": {
+          "from": "Unclassified",
+          "to": "Philanthropy"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "updated",
+      "job_id": "7bfd9809148456cd",
+      "source": "Bridge Partners",
+      "title": "Chief Executive Officer",
+      "organization": "XIENTE",
+      "changes": {
+        "organization": {
+          "from": "Xiente",
+          "to": "XIENTE"
+        },
+        "url": {
+          "from": "https://bridgepartnersllc.com/searches/",
+          "to": "https://bridgepartnersllc.com/wp-content/uploads/2026/09/Xiente-CEO-PD-9.1-1.pdf"
+        },
+        "sector": {
+          "from": "Unclassified",
+          "to": "Philanthropy"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "5341a1090ab43814",
+      "source": "Scion Executive Search",
+      "title": "Chief Executive Officer (CEO)",
+      "organization": "C-Suite Specialties"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "e51dbbcc28cc6b74",
+      "source": "Scion Executive Search",
+      "title": "Executive Director (ED)",
+      "organization": "Chief Financial Officer (CFO)"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "acd12b98c7e10a51",
+      "source": "Scion Executive Search",
+      "title": "Interim CEO",
+      "organization": "Location:"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "2927463d94d4b795",
+      "source": "Scion Executive Search",
+      "title": "Executive Director",
+      "organization": "Health Affairs Publishing"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "01ffeb85a0e24b02",
+      "source": "Scion Executive Search",
+      "title": "Executive Director",
+      "organization": "Location:"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "68edc02998881b46",
+      "source": "Scion Executive Search",
+      "title": "Interim Executive Director",
+      "organization": "Location:"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "updated",
+      "job_id": "1ae253d1667bd31d",
+      "source": "Scion Executive Search",
+      "title": "Chief Executive Officer",
+      "organization": "Location:",
+      "changes": {
+        "organization": {
+          "from": "Vayu Health",
+          "to": "Location:"
+        },
+        "location": {
+          "from": "Menlo Park, CA / remote eligible",
+          "to": "Milpitas, CA"
+        },
+        "sector": {
+          "from": "Unclassified",
+          "to": "Health"
+        },
+        "work_arrangement": {
+          "from": "Remote",
+          "to": "On-site / unspecified"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "4ab2e84d73594bee",
+      "source": "Scion Executive Search",
+      "title": "Senior Executive Director",
+      "organization": "Location:"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "78cfe8ee0e7a298e",
+      "source": "Isaacson, Miller",
+      "title": "Harris-Pratt Executive Director",
+      "organization": "AI Institute"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "2346d7265c206b97",
+      "source": "Isaacson, Miller",
+      "title": "President/Executive Director",
+      "organization": "Human Resources"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "b180e4e1a73afda9",
+      "source": "Isaacson, Miller",
+      "title": "Science, Technology, + Society Harris-Pratt Executive Director, AI Institute Rochester Institute of Technology",
+      "organization": "Higher Education"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "24d2f6e4b4b7b768",
+      "source": "Lindauer",
+      "title": "CEO Search",
+      "organization": "Search Process"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "1b0c3783b9d866cf",
+      "source": "Lindauer",
+      "title": "Executive Director",
+      "organization": "Community Impact"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "updated",
+      "job_id": "d7ba9d782af0ea73",
+      "source": "Lindauer",
+      "title": "President",
+      "organization": "Advocacy + Public Policy",
+      "changes": {
+        "organization": {
+          "from": "American Printing House for the Blind",
+          "to": "Advocacy + Public Policy"
+        },
+        "location": {
+          "from": "Louisville, KY",
+          "to": "Onsite"
+        },
+        "url": {
+          "from": "https://www.lindauerglobal.com/searches/open-searches/",
+          "to": "https://www.lindauerglobal.com/searches/open-searches/president-american-printing-house-blind/"
+        },
+        "sector": {
+          "from": "Unclassified",
+          "to": "Health"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "46186819ac48e195",
+      "source": "Lindauer",
+      "title": "Executive Director",
+      "organization": "Bertarelli Institute for Family Entrepreneurship"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "c598c234babcdecb",
+      "source": "Lindauer",
+      "title": "Executive Director",
+      "organization": "Arts + Culture"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "updated",
+      "job_id": "248242a393f070b0",
+      "source": "Lindauer",
+      "title": "Chief Executive Officer",
+      "organization": "Healthcare + Academic Medicine",
+      "changes": {
+        "organization": {
+          "from": "Ronald McDonald House Charities of Western Washington & Alaska",
+          "to": "Healthcare + Academic Medicine"
+        },
+        "location": {
+          "from": "Seattle, WA",
+          "to": "Onsite"
+        },
+        "url": {
+          "from": "https://www.lindauerglobal.com/searches/open-searches/",
+          "to": "https://www.lindauerglobal.com/searches/open-searches/chief-executive-officer-center-human-development/"
+        },
+        "sector": {
+          "from": "Unclassified",
+          "to": "Health"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "e17dced85b6e05d8",
+      "source": "Lindauer",
+      "title": "Vice President of External Affairs and Executive Director",
+      "organization": "Lee College Foundation"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "66526004e3303581",
+      "source": "Lindauer",
+      "title": "Executive Director and Chief Operating Officer",
+      "organization": "Higher Education"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "1ceb270d47037e05",
+      "source": "Korn Ferry Search Jobs",
+      "title": "CEO Washington DC Sep 14",
+      "organization": "2026"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "43579e97226c812f",
+      "source": "Korn Ferry Search Jobs",
+      "title": "Thrive Scholars- Chief Executive Officer Open Sep 11",
+      "organization": "2026"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "716118a23e93ec02",
+      "source": "DSG Global",
+      "title": "ACC Senior Services President/Chief Executive Officer Sacramento",
+      "organization": "CA"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "06c626d7c0514e0c",
+      "source": "DSG Global",
+      "title": "Aeris Insight Chief Executive Officer Remote",
+      "organization": "Organization not parsed"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "adf413b565e4f8a8",
+      "source": "DSG Global",
+      "title": "Albany International Airport CEO Albany",
+      "organization": "NY"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "69dbce135cc7f43b",
+      "source": "DSG Global",
+      "title": "American Board of Surgery (ABS) President and CEO Remote or Philadelphia",
+      "organization": "PA"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "536b86ff57d3919f",
+      "source": "DSG Global",
+      "title": "Aspiranet CEO South San Francisco",
+      "organization": "CA"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "ca3589a2797cfd3c",
+      "source": "DSG Global",
+      "title": "Inc. President and CEO Washington, DC",
+      "organization": "Association for the Accreditation of Human Research Protection Programs"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "0f0262f9065a4bfd",
+      "source": "DSG Global",
+      "title": "Big Brothers Big Sisters Independence Chief Executive Officer Philadelphia",
+      "organization": "PA"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "e97f355188eff92a",
+      "source": "DSG Global",
+      "title": "Boston Children's Museum President and CEO Boston",
+      "organization": "MA"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "98be0b0eb5489a7f",
+      "source": "DSG Global",
+      "title": "California Virtual Academies Executive Director",
+      "organization": "Human Resources Simi Valley, CA"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "fda4e35bd97052c5",
+      "source": "DSG Global",
+      "title": "Calyx Institute Executive Director Location Flexible",
+      "organization": "US based"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "39ae87f89fd7627e",
+      "source": "DSG Global",
+      "title": "Center Against Rape and Domestic Violence Executive Director Corvallis",
+      "organization": "OR"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "f2b128b3f2d9f7c9",
+      "source": "DSG Global",
+      "title": "Centering Healthcare Institute Chief Executive Officer Remote",
+      "organization": "Organization not parsed"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "d0bbbe238c4d4b86",
+      "source": "DSG Global",
+      "title": "Communities Resist Executive Director Brooklyn",
+      "organization": "NY"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "79fd34ebdd6a0500",
+      "source": "DSG Global",
+      "title": "Community Health Care (Tacoma) Chief Executive Officer Tacoma",
+      "organization": "WA"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "46bb81a96616ef25",
+      "source": "DSG Global",
+      "title": "Counseling and Support Services for Youth (CASSY) Executive Director Milpitas",
+      "organization": "CA"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "180d40c99aa3433b",
+      "source": "DSG Global",
+      "title": "DataKind Chief Executive Officer Remote within the US",
+      "organization": "Organization not parsed"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "45b67245d44b4724",
+      "source": "DSG Global",
+      "title": "Downtown United Soccer Club Executive Director New York",
+      "organization": "NY"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "1a65257015f49dbf",
+      "source": "DSG Global",
+      "title": "DreamYard Project Executive Director Bronx",
+      "organization": "NY"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "cf8ed9fa4f7707fc",
+      "source": "DSG Global",
+      "title": "Escoffier Scholarship Foundation Executive Director Remote",
+      "organization": "Organization not parsed"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "910e9d69a8b65cf2",
+      "source": "DSG Global",
+      "title": "Inc. President & CEO Cleveland, OH",
+      "organization": "Esperanza"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "77f71d8c619a0ca1",
+      "source": "DSG Global",
+      "title": "Essex County Habitat for Humanity Executive Director Danvers",
+      "organization": "MA"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "1df67fd09be4b769",
+      "source": "DSG Global",
+      "title": "Every Woman CEO Remote",
+      "organization": "Organization not parsed"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "04f854c03dc4446a",
+      "source": "DSG Global",
+      "title": "FamilyAid President & CEO Boston",
+      "organization": "MA"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "a9d67489d0cc2624",
+      "source": "DSG Global",
+      "title": "Fort Worth Report CEO Fort Worth",
+      "organization": "TX"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "14b9a6676b321e16",
+      "source": "DSG Global",
+      "title": "Forward Arkansas Chief Executive Officer Arkansas",
+      "organization": "Organization not parsed"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "2900c0750b7a01f6",
+      "source": "DSG Global",
+      "title": "Gilda's Club Chicago CEO Chicago",
+      "organization": "IL"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "b42af966e0a35806",
+      "source": "DSG Global",
+      "title": "GreenLight Fund Executive Director",
+      "organization": "Washington D.C. Metro Washington D.C. Metro"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "f950f6dcf7d82070",
+      "source": "DSG Global",
+      "title": "GreenLight Fund Nashville Executive Director Nashville",
+      "organization": "TN"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "cd8e2ddeeff80f73",
+      "source": "DSG Global",
+      "title": "GreenLight Fund Kansas City Executive Director Kansas City",
+      "organization": "MO"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "cbaea6350aed4273",
+      "source": "DSG Global",
+      "title": "Health Federation of Philadelphia Chief Executive Officer Philadelphia",
+      "organization": "PA"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "ef47b9fbceb603a2",
+      "source": "DSG Global",
+      "title": "Hendrix College Executive Director",
+      "organization": "Career Success Conway, AR"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "f3123cff48c6e191",
+      "source": "DSG Global",
+      "title": "Higher Ground USA Chief Executive Officer Ketchum",
+      "organization": "ID"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "d0428c6966855f95",
+      "source": "DSG Global",
+      "title": "Museum & Gardens Executive Director Washington, DC",
+      "organization": "Hillwood Estate"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "f9f84d4a0816c58b",
+      "source": "DSG Global",
+      "title": "HIPS Executive Director Washington",
+      "organization": "DC"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "332d81cfddefb79a",
+      "source": "DSG Global",
+      "title": "Homeowners of Tomorrow Alliance Executive Director Flexible with preference for Bay Area",
+      "organization": "CA or New York, NY"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "46476312810b6ade",
+      "source": "DSG Global",
+      "title": "IJ & Jeanné Wagner Jewish Community Center Chief Executive Officer Salt Lake City",
+      "organization": "UT"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "862592b1fbbda9ee",
+      "source": "DSG Global",
+      "title": "Illinois Board of Examiners Executive Director Naperville",
+      "organization": "IL"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "c2e58986134aa0b3",
+      "source": "DSG Global",
+      "title": "Iowa Public Radio Chief Executive Officer Des Moines",
+      "organization": "IA"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "fed7bc5e9bca94ef",
+      "source": "DSG Global",
+      "title": "Keiro President & CEO Los Angeles",
+      "organization": "CA"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "632ecde5efc161bd",
+      "source": "DSG Global",
+      "title": "Kin On Chief Executive Officer Seattle",
+      "organization": "WA"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "d467e89870eb6c86",
+      "source": "DSG Global",
+      "title": "La Casa de las Madres Executive Director San Francisco",
+      "organization": "CA"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "7843a1adaf6f7fc5",
+      "source": "DSG Global",
+      "title": "La Clinica de La Raza Chief Executive Officer Oakland",
+      "organization": "CA"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "5dec98bccef8922b",
+      "source": "DSG Global",
+      "title": "LightHouse for the Blind and Visually Impaired Chief Executive Officer San Francisco",
+      "organization": "CA"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "bc58056ebebe36cd",
+      "source": "DSG Global",
+      "title": "Mid-America Science Museum Chief Executive Officer Hot Springs",
+      "organization": "AR"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "8c641b590796573b",
+      "source": "DSG Global",
+      "title": "Modern Language Association of America Executive Director New York",
+      "organization": "NY"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "49f75552443c5f30",
+      "source": "DSG Global",
+      "title": "Monmouth Conservation Foundation Executive Director Monmouth County",
+      "organization": "NJ"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "f03ea33b790b03e1",
+      "source": "DSG Global",
+      "title": "National Alliance of State and Territorial AIDS Directors (NASTAD) Executive Director Washington",
+      "organization": "DC"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "74117d53f9ba6ec8",
+      "source": "DSG Global",
+      "title": "Newtrax Executive Director White Bear Lake",
+      "organization": "MN"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "2a9a8035f5c0010c",
+      "source": "DSG Global",
+      "title": "North Carolina A&T State University Executive Director for Housing and Residence Life Greensboro",
+      "organization": "NC"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "931f0e066b405e88",
+      "source": "DSG Global",
+      "title": "North Penn Legal Services Executive Director Pittston",
+      "organization": "PA"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "c1d0817c747abc35",
+      "source": "DSG Global",
+      "title": "Nuestros Pequenos Hermanos International Chief Executive Officer Flexible",
+      "organization": "Latin America-based preferred"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "f5bc4e867a71ad2c",
+      "source": "DSG Global",
+      "title": "Parnassus Preparatory School Executive Director Maple Grove",
+      "organization": "MN"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "ab71cb3af44e1692",
+      "source": "DSG Global",
+      "title": "Renewable Thermal Collaborative Chief Executive Officer Remote",
+      "organization": "Washington D.C. preferred"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "9876f9121bb468a4",
+      "source": "DSG Global",
+      "title": "SCGA Junior Golf Foundation Executive Director Studio City",
+      "organization": "CA"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "ec7b07956d0ad276",
+      "source": "DSG Global",
+      "title": "Sigler Western Museum Executive Director Wickenburg",
+      "organization": "AZ"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "632a676c24f8733e",
+      "source": "DSG Global",
+      "title": "Spur Community Foundation Executive Director Sun Valley",
+      "organization": "ID"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "ea9bc4fdfb418be8",
+      "source": "DSG Global",
+      "title": "The Alliance for Community Development Executive Director Bay Area",
+      "organization": "CA"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "47ae2d70065b92cb",
+      "source": "DSG Global",
+      "title": "The Butler Institute of American Art Executive Director Youngstown",
+      "organization": "OH"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "dc323559a8524e27",
+      "source": "DSG Global",
+      "title": "The Doctors Clinic Executive Director Silverdale",
+      "organization": "WA"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "b19059a69536f998",
+      "source": "DSG Global",
+      "title": "The Education Fund Executive Director Miami",
+      "organization": "FL"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "475953f9caa29d9a",
+      "source": "DSG Global",
+      "title": "The Joslyn Center Executive Director Palm Desert",
+      "organization": "CA"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "2c1fa6c78f24db96",
+      "source": "DSG Global",
+      "title": "The Players Alliance Executive Director Fort Lee",
+      "organization": "NJ"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "b3b40c1d22c20bf2",
+      "source": "DSG Global",
+      "title": "The University of Toledo Foundation President and CEO Toledo",
+      "organization": "OH"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "5d11ec437bcbf237",
+      "source": "DSG Global",
+      "title": "University of Miami Health System Executive Director, Senior Human Resources Partner Coral Gables, FL",
+      "organization": "UHealth"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "05408513bf75ad6d",
+      "source": "DSG Global",
+      "title": "University of Miami Executive Director",
+      "organization": "Research Administration (Pre-Award) Coral Gables, FL"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "036468c56d2d5ded",
+      "source": "DSG Global",
+      "title": "University of Wisconsin–Madison Executive Director",
+      "organization": "Wisconsin Public Media Madison, WI"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "74c04611618b70ad",
+      "source": "DSG Global",
+      "title": "Vitalyst Health Foundation President and Chief Executive Officer Phoenix",
+      "organization": "AZ"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "6cd8a9c8e76d8765",
+      "source": "DSG Global",
+      "title": "Wildpath Chief Executive Officer Tampa, Florida",
+      "organization": "Wildpath will selectively consider a hybrid work model as needed for strong candidates."
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "7c256099211b35fa",
+      "source": "DSG Global",
+      "title": "World Neighbors President & Chief Executive Officer Flexible; Oklahoma City",
+      "organization": "OK strongly preferred"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "updated",
+      "job_id": "fcb4be977994d5cc",
+      "source": "Kittleman Associates",
+      "title": "President & CEO",
+      "organization": "FIND Food Bank",
+      "changes": {
+        "url": {
+          "from": "https://www.kittlemansearch.com/opportunities/kittleman-for-candidates",
+          "to": "https://www.kittlemansearch.com/opportunities/president-ceo-find-food-bank"
+        },
+        "sector": {
+          "from": "Unclassified",
+          "to": "Philanthropy"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "updated",
+      "job_id": "bdb4fab450cecd43",
+      "source": "Kittleman Associates",
+      "title": "President and CEO",
+      "organization": "Viability, Inc.",
+      "changes": {
+        "url": {
+          "from": "https://www.kittlemansearch.com/opportunities/kittleman-for-candidates",
+          "to": "https://www.kittlemansearch.com/opportunities/president-ceo-viability"
+        },
+        "sector": {
+          "from": "Unclassified",
+          "to": "Philanthropy"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "updated",
+      "job_id": "4bcae25d0f23f4d7",
+      "source": "Kittleman Associates",
+      "title": "Chief Executive Officer",
+      "organization": "Stanley Street Treatment and Resources",
+      "changes": {
+        "url": {
+          "from": "https://www.kittlemansearch.com/opportunities/kittleman-for-candidates",
+          "to": "https://www.kittlemansearch.com/opportunities/chief-executive-officer-stanley-street-treatment-and-resources"
+        },
+        "sector": {
+          "from": "Unclassified",
+          "to": "Health"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "3f90f7ea19072d40",
+      "source": "Kittleman Associates",
+      "title": "Executive Director",
+      "organization": "Kalamazoo Defender"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "updated",
+      "job_id": "bdb4fab450cecd43",
+      "source": "Kittleman Associates",
+      "title": "President and CEO",
+      "organization": "Schoodic Institute at Acadia National Park",
+      "changes": {
+        "organization": {
+          "from": "Viability, Inc.",
+          "to": "Schoodic Institute at Acadia National Park"
+        },
+        "location": {
+          "from": "Springfield, MA",
+          "to": "Winter Harbor, ME"
+        },
+        "url": {
+          "from": "https://www.kittlemansearch.com/opportunities/kittleman-for-candidates",
+          "to": "https://www.kittlemansearch.com/opportunities/president-ceo-schoodic-institute"
+        },
+        "posted_date": {
+          "from": "2026-09-16",
+          "to": "2026-09-14"
+        },
+        "sector": {
+          "from": "Unclassified",
+          "to": "Philanthropy"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "updated",
+      "job_id": "bdb4fab450cecd43",
+      "source": "Kittleman Associates",
+      "title": "President and CEO",
+      "organization": "Mid-Ohio Food Collective",
+      "changes": {
+        "organization": {
+          "from": "Viability, Inc.",
+          "to": "Mid-Ohio Food Collective"
+        },
+        "location": {
+          "from": "Springfield, MA",
+          "to": "Grove City, OH"
+        },
+        "url": {
+          "from": "https://www.kittlemansearch.com/opportunities/kittleman-for-candidates",
+          "to": "https://www.kittlemansearch.com/opportunities/president-ceo-mid-ohio-food-collective"
+        },
+        "posted_date": {
+          "from": "2026-09-16",
+          "to": "2026-09-10"
+        },
+        "sector": {
+          "from": "Unclassified",
+          "to": "Health"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "7075abd347075551",
+      "source": "Kittleman Associates",
+      "title": "Executive Director",
+      "organization": "West Virginia Land Trust"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "5adea7655741d201",
+      "source": "Kittleman Associates",
+      "title": "Executive Director",
+      "organization": "Colorado Disability Funding Authority"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "f5b5e493cc1d5e5f",
+      "source": "Kittleman Associates",
+      "title": "Chief Executive Officer",
+      "organization": "El Pasoans Fighting Hunger Food Bank"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "updated",
+      "job_id": "a55dca6e70c8a384",
+      "source": "Kittleman Associates",
+      "title": "Chief Executive Officer",
+      "organization": "RECOVER Initiative",
+      "changes": {
+        "location": {
+          "from": "Remote",
+          "to": "Posted 8/17/26 · Remote, United States"
+        },
+        "url": {
+          "from": "https://www.kittlemansearch.com/opportunities/kittleman-for-candidates",
+          "to": "https://www.kittlemansearch.com/opportunities/chief-executive-officer-recover-initiative"
+        },
+        "sector": {
+          "from": "Unclassified",
+          "to": "Health"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "e09087e95d1507a8",
+      "source": "Kittleman Associates",
+      "title": "Executive Director",
+      "organization": "Lena Park Community Development Corporation"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "updated",
+      "job_id": "8738445ae714e754",
+      "source": "Kittleman Associates",
+      "title": "Chief Executive Officer",
+      "organization": "Holt International",
+      "changes": {
+        "url": {
+          "from": "https://www.kittlemansearch.com/opportunities/kittleman-for-candidates",
+          "to": "https://www.kittlemansearch.com/opportunities/chief-executive-officer-holt-international"
+        },
+        "sector": {
+          "from": "Unclassified",
+          "to": "Health"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "9cd60f16b8fc3386",
+      "source": "Kittleman Associates",
+      "title": "Executive Director",
+      "organization": "Center for Law and Education"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "updated",
+      "job_id": "6cd3381695007a42",
+      "source": "Kittleman Associates",
+      "title": "Chief Executive Officer",
+      "organization": "Feeding Northeast Florida",
+      "changes": {
+        "url": {
+          "from": "https://www.kittlemansearch.com/opportunities/kittleman-for-candidates",
+          "to": "https://www.kittlemansearch.com/opportunities/chief-executive-officer-feeding-northeast-florida"
+        },
+        "sector": {
+          "from": "Unclassified",
+          "to": "Health"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "updated",
+      "job_id": "85faf9c05c0664f1",
+      "source": "Kittleman Associates",
+      "title": "President & CEO",
+      "organization": "Special Olympics Pennsylvania",
+      "changes": {
+        "url": {
+          "from": "https://www.kittlemansearch.com/opportunities/kittleman-for-candidates",
+          "to": "https://www.kittlemansearch.com/opportunities/president-ceo-special-olympics-pennsylvania"
+        },
+        "sector": {
+          "from": "Unclassified",
+          "to": "Health"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "updated",
+      "job_id": "28b85365f9a3ab21",
+      "source": "Kittleman Associates",
+      "title": "Executive Director",
+      "organization": "Society for American Archaeology",
+      "changes": {
+        "location": {
+          "from": "Washington, DC",
+          "to": "Remote"
+        },
+        "url": {
+          "from": "https://www.kittlemansearch.com/opportunities/kittleman-for-candidates",
+          "to": "https://www.kittlemansearch.com/opportunities/executive-director-society-for-american-archaeology"
+        },
+        "sector": {
+          "from": "Unclassified",
+          "to": "Philanthropy"
+        },
+        "work_arrangement": {
+          "from": "On-site / unspecified",
+          "to": "Remote"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "updated",
+      "job_id": "10c04eb4cf804091",
+      "source": "Kittleman Associates",
+      "title": "Executive Director",
+      "organization": "Animal Legal Defense Fund",
+      "changes": {
+        "url": {
+          "from": "https://www.kittlemansearch.com/opportunities/kittleman-for-candidates",
+          "to": "https://www.kittlemansearch.com/opportunities/executive-director-animal-legal-defense-fund"
+        },
+        "sector": {
+          "from": "Unclassified",
+          "to": "Health"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "updated",
+      "job_id": "3582b42239eb574f",
+      "source": "Kittleman Associates",
+      "title": "Executive Director",
+      "organization": "PAWS",
+      "changes": {
+        "url": {
+          "from": "https://www.kittlemansearch.com/opportunities/kittleman-for-candidates",
+          "to": "https://www.kittlemansearch.com/opportunities/executive-director-paws"
+        },
+        "sector": {
+          "from": "Unclassified",
+          "to": "Health"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "fa7a9d929110f9b4",
+      "source": "Kittleman Associates",
+      "title": "Executive Director",
+      "organization": "Childcare Network of Evanston (CNE)"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "cc964c1bbc1a40d4",
+      "source": "Kittleman Associates",
+      "title": "Executive Director",
+      "organization": "Pathway to Possible"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "ab90a81644622716",
+      "source": "Kittleman Associates",
+      "title": "Executive Director",
+      "organization": "New Hampshire Municipal Association"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "updated",
+      "job_id": "26b2f9c88ad33833",
+      "source": "Kittleman Associates",
+      "title": "Chief Executive Officer",
+      "organization": "Jax Riverfront Alliance",
+      "changes": {
+        "url": {
+          "from": "https://www.kittlemansearch.com/opportunities/kittleman-for-candidates",
+          "to": "https://www.kittlemansearch.com/opportunities/chief-executive-officer-jax-riverfront-alliance"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "6993126e7f07c9a3",
+      "source": "Kittleman Associates",
+      "title": "Executive Director",
+      "organization": "Yogi Berra Museum & Learning Center"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "8b61dd17e658944b",
+      "source": "Kittleman Associates",
+      "title": "President & CEO",
+      "organization": "Families in Transition"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "671494e7b4735e68",
+      "source": "Kittleman Associates",
+      "title": "President",
+      "organization": "The Land Conservancy of New Jersey"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "updated",
+      "job_id": "0ed0268f19b6dc5c",
+      "source": "Kittleman Associates",
+      "title": "President & CEO",
+      "organization": "Madison Community Foundation",
+      "changes": {
+        "url": {
+          "from": "https://www.kittlemansearch.com/opportunities/kittleman-for-candidates",
+          "to": "https://www.kittlemansearch.com/opportunities/president-ceo-madison-community-foundation"
+        },
+        "sector": {
+          "from": "Unclassified",
+          "to": "Philanthropy"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "updated",
+      "job_id": "8036fffc6de66e8a",
+      "source": "The Batten Group",
+      "title": "Executive Director",
+      "organization": "Nonprofit Development & Fundraising Talent",
+      "changes": {
+        "organization": {
+          "from": "National Kidney Foundation",
+          "to": "Nonprofit Development & Fundraising Talent"
+        },
+        "location": {
+          "from": "McLean, VA",
+          "to": "Hybrid"
+        },
+        "url": {
+          "from": "https://thebattengroup.com/jobs/",
+          "to": "https://thebattengroup.com/jobs/#content"
+        },
+        "sector": {
+          "from": "Unclassified",
+          "to": "Philanthropy"
+        },
+        "work_arrangement": {
+          "from": "On-site / unspecified",
+          "to": "Hybrid"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "159a2c605a3d00f4",
+      "source": "The Batten Group",
+      "title": "Nonprofit President and CEO Search",
+      "organization": "Nonprofit Executive Search Team | The Batten Group"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "7b6286d1c09d07ea",
+      "source": "The Batten Group",
+      "title": "Nonprofit Executive Director Search",
+      "organization": "Nonprofit Development & Fundraising Talent"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "9c4e0528234af899",
+      "source": "The Batten Group",
+      "title": "Executive Director Charlotte, North Carolina, USA $90k/year",
+      "organization": "100k/year Hybrid About NXT | CLTNXT | CLT is a Charlotte-based nonprofit organization dedicated to building the region’s next generation of successful entrepreneurial companies..."
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "db715c1a5c246dc4",
+      "source": "The Batten Group",
+      "title": "Executive Director McLean, Virginia, USA $149k/year",
+      "organization": "165k/year Full Time, Hybrid About National Kidney FoundationFueled by passion and urgency, the National Kidney Foundation is a lifeline for all people affected by kidney disease. As pionee..."
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "d16a50b730677710",
+      "source": "The Batten Group",
+      "title": "President & CEO West Allis, Wisconsin, USA $385k/year",
+      "organization": "420k/year Full Time ﻿About Industries for the Blind and Visually Impaired (IBVI)Founded in 1948 with a simple but powerful vision—to create meaningful employment for a blind family..."
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "updated",
+      "job_id": "8036fffc6de66e8a",
+      "source": "The Batten Group",
+      "title": "Executive Director",
+      "organization": "Charlotte, North Carolina, USA",
+      "changes": {
+        "organization": {
+          "from": "National Kidney Foundation",
+          "to": "Charlotte, North Carolina, USA"
+        },
+        "location": {
+          "from": "McLean, VA",
+          "to": "Hybrid"
+        },
+        "url": {
+          "from": "https://thebattengroup.com/jobs/",
+          "to": "https://thebattengroup.com/jobs/executive-director-3659418/"
+        },
+        "sector": {
+          "from": "Unclassified",
+          "to": "Health"
+        },
+        "work_arrangement": {
+          "from": "On-site / unspecified",
+          "to": "Hybrid"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "updated",
+      "job_id": "8036fffc6de66e8a",
+      "source": "The Batten Group",
+      "title": "Executive Director",
+      "organization": "McLean, Virginia, USA",
+      "changes": {
+        "organization": {
+          "from": "National Kidney Foundation",
+          "to": "McLean, Virginia, USA"
+        },
+        "location": {
+          "from": "McLean, VA",
+          "to": "Full Time, Hybrid"
+        },
+        "url": {
+          "from": "https://thebattengroup.com/jobs/",
+          "to": "https://thebattengroup.com/jobs/executive-director-3593439/"
+        },
+        "sector": {
+          "from": "Unclassified",
+          "to": "Health"
+        },
+        "work_arrangement": {
+          "from": "On-site / unspecified",
+          "to": "Hybrid"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "updated",
+      "job_id": "848b6efc72d8b08c",
+      "source": "The Batten Group",
+      "title": "President & CEO",
+      "organization": "West Allis, Wisconsin, USA",
+      "changes": {
+        "organization": {
+          "from": "Industries for the Blind and Visually Impaired",
+          "to": "West Allis, Wisconsin, USA"
+        },
+        "location": {
+          "from": "West Allis, WI",
+          "to": "Senna Drive Matthews, NC"
+        },
+        "url": {
+          "from": "https://thebattengroup.com/jobs/",
+          "to": "https://thebattengroup.com/jobs/president-ceo-3546845/"
+        },
+        "sector": {
+          "from": "Unclassified",
+          "to": "Health"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "updated",
+      "job_id": "77d5744783304cea",
+      "source": "DRiWaterstone",
+      "title": "Chief Executive Officer",
+      "organization": "KleinLife",
+      "changes": {
+        "url": {
+          "from": "https://driwaterstonehc.com/available-positions/",
+          "to": "https://driwaterstonehc.com/position/ceo-kleinlife/"
+        },
+        "sector": {
+          "from": "Unclassified",
+          "to": "Health"
+        },
+        "work_arrangement": {
+          "from": "Unknown",
+          "to": "On-site / unspecified"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "updated",
+      "job_id": "4278454b3196f6b1",
+      "source": "DRiWaterstone",
+      "title": "Chief Executive Officer",
+      "organization": "Armed Services YMCA",
+      "changes": {
+        "url": {
+          "from": "https://driwaterstonehc.com/available-positions/",
+          "to": "https://driwaterstonehc.com/position/armed-services-ymca/"
+        },
+        "sector": {
+          "from": "Unclassified",
+          "to": "Education"
+        },
+        "work_arrangement": {
+          "from": "Unknown",
+          "to": "On-site / unspecified"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "updated",
+      "job_id": "b5a25d955601deb0",
+      "source": "DRiWaterstone",
+      "title": "Executive Director",
+      "organization": "National Organization of Veterans’ Advocates (NOVA)",
+      "changes": {
+        "url": {
+          "from": "https://driwaterstonehc.com/available-positions/",
+          "to": "https://driwaterstonehc.com/position/ed-nova/"
+        },
+        "sector": {
+          "from": "Unclassified",
+          "to": "Education"
+        },
+        "work_arrangement": {
+          "from": "Unknown",
+          "to": "On-site / unspecified"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "updated",
+      "job_id": "13455c2cc84607ad",
+      "source": "DRiWaterstone",
+      "title": "Chief Executive Officer",
+      "organization": "Better Markets",
+      "changes": {
+        "url": {
+          "from": "https://driwaterstonehc.com/available-positions/",
+          "to": "https://driwaterstonehc.com/position/ceo-better-markets/"
+        },
+        "sector": {
+          "from": "Unclassified",
+          "to": "Education"
+        },
+        "work_arrangement": {
+          "from": "Unknown",
+          "to": "On-site / unspecified"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "updated",
+      "job_id": "4a3b492bb649f68d",
+      "source": "DRiWaterstone",
+      "title": "Chief Executive Officer",
+      "organization": "Mental Health Association of Maryland",
+      "changes": {
+        "url": {
+          "from": "https://driwaterstonehc.com/available-positions/",
+          "to": "https://driwaterstonehc.com/position/ceo-mhamd/"
+        },
+        "sector": {
+          "from": "Unclassified",
+          "to": "Health"
+        },
+        "work_arrangement": {
+          "from": "Unknown",
+          "to": "On-site / unspecified"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "4c0e511f1cff3c0e",
+      "source": "LeaderFit",
+      "title": "Chief Executive Officer",
+      "organization": "Active Search"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "49c7bc19349cb51f",
+      "source": "LeaderFit",
+      "title": "Executive Director",
+      "organization": "Active Search"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "f97a9ce4a62f6b8a",
+      "source": "LeaderFit",
+      "title": "Executive Director (Part-Time)",
+      "organization": "Active Search"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "updated",
+      "job_id": "dc33d30ecc1362e5",
+      "source": "NPAG",
+      "title": "Executive Director",
+      "organization": "Friends of the Alameda Free Library",
+      "changes": {
+        "url": {
+          "from": "https://www.npag.com/current-searches",
+          "to": "https://www.npag.com/fafl-ed"
+        },
+        "sector": {
+          "from": "Unclassified",
+          "to": "Education"
+        },
+        "work_arrangement": {
+          "from": "On-site / unspecified",
+          "to": "Hybrid"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "f44b994acf546363",
+      "source": "DRG Talent",
+      "title": "CEO",
+      "organization": "United Synagogue of Conservative Judaism"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "64157b1b229dd896",
+      "source": "DRG Talent",
+      "title": "Chief Executive Officer",
+      "organization": "American Friends of Shalva"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "709a87dc8a739cf1",
+      "source": "DRG Talent",
+      "title": "Chief Executive Officer",
+      "organization": "Triple C Housing, Inc."
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "4153453dfa2e6819",
+      "source": "DRG Talent",
+      "title": "Chief Executive Officer",
+      "organization": "JFS Cincinnati"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "4aa383eb3953a071",
+      "source": "DRG Talent",
+      "title": "Chief Executive Officer",
+      "organization": "Birch Family Services"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "6a1aa5a4c9a42c45",
+      "source": "DRG Talent",
+      "title": "Chief Executive Officer",
+      "organization": "Alpert Jewish Family Service"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "1a284673ef197f80",
+      "source": "DRG Talent",
+      "title": "Chief Executive Officer",
+      "organization": "Camp Tawonga"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "b14f96d79ec259dd",
+      "source": "DRG Talent",
+      "title": "Executive Director",
+      "organization": "Jewish Council on Urban Affairs"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "b6849e5e69992613",
+      "source": "DRG Talent",
+      "title": "Executive Director",
+      "organization": "Generation Patient"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "a70337ebd3918fbc",
+      "source": "DRG Talent",
+      "title": "Executive Director",
+      "organization": "Congregation Shaarey Zedek"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "994f514cc3547305",
+      "source": "DRG Talent",
+      "title": "Executive Director",
+      "organization": "The Sylvia Center"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "5d2b798b45af9873",
+      "source": "DRG Talent",
+      "title": "President",
+      "organization": "Yeshivat Chovevei Torah Rabbinical School"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "ebf8728d50d5974c",
+      "source": "DRG Talent",
+      "title": "President",
+      "organization": "Army and Navy Academy"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "f9e5ea93e3766e84",
+      "source": "Development Guild",
+      "title": "Message From Our CEO",
+      "organization": "Diversity, Equity & Inclusion"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "f9337084ae24413f",
+      "source": "Development Guild",
+      "title": "CEO Searches",
+      "organization": "Executive Search"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "updated",
+      "job_id": "667625faad058369",
+      "source": "Development Guild",
+      "title": "Executive Director",
+      "organization": "Barnstable Land Trust",
+      "changes": {
+        "location": {
+          "from": "Barnstable, MA",
+          "to": "Cambridge, MA"
+        },
+        "url": {
+          "from": "https://www.developmentguild.com/current-searches/",
+          "to": "https://www.developmentguild.com/current-searches/executive-director-for-barnstable-land-trust/"
+        },
+        "sector": {
+          "from": "Unclassified",
+          "to": "Health"
+        },
+        "work_arrangement": {
+          "from": "On-site / unspecified",
+          "to": "Remote"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "9112a2b9d54c2cd4",
+      "source": "Bryant Group",
+      "title": "Executive Director for Academic Unit Development",
+      "organization": "9/7/25"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "9d4d22e728e7fc7d",
+      "source": "Bryant Group",
+      "title": "Executive Director for Principal Gifts and University Initiatives",
+      "organization": "9/6/25"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "fa0af00ca3bb6cb6",
+      "source": "Sandler Search",
+      "title": "Executive Director Bronx",
+      "organization": "New York"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "66ec336dff3720ca",
+      "source": "Sandler Search",
+      "title": "Executive Director New York",
+      "organization": "NY Preferred"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "updated",
+      "job_id": "f7175611cc49e366",
+      "source": "Sandler Search",
+      "title": "Executive Director",
+      "organization": "Riverdale Neighborhood House",
+      "changes": {
+        "location": {
+          "from": "Bronx, NY",
+          "to": "New York, NY"
+        },
+        "url": {
+          "from": "https://sandlersearch.org/current-opportunities/",
+          "to": "https://sandlersearch.org/job/deputy-director-for-litigation-advocacy/"
+        },
+        "sector": {
+          "from": "Unclassified",
+          "to": "Health"
+        },
+        "work_arrangement": {
+          "from": "On-site / unspecified",
+          "to": "Remote"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "0a6cd812ebf6c1fb",
+      "source": "Spano Pratt",
+      "title": "Executive Director – Profile",
+      "organization": "The West Foundation"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "new",
+      "job_id": "f9f133cf2577cc30",
+      "source": "Spano Pratt",
+      "title": "Chief Executive Officer – Profile",
+      "organization": "Emergency Nurses Association"
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "updated",
+      "job_id": "dc5d5b2d22fc998a",
+      "source": "Nonprofit HR",
+      "title": "Executive Director",
+      "organization": "Environmental Leadership Program (ELP)",
+      "changes": {
+        "url": {
+          "from": "https://www.nonprofithr.com/openexecutivesearches/",
+          "to": "https://www.nonprofithr.com/executive-search-executive-director-environmental-leadership-program-elp/"
+        },
+        "sector": {
+          "from": "Unclassified",
+          "to": "Philanthropy"
+        },
+        "work_arrangement": {
+          "from": "Unknown",
+          "to": "On-site / unspecified"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "updated",
+      "job_id": "3799eacb5b78de5e",
+      "source": "Nonprofit HR",
+      "title": "Chief Executive Officer",
+      "organization": "The Assistance Fund",
+      "changes": {
+        "url": {
+          "from": "https://www.nonprofithr.com/openexecutivesearches/",
+          "to": "https://www.nonprofithr.com/executive-search-chief-executive-officer-the-assistance-fund/"
+        },
+        "sector": {
+          "from": "Unclassified",
+          "to": "Health"
+        },
+        "work_arrangement": {
+          "from": "Unknown",
+          "to": "On-site / unspecified"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "updated",
+      "job_id": "3f3b50a8f2109348",
+      "source": "Nonprofit HR",
+      "title": "President/Chief Executive Officer",
+      "organization": "Volunteers of America Upstate New York",
+      "changes": {
+        "url": {
+          "from": "https://www.nonprofithr.com/openexecutivesearches/",
+          "to": "https://www.nonprofithr.com/executive-search-president-chief-executive-officer-volunteers-of-america-upstate-new-york/"
+        },
+        "sector": {
+          "from": "Unclassified",
+          "to": "Philanthropy"
+        },
+        "work_arrangement": {
+          "from": "Unknown",
+          "to": "On-site / unspecified"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "updated",
+      "job_id": "8bb9d18b9e9b65ff",
+      "source": "Nonprofit HR",
+      "title": "Executive Director",
+      "organization": "Washington Area Bicyclist Association (WABA)",
+      "changes": {
+        "location": {
+          "from": "Washington, DC",
+          "to": "San Francisco, CA"
+        },
+        "url": {
+          "from": "https://www.nonprofithr.com/openexecutivesearches/",
+          "to": "https://www.nonprofithr.com/executive-search-executive-director-waba/"
+        },
+        "sector": {
+          "from": "Unclassified",
+          "to": "Health"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T06:41:48.620945+00:00",
+      "type": "updated",
+      "job_id": "aed6a98c08c8704b",
+      "source": "Nonprofit HR",
+      "title": "Executive Director",
+      "organization": "Western States Center",
+      "changes": {
+        "url": {
+          "from": "https://www.nonprofithr.com/openexecutivesearches/",
+          "to": "https://www.nonprofithr.com/executive-search-executive-director-western-states-center/"
+        },
+        "sector": {
+          "from": "Unclassified",
+          "to": "Philanthropy"
+        },
+        "work_arrangement": {
+          "from": "Unknown",
+          "to": "On-site / unspecified"
+        }
+      }
+    }
+  ]
 }
