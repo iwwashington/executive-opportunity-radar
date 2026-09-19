@@ -4,56 +4,108 @@
     "url": "https://www.dsgco.com/active-searches/",
     "mode": "legacy",
     "group": "Could not aggregate in prior version",
-    "notes": "Legacy Diversified Search Group entry. Current public searches are tracked under DSG Global to avoid duplicates."
+    "notes": "Legacy Diversified Search Group entry. Current public searches are tracked under DSG Global to avoid duplicates.",
+    "date_policy": "source",
+    "render_fallback": false,
+    "allow_zero": false,
+    "urls": [
+      "https://www.dsgco.com/active-searches/"
+    ]
   },
   {
     "name": "Odgers",
     "url": "https://www.odgers.com/en-us/opportunities/",
     "mode": "automated",
     "group": "Could not aggregate in prior version",
-    "notes": "Previously unsupported. Current U.S. opportunities page is now public and is included in the automated pass."
+    "notes": "Previously unsupported. Current U.S. opportunities page is now public and is included in the automated pass.",
+    "date_policy": "source",
+    "render_fallback": false,
+    "allow_zero": false,
+    "urls": [
+      "https://www.odgers.com/en-us/opportunities/"
+    ]
   },
   {
     "name": "Campbell & Company",
     "url": "https://www.campbellcompany.com/executive-search/",
     "mode": "retired",
     "group": "Could not aggregate in prior version",
-    "notes": "Executive search service line/page is no longer an active current-search source."
+    "notes": "Executive search service line/page is no longer an active current-search source.",
+    "date_policy": "source",
+    "render_fallback": false,
+    "allow_zero": false,
+    "urls": [
+      "https://www.campbellcompany.com/executive-search/"
+    ]
   },
   {
     "name": "Aspen Leadership Group",
     "url": "https://opportunities.aspenleadershipgroup.com/",
     "mode": "automated",
     "group": "Added after original aggregator",
-    "notes": "Current Opportunities. Also appeared on the manual-check list in Check #2."
+    "notes": "Current Opportunities. Tracked as an additional public-source monitor.",
+    "date_policy": "source",
+    "render_fallback": false,
+    "allow_zero": false,
+    "urls": [
+      "https://opportunities.aspenleadershipgroup.com/"
+    ]
   },
   {
     "name": "PBR Executive Search",
     "url": "https://www.pbrsearch.com/active-searches/",
     "mode": "automated",
     "group": "Previously not working",
-    "notes": "Active Searches. Re-enabled in the rebuild."
+    "notes": "Active Searches. Re-enabled in the rebuild.",
+    "date_policy": "source",
+    "render_fallback": false,
+    "allow_zero": false,
+    "urls": [
+      "https://www.pbrsearch.com/active-searches/"
+    ]
   },
   {
     "name": "BoardWalk Consulting",
     "url": "https://boardwalkconsulting.com/opportunities/",
     "mode": "automated",
     "group": "Previously stopped working",
-    "notes": "Opportunities. Re-enabled in the rebuild."
+    "notes": "Opportunities. Re-enabled in the rebuild.",
+    "date_policy": "source",
+    "render_fallback": false,
+    "allow_zero": false,
+    "urls": [
+      "https://boardwalkconsulting.com/opportunities/"
+    ]
   },
   {
     "name": "Bridge Partners",
     "url": "https://bridgepartnersllc.com/searches/",
     "mode": "automated",
     "group": "Previously stopped working",
-    "notes": "Searches. Re-enabled in the rebuild."
+    "notes": "Searches. Re-enabled in the rebuild.",
+    "date_policy": "source",
+    "render_fallback": false,
+    "allow_zero": false,
+    "urls": [
+      "https://bridgepartnersllc.com/searches/"
+    ]
   },
   {
     "name": "Scion Executive Search",
     "url": "https://scionexecutivesearch.com/search-jobs/?_page=1",
     "mode": "automated",
     "group": "Previously stopped working",
-    "notes": "Current job search page; individual postings expose Date Posted."
+    "notes": "Current job search page; individual postings expose Date Posted.",
+    "date_policy": "source",
+    "render_fallback": true,
+    "allow_zero": false,
+    "urls": [
+      "https://scionexecutivesearch.com/search-jobs/?_page=1",
+      "https://scionexecutivesearch.com/search-jobs/?_page=2",
+      "https://scionexecutivesearch.com/search-jobs/?_page=3",
+      "https://scionexecutivesearch.com/search-jobs/?_page=4",
+      "https://scionexecutivesearch.com/search-jobs/?_page=5"
+    ]
   },
   {
     "name": "Isaacson, Miller",
@@ -61,7 +113,12 @@
     "mode": "automated",
     "group": "Previously kind-of working",
     "notes": "Open Searches. Do not invent a posted date when the site does not expose one; use first-seen date instead.",
-    "date_policy": "first_seen"
+    "date_policy": "first_seen",
+    "render_fallback": false,
+    "allow_zero": false,
+    "urls": [
+      "https://www.imsearch.com/current-searches/open-searches"
+    ]
   },
   {
     "name": "Lindauer",
@@ -69,167 +126,310 @@
     "mode": "automated",
     "group": "Previously kind-of working",
     "notes": "Open Searches. Do not invent a posted date when the site does not expose one; use first-seen date instead.",
-    "date_policy": "first_seen"
+    "date_policy": "first_seen",
+    "render_fallback": false,
+    "allow_zero": false,
+    "urls": [
+      "https://www.lindauerglobal.com/searches/open-searches/"
+    ]
   },
   {
     "name": "Korn Ferry Search Jobs",
     "url": "https://jobs.candidate.kornferry.com/jobs/",
     "mode": "automated",
     "group": "Working in prior aggregator",
-    "notes": "Korn Ferry candidate job listings; individual postings often expose exact Posted dates."
+    "notes": "Korn Ferry candidate job listings; individual postings often expose exact Posted dates.",
+    "date_policy": "source",
+    "render_fallback": true,
+    "allow_zero": false,
+    "urls": [
+      "https://jobs.candidate.kornferry.com/jobs/"
+    ]
   },
   {
     "name": "DSG Global",
     "url": "https://www.dsgco.com/active-searches/",
     "mode": "automated",
     "group": "Working in prior aggregator",
-    "notes": "Current DSG Global Active Searches."
+    "notes": "Current DSG Global Active Searches.",
+    "date_policy": "source",
+    "render_fallback": false,
+    "allow_zero": false,
+    "urls": [
+      "https://www.dsgco.com/active-searches/"
+    ]
   },
   {
     "name": "Kittleman Associates",
     "url": "https://www.kittlemansearch.com/opportunities/kittleman-for-candidates",
     "mode": "automated",
     "group": "Working in prior aggregator",
-    "notes": "Current opportunities; page exposes exact Posted dates."
+    "notes": "Current opportunities; page exposes exact Posted dates.",
+    "date_policy": "source",
+    "render_fallback": false,
+    "allow_zero": false,
+    "urls": [
+      "https://www.kittlemansearch.com/opportunities/kittleman-for-candidates"
+    ]
   },
   {
     "name": "WittKieffer",
     "url": "https://www.wittkieffer.com/search-open-positions/",
     "mode": "automated",
     "group": "Working in prior aggregator",
-    "notes": "Open positions. Site/candidate portal changes may require parser maintenance; source health will flag failures."
+    "notes": "Open positions. Site/candidate portal changes may require parser maintenance; source health will flag failures.",
+    "date_policy": "source",
+    "render_fallback": false,
+    "allow_zero": false,
+    "urls": [
+      "https://www.wittkieffer.com/search-open-positions/"
+    ]
   },
   {
     "name": "The Batten Group",
     "url": "https://thebattengroup.com/jobs/",
     "mode": "automated",
     "group": "Working in prior aggregator",
-    "notes": "Jobs archive/current search page."
+    "notes": "Jobs archive/current search page.",
+    "date_policy": "source",
+    "render_fallback": false,
+    "allow_zero": false,
+    "urls": [
+      "https://thebattengroup.com/jobs/"
+    ]
   },
   {
     "name": "DRiWaterstone",
     "url": "https://driwaterstonehc.com/available-positions/",
     "mode": "automated",
     "group": "Working in prior aggregator",
-    "notes": "Available Positions."
+    "notes": "Available Positions.",
+    "date_policy": "source",
+    "render_fallback": false,
+    "allow_zero": false,
+    "urls": [
+      "https://driwaterstonehc.com/available-positions/"
+    ]
   },
   {
     "name": "LeaderFit",
     "url": "https://leaderfit.org/home/active-searches/",
     "mode": "automated",
     "group": "Working in prior aggregator",
-    "notes": "Active Searches; page may be dynamically rendered. Source health will show if no parseable results are returned."
+    "notes": "Active Searches; page may be dynamically rendered. Source health will show if no parseable results are returned.",
+    "date_policy": "source",
+    "render_fallback": true,
+    "allow_zero": false,
+    "urls": [
+      "https://leaderfit.org/home/active-searches/"
+    ]
   },
   {
     "name": "NPAG",
     "url": "https://www.npag.com/current-searches",
     "mode": "automated",
     "group": "Working in prior aggregator",
-    "notes": "Current Searches."
+    "notes": "Current Searches.",
+    "date_policy": "source",
+    "render_fallback": false,
+    "allow_zero": false,
+    "urls": [
+      "https://www.npag.com/current-searches"
+    ]
   },
   {
     "name": "DRG Talent",
     "url": "https://app.loxo.co/drg-talent-advisory-group",
     "mode": "automated",
     "group": "Working in prior aggregator",
-    "notes": "DRG current opportunities/job board. Dynamic provider may require parser maintenance."
+    "notes": "DRG current opportunities/job board. Dynamic provider may require parser maintenance.",
+    "date_policy": "source",
+    "render_fallback": true,
+    "allow_zero": false,
+    "urls": [
+      "https://app.loxo.co/drg-talent-advisory-group"
+    ]
   },
   {
     "name": "Development Guild",
     "url": "https://www.developmentguild.com/current-searches/",
     "mode": "automated",
     "group": "Working in prior aggregator",
-    "notes": "Current Executive Searches."
+    "notes": "Current Executive Searches.",
+    "date_policy": "source",
+    "render_fallback": false,
+    "allow_zero": false,
+    "urls": [
+      "https://www.developmentguild.com/current-searches/"
+    ]
   },
   {
     "name": "The Moran Company",
     "url": "https://morancompany.com/current-searches/",
     "mode": "automated",
     "group": "Working in prior aggregator",
-    "notes": "Current Searches."
+    "notes": "Current Searches.",
+    "date_policy": "source",
+    "render_fallback": false,
+    "allow_zero": false,
+    "urls": [
+      "https://morancompany.com/current-searches/"
+    ]
   },
   {
     "name": "Bryant Group",
     "url": "https://www.bryantgrp.com/current-listings",
     "mode": "automated",
     "group": "Working in prior aggregator",
-    "notes": "Current Listings. Date parser ignores old listings beyond the six-month window."
+    "notes": "Current Listings. Date parser ignores old listings beyond the six-month window.",
+    "date_policy": "source",
+    "render_fallback": false,
+    "allow_zero": false,
+    "urls": [
+      "https://www.bryantgrp.com/current-listings"
+    ]
   },
   {
     "name": "Heidrick & Struggles",
     "url": "https://www.heidrick.com/",
     "mode": "no-public-list",
     "group": "No public current-search list",
-    "notes": "Check #2 says the firm does not post a usable current-search list on its site."
+    "notes": "No stable public current-search list is available on the firm website.",
+    "date_policy": "source",
+    "render_fallback": false,
+    "allow_zero": false,
+    "urls": [
+      "https://www.heidrick.com/"
+    ]
   },
   {
     "name": "Spencer Stuart",
     "url": "https://www.spencerstuart.com/",
     "mode": "no-public-list",
     "group": "No public current-search list",
-    "notes": "Check #2 says the firm does not post a usable current-search list on its site."
+    "notes": "No stable public current-search list is available on the firm website.",
+    "date_policy": "source",
+    "render_fallback": false,
+    "allow_zero": false,
+    "urls": [
+      "https://www.spencerstuart.com/"
+    ]
   },
   {
     "name": "Russell Reynolds",
     "url": "https://www.russellreynolds.com/",
     "mode": "no-public-list",
     "group": "No public current-search list",
-    "notes": "Check #2 says the firm does not post a usable current-search list on its site."
+    "notes": "No stable public current-search list is available on the firm website.",
+    "date_policy": "source",
+    "render_fallback": false,
+    "allow_zero": false,
+    "urls": [
+      "https://www.russellreynolds.com/"
+    ]
   },
   {
     "name": "Egon Zehnder",
     "url": "https://www.egonzehnder.com/",
     "mode": "no-public-list",
     "group": "No public current-search list",
-    "notes": "Check #2 says the firm does not post a usable current-search list on its site."
+    "notes": "No stable public current-search list is available on the firm website.",
+    "date_policy": "source",
+    "render_fallback": false,
+    "allow_zero": false,
+    "urls": [
+      "https://www.egonzehnder.com/"
+    ]
   },
   {
     "name": "CarterBaldwin Executive Search",
     "url": "https://carterbaldwin.com/",
     "mode": "no-public-list",
     "group": "No public current-search list",
-    "notes": "Check #2 says the firm does not post a usable current-search list on its site."
+    "notes": "No stable public current-search list is available on the firm website.",
+    "date_policy": "source",
+    "render_fallback": false,
+    "allow_zero": false,
+    "urls": [
+      "https://carterbaldwin.com/"
+    ]
   },
   {
     "name": "Sandler Search",
     "url": "https://sandlersearch.org/current-opportunities/",
     "mode": "automated",
     "group": "Additional sites to check",
-    "notes": "Current Opportunities."
+    "notes": "Current Opportunities.",
+    "date_policy": "source",
+    "render_fallback": false,
+    "allow_zero": false,
+    "urls": [
+      "https://sandlersearch.org/current-opportunities/"
+    ]
   },
   {
     "name": "Spano Pratt",
     "url": "https://spanopratt.com/careers/",
     "mode": "automated",
     "group": "Additional sites to check",
-    "notes": "Executive Opportunities/Careers."
+    "notes": "Executive Opportunities/Careers.",
+    "date_policy": "source",
+    "render_fallback": false,
+    "allow_zero": false,
+    "urls": [
+      "https://spanopratt.com/careers/"
+    ]
   },
   {
     "name": "GoodCitizen",
     "url": "https://www.goodcitizen.com/",
     "mode": "manual",
     "group": "Additional sites to check",
-    "notes": "Check #2 lists GoodCitizen Open Searches. Current public site does not expose a stable dedicated openings page to this scraper, so it remains on the manual-watch list."
+    "notes": "Current public site does not expose a stable dedicated openings page to this scraper, so it remains on the manual-watch list.",
+    "date_policy": "source",
+    "render_fallback": false,
+    "allow_zero": false,
+    "urls": [
+      "https://www.goodcitizen.com/"
+    ]
   },
   {
     "name": "Association Strategies",
     "url": "https://assnstrategies.com/active-searches/",
     "mode": "automated",
     "group": "Additional sites to check",
-    "notes": "Active/Open Searches. Page may be dynamically rendered."
+    "notes": "Active/Open Searches. Page may be dynamically rendered.",
+    "date_policy": "source",
+    "render_fallback": true,
+    "allow_zero": false,
+    "urls": [
+      "https://assnstrategies.com/active-searches/"
+    ]
   },
   {
     "name": "Nonprofit HR",
     "url": "https://www.nonprofithr.com/openexecutivesearches/",
     "mode": "automated",
     "group": "Additional sites to check",
-    "notes": "Open Executive Searches."
+    "notes": "Open Executive Searches.",
+    "date_policy": "source",
+    "render_fallback": false,
+    "allow_zero": false,
+    "urls": [
+      "https://www.nonprofithr.com/openexecutivesearches/"
+    ]
   },
   {
     "name": "POLIHIRE",
     "url": "https://polihire.com/current-searches/",
     "mode": "automated",
     "group": "Additional sites to check",
-    "notes": "Current Searches. The strict role filter may legitimately yield zero CEO/President/Executive Director roles on a given day."
+    "notes": "Current Searches. The strict role filter may legitimately yield zero CEO/President/Executive Director roles on a given day.",
+    "date_policy": "source",
+    "render_fallback": false,
+    "allow_zero": true,
+    "urls": [
+      "https://polihire.com/current-searches/"
+    ]
   }
 ]

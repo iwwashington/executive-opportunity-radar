@@ -1,35 +1,49 @@
 # Executive Opportunity Radar
 
-A private career-monitoring dashboard for CEO, president, and executive director searches.
+A public-source market monitor for CEO, president and executive director searches across tracked executive-search firms.
 
-## Source of truth
+## What v3 changes
 
-The monitored firms and source status come from Irving Washington's Google Drive document **CEO Listings Site - Check #2**. The configuration currently tracks 33 unique sources, including sources that are automated, manual-check only, retired, legacy/duplicate, or do not publish public search listings.
+- Market-intelligence homepage plus a date-first opportunity feed.
+- Mobile-first responsive layout.
+- Entire opportunity card is clickable; the updater prefers a direct job posting URL whenever the source exposes one.
+- Missing compensation, location, sector or posted date never excludes a legitimate role.
+- Posted dates are used only when the source provides them; otherwise the site shows `First seen`.
+- `history.json` retains closed roles instead of deleting them, so trend analysis improves over time.
+- Jobs are archived only after two healthy checks fail to find them.
+- Failed or suspiciously partial source checks preserve previously known roles.
+- `changes.json` records new, updated, reopened and closed search events.
+- Favorites are stored only in the visitor's browser via local storage.
 
-## How dates work
+## Files
 
-- When a source publishes a reliable posting date, the radar uses it.
-- When a source only publishes a relative age (for example, "posted 3 weeks ago"), the radar converts that to an approximate date and labels it accordingly.
-- When a source does not expose a reliable posting date, the radar displays **First seen** instead of inventing a date.
-- Isaacson, Miller and Lindauer are explicitly configured to use first-seen dates because their public dates have previously been unreliable in the old aggregator.
-- The default view is **Newest first**, grouped by date.
+- `index.html` — public dashboard
+- `jobs.json` — current active roles
+- `history.json` — open + archived role history
+- `changes.json` — recent data-change events
+- `meta.json` — source health from the most recent run
+- `sources.json` — tracked source configuration
+- `aggregate.py` — scraper, enrichment, history and health logic
+- `requirements.txt` — Python dependencies
+- `.github/workflows/update-radar.yml` — daily GitHub Actions updater
 
-## Role filter
+## Automation
 
-The automated feed is intentionally narrow:
+The GitHub workflow runs daily at 10:17 UTC and can also be run manually from the Actions tab. It:
 
-- Chief Executive Officer / CEO
-- President / President & CEO
-- Executive Director
+1. visits each automated public source;
+2. uses normal HTTP parsing first and browser rendering for configured dynamic sites;
+3. captures qualifying CEO / president / executive director roles even when optional fields are missing;
+4. enriches fields when possible;
+5. compares the result with prior history;
+6. preserves roles when a source fails or appears suspiciously incomplete;
+7. updates the JSON data files; and
+8. commits only when the data changes.
 
-It rejects obvious false positives such as vice presidents and functional titles such as "Executive Director of Annual Giving."
+## Link behavior
 
-## Daily refresh
+The card itself opens the opportunity. `link_quality: direct` means the scraper found a role-specific URL. `link_quality: source_page` means the public source did not expose a reliable role-specific URL in the captured markup, so the card opens the source listing instead. The site labels those cards `Source listing` rather than pretending the link is direct.
 
-GitHub Actions runs `aggregate.py` once per day and rewrites `jobs.json` and `meta.json`. One broken search-firm site should not take down the whole dashboard; failures appear in **Source Health**.
+## Coverage caveat
 
-The workflow must live at `.github/workflows/update.yml`. A YAML file stored in the repository root will not run as a GitHub Action.
-
-## GitHub Pages
-
-Publish from the `main` branch and `/ (root)`. The dashboard is `index.html`; `jobs.json` and `meta.json` are the live data files.
+This project monitors public listings from configured executive-search sources. It does not imply exhaustive coverage of all executive searches, including confidential searches and firms that do not publish active searches.

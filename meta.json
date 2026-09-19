@@ -1,5 +1,6 @@
 {
   "generated_at": "2026-09-19T05:58:00+00:00",
+  "baseline_initialized_at": "2026-09-19T05:58:00+00:00",
   "source_count": 33,
   "sources": [
     {
@@ -11,8 +12,11 @@
       "status": "legacy",
       "ok": null,
       "count": 0,
+      "prior_count": 0,
       "error": "",
-      "checked_at": null
+      "checked_at": null,
+      "fetch_mode": "",
+      "preserved": false
     },
     {
       "source": "Odgers",
@@ -20,11 +24,14 @@
       "mode": "automated",
       "group": "Could not aggregate in prior version",
       "notes": "Previously unsupported. Current U.S. opportunities page is now public and is included in the automated pass.",
-      "status": "configured",
+      "status": "awaiting-first-run",
       "ok": null,
       "count": 0,
+      "prior_count": 0,
       "error": "",
-      "checked_at": null
+      "checked_at": null,
+      "fetch_mode": "",
+      "preserved": false
     },
     {
       "source": "Campbell & Company",
@@ -35,20 +42,26 @@
       "status": "retired",
       "ok": null,
       "count": 0,
+      "prior_count": 0,
       "error": "",
-      "checked_at": null
+      "checked_at": null,
+      "fetch_mode": "",
+      "preserved": false
     },
     {
       "source": "Aspen Leadership Group",
       "url": "https://opportunities.aspenleadershipgroup.com/",
       "mode": "automated",
       "group": "Added after original aggregator",
-      "notes": "Current Opportunities. Also appeared on the manual-check list in Check #2.",
-      "status": "configured",
+      "notes": "Current Opportunities. Tracked as an additional public-source monitor.",
+      "status": "awaiting-first-run",
       "ok": null,
       "count": 0,
+      "prior_count": 0,
       "error": "",
-      "checked_at": null
+      "checked_at": null,
+      "fetch_mode": "",
+      "preserved": false
     },
     {
       "source": "PBR Executive Search",
@@ -56,11 +69,14 @@
       "mode": "automated",
       "group": "Previously not working",
       "notes": "Active Searches. Re-enabled in the rebuild.",
-      "status": "configured",
+      "status": "awaiting-first-run",
       "ok": null,
       "count": 0,
+      "prior_count": 0,
       "error": "",
-      "checked_at": null
+      "checked_at": null,
+      "fetch_mode": "",
+      "preserved": false
     },
     {
       "source": "BoardWalk Consulting",
@@ -68,11 +84,14 @@
       "mode": "automated",
       "group": "Previously stopped working",
       "notes": "Opportunities. Re-enabled in the rebuild.",
-      "status": "configured",
+      "status": "awaiting-first-run",
       "ok": null,
       "count": 0,
+      "prior_count": 0,
       "error": "",
-      "checked_at": null
+      "checked_at": null,
+      "fetch_mode": "",
+      "preserved": false
     },
     {
       "source": "Bridge Partners",
@@ -80,11 +99,14 @@
       "mode": "automated",
       "group": "Previously stopped working",
       "notes": "Searches. Re-enabled in the rebuild.",
-      "status": "configured",
+      "status": "awaiting-first-run",
       "ok": null,
       "count": 0,
+      "prior_count": 0,
       "error": "",
-      "checked_at": null
+      "checked_at": null,
+      "fetch_mode": "",
+      "preserved": false
     },
     {
       "source": "Scion Executive Search",
@@ -92,11 +114,14 @@
       "mode": "automated",
       "group": "Previously stopped working",
       "notes": "Current job search page; individual postings expose Date Posted.",
-      "status": "configured",
+      "status": "awaiting-first-run",
       "ok": null,
       "count": 0,
+      "prior_count": 0,
       "error": "",
-      "checked_at": null
+      "checked_at": null,
+      "fetch_mode": "",
+      "preserved": false
     },
     {
       "source": "Isaacson, Miller",
@@ -104,11 +129,14 @@
       "mode": "automated",
       "group": "Previously kind-of working",
       "notes": "Open Searches. Do not invent a posted date when the site does not expose one; use first-seen date instead.",
-      "status": "configured",
+      "status": "awaiting-first-run",
       "ok": null,
       "count": 0,
+      "prior_count": 0,
       "error": "",
-      "checked_at": null
+      "checked_at": null,
+      "fetch_mode": "",
+      "preserved": false
     },
     {
       "source": "Lindauer",
@@ -116,11 +144,14 @@
       "mode": "automated",
       "group": "Previously kind-of working",
       "notes": "Open Searches. Do not invent a posted date when the site does not expose one; use first-seen date instead.",
-      "status": "configured",
+      "status": "awaiting-first-run",
       "ok": null,
       "count": 0,
+      "prior_count": 0,
       "error": "",
-      "checked_at": null
+      "checked_at": null,
+      "fetch_mode": "",
+      "preserved": false
     },
     {
       "source": "Korn Ferry Search Jobs",
@@ -128,11 +159,14 @@
       "mode": "automated",
       "group": "Working in prior aggregator",
       "notes": "Korn Ferry candidate job listings; individual postings often expose exact Posted dates.",
-      "status": "configured",
+      "status": "awaiting-first-run",
       "ok": null,
       "count": 0,
+      "prior_count": 0,
       "error": "",
-      "checked_at": null
+      "checked_at": null,
+      "fetch_mode": "",
+      "preserved": false
     },
     {
       "source": "DSG Global",
@@ -140,11 +174,14 @@
       "mode": "automated",
       "group": "Working in prior aggregator",
       "notes": "Current DSG Global Active Searches.",
-      "status": "configured",
+      "status": "awaiting-first-run",
       "ok": null,
       "count": 0,
+      "prior_count": 0,
       "error": "",
-      "checked_at": null
+      "checked_at": null,
+      "fetch_mode": "",
+      "preserved": false
     },
     {
       "source": "Kittleman Associates",
@@ -152,11 +189,14 @@
       "mode": "automated",
       "group": "Working in prior aggregator",
       "notes": "Current opportunities; page exposes exact Posted dates.",
-      "status": "configured",
+      "status": "awaiting-first-run",
       "ok": null,
       "count": 0,
+      "prior_count": 0,
       "error": "",
-      "checked_at": null
+      "checked_at": null,
+      "fetch_mode": "",
+      "preserved": false
     },
     {
       "source": "WittKieffer",
@@ -164,11 +204,14 @@
       "mode": "automated",
       "group": "Working in prior aggregator",
       "notes": "Open positions. Site/candidate portal changes may require parser maintenance; source health will flag failures.",
-      "status": "configured",
+      "status": "awaiting-first-run",
       "ok": null,
       "count": 0,
+      "prior_count": 0,
       "error": "",
-      "checked_at": null
+      "checked_at": null,
+      "fetch_mode": "",
+      "preserved": false
     },
     {
       "source": "The Batten Group",
@@ -176,11 +219,14 @@
       "mode": "automated",
       "group": "Working in prior aggregator",
       "notes": "Jobs archive/current search page.",
-      "status": "configured",
+      "status": "awaiting-first-run",
       "ok": null,
       "count": 0,
+      "prior_count": 0,
       "error": "",
-      "checked_at": null
+      "checked_at": null,
+      "fetch_mode": "",
+      "preserved": false
     },
     {
       "source": "DRiWaterstone",
@@ -188,11 +234,14 @@
       "mode": "automated",
       "group": "Working in prior aggregator",
       "notes": "Available Positions.",
-      "status": "configured",
+      "status": "awaiting-first-run",
       "ok": null,
       "count": 0,
+      "prior_count": 0,
       "error": "",
-      "checked_at": null
+      "checked_at": null,
+      "fetch_mode": "",
+      "preserved": false
     },
     {
       "source": "LeaderFit",
@@ -200,11 +249,14 @@
       "mode": "automated",
       "group": "Working in prior aggregator",
       "notes": "Active Searches; page may be dynamically rendered. Source health will show if no parseable results are returned.",
-      "status": "configured",
+      "status": "awaiting-first-run",
       "ok": null,
       "count": 0,
+      "prior_count": 0,
       "error": "",
-      "checked_at": null
+      "checked_at": null,
+      "fetch_mode": "",
+      "preserved": false
     },
     {
       "source": "NPAG",
@@ -212,11 +264,14 @@
       "mode": "automated",
       "group": "Working in prior aggregator",
       "notes": "Current Searches.",
-      "status": "configured",
+      "status": "awaiting-first-run",
       "ok": null,
       "count": 0,
+      "prior_count": 0,
       "error": "",
-      "checked_at": null
+      "checked_at": null,
+      "fetch_mode": "",
+      "preserved": false
     },
     {
       "source": "DRG Talent",
@@ -224,11 +279,14 @@
       "mode": "automated",
       "group": "Working in prior aggregator",
       "notes": "DRG current opportunities/job board. Dynamic provider may require parser maintenance.",
-      "status": "configured",
+      "status": "awaiting-first-run",
       "ok": null,
       "count": 0,
+      "prior_count": 0,
       "error": "",
-      "checked_at": null
+      "checked_at": null,
+      "fetch_mode": "",
+      "preserved": false
     },
     {
       "source": "Development Guild",
@@ -236,11 +294,14 @@
       "mode": "automated",
       "group": "Working in prior aggregator",
       "notes": "Current Executive Searches.",
-      "status": "configured",
+      "status": "awaiting-first-run",
       "ok": null,
       "count": 0,
+      "prior_count": 0,
       "error": "",
-      "checked_at": null
+      "checked_at": null,
+      "fetch_mode": "",
+      "preserved": false
     },
     {
       "source": "The Moran Company",
@@ -248,11 +309,14 @@
       "mode": "automated",
       "group": "Working in prior aggregator",
       "notes": "Current Searches.",
-      "status": "configured",
+      "status": "awaiting-first-run",
       "ok": null,
       "count": 0,
+      "prior_count": 0,
       "error": "",
-      "checked_at": null
+      "checked_at": null,
+      "fetch_mode": "",
+      "preserved": false
     },
     {
       "source": "Bryant Group",
@@ -260,71 +324,89 @@
       "mode": "automated",
       "group": "Working in prior aggregator",
       "notes": "Current Listings. Date parser ignores old listings beyond the six-month window.",
-      "status": "configured",
+      "status": "awaiting-first-run",
       "ok": null,
       "count": 0,
+      "prior_count": 0,
       "error": "",
-      "checked_at": null
+      "checked_at": null,
+      "fetch_mode": "",
+      "preserved": false
     },
     {
       "source": "Heidrick & Struggles",
       "url": "https://www.heidrick.com/",
       "mode": "no-public-list",
       "group": "No public current-search list",
-      "notes": "Check #2 says the firm does not post a usable current-search list on its site.",
+      "notes": "No stable public current-search list is available on the firm website.",
       "status": "no-public-list",
       "ok": null,
       "count": 0,
+      "prior_count": 0,
       "error": "",
-      "checked_at": null
+      "checked_at": null,
+      "fetch_mode": "",
+      "preserved": false
     },
     {
       "source": "Spencer Stuart",
       "url": "https://www.spencerstuart.com/",
       "mode": "no-public-list",
       "group": "No public current-search list",
-      "notes": "Check #2 says the firm does not post a usable current-search list on its site.",
+      "notes": "No stable public current-search list is available on the firm website.",
       "status": "no-public-list",
       "ok": null,
       "count": 0,
+      "prior_count": 0,
       "error": "",
-      "checked_at": null
+      "checked_at": null,
+      "fetch_mode": "",
+      "preserved": false
     },
     {
       "source": "Russell Reynolds",
       "url": "https://www.russellreynolds.com/",
       "mode": "no-public-list",
       "group": "No public current-search list",
-      "notes": "Check #2 says the firm does not post a usable current-search list on its site.",
+      "notes": "No stable public current-search list is available on the firm website.",
       "status": "no-public-list",
       "ok": null,
       "count": 0,
+      "prior_count": 0,
       "error": "",
-      "checked_at": null
+      "checked_at": null,
+      "fetch_mode": "",
+      "preserved": false
     },
     {
       "source": "Egon Zehnder",
       "url": "https://www.egonzehnder.com/",
       "mode": "no-public-list",
       "group": "No public current-search list",
-      "notes": "Check #2 says the firm does not post a usable current-search list on its site.",
+      "notes": "No stable public current-search list is available on the firm website.",
       "status": "no-public-list",
       "ok": null,
       "count": 0,
+      "prior_count": 0,
       "error": "",
-      "checked_at": null
+      "checked_at": null,
+      "fetch_mode": "",
+      "preserved": false
     },
     {
       "source": "CarterBaldwin Executive Search",
       "url": "https://carterbaldwin.com/",
       "mode": "no-public-list",
       "group": "No public current-search list",
-      "notes": "Check #2 says the firm does not post a usable current-search list on its site.",
+      "notes": "No stable public current-search list is available on the firm website.",
       "status": "no-public-list",
       "ok": null,
       "count": 0,
+      "prior_count": 0,
       "error": "",
-      "checked_at": null
+      "checked_at": null,
+      "fetch_mode": "",
+      "preserved": false
     },
     {
       "source": "Sandler Search",
@@ -332,11 +414,14 @@
       "mode": "automated",
       "group": "Additional sites to check",
       "notes": "Current Opportunities.",
-      "status": "configured",
+      "status": "awaiting-first-run",
       "ok": null,
       "count": 0,
+      "prior_count": 0,
       "error": "",
-      "checked_at": null
+      "checked_at": null,
+      "fetch_mode": "",
+      "preserved": false
     },
     {
       "source": "Spano Pratt",
@@ -344,23 +429,29 @@
       "mode": "automated",
       "group": "Additional sites to check",
       "notes": "Executive Opportunities/Careers.",
-      "status": "configured",
+      "status": "awaiting-first-run",
       "ok": null,
       "count": 0,
+      "prior_count": 0,
       "error": "",
-      "checked_at": null
+      "checked_at": null,
+      "fetch_mode": "",
+      "preserved": false
     },
     {
       "source": "GoodCitizen",
       "url": "https://www.goodcitizen.com/",
       "mode": "manual",
       "group": "Additional sites to check",
-      "notes": "Check #2 lists GoodCitizen Open Searches. Current public site does not expose a stable dedicated openings page to this scraper, so it remains on the manual-watch list.",
+      "notes": "Current public site does not expose a stable dedicated openings page to this scraper, so it remains on the manual-watch list.",
       "status": "manual",
       "ok": null,
       "count": 0,
+      "prior_count": 0,
       "error": "",
-      "checked_at": null
+      "checked_at": null,
+      "fetch_mode": "",
+      "preserved": false
     },
     {
       "source": "Association Strategies",
@@ -368,11 +459,14 @@
       "mode": "automated",
       "group": "Additional sites to check",
       "notes": "Active/Open Searches. Page may be dynamically rendered.",
-      "status": "configured",
+      "status": "awaiting-first-run",
       "ok": null,
       "count": 0,
+      "prior_count": 0,
       "error": "",
-      "checked_at": null
+      "checked_at": null,
+      "fetch_mode": "",
+      "preserved": false
     },
     {
       "source": "Nonprofit HR",
@@ -380,11 +474,14 @@
       "mode": "automated",
       "group": "Additional sites to check",
       "notes": "Open Executive Searches.",
-      "status": "configured",
+      "status": "awaiting-first-run",
       "ok": null,
       "count": 0,
+      "prior_count": 0,
       "error": "",
-      "checked_at": null
+      "checked_at": null,
+      "fetch_mode": "",
+      "preserved": false
     },
     {
       "source": "POLIHIRE",
@@ -392,11 +489,14 @@
       "mode": "automated",
       "group": "Additional sites to check",
       "notes": "Current Searches. The strict role filter may legitimately yield zero CEO/President/Executive Director roles on a given day.",
-      "status": "configured",
+      "status": "awaiting-first-run",
       "ok": null,
       "count": 0,
+      "prior_count": 0,
       "error": "",
-      "checked_at": null
+      "checked_at": null,
+      "fetch_mode": "",
+      "preserved": false
     }
   ]
 }
