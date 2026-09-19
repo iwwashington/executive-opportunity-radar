@@ -1,388 +1,6 @@
 {
-  "generated_at": "2026-09-19T12:02:10.355913+00:00",
+  "generated_at": "2026-09-19T12:54:01.314889+00:00",
   "events": [
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "new",
-      "job_id": "01f7e5b62a1556c9",
-      "source": "Odgers",
-      "title": "Board + CEO Services",
-      "organization": "Executive Search"
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "new",
-      "job_id": "8acafe2849539bf8",
-      "source": "Odgers",
-      "title": "Board + CEO Advisory",
-      "organization": "Board Succession"
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "new",
-      "job_id": "796884e96850deb9",
-      "source": "Odgers",
-      "title": "Explore Board + CEO Services",
-      "organization": "Capstone"
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "new",
-      "job_id": "5d9d9e8f2271483c",
-      "source": "Odgers",
-      "title": "CEO",
-      "organization": "Board, Chair & NED"
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "updated",
-      "job_id": "dfae6a784f47fae6",
-      "source": "Odgers",
-      "title": "Chief Executive Officer",
-      "organization": "Universal Service Administrative Company (USAC)",
-      "changes": {
-        "url": {
-          "from": "https://www.odgers.com/en-us/opportunities/",
-          "to": "https://www.odgers.com/en-us/about-us/candidate-charter/"
-        },
-        "sector": {
-          "from": "Unclassified",
-          "to": "Philanthropy"
-        }
-      }
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "new",
-      "job_id": "353cf0f832ee2e0a",
-      "source": "Odgers",
-      "title": "CEO",
-      "organization": "Board Chair & Directors"
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "updated",
-      "job_id": "4fedffb8a71af110",
-      "source": "Aspen Leadership Group",
-      "title": "Chief Executive Officer",
-      "organization": "Indianapolis Symphony Orchestra",
-      "changes": {
-        "location": {
-          "from": "Indianapolis, IN",
-          "to": "Columbia, MD"
-        },
-        "url": {
-          "from": "https://opportunities.aspenleadershipgroup.com/",
-          "to": "https://opportunities.aspenleadershipgroup.com/opportunities/8474"
-        },
-        "sector": {
-          "from": "Unclassified",
-          "to": "Philanthropy"
-        }
-      }
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "updated",
-      "job_id": "8bd24074a0e2375a",
-      "source": "Aspen Leadership Group",
-      "title": "Executive Director",
-      "organization": "Pelham Art Center",
-      "changes": {
-        "location": {
-          "from": "Village of Pelham, NY",
-          "to": "Columbia, MD"
-        },
-        "url": {
-          "from": "https://opportunities.aspenleadershipgroup.com/",
-          "to": "https://opportunities.aspenleadershipgroup.com/opportunities/8870"
-        },
-        "sector": {
-          "from": "Unclassified",
-          "to": "Philanthropy"
-        }
-      }
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "updated",
-      "job_id": "86bbc2923bfd7d49",
-      "source": "Aspen Leadership Group",
-      "title": "Executive Director",
-      "organization": "Capital Area Housing Partnership",
-      "changes": {
-        "location": {
-          "from": "Lansing, MI",
-          "to": "Duvall, WA"
-        },
-        "url": {
-          "from": "https://opportunities.aspenleadershipgroup.com/",
-          "to": "https://opportunities.aspenleadershipgroup.com/opportunities/9035"
-        },
-        "sector": {
-          "from": "Unclassified",
-          "to": "Philanthropy"
-        }
-      }
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "updated",
-      "job_id": "c0de870c95052a8d",
-      "source": "Aspen Leadership Group",
-      "title": "Executive Director",
-      "organization": "Ronald McDonald House Los Angeles",
-      "changes": {
-        "location": {
-          "from": "Los Angeles, CA",
-          "to": "Duvall, WA"
-        },
-        "url": {
-          "from": "https://opportunities.aspenleadershipgroup.com/",
-          "to": "https://opportunities.aspenleadershipgroup.com/opportunities/8837"
-        },
-        "sector": {
-          "from": "Unclassified",
-          "to": "Health"
-        }
-      }
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "updated",
-      "job_id": "7c8727910769bca9",
-      "source": "Aspen Leadership Group",
-      "title": "Executive Director",
-      "organization": "Endless Frontiers",
-      "changes": {
-        "url": {
-          "from": "https://opportunities.aspenleadershipgroup.com/",
-          "to": "https://opportunities.aspenleadershipgroup.com/opportunities/9200"
-        },
-        "sector": {
-          "from": "Unclassified",
-          "to": "Philanthropy"
-        },
-        "work_arrangement": {
-          "from": "Unknown",
-          "to": "On-site / unspecified"
-        }
-      }
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "updated",
-      "job_id": "3a1d9aefe35149a8",
-      "source": "Aspen Leadership Group",
-      "title": "President & CEO",
-      "organization": "Fetzer Institute",
-      "changes": {
-        "location": {
-          "from": "Kalamazoo, MI",
-          "to": "Washington, DC"
-        },
-        "url": {
-          "from": "https://opportunities.aspenleadershipgroup.com/",
-          "to": "https://opportunities.aspenleadershipgroup.com/opportunities/6560"
-        },
-        "sector": {
-          "from": "Unclassified",
-          "to": "Philanthropy"
-        }
-      }
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "updated",
-      "job_id": "130558212f1c261e",
-      "source": "Aspen Leadership Group",
-      "title": "President",
-      "organization": "Fetzer Institute",
-      "changes": {
-        "organization": {
-          "from": "William Davidson Institute",
-          "to": "Fetzer Institute"
-        },
-        "location": {
-          "from": "Ann Arbor, MI",
-          "to": "Washington, DC"
-        },
-        "url": {
-          "from": "https://opportunities.aspenleadershipgroup.com/",
-          "to": "https://opportunities.aspenleadershipgroup.com/opportunities/9068"
-        },
-        "sector": {
-          "from": "Unclassified",
-          "to": "Philanthropy"
-        }
-      }
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "updated",
-      "job_id": "6ab1748ee533b824",
-      "source": "PBR Executive Search",
-      "title": "Chief Executive Officer",
-      "organization": "Greenwich House",
-      "changes": {
-        "location": {
-          "from": "New York, NY",
-          "to": "(Remote; New York, NY/Tri-State area or Washington, DC preferred)"
-        },
-        "url": {
-          "from": "https://www.pbrsearch.com/active-searches/",
-          "to": "https://www.pbrsearch.com/wps/wp-content/uploads/2026/07/BCOCEO.pdf"
-        },
-        "sector": {
-          "from": "Unclassified",
-          "to": "Philanthropy"
-        },
-        "work_arrangement": {
-          "from": "On-site / unspecified",
-          "to": "Remote"
-        }
-      }
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "updated",
-      "job_id": "a63e7ba330bd187c",
-      "source": "PBR Executive Search",
-      "title": "Executive Director",
-      "organization": "Studio Museum in Harlem",
-      "changes": {
-        "location": {
-          "from": "New York, NY",
-          "to": "(Remote; New York, NY/Tri-State area or Washington, DC preferred)"
-        },
-        "url": {
-          "from": "https://www.pbrsearch.com/active-searches/",
-          "to": "https://www.pbrsearch.com/wps/wp-content/uploads/2026/06/NYTMED.pdf"
-        },
-        "sector": {
-          "from": "Unclassified",
-          "to": "Philanthropy"
-        },
-        "work_arrangement": {
-          "from": "On-site / unspecified",
-          "to": "Remote"
-        }
-      }
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "updated",
-      "job_id": "acf48ae0f359e233",
-      "source": "BoardWalk Consulting",
-      "title": "Executive Director",
-      "organization": "Florida Rights Restoration Coalition",
-      "changes": {
-        "location": {
-          "from": "Florida",
-          "to": "Atlanta, GA"
-        },
-        "url": {
-          "from": "https://boardwalkconsulting.com/opportunities/",
-          "to": "https://boardwalkconsulting.com/jobs/frrc-executive-director/"
-        },
-        "sector": {
-          "from": "Unclassified",
-          "to": "Civic / Public"
-        }
-      }
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "updated",
-      "job_id": "b31f942adf5dca3b",
-      "source": "BoardWalk Consulting",
-      "title": "Executive Director",
-      "organization": "Gateway Early Childhood Alliance",
-      "changes": {
-        "url": {
-          "from": "https://boardwalkconsulting.com/opportunities/",
-          "to": "https://boardwalkconsulting.com/jobs/gateway-early-childhood-alliance/"
-        },
-        "sector": {
-          "from": "Unclassified",
-          "to": "Education"
-        }
-      }
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "new",
-      "job_id": "e39688bc3548ed3e",
-      "source": "BoardWalk Consulting",
-      "title": "CEO",
-      "organization": "The Colorado Health Foundation"
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "updated",
-      "job_id": "dfcd1a39e5a39154",
-      "source": "BoardWalk Consulting",
-      "title": "President & CEO",
-      "organization": "Community Foundation for Greater Atlanta",
-      "changes": {
-        "url": {
-          "from": "https://boardwalkconsulting.com/opportunities/",
-          "to": "https://boardwalkconsulting.com/jobs/cfga-ceo/"
-        },
-        "posted_date": {
-          "from": "2026-07-19",
-          "to": "2026-07-21"
-        },
-        "sector": {
-          "from": "Unclassified",
-          "to": "Philanthropy"
-        }
-      }
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "updated",
-      "job_id": "02c92a3fb8587a5a",
-      "source": "BoardWalk Consulting",
-      "title": "President & CEO",
-      "organization": "North Carolina Community Foundation",
-      "changes": {
-        "url": {
-          "from": "https://boardwalkconsulting.com/opportunities/",
-          "to": "https://boardwalkconsulting.com/jobs/president-ceo/"
-        },
-        "posted_date": {
-          "from": "2026-06-19",
-          "to": "2026-06-21"
-        },
-        "sector": {
-          "from": "Unclassified",
-          "to": "Philanthropy"
-        }
-      }
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "updated",
-      "job_id": "9bc079973dda6ba0",
-      "source": "BoardWalk Consulting",
-      "title": "Chief Executive Officer",
-      "organization": "The Greenville Housing Authority",
-      "changes": {
-        "url": {
-          "from": "https://boardwalkconsulting.com/opportunities/",
-          "to": "https://boardwalkconsulting.com/jobs/tgha-ceo/"
-        },
-        "posted_date": {
-          "from": "2026-05-19",
-          "to": "2026-05-22"
-        },
-        "sector": {
-          "from": "Unclassified",
-          "to": "Human Services"
-        }
-      }
-    },
     {
       "at": "2026-09-19T06:41:48.620945+00:00",
       "type": "updated",
@@ -5010,6 +4628,1189 @@
           "to": "partner engagement. COMPENSATION: Salary range is $160,000 to $190,000, commensurate with experience. TO APPLY: Please submit a resume and thoughtful cover letter in confidence here . ABC va"
         }
       }
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "removed_false_positive",
+      "job_id": "f9337084ae24413f",
+      "source": "Development Guild",
+      "title": "CEO Searches",
+      "organization": "Executive Search",
+      "url": "https://www.developmentguild.com/nonprofit-executive-search/ceo-searches/"
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "removed_false_positive",
+      "job_id": "f9e5ea93e3766e84",
+      "source": "Development Guild",
+      "title": "Message From Our CEO",
+      "organization": "Diversity, Equity & Inclusion",
+      "url": "https://www.developmentguild.com/about/message-from-our-ceo/"
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "removed_false_positive",
+      "job_id": "d16a50b730677710",
+      "source": "The Batten Group",
+      "title": "President & CEO West Allis, Wisconsin, USA $385k/year",
+      "organization": "420k/year Full Time ﻿About Industries for the Blind and Visually Impaired (IBVI)Founded in 1948 with a simple but powerful vision—to create meaningful employment for a blind family...",
+      "url": "https://thebattengroup.com/jobs/president-ceo-3546845/"
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "removed_false_positive",
+      "job_id": "db715c1a5c246dc4",
+      "source": "The Batten Group",
+      "title": "Executive Director McLean, Virginia, USA $149k/year",
+      "organization": "165k/year Full Time, Hybrid About National Kidney FoundationFueled by passion and urgency, the National Kidney Foundation is a lifeline for all people affected by kidney disease. As pionee...",
+      "url": "https://thebattengroup.com/jobs/executive-director-3593439/"
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "removed_false_positive",
+      "job_id": "9c4e0528234af899",
+      "source": "The Batten Group",
+      "title": "Executive Director Charlotte, North Carolina, USA $90k/year",
+      "organization": "100k/year Hybrid About NXT | CLTNXT | CLT is a Charlotte-based nonprofit organization dedicated to building the region’s next generation of successful entrepreneurial companies...",
+      "url": "https://thebattengroup.com/jobs/executive-director-3659418/"
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "removed_false_positive",
+      "job_id": "7b6286d1c09d07ea",
+      "source": "The Batten Group",
+      "title": "Nonprofit Executive Director Search",
+      "organization": "Nonprofit Development & Fundraising Talent",
+      "url": "https://thebattengroup.com/service-types/non-profit-executive-director-search/"
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "removed_false_positive",
+      "job_id": "159a2c605a3d00f4",
+      "source": "The Batten Group",
+      "title": "Nonprofit President and CEO Search",
+      "organization": "Nonprofit Executive Search Team | The Batten Group",
+      "url": "https://thebattengroup.com/service-types/non-profit-president-and-ceo-search/"
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "removed_false_positive",
+      "job_id": "78cfe8ee0e7a298e",
+      "source": "Isaacson, Miller",
+      "title": "Harris-Pratt Executive Director",
+      "organization": "AI Institute",
+      "url": "https://www.imsearch.com/insights-results/results"
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "removed_false_positive",
+      "job_id": "e51dbbcc28cc6b74",
+      "source": "Scion Executive Search",
+      "title": "Executive Director (ED)",
+      "organization": "Chief Financial Officer (CFO)",
+      "url": "https://scionexecutivesearch.com/executive-director-search-firm/"
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "removed_false_positive",
+      "job_id": "5341a1090ab43814",
+      "source": "Scion Executive Search",
+      "title": "Chief Executive Officer (CEO)",
+      "organization": "C-Suite Specialties",
+      "url": "https://scionexecutivesearch.com/nonprofit-ceo-search-firm/"
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "removed_false_positive",
+      "job_id": "62e62841416b764c",
+      "source": "Bridge Partners",
+      "title": "CEO and Executive Director",
+      "organization": "Functional Expertise",
+      "url": "https://bridgepartnersllc.com/function/ceo/"
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "removed_false_positive",
+      "job_id": "848b6efc72d8b08c",
+      "source": "The Batten Group",
+      "title": "President & CEO",
+      "organization": "West Allis, Wisconsin, USA",
+      "url": "https://thebattengroup.com/jobs/president-ceo-3546845/"
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "removed_false_positive",
+      "job_id": "8036fffc6de66e8a",
+      "source": "The Batten Group",
+      "title": "Executive Director",
+      "organization": "McLean, Virginia, USA",
+      "url": "https://thebattengroup.com/jobs/executive-director-3593439/"
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "updated",
+      "job_id": "b31f942adf5dca3b",
+      "source": "BoardWalk Consulting",
+      "title": "Executive Director",
+      "organization": "Gateway Early Childhood Alliance",
+      "changes": {
+        "compensation_text": {
+          "from": "nt deep roots here. Compensation The Alliance offers a competitive compensation and benefits package, the starting salary is anticipated at $125,000 – $150,000. For potential consideration or to recommend a prospect, please email GatewayAlliance@BoardWalkConsulting.com or call T",
+          "to": "Compensation The Alliance offers a competitive compensation and benefits package, the starting salary is anticipated at $125,000 – $150,000. For potential consideration or to recommend a prospect, please email GatewayAlliance@BoardWalkConsulting.com or call Terri Kohan or Michel"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "reopened",
+      "job_id": "62e62841416b764c",
+      "source": "Bridge Partners",
+      "title": "CEO and Executive Director",
+      "organization": "Functional Expertise"
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "updated",
+      "job_id": "01b6e7a8382fc43c",
+      "source": "Bridge Partners",
+      "title": "Executive Director",
+      "organization": "Hudson River Park Friends",
+      "changes": {
+        "organization": {
+          "from": "HUDSON RIVER PARK FRIENDS",
+          "to": "Hudson River Park Friends"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "updated",
+      "job_id": "7bfd9809148456cd",
+      "source": "Bridge Partners",
+      "title": "Chief Executive Officer",
+      "organization": "Hudson River Park Friends",
+      "changes": {
+        "organization": {
+          "from": "XIENTE",
+          "to": "Hudson River Park Friends"
+        },
+        "url": {
+          "from": "https://bridgepartnersllc.com/wp-content/uploads/2026/09/Xiente-CEO-PD-9.1-1.pdf",
+          "to": "https://bridgepartnersllc.com/wp-content/uploads/2026/09/Hudson-River-Park-Friends-ED-position-description.pdf"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "updated",
+      "job_id": "acd12b98c7e10a51",
+      "source": "Scion Executive Search",
+      "title": "Interim CEO",
+      "organization": "a well-established privately held manufacturing organization",
+      "changes": {
+        "organization": {
+          "from": "Location:",
+          "to": "a well-established privately held manufacturing organization"
+        },
+        "location": {
+          "from": "Utica, MI",
+          "to": "Utica, MI 48315"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "updated",
+      "job_id": "2927463d94d4b795",
+      "source": "Scion Executive Search",
+      "title": "Executive Director",
+      "organization": "Health Affairs Publishing",
+      "changes": {
+        "location": {
+          "from": "Washington, DC",
+          "to": "Washington, DC 20036"
+        },
+        "compensation_text": {
+          "from": "pline is preferred. COMPENSATION AND BENEFITS This position offers a competitive compensation package with an anticipated salary range of $220,000–$250,000 , commensurate with experience and qualifications. The comprehensive benefits package includes health, dental, vision,",
+          "to": "COMPENSATION AND BENEFITS This position offers a competitive compensation package with an anticipated salary range of $220,000–$250,000 , commensurate with experience and qualifications. The comprehensive benefits package includes health, dental, vision, and life insurance;"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "updated",
+      "job_id": "01ffeb85a0e24b02",
+      "source": "Scion Executive Search",
+      "title": "Executive Director",
+      "organization": "Board of Directors",
+      "changes": {
+        "organization": {
+          "from": "Location:",
+          "to": "Board of Directors"
+        },
+        "location": {
+          "from": "Albuquerque, NM",
+          "to": "Albuquerque, NM 87108"
+        },
+        "compensation_text": {
+          "from": "ffers a competitive salary range of $150,000 to $170,000 (DOE), along with relocation assistance, a comprehensive benefits package that includes medical, dental, and vision cov",
+          "to": "COMPENSATION AND BENEFITS: This full-time, on-site executive role offers an extraordinary opportunity to lead one of New Mexico's most respected and mission-driven animal welfare organizations into its next chapter of impact. The position offers a competitive salary range of $150,000 to $170,000 (DOE), along with relocation assistance, a comprehensive benefits package that includes medical, dental, and vision coverage, with the orga"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "updated",
+      "job_id": "68edc02998881b46",
+      "source": "Scion Executive Search",
+      "title": "Interim Executive Director",
+      "organization": "Our Divisions",
+      "changes": {
+        "organization": {
+          "from": "Location:",
+          "to": "Our Divisions"
+        },
+        "location": {
+          "from": "Phoenix, AZ",
+          "to": "Phoenix, AZ 85016"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "new",
+      "job_id": "5f6d6ff78ad47b55",
+      "source": "Scion Executive Search",
+      "title": "Executive Director",
+      "organization": "our client"
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "updated",
+      "job_id": "1ae253d1667bd31d",
+      "source": "Scion Executive Search",
+      "title": "Chief Executive Officer",
+      "organization": "Vayu Health",
+      "changes": {
+        "organization": {
+          "from": "Location:",
+          "to": "Vayu Health"
+        },
+        "location": {
+          "from": "Milpitas, CA",
+          "to": "Menlo Park, CA 94028"
+        },
+        "compensation_text": {
+          "from": "service innovation. COMPENSATION AND BENEFITS: This position offers a competitive base salary range of $275,000 – $315,000, commensurate with experience, along with a comprehensive benefits package. APPLICATIONS AND NOMINATIONS: Vayu Health h",
+          "to": "COMPENSATION AND BENEFITS: This position offers a competitive base salary range of $275,000 – $315,000, commensurate with experience, along with a comprehensive benefits package. APPLICATIONS AND NOMINATIONS: Vayu Health has retained the serv"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "updated",
+      "job_id": "4ab2e84d73594bee",
+      "source": "Scion Executive Search",
+      "title": "Senior Executive Director",
+      "organization": "American Heart Association",
+      "changes": {
+        "organization": {
+          "from": "Location:",
+          "to": "American Heart Association"
+        },
+        "location": {
+          "from": "Milpitas, CA",
+          "to": "Irving, TX"
+        },
+        "compensation_text": {
+          "from": "bitious objectives. COMPENSATION AND BENEFITS: This rewarding role offers a competitive salary of $171,000–$190,000 (DOE) with eligibility for an incentive opportunity of up to 25% based on achievement of revenue goals. The American He",
+          "to": "COMPENSATION AND BENEFITS: This rewarding role offers a competitive salary of $171,000–$190,000 (DOE) with eligibility for an incentive opportunity of up to 25% based on achievement of revenue goals. The American Heart Association also"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "new",
+      "job_id": "7c25c34d3f02f887",
+      "source": "Scion Executive Search",
+      "title": "Executive Director",
+      "organization": "Our Divisions"
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "closed",
+      "job_id": "e51dbbcc28cc6b74",
+      "source": "Scion Executive Search",
+      "title": "Executive Director (ED)",
+      "organization": "Chief Financial Officer (CFO)"
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "closed",
+      "job_id": "5341a1090ab43814",
+      "source": "Scion Executive Search",
+      "title": "Chief Executive Officer (CEO)",
+      "organization": "C-Suite Specialties"
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "new",
+      "job_id": "98c565cbc7502a0c",
+      "source": "Isaacson, Miller",
+      "title": "Harris-Pratt Executive Director, AI Institute",
+      "organization": "Rochester Institute of Technology"
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "new",
+      "job_id": "db5945bd1ac132ad",
+      "source": "Isaacson, Miller",
+      "title": "Executive Director, Accreditation and Education",
+      "organization": "Accreditation Council for Education in Nutrition and Dietetics (ACEND)"
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "new",
+      "job_id": "ea0438af39bfe8be",
+      "source": "Isaacson, Miller",
+      "title": "Chief Executive Officer",
+      "organization": "New Jersey Institute for Social Justice"
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "new",
+      "job_id": "ac2ff46a628650d6",
+      "source": "Isaacson, Miller",
+      "title": "Chief Executive Officer, NSF Grid Modernization Engine in the Carolinas",
+      "organization": "University of North Carolina at Charlotte"
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "new",
+      "job_id": "f0292b2b0c8f021e",
+      "source": "Isaacson, Miller",
+      "title": "President",
+      "organization": "Public Education Forward"
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "new",
+      "job_id": "3a3ef4f2d89b8295",
+      "source": "Isaacson, Miller",
+      "title": "Executive Director, Dartmouth Dialogues",
+      "organization": "Dartmouth College"
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "new",
+      "job_id": "5db1e2ea0d8d007e",
+      "source": "Isaacson, Miller",
+      "title": "President",
+      "organization": "Jacksonville University"
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "new",
+      "job_id": "5d808b6e5ad6b3d9",
+      "source": "Isaacson, Miller",
+      "title": "Chief Executive Officer",
+      "organization": "World Savvy"
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "new",
+      "job_id": "0d2aa39db0ab0016",
+      "source": "Isaacson, Miller",
+      "title": "President",
+      "organization": "The Wenner-Gren Foundation"
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "new",
+      "job_id": "973efbe10763ea4f",
+      "source": "Isaacson, Miller",
+      "title": "Executive Director",
+      "organization": "Legal Services of Eastern Missouri"
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "new",
+      "job_id": "41e65aa40a11e404",
+      "source": "Isaacson, Miller",
+      "title": "President",
+      "organization": "Big Ten Academic Alliance"
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "new",
+      "job_id": "c91a7097a7fd366b",
+      "source": "Isaacson, Miller",
+      "title": "The Thomas A. 1977 and Gina T. Russo 1977 Executive Director",
+      "organization": "Dartmouth Tribal Sovereignty Institute"
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "new",
+      "job_id": "4c765f581223d2b2",
+      "source": "Isaacson, Miller",
+      "title": "Executive Director",
+      "organization": "The Richard Pousette-Dart Foundation"
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "new",
+      "job_id": "cd1a5fce31187e78",
+      "source": "Isaacson, Miller",
+      "title": "President",
+      "organization": "Upper Valley Land Trust"
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "new",
+      "job_id": "d761803dca1fe1e8",
+      "source": "Isaacson, Miller",
+      "title": "President",
+      "organization": "United Theological Seminary of the Twin Cities"
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "new",
+      "job_id": "bd87f176f3dadb7d",
+      "source": "Isaacson, Miller",
+      "title": "President",
+      "organization": "Mount Mary University"
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "new",
+      "job_id": "27e6b139c8cde699",
+      "source": "Isaacson, Miller",
+      "title": "President",
+      "organization": "Muhlenberg College"
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "new",
+      "job_id": "f8f798114a08ef13",
+      "source": "Isaacson, Miller",
+      "title": "Executive Director",
+      "organization": "Weissberg Foundation"
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "new",
+      "job_id": "643562287bdc3d5b",
+      "source": "Isaacson, Miller",
+      "title": "President and Chief Executive Officer",
+      "organization": "Rochester Museum and Science Center"
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "new",
+      "job_id": "8a97a15767dcef0a",
+      "source": "Isaacson, Miller",
+      "title": "Executive Director, Ryan Institute for Interdisciplinary Health Solutions",
+      "organization": "Washington University in St. Louis, Bursky School of Public Health"
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "new",
+      "job_id": "948dc9f5fb7e6cc0",
+      "source": "Isaacson, Miller",
+      "title": "Executive Director",
+      "organization": "The John & Mable Ringling Museum of Art, a unit of Florida State University"
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "new",
+      "job_id": "c61ed75a33cf4ee0",
+      "source": "Isaacson, Miller",
+      "title": "President/Dean",
+      "organization": "California University of Science and Medicine"
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "new",
+      "job_id": "7823a9c99f3daebb",
+      "source": "Isaacson, Miller",
+      "title": "President",
+      "organization": "Science Philanthropy Alliance"
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "new",
+      "job_id": "7993a6a739e3275e",
+      "source": "Isaacson, Miller",
+      "title": "Chief Executive Officer",
+      "organization": "Island Housing Trust"
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "new",
+      "job_id": "12b82c108bd0f7ee",
+      "source": "Isaacson, Miller",
+      "title": "Executive Director",
+      "organization": "Aloha Foundation"
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "new",
+      "job_id": "36a8424a03334bf1",
+      "source": "Isaacson, Miller",
+      "title": "Chief Executive Officer",
+      "organization": "St. Louis Public Library"
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "new",
+      "job_id": "9a6a13760d077198",
+      "source": "Isaacson, Miller",
+      "title": "Executive Director for the Arts",
+      "organization": "Massachusetts Institute of Technology (MIT)"
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "new",
+      "job_id": "e9dadcf155959c56",
+      "source": "Isaacson, Miller",
+      "title": "Executive Director, Cancer Development",
+      "organization": "Yale School of Medicine"
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "new",
+      "job_id": "e44e5986f4cea5b4",
+      "source": "Isaacson, Miller",
+      "title": "President",
+      "organization": "William James College"
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "new",
+      "job_id": "36097e5571f3b511",
+      "source": "Isaacson, Miller",
+      "title": "President and Chief Executive Officer",
+      "organization": "MAZON: A Jewish Response To Hunger"
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "new",
+      "job_id": "4d22d9791064239a",
+      "source": "Isaacson, Miller",
+      "title": "Executive Director/Chief Executive Officer",
+      "organization": "New Jersey League of Conservation Voters"
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "new",
+      "job_id": "a2fed1caa3f3e298",
+      "source": "Isaacson, Miller",
+      "title": "Executive Director",
+      "organization": "Saving Yellowstone"
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "new",
+      "job_id": "961333c607e8285d",
+      "source": "Isaacson, Miller",
+      "title": "Executive Director",
+      "organization": "Arizona School Boards Association Insurance Trust (ASBAIT)"
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "new",
+      "job_id": "99d6d1a4232be64e",
+      "source": "Isaacson, Miller",
+      "title": "President & Chief Executive Officer",
+      "organization": "BrightFocus Foundation"
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "new",
+      "job_id": "747822607e0e002d",
+      "source": "Isaacson, Miller",
+      "title": "President",
+      "organization": "University of Northern Colorado"
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "new",
+      "job_id": "7269c0cddf6eaf19",
+      "source": "Isaacson, Miller",
+      "title": "President",
+      "organization": "Virginia Tech"
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "new",
+      "job_id": "b7513a883e6587a3",
+      "source": "Isaacson, Miller",
+      "title": "President and Chief Executive Officer",
+      "organization": "The Wistar Institute"
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "new",
+      "job_id": "4b8e5a287bdf5d7a",
+      "source": "Isaacson, Miller",
+      "title": "Executive Director",
+      "organization": "Boston Medical Center, Grayken Center for Addiction"
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "new",
+      "job_id": "3fcea97e0f540892",
+      "source": "Isaacson, Miller",
+      "title": "Executive Director",
+      "organization": "Massachusetts Water Resources Authority"
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "new",
+      "job_id": "ae44d8ae018f0a9c",
+      "source": "Isaacson, Miller",
+      "title": "Suzanne Deal Booth Executive Director",
+      "organization": "Rice University, Moody Center for the Arts"
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "new",
+      "job_id": "0b184f86d454009b",
+      "source": "Isaacson, Miller",
+      "title": "President",
+      "organization": "Eckerd College"
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "new",
+      "job_id": "47f6a9ab1967c4e7",
+      "source": "Isaacson, Miller",
+      "title": "President",
+      "organization": "MLK Community Health Foundation"
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "new",
+      "job_id": "eca0d69ca05719c0",
+      "source": "Isaacson, Miller",
+      "title": "President",
+      "organization": "Swarthmore College"
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "new",
+      "job_id": "00f52d224d53a25f",
+      "source": "Isaacson, Miller",
+      "title": "Executive Director",
+      "organization": "Curtis Memorial Library"
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "new",
+      "job_id": "58660cf5cf05e8d8",
+      "source": "Isaacson, Miller",
+      "title": "President",
+      "organization": "University of Dayton"
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "new",
+      "job_id": "6edb5dac5323c5ab",
+      "source": "Isaacson, Miller",
+      "title": "President & Chief Executive Officer",
+      "organization": "Utah's Hogle Zoo"
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "new",
+      "job_id": "1c98b4cf29fa0658",
+      "source": "Isaacson, Miller",
+      "title": "President",
+      "organization": "Washington and Lee University"
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "closed",
+      "job_id": "b180e4e1a73afda9",
+      "source": "Isaacson, Miller",
+      "title": "Science, Technology, + Society Harris-Pratt Executive Director, AI Institute Rochester Institute of Technology",
+      "organization": "Higher Education"
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "closed",
+      "job_id": "2346d7265c206b97",
+      "source": "Isaacson, Miller",
+      "title": "President/Executive Director",
+      "organization": "Human Resources"
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "closed",
+      "job_id": "78cfe8ee0e7a298e",
+      "source": "Isaacson, Miller",
+      "title": "Harris-Pratt Executive Director",
+      "organization": "AI Institute"
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "updated",
+      "job_id": "b565b85c0356c4f6",
+      "source": "Lindauer",
+      "title": "Executive Director, Bertarelli Institute for Family Entrepreneurship",
+      "organization": "Bertarelli Institute for Family Entrepreneurship",
+      "changes": {
+        "compensation_text": {
+          "from": "l significance. The salary range for this position is $185,555–$206,172. Other searches for Babson College Director, Planned Giving Past searches and placements for Babson College Associate V",
+          "to": "salary range for this position is $185,555–$206,172. Other searches for Babson College Director, Planned Giving Past searches and placements for Babson College Associate Vice President, Capit"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "updated",
+      "job_id": "fc19e4b6b0436647",
+      "source": "DSG Global",
+      "title": "President/Chief Executive Officer",
+      "organization": "ACC Senior Services",
+      "changes": {
+        "organization": {
+          "from": "DSG Global",
+          "to": "ACC Senior Services"
+        },
+        "location": {
+          "from": "Technology, AI",
+          "to": "Sacramento, CA"
+        },
+        "compensation_text": {
+          "from": "s for older adults. Compensation and Benefits Salary is competitive and commensurate with experience. The salary range for this role is $275,000 - $300,000 with a generous benefits package. Contact DSG | Koya has been exclusively retained for this engagement. Express interes",
+          "to": "Compensation and Benefits Salary is competitive and commensurate with experience. The salary range for this role is $275,000 - $300,000 with a generous benefits package. Contact DSG | Koya has been exclusively retained for this engagement. Express interest in this role by fi"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "updated",
+      "job_id": "b8e982953accafdb",
+      "source": "DSG Global",
+      "title": "Chief Executive Officer",
+      "organization": "Aeris Insight",
+      "changes": {
+        "organization": {
+          "from": "DSG Global",
+          "to": "Aeris Insight"
+        },
+        "compensation_text": {
+          "from": "ces moving forward. Compensation and Benefits Salary is competitive and commensurate with experience. The salary range for this role is $230,000 - $250,000 with a generous benefits package. The exact salary that will be offered to the CEO will be determined based on a consid",
+          "to": "Compensation and Benefits Salary is competitive and commensurate with experience. The salary range for this role is $230,000 - $250,000 with a generous benefits package. The exact salary that will be offered to the CEO will be determined based on a consideration of the succe"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "updated",
+      "job_id": "8cbe95a1133c0bc5",
+      "source": "DSG Global",
+      "title": "President and CEO",
+      "organization": "American Board of Surgery (ABS)",
+      "changes": {
+        "organization": {
+          "from": "DSG Global",
+          "to": "American Board of Surgery (ABS)"
+        },
+        "location": {
+          "from": "Remote",
+          "to": "Remote or Philadelphia, PA"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "updated",
+      "job_id": "64ee69a30199e1a8",
+      "source": "DSG Global",
+      "title": "CEO",
+      "organization": "Aspiranet",
+      "changes": {
+        "organization": {
+          "from": "DSG Global",
+          "to": "Aspiranet"
+        },
+        "location": {
+          "from": "Technology, AI",
+          "to": "South San Francisco, CA"
+        },
+        "compensation_text": {
+          "from": "outh San Francisco. Compensation and Benefits The salary range for this position is $400,000 – $475,000 commensurate with experience. Aspiranet values its employees and offers a comprehensive benefits package. Contact DSG",
+          "to": "Compensation and Benefits The salary range for this position is $400,000 – $475,000 commensurate with experience. Aspiranet values its employees and offers a comprehensive benefits package. Contact DSG | Koya has been exclu"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "closed",
+      "job_id": "9d9450d05842e801",
+      "source": "DSG Global",
+      "title": "Executive Director",
+      "organization": "DSG Global"
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "updated",
+      "job_id": "bdb4fab450cecd43",
+      "source": "Kittleman Associates",
+      "title": "President and CEO",
+      "organization": "Viability, Inc.",
+      "changes": {
+        "organization": {
+          "from": "Mid-Ohio Food Collective",
+          "to": "Viability, Inc."
+        },
+        "location": {
+          "from": "Grove City, OH, United States",
+          "to": "Springfield, MA, United States"
+        },
+        "url": {
+          "from": "https://www.kittlemansearch.com/opportunities/president-ceo-mid-ohio-food-collective",
+          "to": "https://www.kittlemansearch.com/opportunities/president-ceo-viability"
+        },
+        "posted_date": {
+          "from": "2026-09-10",
+          "to": "2026-09-16"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "updated",
+      "job_id": "bdb4fab450cecd43",
+      "source": "Kittleman Associates",
+      "title": "President and CEO",
+      "organization": "Schoodic Institute at Acadia National Park",
+      "changes": {
+        "organization": {
+          "from": "Mid-Ohio Food Collective",
+          "to": "Schoodic Institute at Acadia National Park"
+        },
+        "location": {
+          "from": "Grove City, OH, United States",
+          "to": "Winter Harbor, ME, United States"
+        },
+        "url": {
+          "from": "https://www.kittlemansearch.com/opportunities/president-ceo-mid-ohio-food-collective",
+          "to": "https://www.kittlemansearch.com/opportunities/president-ceo-schoodic-institute"
+        },
+        "posted_date": {
+          "from": "2026-09-10",
+          "to": "2026-09-14"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "updated",
+      "job_id": "b5a25d955601deb0",
+      "source": "DRiWaterstone",
+      "title": "Executive Director",
+      "organization": "National Organization of Veterans’ Advocates (NOVA)",
+      "changes": {
+        "compensation_text": {
+          "from": "m/position/ed-nova/ Salary Range: $150,000 - $180,000 (salary commensurate with experience) Location: Washington, DC (Hybrid role) Travel: Conferences twice yearly, plus add",
+          "to": "Salary Range: $150,000 - $180,000 (salary commensurate with experience) Location: Washington, DC (Hybrid role) Travel: Conferences twice yearly, plus additional conventions/"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "updated",
+      "job_id": "4a3b492bb649f68d",
+      "source": "DRiWaterstone",
+      "title": "Chief Executive Officer",
+      "organization": "Mental Health Association of Maryland",
+      "changes": {
+        "compensation_text": {
+          "from": "position/ceo-mhamd/ Salary Range: $200,000 - $250,000 Location: Lutherville, MD (Hybrid) Travel: Statewide travel within Maryland required; occasional national travel. Equal",
+          "to": "Salary Range: $200,000 - $250,000 Location: Lutherville, MD (Hybrid) Travel: Statewide travel within Maryland required; occasional national travel. Equal-opportunity Employe"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "updated",
+      "job_id": "4c0e511f1cff3c0e",
+      "source": "LeaderFit",
+      "title": "Chief Executive Officer",
+      "organization": "Sixth & I",
+      "changes": {
+        "organization": {
+          "from": "Active Search",
+          "to": "Sixth & I"
+        },
+        "location": {
+          "from": "I Washington, DC",
+          "to": "Washington, DC"
+        },
+        "compensation_text": {
+          "from": "I has budgeted the salary range for this role starting at $230,000. FLSA Status: Exempt Benefits: Sixth & I has a competitive benefits package that includes Health, V",
+          "to": "COMPENSATION & BENEFITS Salary: Sixth & I has a comprehensive pay equity philosophy which weighs years of experience at a particular job level and competency to determine an equitable salary within our organization. Sixth & I has budgeted the salary range for this role starting at $230,000. FLSA Status: Exempt Benefits: Sixth & I has a competitive benefits package that includes Health, Vision and Dental Ins"
+        },
+        "compensation_min": {
+          "from": 30000,
+          "to": 230000
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "updated",
+      "job_id": "49c7bc19349cb51f",
+      "source": "LeaderFit",
+      "title": "Executive Director",
+      "organization": "Elohee Retreat Center",
+      "changes": {
+        "organization": {
+          "from": "Active Search",
+          "to": "Elohee Retreat Center"
+        },
+        "location": {
+          "from": "Elohee Retreat Center Sautee Nacoochee, GA",
+          "to": "Sautee Nacoochee, GA"
+        },
+        "compensation_text": {
+          "from": "wardship of Elohee. Compensation Salary Range: $95,000 to $120,000, commensurate with experience. A private, on-site mountain home (3 bedrooms, 2 bathrooms) is provided as part of the ov",
+          "to": "Compensation Salary Range: $95,000 to $120,000, commensurate with experience. A private, on-site mountain home (3 bedrooms, 2 bathrooms) is provided as part of the overall compensation p"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "updated",
+      "job_id": "f97a9ce4a62f6b8a",
+      "source": "LeaderFit",
+      "title": "Executive Director (Part-Time)",
+      "organization": "Byway Foundation",
+      "changes": {
+        "organization": {
+          "from": "Active Search",
+          "to": "Byway Foundation"
+        },
+        "location": {
+          "from": "Byway Foundation Kansas City, KS",
+          "to": "The selected candidate must live or be willing to relocate to the Kansas City area. The Foundation’s giving is primarily focused on Kansas City, and a local presence is essential f"
+        },
+        "compensation_text": {
+          "from": "itment to the work. Compensation The estimated annual salary is $80,000 to $110,000, depending on the selected candidate’s experience. How to Apply Please submit your resume, a cover letter, and a statem",
+          "to": "Compensation The estimated annual salary is $80,000 to $110,000, depending on the selected candidate’s experience. How to Apply Please submit your resume, a cover letter, and a statement of faith as a si"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "new",
+      "job_id": "c62162d099baded4",
+      "source": "LeaderFit",
+      "title": "President",
+      "organization": "Advancement and Philanthropic Engagement, Institute for Women's Policy Research View all jobs Vice President, Advancemen"
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "new",
+      "job_id": "e940c8bb95f2d94b",
+      "source": "LeaderFit",
+      "title": "President",
+      "organization": "External Engagement, Women's Refugee Commission View all jobs Vice President, External Engagement, Women's Refugee Commi"
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "updated",
+      "job_id": "64157b1b229dd896",
+      "source": "DRG Talent",
+      "title": "Chief Executive Officer",
+      "organization": "American Friends of Shalva",
+      "changes": {
+        "compensation_text": {
+          "from": "e and comprehensive compensation package for this role. The salary range is $300,000 - $350,000. The benefits package includes medical, dental, and vision coverage, flexible paid time off, as well as a generous reti",
+          "to": "COMPENSATION AND BENEFITS American Friends of Shalva offers a competitive and comprehensive compensation package for this role. The salary range is $300,000 - $350,000. The benefits package includes medical, dental, and vision coverage, flexible paid time off, as well as a generous retirement plan. TIMELIN"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "updated",
+      "job_id": "709a87dc8a739cf1",
+      "source": "DRG Talent",
+      "title": "Chief Executive Officer",
+      "organization": "Triple C Housing, Inc.",
+      "changes": {
+        "compensation_text": {
+          "from": "bilities as needed. COMPENSATION AND BENEFITS Salary: $230,000-250,000 Benefits · Medical, Dental, Vision, 401(k) · Medical and Dependent Care Spending Accounts · Life Accidental Death, and",
+          "to": "COMPENSATION AND BENEFITS Salary: $230,000-250,000 Benefits · Medical, Dental, Vision, 401(k) · Medical and Dependent Care Spending Accounts · Life Accidental Death, and AFLAC Supplemental I"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "updated",
+      "job_id": "4aa383eb3953a071",
+      "source": "DRG Talent",
+      "title": "Chief Executive Officer",
+      "organization": "Birch Family Services",
+      "changes": {
+        "compensation_text": {
+          "from": "bilities as needed. COMPENSATION AND BENEFITS The base salary range for this position is $475,000 to $550,000 plus benefits, including opportunity for a discretionary incentive. Birch offers a competitive benefits package includi",
+          "to": "COMPENSATION AND BENEFITS The base salary range for this position is $475,000 to $550,000 plus benefits, including opportunity for a discretionary incentive. Birch offers a competitive benefits package including comprehensive hea"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "updated",
+      "job_id": "6a1aa5a4c9a42c45",
+      "source": "DRG Talent",
+      "title": "Chief Executive Officer",
+      "organization": "Alpert Jewish Family Service",
+      "changes": {
+        "compensation_text": {
+          "from": "Palm Beach, Florida Salary: $275,000- $325,000 BACKGROUND About Palm Beach County Palm Beach County is home to a dynamic, growing, and highly engaged Jewish community",
+          "to": "Salary: $275,000- $325,000 BACKGROUND About Palm Beach County Palm Beach County is home to a dynamic, growing, and highly engaged Jewish community with deep philanthr"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "updated",
+      "job_id": "1a284673ef197f80",
+      "source": "DRG Talent",
+      "title": "Chief Executive Officer",
+      "organization": "Camp Tawonga",
+      "changes": {
+        "compensation_text": {
+          "from": "ay Area, California Salary: $245,000-$275,000 BACKGROUND The Organization For 100 years, Camp Tawonga has served as a leader in Jewish camping, fostering in children",
+          "to": "Salary: $245,000-$275,000 BACKGROUND The Organization For 100 years, Camp Tawonga has served as a leader in Jewish camping, fostering in children and families a deep"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "updated",
+      "job_id": "b14f96d79ec259dd",
+      "source": "DRG Talent",
+      "title": "Executive Director",
+      "organization": "Jewish Council on Urban Affairs",
+      "changes": {
+        "compensation_text": {
+          "from": "r Chicago, Illinois Salary: $135,000-$145,000 BACKGROUND The Organization The Jewish Council on Urban Affairs (JCUA) organizes Chicagoland’s Jewish community to purs",
+          "to": "Salary: $135,000-$145,000 BACKGROUND The Organization The Jewish Council on Urban Affairs (JCUA) organizes Chicagoland’s Jewish community to pursue justice. For more"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "updated",
+      "job_id": "b6849e5e69992613",
+      "source": "DRG Talent",
+      "title": "Executive Director",
+      "organization": "Generation Patient",
+      "changes": {
+        "compensation_text": {
+          "from": "ive Director Remote Salary: $125,000-$140,000 BACKGROUND The Organization Generation Patient represents the 25 million+ young adults with chronic and rare conditions",
+          "to": "Salary: $125,000-$140,000 BACKGROUND The Organization Generation Patient represents the 25 million+ young adults with chronic and rare conditions. Over the last few"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "updated",
+      "job_id": "5d2b798b45af9873",
+      "source": "DRG Talent",
+      "title": "President",
+      "organization": "Yeshivat Chovevei Torah Rabbinical School",
+      "changes": {
+        "compensation_text": {
+          "from": "e and comprehensive compensation package for this role. The salary range is $300,000-$350,000 . The benefits package includes an “as needed” PTO program, paid state and Jewish holidays, professional development fu",
+          "to": "COMPENSATION AND BENEFITS Yeshivat Chovevei Torah offers a competitive and comprehensive compensation package for this role. The salary range is $300,000-$350,000 . The benefits package includes an “as needed” PTO program, paid state and Jewish holidays, professional development funds, health insuranc"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "updated",
+      "job_id": "f7175611cc49e366",
+      "source": "Sandler Search",
+      "title": "Executive Director",
+      "organization": "Riverdale Neighborhood House",
+      "changes": {
+        "location": {
+          "from": "New York, NY",
+          "to": "Bronx, New York"
+        },
+        "url": {
+          "from": "https://sandlersearch.org/job/deputy-director-for-litigation-advocacy/",
+          "to": "https://sandlersearch.org/job/executive-director-16/"
+        },
+        "compensation_text": {
+          "from": "partner engagement. COMPENSATION: Salary range is $160,000 to $190,000, commensurate with experience. TO APPLY: Please submit a resume and thoughtful cover letter in confidence here . ABC va",
+          "to": "COMPENSATION: The salary range for this position is $205,000–$255,000 , commensurate with experience. LOCATION: This position is based in person in the Bronx, New York . TO APPLY: Please submit a resume and th"
+        },
+        "compensation_min": {
+          "from": 160000,
+          "to": 205000
+        },
+        "compensation_max": {
+          "from": 190000,
+          "to": 255000
+        },
+        "work_arrangement": {
+          "from": "Remote",
+          "to": "On-site / unspecified"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "reopened",
+      "job_id": "2707737e03f5a105",
+      "source": "Sandler Search",
+      "title": "Executive Director,",
+      "organization": "RootOne"
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "updated",
+      "job_id": "2707737e03f5a105",
+      "source": "Sandler Search",
+      "title": "Executive Director,",
+      "organization": "RootOne",
+      "changes": {
+        "title": {
+          "from": "Executive Director",
+          "to": "Executive Director,"
+        },
+        "location": {
+          "from": "New York, NY",
+          "to": "New York, NY Preferred"
+        },
+        "url": {
+          "from": "https://sandlersearch.org/current-opportunities/",
+          "to": "https://sandlersearch.org/job/rootone/"
+        }
+      }
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "closed",
+      "job_id": "66ec336dff3720ca",
+      "source": "Sandler Search",
+      "title": "Executive Director New York",
+      "organization": "NY Preferred"
+    },
+    {
+      "at": "2026-09-19T12:54:01.314889+00:00",
+      "type": "closed",
+      "job_id": "fa0af00ca3bb6cb6",
+      "source": "Sandler Search",
+      "title": "Executive Director Bronx",
+      "organization": "New York"
     }
   ]
 }
