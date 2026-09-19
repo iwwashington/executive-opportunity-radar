@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Executive Opportunity Radar</title>
+<style>
+:root{--bg:#f6f7f8;--panel:#fff;--ink:#17202a;--muted:#69727d;--line:#e3e6e8;--accent:#183a37;--accent2:#e9f1ef;--warn:#865d10;--bad:#9c2c2c;--shadow:0 8px 26px rgba(0,0,0,.05)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.wrap{max-width:1180px;margin:0 auto;padding:34px 22px 60px}.top{display:flex;justify-content:space-between;gap:28px;align-items:flex-start;margin-bottom:22px}.eyebrow{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700}.title{font-size:34px;line-height:1.08;margin:5px 0 8px;letter-spacing:-.035em}.subtitle{color:var(--muted);max-width:720px}.stamp{text-align:right;color:var(--muted);font-size:13px}.toolbar{display:grid;grid-template-columns:1.7fr repeat(3,1fr);gap:10px;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:12px;box-shadow:var(--shadow);position:sticky;top:8px;z-index:5}.toolbar input,.toolbar select{width:100%;border:1px solid var(--line);background:#fff;border-radius:10px;padding:10px 11px;font:inherit;color:var(--ink)}.tabs{display:flex;gap:8px;margin:18px 0 10px;flex-wrap:wrap}.tab{border:1px solid var(--line);background:#fff;border-radius:999px;padding:8px 12px;cursor:pointer;font-weight:650}.tab.active{background:var(--accent);color:#fff;border-color:var(--accent)}.summary{display:flex;gap:18px;color:var(--muted);font-size:13px;margin:8px 2px 14px}.grid{display:grid;gap:10px}.card{display:grid;grid-template-columns:1fr auto;gap:16px;background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:16px 17px;box-shadow:0 2px 8px rgba(0,0,0,.025)}.card:hover{border-color:#c9d1d2}.org{font-weight:760;font-size:17px}.role{font-size:15px;margin-top:2px}.meta{display:flex;gap:8px 14px;flex-wrap:wrap;margin-top:8px;color:var(--muted);font-size:13px}.pill{background:var(--accent2);color:var(--accent);padding:3px 8px;border-radius:999px;font-size:12px;font-weight:700}.broader{background:#f1eef7;color:#5d4578}.actions{display:flex;gap:9px;align-items:flex-start}.star,.open{border:1px solid var(--line);background:#fff;border-radius:9px;padding:8px 10px;cursor:pointer;text-decoration:none;color:var(--ink);font-weight:700}.star.on{background:#fff5c8}.empty{background:#fff;border:1px dashed var(--line);border-radius:13px;padding:30px;text-align:center;color:var(--muted)}.sources{display:none;background:#fff;border:1px solid var(--line);border-radius:13px;overflow:hidden}.source-row{display:grid;grid-template-columns:1.4fr 110px 100px 1fr;gap:10px;padding:13px 15px;border-bottom:1px solid var(--line);align-items:center}.source-row:last-child{border-bottom:0}.ok{color:#27613f;font-weight:750}.fail{color:var(--bad);font-weight:750}@media(max-width:760px){.top{display:block}.stamp{text-align:left;margin-top:12px}.toolbar{grid-template-columns:1fr 1fr;position:static}.toolbar input{grid-column:1/-1}.card{grid-template-columns:1fr}.source-row{grid-template-columns:1fr 80px}.source-row div:nth-child(4){grid-column:1/-1}.title{font-size:29px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <div>
+      <div class="eyebrow">Private career monitor</div>
+      <h1 class="title">Executive Opportunity Radar</h1>
+      <div class="subtitle">One place to scan retained-search firms for CEO, president, executive director and adjacent senior roles — without depending on any one recruiter or job board.</div>
+    </div>
+    <div class="stamp"><div>Last refresh</div><strong id="lastRefresh">Loading…</strong></div>
+  </div>
+
+  <div class="toolbar">
+    <input id="q" placeholder="Search organization, title, location…" />
+    <select id="source"><option value="">All sources</option></select>
+    <select id="location"><option value="">All locations</option><option value="remote">Remote</option><option value="dmv">DC / DMV</option></select>
+    <select id="sort"><option value="priority">Strict roles first</option><option value="source">Source</option><option value="org">Organization</option></select>
+  </div>
+
+  <div class="tabs">
+    <button class="tab active" data-tab="strict">CEO / President / ED</button>
+    <button class="tab" data-tab="all">Broader executive</button>
+    <button class="tab" data-tab="favorites">Saved</button>
+    <button class="tab" data-tab="sources">Source health</button>
+  </div>
+  <div class="summary"><span id="count">—</span><span id="strictCount">—</span></div>
+  <div id="jobs" class="grid"></div>
+  <div id="sourcesPanel" class="sources"></div>
+</div>
+<script>
+let payload={jobs:[]}, meta={sources:[]}, tab='strict';
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const favs=()=>new Set(JSON.parse(localStorage.getItem('exec-radar-favs')||'[]'));
+function setFavs(set){localStorage.setItem('exec-radar-favs',JSON.stringify([...set]));}
+function esc(v){return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));}
+function fmtDate(v){if(!v)return '—';const d=new Date(v);return isNaN(d)?v:d.toLocaleString([], {month:'short',day:'numeric',hour:'numeric',minute:'2-digit'});}
+function isDMV(s){return /\b(DC|D\.C\.|Washington|Maryland|MD|Virginia|VA|DMV|Reston|Arlington|Alexandria|Bethesda|Silver Spring)\b/i.test(s||'');}
+function filtered(){
+  const q=$('#q').value.trim().toLowerCase(), src=$('#source').value, loc=$('#location').value, fs=favs();
+  let rows=payload.jobs.filter(j=>{
+    if(tab==='strict' && j.tier!=='strict')return false;
+    if(tab==='favorites' && !fs.has(j.id))return false;
+    if(src && j.source!==src)return false;
+    if(loc==='remote' && !/remote/i.test(j.location||''))return false;
+    if(loc==='dmv' && !isDMV(j.location))return false;
+    if(q && ![j.title,j.organization,j.location,j.source].join(' ').toLowerCase().includes(q))return false;
+    return true;
+  });
+  const sort=$('#sort').value;
+  rows.sort((a,b)=> sort==='source' ? a.source.localeCompare(b.source)||a.organization.localeCompare(b.organization) : sort==='org' ? a.organization.localeCompare(b.organization) : (a.tier==='strict'?0:1)-(b.tier==='strict'?0:1)||a.organization.localeCompare(b.organization));
+  return rows;
+}
+function render(){
+  const panel=$('#jobs'), sp=$('#sourcesPanel');
+  if(tab==='sources'){panel.style.display='none';sp.style.display='block';renderSources();return;} panel.style.display='grid';sp.style.display='none';
+  const rows=filtered(), fs=favs();
+  $('#count').textContent=`${rows.length} role${rows.length===1?'':'s'} shown`;
+  $('#strictCount').textContent=`${payload.jobs.filter(j=>j.tier==='strict').length} strict executive roles in feed`;
+  if(!rows.length){panel.innerHTML='<div class="empty">No roles match these filters.</div>';return;}
+  panel.innerHTML=rows.map(j=>`<div class="card">
+    <div><div class="org">${esc(j.organization)}</div><div class="role">${esc(j.title)}</div>
+      <div class="meta"><span class="pill ${j.tier==='broader'?'broader':''}">${j.tier==='strict'?'CEO / top executive':'Broader executive'}</span><span>${esc(j.source)}</span>${j.location?`<span>${esc(j.location)}</span>`:''}</div>
+    </div>
+    <div class="actions"><button class="star ${fs.has(j.id)?'on':''}" data-id="${esc(j.id)}" title="Save">★</button><a class="open" target="_blank" rel="noopener" href="${esc(j.url)}">Open ↗</a></div>
+  </div>`).join('');
+  $$('.star').forEach(b=>b.onclick=()=>{const s=favs();s.has(b.dataset.id)?s.delete(b.dataset.id):s.add(b.dataset.id);setFavs(s);render();});
+}
+function renderSources(){
+  $('#count').textContent=`${meta.sources.length} monitored sources`;$('#strictCount').textContent='Health check runs with each refresh';
+  $('#sourcesPanel').innerHTML=meta.sources.map(s=>`<div class="source-row"><div><strong>${esc(s.source)}</strong><br><small>${esc(s.url)}</small></div><div class="${s.ok?'ok':'fail'}">${s.ok?'Healthy':'Failed'}</div><div>${esc(s.count)} roles</div><div>${esc(s.error||'')}</div></div>`).join('');
+}
+async function boot(){
+  try{payload=await fetch('./data/jobs.json',{cache:'no-store'}).then(r=>r.json());}catch(e){payload={jobs:[]};}
+  try{meta=await fetch('./data/meta.json',{cache:'no-store'}).then(r=>r.json());}catch(e){meta={sources:[]};}
+  $('#lastRefresh').textContent=fmtDate(payload.generated_at||meta.generated_at);
+  [...new Set(payload.jobs.map(j=>j.source))].sort().forEach(s=>$('#source').insertAdjacentHTML('beforeend',`<option>${esc(s)}</option>`));
+  render();
+}
+$$('.tab').forEach(b=>b.onclick=()=>{$$('.tab').forEach(x=>x.classList.remove('active'));b.classList.add('active');tab=b.dataset.tab;render();});
+['q','source','location','sort'].forEach(id=>$('#'+id).addEventListener(id==='q'?'input':'change',render));
+boot();
+</script>
+</body>
+</html>

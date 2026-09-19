@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Isaacson, Miller",
+    "url": "https://www.imsearch.com/current-searches/open-searches",
+    "type": "generic",
+    "enabled": true,
+    "notes": "Mission-driven executive search; large open-search database."
+  },
+  {
+    "name": "Vetted Solutions",
+    "url": "https://www.vettedsolutions.com/current-searches-accessible",
+    "type": "generic",
+    "enabled": true,
+    "notes": "Association and nonprofit executive search."
+  },
+  {
+    "name": "Sterling Martin",
+    "url": "https://smartinsearch.com/searches/",
+    "type": "generic",
+    "enabled": true,
+    "notes": "Associations and nonprofits."
+  },
+  {
+    "name": "DRG Talent",
+    "url": "https://app.loxo.co/drg-talent-advisory-group",
+    "type": "generic",
+    "enabled": true,
+    "notes": "Nonprofit and mission-driven executive roles."
+  },
+  {
+    "name": "NPAG",
+    "url": "https://www.npag.com/current-searches",
+    "type": "generic",
+    "enabled": true,
+    "notes": "Social-impact and philanthropy searches."
+  },
+  {
+    "name": "BoardWalk Consulting",
+    "url": "https://boardwalkconsulting.com/opportunities/",
+    "type": "generic",
+    "enabled": true,
+    "notes": "Nonprofit CEO and senior leadership searches."
+  }
+]

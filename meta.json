@@ -1,0 +1,11 @@
+{
+  "generated_at": "2026-09-19T05:30:00Z",
+  "sources": [
+    {"source":"Isaacson, Miller","url":"https://www.imsearch.com/current-searches/open-searches","ok":true,"count":0,"error":"Seed source; scheduled scraper not yet run."},
+    {"source":"Vetted Solutions","url":"https://www.vettedsolutions.com/current-searches-accessible","ok":true,"count":7,"error":""},
+    {"source":"Sterling Martin","url":"https://smartinsearch.com/searches/","ok":true,"count":5,"error":""},
+    {"source":"DRG Talent","url":"https://app.loxo.co/drg-talent-advisory-group","ok":true,"count":6,"error":""},
+    {"source":"NPAG","url":"https://www.npag.com/current-searches","ok":true,"count":3,"error":""},
+    {"source":"BoardWalk Consulting","url":"https://boardwalkconsulting.com/opportunities/","ok":true,"count":0,"error":"Seed source; scheduled scraper not yet run."}
+  ]
+}
