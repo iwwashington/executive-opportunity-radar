@@ -1,314 +1,6 @@
 {
-  "generated_at": "2026-09-19T12:54:01.314889+00:00",
+  "generated_at": "2026-09-20T10:28:37.748859+00:00",
   "events": [
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "updated",
-      "job_id": "e2e14dc19e50a789",
-      "source": "BoardWalk Consulting",
-      "title": "President & CEO",
-      "organization": "Downtown Atlanta Inc.",
-      "changes": {
-        "url": {
-          "from": "https://boardwalkconsulting.com/opportunities/",
-          "to": "https://boardwalkconsulting.com/jobs/downtown-atlanta-inc/"
-        },
-        "posted_date": {
-          "from": "2026-05-19",
-          "to": "2026-05-22"
-        },
-        "sector": {
-          "from": "Unclassified",
-          "to": "Civic / Public"
-        }
-      }
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "updated",
-      "job_id": "2007bb09370d8128",
-      "source": "BoardWalk Consulting",
-      "title": "Executive Director",
-      "organization": "Pete M. Hanna Charitable Foundation",
-      "changes": {
-        "url": {
-          "from": "https://boardwalkconsulting.com/opportunities/",
-          "to": "https://boardwalkconsulting.com/jobs/pmhcf-executive-director/"
-        },
-        "posted_date": {
-          "from": "2026-05-19",
-          "to": "2026-05-22"
-        },
-        "sector": {
-          "from": "Unclassified",
-          "to": "Philanthropy"
-        }
-      }
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "updated",
-      "job_id": "70879d341e410a6b",
-      "source": "BoardWalk Consulting",
-      "title": "Executive Director",
-      "organization": "Atlanta Ballet",
-      "changes": {
-        "url": {
-          "from": "https://boardwalkconsulting.com/opportunities/",
-          "to": "https://boardwalkconsulting.com/jobs/atlanta-ballet-executive-director/"
-        },
-        "posted_date": {
-          "from": "2026-04-19",
-          "to": "2026-04-22"
-        },
-        "sector": {
-          "from": "Unclassified",
-          "to": "Philanthropy"
-        }
-      }
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "new",
-      "job_id": "62e62841416b764c",
-      "source": "Bridge Partners",
-      "title": "CEO and Executive Director",
-      "organization": "Functional Expertise"
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "updated",
-      "job_id": "01b6e7a8382fc43c",
-      "source": "Bridge Partners",
-      "title": "Executive Director",
-      "organization": "HUDSON RIVER PARK FRIENDS",
-      "changes": {
-        "organization": {
-          "from": "Hudson River Park Friends",
-          "to": "HUDSON RIVER PARK FRIENDS"
-        },
-        "url": {
-          "from": "https://bridgepartnersllc.com/searches/",
-          "to": "https://bridgepartnersllc.com/wp-content/uploads/2026/09/Hudson-River-Park-Friends-ED-position-description.pdf"
-        },
-        "sector": {
-          "from": "Unclassified",
-          "to": "Philanthropy"
-        }
-      }
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "updated",
-      "job_id": "7bfd9809148456cd",
-      "source": "Bridge Partners",
-      "title": "Chief Executive Officer",
-      "organization": "XIENTE",
-      "changes": {
-        "organization": {
-          "from": "Xiente",
-          "to": "XIENTE"
-        },
-        "url": {
-          "from": "https://bridgepartnersllc.com/searches/",
-          "to": "https://bridgepartnersllc.com/wp-content/uploads/2026/09/Xiente-CEO-PD-9.1-1.pdf"
-        },
-        "sector": {
-          "from": "Unclassified",
-          "to": "Philanthropy"
-        }
-      }
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "new",
-      "job_id": "5341a1090ab43814",
-      "source": "Scion Executive Search",
-      "title": "Chief Executive Officer (CEO)",
-      "organization": "C-Suite Specialties"
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "new",
-      "job_id": "e51dbbcc28cc6b74",
-      "source": "Scion Executive Search",
-      "title": "Executive Director (ED)",
-      "organization": "Chief Financial Officer (CFO)"
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "new",
-      "job_id": "acd12b98c7e10a51",
-      "source": "Scion Executive Search",
-      "title": "Interim CEO",
-      "organization": "Location:"
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "new",
-      "job_id": "2927463d94d4b795",
-      "source": "Scion Executive Search",
-      "title": "Executive Director",
-      "organization": "Health Affairs Publishing"
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "new",
-      "job_id": "01ffeb85a0e24b02",
-      "source": "Scion Executive Search",
-      "title": "Executive Director",
-      "organization": "Location:"
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "new",
-      "job_id": "68edc02998881b46",
-      "source": "Scion Executive Search",
-      "title": "Interim Executive Director",
-      "organization": "Location:"
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "updated",
-      "job_id": "1ae253d1667bd31d",
-      "source": "Scion Executive Search",
-      "title": "Chief Executive Officer",
-      "organization": "Location:",
-      "changes": {
-        "organization": {
-          "from": "Vayu Health",
-          "to": "Location:"
-        },
-        "location": {
-          "from": "Menlo Park, CA / remote eligible",
-          "to": "Milpitas, CA"
-        },
-        "sector": {
-          "from": "Unclassified",
-          "to": "Health"
-        },
-        "work_arrangement": {
-          "from": "Remote",
-          "to": "On-site / unspecified"
-        }
-      }
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "new",
-      "job_id": "4ab2e84d73594bee",
-      "source": "Scion Executive Search",
-      "title": "Senior Executive Director",
-      "organization": "Location:"
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "new",
-      "job_id": "78cfe8ee0e7a298e",
-      "source": "Isaacson, Miller",
-      "title": "Harris-Pratt Executive Director",
-      "organization": "AI Institute"
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "new",
-      "job_id": "2346d7265c206b97",
-      "source": "Isaacson, Miller",
-      "title": "President/Executive Director",
-      "organization": "Human Resources"
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "new",
-      "job_id": "b180e4e1a73afda9",
-      "source": "Isaacson, Miller",
-      "title": "Science, Technology, + Society Harris-Pratt Executive Director, AI Institute Rochester Institute of Technology",
-      "organization": "Higher Education"
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "new",
-      "job_id": "24d2f6e4b4b7b768",
-      "source": "Lindauer",
-      "title": "CEO Search",
-      "organization": "Search Process"
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "new",
-      "job_id": "1b0c3783b9d866cf",
-      "source": "Lindauer",
-      "title": "Executive Director",
-      "organization": "Community Impact"
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "updated",
-      "job_id": "d7ba9d782af0ea73",
-      "source": "Lindauer",
-      "title": "President",
-      "organization": "Advocacy + Public Policy",
-      "changes": {
-        "organization": {
-          "from": "American Printing House for the Blind",
-          "to": "Advocacy + Public Policy"
-        },
-        "location": {
-          "from": "Louisville, KY",
-          "to": "Onsite"
-        },
-        "url": {
-          "from": "https://www.lindauerglobal.com/searches/open-searches/",
-          "to": "https://www.lindauerglobal.com/searches/open-searches/president-american-printing-house-blind/"
-        },
-        "sector": {
-          "from": "Unclassified",
-          "to": "Health"
-        }
-      }
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "new",
-      "job_id": "46186819ac48e195",
-      "source": "Lindauer",
-      "title": "Executive Director",
-      "organization": "Bertarelli Institute for Family Entrepreneurship"
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "new",
-      "job_id": "c598c234babcdecb",
-      "source": "Lindauer",
-      "title": "Executive Director",
-      "organization": "Arts + Culture"
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "updated",
-      "job_id": "248242a393f070b0",
-      "source": "Lindauer",
-      "title": "Chief Executive Officer",
-      "organization": "Healthcare + Academic Medicine",
-      "changes": {
-        "organization": {
-          "from": "Ronald McDonald House Charities of Western Washington & Alaska",
-          "to": "Healthcare + Academic Medicine"
-        },
-        "location": {
-          "from": "Seattle, WA",
-          "to": "Onsite"
-        },
-        "url": {
-          "from": "https://www.lindauerglobal.com/searches/open-searches/",
-          "to": "https://www.lindauerglobal.com/searches/open-searches/chief-executive-officer-center-human-development/"
-        },
-        "sector": {
-          "from": "Unclassified",
-          "to": "Health"
-        }
-      }
-    },
     {
       "at": "2026-09-19T06:41:48.620945+00:00",
       "type": "new",
@@ -5811,6 +5503,653 @@
       "source": "Sandler Search",
       "title": "Executive Director Bronx",
       "organization": "New York"
+    },
+    {
+      "at": "2026-09-20T10:28:37.748859+00:00",
+      "type": "removed_false_positive",
+      "job_id": "62e62841416b764c",
+      "source": "Bridge Partners",
+      "title": "CEO and Executive Director",
+      "organization": "Functional Expertise",
+      "url": "https://bridgepartnersllc.com/function/ceo/"
+    },
+    {
+      "at": "2026-09-20T10:28:37.748859+00:00",
+      "type": "updated",
+      "job_id": "acf48ae0f359e233",
+      "source": "BoardWalk Consulting",
+      "title": "Executive Director",
+      "organization": "Florida Rights Restoration Coalition",
+      "changes": {
+        "posted_date": {
+          "from": "2026-09-12",
+          "to": "2026-09-06"
+        }
+      }
+    },
+    {
+      "at": "2026-09-20T10:28:37.748859+00:00",
+      "type": "updated",
+      "job_id": "b31f942adf5dca3b",
+      "source": "BoardWalk Consulting",
+      "title": "Executive Director",
+      "organization": "Gateway Early Childhood Alliance",
+      "changes": {
+        "posted_date": {
+          "from": "2026-08-29",
+          "to": "2026-08-30"
+        }
+      }
+    },
+    {
+      "at": "2026-09-20T10:28:37.748859+00:00",
+      "type": "updated",
+      "job_id": "e39688bc3548ed3e",
+      "source": "BoardWalk Consulting",
+      "title": "CEO",
+      "organization": "The Colorado Health Foundation",
+      "changes": {
+        "posted_date": {
+          "from": "2026-07-21",
+          "to": "2026-07-22"
+        }
+      }
+    },
+    {
+      "at": "2026-09-20T10:28:37.748859+00:00",
+      "type": "updated",
+      "job_id": "dfcd1a39e5a39154",
+      "source": "BoardWalk Consulting",
+      "title": "President & CEO",
+      "organization": "Community Foundation for Greater Atlanta",
+      "changes": {
+        "posted_date": {
+          "from": "2026-07-21",
+          "to": "2026-07-22"
+        }
+      }
+    },
+    {
+      "at": "2026-09-20T10:28:37.748859+00:00",
+      "type": "updated",
+      "job_id": "02c92a3fb8587a5a",
+      "source": "BoardWalk Consulting",
+      "title": "President & CEO",
+      "organization": "North Carolina Community Foundation",
+      "changes": {
+        "posted_date": {
+          "from": "2026-06-21",
+          "to": "2026-06-22"
+        }
+      }
+    },
+    {
+      "at": "2026-09-20T10:28:37.748859+00:00",
+      "type": "updated",
+      "job_id": "9bc079973dda6ba0",
+      "source": "BoardWalk Consulting",
+      "title": "Chief Executive Officer",
+      "organization": "The Greenville Housing Authority",
+      "changes": {
+        "posted_date": {
+          "from": "2026-05-22",
+          "to": "2026-05-23"
+        }
+      }
+    },
+    {
+      "at": "2026-09-20T10:28:37.748859+00:00",
+      "type": "updated",
+      "job_id": "e2e14dc19e50a789",
+      "source": "BoardWalk Consulting",
+      "title": "President & CEO",
+      "organization": "Downtown Atlanta Inc.",
+      "changes": {
+        "posted_date": {
+          "from": "2026-05-22",
+          "to": "2026-05-23"
+        }
+      }
+    },
+    {
+      "at": "2026-09-20T10:28:37.748859+00:00",
+      "type": "updated",
+      "job_id": "2007bb09370d8128",
+      "source": "BoardWalk Consulting",
+      "title": "Executive Director",
+      "organization": "Pete M. Hanna Charitable Foundation",
+      "changes": {
+        "posted_date": {
+          "from": "2026-05-22",
+          "to": "2026-05-23"
+        }
+      }
+    },
+    {
+      "at": "2026-09-20T10:28:37.748859+00:00",
+      "type": "updated",
+      "job_id": "70879d341e410a6b",
+      "source": "BoardWalk Consulting",
+      "title": "Executive Director",
+      "organization": "Atlanta Ballet",
+      "changes": {
+        "posted_date": {
+          "from": "2026-04-22",
+          "to": "2026-04-23"
+        }
+      }
+    },
+    {
+      "at": "2026-09-20T10:28:37.748859+00:00",
+      "type": "reopened",
+      "job_id": "62e62841416b764c",
+      "source": "Bridge Partners",
+      "title": "CEO and Executive Director",
+      "organization": "Functional Expertise"
+    },
+    {
+      "at": "2026-09-20T10:28:37.748859+00:00",
+      "type": "updated",
+      "job_id": "d761803dca1fe1e8",
+      "source": "Isaacson, Miller",
+      "title": "President",
+      "organization": "United Theological Seminary of the Twin Cities",
+      "changes": {
+        "work_arrangement": {
+          "from": "Hybrid",
+          "to": "Unknown"
+        }
+      }
+    },
+    {
+      "at": "2026-09-20T10:28:37.748859+00:00",
+      "type": "updated",
+      "job_id": "64ee69a30199e1a8",
+      "source": "DSG Global",
+      "title": "CEO",
+      "organization": "Fort Worth Report",
+      "changes": {
+        "organization": {
+          "from": "Aspiranet",
+          "to": "Fort Worth Report"
+        },
+        "location": {
+          "from": "South San Francisco, CA",
+          "to": "Fort Worth, TX"
+        },
+        "url": {
+          "from": "https://www.dsgco.com/search/23462-aspiranet-ceo/",
+          "to": "https://www.dsgco.com/search/23370-fort-worth-report-ceo/"
+        },
+        "posted_date": {
+          "from": "2026-09-15",
+          "to": "2026-08-10"
+        },
+        "compensation_text": {
+          "from": "Compensation and Benefits The salary range for this position is $400,000 – $475,000 commensurate with experience. Aspiranet values its employees and offers a comprehensive benefits package. Contact DSG | Koya has been exclu",
+          "to": "Compensation and Benefits Salary and bonus subject to qualifications and experience. Benefits include PTO, paid holidays, insurance benefits including medical, dental, vision, life insurance plans and 401k plan. This is a full time role based in Fort Worth, Texas. The Fort Worth Report is an equal opportunity employer. We a"
+        },
+        "compensation_min": {
+          "from": 400000,
+          "to": 401000
+        },
+        "compensation_max": {
+          "from": 475000,
+          "to": 401000
+        },
+        "sector_tags": {
+          "from": [
+            "Health",
+            "Philanthropy",
+            "Education",
+            "Civic / Public",
+            "Environment",
+            "Human Services",
+            "Arts / Culture",
+            "Media / Journalism"
+          ],
+          "to": [
+            "Health",
+            "Philanthropy",
+            "Education",
+            "Civic / Public",
+            "Environment",
+            "Arts / Culture",
+            "Media / Journalism",
+            "Faith"
+          ]
+        },
+        "organization_types": {
+          "from": [
+            "Foundation / Philanthropy",
+            "Health System / Provider",
+            "Media / Journalism",
+            "Arts / Culture",
+            "Advocacy / Civil Rights",
+            "Human Services / Community",
+            "Other Nonprofit"
+          ],
+          "to": [
+            "Foundation / Philanthropy",
+            "Health System / Provider",
+            "Media / Journalism",
+            "Other Nonprofit"
+          ]
+        },
+        "mandate_tags": {
+          "from": [
+            "Growth / scale",
+            "Fundraising / revenue",
+            "Strategy / transformation",
+            "Operations / infrastructure",
+            "External affairs / advocacy",
+            "Membership / stakeholders",
+            "Culture / talent",
+            "Digital / AI",
+            "Financial sustainability"
+          ],
+          "to": [
+            "Growth / scale",
+            "Fundraising / revenue",
+            "Strategy / transformation",
+            "Operations / infrastructure",
+            "Membership / stakeholders",
+            "Culture / talent",
+            "Digital / AI",
+            "Financial sustainability"
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-09-20T10:28:37.748859+00:00",
+      "type": "updated",
+      "job_id": "64ee69a30199e1a8",
+      "source": "DSG Global",
+      "title": "CEO",
+      "organization": "Gilda's Club Chicago",
+      "changes": {
+        "organization": {
+          "from": "Aspiranet",
+          "to": "Gilda's Club Chicago"
+        },
+        "location": {
+          "from": "South San Francisco, CA",
+          "to": "Chicago, IL"
+        },
+        "url": {
+          "from": "https://www.dsgco.com/search/23462-aspiranet-ceo/",
+          "to": "https://www.dsgco.com/search/23276-gildas-club-chicago-ceo/"
+        },
+        "posted_date": {
+          "from": "2026-09-15",
+          "to": "2026-06-25"
+        },
+        "compensation_text": {
+          "from": "Compensation and Benefits The salary range for this position is $400,000 – $475,000 commensurate with experience. Aspiranet values its employees and offers a comprehensive benefits package. Contact DSG | Koya has been exclu",
+          "to": "Compensation and Benefits The salary for the role is anticipated to range from $175,000 to $225,000, with additional compensation potential, commensurate with experience. Gilda’s Club Chicago values its employees and offers a comprehensive"
+        },
+        "compensation_min": {
+          "from": 400000,
+          "to": 175000
+        },
+        "compensation_max": {
+          "from": 475000,
+          "to": 225000
+        },
+        "sector_tags": {
+          "from": [
+            "Health",
+            "Philanthropy",
+            "Education",
+            "Civic / Public",
+            "Environment",
+            "Human Services",
+            "Arts / Culture",
+            "Media / Journalism"
+          ],
+          "to": [
+            "Health",
+            "Philanthropy",
+            "Education",
+            "Civic / Public",
+            "Environment",
+            "Arts / Culture",
+            "Media / Journalism"
+          ]
+        },
+        "organization_types": {
+          "from": [
+            "Foundation / Philanthropy",
+            "Health System / Provider",
+            "Media / Journalism",
+            "Arts / Culture",
+            "Advocacy / Civil Rights",
+            "Human Services / Community",
+            "Other Nonprofit"
+          ],
+          "to": [
+            "Foundation / Philanthropy",
+            "Health System / Provider",
+            "Media / Journalism",
+            "Other Nonprofit"
+          ]
+        },
+        "mandate_tags": {
+          "from": [
+            "Growth / scale",
+            "Fundraising / revenue",
+            "Strategy / transformation",
+            "Operations / infrastructure",
+            "External affairs / advocacy",
+            "Membership / stakeholders",
+            "Culture / talent",
+            "Digital / AI",
+            "Financial sustainability"
+          ],
+          "to": [
+            "Growth / scale",
+            "Fundraising / revenue",
+            "Strategy / transformation",
+            "Operations / infrastructure",
+            "Membership / stakeholders",
+            "Culture / talent",
+            "Digital / AI",
+            "Financial sustainability"
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-09-20T10:28:37.748859+00:00",
+      "type": "new",
+      "job_id": "78d9bfcdbeebcb4c",
+      "source": "DSG Global",
+      "title": "Executive Director, Washington D.C. Metro",
+      "organization": "GreenLight Fund"
+    },
+    {
+      "at": "2026-09-20T10:28:37.748859+00:00",
+      "type": "new",
+      "job_id": "ac8630d8b62bd70f",
+      "source": "DSG Global",
+      "title": "President & CEO",
+      "organization": "Keiro"
+    },
+    {
+      "at": "2026-09-20T10:28:37.748859+00:00",
+      "type": "updated",
+      "job_id": "b8e982953accafdb",
+      "source": "DSG Global",
+      "title": "Chief Executive Officer",
+      "organization": "Mid-America Science Museum",
+      "changes": {
+        "organization": {
+          "from": "Aeris Insight",
+          "to": "Mid-America Science Museum"
+        },
+        "location": {
+          "from": "Remote",
+          "to": "Hot Springs, AR"
+        },
+        "url": {
+          "from": "https://www.dsgco.com/search/23172-aeris/",
+          "to": "https://www.dsgco.com/search/23299-mid-america-science-museum-chief-executive-officer/"
+        },
+        "posted_date": {
+          "from": "2026-07-08",
+          "to": "2026-08-11"
+        },
+        "compensation_text": {
+          "from": "Compensation and Benefits Salary is competitive and commensurate with experience. The salary range for this role is $230,000 - $250,000 with a generous benefits package. The exact salary that will be offered to the CEO will be determined based on a consideration of the succe",
+          "to": "Compensation & Benefits The total compensation range for this role is $150,000-200,000, plus a competitive benefits package which includes employer-subsidized medical and dental insurance, a Simple IRA with employer match, pai"
+        },
+        "compensation_min": {
+          "from": 230000,
+          "to": 150000
+        },
+        "compensation_max": {
+          "from": 250000,
+          "to": 200000
+        },
+        "sector_tags": {
+          "from": [
+            "Education",
+            "Civic / Public",
+            "Environment",
+            "Arts / Culture",
+            "Media / Journalism"
+          ],
+          "to": [
+            "Health",
+            "Philanthropy",
+            "Education",
+            "Civic / Public",
+            "Environment",
+            "Arts / Culture",
+            "Media / Journalism"
+          ]
+        },
+        "organization_types": {
+          "from": [
+            "Health System / Provider",
+            "Media / Journalism",
+            "Other Nonprofit"
+          ],
+          "to": [
+            "Foundation / Philanthropy",
+            "College / University",
+            "Health System / Provider",
+            "Government / Public Entity",
+            "Media / Journalism",
+            "Arts / Culture",
+            "Other Nonprofit"
+          ]
+        },
+        "work_arrangement": {
+          "from": "Remote",
+          "to": "On-site / unspecified"
+        },
+        "mandate_tags": {
+          "from": [
+            "Growth / scale",
+            "Fundraising / revenue",
+            "Strategy / transformation",
+            "Membership / stakeholders",
+            "Culture / talent",
+            "Digital / AI",
+            "Financial sustainability"
+          ],
+          "to": [
+            "Growth / scale",
+            "Fundraising / revenue",
+            "Strategy / transformation",
+            "Operations / infrastructure",
+            "Membership / stakeholders",
+            "Culture / talent",
+            "Digital / AI"
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-09-20T10:28:37.748859+00:00",
+      "type": "reopened",
+      "job_id": "9d9450d05842e801",
+      "source": "DSG Global",
+      "title": "Executive Director",
+      "organization": "North Penn Legal Services"
+    },
+    {
+      "at": "2026-09-20T10:28:37.748859+00:00",
+      "type": "updated",
+      "job_id": "9d9450d05842e801",
+      "source": "DSG Global",
+      "title": "Executive Director",
+      "organization": "North Penn Legal Services",
+      "changes": {
+        "organization": {
+          "from": "DSG Global",
+          "to": "North Penn Legal Services"
+        },
+        "location": {
+          "from": "Technology, AI",
+          "to": "Pittston, PA"
+        },
+        "url": {
+          "from": "https://www.dsgco.com/search/22980-modern-language-association-executive-director/",
+          "to": "https://www.dsgco.com/search/23115-npls-executive-director/"
+        },
+        "work_arrangement": {
+          "from": "Remote",
+          "to": "On-site / unspecified"
+        }
+      }
+    },
+    {
+      "at": "2026-09-20T10:28:37.748859+00:00",
+      "type": "updated",
+      "job_id": "bdb4fab450cecd43",
+      "source": "Kittleman Associates",
+      "title": "President and CEO",
+      "organization": "Viability, Inc.",
+      "changes": {
+        "organization": {
+          "from": "Mid-Ohio Food Collective",
+          "to": "Viability, Inc."
+        },
+        "location": {
+          "from": "Grove City, OH, United States",
+          "to": "Springfield, MA, United States"
+        },
+        "url": {
+          "from": "https://www.kittlemansearch.com/opportunities/president-ceo-mid-ohio-food-collective",
+          "to": "https://www.kittlemansearch.com/opportunities/president-ceo-viability"
+        },
+        "posted_date": {
+          "from": "2026-09-10",
+          "to": "2026-09-16"
+        },
+        "sector_tags": {
+          "from": [
+            "Education",
+            "Civic / Public",
+            "Human Services"
+          ],
+          "to": [
+            "Philanthropy",
+            "Human Services"
+          ]
+        },
+        "organization_types": {
+          "from": [
+            "Unclassified"
+          ],
+          "to": [
+            "Foundation / Philanthropy",
+            "Advocacy / Civil Rights",
+            "Human Services / Community",
+            "Other Nonprofit"
+          ]
+        },
+        "mandate_tags": {
+          "from": [
+            "Financial sustainability"
+          ],
+          "to": [
+            "Growth / scale",
+            "Fundraising / revenue",
+            "Operations / infrastructure",
+            "External affairs / advocacy",
+            "Membership / stakeholders",
+            "Culture / talent",
+            "Financial sustainability"
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-09-20T10:28:37.748859+00:00",
+      "type": "updated",
+      "job_id": "bdb4fab450cecd43",
+      "source": "Kittleman Associates",
+      "title": "President and CEO",
+      "organization": "Schoodic Institute at Acadia National Park",
+      "changes": {
+        "organization": {
+          "from": "Mid-Ohio Food Collective",
+          "to": "Schoodic Institute at Acadia National Park"
+        },
+        "location": {
+          "from": "Grove City, OH, United States",
+          "to": "Winter Harbor, ME, United States"
+        },
+        "url": {
+          "from": "https://www.kittlemansearch.com/opportunities/president-ceo-mid-ohio-food-collective",
+          "to": "https://www.kittlemansearch.com/opportunities/president-ceo-schoodic-institute"
+        },
+        "posted_date": {
+          "from": "2026-09-10",
+          "to": "2026-09-14"
+        },
+        "sector_tags": {
+          "from": [
+            "Education",
+            "Civic / Public",
+            "Human Services"
+          ],
+          "to": [
+            "Education",
+            "Environment"
+          ]
+        },
+        "organization_types": {
+          "from": [
+            "Unclassified"
+          ],
+          "to": [
+            "College / University"
+          ]
+        },
+        "mandate_tags": {
+          "from": [
+            "Financial sustainability"
+          ],
+          "to": [
+            "Growth / scale",
+            "Fundraising / revenue",
+            "Financial sustainability"
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-09-20T10:28:37.748859+00:00",
+      "type": "updated",
+      "job_id": "c62162d099baded4",
+      "source": "LeaderFit",
+      "title": "President",
+      "organization": "Advancement and Philanthropic Engagement, Institute for Women's Policy Research View all jobs Vice President, Advancemen",
+      "changes": {
+        "work_arrangement": {
+          "from": "Hybrid",
+          "to": "On-site / unspecified"
+        }
+      }
+    },
+    {
+      "at": "2026-09-20T10:28:37.748859+00:00",
+      "type": "updated",
+      "job_id": "e940c8bb95f2d94b",
+      "source": "LeaderFit",
+      "title": "President",
+      "organization": "External Engagement, Women's Refugee Commission View all jobs Vice President, External Engagement, Women's Refugee Commi",
+      "changes": {
+        "work_arrangement": {
+          "from": "Hybrid",
+          "to": "On-site / unspecified"
+        }
+      }
     }
   ]
 }
