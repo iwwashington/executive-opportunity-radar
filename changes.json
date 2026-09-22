@@ -1,190 +1,6 @@
 {
-  "generated_at": "2026-09-21T10:30:02.723675+00:00",
+  "generated_at": "2026-09-22T10:31:51.266896+00:00",
   "events": [
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "new",
-      "job_id": "46bb81a96616ef25",
-      "source": "DSG Global",
-      "title": "Counseling and Support Services for Youth (CASSY) Executive Director Milpitas",
-      "organization": "CA"
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "new",
-      "job_id": "180d40c99aa3433b",
-      "source": "DSG Global",
-      "title": "DataKind Chief Executive Officer Remote within the US",
-      "organization": "Organization not parsed"
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "new",
-      "job_id": "45b67245d44b4724",
-      "source": "DSG Global",
-      "title": "Downtown United Soccer Club Executive Director New York",
-      "organization": "NY"
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "new",
-      "job_id": "1a65257015f49dbf",
-      "source": "DSG Global",
-      "title": "DreamYard Project Executive Director Bronx",
-      "organization": "NY"
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "new",
-      "job_id": "cf8ed9fa4f7707fc",
-      "source": "DSG Global",
-      "title": "Escoffier Scholarship Foundation Executive Director Remote",
-      "organization": "Organization not parsed"
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "new",
-      "job_id": "910e9d69a8b65cf2",
-      "source": "DSG Global",
-      "title": "Inc. President & CEO Cleveland, OH",
-      "organization": "Esperanza"
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "new",
-      "job_id": "77f71d8c619a0ca1",
-      "source": "DSG Global",
-      "title": "Essex County Habitat for Humanity Executive Director Danvers",
-      "organization": "MA"
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "new",
-      "job_id": "1df67fd09be4b769",
-      "source": "DSG Global",
-      "title": "Every Woman CEO Remote",
-      "organization": "Organization not parsed"
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "new",
-      "job_id": "04f854c03dc4446a",
-      "source": "DSG Global",
-      "title": "FamilyAid President & CEO Boston",
-      "organization": "MA"
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "new",
-      "job_id": "a9d67489d0cc2624",
-      "source": "DSG Global",
-      "title": "Fort Worth Report CEO Fort Worth",
-      "organization": "TX"
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "new",
-      "job_id": "14b9a6676b321e16",
-      "source": "DSG Global",
-      "title": "Forward Arkansas Chief Executive Officer Arkansas",
-      "organization": "Organization not parsed"
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "new",
-      "job_id": "2900c0750b7a01f6",
-      "source": "DSG Global",
-      "title": "Gilda's Club Chicago CEO Chicago",
-      "organization": "IL"
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "new",
-      "job_id": "b42af966e0a35806",
-      "source": "DSG Global",
-      "title": "GreenLight Fund Executive Director",
-      "organization": "Washington D.C. Metro Washington D.C. Metro"
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "new",
-      "job_id": "f950f6dcf7d82070",
-      "source": "DSG Global",
-      "title": "GreenLight Fund Nashville Executive Director Nashville",
-      "organization": "TN"
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "new",
-      "job_id": "cd8e2ddeeff80f73",
-      "source": "DSG Global",
-      "title": "GreenLight Fund Kansas City Executive Director Kansas City",
-      "organization": "MO"
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "new",
-      "job_id": "cbaea6350aed4273",
-      "source": "DSG Global",
-      "title": "Health Federation of Philadelphia Chief Executive Officer Philadelphia",
-      "organization": "PA"
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "new",
-      "job_id": "ef47b9fbceb603a2",
-      "source": "DSG Global",
-      "title": "Hendrix College Executive Director",
-      "organization": "Career Success Conway, AR"
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "new",
-      "job_id": "f3123cff48c6e191",
-      "source": "DSG Global",
-      "title": "Higher Ground USA Chief Executive Officer Ketchum",
-      "organization": "ID"
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "new",
-      "job_id": "d0428c6966855f95",
-      "source": "DSG Global",
-      "title": "Museum & Gardens Executive Director Washington, DC",
-      "organization": "Hillwood Estate"
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "new",
-      "job_id": "f9f84d4a0816c58b",
-      "source": "DSG Global",
-      "title": "HIPS Executive Director Washington",
-      "organization": "DC"
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "new",
-      "job_id": "332d81cfddefb79a",
-      "source": "DSG Global",
-      "title": "Homeowners of Tomorrow Alliance Executive Director Flexible with preference for Bay Area",
-      "organization": "CA or New York, NY"
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "new",
-      "job_id": "46476312810b6ade",
-      "source": "DSG Global",
-      "title": "IJ & Jeanné Wagner Jewish Community Center Chief Executive Officer Salt Lake City",
-      "organization": "UT"
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "new",
-      "job_id": "862592b1fbbda9ee",
-      "source": "DSG Global",
-      "title": "Illinois Board of Examiners Executive Director Naperville",
-      "organization": "IL"
-    },
     {
       "at": "2026-09-19T06:41:48.620945+00:00",
       "type": "new",
@@ -6563,6 +6379,499 @@
             "Fundraising / revenue",
             "Financial sustainability"
           ]
+        }
+      }
+    },
+    {
+      "at": "2026-09-22T10:31:51.266896+00:00",
+      "type": "removed_false_positive",
+      "job_id": "62e62841416b764c",
+      "source": "Bridge Partners",
+      "title": "CEO and Executive Director",
+      "organization": "Functional Expertise",
+      "url": "https://bridgepartnersllc.com/function/ceo/"
+    },
+    {
+      "at": "2026-09-22T10:31:51.266896+00:00",
+      "type": "updated",
+      "job_id": "86bbc2923bfd7d49",
+      "source": "Aspen Leadership Group",
+      "title": "Executive Director",
+      "organization": "Capital Area Housing Partnership",
+      "changes": {
+        "sector_tags": {
+          "from": [
+            "Philanthropy",
+            "Education",
+            "Associations",
+            "Human Services",
+            "International"
+          ],
+          "to": [
+            "Health",
+            "Philanthropy",
+            "Education",
+            "Associations",
+            "Human Services",
+            "International"
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-09-22T10:31:51.266896+00:00",
+      "type": "updated",
+      "job_id": "c0de870c95052a8d",
+      "source": "Aspen Leadership Group",
+      "title": "Executive Director",
+      "organization": "Ronald McDonald House Los Angeles",
+      "changes": {
+        "sector_tags": {
+          "from": [
+            "Health",
+            "Associations",
+            "Human Services",
+            "International"
+          ],
+          "to": [
+            "Health",
+            "Education",
+            "Associations",
+            "Human Services",
+            "International"
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-09-22T10:31:51.266896+00:00",
+      "type": "updated",
+      "job_id": "acf48ae0f359e233",
+      "source": "BoardWalk Consulting",
+      "title": "Executive Director",
+      "organization": "Florida Rights Restoration Coalition",
+      "changes": {
+        "posted_date": {
+          "from": "2026-09-07",
+          "to": "2026-09-08"
+        }
+      }
+    },
+    {
+      "at": "2026-09-22T10:31:51.266896+00:00",
+      "type": "updated",
+      "job_id": "b31f942adf5dca3b",
+      "source": "BoardWalk Consulting",
+      "title": "Executive Director",
+      "organization": "Gateway Early Childhood Alliance",
+      "changes": {
+        "posted_date": {
+          "from": "2026-08-31",
+          "to": "2026-08-25"
+        }
+      }
+    },
+    {
+      "at": "2026-09-22T10:31:51.266896+00:00",
+      "type": "updated",
+      "job_id": "e39688bc3548ed3e",
+      "source": "BoardWalk Consulting",
+      "title": "CEO",
+      "organization": "The Colorado Health Foundation",
+      "changes": {
+        "posted_date": {
+          "from": "2026-07-23",
+          "to": "2026-07-24"
+        }
+      }
+    },
+    {
+      "at": "2026-09-22T10:31:51.266896+00:00",
+      "type": "updated",
+      "job_id": "dfcd1a39e5a39154",
+      "source": "BoardWalk Consulting",
+      "title": "President & CEO",
+      "organization": "Community Foundation for Greater Atlanta",
+      "changes": {
+        "posted_date": {
+          "from": "2026-07-23",
+          "to": "2026-07-24"
+        }
+      }
+    },
+    {
+      "at": "2026-09-22T10:31:51.266896+00:00",
+      "type": "updated",
+      "job_id": "02c92a3fb8587a5a",
+      "source": "BoardWalk Consulting",
+      "title": "President & CEO",
+      "organization": "North Carolina Community Foundation",
+      "changes": {
+        "posted_date": {
+          "from": "2026-06-23",
+          "to": "2026-06-24"
+        }
+      }
+    },
+    {
+      "at": "2026-09-22T10:31:51.266896+00:00",
+      "type": "updated",
+      "job_id": "9bc079973dda6ba0",
+      "source": "BoardWalk Consulting",
+      "title": "Chief Executive Officer",
+      "organization": "The Greenville Housing Authority",
+      "changes": {
+        "posted_date": {
+          "from": "2026-05-24",
+          "to": "2026-05-25"
+        }
+      }
+    },
+    {
+      "at": "2026-09-22T10:31:51.266896+00:00",
+      "type": "updated",
+      "job_id": "e2e14dc19e50a789",
+      "source": "BoardWalk Consulting",
+      "title": "President & CEO",
+      "organization": "Downtown Atlanta Inc.",
+      "changes": {
+        "posted_date": {
+          "from": "2026-05-24",
+          "to": "2026-05-25"
+        }
+      }
+    },
+    {
+      "at": "2026-09-22T10:31:51.266896+00:00",
+      "type": "updated",
+      "job_id": "2007bb09370d8128",
+      "source": "BoardWalk Consulting",
+      "title": "Executive Director",
+      "organization": "Pete M. Hanna Charitable Foundation",
+      "changes": {
+        "posted_date": {
+          "from": "2026-05-24",
+          "to": "2026-05-25"
+        }
+      }
+    },
+    {
+      "at": "2026-09-22T10:31:51.266896+00:00",
+      "type": "updated",
+      "job_id": "70879d341e410a6b",
+      "source": "BoardWalk Consulting",
+      "title": "Executive Director",
+      "organization": "Atlanta Ballet",
+      "changes": {
+        "posted_date": {
+          "from": "2026-04-24",
+          "to": "2026-04-25"
+        }
+      }
+    },
+    {
+      "at": "2026-09-22T10:31:51.266896+00:00",
+      "type": "reopened",
+      "job_id": "62e62841416b764c",
+      "source": "Bridge Partners",
+      "title": "CEO and Executive Director",
+      "organization": "Functional Expertise"
+    },
+    {
+      "at": "2026-09-22T10:31:51.266896+00:00",
+      "type": "updated",
+      "job_id": "7c25c34d3f02f887",
+      "source": "Scion Executive Search",
+      "title": "Executive Director",
+      "organization": "Our Divisions",
+      "changes": {
+        "posted_date": {
+          "from": "2026-08-05",
+          "to": "2026-09-21"
+        }
+      }
+    },
+    {
+      "at": "2026-09-22T10:31:51.266896+00:00",
+      "type": "updated",
+      "job_id": "41e65aa40a11e404",
+      "source": "Isaacson, Miller",
+      "title": "President",
+      "organization": "Big Ten Academic Alliance",
+      "changes": {
+        "work_arrangement": {
+          "from": "Unknown",
+          "to": "Remote"
+        }
+      }
+    },
+    {
+      "at": "2026-09-22T10:31:51.266896+00:00",
+      "type": "updated",
+      "job_id": "27e6b139c8cde699",
+      "source": "Isaacson, Miller",
+      "title": "President",
+      "organization": "Muhlenberg College",
+      "changes": {
+        "mandate_tags": {
+          "from": [
+            "External affairs / advocacy",
+            "Culture / talent"
+          ],
+          "to": [
+            "Growth / scale",
+            "External affairs / advocacy",
+            "Membership / stakeholders",
+            "Culture / talent",
+            "Financial sustainability"
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-09-22T10:31:51.266896+00:00",
+      "type": "updated",
+      "job_id": "9d9450d05842e801",
+      "source": "DSG Global",
+      "title": "Executive Director",
+      "organization": "The Education Fund",
+      "changes": {
+        "organization": {
+          "from": "Illinois Board of Examiners",
+          "to": "The Education Fund"
+        },
+        "location": {
+          "from": "Naperville, IL",
+          "to": "Miami, FL"
+        },
+        "url": {
+          "from": "https://www.dsgco.com/search/23347-ilboe-executive-director/",
+          "to": "https://www.dsgco.com/search/23059-the-education-fund-executive-director/"
+        },
+        "posted_date": {
+          "from": "2026-08-13",
+          "to": "2026-05-06"
+        },
+        "compensation_text": {
+          "from": "Compensation & Work Environment This is a full-time, hybrid work environment. The annual salary range for this position is $150,000 to $175,000 and will be commensurate with the successful candidate’s skills and experience. A generous benefits package will be provided. Contact Submi",
+          "to": "Compensation and Benefits The starting salary range for this position is $140,000 - $170,000, with additional bonus potential. If the Executive Director succeeds the President, the salary will increase commensurate with the responsi"
+        },
+        "compensation_min": {
+          "from": 150000,
+          "to": 140000
+        },
+        "compensation_max": {
+          "from": 175000,
+          "to": 170000
+        },
+        "sector_tags": {
+          "from": [
+            "Education",
+            "Civic / Public",
+            "Environment",
+            "Arts / Culture",
+            "Media / Journalism"
+          ],
+          "to": [
+            "Health",
+            "Education",
+            "Civic / Public",
+            "Environment",
+            "Arts / Culture",
+            "Media / Journalism"
+          ]
+        },
+        "organization_types": {
+          "from": [
+            "Health System / Provider",
+            "Government / Public Entity",
+            "Media / Journalism",
+            "Other Nonprofit"
+          ],
+          "to": [
+            "College / University",
+            "K-12 / Education",
+            "Health System / Provider",
+            "Media / Journalism",
+            "Other Nonprofit"
+          ]
+        },
+        "mandate_tags": {
+          "from": [
+            "Fundraising / revenue",
+            "Operations / infrastructure",
+            "External affairs / advocacy",
+            "Membership / stakeholders",
+            "Culture / talent",
+            "Digital / AI"
+          ],
+          "to": [
+            "Growth / scale",
+            "Fundraising / revenue",
+            "Strategy / transformation",
+            "Operations / infrastructure",
+            "Culture / talent",
+            "Digital / AI"
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-09-22T10:31:51.266896+00:00",
+      "type": "closed",
+      "job_id": "ac8630d8b62bd70f",
+      "source": "DSG Global",
+      "title": "President & CEO",
+      "organization": "Keiro"
+    },
+    {
+      "at": "2026-09-22T10:31:51.266896+00:00",
+      "type": "closed",
+      "job_id": "78d9bfcdbeebcb4c",
+      "source": "DSG Global",
+      "title": "Executive Director, Washington D.C. Metro",
+      "organization": "GreenLight Fund"
+    },
+    {
+      "at": "2026-09-22T10:31:51.266896+00:00",
+      "type": "new",
+      "job_id": "b69c59a944bb1ea3",
+      "source": "Kittleman Associates",
+      "title": "Chief Executive Officer",
+      "organization": "Epilepsy Alliance Florida"
+    },
+    {
+      "at": "2026-09-22T10:31:51.266896+00:00",
+      "type": "updated",
+      "job_id": "bdb4fab450cecd43",
+      "source": "Kittleman Associates",
+      "title": "President and CEO",
+      "organization": "Viability, Inc.",
+      "changes": {
+        "organization": {
+          "from": "Mid-Ohio Food Collective",
+          "to": "Viability, Inc."
+        },
+        "location": {
+          "from": "Grove City, OH, United States",
+          "to": "Springfield, MA, United States"
+        },
+        "url": {
+          "from": "https://www.kittlemansearch.com/opportunities/president-ceo-mid-ohio-food-collective",
+          "to": "https://www.kittlemansearch.com/opportunities/president-ceo-viability"
+        },
+        "posted_date": {
+          "from": "2026-09-10",
+          "to": "2026-09-16"
+        },
+        "sector_tags": {
+          "from": [
+            "Education",
+            "Civic / Public",
+            "Human Services"
+          ],
+          "to": [
+            "Philanthropy",
+            "Human Services"
+          ]
+        },
+        "organization_types": {
+          "from": [
+            "Unclassified"
+          ],
+          "to": [
+            "Foundation / Philanthropy",
+            "Advocacy / Civil Rights",
+            "Human Services / Community",
+            "Other Nonprofit"
+          ]
+        },
+        "mandate_tags": {
+          "from": [
+            "Financial sustainability"
+          ],
+          "to": [
+            "Growth / scale",
+            "Fundraising / revenue",
+            "Operations / infrastructure",
+            "External affairs / advocacy",
+            "Membership / stakeholders",
+            "Culture / talent",
+            "Financial sustainability"
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-09-22T10:31:51.266896+00:00",
+      "type": "updated",
+      "job_id": "bdb4fab450cecd43",
+      "source": "Kittleman Associates",
+      "title": "President and CEO",
+      "organization": "Schoodic Institute at Acadia National Park",
+      "changes": {
+        "organization": {
+          "from": "Mid-Ohio Food Collective",
+          "to": "Schoodic Institute at Acadia National Park"
+        },
+        "location": {
+          "from": "Grove City, OH, United States",
+          "to": "Winter Harbor, ME, United States"
+        },
+        "url": {
+          "from": "https://www.kittlemansearch.com/opportunities/president-ceo-mid-ohio-food-collective",
+          "to": "https://www.kittlemansearch.com/opportunities/president-ceo-schoodic-institute"
+        },
+        "posted_date": {
+          "from": "2026-09-10",
+          "to": "2026-09-14"
+        },
+        "sector_tags": {
+          "from": [
+            "Education",
+            "Civic / Public",
+            "Human Services"
+          ],
+          "to": [
+            "Education",
+            "Environment"
+          ]
+        },
+        "organization_types": {
+          "from": [
+            "Unclassified"
+          ],
+          "to": [
+            "College / University"
+          ]
+        },
+        "mandate_tags": {
+          "from": [
+            "Financial sustainability"
+          ],
+          "to": [
+            "Growth / scale",
+            "Fundraising / revenue",
+            "Financial sustainability"
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-09-22T10:31:51.266896+00:00",
+      "type": "updated",
+      "job_id": "667625faad058369",
+      "source": "Development Guild",
+      "title": "Executive Director",
+      "organization": "Barnstable Land Trust",
+      "changes": {
+        "compensation_text": {
+          "from": "y for remote work. Compensation The salary range for this position is $150,000 – $165,000 per year, commensurate with experience. All qualified candidates will receive considerati",
+          "to": "Compensation The salary range for this position is $150,000 – $165,000 per year, commensurate with experience. All qualified candidates will receive consideration for employment without regard to race, color, r"
+        },
+        "work_arrangement": {
+          "from": "Remote",
+          "to": "On-site / unspecified"
         }
       }
     }
