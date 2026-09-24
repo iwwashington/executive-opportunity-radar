@@ -1,394 +1,6 @@
 {
-  "generated_at": "2026-09-23T10:31:34.436368+00:00",
+  "generated_at": "2026-09-24T10:31:17.077544+00:00",
   "events": [
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "new",
-      "job_id": "2c1fa6c78f24db96",
-      "source": "DSG Global",
-      "title": "The Players Alliance Executive Director Fort Lee",
-      "organization": "NJ"
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "new",
-      "job_id": "b3b40c1d22c20bf2",
-      "source": "DSG Global",
-      "title": "The University of Toledo Foundation President and CEO Toledo",
-      "organization": "OH"
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "new",
-      "job_id": "5d11ec437bcbf237",
-      "source": "DSG Global",
-      "title": "University of Miami Health System Executive Director, Senior Human Resources Partner Coral Gables, FL",
-      "organization": "UHealth"
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "new",
-      "job_id": "05408513bf75ad6d",
-      "source": "DSG Global",
-      "title": "University of Miami Executive Director",
-      "organization": "Research Administration (Pre-Award) Coral Gables, FL"
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "new",
-      "job_id": "036468c56d2d5ded",
-      "source": "DSG Global",
-      "title": "University of Wisconsin–Madison Executive Director",
-      "organization": "Wisconsin Public Media Madison, WI"
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "new",
-      "job_id": "74c04611618b70ad",
-      "source": "DSG Global",
-      "title": "Vitalyst Health Foundation President and Chief Executive Officer Phoenix",
-      "organization": "AZ"
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "new",
-      "job_id": "6cd8a9c8e76d8765",
-      "source": "DSG Global",
-      "title": "Wildpath Chief Executive Officer Tampa, Florida",
-      "organization": "Wildpath will selectively consider a hybrid work model as needed for strong candidates."
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "new",
-      "job_id": "7c256099211b35fa",
-      "source": "DSG Global",
-      "title": "World Neighbors President & Chief Executive Officer Flexible; Oklahoma City",
-      "organization": "OK strongly preferred"
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "updated",
-      "job_id": "fcb4be977994d5cc",
-      "source": "Kittleman Associates",
-      "title": "President & CEO",
-      "organization": "FIND Food Bank",
-      "changes": {
-        "url": {
-          "from": "https://www.kittlemansearch.com/opportunities/kittleman-for-candidates",
-          "to": "https://www.kittlemansearch.com/opportunities/president-ceo-find-food-bank"
-        },
-        "sector": {
-          "from": "Unclassified",
-          "to": "Philanthropy"
-        }
-      }
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "updated",
-      "job_id": "bdb4fab450cecd43",
-      "source": "Kittleman Associates",
-      "title": "President and CEO",
-      "organization": "Viability, Inc.",
-      "changes": {
-        "url": {
-          "from": "https://www.kittlemansearch.com/opportunities/kittleman-for-candidates",
-          "to": "https://www.kittlemansearch.com/opportunities/president-ceo-viability"
-        },
-        "sector": {
-          "from": "Unclassified",
-          "to": "Philanthropy"
-        }
-      }
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "updated",
-      "job_id": "4bcae25d0f23f4d7",
-      "source": "Kittleman Associates",
-      "title": "Chief Executive Officer",
-      "organization": "Stanley Street Treatment and Resources",
-      "changes": {
-        "url": {
-          "from": "https://www.kittlemansearch.com/opportunities/kittleman-for-candidates",
-          "to": "https://www.kittlemansearch.com/opportunities/chief-executive-officer-stanley-street-treatment-and-resources"
-        },
-        "sector": {
-          "from": "Unclassified",
-          "to": "Health"
-        }
-      }
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "new",
-      "job_id": "3f90f7ea19072d40",
-      "source": "Kittleman Associates",
-      "title": "Executive Director",
-      "organization": "Kalamazoo Defender"
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "updated",
-      "job_id": "bdb4fab450cecd43",
-      "source": "Kittleman Associates",
-      "title": "President and CEO",
-      "organization": "Schoodic Institute at Acadia National Park",
-      "changes": {
-        "organization": {
-          "from": "Viability, Inc.",
-          "to": "Schoodic Institute at Acadia National Park"
-        },
-        "location": {
-          "from": "Springfield, MA",
-          "to": "Winter Harbor, ME"
-        },
-        "url": {
-          "from": "https://www.kittlemansearch.com/opportunities/kittleman-for-candidates",
-          "to": "https://www.kittlemansearch.com/opportunities/president-ceo-schoodic-institute"
-        },
-        "posted_date": {
-          "from": "2026-09-16",
-          "to": "2026-09-14"
-        },
-        "sector": {
-          "from": "Unclassified",
-          "to": "Philanthropy"
-        }
-      }
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "updated",
-      "job_id": "bdb4fab450cecd43",
-      "source": "Kittleman Associates",
-      "title": "President and CEO",
-      "organization": "Mid-Ohio Food Collective",
-      "changes": {
-        "organization": {
-          "from": "Viability, Inc.",
-          "to": "Mid-Ohio Food Collective"
-        },
-        "location": {
-          "from": "Springfield, MA",
-          "to": "Grove City, OH"
-        },
-        "url": {
-          "from": "https://www.kittlemansearch.com/opportunities/kittleman-for-candidates",
-          "to": "https://www.kittlemansearch.com/opportunities/president-ceo-mid-ohio-food-collective"
-        },
-        "posted_date": {
-          "from": "2026-09-16",
-          "to": "2026-09-10"
-        },
-        "sector": {
-          "from": "Unclassified",
-          "to": "Health"
-        }
-      }
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "new",
-      "job_id": "7075abd347075551",
-      "source": "Kittleman Associates",
-      "title": "Executive Director",
-      "organization": "West Virginia Land Trust"
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "new",
-      "job_id": "5adea7655741d201",
-      "source": "Kittleman Associates",
-      "title": "Executive Director",
-      "organization": "Colorado Disability Funding Authority"
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "new",
-      "job_id": "f5b5e493cc1d5e5f",
-      "source": "Kittleman Associates",
-      "title": "Chief Executive Officer",
-      "organization": "El Pasoans Fighting Hunger Food Bank"
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "updated",
-      "job_id": "a55dca6e70c8a384",
-      "source": "Kittleman Associates",
-      "title": "Chief Executive Officer",
-      "organization": "RECOVER Initiative",
-      "changes": {
-        "location": {
-          "from": "Remote",
-          "to": "Posted 8/17/26 · Remote, United States"
-        },
-        "url": {
-          "from": "https://www.kittlemansearch.com/opportunities/kittleman-for-candidates",
-          "to": "https://www.kittlemansearch.com/opportunities/chief-executive-officer-recover-initiative"
-        },
-        "sector": {
-          "from": "Unclassified",
-          "to": "Health"
-        }
-      }
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "new",
-      "job_id": "e09087e95d1507a8",
-      "source": "Kittleman Associates",
-      "title": "Executive Director",
-      "organization": "Lena Park Community Development Corporation"
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "updated",
-      "job_id": "8738445ae714e754",
-      "source": "Kittleman Associates",
-      "title": "Chief Executive Officer",
-      "organization": "Holt International",
-      "changes": {
-        "url": {
-          "from": "https://www.kittlemansearch.com/opportunities/kittleman-for-candidates",
-          "to": "https://www.kittlemansearch.com/opportunities/chief-executive-officer-holt-international"
-        },
-        "sector": {
-          "from": "Unclassified",
-          "to": "Health"
-        }
-      }
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "new",
-      "job_id": "9cd60f16b8fc3386",
-      "source": "Kittleman Associates",
-      "title": "Executive Director",
-      "organization": "Center for Law and Education"
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "updated",
-      "job_id": "6cd3381695007a42",
-      "source": "Kittleman Associates",
-      "title": "Chief Executive Officer",
-      "organization": "Feeding Northeast Florida",
-      "changes": {
-        "url": {
-          "from": "https://www.kittlemansearch.com/opportunities/kittleman-for-candidates",
-          "to": "https://www.kittlemansearch.com/opportunities/chief-executive-officer-feeding-northeast-florida"
-        },
-        "sector": {
-          "from": "Unclassified",
-          "to": "Health"
-        }
-      }
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "updated",
-      "job_id": "85faf9c05c0664f1",
-      "source": "Kittleman Associates",
-      "title": "President & CEO",
-      "organization": "Special Olympics Pennsylvania",
-      "changes": {
-        "url": {
-          "from": "https://www.kittlemansearch.com/opportunities/kittleman-for-candidates",
-          "to": "https://www.kittlemansearch.com/opportunities/president-ceo-special-olympics-pennsylvania"
-        },
-        "sector": {
-          "from": "Unclassified",
-          "to": "Health"
-        }
-      }
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "updated",
-      "job_id": "28b85365f9a3ab21",
-      "source": "Kittleman Associates",
-      "title": "Executive Director",
-      "organization": "Society for American Archaeology",
-      "changes": {
-        "location": {
-          "from": "Washington, DC",
-          "to": "Remote"
-        },
-        "url": {
-          "from": "https://www.kittlemansearch.com/opportunities/kittleman-for-candidates",
-          "to": "https://www.kittlemansearch.com/opportunities/executive-director-society-for-american-archaeology"
-        },
-        "sector": {
-          "from": "Unclassified",
-          "to": "Philanthropy"
-        },
-        "work_arrangement": {
-          "from": "On-site / unspecified",
-          "to": "Remote"
-        }
-      }
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "updated",
-      "job_id": "10c04eb4cf804091",
-      "source": "Kittleman Associates",
-      "title": "Executive Director",
-      "organization": "Animal Legal Defense Fund",
-      "changes": {
-        "url": {
-          "from": "https://www.kittlemansearch.com/opportunities/kittleman-for-candidates",
-          "to": "https://www.kittlemansearch.com/opportunities/executive-director-animal-legal-defense-fund"
-        },
-        "sector": {
-          "from": "Unclassified",
-          "to": "Health"
-        }
-      }
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "updated",
-      "job_id": "3582b42239eb574f",
-      "source": "Kittleman Associates",
-      "title": "Executive Director",
-      "organization": "PAWS",
-      "changes": {
-        "url": {
-          "from": "https://www.kittlemansearch.com/opportunities/kittleman-for-candidates",
-          "to": "https://www.kittlemansearch.com/opportunities/executive-director-paws"
-        },
-        "sector": {
-          "from": "Unclassified",
-          "to": "Health"
-        }
-      }
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "new",
-      "job_id": "fa7a9d929110f9b4",
-      "source": "Kittleman Associates",
-      "title": "Executive Director",
-      "organization": "Childcare Network of Evanston (CNE)"
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "new",
-      "job_id": "cc964c1bbc1a40d4",
-      "source": "Kittleman Associates",
-      "title": "Executive Director",
-      "organization": "Pathway to Possible"
-    },
-    {
-      "at": "2026-09-19T06:41:48.620945+00:00",
-      "type": "new",
-      "job_id": "ab90a81644622716",
-      "source": "Kittleman Associates",
-      "title": "Executive Director",
-      "organization": "New Hampshire Municipal Association"
-    },
     {
       "at": "2026-09-19T06:41:48.620945+00:00",
       "type": "updated",
@@ -7507,6 +7119,912 @@
       "source": "Kittleman Associates",
       "title": "Executive Director",
       "organization": "Animal Legal Defense Fund"
+    },
+    {
+      "at": "2026-09-24T10:31:17.077544+00:00",
+      "type": "removed_false_positive",
+      "job_id": "62e62841416b764c",
+      "source": "Bridge Partners",
+      "title": "CEO and Executive Director",
+      "organization": "Functional Expertise",
+      "url": "https://bridgepartnersllc.com/function/ceo/"
+    },
+    {
+      "at": "2026-09-24T10:31:17.077544+00:00",
+      "type": "closed",
+      "job_id": "3a1d9aefe35149a8",
+      "source": "Aspen Leadership Group",
+      "title": "President & CEO",
+      "organization": "Fetzer Institute"
+    },
+    {
+      "at": "2026-09-24T10:31:17.077544+00:00",
+      "type": "updated",
+      "job_id": "acf48ae0f359e233",
+      "source": "BoardWalk Consulting",
+      "title": "Executive Director",
+      "organization": "Florida Rights Restoration Coalition",
+      "changes": {
+        "posted_date": {
+          "from": "2026-09-09",
+          "to": "2026-09-10"
+        }
+      }
+    },
+    {
+      "at": "2026-09-24T10:31:17.077544+00:00",
+      "type": "updated",
+      "job_id": "b31f942adf5dca3b",
+      "source": "BoardWalk Consulting",
+      "title": "Executive Director",
+      "organization": "Gateway Early Childhood Alliance",
+      "changes": {
+        "posted_date": {
+          "from": "2026-08-26",
+          "to": "2026-08-27"
+        }
+      }
+    },
+    {
+      "at": "2026-09-24T10:31:17.077544+00:00",
+      "type": "updated",
+      "job_id": "e39688bc3548ed3e",
+      "source": "BoardWalk Consulting",
+      "title": "CEO",
+      "organization": "The Colorado Health Foundation",
+      "changes": {
+        "posted_date": {
+          "from": "2026-07-25",
+          "to": "2026-07-26"
+        }
+      }
+    },
+    {
+      "at": "2026-09-24T10:31:17.077544+00:00",
+      "type": "updated",
+      "job_id": "dfcd1a39e5a39154",
+      "source": "BoardWalk Consulting",
+      "title": "President & CEO",
+      "organization": "Community Foundation for Greater Atlanta",
+      "changes": {
+        "posted_date": {
+          "from": "2026-07-25",
+          "to": "2026-07-26"
+        }
+      }
+    },
+    {
+      "at": "2026-09-24T10:31:17.077544+00:00",
+      "type": "updated",
+      "job_id": "02c92a3fb8587a5a",
+      "source": "BoardWalk Consulting",
+      "title": "President & CEO",
+      "organization": "North Carolina Community Foundation",
+      "changes": {
+        "posted_date": {
+          "from": "2026-06-25",
+          "to": "2026-06-26"
+        }
+      }
+    },
+    {
+      "at": "2026-09-24T10:31:17.077544+00:00",
+      "type": "updated",
+      "job_id": "9bc079973dda6ba0",
+      "source": "BoardWalk Consulting",
+      "title": "Chief Executive Officer",
+      "organization": "The Greenville Housing Authority",
+      "changes": {
+        "posted_date": {
+          "from": "2026-05-26",
+          "to": "2026-05-27"
+        }
+      }
+    },
+    {
+      "at": "2026-09-24T10:31:17.077544+00:00",
+      "type": "updated",
+      "job_id": "e2e14dc19e50a789",
+      "source": "BoardWalk Consulting",
+      "title": "President & CEO",
+      "organization": "Downtown Atlanta Inc.",
+      "changes": {
+        "posted_date": {
+          "from": "2026-05-26",
+          "to": "2026-05-27"
+        }
+      }
+    },
+    {
+      "at": "2026-09-24T10:31:17.077544+00:00",
+      "type": "updated",
+      "job_id": "2007bb09370d8128",
+      "source": "BoardWalk Consulting",
+      "title": "Executive Director",
+      "organization": "Pete M. Hanna Charitable Foundation",
+      "changes": {
+        "posted_date": {
+          "from": "2026-05-26",
+          "to": "2026-04-27"
+        }
+      }
+    },
+    {
+      "at": "2026-09-24T10:31:17.077544+00:00",
+      "type": "updated",
+      "job_id": "70879d341e410a6b",
+      "source": "BoardWalk Consulting",
+      "title": "Executive Director",
+      "organization": "Atlanta Ballet",
+      "changes": {
+        "posted_date": {
+          "from": "2026-04-26",
+          "to": "2026-04-27"
+        }
+      }
+    },
+    {
+      "at": "2026-09-24T10:31:17.077544+00:00",
+      "type": "reopened",
+      "job_id": "62e62841416b764c",
+      "source": "Bridge Partners",
+      "title": "CEO and Executive Director",
+      "organization": "Functional Expertise"
+    },
+    {
+      "at": "2026-09-24T10:31:17.077544+00:00",
+      "type": "new",
+      "job_id": "2b029eca636bbb93",
+      "source": "Scion Executive Search",
+      "title": "President",
+      "organization": "founder, connecting revenue, profitability, demand, staffing, and capacity decisions"
+    },
+    {
+      "at": "2026-09-24T10:31:17.077544+00:00",
+      "type": "closed",
+      "job_id": "3fcea97e0f540892",
+      "source": "Isaacson, Miller",
+      "title": "Executive Director",
+      "organization": "Massachusetts Water Resources Authority"
+    },
+    {
+      "at": "2026-09-24T10:31:17.077544+00:00",
+      "type": "closed",
+      "job_id": "b7513a883e6587a3",
+      "source": "Isaacson, Miller",
+      "title": "President and Chief Executive Officer",
+      "organization": "The Wistar Institute"
+    },
+    {
+      "at": "2026-09-24T10:31:17.077544+00:00",
+      "type": "closed",
+      "job_id": "c91a7097a7fd366b",
+      "source": "Isaacson, Miller",
+      "title": "The Thomas A. 1977 and Gina T. Russo 1977 Executive Director",
+      "organization": "Dartmouth Tribal Sovereignty Institute"
+    },
+    {
+      "at": "2026-09-24T10:31:17.077544+00:00",
+      "type": "updated",
+      "job_id": "b565b85c0356c4f6",
+      "source": "Lindauer",
+      "title": "Executive Director, Bertarelli Institute for Family Entrepreneurship",
+      "organization": "Bertarelli Institute for Family Entrepreneurship",
+      "changes": {
+        "compensation_text": {
+          "from": "salary range for this position is $185,555–$206,172. Other searches for Babson College Director, Planned Giving Past searches and placements for Babson College Associate Vice President, Capit",
+          "to": "salary range for this position is $185,555–$206,172. Other searches for Babson College Assistant Vice President, Donor Experience Director, Planned Giving Past searches and placements for Bab"
+        }
+      }
+    },
+    {
+      "at": "2026-09-24T10:31:17.077544+00:00",
+      "type": "updated",
+      "job_id": "b8e982953accafdb",
+      "source": "DSG Global",
+      "title": "Chief Executive Officer",
+      "organization": "Aeris Insight",
+      "changes": {
+        "organization": {
+          "from": "Kin On",
+          "to": "Aeris Insight"
+        },
+        "location": {
+          "from": "Seattle, WA",
+          "to": "Remote"
+        },
+        "url": {
+          "from": "https://www.dsgco.com/search/23171-kin-on-chief-executive-officer/",
+          "to": "https://www.dsgco.com/search/23172-aeris/"
+        },
+        "posted_date": {
+          "from": "2026-06-14",
+          "to": "2026-07-08"
+        },
+        "compensation_text": {
+          "from": "Compensation and Benefits Salary is competitive and commensurate with experience. The good faith estimated salary range for this role is $250,000 - $350,000 with a generous benefits package. How to Apply Kin On is an equal opportunity employer committed to building a diverse and inclusive leader",
+          "to": "Compensation and Benefits Salary is competitive and commensurate with experience. The salary range for this role is $230,000 - $250,000 with a generous benefits package. The exact salary that will be offered to the CEO will be determined based on a consideration of the succe"
+        },
+        "compensation_min": {
+          "from": 250000,
+          "to": 230000
+        },
+        "compensation_max": {
+          "from": 350000,
+          "to": 250000
+        },
+        "sector_tags": {
+          "from": [
+            "Health",
+            "Philanthropy",
+            "Education",
+            "Civic / Public",
+            "Environment",
+            "Human Services",
+            "Arts / Culture",
+            "Media / Journalism",
+            "Faith"
+          ],
+          "to": [
+            "Education",
+            "Civic / Public",
+            "Environment",
+            "Arts / Culture",
+            "Media / Journalism"
+          ]
+        },
+        "organization_types": {
+          "from": [
+            "Foundation / Philanthropy",
+            "College / University",
+            "Health System / Provider",
+            "Media / Journalism",
+            "Arts / Culture",
+            "Human Services / Community",
+            "Other Nonprofit"
+          ],
+          "to": [
+            "Health System / Provider",
+            "Media / Journalism",
+            "Other Nonprofit"
+          ]
+        },
+        "work_arrangement": {
+          "from": "On-site / unspecified",
+          "to": "Remote"
+        },
+        "mandate_tags": {
+          "from": [
+            "Growth / scale",
+            "Fundraising / revenue",
+            "Strategy / transformation",
+            "Operations / infrastructure",
+            "Membership / stakeholders",
+            "Culture / talent",
+            "Digital / AI",
+            "Financial sustainability"
+          ],
+          "to": [
+            "Growth / scale",
+            "Fundraising / revenue",
+            "Strategy / transformation",
+            "Membership / stakeholders",
+            "Culture / talent",
+            "Digital / AI",
+            "Financial sustainability"
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-09-24T10:31:17.077544+00:00",
+      "type": "updated",
+      "job_id": "64ee69a30199e1a8",
+      "source": "DSG Global",
+      "title": "CEO",
+      "organization": "Aspiranet",
+      "changes": {
+        "organization": {
+          "from": "Fort Worth Report",
+          "to": "Aspiranet"
+        },
+        "location": {
+          "from": "Fort Worth, TX",
+          "to": "South San Francisco, CA"
+        },
+        "url": {
+          "from": "https://www.dsgco.com/search/23370-fort-worth-report-ceo/",
+          "to": "https://www.dsgco.com/search/23462-aspiranet-ceo/"
+        },
+        "posted_date": {
+          "from": "2026-08-10",
+          "to": "2026-09-15"
+        },
+        "compensation_text": {
+          "from": "Compensation and Benefits Salary and bonus subject to qualifications and experience. Benefits include PTO, paid holidays, insurance benefits including medical, dental, vision, life insurance plans and 401k plan. This is a full time role based in Fort Worth, Texas. The Fort Worth Report is an equal opportunity employer. We a",
+          "to": "Compensation and Benefits The salary range for this position is $400,000 – $475,000 commensurate with experience. Aspiranet values its employees and offers a comprehensive benefits package. Contact DSG | Koya has been exclu"
+        },
+        "compensation_min": {
+          "from": 401000,
+          "to": 400000
+        },
+        "compensation_max": {
+          "from": 401000,
+          "to": 475000
+        },
+        "sector_tags": {
+          "from": [
+            "Health",
+            "Philanthropy",
+            "Education",
+            "Civic / Public",
+            "Environment",
+            "Arts / Culture",
+            "Media / Journalism",
+            "Faith"
+          ],
+          "to": [
+            "Health",
+            "Philanthropy",
+            "Education",
+            "Civic / Public",
+            "Environment",
+            "Human Services",
+            "Arts / Culture",
+            "Media / Journalism"
+          ]
+        },
+        "organization_types": {
+          "from": [
+            "Foundation / Philanthropy",
+            "Health System / Provider",
+            "Media / Journalism",
+            "Other Nonprofit"
+          ],
+          "to": [
+            "Foundation / Philanthropy",
+            "Health System / Provider",
+            "Media / Journalism",
+            "Arts / Culture",
+            "Advocacy / Civil Rights",
+            "Human Services / Community",
+            "Other Nonprofit"
+          ]
+        },
+        "mandate_tags": {
+          "from": [
+            "Growth / scale",
+            "Fundraising / revenue",
+            "Strategy / transformation",
+            "Operations / infrastructure",
+            "Membership / stakeholders",
+            "Culture / talent",
+            "Digital / AI",
+            "Financial sustainability"
+          ],
+          "to": [
+            "Growth / scale",
+            "Fundraising / revenue",
+            "Strategy / transformation",
+            "Operations / infrastructure",
+            "External affairs / advocacy",
+            "Membership / stakeholders",
+            "Culture / talent",
+            "Digital / AI",
+            "Financial sustainability"
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-09-24T10:31:17.077544+00:00",
+      "type": "updated",
+      "job_id": "9d9450d05842e801",
+      "source": "DSG Global",
+      "title": "Executive Director",
+      "organization": "Newtrax",
+      "changes": {
+        "organization": {
+          "from": "North Penn Legal Services",
+          "to": "Newtrax"
+        },
+        "location": {
+          "from": "Pittston, PA",
+          "to": "White Bear Lake, MN"
+        },
+        "url": {
+          "from": "https://www.dsgco.com/search/23115-npls-executive-director/",
+          "to": "https://www.dsgco.com/search/23458-newtrax-executive-director/"
+        },
+        "posted_date": {
+          "from": "2026-07-01",
+          "to": "2026-09-09"
+        },
+        "compensation_text": {
+          "from": "Compensation and Benefits The salary range for this role is $150,000 - $160,000 commensurate with relevant experience. NPLS offers an excellent benefits package that includes health and dental insurance, a 401(k) plan a",
+          "to": "Compensation and Benefits The salary range for this position is $140,000 to $160,000. Contact DSG | Koya has been exclusively retained for this engagement, which is being led by Alicia Salerno. Submit a compelling cover lett"
+        },
+        "compensation_min": {
+          "from": 150000,
+          "to": 140000
+        },
+        "sector_tags": {
+          "from": [
+            "Health",
+            "Education",
+            "Civic / Public",
+            "Environment",
+            "Justice / Rights",
+            "Arts / Culture",
+            "Media / Journalism"
+          ],
+          "to": [
+            "Philanthropy",
+            "Education",
+            "Civic / Public",
+            "Environment",
+            "Human Services",
+            "Arts / Culture",
+            "Media / Journalism"
+          ]
+        },
+        "organization_types": {
+          "from": [
+            "Health System / Provider",
+            "Media / Journalism",
+            "Advocacy / Civil Rights",
+            "Other Nonprofit"
+          ],
+          "to": [
+            "Foundation / Philanthropy",
+            "Health System / Provider",
+            "Media / Journalism",
+            "Human Services / Community",
+            "Other Nonprofit"
+          ]
+        },
+        "mandate_tags": {
+          "from": [
+            "Fundraising / revenue",
+            "Culture / talent",
+            "Digital / AI",
+            "Financial sustainability"
+          ],
+          "to": [
+            "Growth / scale",
+            "Fundraising / revenue",
+            "Strategy / transformation",
+            "Operations / infrastructure",
+            "Membership / stakeholders",
+            "Culture / talent",
+            "Digital / AI",
+            "Financial sustainability"
+          ]
+        },
+        "succession_reason": {
+          "from": "Retirement",
+          "to": "Planned succession"
+        }
+      }
+    },
+    {
+      "at": "2026-09-24T10:31:17.077544+00:00",
+      "type": "updated",
+      "job_id": "b8e982953accafdb",
+      "source": "DSG Global",
+      "title": "Chief Executive Officer",
+      "organization": "Renewable Thermal Collaborative",
+      "changes": {
+        "organization": {
+          "from": "Kin On",
+          "to": "Renewable Thermal Collaborative"
+        },
+        "location": {
+          "from": "Seattle, WA",
+          "to": "Remote, Washington D.C. preferred"
+        },
+        "url": {
+          "from": "https://www.dsgco.com/search/23171-kin-on-chief-executive-officer/",
+          "to": "https://www.dsgco.com/search/23132-rtc-chief-executive-officer/"
+        },
+        "posted_date": {
+          "from": "2026-06-14",
+          "to": "2026-06-11"
+        },
+        "compensation_text": {
+          "from": "Compensation and Benefits Salary is competitive and commensurate with experience. The good faith estimated salary range for this role is $250,000 - $350,000 with a generous benefits package. How to Apply Kin On is an equal opportunity employer committed to building a diverse and inclusive leader",
+          "to": "Compensation & Benefits The compensation for this role is anticipated to range from $275,000 - $350,000, commensurate with experience. Travel is expected to be 15-20% of the role, both in the U.S. and internationally. The Renewable Thermal Col"
+        },
+        "compensation_min": {
+          "from": 250000,
+          "to": 275000
+        },
+        "sector_tags": {
+          "from": [
+            "Health",
+            "Philanthropy",
+            "Education",
+            "Civic / Public",
+            "Environment",
+            "Human Services",
+            "Arts / Culture",
+            "Media / Journalism",
+            "Faith"
+          ],
+          "to": [
+            "Education",
+            "Civic / Public",
+            "Environment",
+            "Arts / Culture",
+            "Media / Journalism",
+            "International"
+          ]
+        },
+        "organization_types": {
+          "from": [
+            "Foundation / Philanthropy",
+            "College / University",
+            "Health System / Provider",
+            "Media / Journalism",
+            "Arts / Culture",
+            "Human Services / Community",
+            "Other Nonprofit"
+          ],
+          "to": [
+            "Health System / Provider",
+            "Media / Journalism",
+            "Advocacy / Civil Rights",
+            "Other Nonprofit"
+          ]
+        },
+        "work_arrangement": {
+          "from": "On-site / unspecified",
+          "to": "Remote"
+        },
+        "mandate_tags": {
+          "from": [
+            "Growth / scale",
+            "Fundraising / revenue",
+            "Strategy / transformation",
+            "Operations / infrastructure",
+            "Membership / stakeholders",
+            "Culture / talent",
+            "Digital / AI",
+            "Financial sustainability"
+          ],
+          "to": [
+            "Growth / scale",
+            "Fundraising / revenue",
+            "Strategy / transformation",
+            "Operations / infrastructure",
+            "External affairs / advocacy",
+            "Membership / stakeholders",
+            "Culture / talent",
+            "Digital / AI",
+            "Financial sustainability"
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-09-24T10:31:17.077544+00:00",
+      "type": "updated",
+      "job_id": "9d9450d05842e801",
+      "source": "DSG Global",
+      "title": "Executive Director",
+      "organization": "The Doctors Clinic",
+      "changes": {
+        "organization": {
+          "from": "North Penn Legal Services",
+          "to": "The Doctors Clinic"
+        },
+        "location": {
+          "from": "Pittston, PA",
+          "to": "Silverdale, WA"
+        },
+        "url": {
+          "from": "https://www.dsgco.com/search/23115-npls-executive-director/",
+          "to": "https://www.dsgco.com/search/23372-the-doctors-clinic-executive-director/"
+        },
+        "posted_date": {
+          "from": "2026-07-01",
+          "to": "2026-08-26"
+        },
+        "sector_tags": {
+          "from": [
+            "Health",
+            "Education",
+            "Civic / Public",
+            "Environment",
+            "Justice / Rights",
+            "Arts / Culture",
+            "Media / Journalism"
+          ],
+          "to": [
+            "Health",
+            "Philanthropy",
+            "Education",
+            "Civic / Public",
+            "Environment",
+            "Media / Journalism"
+          ]
+        },
+        "organization_types": {
+          "from": [
+            "Health System / Provider",
+            "Media / Journalism",
+            "Advocacy / Civil Rights",
+            "Other Nonprofit"
+          ],
+          "to": [
+            "Foundation / Philanthropy",
+            "Health System / Provider",
+            "Media / Journalism",
+            "Advocacy / Civil Rights",
+            "Human Services / Community",
+            "Other Nonprofit"
+          ]
+        },
+        "mandate_tags": {
+          "from": [
+            "Fundraising / revenue",
+            "Culture / talent",
+            "Digital / AI",
+            "Financial sustainability"
+          ],
+          "to": [
+            "Growth / scale",
+            "Fundraising / revenue",
+            "Strategy / transformation",
+            "Operations / infrastructure",
+            "External affairs / advocacy",
+            "Membership / stakeholders",
+            "Culture / talent",
+            "Digital / AI"
+          ]
+        },
+        "succession_reason": {
+          "from": "Retirement",
+          "to": "Planned succession"
+        }
+      }
+    },
+    {
+      "at": "2026-09-24T10:31:17.077544+00:00",
+      "type": "updated",
+      "job_id": "9d9450d05842e801",
+      "source": "DSG Global",
+      "title": "Executive Director",
+      "organization": "The Education Fund",
+      "changes": {
+        "organization": {
+          "from": "North Penn Legal Services",
+          "to": "The Education Fund"
+        },
+        "location": {
+          "from": "Pittston, PA",
+          "to": "Miami, FL"
+        },
+        "url": {
+          "from": "https://www.dsgco.com/search/23115-npls-executive-director/",
+          "to": "https://www.dsgco.com/search/23059-the-education-fund-executive-director/"
+        },
+        "posted_date": {
+          "from": "2026-07-01",
+          "to": "2026-05-06"
+        },
+        "compensation_text": {
+          "from": "Compensation and Benefits The salary range for this role is $150,000 - $160,000 commensurate with relevant experience. NPLS offers an excellent benefits package that includes health and dental insurance, a 401(k) plan a",
+          "to": "Compensation and Benefits The starting salary range for this position is $140,000 - $170,000, with additional bonus potential. If the Executive Director succeeds the President, the salary will increase commensurate with the responsi"
+        },
+        "compensation_min": {
+          "from": 150000,
+          "to": 140000
+        },
+        "compensation_max": {
+          "from": 160000,
+          "to": 170000
+        },
+        "sector_tags": {
+          "from": [
+            "Health",
+            "Education",
+            "Civic / Public",
+            "Environment",
+            "Justice / Rights",
+            "Arts / Culture",
+            "Media / Journalism"
+          ],
+          "to": [
+            "Health",
+            "Education",
+            "Civic / Public",
+            "Environment",
+            "Arts / Culture",
+            "Media / Journalism"
+          ]
+        },
+        "organization_types": {
+          "from": [
+            "Health System / Provider",
+            "Media / Journalism",
+            "Advocacy / Civil Rights",
+            "Other Nonprofit"
+          ],
+          "to": [
+            "College / University",
+            "K-12 / Education",
+            "Health System / Provider",
+            "Media / Journalism",
+            "Other Nonprofit"
+          ]
+        },
+        "mandate_tags": {
+          "from": [
+            "Fundraising / revenue",
+            "Culture / talent",
+            "Digital / AI",
+            "Financial sustainability"
+          ],
+          "to": [
+            "Growth / scale",
+            "Fundraising / revenue",
+            "Strategy / transformation",
+            "Operations / infrastructure",
+            "Culture / talent",
+            "Digital / AI"
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-09-24T10:31:17.077544+00:00",
+      "type": "closed",
+      "job_id": "6d2efc11ac38fb2f",
+      "source": "DSG Global",
+      "title": "Executive Director for Housing and Residence Life",
+      "organization": "North Carolina A&T State University"
+    },
+    {
+      "at": "2026-09-24T10:31:17.077544+00:00",
+      "type": "closed",
+      "job_id": "d4292837ee938bae",
+      "source": "DSG Global",
+      "title": "President",
+      "organization": "Highline College"
+    },
+    {
+      "at": "2026-09-24T10:31:17.077544+00:00",
+      "type": "closed",
+      "job_id": "ac8630d8b62bd70f",
+      "source": "DSG Global",
+      "title": "President & CEO",
+      "organization": "Keiro"
+    },
+    {
+      "at": "2026-09-24T10:31:17.077544+00:00",
+      "type": "updated",
+      "job_id": "bdb4fab450cecd43",
+      "source": "Kittleman Associates",
+      "title": "President and CEO",
+      "organization": "Viability, Inc.",
+      "changes": {
+        "organization": {
+          "from": "Mid-Ohio Food Collective",
+          "to": "Viability, Inc."
+        },
+        "location": {
+          "from": "Grove City, OH, United States",
+          "to": "Springfield, MA, United States"
+        },
+        "url": {
+          "from": "https://www.kittlemansearch.com/opportunities/president-ceo-mid-ohio-food-collective",
+          "to": "https://www.kittlemansearch.com/opportunities/president-ceo-viability"
+        },
+        "posted_date": {
+          "from": "2026-09-10",
+          "to": "2026-09-16"
+        },
+        "sector_tags": {
+          "from": [
+            "Education",
+            "Civic / Public",
+            "Human Services"
+          ],
+          "to": [
+            "Philanthropy",
+            "Human Services"
+          ]
+        },
+        "organization_types": {
+          "from": [
+            "Unclassified"
+          ],
+          "to": [
+            "Foundation / Philanthropy",
+            "Advocacy / Civil Rights",
+            "Human Services / Community",
+            "Other Nonprofit"
+          ]
+        },
+        "mandate_tags": {
+          "from": [
+            "Financial sustainability"
+          ],
+          "to": [
+            "Growth / scale",
+            "Fundraising / revenue",
+            "Operations / infrastructure",
+            "External affairs / advocacy",
+            "Membership / stakeholders",
+            "Culture / talent",
+            "Financial sustainability"
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-09-24T10:31:17.077544+00:00",
+      "type": "updated",
+      "job_id": "bdb4fab450cecd43",
+      "source": "Kittleman Associates",
+      "title": "President and CEO",
+      "organization": "Schoodic Institute at Acadia National Park",
+      "changes": {
+        "organization": {
+          "from": "Mid-Ohio Food Collective",
+          "to": "Schoodic Institute at Acadia National Park"
+        },
+        "location": {
+          "from": "Grove City, OH, United States",
+          "to": "Winter Harbor, ME, United States"
+        },
+        "url": {
+          "from": "https://www.kittlemansearch.com/opportunities/president-ceo-mid-ohio-food-collective",
+          "to": "https://www.kittlemansearch.com/opportunities/president-ceo-schoodic-institute"
+        },
+        "posted_date": {
+          "from": "2026-09-10",
+          "to": "2026-09-14"
+        },
+        "sector_tags": {
+          "from": [
+            "Education",
+            "Civic / Public",
+            "Human Services"
+          ],
+          "to": [
+            "Education",
+            "Environment"
+          ]
+        },
+        "organization_types": {
+          "from": [
+            "Unclassified"
+          ],
+          "to": [
+            "College / University"
+          ]
+        },
+        "mandate_tags": {
+          "from": [
+            "Financial sustainability"
+          ],
+          "to": [
+            "Growth / scale",
+            "Fundraising / revenue",
+            "Financial sustainability"
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-09-24T10:31:17.077544+00:00",
+      "type": "new",
+      "job_id": "2190b05f74bda40b",
+      "source": "The Moran Company",
+      "title": "Executive Director",
+      "organization": "Association for Death Education and Counseling,"
     }
   ]
 }
