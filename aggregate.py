@@ -1759,6 +1759,7 @@ def main() -> int:
     # commit step picks up the staged index.html alongside the data files.
     try:
         import subprocess as _sp
+        _applied=False
         _patches=sorted((Path(__file__).parent/"patches").glob("*.patch"))
         for _patch in _patches:
             if _sp.run(["git","apply","--check",str(_patch)],capture_output=True).returncode!=0:
@@ -1766,10 +1767,13 @@ def main() -> int:
             _ap=_sp.run(["git","apply",str(_patch)],capture_output=True,text=True)
             if _ap.returncode==0:
                 _sp.run(["git","rm","-q",str(_patch)],capture_output=True)
-                _sp.run(["git","add","index.html"],capture_output=True)
+                _applied=True
                 print(f"applied site patch {_patch.name}",flush=True)
             else:
                 print(f"site patch {_patch.name} failed: {_ap.stderr[:200]}",flush=True)
+        if _applied:
+            # Stage everything the patches changed, including file deletions.
+            _sp.run(["git","add","-A"],capture_output=True)
     except Exception as _e:
         print(f"site patch step skipped: {_e}",flush=True)
     sources=load_json(SOURCES_PATH,[])
