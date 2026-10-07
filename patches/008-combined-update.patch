@@ -1,0 +1,172 @@
+diff --git a/index.html b/index.html
+index 4fefcdd..15a767c 100644
+--- a/index.html
++++ b/index.html
+@@ -17,7 +17,7 @@ button,input,select{font:inherit}.shell{max-width:var(--max);margin:0 auto;paddi
+ h1{font-family:Georgia,"Times New Roman",serif;font-weight:500;font-size:42px;line-height:1.02;letter-spacing:-.035em;margin:8px 0 9px}.deck{font-size:16px;color:var(--muted);max-width:700px}
+ .update{font-size:12px;color:var(--muted);text-align:right;min-width:185px}.update strong{display:block;color:var(--ink);font-size:13px;margin-top:3px}.status-dot{width:8px;height:8px;border-radius:50%;display:inline-block;background:var(--green);margin-right:6px}
+ .nav{display:flex;gap:4px;padding:14px 0 0;overflow:auto;scrollbar-width:none}.nav::-webkit-scrollbar{display:none}.nav button{border:0;background:transparent;color:var(--muted);padding:9px 12px;border-radius:999px;font-weight:750;white-space:nowrap;cursor:pointer}.nav button.active{background:var(--ink);color:white}
+-.view{display:none}.view.active{display:block}.market{padding-top:24px}.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.stat-click{appearance:none;text-align:left;cursor:pointer;color:inherit}.stat-click:hover{transform:translateY(-1px);box-shadow:var(--shadow)}.comp-pill{font-weight:700;color:var(--teal)}
++.view{display:none}.view.active{display:block}.market{padding-top:24px}.briefing-flow{max-width:860px;margin:0 auto}.briefing-lead h2{font-family:Georgia,"Times New Roman",serif;font-size:32px;font-weight:500;margin:6px 0 14px;letter-spacing:-.02em}.briefing-lead .kicker{margin-bottom:2px}.briefing-lead-text{font-size:1.18em;line-height:1.65}.briefing-section{margin-top:34px}.briefing-section>.panel-title{margin-bottom:14px}.briefing-section>.panel-title h2{font-family:Georgia,"Times New Roman",serif;font-size:24px;font-weight:500;margin:0}.briefing-section>.panel-title span{font-size:11px;color:var(--muted)}details.supporting{cursor:default}details.supporting summary{cursor:pointer;font-family:Georgia,"Times New Roman",serif;font-size:20px;font-weight:500;list-style:none;outline:none}details.supporting summary::-webkit-details-marker{display:none}details.supporting summary::before{content:"\25B8  ";color:var(--teal);font-size:15px}details.supporting[open] summary::before{content:"\25BE  "}.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.stat-click{appearance:none;text-align:left;cursor:pointer;color:inherit}.stat-click:hover{transform:translateY(-1px);box-shadow:var(--shadow)}.comp-pill{font-weight:700;color:var(--teal)}
+ .stat-card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 18px 17px;box-shadow:var(--shadow)}.stat-label{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);font-weight:800}.stat-value{font-family:Georgia,"Times New Roman",serif;font-size:32px;line-height:1;margin-top:9px}.stat-note{font-size:12px;color:var(--muted);margin-top:7px}
+ .market-grid{display:grid;grid-template-columns:1.55fr 1fr;gap:14px;margin-top:14px}.panel{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:19px;box-shadow:var(--shadow);min-width:0}.panel-title{display:flex;justify-content:space-between;gap:15px;align-items:baseline;margin-bottom:16px}.panel-title h2{font-family:Georgia,"Times New Roman",serif;font-size:20px;font-weight:500;margin:0}.panel-title span{font-size:11px;color:var(--muted)}
+ .trend{height:205px;display:flex;align-items:flex-end;gap:8px;border-bottom:1px solid var(--line);padding:10px 4px 0}.week{flex:1;min-width:0;height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:7px}.bar{width:min(28px,70%);min-height:2px;background:var(--teal);border-radius:5px 5px 0 0;opacity:.9;position:relative}.bar:hover{opacity:1}.bar:hover:after{content:attr(data-count);position:absolute;bottom:calc(100% + 6px);left:50%;transform:translateX(-50%);background:var(--ink);color:#fff;font-size:11px;padding:3px 6px;border-radius:5px}.week-label{font-size:10px;color:var(--muted);white-space:nowrap}
+@@ -27,9 +27,9 @@ h1{font-family:Georgia,"Times New Roman",serif;font-weight:500;font-size:42px;li
+ .controls{position:sticky;top:0;z-index:20;padding:12px 0;background:linear-gradient(var(--paper) 75%,rgba(244,241,234,0));margin-top:6px}.control-card{background:rgba(255,254,250,.94);backdrop-filter:blur(12px);border:1px solid var(--line);border-radius:15px;padding:10px;display:grid;grid-template-columns:1.7fr repeat(4,minmax(125px,.7fr));gap:8px;box-shadow:var(--shadow)}.control-card input,.control-card select,.filter-sheet select{border:1px solid var(--line);background:white;border-radius:10px;padding:10px 11px;color:var(--ink);min-width:0}.search-wrap{position:relative}.search-wrap input{width:100%;padding-left:34px}.search-icon{position:absolute;left:11px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:14px}.filter-button{display:none;border:1px solid var(--line);background:white;border-radius:10px;padding:10px 12px;font-weight:750;color:var(--ink)}
+ .results-meta{display:flex;justify-content:space-between;gap:14px;align-items:center;color:var(--muted);font-size:12px;margin:2px 2px 17px}.results-meta strong{color:var(--ink)}
+ .date-group{margin-bottom:24px}.date-head{display:flex;align-items:center;gap:12px;font-size:11px;text-transform:uppercase;letter-spacing:.1em;font-weight:850;color:var(--muted);margin:0 2px 9px}.date-head:after{content:"";height:1px;background:var(--line);flex:1}.feed{display:grid;gap:9px}
+-.op-card{position:relative;background:var(--card);border:1px solid var(--line);border-radius:15px;padding:17px 56px 16px 18px;box-shadow:0 2px 12px rgba(24,31,29,.025);cursor:pointer;transition:transform .14s ease,border-color .14s ease,box-shadow .14s ease;outline:none}.op-card:hover,.op-card:focus-visible{border-color:#b7c6c1;box-shadow:0 8px 24px rgba(24,31,29,.065);transform:translateY(-1px)}.op-card:focus-visible{box-shadow:0 0 0 3px rgba(13,85,80,.16)}.op-card-title{font-family:Georgia,"Times New Roman",serif;font-size:20px;line-height:1.18;font-weight:500;margin:0}.op-org{font-size:15px;font-weight:770;margin-top:3px}.op-meta{display:flex;gap:7px 13px;align-items:center;flex-wrap:wrap;margin-top:10px;color:var(--muted);font-size:12px}.tag{display:inline-flex;align-items:center;gap:5px;border-radius:999px;padding:3px 7px;background:var(--paper-2);border:1px solid #e5e1d8}.tag.new{background:var(--teal-2);border-color:#cfe2dd;color:var(--teal);font-weight:850}.tag.approx{background:var(--gold-2);border-color:#ead7b7;color:#7a531f}.tag.long{background:#f0efeb;border-color:#dedbd3;color:#676d69}.op-foot{display:flex;gap:10px;align-items:center;margin-top:11px;color:var(--muted);font-size:11px}.firm{font-weight:750;color:#4f5b57}.link-note{opacity:.75}.card-arrow{position:absolute;right:18px;top:50%;transform:translateY(-50%);font-size:20px;color:#8a928e;transition:transform .14s ease,color .14s ease}.op-card:hover .card-arrow{transform:translate(3px,-50%);color:var(--teal)}.save{position:absolute;right:15px;top:12px;border:0;background:transparent;color:#a2a6a3;font-size:19px;line-height:1;padding:5px;cursor:pointer;z-index:3;border-radius:50%}.save:hover{background:#efede7}.save.on{color:var(--gold)}.op-card .card-arrow{top:auto;bottom:13px;transform:none}.op-card:hover .card-arrow{transform:translateX(3px)}
++.op-card{position:relative;background:var(--card);border:1px solid var(--line);border-radius:15px;padding:17px 56px 16px 18px;box-shadow:0 2px 12px rgba(24,31,29,.025);cursor:pointer;transition:transform .14s ease,border-color .14s ease,box-shadow .14s ease;outline:none}.op-card:hover,.op-card:focus-visible{border-color:#b7c6c1;box-shadow:0 8px 24px rgba(24,31,29,.065);transform:translateY(-1px)}.op-card:focus-visible{box-shadow:0 0 0 3px rgba(13,85,80,.16)}.op-card-title{font-family:Georgia,"Times New Roman",serif;font-size:20px;line-height:1.18;font-weight:500;margin:0}.op-org{font-size:15px;font-weight:770;margin-top:3px}.op-meta{display:flex;gap:7px 13px;align-items:center;flex-wrap:wrap;margin-top:10px;color:var(--muted);font-size:12px}.tag{display:inline-flex;align-items:center;gap:5px;border-radius:999px;padding:3px 7px;background:var(--paper-2);border:1px solid #e5e1d8}.tag.new{background:var(--teal-2);border-color:#cfe2dd;color:var(--teal);font-weight:850}.tag.approx{background:var(--gold-2);border-color:#ead7b7;color:#7a531f}.tag.long{background:#f0efeb;border-color:#dedbd3;color:#676d69}.op-990v3{margin-top:10px;padding-top:10px;border-top:1px solid var(--line);font-size:12px}.rev-mix-label{font-weight:700;color:var(--ink);display:block;margin-bottom:6px}.rev-bar{display:flex;height:8px;border-radius:999px;overflow:hidden;background:#ebe7df;margin-bottom:6px}.rev-seg{height:100%}.rev-contrib{background:var(--teal)}.rev-prog{background:var(--gold)}.rev-other{background:#d8d4c9}.rev-legend{display:flex;gap:12px;flex-wrap:wrap;color:var(--muted);font-size:11px}.rev-legend .sw{display:inline-block;width:8px;height:8px;border-radius:2px;margin-right:4px}.net-assets{margin-top:8px;color:var(--ink)}.op-foot{display:flex;gap:10px;align-items:center;margin-top:11px;color:var(--muted);font-size:11px}.firm{font-weight:750;color:#4f5b57}.link-note{opacity:.75}.card-arrow{position:absolute;right:18px;top:50%;transform:translateY(-50%);font-size:20px;color:#8a928e;transition:transform .14s ease,color .14s ease}.op-card:hover .card-arrow{transform:translate(3px,-50%);color:var(--teal)}.save{position:absolute;right:15px;top:12px;border:0;background:transparent;color:#a2a6a3;font-size:19px;line-height:1;padding:5px;cursor:pointer;z-index:3;border-radius:50%}.save:hover{background:#efede7}.save.on{color:var(--gold)}.op-card .card-arrow{top:auto;bottom:13px;transform:none}.op-card:hover .card-arrow{transform:translateX(3px)}
+ .empty{border:1px dashed #c9c5bc;background:rgba(255,254,250,.65);border-radius:16px;padding:38px 20px;text-align:center;color:var(--muted)}
+-.source-summary{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:22px 0 14px}.mini-stat{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:13px}.mini-stat b{font-family:Georgia,"Times New Roman",serif;font-size:25px;font-weight:500;display:block}.mini-stat span{font-size:11px;color:var(--muted)}.source-list{display:grid;gap:8px}.source-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;display:grid;grid-template-columns:minmax(190px,1.2fr) 170px 70px 1.7fr;gap:15px;align-items:start}.source-name{font-weight:780}.source-name a{color:inherit;text-decoration:none}.source-group{font-size:10px;color:var(--muted);margin-top:2px}.source-status{font-size:11px;font-weight:850}.s-ok{color:var(--green)}.s-warn{color:var(--gold)}.s-bad{color:var(--red)}.s-muted{color:var(--muted)}.source-count{font-variant-numeric:tabular-nums;text-align:center}.source-notes{font-size:11px;color:var(--muted)}.source-error{color:var(--red);font-weight:700;margin-bottom:3px}
++.source-summary{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:22px 0 14px}.mini-stat{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:13px}.mini-stat b{font-family:Georgia,"Times New Roman",serif;font-size:25px;font-weight:500;display:block}.mini-stat span{font-size:11px;color:var(--muted)}.source-list{display:grid;gap:8px}.firm-card.expandable{cursor:pointer}.firm-card.expandable:hover{border-color:#b7c6c1}.firm-profile{display:none;margin-top:12px;padding-top:12px;border-top:1px solid var(--line)}.firm-card.expanded .firm-profile{display:block}.firm-block{margin-bottom:12px}.firm-block h4{font-family:Georgia,serif;font-size:14px;font-weight:600;margin:0 0 6px;color:var(--ink)}.firm-block p{font-size:13px;line-height:1.5;margin:0 0 6px;color:var(--ink)}.firm-examples{font-size:12px;color:var(--muted);font-style:italic}.firm-expand-hint{font-size:11px;color:var(--teal);margin-top:8px;font-weight:600}.trust{font-size:10px;background:#f0efeb;border:1px solid #dedbd3;border-radius:999px;padding:2px 6px;color:#676d69;font-weight:700}.inferred{border-left:3px solid var(--gold);padding-left:10px}.source-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;display:grid;grid-template-columns:minmax(190px,1.2fr) 170px 70px 1.7fr;gap:15px;align-items:start}.source-name{font-weight:780}.source-name a{color:inherit;text-decoration:none}.source-group{font-size:10px;color:var(--muted);margin-top:2px}.source-status{font-size:11px;font-weight:850}.s-ok{color:var(--green)}.s-warn{color:var(--gold)}.s-bad{color:var(--red)}.s-muted{color:var(--muted)}.source-count{font-variant-numeric:tabular-nums;text-align:center}.source-notes{font-size:11px;color:var(--muted)}.source-error{color:var(--red);font-weight:700;margin-bottom:3px}
+ .firm-mix{display:flex;gap:10px;font-size:11px;color:var(--muted);margin-top:5px}.firm-mix span:first-child{flex:0 0 62px;font-weight:750;color:var(--ink)}.firm-mix b{color:var(--ink)}
+ .take-line{font-size:14px;padding:7px 0;border-bottom:1px solid var(--line)}.take-line:last-child{border-bottom:0}.take-line:first-child{font-weight:750}
+ .method{font-size:11px;color:var(--muted);margin:18px 2px 0;max-width:900px}.method strong{color:var(--ink)}
+@@ -61,40 +61,52 @@ dialog{border:0;padding:0;background:transparent;width:min(520px,100%);max-width
+ 
+ <main>
+ <section id="marketView" class="view market active">
+-  <div class="panel lead-panel">
+-    <div class="panel-title"><h2>This week's lead</h2><span id="leadInsightKicker">Computed from the radar's own data</span></div>
+-    <div id="leadInsight"></div>
++<div class="briefing-flow">
++  <div class="panel briefing-lead">
++    <div class="kicker">Market briefing</div>
++    <h2>This week's lead</h2>
++    <div id="leadInsight" class="briefing-lead-text"></div>
++    <div class="panel-note"><span id="leadInsightKicker">Computed from the radar's own data</span></div>
+   </div>
+-  <div class="stat-grid" id="marketStats"></div>
+-  <div class="panel pay-panel" style="margin-top:16px">
+-    <div class="panel-title"><h2>The pay picture</h2><span>Posted ranges and 990 CEO pay, by organization size</span></div>
++  <div class="briefing-section panel">
++    <div class="panel-title"><h2>The pay picture</h2><span>Posted ranges and 990 CEO pay, grouped by organization revenue (990)</span></div>
+     <div id="payDotPlot"></div>
+     <div class="panel-note" id="payNote"></div>
+   </div>
+-  <div class="panel" style="margin-top:16px">
+-    <div class="panel-title"><h2>Notable this week</h2><span>Selected by organization size and posted pay</span></div>
++  <div class="briefing-section">
++    <div class="panel-title"><h2>By the numbers</h2><span>This week at a glance</span></div>
++    <div class="stat-grid" id="marketStats"></div>
++  </div>
++  <div class="briefing-section panel">
++    <div class="panel-title"><h2>Notable this week</h2><span>Selected by organization revenue and posted pay</span></div>
+     <div id="notableWeek" class="feed"></div>
+-    <div class="panel-note">Chosen by size and pay, not recency — the largest organizations and the highest posted ranges surface here.</div>
++    <div class="panel-note">Chosen by revenue scale and pay, not recency — the largest organizations and the highest posted ranges surface here.</div>
+   </div>
+-  <div class="panel" style="margin-top:16px">
++  <div class="briefing-section panel">
+     <div class="panel-title"><h2>Firm landscape</h2><span>Which firms work which segments</span></div>
+     <div id="firmMatrix" style="overflow-x:auto"></div>
+-    <div class="panel-note">Rows are search firms; columns are organization size tiers. Cell counts are open searches. Click a firm to filter opportunities.</div>
++    <div class="panel-note">Rows are search firms; columns are organization revenue tiers. Cell counts are open searches. Click a firm to filter opportunities.</div>
+   </div>
+-  <div class="market-grid">
+-    <div class="panel">
+-      <div class="panel-title"><h2>Search activity</h2><span>12-week view · source-posted date when available</span></div>
+-      <div id="trendChart" class="trend"></div>
+-      <div class="panel-note" id="baselineNote">The historical picture gets more complete as the radar accumulates closed and newly discovered searches over time.</div>
+-    </div>
+-    <div class="panel">
+-      <div class="panel-title"><h2>Sector mix</h2><span>Primary sector per search</span></div>
+-      <div id="sectorRank" class="rank"></div>
+-      <div class="panel-note" id="sectorNote"></div>
+-    </div>
++  <div class="briefing-section">
++    <details class="panel supporting">
++      <summary>Supporting evidence</summary>
++      <div class="market-grid" style="margin-top:16px">
++        <div class="panel">
++          <div class="panel-title"><h2>Search activity</h2><span>12-week view · source-posted date when available</span></div>
++          <div id="trendChart" class="trend"></div>
++          <div class="panel-note" id="baselineNote">The historical picture gets more complete as the radar accumulates closed and newly discovered searches over time.</div>
++        </div>
++        <div class="panel">
++          <div class="panel-title"><h2>Sector mix</h2><span>Primary sector per search</span></div>
++          <div id="sectorRank" class="rank"></div>
++          <div class="panel-note" id="sectorNote"></div>
++        </div>
++      </div>
++      <div class="panel" style="margin-top:14px"><div class="panel-title"><h2>What changed</h2><span>Last 7 days</span></div><div id="changeSummary" class="role-grid"></div><div class="panel-note">New, closed and materially updated searches based on the radar's accumulated history.</div></div>
++    </details>
+   </div>
+-  <div class="panel" style="margin-top:16px"><div class="panel-title"><h2>What changed</h2><span>Last 7 days</span></div><div id="changeSummary" class="role-grid"></div><div class="panel-note">New, closed and materially updated searches based on the radar's accumulated history.</div></div>
+   <div class="method"><strong>Coverage note:</strong> This is a public-source market monitor, not a claim to capture every executive search. Some firms do not publish current searches, and source health is shown separately so missing coverage is visible rather than silently treated as complete.</div>
++</div>
+ </section>
+ 
+ 
+@@ -182,6 +194,7 @@ function jobCard(j,compact=false){const fav=saved();const direct=j.link_quality=
+   <h3 class="op-title">${esc(j.title)}</h3>
+   <div class="op-org">${esc(j.organization||'Organization confidential')}${j.parent_organization?` <span style="font-weight:400;color:var(--muted)">· part of ${esc(j.parent_organization)}</span>`:''}</div>
+   <div class="op-meta">${isNew(j)?'<span class="tag new">'+esc(j.posted_date?'New search':'New to radar')+'</span>':''}<span class="tag ${j.posted_date_status==='approximate'?'approx':''}">${esc(dateBadge(j))}</span>${isLongRunning(j)?`<span class="tag long">Open ${daysSince(j.posted_date)} days</span>`:''}${j.carried_over?'<span class="tag long" title="Source was unreachable; role carried over from last healthy check">Carried over</span>':''}${j.location?`<span>${esc(j.location)}</span>`:''}${compensation(j)?`<span class="comp-pill" title="Published compensation">${esc(compensation(j))}</span>`:''}${j.latest_reported_ceo_comp?`<span title="${j.ceo_pay_context==='parent_org'?'Parent organization CEO pay from public Form 990 — this role is not the top executive':'Latest reported CEO compensation from public Form 990'}">${esc(money(j.latest_reported_ceo_comp))} ${j.ceo_pay_context==='parent_org'?'parent org CEO pay':'latest reported CEO comp'}${j.latest_reported_ceo_comp_year?' · '+j.latest_reported_ceo_comp_year:''}${j.ceo_pay_stale?' (stale)':''}</span>`:''}${tags.map(t=>`<span>${esc(t)}</span>`).join('')}${j.application_deadline?`<span>Apply by ${esc(fmtDate(j.application_deadline,false))}</span>`:''}${scaleText(j)?`<span>${esc(scaleText(j))}</span>`:''}</div>
++  ${!compact&&(j.org_revenue_contributions!=null||j.org_net_assets!=null)?`<div class="op-990v3">${(j.org_revenue_contributions!=null&&j.org_revenue)?(()=>{const c=j.org_revenue_contributions||0,p=j.org_revenue_program||0,t=j.org_revenue,o=Math.max(0,t-c-p),cp=Math.round(c/t*100),pp=Math.round(p/t*100),op=100-cp-pp;return `<div class="rev-mix"><span class="rev-mix-label">Revenue mix <span class="trust">Reported</span></span><div class="rev-bar"><div class="rev-seg rev-contrib" style="width:${cp}%" title="Contributions ${cp}%"></div><div class="rev-seg rev-prog" style="width:${pp}%" title="Program revenue ${pp}%"></div><div class="rev-seg rev-other" style="width:${op}%" title="Other ${op}%"></div></div><div class="rev-legend"><span><i class="sw rev-contrib"></i>Contributions ${cp}%</span><span><i class="sw rev-prog"></i>Program ${pp}%</span><span><i class="sw rev-other"></i>Other ${op}%</span></div></div>`;})():''}${j.org_net_assets!=null?`<div class="net-assets">Net assets ${esc(money(j.org_net_assets))} <span class="trust">Reported${j.org_financial_year?' '+j.org_financial_year:''}</span></div>`:''}</div>`:''}
+   ${!compact&&j.succession_reason?`<div class="op-foot">Succession: ${esc(j.succession_reason)}</div>`:''}
+   <div class="op-foot">${esc(direct?'Open specific posting':'Open source listing')} ↗${j.last_seen?` · Verified ${esc(fmtDate((j.last_seen||'').slice(0,10),false))}`:''}</div>
+ </article>`;}
+@@ -195,13 +208,13 @@ function stat(label,value,note){return `<div class="stat-card"><div class="stat-
+ 
+ function sizeTier(j){
+   const r=j.org_revenue;
+-  if(!r) return 'Size unknown';
+-  if(r<10000000) return 'Under $10M';
+-  if(r<50000000) return '$10M–$50M';
+-  if(r<250000000) return '$50M–$250M';
+-  return '$250M+';
++  if(!r) return 'Revenue unknown';
++  if(r<5000000) return 'Small (revenue under $5M)';
++  if(r<20000000) return 'Mid-size ($5M–$20M)';
++  if(r<75000000) return 'Large ($20M–$75M)';
++  return 'Major ($75M+)';
+ }
+-const TIER_ORDER=['Under $10M','$10M–$50M','$50M–$250M','$250M+','Size unknown'];
++const TIER_ORDER=['Small (revenue under $5M)','Mid-size ($5M–$20M)','Large ($20M–$75M)','Major ($75M+)','Revenue unknown'];
+ 
+ function renderLeadInsight(){
+   const take=meta.market_take||{},comp=take.comparisons||{};
+@@ -250,7 +263,7 @@ function renderPayDotPlot(){
+   const x=v=>padL+(v/maxPay)*(W-padL-padR);
+   const tiers=TIER_ORDER.filter(t=>jobs.some(j=>sizeTier(j)===t));
+   const rowH=(H-padT-padB)/tiers.length;
+-  let svg=`<svg viewBox="0 0 ${W} ${H}" style="width:100%;height:auto" role="img" aria-label="Pay by organization size">`;
++  let svg=`<svg viewBox="0 0 ${W} ${H}" style="width:100%;height:auto" role="img" aria-label="Pay by organization revenue">`;
+   // Axis ticks.
+   for(let v=0;v<=maxPay;v+=500000){
+     const px=x(v);
+@@ -278,14 +291,14 @@ function renderPayDotPlot(){
+   el.innerHTML=svg;
+   const nPosted=jobs.filter(j=>j.compensation_min).length;
+   const n990=jobs.filter(j=>j.latest_reported_ceo_comp&&j.ceo_pay_context!=='parent_org').length;
+-  $('#payNote').textContent=`${nPosted} searches with posted pay ranges and ${n990} with 990 CEO pay plotted. Each row is an organization size tier.`;
++  $('#payNote').textContent=`${nPosted} searches with posted pay ranges and ${n990} with 990 CEO pay plotted. Each row is an organization revenue tier (990). Dots show annual pay.`;
+ }
+ 
+ function renderNotableWeek(){
+   const el=$('#notableWeek');if(!el)return;
+   const jobs=payload.jobs||[];
+   // Score: size tier weight + posted pay weight. Skip confidential orgs.
+-  const tierW={'$250M+':4,'$50M–$250M':3,'$10M–$50M':2,'Under $10M':1,'Size unknown':0};
++  const tierW={'Major ($75M+)':4,'Large ($20M–$75M)':3,'Mid-size ($5M–$20M)':2,'Small (revenue under $5M)':1,'Revenue unknown':0};
+   const scored=jobs
+     .filter(j=>j.organization&&j.organization!=='Organization confidential')
+     .map(j=>{
+@@ -389,7 +402,15 @@ function statusInfo(s){const m={ok:['Healthy','s-ok'],'checked-no-matches':['Hea
+ function renderSources(){const rows=meta.sources||[],automated=rows.filter(r=>r.mode==='automated'),healthy=automated.filter(r=>['ok','checked-no-matches'].includes(r.status)).length,problems=automated.filter(r=>['failed','partial-suspected'].includes(r.status)).length,non=rows.filter(r=>r.mode!=='automated').length;$('#sourceSummary').innerHTML=`<div class="mini-stat"><b>${rows.length}</b><span>Sources tracked</span></div><div class="mini-stat"><b>${automated.length}</b><span>Automated</span></div><div class="mini-stat"><b>${healthy}</b><span>Healthy last run</span></div><div class="mini-stat"><b>${problems+non}</b><span>Manual, unavailable or needs review</span></div>`;$('#sourceList').innerHTML=rows.map(s=>{const [label,cls]=statusInfo(s);return `<div class="source-card"><div><div class="source-name"><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.source)} ↗</a></div><div class="source-group">${esc(s.group||'')}</div></div><div class="source-status ${cls}">${esc(label)}</div><div class="source-count">${Number.isFinite(+s.count)?+s.count:'—'}</div><div class="source-notes">${s.error?`<div class="source-error">${esc(s.error)}</div>`:''}${esc(s.notes||'')}${s.fetch_mode?`<div style="margin-top:4px">Check mode: ${esc(s.fetch_mode)}</div>`:''}</div></div>`}).join('');}
+ const FIRM_BLURBS={"Odgers":"Global executive search firm with a U.S. nonprofit and public-sector practice.","Aspen Leadership Group":"Executive search firm focused on nonprofit fundraising and leadership roles.","PBR Executive Search":"Boutique executive search firm serving nonprofits and foundations.","BoardWalk Consulting":"Atlanta-based executive search firm serving nonprofits and foundations.","Bridge Partners":"Executive search firm with a focus on diverse leadership.","Scion Executive Search":"Executive search firm serving nonprofits and social-sector organizations.","Isaacson, Miller":"National executive search firm focused on mission-driven organizations.","Lindauer":"Executive search firm specializing in nonprofit fundraising and advancement leadership.","Korn Ferry":"Global organizational consulting and executive search firm.","DSG Global":"Executive search firm serving nonprofits and associations.","Kittleman Associates":"Chicago-based executive search firm serving nonprofits.","WittKieffer":"Executive search firm focused on healthcare, higher education, and nonprofits.","The Batten Group":"Executive search firm serving nonprofits and foundations.","DRiWaterstone":"Executive search firm serving faith-based nonprofits.","LeaderFit":"Executive search firm focused on social-justice organizations.","NPAG":"Executive search and consulting firm for nonprofits.","DRG Talent":"Talent advisory and search firm serving nonprofits.","Development Guild":"Executive search firm specializing in nonprofit fundraising leadership.","The Moran Company":"Executive search firm serving nonprofits and associations.","Bryant Group":"Executive search firm specializing in higher-education advancement.","Heidrick & Struggles":"Global executive search firm. No public search listings.","Spencer Stuart":"Global executive search firm. No public search listings.","Russell Reynolds":"Global executive search firm. No public search listings.","Egon Zehnder":"Global executive search firm. No public search listings.","CarterBaldwin":"Executive search firm serving faith-based organizations.","Sandler Search":"Executive search firm serving Jewish communal organizations.","Spano Pratt":"Executive search firm serving nonprofits.","GoodCitizen":"Executive search firm serving nonprofits and social enterprises.","Association Strategies":"Association management and executive search firm.","Nonprofit HR":"HR consulting and executive search firm for nonprofits.","POLIHIRE":"Bipartisan talent firm for public-policy and political organizations."};
+ function topTags(jobs,fn,n){const c=countTags(jobs,fn);return Object.entries(c).sort((a,b)=>b[1]-a[1]||a[0].localeCompare(b[0])).slice(0,n).map(([k,v])=>`${k} (${v})`);}
+-function renderFirms(){const jobs=payload.jobs||[],rows=(meta.sources||[]).filter(s=>s.mode!=='legacy'&&s.status!=='retired');$('#firmList').innerHTML=rows.map(s=>{const sj=jobs.filter(j=>j.source===s.source),[label,cls]=statusInfo(s),blurb=FIRM_BLURBS[s.source]||'',mix=sj.length?`<div class="firm-mix"><span><b>${sj.length}</b> open</span><span>${esc(topTags(sj,j=>[roleType(j)],3).join(' · ')||'—')}</span></div><div class="firm-mix"><span>Sectors</span><span>${esc(topTags(sj,sectorTags,3).join(' · ')||'—')}</span></div><div class="firm-mix"><span>Org types</span><span>${esc(topTags(sj,orgTypes,3).join(' · ')||'—')}</span></div>`:`<div class="firm-mix"><span>No open roles observed</span></div>`;return `<div class="source-card firm-card"><div><div class="source-name"><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.source)} ↗</a></div><div class="source-group">${esc(blurb)}</div></div><div class="source-status ${cls}">${esc(label)}</div><div class="source-count">${sj.length||'—'}</div><div class="source-notes">${mix}</div></div>`;}).join('')||'<div class="empty" style="padding:22px">No firm data yet.</div>';}
++function renderFirms(){const jobs=payload.jobs||[],rows=(meta.sources||[]).filter(s=>s.mode!=='legacy'&&s.status!=='retired').sort((a,b)=>{const aj=jobs.filter(j=>j.source===a.source).length,bj=jobs.filter(j=>j.source===b.source).length;return bj-aj;});$('#firmList').innerHTML=rows.map((s,idx)=>{const sj=jobs.filter(j=>j.source===s.source),[label,cls]=statusInfo(s),blurb=FIRM_BLURBS[s.source]||'',isTop=idx<10&&sj.length>0;
++const tierMix=sj.length?TIER_ORDER.filter(t=>t!=='Revenue unknown').map(t=>{const n=sj.filter(j=>sizeTier(j)===t).length;return n?`${t.split(' ')[0]} ${n}`:null;}).filter(Boolean).join(' · '):'';
++const payVals=sj.map(j=>j.compensation_min||j.compensation_max).filter(v=>v);const payBand=payVals.length?`$${Math.round(Math.min(...payVals)/1000)}k–$${Math.round(Math.max(...payVals)/1000)}k`:'';
++const examples=sj.slice(0,3).map(j=>esc(j.title)+' at '+esc(j.organization)).join('; ');
++const inferred=sj.length>=3?`Places ${esc(topTags(sj,sectorTags,1)[0]||'varied')} leaders, typically at ${esc(topTags(sj,j=>[sizeTier(j)],1)[0]||'varied')} organizations.`:'';
++const profile=isTop?`<div class="firm-profile"><div class="firm-block"><h4>What they are</h4><p>${esc(blurb)}</p></div><div class="firm-block"><h4>What the radar sees</h4><p>${sj.length} open ${sj.length===1?'search':'searches'}${tierMix?` · ${esc(tierMix)}`:''}${payBand?` · Posted pay ${payBand} (Verified)`:''}.</p><p class="firm-examples">${examples?`e.g. ${examples}`:''}</p></div>${inferred?`<div class="firm-block"><h4>Who they place</h4><p class="inferred">${inferred} <span class="trust">Inferred</span></p></div>`:''}</div>`:`<div class="firm-mix"><span><b>${sj.length}</b> open</span><span>${esc(topTags(sj,j=>[roleType(j)],3).join(' · ')||'—')}</span></div>`;
++return `<div class="source-card firm-card${isTop?' expandable':''}"${isTop?` tabindex="0" role="button" data-firm="${esc(s.source)}"`:''}><div><div class="source-name">${isTop?esc(s.source):`<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.source)} ↗</a>`}</div><div class="source-group">${esc(blurb)}</div></div><div class="source-status ${cls}">${esc(label)}</div><div class="source-count">${sj.length||'—'}</div><div class="source-notes">${profile}</div>${isTop?'<div class="firm-expand-hint">Click to expand profile</div>':''}</div>`;}).join('')||'<div class="empty" style="padding:22px">No firm data yet.</div>';
++// Expandable firm profiles
++document.querySelectorAll('.firm-card.expandable').forEach(c=>{c.onclick=e=>{if(e.target.tagName==='A')return;c.classList.toggle('expanded');const hint=c.querySelector('.firm-expand-hint');if(hint)hint.textContent=c.classList.contains('expanded')?'Click to collapse':'Click to expand profile';};c.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();c.click();}};});}
+ function populateFilters(){const jobs=payload.jobs||[],sources=[...new Set(jobs.map(j=>j.source).filter(Boolean))].sort(),sectors=[...new Set(jobs.flatMap(sectorTags))].sort(),types=[...new Set(jobs.flatMap(orgTypes))].sort();for(const id of ['source','mSource'])$('#'+id).innerHTML='<option value="">All firms</option>'+sources.map(x=>`<option value="${esc(x)}">${esc(x)}</option>`).join('');for(const id of ['sector','mSector'])$('#'+id).innerHTML='<option value="">All sectors</option>'+sectors.map(x=>`<option value="${esc(x)}">${esc(x)}</option>`).join('');for(const id of ['orgType','mOrgType'])$('#'+id).innerHTML='<option value="">All organization types</option>'+types.map(x=>`<option value="${esc(x)}">${esc(x)}</option>`).join('');}
+ function switchView(v){activeView=v;$$('.view').forEach(x=>x.classList.remove('active'));$('#'+v+'View').classList.add('active');$$('.nav button').forEach(b=>b.classList.toggle('active',b.dataset.view===v));if(v==='opportunities')renderOpportunities();if(v==='saved')renderSaved();if(v==='firms')renderFirms();if(v==='sources')renderSources();if(v==='market')renderMarket();window.scrollTo({top:0,behavior:'smooth'});}
+ function syncMobileFromDesktop(){$('#mRole').value=$('#role').value;$('#mSource').value=$('#source').value;$('#mSector').value=$('#sector').value;$('#mOrgType').value=$('#orgType').value;$('#mCompFilter').value=$('#compFilter').value;$('#mRecency').value=$('#recency').value;$('#mWork').value=mobileWork;}
