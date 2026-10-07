@@ -1,318 +1,6 @@
 {
-  "generated_at": "2026-10-07T10:35:09.278423+00:00",
+  "generated_at": "2026-10-07T21:50:07.350000+00:00",
   "events": [
-    {
-      "at": "2026-09-19T12:54:01.314889+00:00",
-      "type": "new",
-      "job_id": "41e65aa40a11e404",
-      "source": "Isaacson, Miller",
-      "title": "President",
-      "organization": "Big Ten Academic Alliance"
-    },
-    {
-      "at": "2026-09-19T12:54:01.314889+00:00",
-      "type": "new",
-      "job_id": "c91a7097a7fd366b",
-      "source": "Isaacson, Miller",
-      "title": "The Thomas A. 1977 and Gina T. Russo 1977 Executive Director",
-      "organization": "Dartmouth Tribal Sovereignty Institute"
-    },
-    {
-      "at": "2026-09-19T12:54:01.314889+00:00",
-      "type": "new",
-      "job_id": "4c765f581223d2b2",
-      "source": "Isaacson, Miller",
-      "title": "Executive Director",
-      "organization": "The Richard Pousette-Dart Foundation"
-    },
-    {
-      "at": "2026-09-19T12:54:01.314889+00:00",
-      "type": "new",
-      "job_id": "cd1a5fce31187e78",
-      "source": "Isaacson, Miller",
-      "title": "President",
-      "organization": "Upper Valley Land Trust"
-    },
-    {
-      "at": "2026-09-19T12:54:01.314889+00:00",
-      "type": "new",
-      "job_id": "d761803dca1fe1e8",
-      "source": "Isaacson, Miller",
-      "title": "President",
-      "organization": "United Theological Seminary of the Twin Cities"
-    },
-    {
-      "at": "2026-09-19T12:54:01.314889+00:00",
-      "type": "new",
-      "job_id": "bd87f176f3dadb7d",
-      "source": "Isaacson, Miller",
-      "title": "President",
-      "organization": "Mount Mary University"
-    },
-    {
-      "at": "2026-09-19T12:54:01.314889+00:00",
-      "type": "new",
-      "job_id": "27e6b139c8cde699",
-      "source": "Isaacson, Miller",
-      "title": "President",
-      "organization": "Muhlenberg College"
-    },
-    {
-      "at": "2026-09-19T12:54:01.314889+00:00",
-      "type": "new",
-      "job_id": "f8f798114a08ef13",
-      "source": "Isaacson, Miller",
-      "title": "Executive Director",
-      "organization": "Weissberg Foundation"
-    },
-    {
-      "at": "2026-09-19T12:54:01.314889+00:00",
-      "type": "new",
-      "job_id": "643562287bdc3d5b",
-      "source": "Isaacson, Miller",
-      "title": "President and Chief Executive Officer",
-      "organization": "Rochester Museum and Science Center"
-    },
-    {
-      "at": "2026-09-19T12:54:01.314889+00:00",
-      "type": "new",
-      "job_id": "8a97a15767dcef0a",
-      "source": "Isaacson, Miller",
-      "title": "Executive Director, Ryan Institute for Interdisciplinary Health Solutions",
-      "organization": "Washington University in St. Louis, Bursky School of Public Health"
-    },
-    {
-      "at": "2026-09-19T12:54:01.314889+00:00",
-      "type": "new",
-      "job_id": "948dc9f5fb7e6cc0",
-      "source": "Isaacson, Miller",
-      "title": "Executive Director",
-      "organization": "The John & Mable Ringling Museum of Art, a unit of Florida State University"
-    },
-    {
-      "at": "2026-09-19T12:54:01.314889+00:00",
-      "type": "new",
-      "job_id": "c61ed75a33cf4ee0",
-      "source": "Isaacson, Miller",
-      "title": "President/Dean",
-      "organization": "California University of Science and Medicine"
-    },
-    {
-      "at": "2026-09-19T12:54:01.314889+00:00",
-      "type": "new",
-      "job_id": "7823a9c99f3daebb",
-      "source": "Isaacson, Miller",
-      "title": "President",
-      "organization": "Science Philanthropy Alliance"
-    },
-    {
-      "at": "2026-09-19T12:54:01.314889+00:00",
-      "type": "new",
-      "job_id": "7993a6a739e3275e",
-      "source": "Isaacson, Miller",
-      "title": "Chief Executive Officer",
-      "organization": "Island Housing Trust"
-    },
-    {
-      "at": "2026-09-19T12:54:01.314889+00:00",
-      "type": "new",
-      "job_id": "12b82c108bd0f7ee",
-      "source": "Isaacson, Miller",
-      "title": "Executive Director",
-      "organization": "Aloha Foundation"
-    },
-    {
-      "at": "2026-09-19T12:54:01.314889+00:00",
-      "type": "new",
-      "job_id": "36a8424a03334bf1",
-      "source": "Isaacson, Miller",
-      "title": "Chief Executive Officer",
-      "organization": "St. Louis Public Library"
-    },
-    {
-      "at": "2026-09-19T12:54:01.314889+00:00",
-      "type": "new",
-      "job_id": "9a6a13760d077198",
-      "source": "Isaacson, Miller",
-      "title": "Executive Director for the Arts",
-      "organization": "Massachusetts Institute of Technology (MIT)"
-    },
-    {
-      "at": "2026-09-19T12:54:01.314889+00:00",
-      "type": "new",
-      "job_id": "e9dadcf155959c56",
-      "source": "Isaacson, Miller",
-      "title": "Executive Director, Cancer Development",
-      "organization": "Yale School of Medicine"
-    },
-    {
-      "at": "2026-09-19T12:54:01.314889+00:00",
-      "type": "new",
-      "job_id": "e44e5986f4cea5b4",
-      "source": "Isaacson, Miller",
-      "title": "President",
-      "organization": "William James College"
-    },
-    {
-      "at": "2026-09-19T12:54:01.314889+00:00",
-      "type": "new",
-      "job_id": "36097e5571f3b511",
-      "source": "Isaacson, Miller",
-      "title": "President and Chief Executive Officer",
-      "organization": "MAZON: A Jewish Response To Hunger"
-    },
-    {
-      "at": "2026-09-19T12:54:01.314889+00:00",
-      "type": "new",
-      "job_id": "4d22d9791064239a",
-      "source": "Isaacson, Miller",
-      "title": "Executive Director/Chief Executive Officer",
-      "organization": "New Jersey League of Conservation Voters"
-    },
-    {
-      "at": "2026-09-19T12:54:01.314889+00:00",
-      "type": "new",
-      "job_id": "a2fed1caa3f3e298",
-      "source": "Isaacson, Miller",
-      "title": "Executive Director",
-      "organization": "Saving Yellowstone"
-    },
-    {
-      "at": "2026-09-19T12:54:01.314889+00:00",
-      "type": "new",
-      "job_id": "961333c607e8285d",
-      "source": "Isaacson, Miller",
-      "title": "Executive Director",
-      "organization": "Arizona School Boards Association Insurance Trust (ASBAIT)"
-    },
-    {
-      "at": "2026-09-19T12:54:01.314889+00:00",
-      "type": "new",
-      "job_id": "99d6d1a4232be64e",
-      "source": "Isaacson, Miller",
-      "title": "President & Chief Executive Officer",
-      "organization": "BrightFocus Foundation"
-    },
-    {
-      "at": "2026-09-19T12:54:01.314889+00:00",
-      "type": "new",
-      "job_id": "747822607e0e002d",
-      "source": "Isaacson, Miller",
-      "title": "President",
-      "organization": "University of Northern Colorado"
-    },
-    {
-      "at": "2026-09-19T12:54:01.314889+00:00",
-      "type": "new",
-      "job_id": "7269c0cddf6eaf19",
-      "source": "Isaacson, Miller",
-      "title": "President",
-      "organization": "Virginia Tech"
-    },
-    {
-      "at": "2026-09-19T12:54:01.314889+00:00",
-      "type": "new",
-      "job_id": "b7513a883e6587a3",
-      "source": "Isaacson, Miller",
-      "title": "President and Chief Executive Officer",
-      "organization": "The Wistar Institute"
-    },
-    {
-      "at": "2026-09-19T12:54:01.314889+00:00",
-      "type": "new",
-      "job_id": "4b8e5a287bdf5d7a",
-      "source": "Isaacson, Miller",
-      "title": "Executive Director",
-      "organization": "Boston Medical Center, Grayken Center for Addiction"
-    },
-    {
-      "at": "2026-09-19T12:54:01.314889+00:00",
-      "type": "new",
-      "job_id": "3fcea97e0f540892",
-      "source": "Isaacson, Miller",
-      "title": "Executive Director",
-      "organization": "Massachusetts Water Resources Authority"
-    },
-    {
-      "at": "2026-09-19T12:54:01.314889+00:00",
-      "type": "new",
-      "job_id": "ae44d8ae018f0a9c",
-      "source": "Isaacson, Miller",
-      "title": "Suzanne Deal Booth Executive Director",
-      "organization": "Rice University, Moody Center for the Arts"
-    },
-    {
-      "at": "2026-09-19T12:54:01.314889+00:00",
-      "type": "new",
-      "job_id": "0b184f86d454009b",
-      "source": "Isaacson, Miller",
-      "title": "President",
-      "organization": "Eckerd College"
-    },
-    {
-      "at": "2026-09-19T12:54:01.314889+00:00",
-      "type": "new",
-      "job_id": "47f6a9ab1967c4e7",
-      "source": "Isaacson, Miller",
-      "title": "President",
-      "organization": "MLK Community Health Foundation"
-    },
-    {
-      "at": "2026-09-19T12:54:01.314889+00:00",
-      "type": "new",
-      "job_id": "eca0d69ca05719c0",
-      "source": "Isaacson, Miller",
-      "title": "President",
-      "organization": "Swarthmore College"
-    },
-    {
-      "at": "2026-09-19T12:54:01.314889+00:00",
-      "type": "new",
-      "job_id": "00f52d224d53a25f",
-      "source": "Isaacson, Miller",
-      "title": "Executive Director",
-      "organization": "Curtis Memorial Library"
-    },
-    {
-      "at": "2026-09-19T12:54:01.314889+00:00",
-      "type": "new",
-      "job_id": "58660cf5cf05e8d8",
-      "source": "Isaacson, Miller",
-      "title": "President",
-      "organization": "University of Dayton"
-    },
-    {
-      "at": "2026-09-19T12:54:01.314889+00:00",
-      "type": "new",
-      "job_id": "6edb5dac5323c5ab",
-      "source": "Isaacson, Miller",
-      "title": "President & Chief Executive Officer",
-      "organization": "Utah's Hogle Zoo"
-    },
-    {
-      "at": "2026-09-19T12:54:01.314889+00:00",
-      "type": "new",
-      "job_id": "1c98b4cf29fa0658",
-      "source": "Isaacson, Miller",
-      "title": "President",
-      "organization": "Washington and Lee University"
-    },
-    {
-      "at": "2026-09-19T12:54:01.314889+00:00",
-      "type": "closed",
-      "job_id": "b180e4e1a73afda9",
-      "source": "Isaacson, Miller",
-      "title": "Science, Technology, + Society Harris-Pratt Executive Director, AI Institute Rochester Institute of Technology",
-      "organization": "Higher Education"
-    },
-    {
-      "at": "2026-09-19T12:54:01.314889+00:00",
-      "type": "closed",
-      "job_id": "2346d7265c206b97",
-      "source": "Isaacson, Miller",
-      "title": "President/Executive Director",
-      "organization": "Human Resources"
-    },
     {
       "at": "2026-09-19T12:54:01.314889+00:00",
       "type": "closed",
@@ -15546,6 +15234,1728 @@
     },
     {
       "at": "2026-10-07T10:35:09.278423+00:00",
+      "type": "updated",
+      "job_id": "f9f133cf2577cc30",
+      "source": "Spano Pratt",
+      "title": "Chief Executive Officer – Profile",
+      "organization": "Rock River",
+      "changes": {
+        "organization": {
+          "from": "Emergency Nurses Association",
+          "to": "Rock River"
+        },
+        "url": {
+          "from": "https://spanopratt.com/wp-content/uploads/2026/05/ENA-CEO-Job-Profile-Final.pdf",
+          "to": "https://spanopratt.com/wp-content/uploads/2026/10/Rock-River-Community-Clinic-Job-Profile-CEO.pdf"
+        },
+        "sector_tags": {
+          "from": [
+            "Associations",
+            "Arts / Culture"
+          ],
+          "to": [
+            "Health"
+          ]
+        },
+        "organization_types": {
+          "from": [
+            "Association / Professional Society"
+          ],
+          "to": [
+            "Health System / Provider"
+          ]
+        },
+        "mandate_tags": {
+          "from": [
+            "Growth / scale",
+            "Strategy / transformation",
+            "Membership / stakeholders",
+            "Culture / talent",
+            "Financial sustainability"
+          ],
+          "to": [
+            "Growth / scale"
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-10-07T21:50:07.350000+00:00",
+      "type": "removed_false_positive",
+      "job_id": "62e62841416b764c",
+      "source": "Bridge Partners",
+      "title": "CEO and Executive Director",
+      "organization": "Functional Expertise",
+      "url": "https://bridgepartnersllc.com/function/ceo/"
+    },
+    {
+      "at": "2026-10-07T21:50:07.350000+00:00",
+      "type": "reopened",
+      "job_id": "62e62841416b764c",
+      "source": "Bridge Partners",
+      "title": "CEO and Executive Director",
+      "organization": "Functional Expertise"
+    },
+    {
+      "at": "2026-10-07T21:50:07.350000+00:00",
+      "type": "updated",
+      "job_id": "64ee69a30199e1a8",
+      "source": "DSG Global",
+      "title": "CEO",
+      "organization": "Fort Worth Report",
+      "changes": {
+        "organization": {
+          "from": "Aspiranet",
+          "to": "Fort Worth Report"
+        },
+        "location": {
+          "from": "South San Francisco, CA",
+          "to": "Fort Worth, TX"
+        },
+        "url": {
+          "from": "https://www.dsgco.com/search/23462-aspiranet-ceo/",
+          "to": "https://www.dsgco.com/search/23370-fort-worth-report-ceo/"
+        },
+        "posted_date": {
+          "from": "2026-09-15",
+          "to": "2026-08-10"
+        },
+        "compensation_text": {
+          "from": "Compensation and Benefits The salary range for this position is $400,000 – $475,000 commensurate with experience. Aspiranet values its employees and offers a comprehensive benefits package. Contact DSG | Koya has been exclu",
+          "to": "Compensation and Benefits Salary and bonus subject to qualifications and experience. Benefits include PTO, paid holidays, insurance benefits including medical, dental, vision, life insurance plans and 401k plan. This is a full time role based in Fort Worth, Texas. The Fort Worth Report is an equal opportunity employer. We a"
+        },
+        "compensation_min": {
+          "from": 400000,
+          "to": 401000
+        },
+        "compensation_max": {
+          "from": 475000,
+          "to": 401000
+        },
+        "sector_tags": {
+          "from": [
+            "Health",
+            "Philanthropy",
+            "Education",
+            "Civic / Public",
+            "Environment",
+            "Human Services",
+            "Arts / Culture",
+            "Media / Journalism"
+          ],
+          "to": [
+            "Health",
+            "Philanthropy",
+            "Education",
+            "Civic / Public",
+            "Environment",
+            "Arts / Culture",
+            "Media / Journalism",
+            "Faith"
+          ]
+        },
+        "organization_types": {
+          "from": [
+            "Foundation / Philanthropy",
+            "Health System / Provider",
+            "Media / Journalism",
+            "Arts / Culture",
+            "Advocacy / Civil Rights",
+            "Human Services / Community",
+            "Other Nonprofit"
+          ],
+          "to": [
+            "Foundation / Philanthropy",
+            "Health System / Provider",
+            "Media / Journalism",
+            "Other Nonprofit"
+          ]
+        },
+        "mandate_tags": {
+          "from": [
+            "Growth / scale",
+            "Fundraising / revenue",
+            "Strategy / transformation",
+            "Operations / infrastructure",
+            "External affairs / advocacy",
+            "Membership / stakeholders",
+            "Culture / talent",
+            "Digital / AI",
+            "Financial sustainability"
+          ],
+          "to": [
+            "Growth / scale",
+            "Fundraising / revenue",
+            "Strategy / transformation",
+            "Operations / infrastructure",
+            "Membership / stakeholders",
+            "Culture / talent",
+            "Digital / AI",
+            "Financial sustainability"
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-10-07T21:50:07.350000+00:00",
+      "type": "reopened",
+      "job_id": "9d9450d05842e801",
+      "source": "DSG Global",
+      "title": "Executive Director",
+      "organization": "Hillwood Estate, Museum & Gardens"
+    },
+    {
+      "at": "2026-10-07T21:50:07.350000+00:00",
+      "type": "updated",
+      "job_id": "9d9450d05842e801",
+      "source": "DSG Global",
+      "title": "Executive Director",
+      "organization": "Hillwood Estate, Museum & Gardens",
+      "changes": {
+        "organization": {
+          "from": "Sigler Western Museum",
+          "to": "Hillwood Estate, Museum & Gardens"
+        },
+        "location": {
+          "from": "Wickenburg, AZ",
+          "to": "Washington, DC"
+        },
+        "url": {
+          "from": "https://www.dsgco.com/search/23354-sigler-western-museum-executive-director/",
+          "to": "https://www.dsgco.com/search/23105-hillwood-executive-director/"
+        },
+        "posted_date": {
+          "from": "2026-08-26",
+          "to": "2026-06-02"
+        },
+        "compensation_text": {
+          "from": "Compensation & Benefits Salary is competitive and commensurate with experience. The salary range for this role is $225,000-$250,000 and includes a comprehensive benefits package featuring employer-subsidized medical, dental, and vision coverage; a generous 403(b) retirem",
+          "to": "Compensation & Benefits Salary is competitive and commensurate with experience. The salary range for this role is $300,000 - $350,000 with a generous benefits package. Contact DSG | Koya has been exclusively retained for this engagement, which is being led by Naree Viner a"
+        },
+        "compensation_min": {
+          "from": 225000,
+          "to": 300000
+        },
+        "compensation_max": {
+          "from": 250000,
+          "to": 350000
+        },
+        "sector_tags": {
+          "from": [
+            "Health",
+            "Philanthropy",
+            "Education",
+            "Civic / Public",
+            "Environment",
+            "Arts / Culture",
+            "Media / Journalism"
+          ],
+          "to": [
+            "Health",
+            "Philanthropy",
+            "Education",
+            "Associations",
+            "Civic / Public",
+            "Environment",
+            "Arts / Culture",
+            "Media / Journalism",
+            "International"
+          ]
+        },
+        "organization_types": {
+          "from": [
+            "Foundation / Philanthropy",
+            "College / University",
+            "Health System / Provider",
+            "Media / Journalism",
+            "Arts / Culture",
+            "Other Nonprofit"
+          ],
+          "to": [
+            "Association / Professional Society",
+            "Foundation / Philanthropy",
+            "College / University",
+            "Health System / Provider",
+            "Media / Journalism",
+            "Arts / Culture",
+            "Other Nonprofit"
+          ]
+        },
+        "mandate_tags": {
+          "from": [
+            "Growth / scale",
+            "Fundraising / revenue",
+            "Strategy / transformation",
+            "Operations / infrastructure",
+            "Membership / stakeholders",
+            "Culture / talent",
+            "Digital / AI",
+            "Financial sustainability"
+          ],
+          "to": [
+            "Growth / scale",
+            "Fundraising / revenue",
+            "Strategy / transformation",
+            "Operations / infrastructure",
+            "External affairs / advocacy",
+            "Membership / stakeholders",
+            "Culture / talent",
+            "Digital / AI",
+            "Financial sustainability"
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-10-07T21:50:07.350000+00:00",
+      "type": "reopened",
+      "job_id": "9d9450d05842e801",
+      "source": "DSG Global",
+      "title": "Executive Director",
+      "organization": "HIPS"
+    },
+    {
+      "at": "2026-10-07T21:50:07.350000+00:00",
+      "type": "updated",
+      "job_id": "9d9450d05842e801",
+      "source": "DSG Global",
+      "title": "Executive Director",
+      "organization": "HIPS",
+      "changes": {
+        "organization": {
+          "from": "Sigler Western Museum",
+          "to": "HIPS"
+        },
+        "location": {
+          "from": "Wickenburg, AZ",
+          "to": "Washington, DC"
+        },
+        "url": {
+          "from": "https://www.dsgco.com/search/23354-sigler-western-museum-executive-director/",
+          "to": "https://www.dsgco.com/search/22962-hips-executive-director/"
+        },
+        "posted_date": {
+          "from": "2026-08-26",
+          "to": "2026-06-04"
+        },
+        "compensation_text": {
+          "from": "Compensation & Benefits Salary is competitive and commensurate with experience. The salary range for this role is $225,000-$250,000 and includes a comprehensive benefits package featuring employer-subsidized medical, dental, and vision coverage; a generous 403(b) retirem",
+          "to": "Compensation and Benefits The salary range for this role is $130,000-$140,000. HIPS offers an excellent benefits package that includes: 100% employer-sponsored medical, dental, vision, and life plans for each employee"
+        },
+        "compensation_min": {
+          "from": 225000,
+          "to": 130000
+        },
+        "compensation_max": {
+          "from": 250000,
+          "to": 140000
+        },
+        "sector_tags": {
+          "from": [
+            "Health",
+            "Philanthropy",
+            "Education",
+            "Civic / Public",
+            "Environment",
+            "Arts / Culture",
+            "Media / Journalism"
+          ],
+          "to": [
+            "Health",
+            "Education",
+            "Civic / Public",
+            "Environment",
+            "Human Services",
+            "Arts / Culture",
+            "Media / Journalism"
+          ]
+        },
+        "organization_types": {
+          "from": [
+            "Foundation / Philanthropy",
+            "College / University",
+            "Health System / Provider",
+            "Media / Journalism",
+            "Arts / Culture",
+            "Other Nonprofit"
+          ],
+          "to": [
+            "Health System / Provider",
+            "Media / Journalism",
+            "Advocacy / Civil Rights",
+            "Human Services / Community",
+            "Other Nonprofit"
+          ]
+        },
+        "mandate_tags": {
+          "from": [
+            "Growth / scale",
+            "Fundraising / revenue",
+            "Strategy / transformation",
+            "Operations / infrastructure",
+            "Membership / stakeholders",
+            "Culture / talent",
+            "Digital / AI",
+            "Financial sustainability"
+          ],
+          "to": [
+            "Growth / scale",
+            "Fundraising / revenue",
+            "Strategy / transformation",
+            "Operations / infrastructure",
+            "External affairs / advocacy",
+            "Membership / stakeholders",
+            "Culture / talent",
+            "Digital / AI",
+            "Financial sustainability"
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-10-07T21:50:07.350000+00:00",
+      "type": "reopened",
+      "job_id": "ac8630d8b62bd70f",
+      "source": "DSG Global",
+      "title": "President & CEO",
+      "organization": "Keiro"
+    },
+    {
+      "at": "2026-10-07T21:50:07.350000+00:00",
+      "type": "updated",
+      "job_id": "b8e982953accafdb",
+      "source": "DSG Global",
+      "title": "Chief Executive Officer",
+      "organization": "Kin On",
+      "changes": {
+        "organization": {
+          "from": "Aeris Insight",
+          "to": "Kin On"
+        },
+        "location": {
+          "from": "Remote",
+          "to": "Seattle, WA"
+        },
+        "url": {
+          "from": "https://www.dsgco.com/search/23172-aeris/",
+          "to": "https://www.dsgco.com/search/23171-kin-on-chief-executive-officer/"
+        },
+        "posted_date": {
+          "from": "2026-07-08",
+          "to": "2026-06-14"
+        },
+        "compensation_text": {
+          "from": "Compensation and Benefits Salary is competitive and commensurate with experience. The salary range for this role is $230,000 - $250,000 with a generous benefits package. The exact salary that will be offered to the CEO will be determined based on a consideration of the succe",
+          "to": "Compensation and Benefits Salary is competitive and commensurate with experience. The good faith estimated salary range for this role is $250,000 - $350,000 with a generous benefits package. How to Apply Kin On is an equal opportunity employer committed to building a diverse and inclusive leader"
+        },
+        "compensation_min": {
+          "from": 230000,
+          "to": 250000
+        },
+        "compensation_max": {
+          "from": 250000,
+          "to": 350000
+        },
+        "sector_tags": {
+          "from": [
+            "Education",
+            "Civic / Public",
+            "Environment",
+            "Arts / Culture",
+            "Media / Journalism"
+          ],
+          "to": [
+            "Health",
+            "Philanthropy",
+            "Education",
+            "Civic / Public",
+            "Environment",
+            "Human Services",
+            "Arts / Culture",
+            "Media / Journalism",
+            "Faith"
+          ]
+        },
+        "organization_types": {
+          "from": [
+            "Health System / Provider",
+            "Media / Journalism",
+            "Other Nonprofit"
+          ],
+          "to": [
+            "Foundation / Philanthropy",
+            "College / University",
+            "Health System / Provider",
+            "Media / Journalism",
+            "Arts / Culture",
+            "Human Services / Community",
+            "Other Nonprofit"
+          ]
+        },
+        "work_arrangement": {
+          "from": "Remote",
+          "to": "On-site / unspecified"
+        },
+        "mandate_tags": {
+          "from": [
+            "Growth / scale",
+            "Fundraising / revenue",
+            "Strategy / transformation",
+            "Membership / stakeholders",
+            "Culture / talent",
+            "Digital / AI",
+            "Financial sustainability"
+          ],
+          "to": [
+            "Growth / scale",
+            "Fundraising / revenue",
+            "Strategy / transformation",
+            "Operations / infrastructure",
+            "Membership / stakeholders",
+            "Culture / talent",
+            "Digital / AI",
+            "Financial sustainability"
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-10-07T21:50:07.350000+00:00",
+      "type": "reopened",
+      "job_id": "9d9450d05842e801",
+      "source": "DSG Global",
+      "title": "Executive Director",
+      "organization": "La Casa de las Madres"
+    },
+    {
+      "at": "2026-10-07T21:50:07.350000+00:00",
+      "type": "updated",
+      "job_id": "9d9450d05842e801",
+      "source": "DSG Global",
+      "title": "Executive Director",
+      "organization": "La Casa de las Madres",
+      "changes": {
+        "organization": {
+          "from": "Sigler Western Museum",
+          "to": "La Casa de las Madres"
+        },
+        "location": {
+          "from": "Wickenburg, AZ",
+          "to": "San Francisco, CA"
+        },
+        "url": {
+          "from": "https://www.dsgco.com/search/23354-sigler-western-museum-executive-director/",
+          "to": "https://www.dsgco.com/search/23396-la-casa-executive-director/"
+        },
+        "posted_date": {
+          "from": "2026-08-26",
+          "to": "2026-08-31"
+        },
+        "compensation_text": {
+          "from": "Compensation & Benefits Salary is competitive and commensurate with experience. The salary range for this role is $225,000-$250,000 and includes a comprehensive benefits package featuring employer-subsidized medical, dental, and vision coverage; a generous 403(b) retirem",
+          "to": "Compensation and Benefits The salary range for this position is $200,000 - $220,000 and is commensurate with skills and experience. La Casa de las Madres also offers a comprehensive benefits package. La Casa de las Madres i"
+        },
+        "compensation_min": {
+          "from": 225000,
+          "to": 200000
+        },
+        "compensation_max": {
+          "from": 250000,
+          "to": 220000
+        },
+        "sector_tags": {
+          "from": [
+            "Health",
+            "Philanthropy",
+            "Education",
+            "Civic / Public",
+            "Environment",
+            "Arts / Culture",
+            "Media / Journalism"
+          ],
+          "to": [
+            "Health",
+            "Philanthropy",
+            "Education",
+            "Civic / Public",
+            "Environment",
+            "Human Services",
+            "Arts / Culture",
+            "Media / Journalism"
+          ]
+        },
+        "organization_types": {
+          "from": [
+            "Foundation / Philanthropy",
+            "College / University",
+            "Health System / Provider",
+            "Media / Journalism",
+            "Arts / Culture",
+            "Other Nonprofit"
+          ],
+          "to": [
+            "Foundation / Philanthropy",
+            "Health System / Provider",
+            "Media / Journalism",
+            "Arts / Culture",
+            "Advocacy / Civil Rights",
+            "Human Services / Community",
+            "Other Nonprofit"
+          ]
+        },
+        "mandate_tags": {
+          "from": [
+            "Growth / scale",
+            "Fundraising / revenue",
+            "Strategy / transformation",
+            "Operations / infrastructure",
+            "Membership / stakeholders",
+            "Culture / talent",
+            "Digital / AI",
+            "Financial sustainability"
+          ],
+          "to": [
+            "Growth / scale",
+            "Fundraising / revenue",
+            "Operations / infrastructure",
+            "External affairs / advocacy",
+            "Culture / talent",
+            "Digital / AI"
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-10-07T21:50:07.350000+00:00",
+      "type": "updated",
+      "job_id": "b8e982953accafdb",
+      "source": "DSG Global",
+      "title": "Chief Executive Officer",
+      "organization": "La Clinica de La Raza",
+      "changes": {
+        "organization": {
+          "from": "Aeris Insight",
+          "to": "La Clinica de La Raza"
+        },
+        "location": {
+          "from": "Remote",
+          "to": "Oakland, CA"
+        },
+        "url": {
+          "from": "https://www.dsgco.com/search/23172-aeris/",
+          "to": "https://www.dsgco.com/search/21682-la-clinica-de-la-raza-chief-executive-officer/"
+        },
+        "posted_date": {
+          "from": "2026-07-08",
+          "to": "2025-12-11"
+        },
+        "compensation_text": {
+          "from": "Compensation and Benefits Salary is competitive and commensurate with experience. The salary range for this role is $230,000 - $250,000 with a generous benefits package. The exact salary that will be offered to the CEO will be determined based on a consideration of the succe",
+          "to": "salary range for this position is $425,000 - $495,000, with a generous benefits package and bonus potential. Actual pay for the finalist candidate will be adjusted based on various factors, inc"
+        },
+        "compensation_min": {
+          "from": 230000,
+          "to": 425000
+        },
+        "compensation_max": {
+          "from": 250000,
+          "to": 495000
+        },
+        "sector_tags": {
+          "from": [
+            "Education",
+            "Civic / Public",
+            "Environment",
+            "Arts / Culture",
+            "Media / Journalism"
+          ],
+          "to": [
+            "Health",
+            "Education",
+            "Civic / Public",
+            "Environment",
+            "Arts / Culture",
+            "Media / Journalism",
+            "Faith"
+          ]
+        },
+        "work_arrangement": {
+          "from": "Remote",
+          "to": "On-site / unspecified"
+        },
+        "mandate_tags": {
+          "from": [
+            "Growth / scale",
+            "Fundraising / revenue",
+            "Strategy / transformation",
+            "Membership / stakeholders",
+            "Culture / talent",
+            "Digital / AI",
+            "Financial sustainability"
+          ],
+          "to": [
+            "Growth / scale",
+            "Strategy / transformation",
+            "Operations / infrastructure",
+            "Culture / talent",
+            "Digital / AI",
+            "Financial sustainability"
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-10-07T21:50:07.350000+00:00",
+      "type": "updated",
+      "job_id": "b8e982953accafdb",
+      "source": "DSG Global",
+      "title": "Chief Executive Officer",
+      "organization": "Mid-America Science Museum",
+      "changes": {
+        "organization": {
+          "from": "Aeris Insight",
+          "to": "Mid-America Science Museum"
+        },
+        "location": {
+          "from": "Remote",
+          "to": "Hot Springs, AR"
+        },
+        "url": {
+          "from": "https://www.dsgco.com/search/23172-aeris/",
+          "to": "https://www.dsgco.com/search/23299-mid-america-science-museum-chief-executive-officer/"
+        },
+        "posted_date": {
+          "from": "2026-07-08",
+          "to": "2026-08-11"
+        },
+        "compensation_text": {
+          "from": "Compensation and Benefits Salary is competitive and commensurate with experience. The salary range for this role is $230,000 - $250,000 with a generous benefits package. The exact salary that will be offered to the CEO will be determined based on a consideration of the succe",
+          "to": "Compensation & Benefits The total compensation range for this role is $150,000-200,000, plus a competitive benefits package which includes employer-subsidized medical and dental insurance, a Simple IRA with employer match, pai"
+        },
+        "compensation_min": {
+          "from": 230000,
+          "to": 150000
+        },
+        "compensation_max": {
+          "from": 250000,
+          "to": 200000
+        },
+        "sector_tags": {
+          "from": [
+            "Education",
+            "Civic / Public",
+            "Environment",
+            "Arts / Culture",
+            "Media / Journalism"
+          ],
+          "to": [
+            "Health",
+            "Philanthropy",
+            "Education",
+            "Civic / Public",
+            "Environment",
+            "Arts / Culture",
+            "Media / Journalism"
+          ]
+        },
+        "organization_types": {
+          "from": [
+            "Health System / Provider",
+            "Media / Journalism",
+            "Other Nonprofit"
+          ],
+          "to": [
+            "Foundation / Philanthropy",
+            "College / University",
+            "Health System / Provider",
+            "Government / Public Entity",
+            "Media / Journalism",
+            "Arts / Culture",
+            "Other Nonprofit"
+          ]
+        },
+        "work_arrangement": {
+          "from": "Remote",
+          "to": "On-site / unspecified"
+        },
+        "mandate_tags": {
+          "from": [
+            "Growth / scale",
+            "Fundraising / revenue",
+            "Strategy / transformation",
+            "Membership / stakeholders",
+            "Culture / talent",
+            "Digital / AI",
+            "Financial sustainability"
+          ],
+          "to": [
+            "Growth / scale",
+            "Fundraising / revenue",
+            "Strategy / transformation",
+            "Operations / infrastructure",
+            "Membership / stakeholders",
+            "Culture / talent",
+            "Digital / AI"
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-10-07T21:50:07.350000+00:00",
+      "type": "reopened",
+      "job_id": "9d9450d05842e801",
+      "source": "DSG Global",
+      "title": "Executive Director",
+      "organization": "Newtrax"
+    },
+    {
+      "at": "2026-10-07T21:50:07.350000+00:00",
+      "type": "updated",
+      "job_id": "9d9450d05842e801",
+      "source": "DSG Global",
+      "title": "Executive Director",
+      "organization": "Newtrax",
+      "changes": {
+        "organization": {
+          "from": "Sigler Western Museum",
+          "to": "Newtrax"
+        },
+        "location": {
+          "from": "Wickenburg, AZ",
+          "to": "White Bear Lake, MN"
+        },
+        "url": {
+          "from": "https://www.dsgco.com/search/23354-sigler-western-museum-executive-director/",
+          "to": "https://www.dsgco.com/search/23458-newtrax-executive-director/"
+        },
+        "posted_date": {
+          "from": "2026-08-26",
+          "to": "2026-09-09"
+        },
+        "compensation_text": {
+          "from": "Compensation & Benefits Salary is competitive and commensurate with experience. The salary range for this role is $225,000-$250,000 and includes a comprehensive benefits package featuring employer-subsidized medical, dental, and vision coverage; a generous 403(b) retirem",
+          "to": "Compensation and Benefits The salary range for this position is $140,000 to $160,000. Contact DSG | Koya has been exclusively retained for this engagement, which is being led by Alicia Salerno. Submit a compelling cover lett"
+        },
+        "compensation_min": {
+          "from": 225000,
+          "to": 140000
+        },
+        "compensation_max": {
+          "from": 250000,
+          "to": 160000
+        },
+        "sector_tags": {
+          "from": [
+            "Health",
+            "Philanthropy",
+            "Education",
+            "Civic / Public",
+            "Environment",
+            "Arts / Culture",
+            "Media / Journalism"
+          ],
+          "to": [
+            "Philanthropy",
+            "Education",
+            "Civic / Public",
+            "Environment",
+            "Human Services",
+            "Arts / Culture",
+            "Media / Journalism"
+          ]
+        },
+        "organization_types": {
+          "from": [
+            "Foundation / Philanthropy",
+            "College / University",
+            "Health System / Provider",
+            "Media / Journalism",
+            "Arts / Culture",
+            "Other Nonprofit"
+          ],
+          "to": [
+            "Foundation / Philanthropy",
+            "Health System / Provider",
+            "Media / Journalism",
+            "Human Services / Community",
+            "Other Nonprofit"
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-10-07T21:50:07.350000+00:00",
+      "type": "reopened",
+      "job_id": "6d2efc11ac38fb2f",
+      "source": "DSG Global",
+      "title": "Executive Director for Housing and Residence Life",
+      "organization": "North Carolina A&T State University"
+    },
+    {
+      "at": "2026-10-07T21:50:07.350000+00:00",
+      "type": "reopened",
+      "job_id": "9d9450d05842e801",
+      "source": "DSG Global",
+      "title": "Executive Director",
+      "organization": "North Penn Legal Services"
+    },
+    {
+      "at": "2026-10-07T21:50:07.350000+00:00",
+      "type": "updated",
+      "job_id": "9d9450d05842e801",
+      "source": "DSG Global",
+      "title": "Executive Director",
+      "organization": "North Penn Legal Services",
+      "changes": {
+        "organization": {
+          "from": "Sigler Western Museum",
+          "to": "North Penn Legal Services"
+        },
+        "location": {
+          "from": "Wickenburg, AZ",
+          "to": "Pittston, PA"
+        },
+        "url": {
+          "from": "https://www.dsgco.com/search/23354-sigler-western-museum-executive-director/",
+          "to": "https://www.dsgco.com/search/23115-npls-executive-director/"
+        },
+        "posted_date": {
+          "from": "2026-08-26",
+          "to": "2026-07-01"
+        },
+        "compensation_text": {
+          "from": "Compensation & Benefits Salary is competitive and commensurate with experience. The salary range for this role is $225,000-$250,000 and includes a comprehensive benefits package featuring employer-subsidized medical, dental, and vision coverage; a generous 403(b) retirem",
+          "to": "Compensation and Benefits The salary range for this role is $150,000 - $160,000 commensurate with relevant experience. NPLS offers an excellent benefits package that includes health and dental insurance, a 401(k) plan a"
+        },
+        "compensation_min": {
+          "from": 225000,
+          "to": 150000
+        },
+        "compensation_max": {
+          "from": 250000,
+          "to": 160000
+        },
+        "sector_tags": {
+          "from": [
+            "Health",
+            "Philanthropy",
+            "Education",
+            "Civic / Public",
+            "Environment",
+            "Arts / Culture",
+            "Media / Journalism"
+          ],
+          "to": [
+            "Health",
+            "Education",
+            "Civic / Public",
+            "Environment",
+            "Justice / Rights",
+            "Arts / Culture",
+            "Media / Journalism"
+          ]
+        },
+        "organization_types": {
+          "from": [
+            "Foundation / Philanthropy",
+            "College / University",
+            "Health System / Provider",
+            "Media / Journalism",
+            "Arts / Culture",
+            "Other Nonprofit"
+          ],
+          "to": [
+            "Health System / Provider",
+            "Media / Journalism",
+            "Advocacy / Civil Rights",
+            "Other Nonprofit"
+          ]
+        },
+        "mandate_tags": {
+          "from": [
+            "Growth / scale",
+            "Fundraising / revenue",
+            "Strategy / transformation",
+            "Operations / infrastructure",
+            "Membership / stakeholders",
+            "Culture / talent",
+            "Digital / AI",
+            "Financial sustainability"
+          ],
+          "to": [
+            "Fundraising / revenue",
+            "Culture / talent",
+            "Digital / AI",
+            "Financial sustainability"
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-10-07T21:50:07.350000+00:00",
+      "type": "updated",
+      "job_id": "b8e982953accafdb",
+      "source": "DSG Global",
+      "title": "Chief Executive Officer",
+      "organization": "Renewable Thermal Collaborative",
+      "changes": {
+        "organization": {
+          "from": "Aeris Insight",
+          "to": "Renewable Thermal Collaborative"
+        },
+        "location": {
+          "from": "Remote",
+          "to": "Remote, Washington D.C. preferred"
+        },
+        "url": {
+          "from": "https://www.dsgco.com/search/23172-aeris/",
+          "to": "https://www.dsgco.com/search/23132-rtc-chief-executive-officer/"
+        },
+        "posted_date": {
+          "from": "2026-07-08",
+          "to": "2026-06-11"
+        },
+        "compensation_text": {
+          "from": "Compensation and Benefits Salary is competitive and commensurate with experience. The salary range for this role is $230,000 - $250,000 with a generous benefits package. The exact salary that will be offered to the CEO will be determined based on a consideration of the succe",
+          "to": "Compensation & Benefits The compensation for this role is anticipated to range from $275,000 - $350,000, commensurate with experience. Travel is expected to be 15-20% of the role, both in the U.S. and internationally. The Renewable Thermal Col"
+        },
+        "compensation_min": {
+          "from": 230000,
+          "to": 275000
+        },
+        "compensation_max": {
+          "from": 250000,
+          "to": 350000
+        },
+        "sector_tags": {
+          "from": [
+            "Education",
+            "Civic / Public",
+            "Environment",
+            "Arts / Culture",
+            "Media / Journalism"
+          ],
+          "to": [
+            "Education",
+            "Civic / Public",
+            "Environment",
+            "Arts / Culture",
+            "Media / Journalism",
+            "International"
+          ]
+        },
+        "organization_types": {
+          "from": [
+            "Health System / Provider",
+            "Media / Journalism",
+            "Other Nonprofit"
+          ],
+          "to": [
+            "Health System / Provider",
+            "Media / Journalism",
+            "Advocacy / Civil Rights",
+            "Other Nonprofit"
+          ]
+        },
+        "mandate_tags": {
+          "from": [
+            "Growth / scale",
+            "Fundraising / revenue",
+            "Strategy / transformation",
+            "Membership / stakeholders",
+            "Culture / talent",
+            "Digital / AI",
+            "Financial sustainability"
+          ],
+          "to": [
+            "Growth / scale",
+            "Fundraising / revenue",
+            "Strategy / transformation",
+            "Operations / infrastructure",
+            "External affairs / advocacy",
+            "Membership / stakeholders",
+            "Culture / talent",
+            "Digital / AI",
+            "Financial sustainability"
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-10-07T21:50:07.350000+00:00",
+      "type": "reopened",
+      "job_id": "9d9450d05842e801",
+      "source": "DSG Global",
+      "title": "Executive Director",
+      "organization": "Sigler Western Museum"
+    },
+    {
+      "at": "2026-10-07T21:50:07.350000+00:00",
+      "type": "reopened",
+      "job_id": "9d9450d05842e801",
+      "source": "DSG Global",
+      "title": "Executive Director",
+      "organization": "Stonewall Columbus"
+    },
+    {
+      "at": "2026-10-07T21:50:07.350000+00:00",
+      "type": "updated",
+      "job_id": "9d9450d05842e801",
+      "source": "DSG Global",
+      "title": "Executive Director",
+      "organization": "Stonewall Columbus",
+      "changes": {
+        "organization": {
+          "from": "Sigler Western Museum",
+          "to": "Stonewall Columbus"
+        },
+        "location": {
+          "from": "Wickenburg, AZ",
+          "to": "Columbus, OH"
+        },
+        "url": {
+          "from": "https://www.dsgco.com/search/23354-sigler-western-museum-executive-director/",
+          "to": "https://www.dsgco.com/search/23450-stonewall-columbus-executive-director/"
+        },
+        "posted_date": {
+          "from": "2026-08-26",
+          "to": "2026-09-21"
+        },
+        "compensation_text": {
+          "from": "Compensation & Benefits Salary is competitive and commensurate with experience. The salary range for this role is $225,000-$250,000 and includes a comprehensive benefits package featuring employer-subsidized medical, dental, and vision coverage; a generous 403(b) retirem",
+          "to": "Compensation and Benefits The salary range for this position is $125,000 to $140,000, accompanied by a generous benefits package. Details will be provided to candidates selected to advance in the search process. Contact DSG"
+        },
+        "compensation_min": {
+          "from": 225000,
+          "to": 125000
+        },
+        "compensation_max": {
+          "from": 250000,
+          "to": 140000
+        },
+        "sector_tags": {
+          "from": [
+            "Health",
+            "Philanthropy",
+            "Education",
+            "Civic / Public",
+            "Environment",
+            "Arts / Culture",
+            "Media / Journalism"
+          ],
+          "to": [
+            "Health",
+            "Philanthropy",
+            "Education",
+            "Civic / Public",
+            "Environment",
+            "Arts / Culture",
+            "Media / Journalism",
+            "Faith"
+          ]
+        },
+        "organization_types": {
+          "from": [
+            "Foundation / Philanthropy",
+            "College / University",
+            "Health System / Provider",
+            "Media / Journalism",
+            "Arts / Culture",
+            "Other Nonprofit"
+          ],
+          "to": [
+            "Foundation / Philanthropy",
+            "Health System / Provider",
+            "Media / Journalism",
+            "Arts / Culture",
+            "Advocacy / Civil Rights",
+            "Other Nonprofit"
+          ]
+        },
+        "mandate_tags": {
+          "from": [
+            "Growth / scale",
+            "Fundraising / revenue",
+            "Strategy / transformation",
+            "Operations / infrastructure",
+            "Membership / stakeholders",
+            "Culture / talent",
+            "Digital / AI",
+            "Financial sustainability"
+          ],
+          "to": [
+            "Growth / scale",
+            "Fundraising / revenue",
+            "Strategy / transformation",
+            "Operations / infrastructure",
+            "External affairs / advocacy",
+            "Membership / stakeholders",
+            "Culture / talent",
+            "Digital / AI",
+            "Financial sustainability"
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-10-07T21:50:07.350000+00:00",
+      "type": "reopened",
+      "job_id": "9d9450d05842e801",
+      "source": "DSG Global",
+      "title": "Executive Director",
+      "organization": "The Alliance for Community Development"
+    },
+    {
+      "at": "2026-10-07T21:50:07.350000+00:00",
+      "type": "updated",
+      "job_id": "9d9450d05842e801",
+      "source": "DSG Global",
+      "title": "Executive Director",
+      "organization": "The Alliance for Community Development",
+      "changes": {
+        "organization": {
+          "from": "Sigler Western Museum",
+          "to": "The Alliance for Community Development"
+        },
+        "location": {
+          "from": "Wickenburg, AZ",
+          "to": "Bay Area, CA"
+        },
+        "url": {
+          "from": "https://www.dsgco.com/search/23354-sigler-western-museum-executive-director/",
+          "to": "https://www.dsgco.com/search/23294-acd/"
+        },
+        "posted_date": {
+          "from": "2026-08-26",
+          "to": "2026-06-24"
+        },
+        "compensation_text": {
+          "from": "Compensation & Benefits Salary is competitive and commensurate with experience. The salary range for this role is $225,000-$250,000 and includes a comprehensive benefits package featuring employer-subsidized medical, dental, and vision coverage; a generous 403(b) retirem",
+          "to": "Compensation and Benefits Salary is competitive and commensurate with experience. The anticipated starting salary for this role is between $120,000 and $145,000. The exact salary that will be offered to the Executive Director will be determined based on a considerati"
+        },
+        "compensation_min": {
+          "from": 225000,
+          "to": 120000
+        },
+        "compensation_max": {
+          "from": 250000,
+          "to": 120000
+        },
+        "sector_tags": {
+          "from": [
+            "Health",
+            "Philanthropy",
+            "Education",
+            "Civic / Public",
+            "Environment",
+            "Arts / Culture",
+            "Media / Journalism"
+          ],
+          "to": [
+            "Education",
+            "Associations",
+            "Civic / Public",
+            "Environment",
+            "Arts / Culture",
+            "Media / Journalism"
+          ]
+        },
+        "organization_types": {
+          "from": [
+            "Foundation / Philanthropy",
+            "College / University",
+            "Health System / Provider",
+            "Media / Journalism",
+            "Arts / Culture",
+            "Other Nonprofit"
+          ],
+          "to": [
+            "Association / Professional Society",
+            "Health System / Provider",
+            "Media / Journalism",
+            "Other Nonprofit"
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-10-07T21:50:07.350000+00:00",
+      "type": "reopened",
+      "job_id": "9d9450d05842e801",
+      "source": "DSG Global",
+      "title": "Executive Director",
+      "organization": "The Doctors Clinic"
+    },
+    {
+      "at": "2026-10-07T21:50:07.350000+00:00",
+      "type": "updated",
+      "job_id": "9d9450d05842e801",
+      "source": "DSG Global",
+      "title": "Executive Director",
+      "organization": "The Doctors Clinic",
+      "changes": {
+        "organization": {
+          "from": "Sigler Western Museum",
+          "to": "The Doctors Clinic"
+        },
+        "location": {
+          "from": "Wickenburg, AZ",
+          "to": "Silverdale, WA"
+        },
+        "url": {
+          "from": "https://www.dsgco.com/search/23354-sigler-western-museum-executive-director/",
+          "to": "https://www.dsgco.com/search/23372-the-doctors-clinic-executive-director/"
+        },
+        "sector_tags": {
+          "from": [
+            "Health",
+            "Philanthropy",
+            "Education",
+            "Civic / Public",
+            "Environment",
+            "Arts / Culture",
+            "Media / Journalism"
+          ],
+          "to": [
+            "Health",
+            "Philanthropy",
+            "Education",
+            "Civic / Public",
+            "Environment",
+            "Media / Journalism"
+          ]
+        },
+        "organization_types": {
+          "from": [
+            "Foundation / Philanthropy",
+            "College / University",
+            "Health System / Provider",
+            "Media / Journalism",
+            "Arts / Culture",
+            "Other Nonprofit"
+          ],
+          "to": [
+            "Foundation / Philanthropy",
+            "Health System / Provider",
+            "Media / Journalism",
+            "Advocacy / Civil Rights",
+            "Human Services / Community",
+            "Other Nonprofit"
+          ]
+        },
+        "mandate_tags": {
+          "from": [
+            "Growth / scale",
+            "Fundraising / revenue",
+            "Strategy / transformation",
+            "Operations / infrastructure",
+            "Membership / stakeholders",
+            "Culture / talent",
+            "Digital / AI",
+            "Financial sustainability"
+          ],
+          "to": [
+            "Growth / scale",
+            "Fundraising / revenue",
+            "Strategy / transformation",
+            "Operations / infrastructure",
+            "External affairs / advocacy",
+            "Membership / stakeholders",
+            "Culture / talent",
+            "Digital / AI"
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-10-07T21:50:07.350000+00:00",
+      "type": "reopened",
+      "job_id": "9d9450d05842e801",
+      "source": "DSG Global",
+      "title": "Executive Director",
+      "organization": "The Education Fund"
+    },
+    {
+      "at": "2026-10-07T21:50:07.350000+00:00",
+      "type": "updated",
+      "job_id": "9d9450d05842e801",
+      "source": "DSG Global",
+      "title": "Executive Director",
+      "organization": "The Education Fund",
+      "changes": {
+        "organization": {
+          "from": "Sigler Western Museum",
+          "to": "The Education Fund"
+        },
+        "location": {
+          "from": "Wickenburg, AZ",
+          "to": "Miami, FL"
+        },
+        "url": {
+          "from": "https://www.dsgco.com/search/23354-sigler-western-museum-executive-director/",
+          "to": "https://www.dsgco.com/search/23059-the-education-fund-executive-director/"
+        },
+        "posted_date": {
+          "from": "2026-08-26",
+          "to": "2026-05-06"
+        },
+        "compensation_text": {
+          "from": "Compensation & Benefits Salary is competitive and commensurate with experience. The salary range for this role is $225,000-$250,000 and includes a comprehensive benefits package featuring employer-subsidized medical, dental, and vision coverage; a generous 403(b) retirem",
+          "to": "Compensation and Benefits The starting salary range for this position is $180,000 - $220,000, with additional bonus potential. If the Executive Director succeeds the President, the salary will increase commensurate with the responsi"
+        },
+        "compensation_min": {
+          "from": 225000,
+          "to": 180000
+        },
+        "compensation_max": {
+          "from": 250000,
+          "to": 220000
+        },
+        "sector_tags": {
+          "from": [
+            "Health",
+            "Philanthropy",
+            "Education",
+            "Civic / Public",
+            "Environment",
+            "Arts / Culture",
+            "Media / Journalism"
+          ],
+          "to": [
+            "Health",
+            "Education",
+            "Civic / Public",
+            "Environment",
+            "Arts / Culture",
+            "Media / Journalism"
+          ]
+        },
+        "organization_types": {
+          "from": [
+            "Foundation / Philanthropy",
+            "College / University",
+            "Health System / Provider",
+            "Media / Journalism",
+            "Arts / Culture",
+            "Other Nonprofit"
+          ],
+          "to": [
+            "College / University",
+            "K-12 / Education",
+            "Health System / Provider",
+            "Media / Journalism",
+            "Other Nonprofit"
+          ]
+        },
+        "mandate_tags": {
+          "from": [
+            "Growth / scale",
+            "Fundraising / revenue",
+            "Strategy / transformation",
+            "Operations / infrastructure",
+            "Membership / stakeholders",
+            "Culture / talent",
+            "Digital / AI",
+            "Financial sustainability"
+          ],
+          "to": [
+            "Growth / scale",
+            "Fundraising / revenue",
+            "Strategy / transformation",
+            "Operations / infrastructure",
+            "Culture / talent",
+            "Digital / AI"
+          ]
+        },
+        "succession_reason": {
+          "from": "Planned succession",
+          "to": "Retirement"
+        }
+      }
+    },
+    {
+      "at": "2026-10-07T21:50:07.350000+00:00",
+      "type": "updated",
+      "job_id": "6993126e7f07c9a3",
+      "source": "Kittleman Associates",
+      "title": "Executive Director",
+      "organization": "Yogi Berra Museum & Learning Center",
+      "changes": {
+        "posted_date": {
+          "from": "2026-06-22",
+          "to": "2026-10-07"
+        }
+      }
+    },
+    {
+      "at": "2026-10-07T21:50:07.350000+00:00",
+      "type": "updated",
+      "job_id": "bdb4fab450cecd43",
+      "source": "Kittleman Associates",
+      "title": "President and CEO",
+      "organization": "Gettysburg Foundation",
+      "changes": {
+        "organization": {
+          "from": "Mid-Ohio Food Collective",
+          "to": "Gettysburg Foundation"
+        },
+        "location": {
+          "from": "Grove City, OH, United States",
+          "to": "Gettysburg, PA, United States"
+        },
+        "url": {
+          "from": "https://www.kittlemansearch.com/opportunities/president-ceo-mid-ohio-food-collective",
+          "to": "https://www.kittlemansearch.com/opportunities/president-chief-executive-officer-gettysburg-foundation"
+        },
+        "posted_date": {
+          "from": "2026-09-10",
+          "to": "2026-10-01"
+        },
+        "sector_tags": {
+          "from": [
+            "Education",
+            "Civic / Public",
+            "Human Services"
+          ],
+          "to": [
+            "Philanthropy",
+            "Arts / Culture"
+          ]
+        },
+        "organization_types": {
+          "from": [
+            "Unclassified"
+          ],
+          "to": [
+            "Foundation / Philanthropy",
+            "Arts / Culture"
+          ]
+        },
+        "mandate_tags": {
+          "from": [
+            "Financial sustainability"
+          ],
+          "to": [
+            "Growth / scale",
+            "Membership / stakeholders"
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-10-07T21:50:07.350000+00:00",
+      "type": "updated",
+      "job_id": "bdb4fab450cecd43",
+      "source": "Kittleman Associates",
+      "title": "President and CEO",
+      "organization": "Viability, Inc.",
+      "changes": {
+        "organization": {
+          "from": "Mid-Ohio Food Collective",
+          "to": "Viability, Inc."
+        },
+        "location": {
+          "from": "Grove City, OH, United States",
+          "to": "Springfield, MA, United States"
+        },
+        "url": {
+          "from": "https://www.kittlemansearch.com/opportunities/president-ceo-mid-ohio-food-collective",
+          "to": "https://www.kittlemansearch.com/opportunities/president-ceo-viability"
+        },
+        "posted_date": {
+          "from": "2026-09-10",
+          "to": "2026-09-16"
+        },
+        "sector_tags": {
+          "from": [
+            "Education",
+            "Civic / Public",
+            "Human Services"
+          ],
+          "to": [
+            "Philanthropy",
+            "Human Services"
+          ]
+        },
+        "organization_types": {
+          "from": [
+            "Unclassified"
+          ],
+          "to": [
+            "Foundation / Philanthropy",
+            "Advocacy / Civil Rights",
+            "Human Services / Community",
+            "Other Nonprofit"
+          ]
+        },
+        "mandate_tags": {
+          "from": [
+            "Financial sustainability"
+          ],
+          "to": [
+            "Growth / scale",
+            "Fundraising / revenue",
+            "Operations / infrastructure",
+            "External affairs / advocacy",
+            "Membership / stakeholders",
+            "Culture / talent",
+            "Financial sustainability"
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-10-07T21:50:07.350000+00:00",
+      "type": "updated",
+      "job_id": "bdb4fab450cecd43",
+      "source": "Kittleman Associates",
+      "title": "President and CEO",
+      "organization": "Schoodic Institute at Acadia National Park",
+      "changes": {
+        "organization": {
+          "from": "Mid-Ohio Food Collective",
+          "to": "Schoodic Institute at Acadia National Park"
+        },
+        "location": {
+          "from": "Grove City, OH, United States",
+          "to": "Winter Harbor, ME, United States"
+        },
+        "url": {
+          "from": "https://www.kittlemansearch.com/opportunities/president-ceo-mid-ohio-food-collective",
+          "to": "https://www.kittlemansearch.com/opportunities/president-ceo-schoodic-institute"
+        },
+        "posted_date": {
+          "from": "2026-09-10",
+          "to": "2026-09-14"
+        },
+        "sector_tags": {
+          "from": [
+            "Education",
+            "Civic / Public",
+            "Human Services"
+          ],
+          "to": [
+            "Education",
+            "Environment"
+          ]
+        },
+        "organization_types": {
+          "from": [
+            "Unclassified"
+          ],
+          "to": [
+            "College / University"
+          ]
+        },
+        "mandate_tags": {
+          "from": [
+            "Financial sustainability"
+          ],
+          "to": [
+            "Growth / scale",
+            "Fundraising / revenue",
+            "Financial sustainability"
+          ]
+        }
+      }
+    },
+    {
+      "at": "2026-10-07T21:50:07.350000+00:00",
+      "type": "updated",
+      "job_id": "116dd7faf269fbe8",
+      "source": "DRG Talent",
+      "title": "Interim Executive Director - NYC",
+      "organization": "STRIVE",
+      "changes": {
+        "work_arrangement": {
+          "from": "Hybrid",
+          "to": "Unknown"
+        }
+      }
+    },
+    {
+      "at": "2026-10-07T21:50:07.350000+00:00",
+      "type": "new",
+      "job_id": "eb5f7e7d6628af90",
+      "source": "The Moran Company",
+      "title": "Chief Executive Officer",
+      "organization": "Life Unlimited"
+    },
+    {
+      "at": "2026-10-07T21:50:07.350000+00:00",
+      "type": "closed",
+      "job_id": "18f3a23825bdff3b",
+      "source": "The Moran Company",
+      "title": "Executive Director",
+      "organization": "The Arc Connecticut,"
+    },
+    {
+      "at": "2026-10-07T21:50:07.350000+00:00",
+      "type": "closed",
+      "job_id": "7f193173116a3b12",
+      "source": "The Moran Company",
+      "title": "Executive Director",
+      "organization": "Midland Institute for Entrepreneurship,"
+    },
+    {
+      "at": "2026-10-07T21:50:07.350000+00:00",
+      "type": "updated",
+      "job_id": "9d4d22e728e7fc7d",
+      "source": "Bryant Group",
+      "title": "Executive Director for Principal Gifts and University Initiatives",
+      "organization": "The University of Texas at Arlington",
+      "changes": {
+        "organization": {
+          "from": "9/6/25",
+          "to": "The University of Texas at Arlington"
+        },
+        "url": {
+          "from": "https://www.bryantgrp.com/current-listings/chief-development-and-engagement-officer-msu",
+          "to": "https://www.bryantgrp.com/current-listings/ut-arlington-ed-executive-director-for-principal-gifts-and-university-initiatives"
+        },
+        "posted_date": {
+          "from": "2026-04-29",
+          "to": "2025-09-06"
+        },
+        "sector_tags": {
+          "from": [
+            "Philanthropy",
+            "Education",
+            "Associations"
+          ],
+          "to": [
+            "Education"
+          ]
+        },
+        "organization_types": {
+          "from": [
+            "Association / Professional Society",
+            "Foundation / Philanthropy",
+            "College / University"
+          ],
+          "to": [
+            "College / University"
+          ]
+        },
+        "mandate_tags": {
+          "from": [
+            "Fundraising / revenue",
+            "Strategy / transformation"
+          ],
+          "to": []
+        }
+      }
+    },
+    {
+      "at": "2026-10-07T21:50:07.350000+00:00",
+      "type": "new",
+      "job_id": "06b0d9a643a3af70",
+      "source": "Sandler Search",
+      "title": "Executive Director",
+      "organization": "The Fund for Modern Courts"
+    },
+    {
+      "at": "2026-10-07T21:50:07.350000+00:00",
       "type": "updated",
       "job_id": "f9f133cf2577cc30",
       "source": "Spano Pratt",
