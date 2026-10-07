@@ -1282,6 +1282,44 @@ def candidate_from_node(node, source: dict, today: date, detail_budget: list[int
     return build_job(source=source,title=role,organization=organization,location=location,url=url,today=today,context=combined,posted=posted,posted_status=posted_status)
 
 
+def parse_bryant(html: str, source: dict, today: date) -> list[Job]:
+    """Parse Bryant Group's Squarespace Current Listings grid.
+
+    Each listing is an article card: h1 = title, p = client organization,
+    time = post date, anchor = detail page. Parsed per-card (not via the
+    generic anchor walk) because the generic parser once misassociated
+    neighboring cards here: it read a card's "9/6/25" date as the
+    organization and attached the previous card's detail URL.
+    """
+    soup=BeautifulSoup(html,"lxml"); out=[]; seen=set()
+    for article in soup.find_all("article"):
+        link=None
+        for a in article.find_all("a",href=True):
+            path=urlparse(urljoin(source["url"],a.get("href") or "")).path or ""
+            if re.search(r"/current-listings/[^/]+$",path,re.I):
+                link=a; break
+        if not link: continue
+        url=urljoin(source["url"],link.get("href"))
+        cu=canonical_url(url)
+        if cu in seen: continue
+        seen.add(cu)
+        h1=article.find("h1")
+        title=clean(h1.get_text(" ",strip=True)) if h1 else ""
+        if not is_target_role(title): continue
+        org=""
+        p=article.find("p")
+        if p:
+            cand=clean(p.get_text(" ",strip=True))
+            if likely_org(cand,title): org=cand
+        posted,ps=None,"unavailable"
+        tm=article.find("time")
+        if tm:
+            posted,ps=extract_date(clean(tm.get_text(" ",strip=True)),today)
+        context=clean(article.get_text(" ",strip=True))[:5000]
+        out.append(build_job(source=source,title=title,organization=org,location="",url=url,today=today,context=context,posted=posted,posted_status=ps))
+    return dedupe(out)
+
+
 def parse_korn(html: str, source: dict, today: date) -> list[Job]:
     """Parse Korn Ferry's rendered client board and verify every target-role detail page."""
     soup=BeautifulSoup(html,"lxml"); seen=set(); out=[]; links=[]
@@ -1345,6 +1383,7 @@ def candidates_from_html(html: str, source: dict, today: date) -> list[Job]:
     if parser=="developmentguild": return parse_developmentguild(html,source,today)
     if parser=="isaacson": return parse_isaacson(html,source,today)
     if parser=="sandler": return parse_sandler(html,source,today)
+    if parser=="bryant": return parse_bryant(html,source,today)
     if parser=="korn": return parse_korn(html,source,today)
     soup=BeautifulSoup(html,"lxml")
     budget=[int(source.get("max_detail_requests",MAX_DETAIL_REQUESTS_PER_SOURCE))]
