@@ -1472,6 +1472,7 @@ def carry_forward(job: Job, prior: dict) -> Job:
     job.missing_runs=0
     job.closed_date=None
     # Do not lose previously known metadata just because today's parser missed a field.
+    _fresh_comp_text=bool(job.compensation_text)
     for attr in ["organization","location","posted_date","compensation_text","compensation_min","compensation_max","sector","sector_tags","organization_type","organization_types","parent_organization","application_deadline","mandate_tags","succession_reason","latest_reported_ceo_comp","latest_reported_ceo_comp_year","latest_reported_ceo_name","latest_reported_ceo_comp_source","org_revenue","org_assets","org_ein"]:
         new=getattr(job,attr)
         old=prior.get(attr)
@@ -1481,7 +1482,10 @@ def carry_forward(job: Job, prior: dict) -> Job:
     if job.posted_date:
         job.date_basis=prior.get("date_basis") if prior.get("posted_date")==job.posted_date else job.date_basis
         job.posted_date_status=prior.get("posted_date_status") if prior.get("posted_date")==job.posted_date else job.posted_date_status
-    job.compensation_status = prior.get("compensation_status",job.compensation_status) if not job.compensation_text else job.compensation_status
+    if not _fresh_comp_text:
+        # New parse missed comp (text restored from prior or still empty): keep prior status,
+        # otherwise a restored range keeps the new parse's "not_published".
+        job.compensation_status=prior.get("compensation_status",job.compensation_status)
     job.sector_status = prior.get("sector_status",job.sector_status) if job.sector==prior.get("sector") else job.sector_status
     job.organization_type_status = prior.get("organization_type_status",job.organization_type_status) if job.organization_type==prior.get("organization_type") else job.organization_type_status
     job.location_status = "extracted" if job.location else prior.get("location_status","unavailable")
@@ -1696,6 +1700,57 @@ def backfill_compensation(jobs: list[dict], limit: int = 25) -> int:
     return updated
 
 
+def build_market_take(current: list[dict], all_history: list[dict], events: list[dict], now: str) -> dict:
+    """Deterministic data-driven market narrative for the front page.
+
+    No generated prose: every sentence is computed from the week's events and
+    the open-search pool, so nothing here can hallucinate in front of readers.
+    """
+    from datetime import datetime
+    try:
+        now_dt = datetime.fromisoformat(now.replace("Z", "+00:00"))
+    except Exception:
+        return {"generated_at": now, "sentences": []}
+    cutoff = (now_dt - timedelta(days=7)).isoformat()
+    new_ev = [e for e in events if e.get("type") in ("new", "reopened") and (e.get("at") or "") >= cutoff]
+    closed_ev = [e for e in events if e.get("type") in ("closed",) and (e.get("at") or "") >= cutoff]
+    by_id = {j.get("id"): j for j in all_history if j.get("id")}
+    sentences = [f"{len(new_ev)} new chief-executive searches surfaced in the past 7 days; {len(closed_ev)} closed."]
+    # Sector lean of this week's new searches.
+    sec = {}
+    for e in new_ev:
+        j = by_id.get(e.get("job_id")) or {}
+        for t in j.get("sector_tags") or []:
+            if t and t != "Unclassified": sec[t] = sec.get(t, 0) + 1
+    if sec and new_ev:
+        top, k = max(sec.items(), key=lambda x: (x[1], x[0]))
+        sentences.append(f"New searches lean {top.lower()} ({k} of {len(new_ev)}).")
+    # Most common board mandate across open searches.
+    man = {}
+    for j in current:
+        for t in j.get("mandate_tags") or []:
+            if t: man[t] = man.get(t, 0) + 1
+    if man and current:
+        top, k = max(man.items(), key=lambda x: (x[1], x[0]))
+        sentences.append(f"The most common board mandate is {top.lower()} ({k} of {len(current)} open searches).")
+    # Most active firm.
+    firm = {}
+    for j in current:
+        s = j.get("source") or ""
+        if s: firm[s] = firm.get(s, 0) + 1
+    if firm:
+        top, k = max(firm.items(), key=lambda x: (x[1], x[0]))
+        sentences.append(f"{top} is running the most open searches ({k}).")
+    # Compensation visibility.
+    disclosed = sum(1 for j in current if j.get("compensation_text"))
+    reported = sum(1 for j in current if j.get("latest_reported_ceo_comp"))
+    if disclosed:
+        sentences.append(f"{disclosed} open searches disclose compensation.")
+    elif reported:
+        sentences.append(f"{reported} open searches carry reported prior-CEO pay from public 990s.")
+    return {"generated_at": now, "sentences": sentences}
+
+
 def main() -> int:
     today=datetime.now(timezone.utc).date(); now=now_iso()
     # One-shot site patches: large site edits (index.html etc.) cannot go through
@@ -1821,6 +1876,8 @@ def main() -> int:
     # direct-URL roles the listing-page parsers couldn't see it on.
     backfill_compensation(current,limit=25)
 
+    take = build_market_take(current, all_history, events, now)
+
     def recency(j): return j.get("posted_date") or (j.get("first_seen") or "")[:10] or "0000-00-00"
     current.sort(key=lambda j:(recency(j),j.get("source",""),j.get("organization","")),reverse=True)
     all_history.sort(key=lambda j:((j.get("first_seen") or ""),j.get("source",""),j.get("organization","")),reverse=True)
@@ -1830,7 +1887,7 @@ def main() -> int:
     JOBS_PATH.write_text(json.dumps({"generated_at":now,"baseline_initialized_at":baseline,"jobs":current},indent=2,ensure_ascii=False),encoding="utf-8")
     HISTORY_PATH.write_text(json.dumps({"generated_at":now,"baseline_initialized_at":baseline,"jobs":all_history},indent=2,ensure_ascii=False),encoding="utf-8")
     CHANGES_PATH.write_text(json.dumps({"generated_at":now,"events":events},indent=2,ensure_ascii=False),encoding="utf-8")
-    META_PATH.write_text(json.dumps({"generated_at":now,"baseline_initialized_at":baseline,"source_count":len(sources),"sources":health_rows},indent=2,ensure_ascii=False),encoding="utf-8")
+    META_PATH.write_text(json.dumps({"generated_at":now,"baseline_initialized_at":baseline,"source_count":len(sources),"sources":health_rows,"market_take":take},indent=2,ensure_ascii=False),encoding="utf-8")
     print(f"Wrote {len(current)} open roles; {len(all_history)} total historical roles; {len(sources)} tracked sources.")
     return 0
 
