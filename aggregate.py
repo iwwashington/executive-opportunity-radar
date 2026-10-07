@@ -1633,6 +1633,25 @@ def enrich_nonprofit_990(jobs: list[dict], limit: int = 20) -> None:
 
 def main() -> int:
     today=datetime.now(timezone.utc).date(); now=now_iso()
+    # One-shot site patches: large site edits (index.html etc.) cannot go through
+    # the MCP file API, so they ship as patches/*.patch and are applied here during
+    # the scheduled run. Applied patches are removed after use; the workflow's
+    # commit step picks up the staged index.html alongside the data files.
+    try:
+        import subprocess as _sp
+        _patches=sorted((Path(__file__).parent/"patches").glob("*.patch"))
+        for _patch in _patches:
+            if _sp.run(["git","apply","--check",str(_patch)],capture_output=True).returncode!=0:
+                print(f"skipping site patch {_patch.name} (does not apply cleanly)",flush=True); continue
+            _ap=_sp.run(["git","apply",str(_patch)],capture_output=True,text=True)
+            if _ap.returncode==0:
+                _sp.run(["git","rm","-q",str(_patch)],capture_output=True)
+                _sp.run(["git","add","index.html"],capture_output=True)
+                print(f"applied site patch {_patch.name}",flush=True)
+            else:
+                print(f"site patch {_patch.name} failed: {_ap.stderr[:200]}",flush=True)
+    except Exception as _e:
+        print(f"site patch step skipped: {_e}",flush=True)
     sources=load_json(SOURCES_PATH,[])
     history_payload=load_json(HISTORY_PATH,{"jobs":[]}); history_jobs=history_payload.get("jobs",[])
     changes_payload=load_json(CHANGES_PATH,{"events":[]}); events=changes_payload.get("events",[])
