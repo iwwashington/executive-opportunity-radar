@@ -49,11 +49,13 @@ The Opportunities filters and Market view use the multi-tag arrays rather than f
 v6 uses ProPublica Nonprofit Explorer as the practical public enrichment source for eligible nonprofit organizations. It can add, when confidently matched:
 - latest reported CEO/executive compensation and filing year
 - reported executive name
-- revenue
-- assets
+- top-3 reported chief-executive-level officer pay band (deduplicated, nonzero)
+- revenue (with filing year), 3-year revenue trend, assets
+- surplus/deficit (revenue minus functional expenses, latest filing)
+- NTEE code
 - EIN
 
-These values are historical Form 990 data and are labeled **Latest reported CEO compensation**, never “current salary.” Enrichment is best-effort, bounded per run, and never determines whether a role is included.
+These values are historical Form 990 data and are labeled **Latest reported CEO compensation**, never “current salary.” Revenue figures carry their filing year. Enrichment is best-effort, bounded per run, and never determines whether a role is included.
 
 ### Additional market intelligence
 The data model can now retain:
