@@ -1973,6 +1973,9 @@ def build_market_take(current: list[dict], all_history: list[dict], events: list
 
     No generated prose: every sentence is computed from the week's events and
     the open-search pool, so nothing here can hallucinate in front of readers.
+
+    Phase 3: also emits trailing 4-week comparisons so the frontend can write
+    insight ("running above/below usual pace") only when the data supports it.
     """
     from datetime import datetime
     try:
@@ -2016,7 +2019,50 @@ def build_market_take(current: list[dict], all_history: list[dict], events: list
         sentences.append(f"{disclosed} open searches disclose compensation.")
     elif reported:
         sentences.append(f"{reported} open searches carry reported prior-CEO pay from public 990s.")
-    return {"generated_at": now, "sentences": sentences}
+
+    # Phase 3: trailing 4-week comparisons for insight sentences.
+    # Bucket "new" events by week for the last 5 weeks (this week + 4 trailing).
+    comparisons = {}
+    try:
+        week_buckets = {}
+        for e in events:
+            if e.get("type") not in ("new", "reopened"): continue
+            at = e.get("at") or ""
+            try:
+                edt = datetime.fromisoformat(at.replace("Z", "+00:00"))
+            except Exception:
+                continue
+            days_ago = (now_dt - edt).days
+            if 0 <= days_ago < 35:
+                wk = days_ago // 7
+                week_buckets.setdefault(wk, []).append(e)
+        # This week (wk 0) vs trailing 4-week average (wk 1-4), overall and by sector.
+        this_week = week_buckets.get(0, [])
+        trailing = [e for wk in (1, 2, 3, 4) for e in week_buckets.get(wk, [])]
+        comparisons["new_searches"] = {
+            "this_week": len(this_week),
+            "trailing_4wk_avg": round(len(trailing) / 4, 1) if trailing else 0,
+            "trailing_4wk_total": len(trailing),
+        }
+        # By primary sector.
+        sec_this, sec_trail = {}, {}
+        for e in this_week:
+            j = by_id.get(e.get("job_id")) or {}
+            s = (j.get("sector_tags") or ["Unclassified"])[0]
+            sec_this[s] = sec_this.get(s, 0) + 1
+        for e in trailing:
+            j = by_id.get(e.get("job_id")) or {}
+            s = (j.get("sector_tags") or ["Unclassified"])[0]
+            sec_trail[s] = sec_trail.get(s, 0) + 1
+        sec_comp = {}
+        for s, n in sec_this.items():
+            avg = round(sec_trail.get(s, 0) / 4, 1)
+            sec_comp[s] = {"this_week": n, "trailing_4wk_avg": avg}
+        comparisons["by_sector"] = sec_comp
+    except Exception:
+        pass
+
+    return {"generated_at": now, "sentences": sentences, "comparisons": comparisons}
 
 
 def main() -> int:
