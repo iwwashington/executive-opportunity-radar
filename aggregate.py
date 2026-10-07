@@ -1574,7 +1574,7 @@ def enrich_nonprofit_990(jobs: list[dict], limit: int = 20) -> None:
     done=0
     for j in jobs:
         if done>=limit: break
-        if j.get("latest_reported_ceo_comp") or j.get("org_ein"): continue
+        if j.get("org_990_enriched_v2"): continue
         org=j.get("organization","")
         if not org or org=="Organization not parsed": continue
         ots=j.get("organization_types") or [j.get("organization_type","")]
@@ -1599,14 +1599,28 @@ def enrich_nonprofit_990(jobs: list[dict], limit: int = 20) -> None:
             if not ein: continue
             j["org_ein"]=ein
             detail=fetch(f"https://projects.propublica.org/nonprofits/api/v2/organizations/{ein}.json").json()
+            _orgd=detail.get("organization") or {}
+            _ntee=_orgd.get("ntee_code") or o.get("ntee_code")
+            if _ntee: j["org_ntee"]=str(_ntee)
             filings=detail.get("filings_with_data") or []
             if filings:
                 f=filings[0]
                 j["org_revenue"]=f.get("totrevenue") or f.get("totrev")
                 j["org_assets"]=f.get("totassetsend") or f.get("totassets")
+                _fy=f.get("tax_prd_yr") or f.get("tax_prd")
+                if _fy: j["org_financial_year"]=_fy
+                _exp=f.get("totfuncexpns")
+                if j["org_revenue"] and _exp:
+                    j["org_surplus"]=j["org_revenue"]-_exp
+                _trend=[]
+                for _ff in filings[:3]:
+                    _r=_ff.get("totrevenue") or _ff.get("totrev")
+                    _y=_ff.get("tax_prd_yr") or _ff.get("tax_prd")
+                    if _r: _trend.append({"year":_y,"revenue":_r})
+                if len(_trend)>=2: j["org_revenue_trend"]=_trend
             page=fetch(f"https://projects.propublica.org/nonprofits/organizations/{ein}").text
             ps=BeautifulSoup(page,"lxml")
-            best=None
+            best=None; _officers=[]
             for tr in ps.find_all("tr"):
                 cells=[clean(x.get_text(" ",strip=True)) for x in tr.find_all(["th","td"])]
                 if len(cells)<2: continue
@@ -1618,13 +1632,23 @@ def enrich_nonprofit_990(jobs: list[dict], limit: int = 20) -> None:
                     if m: vals.append(int(m.group(1).replace(",","")))
                 if vals:
                     total=sum(vals)
+                    _officers.append((total,name_role))
                     if best is None or total>best[0]: best=(total,name_role)
+            if _officers:
+                _seen=set(); _uniq=[]
+                for t,n in sorted(_officers,reverse=True):
+                    _k=re.sub(r"\s+"," ",n.lower()).strip()
+                    if t>0 and _k not in _seen:
+                        _seen.add(_k); _uniq.append({"name":n,"comp":t})
+                    if len(_uniq)>=3: break
+                if _uniq: j["officer_comp_top"]=_uniq
             if best:
                 j["latest_reported_ceo_comp"]=best[0]
                 j["latest_reported_ceo_name"]=best[1]
                 j["latest_reported_ceo_comp_source"]=f"https://projects.propublica.org/nonprofits/organizations/{ein}"
                 years=re.findall(r"Fiscal Year Ending[^0-9]*(20\d{2})",clean(ps.get_text(" ",strip=True)))
                 if years: j["latest_reported_ceo_comp_year"]=int(years[0])
+            j["org_990_enriched_v2"]=True
             done+=1
             time.sleep(.08)
         except Exception:
