@@ -1655,6 +1655,47 @@ def enrich_nonprofit_990(jobs: list[dict], limit: int = 20) -> None:
             continue
 
 
+def backfill_compensation(jobs: list[dict], limit: int = 25) -> int:
+    """Fetch detail pages for open direct-URL roles missing comp; never overwrites.
+
+    Many postings publish compensation on the detail page (or a linked PDF
+    profile) that the listing-page parsers never see. This bounded pass goes
+    back for it. One attempt per role; failures are not retried.
+    """
+    done = 0; updated = 0
+    for j in jobs:
+        if done >= limit: break
+        if j.get("status") != "open": continue
+        if j.get("compensation_text"): continue
+        if j.get("comp_backfill_attempted"): continue
+        url = j.get("url") or ""
+        if not url.startswith("http"):
+            j["comp_backfill_attempted"] = True; continue
+        if j.get("link_quality") != "direct":
+            j["comp_backfill_attempted"] = True; continue
+        try:
+            dsoup, pipe, plain = _detail_text_soup(url)
+            done += 1
+            j["comp_backfill_attempted"] = True
+            if has_closed_signal(plain): continue
+            combined = enrich_context_from_linked_profile(dsoup, url, plain)
+            text, lo, hi, status = extract_compensation(combined)
+            if text:
+                j["compensation_text"] = text
+                j["compensation_min"] = lo
+                j["compensation_max"] = hi
+                j["compensation_status"] = status
+                j["updated_at"] = now_iso()
+                updated += 1
+            time.sleep(0.15)
+        except Exception:
+            j["comp_backfill_attempted"] = True
+            done += 1
+            continue
+    if updated: print(f"comp backfill: {updated} roles gained compensation data", flush=True)
+    return updated
+
+
 def main() -> int:
     today=datetime.now(timezone.utc).date(); now=now_iso()
     # One-shot site patches: large site edits (index.html etc.) cannot go through
@@ -1775,6 +1816,10 @@ def main() -> int:
 
     # Enrich a bounded number of eligible nonprofit records per run with public 990 data.
     enrich_nonprofit_990(current,limit=20)
+
+    # Backfill compensation from detail pages / linked PDF profiles for open
+    # direct-URL roles the listing-page parsers couldn't see it on.
+    backfill_compensation(current,limit=25)
 
     def recency(j): return j.get("posted_date") or (j.get("first_seen") or "")[:10] or "0000-00-00"
     current.sort(key=lambda j:(recency(j),j.get("source",""),j.get("organization","")),reverse=True)
