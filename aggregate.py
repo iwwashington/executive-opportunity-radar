@@ -1681,7 +1681,12 @@ def main() -> int:
         if j.get("status")!="open": continue
         if j.get("posted_date"):
             try:
-                date.fromisoformat(j["posted_date"])
+                pd=date.fromisoformat(j["posted_date"])
+                # A posting date can never be in the future. Future dates scraped
+                # from listings are start dates, deadlines, or source errors (e.g.
+                # DRG Talent's "Start Date: On or before July 1, 2027" was once
+                # misread as posted_date 2027-07-01). Reject them as unavailable.
+                if pd>today: raise ValueError("posted_date in the future")
             except ValueError:
                 j["posted_date"]=None; j["date_basis"]="first_seen"; j["posted_date_status"]="unavailable"
         current.append(j)
