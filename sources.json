@@ -375,7 +375,8 @@
     "allow_zero": false,
     "urls": [
       "https://www.bryantgrp.com/current-listings"
-    ]
+    ],
+    "parser": "bryant"
   },
   {
     "name": "Heidrick & Struggles",
