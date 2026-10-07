@@ -1,0 +1,13 @@
+diff --git a/index.html b/index.html
+index 5f8a813..01de40c 100644
+--- a/index.html
++++ b/index.html
+@@ -166,7 +166,7 @@ function sectorTags(j){const a=Array.isArray(j.sector_tags)&&j.sector_tags.lengt
+ function orgTypes(j){const a=Array.isArray(j.organization_types)&&j.organization_types.length?j.organization_types:[j.organization_type];return [...new Set(a.filter(x=>x&&x!=='Unclassified'))];}
+ function mandates(j){return Array.isArray(j.mandate_tags)?j.mandate_tags.filter(Boolean):[];}
+ function compensation(j){if(j.compensation_min&&j.compensation_max){return j.compensation_min===j.compensation_max?money(j.compensation_min):`${money(j.compensation_min)}–${money(j.compensation_max)}`;}if(j.compensation_min)return `${money(j.compensation_min)}+`;return '';}
+-function scaleText(j){const bits=[];if(j.org_revenue)bits.push(`Revenue ${money(j.org_revenue)}`);if(j.org_assets)bits.push(`Assets ${money(j.org_assets)}`);return bits.join(' · ');}
++function scaleText(j){const bits=[];if(j.org_revenue)bits.push(`Revenue ${money(j.org_revenue)}${j.org_financial_year?` (FY${j.org_financial_year})`:''}`);if(j.org_assets)bits.push(`Assets ${money(j.org_assets)}`);return bits.join(' · ');}
+ function jobCard(j,compact=false){const fav=saved();const direct=j.link_quality==='direct'||(j.url&&j.source_url&&j.url!==j.source_url);const link=j.url||j.source_url||'#';const tags=[...orgTypes(j).slice(0,2),...sectorTags(j).slice(0,2)];return `<article class="op-card" tabindex="0" role="link" data-url="${esc(link)}" aria-label="Open ${esc(j.title)} at ${esc(j.organization)}">
+   <button class="save ${fav.has(j.id)?'on':''}" data-save="${esc(j.id)}" aria-label="Save role">${fav.has(j.id)?'★':'☆'}</button>
+   <div class="op-kicker">${esc(j.source)}${direct?' · direct posting':' · source listing'}</div>
