@@ -287,27 +287,71 @@ def infer_work_arrangement(location: str, text: str = "") -> str:
     return "Unknown"
 
 
-def infer_sector_tags(organization: str, text: str) -> tuple[list[str], str]:
-    """Return every supported sector tag that the public text supports.
+def _score_rules(rules: list[tuple[str,str]], organization: str, text: str) -> list[tuple[str,int]]:
+    """Score each classification rule by weighted keyword hits.
 
-    Tags intentionally overlap: e.g. an association can also be Health or Education.
+    Organization-name hits weigh 3x body-text hits: the org name is the
+    strongest signal of what the organization *is*; body text often mentions
+    sectors the org merely touches (e.g. a health funder mentioning education).
     """
-    corpus = clean(f"{organization} {text}")[:16000]
-    tags=[]
-    for label, pattern in SECTOR_RULES:
-        if re.search(pattern, corpus, re.I) and label not in tags:
-            tags.append(label)
-    return (tags or ["Unclassified"]), ("inferred" if tags else "unclassified")
+    org = clean(organization or "")
+    body = clean(text or "")[:18000]
+    scored=[]
+    for label, pattern in rules:
+        org_hits = len(re.findall(pattern, org, re.I))
+        body_hits = len(re.findall(pattern, body, re.I))
+        score = org_hits*3 + body_hits
+        if score>0:
+            scored.append((label, score))
+    scored.sort(key=lambda x: -x[1])
+    return scored
+
+
+def classify_primary_secondary(rules: list[tuple[str,str]], organization: str, text: str,
+                               secondary_threshold: int = 2) -> tuple[str, str | None, str]:
+    """One primary label, at most one secondary, with a confidence rating.
+
+    Secondary is only assigned when it clears an absolute hit threshold, so
+    weak second-place matches don't inflate tag counts. Confidence reflects
+    the gap between first and second place: a runaway winner is "high".
+    """
+    scored=_score_rules(rules, organization, text)
+    if not scored:
+        return "Unclassified", None, "unclassified"
+    primary, top_score = scored[0]
+    secondary=None
+    if len(scored)>1:
+        runner, runner_score = scored[1]
+        # Secondary must clear the threshold on its own merits and be a
+        # genuine contender (at least half the primary's score).
+        if runner_score>=secondary_threshold and runner_score>=top_score*0.5:
+            secondary=runner
+    if top_score>=6 and (len(scored)==1 or top_score>=scored[1][1]*2):
+        confidence="high"
+    elif top_score>=3:
+        confidence="medium"
+    else:
+        confidence="low"
+    return primary, secondary, confidence
+
+
+def infer_sector_tags(organization: str, text: str) -> tuple[list[str], str]:
+    """Return at most [primary] or [primary, secondary] sector tags.
+
+    Tag inflation fix: the old classifier returned every matching tag
+    (avg 6.2/record). The canonical fields are now `sector` (primary),
+    `sector_secondary`, and `sector_confidence`.
+    """
+    primary, secondary, confidence = classify_primary_secondary(SECTOR_RULES, organization, text)
+    tags=[primary]+([secondary] if secondary else [])
+    return tags, (confidence if primary!="Unclassified" else "unclassified")
 
 
 def infer_organization_types(organization: str, text: str) -> tuple[list[str], str]:
-    """Return overlapping organization-type tags rather than forcing one bucket."""
-    corpus=clean(f"{organization} {text}")[:18000]
-    tags=[]
-    for label, pattern in ORGANIZATION_TYPE_RULES:
-        if re.search(pattern, corpus, re.I) and label not in tags:
-            tags.append(label)
-    return (tags or ["Unclassified"]), ("inferred" if tags else "unclassified")
+    """Return at most [primary] or [primary, secondary] organization-type tags."""
+    primary, secondary, confidence = classify_primary_secondary(ORGANIZATION_TYPE_RULES, organization, text)
+    tags=[primary]+([secondary] if secondary else [])
+    return tags, (confidence if primary!="Unclassified" else "unclassified")
 
 
 def infer_sector(organization: str, text: str) -> tuple[str, str]:
@@ -320,20 +364,93 @@ def infer_organization_type(organization: str, text: str) -> tuple[str, str]:
     return tags[0],status
 
 
+def classify_record(organization: str, text: str) -> dict:
+    """Full v2 classification: primary + optional secondary + confidence, both axes."""
+    sec_primary, sec_secondary, sec_conf = classify_primary_secondary(SECTOR_RULES, organization, text)
+    ot_primary, ot_secondary, ot_conf = classify_primary_secondary(ORGANIZATION_TYPE_RULES, organization, text)
+    return {
+        "sector": sec_primary,
+        "sector_tags": [sec_primary]+([sec_secondary] if sec_secondary else []),
+        "sector_status": sec_conf if sec_primary!="Unclassified" else "unclassified",
+        "sector_secondary": sec_secondary,
+        "sector_confidence": sec_conf if sec_primary!="Unclassified" else "unclassified",
+        "organization_type": ot_primary,
+        "organization_types": [ot_primary]+([ot_secondary] if ot_secondary else []),
+        "organization_type_status": ot_conf if ot_primary!="Unclassified" else "unclassified",
+        "organization_type_secondary": ot_secondary,
+        "organization_type_confidence": ot_conf if ot_primary!="Unclassified" else "unclassified",
+    }
+
+
+PRIORITY_SECTION_HEADINGS = re.compile(
+    r"(?im)^\s*(?:key\s+)?(?:priorities|responsibilities|what\s+you(?:'ll|\s+will)\s+do|"
+    r"the\s+opportunity|position\s+(?:summary|overview)|role\s+(?:summary|overview)|"
+    r"about\s+the\s+(?:role|position|opportunity)|key\s+accountabilities|"
+    r"primary\s+(?:responsibilities|duties))\s*:?\s*$"
+)
+
+
+def extract_priorities_section(text: str) -> tuple[str, bool]:
+    """Isolate the role's stated priorities/responsibilities section.
+
+    Mandate tags were matching boilerplate across the whole posting (every
+    theme scored 44-113 of 155). Scoring only the priorities section keeps
+    mandates tied to what the board actually asked for. Returns
+    (section_text, found_heading).
+    """
+    t = clean(text or "")
+    m = PRIORITY_SECTION_HEADINGS.search(t)
+    if m:
+        # Take from the heading to the next likely section boundary
+        # (another heading-like line, or a fixed window).
+        start = m.end()
+        rest = t[start:start+6000]
+        # Cut at the next heading-like line (short line followed by content).
+        lines = rest.splitlines()
+        kept=[]
+        for i, line in enumerate(lines):
+            s=line.strip()
+            if i>3 and s and len(s)<70 and not s.endswith((".",":",";")) and s[0].isupper():
+                # Possible next section heading; stop unless it's a list item.
+                if not re.match(r"^[-•\d.)]", s):
+                    break
+            kept.append(line)
+            if len("\n".join(kept))>4000:
+                break
+        return "\n".join(kept).strip(), True
+    # Fallback: first 4000 chars often hold the role summary.
+    return t[:4000], False
+
+
+MANDATE_RULES = [
+    ("Growth / scale",r"\b(scal\w*|growth|expand|expansion|grow the organization|new markets?)\b"),
+    ("Fundraising / revenue",r"\b(fundrais\w*|development|philanthrop\w*|donor|earned revenue|revenue diversification|capital campaign)\b"),
+    ("Strategy / transformation",r"\b(strategic plan|strateg\w+|transform\w*|turnaround|organizational change|change management)\b"),
+    ("Operations / infrastructure",r"\b(operational excellence|operations|infrastructure|systems|process improvement|internal controls)\b"),
+    ("External affairs / advocacy",r"\b(advocacy|government relations|public policy|external affairs|public affairs|coalition|legislative)\b"),
+    ("Membership / stakeholders",r"\b(membership|members|stakeholder|member engagement|chapter|constituent engagement)\b"),
+    ("Culture / talent",r"\b(culture|talent|staff development|organizational culture|employee engagement|team building)\b"),
+    ("Digital / AI",r"\b(digital transformation|technology strategy|artificial intelligence|\bAI\b|data strategy|modernize technology)\b"),
+    ("Financial sustainability",r"\b(financial sustainability|fiscal sustainability|financial stewardship|budget discipline|long-term sustainability)\b"),
+]
+
+
 def infer_mandate_tags(text: str) -> list[str]:
-    corpus=clean(text)[:24000]
-    rules=[
-        ("Growth / scale",r"\b(scale|scaling|growth|expand|expansion|grow the organization|new markets?)\b"),
-        ("Fundraising / revenue",r"\b(fundrais|development|philanthrop|donor|earned revenue|revenue diversification|capital campaign)\b"),
-        ("Strategy / transformation",r"\b(strategic plan|strategy|transform|transformation|turnaround|organizational change|change management)\b"),
-        ("Operations / infrastructure",r"\b(operational excellence|operations|infrastructure|systems|process improvement|internal controls)\b"),
-        ("External affairs / advocacy",r"\b(advocacy|government relations|public policy|external affairs|public affairs|coalition|legislative)\b"),
-        ("Membership / stakeholders",r"\b(membership|members|stakeholder|member engagement|chapter|constituent engagement)\b"),
-        ("Culture / talent",r"\b(culture|talent|staff development|organizational culture|employee engagement|team building)\b"),
-        ("Digital / AI",r"\b(digital transformation|technology strategy|artificial intelligence|\bAI\b|data strategy|modernize technology)\b"),
-        ("Financial sustainability",r"\b(financial sustainability|fiscal sustainability|financial stewardship|budget discipline|long-term sustainability)\b"),
-    ]
-    return [label for label,pat in rules if re.search(pat,corpus,re.I)]
+    """Score mandates from the stated priorities section only, cap at three.
+
+    Returns the top-3 themes by hit count within the priorities section.
+    An empty list means the posting stated no scorable priorities.
+    """
+    section, _ = extract_priorities_section(text)
+    if not section:
+        return []
+    scored=[]
+    for label, pat in MANDATE_RULES:
+        hits=len(re.findall(pat, section, re.I))
+        if hits>0:
+            scored.append((label, hits))
+    scored.sort(key=lambda x: -x[1])
+    return [label for label,_ in scored[:3]]
 
 
 def infer_succession_reason(text: str) -> str:
@@ -668,21 +785,33 @@ class Job:
     sector: str = "Unclassified"
     sector_tags: list[str] = field(default_factory=list)
     sector_status: str = "unclassified"
+    sector_secondary: str | None = None
+    sector_confidence: str = "unclassified"
     organization_type: str = "Unclassified"
     organization_types: list[str] = field(default_factory=list)
     organization_type_status: str = "unclassified"
+    organization_type_secondary: str | None = None
+    organization_type_confidence: str = "unclassified"
     work_arrangement: str = "Unknown"
     parent_organization: str = ""
     application_deadline: str | None = None
     mandate_tags: list[str] = field(default_factory=list)
+    mandates_rescored: bool = False
     succession_reason: str = ""
     latest_reported_ceo_comp: int | None = None
     latest_reported_ceo_comp_year: int | None = None
     latest_reported_ceo_name: str = ""
     latest_reported_ceo_comp_source: str = ""
+    ceo_pay_context: str = ""
+    ceo_pay_stale: bool = False
     org_revenue: int | None = None
     org_assets: int | None = None
     org_ein: str = ""
+    org_ntee: str = ""
+    org_financial_year: int | None = None
+    org_surplus: int | None = None
+    org_revenue_trend: list = field(default_factory=list)
+    officer_comp_top: list = field(default_factory=list)
     location_status: str = "unavailable"
     posted_date_status: str = "unavailable"
     evidence: str = ""
@@ -691,17 +820,62 @@ class Job:
     closed_date: str | None = None
     change_count: int = 0
     baseline_seed: bool = False
+    carried_over: bool = False
+    carried_over_from: str | None = None
     link_quality: str = "source_page"
+
+def validate_organization(org: str) -> tuple[str, bool]:
+    """Clean organization name or fall back to 'Organization confidential'.
+
+    Returns (display_name, was_parsed). Known-bad patterns from production:
+    "Organization not parsed", "our client", trailing commas, bare years,
+    "Board of Directors" as the org name.
+    """
+    o=clean(org or "")
+    bad = (
+        not o
+        or o.lower() in {"organization not parsed", "our client", "board of directors",
+                         "confidential", "not specified", "n/a", "none"}
+        or re.fullmatch(r"19\d{2}|20\d{2}", o)  # bare year like "2026"
+        or len(o)<3
+    )
+    if bad:
+        return "Organization confidential", False
+    # Trailing comma / dangling punctuation: "National Speleological Society,"
+    o=re.sub(r"[\s,;:\-]+$", "", o).strip()
+    if len(o)<3:
+        return "Organization confidential", False
+    return o, True
+
+
+def validate_location(loc: str) -> tuple[str, bool]:
+    """Clean location or fall back to 'Location not listed'.
+
+    Returns (display_location, was_parsed). Known-bad: blank, "Inc.,",
+    fragments without a real place.
+    """
+    l=clean(loc or "")
+    bad = (
+        not l
+        or len(l)<3
+        or re.fullmatch(r"[Inc\.,\s]+", l, re.I)  # "Inc.," etc.
+        or l.lower() in {"not specified", "n/a", "none", "tbd"}
+    )
+    if bad:
+        return "Location not listed", False
+    return l, True
+
 
 def build_job(*, source: dict, title: str, organization: str, location: str, url: str,
               today: date, context: str = "", posted: date | None = None,
               posted_status: str = "unavailable", parent_organization: str = "") -> Job:
     """Build one normalized role without requiring optional metadata."""
-    role=clean(title); organization=clean(organization) or "Organization not parsed"
-    location=clean(location); context=clean(context)
+    role=clean(title)
+    organization, org_parsed = validate_organization(organization)
+    location, loc_parsed = validate_location(location)
+    context=clean(context)
     comp_text,comp_min,comp_max,comp_status=extract_compensation(context)
-    sector_tags,sector_status=infer_sector_tags(organization,context)
-    org_types,organization_type_status=infer_organization_types(organization,context)
+    classification=classify_record(organization,context)
     now=now_iso(); source_url=source["url"]
     direct=bool(url and canonical_url(url)!=canonical_url(source_url))
     return Job(
@@ -712,12 +886,20 @@ def build_job(*, source: dict, title: str, organization: str, location: str, url
         date_basis="posted_relative" if posted_status=="approximate" else "posted" if posted else "first_seen",
         status="open",role_type=role_type(role),compensation_text=comp_text,
         compensation_min=comp_min,compensation_max=comp_max,compensation_status=comp_status,
-        sector=sector_tags[0],sector_tags=sector_tags,sector_status=sector_status,
-        organization_type=org_types[0],organization_types=org_types,organization_type_status=organization_type_status,
+        sector=classification["sector"],sector_tags=classification["sector_tags"],
+        sector_status=classification["sector_status"],
+        sector_secondary=classification["sector_secondary"],
+        sector_confidence=classification["sector_confidence"],
+        organization_type=classification["organization_type"],
+        organization_types=classification["organization_types"],
+        organization_type_status=classification["organization_type_status"],
+        organization_type_secondary=classification["organization_type_secondary"],
+        organization_type_confidence=classification["organization_type_confidence"],
         work_arrangement=infer_work_arrangement(location,context),parent_organization=clean(parent_organization),
         application_deadline=extract_application_deadline(context,today),
-        mandate_tags=infer_mandate_tags(context),succession_reason=infer_succession_reason(context),
-        location_status="extracted" if location else "unavailable",
+        mandate_tags=infer_mandate_tags(context),mandates_rescored=True,
+        succession_reason=infer_succession_reason(context),
+        location_status="extracted" if loc_parsed else "unavailable",
         posted_date_status=posted_status if posted else "unavailable",
         evidence=evidence_excerpt(context,role,organization),updated_at=now,missing_runs=0,
         closed_date=None,change_count=0,baseline_seed=False,
@@ -1434,6 +1616,12 @@ def old_open_by_source(history_jobs: list[dict]) -> dict[str,list[dict]]:
 
 
 def compatible_job(raw: dict) -> Job:
+    """Normalize any historical record to the current schema with explicit nulls.
+
+    Also migrates legacy values: "Organization not parsed" -> "Organization
+    confidential", and trims pre-v2 tag lists (which could hold 6-10 tags)
+    down to the [primary] or [primary, secondary] cap.
+    """
     fields=Job.__dataclass_fields__; kwargs={}
     from dataclasses import MISSING
     for k,f in fields.items():
@@ -1445,10 +1633,16 @@ def compatible_job(raw: dict) -> Job:
         if kwargs.get(key) is None: kwargs[key]=""
     if not kwargs.get("role_type"): kwargs["role_type"]=role_type(kwargs.get("title",""))
     if not kwargs.get("updated_at"): kwargs["updated_at"]=kwargs.get("last_seen","")
-    if not kwargs.get("sector_tags"):
-        kwargs["sector_tags"]=[kwargs.get("sector") or "Unclassified"]
-    if not kwargs.get("organization_types"):
-        kwargs["organization_types"]=[kwargs.get("organization_type") or "Unclassified"]
+    # Migrate legacy organization fallback.
+    if kwargs.get("organization")=="Organization not parsed":
+        kwargs["organization"]="Organization confidential"
+    # Trim legacy tag inflation to the v2 cap.
+    for tags_key, primary_key in [("sector_tags","sector"),("organization_types","organization_type")]:
+        tags=kwargs.get(tags_key) or []
+        if len(tags)>2:
+            kwargs[tags_key]=[kwargs.get(primary_key) or tags[0]]+tags[1:2]
+        if not kwargs.get(tags_key):
+            kwargs[tags_key]=[kwargs.get(primary_key) or "Unclassified"]
     return Job(**kwargs)
 
 def find_prior(job: Job, history_jobs: list[dict]) -> dict | None:
@@ -1456,7 +1650,7 @@ def find_prior(job: Job, history_jobs: list[dict]) -> dict | None:
         if old.get("id")==job.id: return old
     # Soft match permits URL changes and occasional org parser improvements.
     candidates=[x for x in history_jobs if normalized(x.get("source"))==normalized(job.source) and normalized(x.get("title"))==normalized(job.title)]
-    if job.organization!="Organization not parsed":
+    if job.organization!="Organization confidential":
         for x in candidates:
             if normalized(x.get("organization"))==normalized(job.organization): return x
     for x in candidates:
@@ -1494,13 +1688,36 @@ def carry_forward(job: Job, prior: dict) -> Job:
     return job
 
 
+MATERIAL_CHANGE_FIELDS = ["title","organization","location","url","posted_date",
+    "compensation_text","compensation_min","compensation_max",
+    "application_deadline","status"]
+
+
 def changed_fields(prior: dict, current: Job) -> dict:
+    """Material changes only: pay, deadline, status, location, title, org, URL.
+
+    Cosmetic reclassifications (sector tags, mandate tags, work arrangement)
+    no longer count as "updated" — the old definition flagged 144 of 155
+    records as updated, which was meaningless.
+    """
     changes={}
-    for fieldname in ["title","organization","location","url","posted_date","compensation_text","compensation_min","compensation_max","sector_tags","organization_types","work_arrangement","application_deadline","mandate_tags","succession_reason","latest_reported_ceo_comp","org_revenue","org_assets"]:
+    for fieldname in MATERIAL_CHANGE_FIELDS:
         before=prior.get(fieldname); after=getattr(current,fieldname)
         if before not in (None,"") and after not in (None,"") and before!=after:
             changes[fieldname]={"from":before,"to":after}
     return changes
+
+
+BLOCKED_SIGNALS = re.compile(
+    r"40[13]\b|429\b|cloudflare|cf-ray|captcha|access denied|forbidden|"
+    r"please verify you are a human|unusual traffic",
+    re.I,
+)
+
+
+def _page_blocked(html: str) -> bool:
+    """True when fetched HTML looks like a block page, not listings."""
+    return bool(html and BLOCKED_SIGNALS.search(html[:8000]))
 
 
 def scrape_source(source: dict, today: date, prior_count: int) -> tuple[list[Job],dict]:
@@ -1520,16 +1737,22 @@ def scrape_source(source: dict, today: date, prior_count: int) -> tuple[list[Job
         if source.get("browser_first"):
             try:
                 html=(browser_korn_html(url) if source.get("parser")=="korn" else browser_html(url,int(source.get("browser_max_scrolls",8)))); fetch_modes.append("browser")
-                page_found=candidates_from_html(html,{**source,"url":url},today)
-                parse_successes+=1
+                if _page_blocked(html):
+                    errors.append("browser: page content indicates blocking (403/captcha/Cloudflare)")
+                else:
+                    page_found=candidates_from_html(html,{**source,"url":url},today)
+                    parse_successes+=1
                 all_found.extend(page_found)
             except Exception as exc:
                 errors.append(f"browser {type(exc).__name__}: {exc}")
         if not source.get("browser_first") or not page_found:
             try:
                 r=fetch(url); html=r.text; fetch_modes.append("static")
-                page_found=candidates_from_html(html,{**source,"url":url},today)
-                parse_successes+=1
+                if _page_blocked(html):
+                    errors.append("static: page content indicates blocking (403/captcha/Cloudflare)")
+                else:
+                    page_found=candidates_from_html(html,{**source,"url":url},today)
+                    parse_successes+=1
                 all_found.extend(page_found)
             except Exception as exc:
                 errors.append(f"static {type(exc).__name__}: {exc}")
@@ -1537,40 +1760,71 @@ def scrape_source(source: dict, today: date, prior_count: int) -> tuple[list[Job
         if source.get("render_fallback") and not page_found and not source.get("browser_first"):
             try:
                 html=(browser_korn_html(url) if source.get("parser")=="korn" else browser_html(url,int(source.get("browser_max_scrolls",8)))); fetch_modes.append("browser")
-                page_found=candidates_from_html(html,{**source,"url":url},today)
-                parse_successes+=1
+                if _page_blocked(html):
+                    errors.append("browser: page content indicates blocking (403/captcha/Cloudflare)")
+                else:
+                    page_found=candidates_from_html(html,{**source,"url":url},today)
+                    parse_successes+=1
                 all_found.extend(page_found)
             except Exception as exc:
                 errors.append(f"browser {type(exc).__name__}: {exc}")
 
     found=dedupe(all_found)
     health["count"]=len(found); health["fetch_mode"]="+".join(dict.fromkeys(fetch_modes))
+    error_blob=" | ".join(errors)
+    blocked = bool(BLOCKED_SIGNALS.search(error_blob))
     if not fetch_modes or parse_successes==0:
-        health["ok"]=False; health["status"]="failed"; health["preserved"]=True
-        health["error"]=("No source page parsed successfully. " + " | ".join(errors))[:500]
+        # A 403/captcha/Cloudflare is "blocked" — never "checked, no matches".
+        health["ok"]=False; health["preserved"]=True
+        health["status"]="blocked" if blocked else "failed"
+        health["error"]=("No source page parsed successfully. " + error_blob)[:500]
         return [],health
 
     min_expected=int(source.get("min_expected_matches",0) or 0)
     if min_expected and len(found)<min_expected:
         health["ok"]=False; health["status"]="partial-suspected"; health["preserved"]=True
-        health["error"]=(f"Found only {len(found)} matching roles; this source is expected to expose at least {min_expected}. Preserving prior roles and flagging coverage for review. " + " | ".join(errors))[:500]
+        health["error"]=(f"Found only {len(found)} matching roles; this source is expected to expose at least {min_expected}. Preserving prior roles and flagging coverage for review. " + error_blob)[:500]
         return found,health
 
     # Unexpected collapses are treated as partial, not as mass closures.
     if prior_count>=5 and len(found)<max(2,int(prior_count*0.35)) and not source.get("allow_zero",False) and not source.get("authoritative_parser",False):
         health["ok"]=False; health["status"]="partial-suspected"; health["preserved"]=True
-        health["error"]=(f"Found {len(found)} vs {prior_count} previously open; preserving prior roles pending another healthy parse. " + " | ".join(errors))[:500]
+        health["error"]=(f"Found {len(found)} vs {prior_count} previously open; preserving prior roles pending another healthy parse. " + error_blob)[:500]
         return found,health
 
     health["ok"]=True
-    health["status"]="ok" if found else "checked-no-matches"
-    health["error"]=" | ".join(errors)[:500]
+    # Zero roles is "no matches" only when nothing was blocked.
+    if blocked:
+        health["status"]="blocked"; health["ok"]=False; health["preserved"]=True
+    else:
+        health["status"]="ok" if found else "checked-no-matches"
+    health["error"]=error_blob[:500]
     return found,health
 
 
 def _state_from_location(location: str) -> str:
     m=re.search(r",\s*([A-Z]{2})\b",location or "")
     return m.group(1) if m else ""
+
+
+def is_top_executive(title: str) -> bool:
+    """True when the role is the organization's top executive.
+
+    990 CEO pay may only be attached to the top job. A "Senior Executive
+    Director" of a chapter, a deputy, or a regional lead is not the CEO —
+    attaching the parent org's CEO pay to those roles is misattribution.
+    """
+    t=clean(title or "").lower()
+    if not re.search(r"\b(chief executive officer|\bceo\b|president|executive director)\b", t):
+        return False
+    # Disqualifiers: not the top job.
+    if re.search(r"\b(senior|deputy|associate|assistant|vice|regional|interim|acting|"
+                 r"co-|joint|chapter|branch|division)\b", t):
+        # "Senior Executive Director" of a regional chapter is not the CEO.
+        # But a plain "Senior Vice President" was already excluded above.
+        # Keep the exclusion broad: any qualifier means not-the-top-job.
+        return False
+    return True
 
 
 def enrich_nonprofit_990(jobs: list[dict], limit: int = 20) -> None:
@@ -1647,11 +1901,25 @@ def enrich_nonprofit_990(jobs: list[dict], limit: int = 20) -> None:
                     if len(_uniq)>=3: break
                 if _uniq: j["officer_comp_top"]=_uniq
             if best:
-                j["latest_reported_ceo_comp"]=best[0]
-                j["latest_reported_ceo_name"]=best[1]
-                j["latest_reported_ceo_comp_source"]=f"https://projects.propublica.org/nonprofits/organizations/{ein}"
                 years=re.findall(r"Fiscal Year Ending[^0-9]*(20\d{2})",clean(ps.get_text(" ",strip=True)))
-                if years: j["latest_reported_ceo_comp_year"]=int(years[0])
+                comp_year=int(years[0]) if years else None
+                # 990 CEO pay attaches only to the top executive role.
+                # Otherwise it's the parent organization's CEO pay — label it.
+                if is_top_executive(j.get("title","")):
+                    j["latest_reported_ceo_comp"]=best[0]
+                    j["latest_reported_ceo_name"]=best[1]
+                    j["latest_reported_ceo_comp_source"]=f"https://projects.propublica.org/nonprofits/organizations/{ein}"
+                    if comp_year: j["latest_reported_ceo_comp_year"]=comp_year
+                    j["ceo_pay_context"]="role"
+                else:
+                    j["latest_reported_ceo_comp"]=best[0]
+                    j["latest_reported_ceo_name"]=best[1]
+                    j["latest_reported_ceo_comp_source"]=f"https://projects.propublica.org/nonprofits/organizations/{ein}"
+                    if comp_year: j["latest_reported_ceo_comp_year"]=comp_year
+                    j["ceo_pay_context"]="parent_org"
+                # Flag 990 pay data older than three filing years as stale.
+                if comp_year and comp_year < date.today().year - 3:
+                    j["ceo_pay_stale"]=True
             j["org_990_enriched_v2"]=True
             done+=1
             time.sleep(.08)
@@ -1807,13 +2075,14 @@ def main() -> int:
         health_rows.append(health)
         print(f"{source['name']}: {health['status']} ({health['count']})")
 
-        unhealthy=health["status"] in {"failed","partial-suspected"}
+        unhealthy=health["status"] in {"failed","blocked","partial-suspected"}
         if unhealthy:
             # We may still merge richer roles we did find, but never close anything from this source.
             for job in found:
                 prior=find_prior(job,updated_history)
                 if prior:
                     job=carry_forward(job,prior); job.last_seen=now; seen_ids.add(job.id)
+                    job.carried_over=False; job.carried_over_from=None
                     changes=changed_fields(prior,job)
                     if changes:
                         job.change_count=int(prior.get("change_count",0) or 0)+1; job.updated_at=now
@@ -1822,6 +2091,15 @@ def main() -> int:
                 else:
                     seen_ids.add(job.id); by_id[job.id]=asdict(job)
                     events.append({"at":now,"type":"new","job_id":job.id,"source":job.source,"title":job.title,"organization":job.organization})
+            # Mark preserved prior roles as carried over from the last healthy check.
+            for prior in prior_source:
+                pid=prior.get("id")
+                if pid in seen_ids: continue
+                current=dict(by_id.get(pid,prior))
+                if current.get("status")=="open":
+                    current["carried_over"]=True
+                    current["carried_over_from"]=prior.get("last_seen") or prior.get("updated_at")
+                    by_id[pid]=current
             continue
 
         # Healthy source: merge current roles.
@@ -1839,6 +2117,7 @@ def main() -> int:
             else:
                 events.append({"at":now,"type":"new","job_id":job.id,"source":job.source,"title":job.title,"organization":job.organization})
             job.status="open"; job.closed_date=None; job.last_seen=now; job.missing_runs=0
+            job.carried_over=False; job.carried_over_from=None
             by_id[job.id]=asdict(job); source_seen.add(job.id); seen_ids.add(job.id)
 
         # A role must disappear on two healthy runs before being archived.
@@ -1891,7 +2170,7 @@ def main() -> int:
     JOBS_PATH.write_text(json.dumps({"generated_at":now,"baseline_initialized_at":baseline,"jobs":current},indent=2,ensure_ascii=False),encoding="utf-8")
     HISTORY_PATH.write_text(json.dumps({"generated_at":now,"baseline_initialized_at":baseline,"jobs":all_history},indent=2,ensure_ascii=False),encoding="utf-8")
     CHANGES_PATH.write_text(json.dumps({"generated_at":now,"events":events},indent=2,ensure_ascii=False),encoding="utf-8")
-    META_PATH.write_text(json.dumps({"generated_at":now,"baseline_initialized_at":baseline,"source_count":len(sources),"sources":health_rows,"market_take":take},indent=2,ensure_ascii=False),encoding="utf-8")
+    META_PATH.write_text(json.dumps({"generated_at":now,"baseline_initialized_at":baseline,"baseline_week":(baseline[:10] if baseline else None),"source_count":len(sources),"sources":health_rows,"market_take":take},indent=2,ensure_ascii=False),encoding="utf-8")
     print(f"Wrote {len(current)} open roles; {len(all_history)} total historical roles; {len(sources)} tracked sources.")
     return 0
 
