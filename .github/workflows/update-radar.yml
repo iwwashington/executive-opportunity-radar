@@ -41,6 +41,9 @@ jobs:
       - name: Update public-source data
         run: python aggregate.py
 
+      - name: Verify site can render before publishing
+        run: python test_site.py
+
       - name: Commit data changes
         run: |
           git config user.name "executive-radar-bot"
