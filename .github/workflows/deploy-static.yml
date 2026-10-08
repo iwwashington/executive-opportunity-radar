@@ -18,7 +18,7 @@ permissions:
 
 concurrency:
   group: executive-opportunity-radar-pages
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   deploy:
