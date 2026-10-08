@@ -25,7 +25,7 @@ class QuietHandler(SimpleHTTPRequestHandler):
 
 def check_js_syntax():
     html = (ROOT / "index.html").read_text(encoding="utf-8")
-    scripts = re.findall(r"<script\\b[^>]*>(.*?)</script>", html, re.S | re.I)
+    scripts = re.findall(r"<script\b[^>]*>(.*?)</script>", html, re.S | re.I)
     assert len(scripts) == 1, f"Expected one inline script; got {len(scripts)}"
     with tempfile.TemporaryDirectory() as d:
         path = Path(d) / "radar-inline.js"
