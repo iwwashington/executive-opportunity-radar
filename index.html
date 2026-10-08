@@ -127,6 +127,7 @@ dialog{border:0;padding:0;background:transparent;width:min(520px,100%);max-width
 /* ===== Mobile responsiveness overhaul (390px-first) ===== */
 img,svg,video{max-width:100%;height:auto}
 .op-card a,.dossier-panel a,.panel a,.source-card a{overflow-wrap:break-word;word-break:break-word}
+.firm-matrix-mobile{display:none}
 @media(max-width:768px){
 .role-grid{grid-template-columns:repeat(2,1fr)}
 .dossier-panel{padding:24px 20px}
@@ -239,7 +240,7 @@ h1{font-size:30px;max-width:none}
     <button data-view="opportunities">Opportunities</button>
     <button data-view="saved">Saved</button>
     <button data-view="firms">Firms</button>
-    <button data-view="checkyourself">Check yourself</button>
+    
     <button data-view="placements">Placements</button>
     <button data-view="sources">Source health</button>
   </nav>
@@ -393,15 +394,6 @@ h1{font-size:30px;max-width:none}
 </div>
 <div id="consultList" class="source-list"></div>
 <div class="method" id="consultMethod" hidden>Consultant attributions are captured from firm postings where a lead consultant is named. Consultants appear here only when observed in the radar's data.</div>
-</section>
-<section id="checkyourselfView" class="view">
-  <div class="check-hero">
-    <h2>Check yourself</h2>
-    <p>These firms have open executive searches right now, but the radar can't pull them automatically — usually bot protection or a site structure our scraper can't read.</p>
-    <p><b>Tap through to browse their current openings directly.</b> Anything you find here won't appear in the Opportunities tab.</p>
-  </div>
-  <div id="checkList" class="source-list"></div>
-  <div class="method">Firms appear here when their status is blocked, failed, partially checkable, or manual. If a firm's site starts working with the scraper, they'll move back to automatic coverage.</div>
 </section>
 <div id="dossierOverlay" class="dossier-overlay" hidden>
   <div class="dossier-panel" role="dialog" aria-modal="true" aria-labelledby="dossierTitle">
@@ -738,7 +730,7 @@ function renderFirmMatrix(){
   ).slice(0,20);
   const tiers=TIER_ORDER.filter(t=>names.some(f=>firms[f][t]));
   let h=`<table style="border-collapse:collapse;font-size:12px;min-width:640px;width:100%">`;
-  let mh=`<div class="firm-matrix-mobile" style="display:none">`;
+  let mh=`<div class="firm-matrix-mobile">`;
   h+=`<tr><th style="text-align:left;padding:8px;border-bottom:2px solid var(--line)">Firm</th>`+
     tiers.map(t=>`<th style="padding:8px;border-bottom:2px solid var(--line);text-align:center">${esc(t)}</th>`).join('')+
     `<th style="padding:8px;border-bottom:2px solid var(--line);text-align:center">Total</th></tr>`;
@@ -986,11 +978,7 @@ const examples=sj.slice(0,3).map(j=>esc(j.title)+' at '+esc(j.organization)).joi
 const inferred=sj.length>=3?`Places ${esc(topTags(sj,sectorTags,1)[0]||'varied')} leaders, typically at ${esc(topTags(sj,j=>[sizeTier(j)],1)[0]||'varied')} organizations.`:'';
 const trackRec=hj.length?`${hj.length} searches observed all-time · ${sj.length} open now`:`${sj.length} open ${sj.length===1?'search':'searches'}`;
 const profile=isTop?`<div class="firm-profile"><div class="firm-block"><h4>What they are</h4><p>${esc(desc)}</p></div><div class="firm-block"><h4>Track record</h4><p>${esc(trackRec)}.</p>${payBand?`<p>Posted pay ${payBand} <span class="trust">Verified</span></p>`:''}</p></div><div class="firm-block"><h4>Example searches</h4><p class="firm-examples">${examples?examples.split('; ').map(e=>{const jj=sj.find(x=>(x.title+' at '+x.organization)===e);return jj&&jj.url?`<a href="${esc(jj.url)}" target="_blank" rel="noopener">${esc(e)} ↗</a>`:esc(e);}).join('<br>'):''}</p></div></div>`:`<div class="firm-mix"><span><b>${sj.length}</b> open</span><span>${esc(desc.split('.')[0]+'.')}</span></div>`;
-return `<div class="source-card firm-card${isTop?' expandable':''}"${isTop?` tabindex="0" role="button" data-firm="${esc(s.source)}"`:''}><div><div class="source-name">${isTop?esc(s.source):`<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.source)} ↗</a>`}</div><div class="source-group">${esc(desc.split(".")[0]+".")}</div></div><div class="source-status ${cls}">${esc(label)}</div><div class="source-count">${sj.length||'—'}</div><div class="source-notes">${profile}${directLink}</div>${isTop?'<div class="firm-expand-hint">Click to expand profile</div>':''}</div>`;}).join('')||'<div class="empty" style="padding:22px">No firm data yet.</div>';
-var existingFilter=document.querySelector('.firm-filters');if(existingFilter)existingFilter.remove();
-const filterBar=`<div class="firm-filters" role="tablist" aria-label="Filter firms"><button data-ff="all" class="${firmFilter==='all'?'active':''}">All</button><button data-ff="live" class="${firmFilter==='live'?'active':''}">Live</button><button data-ff="checkyourself" class="${firmFilter==='checkyourself'?'active':''}">Check yourself</button><button data-ff="nopublic" class="${firmFilter==='nopublic'?'active':''}">No public board</button></div>';
-$('#firmList').insertAdjacentHTML('beforebegin',filterBar);
-$$('.firm-filters button').forEach(b=>b.onclick=()=>{firmFilter=b.dataset.ff;renderFirms();});
+return `${blockedBanner(s,sj)}<div class="source-card firm-card${isTop?' expandable':''}${blockedBanner(s,sj)?' firm-blocked':''}"${isTop?` tabindex="0" role="button" data-firm="${esc(s.source)}"`:''}><div><div class="source-name">${isTop?esc(s.source):`<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.source)} ↗</a>`}</div><div class="source-group">${esc(desc.split(".")[0]+".")}</div></div><div class="source-status ${cls}">${esc(label)}</div><div class="source-count">${sj.length||'—'}</div><div class="source-notes">${profile}</div>${isTop?'<div class="firm-expand-hint">Click to expand profile</div>':''}</div>`;}).join('')||'<div class="empty" style="padding:22px">No firm data yet.</div>';
 // Expandable firm profiles
 document.querySelectorAll('.firm-card.expandable').forEach(c=>{c.onclick=e=>{if(e.target.tagName==='A')return;c.classList.toggle('expanded');const hint=c.querySelector('.firm-expand-hint');if(hint)hint.textContent=c.classList.contains('expanded')?'Click to collapse':'Click to expand profile';};c.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();c.click();}};});}
 function deriveConsultants(){const jobs=payload.jobs||[],hist=(typeof history!=='undefined'&&history.jobs)||[],seen={},map={},openIds={};jobs.forEach(j=>{openIds[j.id]=1;});jobs.concat(hist).forEach(j=>{if(!j||seen[j.id])return;seen[j.id]=1;const name=(j.consultant||'').trim();if(!name)return;const firm=j.source||'Unknown',key=name.toLowerCase()+'|'+firm;let c=map[key];if(!c)c=map[key]={name:name,firm:firm,title:'',titles:{},url:j.consultant_url||'',searches:[],open:0};if(j.consultant_title)c.titles[j.consultant_title]=(c.titles[j.consultant_title]||0)+1;if(!c.url&&j.consultant_url)c.url=j.consultant_url;c.searches.push(j);if(openIds[j.id])c.open++;});return Object.keys(map).map(k=>{const c=map[k],areas={};c.searches.forEach(j=>sectorTags(j).forEach(t=>{areas[t]=(areas[t]||0)+1;}));c.areas=Object.keys(areas).sort((a,b)=>areas[b]-areas[a]).slice(0,4);const tt=Object.keys(c.titles).sort((a,b)=>c.titles[b]-c.titles[a]);c.title=tt.length?tt[0]:'';c.searches.sort((a,b)=>(b.first_seen||'').localeCompare(a.first_seen||''));return c;}).sort((a,b)=>(b.open-a.open)||(b.searches.length-a.searches.length)||(a.name.toLowerCase()<b.name.toLowerCase()?-1:1));}
