@@ -1,0 +1,34 @@
+diff --git a/index.html b/index.html
+--- a/index.html
++++ b/index.html
+@@ -974,6 +974,30 @@
+ return '<div class="blocked-banner"><div class="blocked-banner-head">\u26a0 Cannot auto-check this firm</div><p>'+copy+'</p>'+btn+stale+'</div>';
+ }
++function isCheckYourself(s){return ['blocked','failed','partial-suspected','manual'].indexOf(s.status)>=0;}
++function checkYourselfWhy(s){
++  var m={blocked:'Their site blocks automated checks (bot protection).',
++    failed:'Our last automated check failed.',
++    'partial-suspected':'Our last check looked incomplete.',
++    manual:'We don\u2019t automatically check their site.'};
++  return m[s.status]||'';
++}
++function renderCheckYourself(){
++  var el=$('#checkList');if(!el)return;
++  var firms=(meta.sources||[]).filter(function(s){return s.mode!=='legacy'&&s.status!=='retired'&&isCheckYourself(s);});
++  firms.sort(function(a,b){return a.source.toLowerCase().localeCompare(b.source.toLowerCase());});
++  el.innerHTML=firms.map(function(s){
++    var desc=FIRM_DESCRIPTIONS[s.source]||FIRM_BLURBS[s.source]||'';
++    var firstLine=desc?esc(desc.split('.')[0]+'.'):'';
++    return '<div class="check-card"><h3><a href="'+esc(s.url)+'" target="_blank" rel="noopener">'+esc(s.source)+' \u2197</a></h3>'+
++      (firstLine?'<p class="check-desc">'+firstLine+'</p>':'')+
++      '<a class="btn-blocked" href="'+esc(s.url)+'" target="_blank" rel="noopener">Browse '+esc(s.source)+'\u2019s current searches \u2192</a>'+
++      '<div class="check-why">'+esc(checkYourselfWhy(s))+'</div></div>';
++  }).join('')||'<div class="empty" style="padding:22px">All firms are currently covered automatically. Nothing to check manually right now.</div>';
++}
++var firmFilter='all';
++function firmFilterLabel(s){
++  if(isCheckYourself(s))return 'checkyourself';
++  if(s.status==='no-public-list')return 'nopublic';
++  return 'live';
++}
+ function renderFirms(){const jobs=payload.jobs||[],
