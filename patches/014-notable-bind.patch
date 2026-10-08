@@ -1,0 +1,12 @@
+diff --git a/index.html b/index.html
+index 10e254d..809b05c 100644
+--- a/index.html
++++ b/index.html
+@@ -333,6 +333,7 @@ function renderNotableWeek(){
+       <div class="op-foot" style="color:var(--teal);font-weight:700">Why it matters: ${esc(why.join(' · ')||'large or high-paying search')}</div>
+     </article>`;
+   }).join('')||'<div class="empty">No notable searches this week.</div>';
++  bindCards(el);
+ }
+ 
+ function renderFirmMatrix(){
