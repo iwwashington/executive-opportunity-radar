@@ -1,0 +1,892 @@
+[
+  {
+    "name": "Diversified Search Group (legacy)",
+    "url": "https://www.dsgco.com/active-searches/",
+    "mode": "legacy",
+    "group": "Could not aggregate in prior version",
+    "notes": "Legacy Diversified Search Group entry. Current public searches are tracked under DSG Global to avoid duplicates.",
+    "date_policy": "source",
+    "render_fallback": false,
+    "allow_zero": false,
+    "urls": [
+      "https://www.dsgco.com/active-searches/"
+    ]
+  },
+  {
+    "name": "Odgers",
+    "url": "https://www.odgers.com/en-us/opportunities/",
+    "mode": "automated",
+    "group": "Could not aggregate in prior version",
+    "notes": "Current opportunities only. Parser is scoped to CURRENT OPPORTUNITIES so function/service pages cannot enter the feed.",
+    "date_policy": "source",
+    "render_fallback": false,
+    "allow_zero": false,
+    "urls": [
+      "https://www.odgers.com/en-us/opportunities/"
+    ],
+    "parser": "odgers",
+    "authoritative_parser": true,
+    "close_after_misses": 1
+  },
+  {
+    "name": "Campbell & Company",
+    "url": "https://www.campbellcompany.com/executive-search/",
+    "mode": "retired",
+    "group": "Could not aggregate in prior version",
+    "notes": "Executive search service line/page is no longer an active current-search source.",
+    "date_policy": "source",
+    "render_fallback": false,
+    "allow_zero": false,
+    "urls": [
+      "https://www.campbellcompany.com/executive-search/"
+    ]
+  },
+  {
+    "name": "Aspen Leadership Group",
+    "url": "https://opportunities.aspenleadershipgroup.com/",
+    "mode": "automated",
+    "group": "Added after original aggregator",
+    "notes": "Current Opportunities. Tracked as an additional public-source monitor.",
+    "date_policy": "source",
+    "render_fallback": false,
+    "allow_zero": false,
+    "urls": [
+      "https://opportunities.aspenleadershipgroup.com/"
+    ]
+  },
+  {
+    "name": "PBR Executive Search",
+    "url": "https://www.pbrsearch.com/active-searches/",
+    "mode": "automated",
+    "group": "Previously not working",
+    "notes": "Active Searches. Re-enabled in the rebuild.",
+    "date_policy": "source",
+    "render_fallback": false,
+    "allow_zero": false,
+    "urls": [
+      "https://www.pbrsearch.com/active-searches/"
+    ]
+  },
+  {
+    "name": "BoardWalk Consulting",
+    "url": "https://boardwalkconsulting.com/opportunities/",
+    "mode": "automated",
+    "group": "Previously stopped working",
+    "notes": "Opportunities. Re-enabled in the rebuild.",
+    "date_policy": "source",
+    "render_fallback": false,
+    "allow_zero": false,
+    "urls": [
+      "https://boardwalkconsulting.com/opportunities/"
+    ]
+  },
+  {
+    "name": "Bridge Partners",
+    "url": "https://bridgepartnersllc.com/searches/",
+    "mode": "automated",
+    "group": "Previously stopped working",
+    "notes": "Searches page only. Dedicated parser captures role + client organization + direct position-profile link; function/practice pages are excluded.",
+    "date_policy": "source",
+    "render_fallback": false,
+    "allow_zero": false,
+    "urls": [
+      "https://bridgepartnersllc.com/searches/"
+    ],
+    "parser": "bridge",
+    "authoritative_parser": true,
+    "close_after_misses": 1
+  },
+  {
+    "name": "Scion Executive Search",
+    "url": "https://scionexecutivesearch.com/search-jobs/?_page=1",
+    "mode": "automated",
+    "group": "Previously stopped working",
+    "notes": "Current job board only. Detail-page parser extracts the client organization from retained-search prose such as \u201con behalf of\u201d or \u201cretained by.\u201d",
+    "date_policy": "source",
+    "render_fallback": true,
+    "allow_zero": false,
+    "urls": [
+      "https://scionexecutivesearch.com/search-jobs/?_page=1",
+      "https://scionexecutivesearch.com/search-jobs/?_page=2"
+    ],
+    "parser": "scion",
+    "authoritative_parser": true,
+    "close_after_misses": 1,
+    "allowed_detail_path_regex": "^/job/\\d+/?$"
+  },
+  {
+    "name": "Isaacson, Miller",
+    "url": "https://www.imsearch.com/current-searches/open-searches",
+    "mode": "automated",
+    "group": "Previously kind-of working",
+    "notes": "Dedicated Open Searches pages only; Insights/Results pages are excluded. Client organization comes from the detail-page organization heading; dates use first-seen when no reliable source date is exposed.",
+    "date_policy": "first_seen",
+    "render_fallback": false,
+    "allow_zero": false,
+    "urls": [
+      "https://www.imsearch.com/current-searches/open-searches?page=0",
+      "https://www.imsearch.com/current-searches/open-searches?page=1",
+      "https://www.imsearch.com/current-searches/open-searches?page=2",
+      "https://www.imsearch.com/current-searches/open-searches?page=3",
+      "https://www.imsearch.com/current-searches/open-searches?page=4",
+      "https://www.imsearch.com/current-searches/open-searches?page=5",
+      "https://www.imsearch.com/current-searches/open-searches?page=6",
+      "https://www.imsearch.com/current-searches/open-searches?page=7",
+      "https://www.imsearch.com/current-searches/open-searches?page=8",
+      "https://www.imsearch.com/current-searches/open-searches?page=9",
+      "https://www.imsearch.com/current-searches/open-searches?page=10",
+      "https://www.imsearch.com/current-searches/open-searches?page=11",
+      "https://www.imsearch.com/current-searches/open-searches?page=12",
+      "https://www.imsearch.com/current-searches/open-searches?page=13",
+      "https://www.imsearch.com/current-searches/open-searches?page=14",
+      "https://www.imsearch.com/current-searches/open-searches?page=15",
+      "https://www.imsearch.com/current-searches/open-searches?page=16",
+      "https://www.imsearch.com/current-searches/open-searches?page=17",
+      "https://www.imsearch.com/current-searches/open-searches?page=18",
+      "https://www.imsearch.com/current-searches/open-searches?page=19",
+      "https://www.imsearch.com/current-searches/open-searches?page=20",
+      "https://www.imsearch.com/current-searches/open-searches?page=21",
+      "https://www.imsearch.com/current-searches/open-searches?page=22",
+      "https://www.imsearch.com/current-searches/open-searches?page=23",
+      "https://www.imsearch.com/current-searches/open-searches?page=24",
+      "https://www.imsearch.com/current-searches/open-searches?page=25",
+      "https://www.imsearch.com/current-searches/open-searches?page=26",
+      "https://www.imsearch.com/current-searches/open-searches?page=27",
+      "https://www.imsearch.com/current-searches/open-searches?page=28",
+      "https://www.imsearch.com/current-searches/open-searches?page=29",
+      "https://www.imsearch.com/current-searches/open-searches?page=30",
+      "https://www.imsearch.com/current-searches/open-searches?page=31",
+      "https://www.imsearch.com/current-searches/open-searches?page=32",
+      "https://www.imsearch.com/current-searches/open-searches?page=33",
+      "https://www.imsearch.com/current-searches/open-searches?page=34"
+    ],
+    "parser": "isaacson",
+    "authoritative_parser": true,
+    "close_after_misses": 1,
+    "allowed_detail_path_regex": "^/open-searches/[^/]+/[^/]+/?$"
+  },
+  {
+    "name": "Lindauer",
+    "url": "https://www.lindauerglobal.com/searches/open-searches/",
+    "mode": "automated",
+    "group": "Previously kind-of working",
+    "notes": "Open Searches only. Service pages and recent placements are excluded; use first-seen when no trustworthy posted date is published.",
+    "date_policy": "first_seen",
+    "render_fallback": false,
+    "allow_zero": false,
+    "urls": [
+      "https://www.lindauerglobal.com/searches/open-searches/"
+    ],
+    "parser": "lindauer",
+    "authoritative_parser": true,
+    "close_after_misses": 1,
+    "max_detail_requests": 80,
+    "allowed_detail_path_regex": "^/searches/open-searches/[^/]+/?$"
+  },
+  {
+    "name": "Korn Ferry Search Jobs",
+    "url": "https://jobs.candidate.kornferry.com/jobs/",
+    "mode": "automated",
+    "group": "Working in prior aggregator",
+    "notes": "Korn Ferry client opportunity board. Browser-first deep crawl collects direct executive-search job URLs; detail pages supply client organization, exact posted date, compensation, category and closure status. A low-result run is flagged partial instead of trusted.",
+    "date_policy": "source",
+    "render_fallback": true,
+    "allow_zero": false,
+    "urls": [
+      "https://jobs.candidate.kornferry.com/jobs/"
+    ],
+    "parser": "korn",
+    "browser_first": true,
+    "authoritative_parser": false,
+    "max_detail_requests": 240,
+    "browser_max_scrolls": 40,
+    "min_expected_matches": 6,
+    "allowed_detail_path_regex": "^/job/Korn-Ferry-Executive-Search-[^/]+/\\d+/?$"
+  },
+  {
+    "name": "DSG Global",
+    "url": "https://www.dsgco.com/active-searches/",
+    "mode": "automated",
+    "group": "Working in prior aggregator",
+    "notes": "Active Searches. Only numbered /search/ assignment pages are eligible; detail pages are checked for closure and labeled Date Posted.",
+    "date_policy": "source",
+    "render_fallback": false,
+    "allow_zero": false,
+    "urls": [
+      "https://www.dsgco.com/active-searches/"
+    ],
+    "parser": "dsg",
+    "verify_detail_status": true,
+    "max_detail_requests": 120,
+    "close_after_misses": 1,
+    "authoritative_parser": true,
+    "allowed_detail_path_regex": "^/search/\\d+(?:-|/)"
+  },
+  {
+    "name": "Kittleman Associates",
+    "url": "https://www.kittlemansearch.com/opportunities/kittleman-for-candidates",
+    "mode": "automated",
+    "group": "Working in prior aggregator",
+    "notes": "Current opportunities; exact Posted dates are retained even for long-running searches, and role-specific links are preferred.",
+    "date_policy": "source",
+    "render_fallback": false,
+    "allow_zero": false,
+    "urls": [
+      "https://www.kittlemansearch.com/opportunities/kittleman-for-candidates"
+    ],
+    "parser": "kittleman",
+    "max_detail_requests": 50
+  },
+  {
+    "name": "WittKieffer",
+    "url": "https://www.wittkieffer.com/search-open-positions/",
+    "mode": "automated",
+    "group": "Working in prior aggregator",
+    "notes": "Open positions. Browser rendering is used first because the static endpoint may return 403; prior roles are preserved if the site still blocks access.",
+    "date_policy": "source",
+    "render_fallback": true,
+    "allow_zero": false,
+    "urls": [
+      "https://www.wittkieffer.com/search-open-positions/"
+    ],
+    "browser_first": true,
+    "max_detail_requests": 60
+  },
+  {
+    "name": "The Batten Group",
+    "url": "https://thebattengroup.com/jobs/",
+    "mode": "automated",
+    "group": "Working in prior aggregator",
+    "notes": "Jobs page only. Only /open-searches/ assignment links are eligible; service-type pages are excluded.",
+    "date_policy": "source",
+    "render_fallback": false,
+    "allow_zero": false,
+    "urls": [
+      "https://thebattengroup.com/jobs/"
+    ],
+    "parser": "batten",
+    "authoritative_parser": true,
+    "close_after_misses": 1,
+    "allowed_detail_path_regex": "^/open-searches/[^/]+/?$"
+  },
+  {
+    "name": "DRiWaterstone",
+    "url": "https://driwaterstonehc.com/available-positions/",
+    "mode": "automated",
+    "group": "Working in prior aggregator",
+    "notes": "Available Positions.",
+    "date_policy": "source",
+    "render_fallback": false,
+    "allow_zero": false,
+    "urls": [
+      "https://driwaterstonehc.com/available-positions/"
+    ]
+  },
+  {
+    "name": "LeaderFit",
+    "url": "https://leaderfit.org/home/active-searches/",
+    "mode": "automated",
+    "group": "Working in prior aggregator",
+    "notes": "Active Searches only. Dedicated CATS detail parser captures client organization from the job title/body and published compensation.",
+    "date_policy": "source",
+    "render_fallback": true,
+    "allow_zero": false,
+    "urls": [
+      "https://leaderfit.org/home/active-searches/"
+    ],
+    "parser": "leaderfit",
+    "authoritative_parser": true,
+    "close_after_misses": 1,
+    "browser_first": true,
+    "browser_max_scrolls": 12,
+    "allowed_detail_path_regex": "^/careers/\\d+/jobs/\\d+",
+    "max_detail_requests": 80
+  },
+  {
+    "name": "NPAG",
+    "url": "https://www.npag.com/current-searches",
+    "mode": "automated",
+    "group": "Working in prior aggregator",
+    "notes": "Current Searches. Roles marked No Longer Accepting Applications are excluded from the active feed and retained in history.",
+    "date_policy": "source",
+    "render_fallback": false,
+    "allow_zero": false,
+    "urls": [
+      "https://www.npag.com/current-searches"
+    ],
+    "parser": "npag",
+    "close_after_misses": 1,
+    "max_detail_requests": 40
+  },
+  {
+    "name": "DRG Talent",
+    "url": "https://app.loxo.co/drg-talent-advisory-group",
+    "mode": "automated",
+    "group": "Working in prior aggregator",
+    "notes": "DRG current opportunities/job board. Dynamic provider may require parser maintenance.",
+    "date_policy": "source",
+    "render_fallback": true,
+    "allow_zero": false,
+    "urls": [
+      "https://app.loxo.co/drg-talent-advisory-group"
+    ]
+  },
+  {
+    "name": "Development Guild",
+    "url": "https://www.developmentguild.com/current-searches/",
+    "mode": "automated",
+    "group": "Working in prior aggregator",
+    "notes": "Current Executive Searches only. About/news pages cannot enter the feed.",
+    "date_policy": "source",
+    "render_fallback": false,
+    "allow_zero": false,
+    "urls": [
+      "https://www.developmentguild.com/current-searches/"
+    ],
+    "parser": "developmentguild",
+    "authoritative_parser": true,
+    "close_after_misses": 1,
+    "allowed_detail_path_regex": "^/current-searches/[^/]+/?$"
+  },
+  {
+    "name": "The Moran Company",
+    "url": "https://morancompany.com/current-searches/",
+    "mode": "automated",
+    "group": "Working in prior aggregator",
+    "notes": "Current Searches. Open Positions are parsed separately from Positions Coming Soon and Positions Filled so filled roles do not enter the active feed.",
+    "date_policy": "first_seen",
+    "render_fallback": false,
+    "allow_zero": false,
+    "urls": [
+      "https://morancompany.com/current-searches/"
+    ],
+    "parser": "moran",
+    "close_after_misses": 1,
+    "max_detail_requests": 50
+  },
+  {
+    "name": "Bryant Group",
+    "url": "https://www.bryantgrp.com/current-listings",
+    "mode": "automated",
+    "group": "Working in prior aggregator",
+    "notes": "Current Listings. Older roles remain visible while the source still presents them as current; posting date is preserved when available.",
+    "date_policy": "source",
+    "render_fallback": false,
+    "allow_zero": false,
+    "urls": [
+      "https://www.bryantgrp.com/current-listings"
+    ],
+    "parser": "bryant"
+  },
+  {
+    "name": "Heidrick & Struggles",
+    "url": "https://www.heidrick.com/",
+    "mode": "no-public-list",
+    "group": "No public current-search list",
+    "notes": "No stable public current-search list is available on the firm website.",
+    "date_policy": "source",
+    "render_fallback": false,
+    "allow_zero": false,
+    "urls": [
+      "https://www.heidrick.com/"
+    ]
+  },
+  {
+    "name": "Spencer Stuart",
+    "url": "https://www.spencerstuart.com/",
+    "mode": "no-public-list",
+    "group": "No public current-search list",
+    "notes": "No stable public current-search list is available on the firm website.",
+    "date_policy": "source",
+    "render_fallback": false,
+    "allow_zero": false,
+    "urls": [
+      "https://www.spencerstuart.com/"
+    ]
+  },
+  {
+    "name": "Russell Reynolds",
+    "url": "https://www.russellreynolds.com/",
+    "mode": "no-public-list",
+    "group": "No public current-search list",
+    "notes": "No stable public current-search list is available on the firm website.",
+    "date_policy": "source",
+    "render_fallback": false,
+    "allow_zero": false,
+    "urls": [
+      "https://www.russellreynolds.com/"
+    ]
+  },
+  {
+    "name": "Egon Zehnder",
+    "url": "https://www.egonzehnder.com/",
+    "mode": "no-public-list",
+    "group": "No public current-search list",
+    "notes": "No stable public current-search list is available on the firm website.",
+    "date_policy": "source",
+    "render_fallback": false,
+    "allow_zero": false,
+    "urls": [
+      "https://www.egonzehnder.com/"
+    ]
+  },
+  {
+    "name": "CarterBaldwin Executive Search",
+    "url": "https://carterbaldwin.com/",
+    "mode": "no-public-list",
+    "group": "No public current-search list",
+    "notes": "No stable public current-search list is available on the firm website.",
+    "date_policy": "source",
+    "render_fallback": false,
+    "allow_zero": false,
+    "urls": [
+      "https://carterbaldwin.com/"
+    ]
+  },
+  {
+    "name": "Sandler Search",
+    "url": "https://sandlersearch.org/current-opportunities/",
+    "mode": "automated",
+    "group": "Additional sites to check",
+    "notes": "Current Opportunities only. Detail labels POSITION / ORGANIZATION / LOCATION are parsed directly; program brands such as RootOne retain parent-organization provenance.",
+    "date_policy": "source",
+    "render_fallback": false,
+    "allow_zero": false,
+    "urls": [
+      "https://sandlersearch.org/current-opportunities/"
+    ],
+    "parser": "sandler",
+    "authoritative_parser": true,
+    "close_after_misses": 1,
+    "allowed_detail_path_regex": "^/job/[^/]+/?$"
+  },
+  {
+    "name": "Spano Pratt",
+    "url": "https://spanopratt.com/careers/",
+    "mode": "automated",
+    "group": "Additional sites to check",
+    "notes": "Executive Opportunities/Careers.",
+    "date_policy": "source",
+    "render_fallback": false,
+    "allow_zero": false,
+    "urls": [
+      "https://spanopratt.com/careers/"
+    ]
+  },
+  {
+    "name": "GoodCitizen",
+    "url": "https://www.goodcitizen.com/",
+    "mode": "manual",
+    "group": "Additional sites to check",
+    "notes": "Current public site does not expose a stable dedicated openings page to this scraper, so it remains on the manual-watch list.",
+    "date_policy": "source",
+    "render_fallback": false,
+    "allow_zero": false,
+    "urls": [
+      "https://www.goodcitizen.com/"
+    ]
+  },
+  {
+    "name": "Association Strategies",
+    "url": "https://assnstrategies.com/active-searches/",
+    "mode": "automated",
+    "group": "Additional sites to check",
+    "notes": "Active/Open Searches. Page may be dynamically rendered.",
+    "date_policy": "source",
+    "render_fallback": true,
+    "allow_zero": false,
+    "urls": [
+      "https://assnstrategies.com/active-searches/"
+    ]
+  },
+  {
+    "name": "Nonprofit HR",
+    "url": "https://www.nonprofithr.com/openexecutivesearches/",
+    "mode": "automated",
+    "group": "Additional sites to check",
+    "notes": "Open Executive Searches.",
+    "date_policy": "source",
+    "render_fallback": false,
+    "allow_zero": false,
+    "urls": [
+      "https://www.nonprofithr.com/openexecutivesearches/"
+    ]
+  },
+  {
+    "name": "POLIHIRE",
+    "url": "https://polihire.com/current-searches/",
+    "mode": "automated",
+    "group": "Additional sites to check",
+    "notes": "Current Searches. The strict role filter may legitimately yield zero CEO/President/Executive Director roles on a given day.",
+    "date_policy": "source",
+    "render_fallback": false,
+    "allow_zero": true,
+    "urls": [
+      "https://polihire.com/current-searches/"
+    ]
+  },
+  {
+    "name": "On-Ramps",
+    "url": "https://www.on-ramps.com/open-positions",
+    "mode": "manual",
+    "group": "Executive search firms",
+    "notes": "Executive search firm serving mission-driven organizations and the social-impact sector.",
+    "date_policy": "source",
+    "render_fallback": false,
+    "allow_zero": true,
+    "urls": [
+      "https://www.on-ramps.com/open-positions"
+    ]
+  },
+  {
+    "name": "Armstrong McGuire",
+    "url": "https://jobs.armstrongmcguire.com/",
+    "mode": "auto",
+    "group": "Executive search firms",
+    "notes": "Nonprofit consulting and leadership development; serves nonprofits, associations, human services and community organizations.",
+    "date_policy": "source",
+    "render_fallback": false,
+    "allow_zero": true,
+    "urls": [
+      "https://jobs.armstrongmcguire.com/"
+    ]
+  },
+  {
+    "name": "KEES / Alford Executive Search",
+    "url": "https://kees2success.com/current-searches/",
+    "mode": "auto",
+    "group": "Executive search firms",
+    "notes": "Nonprofit executive search firm (formerly Alford Executive Search).",
+    "date_policy": "source",
+    "render_fallback": false,
+    "allow_zero": true,
+    "urls": [
+      "https://kees2success.com/current-searches/"
+    ]
+  },
+  {
+    "name": "m/Oppenheim Executive Search",
+    "url": "https://moppenheim.com/active-searches/",
+    "mode": "manual",
+    "group": "Executive search firms",
+    "notes": "Recruits visionary, practical, effective leaders to nonprofits; known for challenging searches.",
+    "date_policy": "source",
+    "render_fallback": false,
+    "allow_zero": true,
+    "urls": [
+      "https://moppenheim.com/active-searches/"
+    ]
+  },
+  {
+    "name": "McCormack + Kristel",
+    "url": "https://www.mccormackkristel.com/current-searches",
+    "mode": "auto",
+    "group": "Executive search firms",
+    "notes": "Executive search firm dedicated to nonprofits with emphasis on diversity in leadership.",
+    "date_policy": "source",
+    "render_fallback": false,
+    "allow_zero": true,
+    "urls": [
+      "https://www.mccormackkristel.com/current-searches"
+    ]
+  },
+  {
+    "name": "Vetted Solutions",
+    "url": "https://www.vettedsolutions.com/current-searches/",
+    "mode": "auto",
+    "group": "Executive search firms",
+    "notes": "Partners with mission-driven organizations; serves associations, nonprofits and foundations.",
+    "date_policy": "source",
+    "render_fallback": false,
+    "allow_zero": true,
+    "urls": [
+      "https://www.vettedsolutions.com/current-searches/"
+    ]
+  },
+  {
+    "name": "Tuft & Associates",
+    "url": "https://tuftassoc.com/open-searches/",
+    "mode": "manual",
+    "group": "Executive search firms",
+    "notes": "Boutique executive search firm (founded 1988) specializing in nonprofits: healthcare, associations, foundations, higher education.",
+    "date_policy": "source",
+    "render_fallback": false,
+    "allow_zero": true,
+    "urls": [
+      "https://tuftassoc.com/open-searches/"
+    ]
+  },
+  {
+    "name": "JDG Associates",
+    "url": "https://jdgsearch.com/active-searches/",
+    "mode": "auto",
+    "group": "Executive search firms",
+    "notes": "Washington, D.C.-based executive search firm serving corporate, government and association clients.",
+    "date_policy": "source",
+    "render_fallback": false,
+    "allow_zero": true,
+    "urls": [
+      "https://jdgsearch.com/active-searches/"
+    ]
+  },
+  {
+    "name": "Arts Consulting Group",
+    "url": "https://artsconsulting.com/opensearches/",
+    "mode": "auto",
+    "group": "Executive search firms",
+    "notes": "Management consulting for arts and creative industries; executive search for theaters, museums, performing arts.",
+    "date_policy": "source",
+    "render_fallback": false,
+    "allow_zero": true,
+    "urls": [
+      "https://artsconsulting.com/opensearches/"
+    ]
+  },
+  {
+    "name": "Phillips Oppenheim",
+    "url": "https://www.phillipsoppenheim.com/searches/",
+    "mode": "manual",
+    "group": "Executive search firms",
+    "notes": "Founded 1991 to serve nonprofit organizations exclusively; executive search for mission-driven nonprofits.",
+    "date_policy": "source",
+    "render_fallback": false,
+    "allow_zero": true,
+    "urls": [
+      "https://www.phillipsoppenheim.com/searches/"
+    ]
+  },
+  {
+    "name": "Staffing Advisors",
+    "url": "https://www.staffingadvisors.com/jobs/",
+    "mode": "auto",
+    "group": "Executive search firms",
+    "notes": "Retained executive search firm (founded 2002); serves associations, foundations, nonprofits and social enterprises.",
+    "date_policy": "source",
+    "render_fallback": false,
+    "allow_zero": true,
+    "urls": [
+      "https://www.staffingadvisors.com/jobs/"
+    ]
+  },
+  {
+    "name": "Maneva Group",
+    "url": "https://www.manevagroup.com/currentsearches",
+    "mode": "manual",
+    "group": "Executive search firms",
+    "notes": "Boutique nonprofit executive search firm connecting mission-driven organizations with executive talent.",
+    "date_policy": "source",
+    "render_fallback": false,
+    "allow_zero": true,
+    "urls": [
+      "https://www.manevagroup.com/currentsearches"
+    ]
+  },
+  {
+    "name": "Morris & Berger",
+    "url": "https://morrisberger.com/searches/",
+    "mode": "auto",
+    "group": "Executive search firms",
+    "notes": "Boutique executive search firm collaborating with nonprofit organizations on leadership talent.",
+    "date_policy": "source",
+    "render_fallback": false,
+    "allow_zero": true,
+    "urls": [
+      "https://morrisberger.com/searches/"
+    ]
+  },
+  {
+    "name": "FaithSearch Partners",
+    "url": "https://faithsearchpartners.com/news/category/content-active-search-announcement/",
+    "mode": "auto",
+    "group": "Executive search firms",
+    "notes": "Faith-based executive search firm for Christian organizations in education, healthcare and nonprofits.",
+    "date_policy": "source",
+    "render_fallback": false,
+    "allow_zero": true,
+    "urls": [
+      "https://faithsearchpartners.com/news/category/content-active-search-announcement/"
+    ]
+  },
+  {
+    "name": "Vanderbloemen",
+    "url": "https://www.vanderbloemen.com/job-openings/",
+    "mode": "auto",
+    "group": "Executive search firms",
+    "notes": "Christian staffing firm for churches and nonprofits; 3,000+ successful searches.",
+    "date_policy": "source",
+    "render_fallback": false,
+    "allow_zero": true,
+    "urls": [
+      "https://www.vanderbloemen.com/job-openings/"
+    ]
+  },
+  {
+    "name": "Clover Search Works",
+    "url": "https://www.cloversearchworks.com/current-searches",
+    "mode": "auto",
+    "group": "Executive search firms",
+    "notes": "Seattle-based nonprofit executive search firm serving the Pacific Northwest and nationally.",
+    "date_policy": "source",
+    "render_fallback": false,
+    "allow_zero": true,
+    "urls": [
+      "https://www.cloversearchworks.com/current-searches"
+    ]
+  },
+  {
+    "name": "Academic Search",
+    "url": "https://www.academicsearch.org/open-searches-public/",
+    "mode": "auto",
+    "group": "Executive search firms",
+    "notes": "Higher-education executive search; 50 years recruiting college and university presidents and senior leaders.",
+    "date_policy": "source",
+    "render_fallback": false,
+    "allow_zero": true,
+    "urls": [
+      "https://www.academicsearch.org/open-searches-public/"
+    ]
+  },
+  {
+    "name": "AGB Search",
+    "url": "https://www.agbsearch.com/active-searches",
+    "mode": "auto",
+    "group": "Executive search firms",
+    "notes": "Executive search exclusively for higher-education institutions; founded by the Association of Governing Boards.",
+    "date_policy": "source",
+    "render_fallback": false,
+    "allow_zero": true,
+    "urls": [
+      "https://www.agbsearch.com/active-searches"
+    ]
+  },
+  {
+    "name": "Carney Sandoe",
+    "url": "https://www.carneysandoe.com/for-job-seekers/leadership-roles/current-searches/",
+    "mode": "auto",
+    "group": "Executive search firms",
+    "notes": "Recruiting firm for private and independent schools; heads of school and administrators.",
+    "date_policy": "source",
+    "render_fallback": false,
+    "allow_zero": true,
+    "urls": [
+      "https://www.carneysandoe.com/for-job-seekers/leadership-roles/current-searches/"
+    ]
+  },
+  {
+    "name": "Good Insight",
+    "url": "https://good-insight.org/careers/",
+    "mode": "auto",
+    "group": "Executive search firms",
+    "notes": "Woman-owned executive search firm exclusively focused on nonprofits, associations, and grantmakers.",
+    "date_policy": "source",
+    "render_fallback": false,
+    "allow_zero": true,
+    "urls": [
+      "https://good-insight.org/careers/"
+    ]
+  },
+  {
+    "name": "Sterling Martin",
+    "url": "https://smartinsearch.com/searches/",
+    "mode": "auto",
+    "group": "Executive search firms",
+    "notes": "Executive search firm (A ZRG Company); association and nonprofit CEO/executive-director search.",
+    "date_policy": "source",
+    "render_fallback": false,
+    "allow_zero": true,
+    "urls": [
+      "https://smartinsearch.com/searches/"
+    ]
+  },
+  {
+    "name": "CBIZ Talent Solutions",
+    "url": "https://talentsolutions.cbiz.com/job-seekers/open-positions",
+    "mode": "auto",
+    "group": "Executive search firms",
+    "notes": "End-to-end recruiting and talent firm; nonprofit executive search within broader practice.",
+    "date_policy": "source",
+    "render_fallback": false,
+    "allow_zero": true,
+    "urls": [
+      "https://talentsolutions.cbiz.com/job-seekers/open-positions"
+    ]
+  },
+  {
+    "name": "Valtas Group",
+    "url": "https://valtasgroup.hire.trakstar.com/",
+    "mode": "auto",
+    "group": "Executive search firms",
+    "notes": "Nonprofit interim leadership and executive search plus board advisory services.",
+    "date_policy": "source",
+    "render_fallback": false,
+    "allow_zero": true,
+    "urls": [
+      "https://valtasgroup.hire.trakstar.com/"
+    ]
+  },
+  {
+    "name": "Association Options",
+    "url": "https://www.associationoptions.com/job-openings/",
+    "mode": "manual",
+    "group": "Executive search firms",
+    "notes": "CEO and executive-director recruitment for membership associations.",
+    "date_policy": "source",
+    "render_fallback": false,
+    "allow_zero": true,
+    "urls": [
+      "https://www.associationoptions.com/job-openings/"
+    ]
+  },
+  {
+    "name": "Peter Gray Executive Search",
+    "url": "https://www.petergraysearch.com/jobs",
+    "mode": "manual",
+    "group": "Executive search firms",
+    "notes": "Executive search for social-impact organizations.",
+    "date_policy": "source",
+    "render_fallback": false,
+    "allow_zero": true,
+    "urls": [
+      "https://www.petergraysearch.com/jobs"
+    ]
+  },
+  {
+    "name": "JMM Strategy Group",
+    "url": "https://www.jmmstrategygroup.com/careers",
+    "mode": "auto",
+    "group": "Executive search firms",
+    "notes": "Boutique consulting serving progressive nonprofits; fundraising, executive searches, staffing.",
+    "date_policy": "source",
+    "render_fallback": false,
+    "allow_zero": true,
+    "urls": [
+      "https://www.jmmstrategygroup.com/careers"
+    ]
+  },
+  {
+    "name": "CMP / Career Management Partners",
+    "url": "https://www.careermp.com/open-roles-executive-search",
+    "mode": "auto",
+    "group": "Executive search firms",
+    "notes": "Minority- and woman-owned talent-solutions firm; executive search within broader practice.",
+    "date_policy": "source",
+    "render_fallback": false,
+    "allow_zero": true,
+    "urls": [
+      "https://www.careermp.com/open-roles-executive-search"
+    ]
+  },
+  {
+    "name": "Audeliss Executive Search",
+    "url": "https://www.audeliss.com/en_us/candidates/",
+    "mode": "manual",
+    "group": "Executive search firms",
+    "notes": "Executive and board search focused on diverse leadership; UK charity interim CEO experience.",
+    "date_policy": "source",
+    "render_fallback": false,
+    "allow_zero": true,
+    "urls": [
+      "https://www.audeliss.com/en_us/candidates/"
+    ]
+  }
+]
