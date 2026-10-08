@@ -56,15 +56,30 @@ def run_browser_test():
                     "() => document.querySelectorAll('#firmList .source-card').length > 0",
                     timeout=20000,
                 )
-                for view in ["market", "digest", "opportunities", "saved", "firms", "checkyourself", "placements", "sources"]:
+                expected_nav = ["market", "digest", "opportunities", "checkyourself", "saved", "firms", "placements", "sources"]
+                actual_nav = desktop.locator(".nav button[data-view]").evaluate_all(
+                    "(buttons) => buttons.map(button => button.dataset.view)"
+                )
+                assert actual_nav == expected_nav, f"Unexpected navigation order: {actual_nav}"
+                for view in expected_nav:
                     desktop.locator(f'.nav button[data-view="{view}"]').click()
                     assert desktop.locator(f'#{view}View.active').count() == 1, f"View {view} did not open"
                 meta = json.loads((ROOT / "meta.json").read_text(encoding="utf-8"))
-                flagged = any(s.get("status") in ("blocked", "failed", "partial-suspected", "manual")
-                              for s in meta.get("sources", []))
-                if flagged:
-                    assert desktop.locator("#firmList .blocked-banner").count() > 0, (
-                        "Blocked-source warning missing from Firms"
+                # The Firms directory stays clean: no large cannot-auto-check boxes,
+                # while source-status labels still identify checks needing attention.
+                assert desktop.locator("#firmList .blocked-banner").count() == 0, (
+                    "Firms still contains large blocked-source warning boxes"
+                )
+                assert desktop.locator("#firmList .firm-blocked").count() == 0, (
+                    "Firms still applies oversized warning card styling"
+                )
+                needs_attention = any(
+                    src.get("status") in ("blocked", "failed", "partial-suspected")
+                    for src in meta.get("sources", [])
+                )
+                if needs_attention:
+                    assert desktop.locator("#firmList .source-status.s-blocked").count() > 0, (
+                        "Firms lost compact source-status labels"
                     )
 
                 check_types = {
