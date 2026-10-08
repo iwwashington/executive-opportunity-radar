@@ -337,6 +337,7 @@ function renderNotableWeek(){
       <div class="op-foot" style="color:var(--teal);font-weight:700">Why it matters: ${esc(why.join(' · ')||'large or high-paying search')}</div>
     </article>`;
   }).join('')||'<div class="empty">No notable searches this week.</div>';
+  bindCards(el);
 }
 
 function renderFirmMatrix(){
