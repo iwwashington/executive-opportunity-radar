@@ -51,10 +51,6 @@ table.opp-table{width:100%;border-collapse:collapse;font-size:12.5px;min-width:8
 .empty{border:1px dashed #c9c5bc;background:rgba(255,254,250,.65);border-radius:16px;padding:38px 20px;text-align:center;color:var(--muted)}
 .source-summary{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:22px 0 14px}.mini-stat{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:13px}.mini-stat b{font-family:Georgia,"Times New Roman",serif;font-size:25px;font-weight:500;display:block}.mini-stat span{font-size:11px;color:var(--muted)}.source-list{display:grid;gap:8px}.firm-card.expandable{cursor:pointer}.firm-card.expandable:hover{border-color:#b7c6c1}.firm-profile{display:none;margin-top:12px;padding-top:12px;border-top:1px solid var(--line)}.firm-card.expanded .firm-profile{display:block}.firm-block{margin-bottom:12px}.firm-block h4{font-family:Georgia,serif;font-size:14px;font-weight:600;margin:0 0 6px;color:var(--ink)}.firm-block p{font-size:13px;line-height:1.5;margin:0 0 6px;color:var(--ink)}.firm-examples{font-size:12px;color:var(--muted);font-style:italic}.firm-expand-hint{font-size:11px;color:var(--teal);margin-top:8px;font-weight:600}.trust{font-size:10px;background:#f0efeb;border:1px solid #dedbd3;border-radius:999px;padding:2px 6px;color:#676d69;font-weight:700}.inferred{border-left:3px solid var(--gold);padding-left:10px}.source-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;display:grid;grid-template-columns:minmax(190px,1.2fr) 170px 70px 1.7fr;gap:15px;align-items:start}.source-name{font-weight:780}.source-name a{color:inherit;text-decoration:none}.source-group{font-size:10px;color:var(--muted);margin-top:2px}.source-status{font-size:11px;font-weight:850}.s-ok{color:var(--green)}.s-warn{color:var(--gold)}.s-bad{color:var(--red)}.s-muted{color:var(--muted)}.source-count{font-variant-numeric:tabular-nums;text-align:center}.source-notes{font-size:11px;color:var(--muted)}.source-error{color:var(--red);font-weight:700;margin-bottom:3px}
 .s-blocked{color:#b45309;font-weight:850}
-.firm-card.firm-blocked{border:2px solid #d97706;background:#fffbeb}
-.blocked-banner{border:2px solid #d97706;border-radius:10px;background:#fffbeb;padding:14px 16px;margin:0 0 12px}
-.blocked-banner-head{font-size:14px;font-weight:850;color:#92400e;margin-bottom:6px}
-.blocked-banner p{font-size:13px;line-height:1.55;color:#78350f;margin:0 0 10px}
 .btn-blocked{display:inline-block;background:#d97706;color:#fff;font-weight:700;font-size:14px;padding:10px 18px;border-radius:9px;text-decoration:none}
 .btn-blocked:hover{background:#b45309;color:#fff}
 /* Check Yourself tab */
@@ -101,7 +97,6 @@ table.opp-table{width:100%;border-collapse:collapse;font-size:12.5px;min-width:8
 /* Compact inline check-directly link in firm cards */
 .check-direct-link{display:inline-block;margin-top:8px;font-size:13px;font-weight:700;color:var(--teal);text-decoration:none}
 .check-direct-link:hover{text-decoration:underline}
-.blocked-stale{font-size:12px;color:#92400e;font-style:italic;margin-top:8px}
 .firm-mix{display:flex;gap:10px;font-size:11px;color:var(--muted);margin-top:5px}.firm-mix span:first-child{flex:0 0 62px;font-weight:750;color:var(--ink)}.firm-mix b{color:var(--ink)}
 .take-line{font-size:14px;padding:7px 0;border-bottom:1px solid var(--line)}.take-line:last-child{border-bottom:0}.take-line:first-child{font-weight:750}
 .method{font-size:11px;color:var(--muted);margin:18px 2px 0;max-width:900px}.method strong{color:var(--ink)}
@@ -263,9 +258,9 @@ h1{font-size:30px;max-width:none}
     <button class="active" data-view="market">Market</button>
     <button data-view="digest">Digest</button>
     <button data-view="opportunities">Opportunities</button>
+    <button data-view="checkyourself">Check yourself</button>
     <button data-view="saved">Saved</button>
     <button data-view="firms">Firms</button>
-    <button data-view="checkyourself">Check yourself</button>
     <button data-view="placements">Placements</button>
     <button data-view="sources">Source health</button>
   </nav>
@@ -1011,15 +1006,6 @@ const FIRM_BLURBS={"Odgers":"Global executive search firm with a U.S. nonprofit 
 "CMP / Career Management Partners":"Minority- and woman-owned talent-solutions firm; executive search within broader practice.",
 "Audeliss Executive Search":"Executive and board search focused on diverse leadership; UK charity interim CEO experience.",};
 function topTags(jobs,fn,n){const c=countTags(jobs,fn);return Object.entries(c).sort((a,b)=>b[1]-a[1]||a[0].localeCompare(b[0])).slice(0,n).map(([k,v])=>`${k} (${v})`);}
-function blockedBanner(s,sj){
-var st=s.status,isBlocked=['blocked','failed','partial-suspected','manual'].indexOf(st)>=0;
-if(!isBlocked)return '';
-var copy={blocked:'This firm\u2019s site blocks automated checks (bot protection). They may have open searches right now \u2014 the radar cannot see them.',failed:'The radar\u2019s last automated check of this firm failed. They may have open searches \u2014 the radar cannot confirm.','partial-suspected':'The radar\u2019s last check of this firm looked incomplete. They may have more open searches than shown here.',manual:'This firm is a directory listing \u2014 the radar does not automatically check their site. They may have open searches.'}[st]||'';
-var stale=sj.length?'<div class="blocked-stale">Showing '+sj.length+' previously captured '+(sj.length===1?'search':'searches')+' below \u2014 these may be stale.</div>':'';
-var btn=s.url?'<a class="btn-blocked" href="'+esc(s.url)+'" target="_blank" rel="noopener">View '+esc(s.source)+'\u2019s open searches \u2192</a>':'';
-return '<div class="blocked-banner"><div class="blocked-banner-head">\u26a0 Cannot auto-check this firm</div><p>'+copy+'</p>'+btn+stale+'</div>';
-}
-
 const CHECK_GROUP_MAP={blocked:'attention',failed:'attention','partial-suspected':'attention',manual:'manual',auto:'manual','awaiting-first-run':'manual','no-public-list':'noboard'};
 function checkGroup(s){return CHECK_GROUP_MAP[s.status]||'';}
 function checkReason(s){
@@ -1083,7 +1069,7 @@ const examples=sj.slice(0,3).map(j=>esc(j.title)+' at '+esc(j.organization)).joi
 const inferred=sj.length>=3?`Places ${esc(topTags(sj,sectorTags,1)[0]||'varied')} leaders, typically at ${esc(topTags(sj,j=>[sizeTier(j)],1)[0]||'varied')} organizations.`:'';
 const trackRec=hj.length?`${hj.length} searches observed all-time · ${sj.length} open now`:`${sj.length} open ${sj.length===1?'search':'searches'}`;
 const profile=isTop?`<div class="firm-profile"><div class="firm-block"><h4>What they are</h4><p>${esc(desc)}</p></div><div class="firm-block"><h4>Track record</h4><p>${esc(trackRec)}.</p>${payBand?`<p>Posted pay ${payBand} <span class="trust">Verified</span></p>`:''}</p></div><div class="firm-block"><h4>Example searches</h4><p class="firm-examples">${examples?examples.split('; ').map(e=>{const jj=sj.find(x=>(x.title+' at '+x.organization)===e);return jj&&jj.url?`<a href="${esc(jj.url)}" target="_blank" rel="noopener">${esc(e)} ↗</a>`:esc(e);}).join('<br>'):''}</p></div></div>`:`<div class="firm-mix"><span><b>${sj.length}</b> open</span><span>${esc(desc.split('.')[0]+'.')}</span></div>`;
-return `${blockedBanner(s,sj)}<div class="source-card firm-card${isTop?' expandable':''}${blockedBanner(s,sj)?' firm-blocked':''}"${isTop?` tabindex="0" role="button" data-firm="${esc(s.source)}"`:''}><div><div class="source-name">${isTop?esc(s.source):`<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.source)} ↗</a>`}</div><div class="source-group">${esc(desc.split(".")[0]+".")}</div></div><div class="source-status ${cls}">${esc(label)}</div><div class="source-count">${sj.length||'—'}</div><div class="source-notes">${profile}</div>${isTop?'<div class="firm-expand-hint">Click to expand profile</div>':''}</div>`;}).join('')||'<div class="empty" style="padding:22px">No firm data yet.</div>';
+return `<div class="source-card firm-card${isTop?' expandable':''}"${isTop?` tabindex="0" role="button" data-firm="${esc(s.source)}"`:''}><div><div class="source-name">${isTop?esc(s.source):`<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.source)} ↗</a>`}</div><div class="source-group">${esc(desc.split(".")[0]+".")}</div></div><div class="source-status ${cls}">${esc(label)}</div><div class="source-count">${sj.length||'—'}</div><div class="source-notes">${profile}</div>${isTop?'<div class="firm-expand-hint">Click to expand profile</div>':''}</div>`;}).join('')||'<div class="empty" style="padding:22px">No firm data yet.</div>';
 // Expandable firm profiles
 document.querySelectorAll('.firm-card.expandable').forEach(c=>{c.onclick=e=>{if(e.target.tagName==='A')return;c.classList.toggle('expanded');const hint=c.querySelector('.firm-expand-hint');if(hint)hint.textContent=c.classList.contains('expanded')?'Click to collapse':'Click to expand profile';};c.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();c.click();}};});}
 function deriveConsultants(){const jobs=payload.jobs||[],hist=(typeof history!=='undefined'&&history.jobs)||[],seen={},map={},openIds={};jobs.forEach(j=>{openIds[j.id]=1;});jobs.concat(hist).forEach(j=>{if(!j||seen[j.id])return;seen[j.id]=1;const name=(j.consultant||'').trim();if(!name)return;const firm=j.source||'Unknown',key=name.toLowerCase()+'|'+firm;let c=map[key];if(!c)c=map[key]={name:name,firm:firm,title:'',titles:{},url:j.consultant_url||'',searches:[],open:0};if(j.consultant_title)c.titles[j.consultant_title]=(c.titles[j.consultant_title]||0)+1;if(!c.url&&j.consultant_url)c.url=j.consultant_url;c.searches.push(j);if(openIds[j.id])c.open++;});return Object.keys(map).map(k=>{const c=map[k],areas={};c.searches.forEach(j=>sectorTags(j).forEach(t=>{areas[t]=(areas[t]||0)+1;}));c.areas=Object.keys(areas).sort((a,b)=>areas[b]-areas[a]).slice(0,4);const tt=Object.keys(c.titles).sort((a,b)=>c.titles[b]-c.titles[a]);c.title=tt.length?tt[0]:'';c.searches.sort((a,b)=>(b.first_seen||'').localeCompare(a.first_seen||''));return c;}).sort((a,b)=>(b.open-a.open)||(b.searches.length-a.searches.length)||(a.name.toLowerCase()<b.name.toLowerCase()?-1:1));}
