@@ -1,0 +1,28 @@
+name: Radar frontend smoke test
+
+on:
+  pull_request:
+    paths:
+      - 'index.html'
+      - 'test_site.py'
+      - '.github/workflows/check-site.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  browser-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install browser testing dependencies
+        run: |
+          python -m pip install playwright
+          python -m playwright install --with-deps chromium
+      - name: Verify JavaScript syntax and browser startup
+        run: python test_site.py
