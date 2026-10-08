@@ -1,274 +1,6 @@
 {
-  "generated_at": "2026-10-08T03:02:54.546663+00:00",
+  "generated_at": "2026-10-08T10:36:29.199566+00:00",
   "events": [
-    {
-      "at": "2026-10-01T10:34:27.087555+00:00",
-      "type": "new",
-      "job_id": "573fd9c3d6207929",
-      "source": "NPAG",
-      "title": "Executive Director / President",
-      "organization": "Organization not parsed"
-    },
-    {
-      "at": "2026-10-01T10:34:27.087555+00:00",
-      "type": "updated",
-      "job_id": "dc33d30ecc1362e5",
-      "source": "NPAG",
-      "title": "Executive Director",
-      "organization": "Friends of the Alameda Free Library",
-      "changes": {
-        "organization": {
-          "from": "Sobrato Early Academic Language (SEAL)",
-          "to": "Friends of the Alameda Free Library"
-        },
-        "location": {
-          "from": "Remote (within U.S., California preferred)",
-          "to": "Alameda, CA"
-        },
-        "url": {
-          "from": "https://www.npag.com/seal-ed",
-          "to": "https://www.npag.com/fafl-ed"
-        },
-        "work_arrangement": {
-          "from": "Remote",
-          "to": "Hybrid"
-        }
-      }
-    },
-    {
-      "at": "2026-10-01T10:34:27.087555+00:00",
-      "type": "new",
-      "job_id": "49aefb3c8a84bef9",
-      "source": "DRG Talent",
-      "title": "President & CEO",
-      "organization": "Robert Sterling Clark Foundation"
-    },
-    {
-      "at": "2026-10-01T10:34:27.087555+00:00",
-      "type": "new",
-      "job_id": "ca73c38a032859df",
-      "source": "The Moran Company",
-      "title": "Executive Director",
-      "organization": "National Speleological Society,"
-    },
-    {
-      "at": "2026-10-02T10:32:51.149897+00:00",
-      "type": "removed_false_positive",
-      "job_id": "62e62841416b764c",
-      "source": "Bridge Partners",
-      "title": "CEO and Executive Director",
-      "organization": "Functional Expertise",
-      "url": "https://bridgepartnersllc.com/function/ceo/"
-    },
-    {
-      "at": "2026-10-02T10:32:51.149897+00:00",
-      "type": "updated",
-      "job_id": "4a559e8b34e0cffa",
-      "source": "BoardWalk Consulting",
-      "title": "President & CEO",
-      "organization": "One Hundred Miles",
-      "changes": {
-        "posted_date": {
-          "from": "2026-10-01",
-          "to": "2026-09-30"
-        }
-      }
-    },
-    {
-      "at": "2026-10-02T10:32:51.149897+00:00",
-      "type": "updated",
-      "job_id": "acf48ae0f359e233",
-      "source": "BoardWalk Consulting",
-      "title": "Executive Director",
-      "organization": "Florida Rights Restoration Coalition",
-      "changes": {
-        "posted_date": {
-          "from": "2026-09-10",
-          "to": "2026-09-11"
-        }
-      }
-    },
-    {
-      "at": "2026-10-02T10:32:51.149897+00:00",
-      "type": "updated",
-      "job_id": "b31f942adf5dca3b",
-      "source": "BoardWalk Consulting",
-      "title": "Executive Director",
-      "organization": "Gateway Early Childhood Alliance",
-      "changes": {
-        "posted_date": {
-          "from": "2026-09-01",
-          "to": "2026-09-02"
-        }
-      }
-    },
-    {
-      "at": "2026-10-02T10:32:51.149897+00:00",
-      "type": "updated",
-      "job_id": "e39688bc3548ed3e",
-      "source": "BoardWalk Consulting",
-      "title": "CEO",
-      "organization": "The Colorado Health Foundation",
-      "changes": {
-        "posted_date": {
-          "from": "2026-08-02",
-          "to": "2026-08-03"
-        }
-      }
-    },
-    {
-      "at": "2026-10-02T10:32:51.149897+00:00",
-      "type": "updated",
-      "job_id": "dfcd1a39e5a39154",
-      "source": "BoardWalk Consulting",
-      "title": "President & CEO",
-      "organization": "Community Foundation for Greater Atlanta",
-      "changes": {
-        "posted_date": {
-          "from": "2026-08-02",
-          "to": "2026-08-03"
-        }
-      }
-    },
-    {
-      "at": "2026-10-02T10:32:51.149897+00:00",
-      "type": "updated",
-      "job_id": "02c92a3fb8587a5a",
-      "source": "BoardWalk Consulting",
-      "title": "President & CEO",
-      "organization": "North Carolina Community Foundation",
-      "changes": {
-        "posted_date": {
-          "from": "2026-07-03",
-          "to": "2026-07-04"
-        }
-      }
-    },
-    {
-      "at": "2026-10-02T10:32:51.149897+00:00",
-      "type": "updated",
-      "job_id": "9bc079973dda6ba0",
-      "source": "BoardWalk Consulting",
-      "title": "Chief Executive Officer",
-      "organization": "The Greenville Housing Authority",
-      "changes": {
-        "posted_date": {
-          "from": "2026-06-03",
-          "to": "2026-06-04"
-        }
-      }
-    },
-    {
-      "at": "2026-10-02T10:32:51.149897+00:00",
-      "type": "updated",
-      "job_id": "70879d341e410a6b",
-      "source": "BoardWalk Consulting",
-      "title": "Executive Director",
-      "organization": "Atlanta Ballet",
-      "changes": {
-        "posted_date": {
-          "from": "2026-05-04",
-          "to": "2026-05-05"
-        }
-      }
-    },
-    {
-      "at": "2026-10-02T10:32:51.149897+00:00",
-      "type": "reopened",
-      "job_id": "62e62841416b764c",
-      "source": "Bridge Partners",
-      "title": "CEO and Executive Director",
-      "organization": "Functional Expertise"
-    },
-    {
-      "at": "2026-10-02T10:32:51.149897+00:00",
-      "type": "new",
-      "job_id": "0515b993abd11a80",
-      "source": "Bridge Partners",
-      "title": "Executive Director",
-      "organization": "Movement Labs"
-    },
-    {
-      "at": "2026-10-02T10:32:51.149897+00:00",
-      "type": "updated",
-      "job_id": "7bfd9809148456cd",
-      "source": "Bridge Partners",
-      "title": "Chief Executive Officer",
-      "organization": "Movement Labs",
-      "changes": {
-        "organization": {
-          "from": "Hudson River Park Friends",
-          "to": "Movement Labs"
-        },
-        "url": {
-          "from": "https://bridgepartnersllc.com/wp-content/uploads/2026/09/Hudson-River-Park-Friends-ED-position-description.pdf",
-          "to": "https://bridgepartnersllc.com/wp-content/uploads/2026/10/Movement-Labs-MD-Position-Description-.pdf"
-        },
-        "compensation_text": {
-          "from": "Compensation: § Salary range is $225,000 to $265,000 per year, depending on experience. § Hudson River Park Friends provides competitive compensation and comprehensive benefits and leave packa",
-          "to": "Compensation & Benefits: ▪ Salary: $200,000 –$250,000, depending on experience and location, with additional incentive compensation tied to successfully achieving Movement Labs' growth and impa"
-        },
-        "compensation_min": {
-          "from": 225000,
-          "to": 200000
-        },
-        "compensation_max": {
-          "from": 265000,
-          "to": 250000
-        },
-        "sector_tags": {
-          "from": [
-            "Health",
-            "Philanthropy",
-            "Education",
-            "Civic / Public",
-            "Environment",
-            "Arts / Culture",
-            "Media / Journalism"
-          ],
-          "to": [
-            "Health",
-            "Philanthropy",
-            "Civic / Public",
-            "Environment",
-            "Arts / Culture",
-            "Media / Journalism"
-          ]
-        },
-        "organization_types": {
-          "from": [
-            "Foundation / Philanthropy",
-            "Arts / Culture",
-            "Advocacy / Civil Rights",
-            "Other Nonprofit"
-          ],
-          "to": [
-            "Foundation / Philanthropy",
-            "Advocacy / Civil Rights",
-            "Other Nonprofit"
-          ]
-        },
-        "mandate_tags": {
-          "from": [
-            "Growth / scale",
-            "Fundraising / revenue",
-            "Strategy / transformation",
-            "Operations / infrastructure",
-            "External affairs / advocacy",
-            "Membership / stakeholders",
-            "Culture / talent",
-            "Financial sustainability"
-          ],
-          "to": [
-            "Growth / scale",
-            "Strategy / transformation",
-            "Operations / infrastructure",
-            "External affairs / advocacy",
-            "Culture / talent"
-          ]
-        }
-      }
-    },
     {
       "at": "2026-10-02T10:32:51.149897+00:00",
       "type": "closed",
@@ -14054,6 +13786,351 @@
     },
     {
       "at": "2026-10-08T03:02:54.546663+00:00",
+      "type": "updated",
+      "job_id": "f9f133cf2577cc30",
+      "source": "Spano Pratt",
+      "title": "Chief Executive Officer – Profile",
+      "organization": "Rock River",
+      "changes": {
+        "organization": {
+          "from": "Emergency Nurses Association",
+          "to": "Rock River"
+        },
+        "url": {
+          "from": "https://spanopratt.com/wp-content/uploads/2026/05/ENA-CEO-Job-Profile-Final.pdf",
+          "to": "https://spanopratt.com/wp-content/uploads/2026/10/Rock-River-Community-Clinic-Job-Profile-CEO.pdf"
+        }
+      }
+    },
+    {
+      "at": "2026-10-08T10:36:29.199566+00:00",
+      "type": "removed_false_positive",
+      "job_id": "62e62841416b764c",
+      "source": "Bridge Partners",
+      "title": "CEO and Executive Director",
+      "organization": "Functional Expertise",
+      "url": "https://bridgepartnersllc.com/function/ceo/"
+    },
+    {
+      "at": "2026-10-08T10:36:29.199566+00:00",
+      "type": "reopened",
+      "job_id": "62e62841416b764c",
+      "source": "Bridge Partners",
+      "title": "CEO and Executive Director",
+      "organization": "Functional Expertise"
+    },
+    {
+      "at": "2026-10-08T10:36:29.199566+00:00",
+      "type": "updated",
+      "job_id": "62e62841416b764c",
+      "source": "Bridge Partners",
+      "title": "CEO and Executive Director",
+      "organization": "Functional Expertise",
+      "changes": {
+        "status": {
+          "from": "closed",
+          "to": "open"
+        }
+      }
+    },
+    {
+      "at": "2026-10-08T10:36:29.199566+00:00",
+      "type": "updated",
+      "job_id": "b8e982953accafdb",
+      "source": "DSG Global",
+      "title": "Chief Executive Officer",
+      "organization": "Aeris Insight",
+      "changes": {
+        "organization": {
+          "from": "Renewable Thermal Collaborative",
+          "to": "Aeris Insight"
+        },
+        "location": {
+          "from": "Remote, Washington D.C. preferred",
+          "to": "Remote"
+        },
+        "url": {
+          "from": "https://www.dsgco.com/search/23132-rtc-chief-executive-officer/",
+          "to": "https://www.dsgco.com/search/23172-aeris/"
+        },
+        "posted_date": {
+          "from": "2026-06-11",
+          "to": "2026-07-08"
+        },
+        "compensation_text": {
+          "from": "Compensation & Benefits The compensation for this role is anticipated to range from $275,000 - $350,000, commensurate with experience. Travel is expected to be 15-20% of the role, both in the U.S. and internationally. The Renewable Thermal Col",
+          "to": "Compensation and Benefits Salary is competitive and commensurate with experience. The salary range for this role is $230,000 - $250,000 with a generous benefits package. The exact salary that will be offered to the CEO will be determined based on a consideration of the succe"
+        },
+        "compensation_min": {
+          "from": 275000,
+          "to": 230000
+        },
+        "compensation_max": {
+          "from": 350000,
+          "to": 250000
+        }
+      }
+    },
+    {
+      "at": "2026-10-08T10:36:29.199566+00:00",
+      "type": "updated",
+      "job_id": "64ee69a30199e1a8",
+      "source": "DSG Global",
+      "title": "CEO",
+      "organization": "Aspiranet",
+      "changes": {
+        "organization": {
+          "from": "Fort Worth Report",
+          "to": "Aspiranet"
+        },
+        "location": {
+          "from": "Fort Worth, TX",
+          "to": "South San Francisco, CA"
+        },
+        "url": {
+          "from": "https://www.dsgco.com/search/23370-fort-worth-report-ceo/",
+          "to": "https://www.dsgco.com/search/23462-aspiranet-ceo/"
+        },
+        "posted_date": {
+          "from": "2026-08-10",
+          "to": "2026-09-15"
+        },
+        "compensation_text": {
+          "from": "Compensation and Benefits Salary and bonus subject to qualifications and experience. Benefits include PTO, paid holidays, insurance benefits including medical, dental, vision, life insurance plans and 401k plan. This is a full time role based in Fort Worth, Texas. The Fort Worth Report is an equal opportunity employer. We a",
+          "to": "Compensation and Benefits The salary range for this position is $400,000 – $475,000 commensurate with experience. Aspiranet values its employees and offers a comprehensive benefits package. Contact DSG | Koya has been exclu"
+        },
+        "compensation_min": {
+          "from": 401000,
+          "to": 400000
+        },
+        "compensation_max": {
+          "from": 401000,
+          "to": 475000
+        }
+      }
+    },
+    {
+      "at": "2026-10-08T10:36:29.199566+00:00",
+      "type": "updated",
+      "job_id": "9d9450d05842e801",
+      "source": "DSG Global",
+      "title": "Executive Director",
+      "organization": "Homeowners of Tomorrow Alliance",
+      "changes": {
+        "organization": {
+          "from": "The Education Fund",
+          "to": "Homeowners of Tomorrow Alliance"
+        },
+        "location": {
+          "from": "Miami, FL",
+          "to": "Flexible with preference for Bay Area, CA or New York, NY"
+        },
+        "url": {
+          "from": "https://www.dsgco.com/search/23059-the-education-fund-executive-director/",
+          "to": "https://www.dsgco.com/search/22628-hota/"
+        },
+        "posted_date": {
+          "from": "2026-05-06",
+          "to": "2025-12-18"
+        },
+        "compensation_text": {
+          "from": "Compensation and Benefits The starting salary range for this position is $180,000 - $220,000, with additional bonus potential. If the Executive Director succeeds the President, the salary will increase commensurate with the responsi",
+          "to": "Compensation and Benefits As a new organization, Homeowners of Tomorrow Alliance will be incubated at SageSure and the Executive Director will be hired by that entity initially. SageSure offers a competitive salary based on experience and skills, as well as an excellent benefits package. The estimated annual salary range for the Executive Director is $190,000 - $210,000 with the ability to increase for an ideal candidate. The exact salary will be dependent upon experience and location. Contact DSG | Koya ha"
+        },
+        "compensation_min": {
+          "from": 180000,
+          "to": 190000
+        },
+        "compensation_max": {
+          "from": 220000,
+          "to": 210000
+        }
+      }
+    },
+    {
+      "at": "2026-10-08T10:36:29.199566+00:00",
+      "type": "updated",
+      "job_id": "9d9450d05842e801",
+      "source": "DSG Global",
+      "title": "Executive Director",
+      "organization": "La Casa de las Madres",
+      "changes": {
+        "organization": {
+          "from": "The Education Fund",
+          "to": "La Casa de las Madres"
+        },
+        "location": {
+          "from": "Miami, FL",
+          "to": "San Francisco, CA"
+        },
+        "url": {
+          "from": "https://www.dsgco.com/search/23059-the-education-fund-executive-director/",
+          "to": "https://www.dsgco.com/search/23396-la-casa-executive-director/"
+        },
+        "posted_date": {
+          "from": "2026-05-06",
+          "to": "2026-08-31"
+        },
+        "compensation_text": {
+          "from": "Compensation and Benefits The starting salary range for this position is $180,000 - $220,000, with additional bonus potential. If the Executive Director succeeds the President, the salary will increase commensurate with the responsi",
+          "to": "Compensation and Benefits The salary range for this position is $200,000 - $220,000 and is commensurate with skills and experience. La Casa de las Madres also offers a comprehensive benefits package. La Casa de las Madres i"
+        },
+        "compensation_min": {
+          "from": 180000,
+          "to": 200000
+        }
+      }
+    },
+    {
+      "at": "2026-10-08T10:36:29.199566+00:00",
+      "type": "updated",
+      "job_id": "b8e982953accafdb",
+      "source": "DSG Global",
+      "title": "Chief Executive Officer",
+      "organization": "La Clinica de La Raza",
+      "changes": {
+        "organization": {
+          "from": "Renewable Thermal Collaborative",
+          "to": "La Clinica de La Raza"
+        },
+        "location": {
+          "from": "Remote, Washington D.C. preferred",
+          "to": "Oakland, CA"
+        },
+        "url": {
+          "from": "https://www.dsgco.com/search/23132-rtc-chief-executive-officer/",
+          "to": "https://www.dsgco.com/search/21682-la-clinica-de-la-raza-chief-executive-officer/"
+        },
+        "posted_date": {
+          "from": "2026-06-11",
+          "to": "2025-12-11"
+        },
+        "compensation_text": {
+          "from": "Compensation & Benefits The compensation for this role is anticipated to range from $275,000 - $350,000, commensurate with experience. Travel is expected to be 15-20% of the role, both in the U.S. and internationally. The Renewable Thermal Col",
+          "to": "salary range for this position is $425,000 - $495,000, with a generous benefits package and bonus potential. Actual pay for the finalist candidate will be adjusted based on various factors, inc"
+        },
+        "compensation_min": {
+          "from": 275000,
+          "to": 425000
+        },
+        "compensation_max": {
+          "from": 350000,
+          "to": 495000
+        }
+      }
+    },
+    {
+      "at": "2026-10-08T10:36:29.199566+00:00",
+      "type": "closed",
+      "job_id": "6d2efc11ac38fb2f",
+      "source": "DSG Global",
+      "title": "Executive Director for Housing and Residence Life",
+      "organization": "North Carolina A&T State University"
+    },
+    {
+      "at": "2026-10-08T10:36:29.199566+00:00",
+      "type": "closed",
+      "job_id": "d4292837ee938bae",
+      "source": "DSG Global",
+      "title": "President",
+      "organization": "Highline College"
+    },
+    {
+      "at": "2026-10-08T10:36:29.199566+00:00",
+      "type": "closed",
+      "job_id": "ac8630d8b62bd70f",
+      "source": "DSG Global",
+      "title": "President & CEO",
+      "organization": "Keiro"
+    },
+    {
+      "at": "2026-10-08T10:36:29.199566+00:00",
+      "type": "closed",
+      "job_id": "78d9bfcdbeebcb4c",
+      "source": "DSG Global",
+      "title": "Executive Director, Washington D.C. Metro",
+      "organization": "GreenLight Fund"
+    },
+    {
+      "at": "2026-10-08T10:36:29.199566+00:00",
+      "type": "updated",
+      "job_id": "bdb4fab450cecd43",
+      "source": "Kittleman Associates",
+      "title": "President and CEO",
+      "organization": "Gettysburg Foundation",
+      "changes": {
+        "organization": {
+          "from": "Mid-Ohio Food Collective",
+          "to": "Gettysburg Foundation"
+        },
+        "location": {
+          "from": "Grove City, OH, United States",
+          "to": "Gettysburg, PA, United States"
+        },
+        "url": {
+          "from": "https://www.kittlemansearch.com/opportunities/president-ceo-mid-ohio-food-collective",
+          "to": "https://www.kittlemansearch.com/opportunities/president-chief-executive-officer-gettysburg-foundation"
+        },
+        "posted_date": {
+          "from": "2026-09-10",
+          "to": "2026-10-01"
+        }
+      }
+    },
+    {
+      "at": "2026-10-08T10:36:29.199566+00:00",
+      "type": "updated",
+      "job_id": "bdb4fab450cecd43",
+      "source": "Kittleman Associates",
+      "title": "President and CEO",
+      "organization": "Viability, Inc.",
+      "changes": {
+        "organization": {
+          "from": "Mid-Ohio Food Collective",
+          "to": "Viability, Inc."
+        },
+        "location": {
+          "from": "Grove City, OH, United States",
+          "to": "Springfield, MA, United States"
+        },
+        "url": {
+          "from": "https://www.kittlemansearch.com/opportunities/president-ceo-mid-ohio-food-collective",
+          "to": "https://www.kittlemansearch.com/opportunities/president-ceo-viability"
+        },
+        "posted_date": {
+          "from": "2026-09-10",
+          "to": "2026-09-16"
+        }
+      }
+    },
+    {
+      "at": "2026-10-08T10:36:29.199566+00:00",
+      "type": "updated",
+      "job_id": "bdb4fab450cecd43",
+      "source": "Kittleman Associates",
+      "title": "President and CEO",
+      "organization": "Schoodic Institute at Acadia National Park",
+      "changes": {
+        "organization": {
+          "from": "Mid-Ohio Food Collective",
+          "to": "Schoodic Institute at Acadia National Park"
+        },
+        "location": {
+          "from": "Grove City, OH, United States",
+          "to": "Winter Harbor, ME, United States"
+        },
+        "url": {
+          "from": "https://www.kittlemansearch.com/opportunities/president-ceo-mid-ohio-food-collective",
+          "to": "https://www.kittlemansearch.com/opportunities/president-ceo-schoodic-institute"
+        },
+        "posted_date": {
+          "from": "2026-09-10",
+          "to": "2026-09-14"
+        }
+      }
+    },
+    {
+      "at": "2026-10-08T10:36:29.199566+00:00",
       "type": "updated",
       "job_id": "f9f133cf2577cc30",
       "source": "Spano Pratt",
