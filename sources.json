@@ -541,7 +541,7 @@
   {
     "name": "Armstrong McGuire",
     "url": "https://jobs.armstrongmcguire.com/",
-    "mode": "auto",
+    "mode": "automated",
     "group": "Executive search firms",
     "notes": "Nonprofit consulting and leadership development; serves nonprofits, associations, human services and community organizations.",
     "date_policy": "source",
@@ -555,7 +555,7 @@
   {
     "name": "KEES / Alford Executive Search",
     "url": "https://kees2success.com/current-searches/",
-    "mode": "auto",
+    "mode": "automated",
     "group": "Executive search firms",
     "notes": "Nonprofit executive search firm (formerly Alford Executive Search).",
     "date_policy": "source",
@@ -583,7 +583,7 @@
   {
     "name": "McCormack + Kristel",
     "url": "https://www.mccormackkristel.com/current-searches",
-    "mode": "auto",
+    "mode": "automated",
     "group": "Executive search firms",
     "notes": "Executive search firm dedicated to nonprofits with emphasis on diversity in leadership.",
     "date_policy": "source",
@@ -597,7 +597,7 @@
   {
     "name": "Vetted Solutions",
     "url": "https://www.vettedsolutions.com/current-searches/",
-    "mode": "auto",
+    "mode": "automated",
     "group": "Executive search firms",
     "notes": "Partners with mission-driven organizations; serves associations, nonprofits and foundations.",
     "date_policy": "source",
@@ -637,7 +637,7 @@
   {
     "name": "Arts Consulting Group",
     "url": "https://artsconsulting.com/opensearches/",
-    "mode": "auto",
+    "mode": "automated",
     "group": "Executive search firms",
     "notes": "Management consulting for arts and creative industries; executive search for theaters, museums, performing arts.",
     "date_policy": "source",
@@ -704,7 +704,7 @@
   {
     "name": "FaithSearch Partners",
     "url": "https://faithsearchpartners.com/news/category/content-active-search-announcement/",
-    "mode": "auto",
+    "mode": "automated",
     "group": "Executive search firms",
     "notes": "Faith-based executive search firm for Christian organizations in education, healthcare and nonprofits.",
     "date_policy": "source",
@@ -718,7 +718,7 @@
   {
     "name": "Vanderbloemen",
     "url": "https://www.vanderbloemen.com/job-openings/",
-    "mode": "auto",
+    "mode": "automated",
     "group": "Executive search firms",
     "notes": "Christian staffing firm for churches and nonprofits; 3,000+ successful searches.",
     "date_policy": "source",
@@ -732,7 +732,7 @@
   {
     "name": "Clover Search Works",
     "url": "https://www.cloversearchworks.com/current-searches",
-    "mode": "auto",
+    "mode": "automated",
     "group": "Executive search firms",
     "notes": "Seattle-based nonprofit executive search firm serving the Pacific Northwest and nationally.",
     "date_policy": "source",
@@ -746,7 +746,7 @@
   {
     "name": "Academic Search",
     "url": "https://www.academicsearch.org/open-searches-public/",
-    "mode": "auto",
+    "mode": "automated",
     "group": "Executive search firms",
     "notes": "Higher-education executive search; 50 years recruiting college and university presidents and senior leaders.",
     "date_policy": "source",
@@ -760,7 +760,7 @@
   {
     "name": "AGB Search",
     "url": "https://www.agbsearch.com/active-searches",
-    "mode": "auto",
+    "mode": "automated",
     "group": "Executive search firms",
     "notes": "Executive search exclusively for higher-education institutions; founded by the Association of Governing Boards.",
     "date_policy": "source",
@@ -774,7 +774,7 @@
   {
     "name": "Carney Sandoe",
     "url": "https://www.carneysandoe.com/for-job-seekers/leadership-roles/current-searches/",
-    "mode": "auto",
+    "mode": "automated",
     "group": "Executive search firms",
     "notes": "Recruiting firm for private and independent schools; heads of school and administrators.",
     "date_policy": "source",
@@ -801,7 +801,7 @@
   {
     "name": "Sterling Martin",
     "url": "https://smartinsearch.com/searches/",
-    "mode": "auto",
+    "mode": "automated",
     "group": "Executive search firms",
     "notes": "Executive search firm (A ZRG Company); association and nonprofit CEO/executive-director search.",
     "date_policy": "source",
@@ -868,7 +868,7 @@
   {
     "name": "JMM Strategy Group",
     "url": "https://www.jmmstrategygroup.com/careers",
-    "mode": "auto",
+    "mode": "automated",
     "group": "Executive search firms",
     "notes": "Boutique consulting serving progressive nonprofits; fundraising, executive searches, staffing.",
     "date_policy": "source",
