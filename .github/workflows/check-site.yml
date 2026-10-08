@@ -6,6 +6,8 @@ on:
       - 'index.html'
       - 'test_site.py'
       - '.github/workflows/check-site.yml'
+      - '.github/workflows/deploy-static.yml'
+      - '.github/workflows/update-radar.yml'
   workflow_dispatch:
 
 permissions:
