@@ -69,6 +69,31 @@ table.opp-table{width:100%;border-collapse:collapse;font-size:12.5px;min-width:8
 .check-card .check-desc{font-size:13px;color:var(--muted);line-height:1.5;margin:0 0 12px}
 .check-card .btn-blocked{font-size:15px;padding:12px 20px}
 .check-why{font-size:12px;color:var(--muted);margin-top:8px;font-style:italic}
+/* Direct-check directory: sources the scraper cannot verify */
+.check-intro{max-width:820px}
+.check-controls{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(190px,1fr);gap:12px;margin:16px 0 9px}
+.check-control{display:flex;flex-direction:column;gap:4px}
+.check-control label{font-size:12px;font-weight:750;color:var(--muted)}
+.check-control input,.check-control select{width:100%;min-width:0;padding:10px 12px;background:var(--card);border:1px solid var(--line);border-radius:10px;color:var(--ink);font-size:14px}
+.check-control input:focus-visible,.check-control select:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+.check-results{color:var(--muted);font-size:12px;margin:12px 0}
+.check-section-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 16px;border-bottom:1px solid var(--line);padding-bottom:8px;margin:28px 0 12px}
+.check-section-head h3{font-family:Georgia,serif;font-size:21px;font-weight:500;margin:0}
+.check-section-head p{font-size:12px;color:var(--muted);margin:0}
+.check-section-head .check-n{font:700 12px ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--muted)}
+.check-card{margin-bottom:10px}
+.check-card-head{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px 14px}
+.check-card-head h3{margin:0;font-size:17px}
+.check-card-head .check-chip{font-size:11px;border:1px solid var(--line);padding:3px 9px;border-radius:999px;white-space:nowrap;font-weight:800;color:var(--muted)}
+.check-card-head .check-chip.attention{background:#fff1dc;border-color:#e8c995;color:#825010}
+.check-card-head .check-chip.manual{background:var(--teal-2);border-color:#b6d4cf;color:var(--teal)}
+.check-card .check-desc{margin:8px 0 6px;line-height:1.55}
+.check-card .check-why{font-size:13px;font-style:normal;margin:8px 0;color:var(--ink)}
+.check-card .check-history{font-size:12px;color:var(--muted);margin:6px 0}
+.check-card .check-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:11px}
+.check-card .btn-blocked{font-size:13px;padding:9px 14px;background:var(--teal)}
+.check-card .btn-blocked:hover{background:#083b37}
+@media(max-width:680px){.check-controls{grid-template-columns:1fr}.check-hero{padding:16px}.check-card{padding:14px}.check-card .btn-blocked{display:block;width:100%;text-align:center}.check-section-head{display:block}.check-section-head p{margin-top:5px}}
 /* Firm filter chips */
 .firm-filters{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 14px}
 .firm-filters button{border:1px solid var(--line);background:var(--card);color:var(--muted);padding:7px 14px;border-radius:999px;font-weight:700;font-size:12.5px;cursor:pointer}
@@ -240,7 +265,7 @@ h1{font-size:30px;max-width:none}
     <button data-view="opportunities">Opportunities</button>
     <button data-view="saved">Saved</button>
     <button data-view="firms">Firms</button>
-    
+    <button data-view="checkyourself">Check yourself</button>
     <button data-view="placements">Placements</button>
     <button data-view="sources">Source health</button>
   </nav>
@@ -394,6 +419,29 @@ h1{font-size:30px;max-width:none}
 </div>
 <div id="consultList" class="source-list"></div>
 <div class="method" id="consultMethod" hidden>Consultant attributions are captured from firm postings where a lead consultant is named. Consultants appear here only when observed in the radar's data.</div>
+</section>
+<section id="checkyourselfView" class="view">
+  <div class="check-hero">
+    <div class="kicker">Covering the blind spots</div>
+    <h2>Check yourself</h2>
+    <p class="check-intro">Not every executive search can be captured automatically. Some firms block the radar, others have listings it has not reliably collected, and some do not publish an openings directory at all.</p>
+    <p><strong>Use these links to check firms directly.</strong> A firm appearing here does not mean it has a verified open position. Previously captured roles may still appear in Opportunities, but they may be stale or incomplete.</p>
+  </div>
+  <div id="checkSummary" class="source-summary" aria-label="Direct-check coverage summary"></div>
+  <div class="check-controls">
+    <div class="check-control"><label for="checkSearch">Find a search firm</label><input type="search" id="checkSearch" placeholder="Search firms" autocomplete="off"></div>
+    <div class="check-control"><label for="checkCategory">Coverage status</label>
+      <select id="checkCategory" aria-label="Filter firms by coverage status">
+        <option value="">All firms</option>
+        <option value="attention">Automated checks needing review</option>
+        <option value="manual">Manual or not yet verified</option>
+        <option value="noboard">No public search board</option>
+      </select>
+    </div>
+  </div>
+  <div class="check-results" id="checkResultCount" role="status" aria-live="polite"></div>
+  <div id="checkList"></div>
+  <div class="method">Source status comes from the latest radar data update, not live availability. A link to a firm website does not establish an active CEO search. Retired and duplicate sources are excluded.</div>
 </section>
 <div id="dossierOverlay" class="dossier-overlay" hidden>
   <div class="dossier-panel" role="dialog" aria-modal="true" aria-labelledby="dossierTitle">
@@ -971,6 +1019,63 @@ var stale=sj.length?'<div class="blocked-stale">Showing '+sj.length+' previously
 var btn=s.url?'<a class="btn-blocked" href="'+esc(s.url)+'" target="_blank" rel="noopener">View '+esc(s.source)+'\u2019s open searches \u2192</a>':'';
 return '<div class="blocked-banner"><div class="blocked-banner-head">\u26a0 Cannot auto-check this firm</div><p>'+copy+'</p>'+btn+stale+'</div>';
 }
+
+const CHECK_GROUP_MAP={blocked:'attention',failed:'attention','partial-suspected':'attention',manual:'manual',auto:'manual','awaiting-first-run':'manual','no-public-list':'noboard'};
+function checkGroup(s){return CHECK_GROUP_MAP[s.status]||'';}
+function checkReason(s){
+ const m={
+  blocked:'The last automated attempt was blocked. Open the firm page directly to look for current searches.',
+  failed:'The latest automated attempt failed. The radar cannot confirm which searches are open.',
+  'partial-suspected':'The most recent results appeared incomplete. Some searches may not appear in Opportunities.',
+  manual:'This source is in the manual-watch directory. The radar does not automatically collect its openings.',
+  auto:'This source is listed for monitoring, but it does not yet have a verified successful check.',
+  'awaiting-first-run':'This source has not yet completed its first automated check.',
+  'no-public-list':'This firm has no stable public current-search list. Its website link is not a current-openings directory.'
+ };
+ return m[s.status]||'The radar cannot independently verify this source.';
+}
+function renderCheckYourself(){
+ const container=$('#checkList');if(!container)return;
+ const all=(meta.sources||[]).filter(s=>s.mode!=='legacy'&&s.status!=='retired'&&checkGroup(s));
+ const counts={attention:0,manual:0,noboard:0};
+ all.forEach(s=>{counts[checkGroup(s)]++;});
+ $('#checkSummary').innerHTML=`<div class="mini-stat"><b>${counts.attention+counts.manual}</b><span>Firms to check directly</span></div><div class="mini-stat"><b>${counts.attention}</b><span>Blocked, failed or incomplete</span></div><div class="mini-stat"><b>${counts.manual}</b><span>Manual or not yet verified</span></div><div class="mini-stat"><b>${counts.noboard}</b><span>No public search board</span></div>`;
+ const query=($('#checkSearch').value||'').trim().toLowerCase(),group=$('#checkCategory').value;
+ const filtered=all.filter(s=>(!group||checkGroup(s)===group)&&(!query||(s.source+' '+(s.notes||'')).toLowerCase().includes(query)));
+ filtered.sort((a,b)=>{
+  const ranks={attention:0,manual:1,noboard:2},diff=ranks[checkGroup(a)]-ranks[checkGroup(b)];
+  if(diff)return diff;
+  if(checkGroup(a)==='attention'){const seen=(Number(b.prior_count)||0)-(Number(a.prior_count)||0);if(seen)return seen;}
+  return a.source.localeCompare(b.source);
+ });
+ const asOf=(meta.generated_at||'').slice(0,10);
+ $('#checkResultCount').textContent=filtered.length+' of '+all.length+' firms'+(asOf?' · Source status '+fmtDate(asOf,false):'');
+ if(!filtered.length){container.innerHTML='<div class="empty">No firms match this search and coverage filter.</div>';return;}
+ const headings={
+  attention:['Automated checks needing review','The radar was blocked, failed to collect results, or saw suspiciously incomplete coverage.'],
+  manual:['Manual or not yet verified','These firms are listed but are not currently producing a verified automated feed.'],
+  noboard:['No public search board','These firms do not offer a stable public directory. Their website links are for research, not confirmed vacancies.']
+ };
+ let markup='';
+ for(const key of ['attention','manual','noboard']){
+  const rows=filtered.filter(s=>checkGroup(s)===key);if(!rows.length)continue;
+  const [title,subtitle]=headings[key];
+  markup+=`<div class="check-section-head"><h3>${esc(title)} <span class="check-n">(${rows.length})</span></h3><p>${esc(subtitle)}</p></div>`;
+  markup+=rows.map(s=>{
+   const [statusLabel]=statusInfo(s);
+   const url=typeof s.url==='string'&&/^https?:\/\//i.test(s.url)?s.url:'';
+   const homepage=url&&(/^https?:\/\/[^/]+\/?$/i.test(url));
+   const buttonText=key==='noboard'||homepage?'Visit firm website':'Check firm search page';
+   const desc=FIRM_DESCRIPTIONS[s.source]||FIRM_BLURBS[s.source]||'';
+   const previously=Number(s.prior_count)||0;
+   const historyNote=previously>0&&key==='attention'?`<p class="check-history">Earlier source result: ${previously} listing${previously===1?'':'s'}. This does not confirm they remain open.</p>`:'';
+   const button=url?`<a class="btn-blocked" href="${esc(url)}" target="_blank" rel="noopener noreferrer">${buttonText} ↗</a>`:'<span class="check-history">No verified firm link in the source data.</span>';
+   return `<article class="check-card"><div class="check-card-head"><h3>${esc(s.source)}</h3><span class="check-chip ${key}">${esc(statusLabel)}</span></div>${desc?`<p class="check-desc">${esc(desc)}</p>`:''}<p class="check-why"><strong>Why it appears here:</strong> ${esc(checkReason(s))}</p>${historyNote}<div class="check-actions">${button}</div></article>`;
+  }).join('');
+ }
+ container.innerHTML=markup;
+}
+
 function renderFirms(){const jobs=payload.jobs||[],hist=(typeof history!=='undefined'&&history.jobs)||[],countFor=s=>jobs.filter(j=>j.source===s.source).length,all=(meta.sources||[]).filter(s=>s.mode!=='legacy'&&s.status!=='retired'),topSet=new Set([...all].sort((a,b)=>countFor(b)-countFor(a)).filter(s=>countFor(s)>0).slice(0,12).map(s=>s.source)),rows=all.sort((a,b)=>a.source.toLowerCase().localeCompare(b.source.toLowerCase()));$('#firmList').innerHTML=rows.map((s)=>{const sj=jobs.filter(j=>j.source===s.source),hj=hist.filter(j=>j.source===s.source),[label,cls]=statusInfo(s),desc=FIRM_DESCRIPTIONS[s.source]||FIRM_BLURBS[s.source]||'',isTop=topSet.has(s.source);
 const tierMix=sj.length?TIER_ORDER.filter(t=>t!=='Revenue unknown').map(t=>{const n=sj.filter(j=>sizeTier(j)===t).length;return n?`${t.split(' ')[0]} ${n}`:null;}).filter(Boolean).join(' · '):'';
 const payVals=sj.map(j=>j.compensation_min||j.compensation_max).filter(v=>v);const payBand=payVals.length?`$${Math.round(Math.min(...payVals)/1000)}k–$${Math.round(Math.max(...payVals)/1000)}k`:'';
@@ -999,13 +1104,13 @@ const sv=$('#dossierSave');if(sv)sv.onclick=e=>{e.stopPropagation();const s=save
 function closeDossier(){$('#dossierOverlay').hidden=true;document.body.style.overflow='';}
 function renderPlacements(){const el=$('#placementList');if(!el)return;const hist=(typeof history!=='undefined'&&history.jobs)||[];const closed=hist.filter(j=>j.status==='closed').sort((a,b)=>(b.last_seen||'').localeCompare(a.last_seen||'')).slice(0,30);if(!closed.length){el.innerHTML='<div class="empty">No closed searches in history yet.</div>';return;}el.innerHTML=closed.map(j=>{const days=j.first_seen&&j.last_seen?Math.max(1,Math.round((new Date(j.last_seen)-new Date(j.first_seen))/86400000)):null;return `<div class="placement-card"><div class="p-title">${esc(j.title||'')}</div><div class="p-org">${esc(j.organization||'')} \u00b7 ${esc(j.source||'')}</div><div class="p-meta">${j.location?`<span>${esc(j.location)}</span>`:''}${j.last_seen?`<span>Closed ${esc(fmtDate((j.last_seen||'').slice(0,10),false))}</span>`:''}${days?`<span>Open ${days} days</span>`:''}</div><span class="p-status">Closed \u2014 outcome unknown</span></div>`;}).join('');}
 
-function switchView(v){activeView=v;$$('.view').forEach(x=>x.classList.remove('active'));$('#'+v+'View').classList.add('active');$$('.nav button').forEach(b=>b.classList.toggle('active',b.dataset.view===v));if(v==='opportunities')renderOpportunities();if(v==='saved')renderSaved();if(v==='firms'){renderFirms();renderConsultants();}if(v==='placements')renderPlacements();if(v==='sources')renderSources();if(v==='market')renderMarket();if(v==='digest')renderDigest();window.scrollTo({top:0,behavior:'smooth'});}
+function switchView(v){activeView=v;$$('.view').forEach(x=>x.classList.remove('active'));$('#'+v+'View').classList.add('active');$$('.nav button').forEach(b=>b.classList.toggle('active',b.dataset.view===v));if(v==='opportunities')renderOpportunities();if(v==='saved')renderSaved();if(v==='firms'){renderFirms();renderConsultants();}if(v==='checkyourself')renderCheckYourself();if(v==='placements')renderPlacements();if(v==='sources')renderSources();if(v==='market')renderMarket();if(v==='digest')renderDigest();window.scrollTo({top:0,behavior:'smooth'});}
 function syncMobileFromDesktop(){$('#mRole').value=$('#role').value;$('#mSource').value=$('#source').value;$('#mSector').value=$('#sector').value;$('#mOrgType').value=$('#orgType').value;$('#mCompFilter').value=$('#compFilter').value;$('#mRecency').value=$('#recency').value;$('#mAging').value=$('#aging').value;$('#mWork').value=mobileWork;}
 function applyMobile(){$('#role').value=$('#mRole').value;$('#source').value=$('#mSource').value;$('#sector').value=$('#mSector').value;$('#orgType').value=$('#mOrgType').value;$('#compFilter').value=$('#mCompFilter').value;$('#recency').value=$('#mRecency').value;$('#aging').value=$('#mAging').value;mobileWork=$('#mWork').value;renderOpportunities();}
-function renderAll(){renderMarket();renderDigest();renderOpportunities();renderSaved();renderFirms();renderConsultants();renderSources();}
+function renderAll(){renderMarket();renderDigest();renderOpportunities();renderSaved();renderFirms();renderConsultants();renderSources();renderCheckYourself();}
 async function fetchJson(name,current,validator){try{const r=await fetch(name+'?ts='+Date.now(),{cache:'no-store'});if(r.ok){const d=await r.json();if(validator(d))return d;}}catch(e){}return current;}
 async function boot(){payload=await fetchJson('jobs.json',payload,d=>Array.isArray(d.jobs));meta=await fetchJson('meta.json',meta,d=>Array.isArray(d.sources));history=await fetchJson('history.json',history,d=>Array.isArray(d.jobs));changes=await fetchJson('changes.json',changes,d=>Array.isArray(d.events));const generated=payload.generated_at||meta.generated_at;$('#lastRefresh').textContent=generated?`Updated ${fmtDate(generated)} · ${new Date(generated).toLocaleTimeString([],{hour:'numeric',minute:'2-digit'})}`:'Not run yet';populateFilters();renderAll();}
-$$('.nav button').forEach(b=>b.onclick=()=>switchView(b.dataset.view));['q','role','source','sector','orgType','compFilter','recency','aging','sort'].forEach(id=>$('#'+id).addEventListener(id==='q'?'input':'change',renderOpportunities));$$('#viewToggle button').forEach(b=>b.onclick=()=>{oppViewMode=b.dataset.vm;$$('#viewToggle button').forEach(x=>x.classList.toggle('active',x===b));renderOpportunities();});$('#openFilters').onclick=()=>{syncMobileFromDesktop();$('#filterDialog').showModal();};$('#applyFilters').onclick=()=>applyMobile();$('#dossierClose').onclick=closeDossier;$('#copyDigest').onclick=copyDigest;$('#dossierOverlay').addEventListener('click',e=>{if(e.target.id==='dossierOverlay')closeDossier();});document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!$('#dossierOverlay').hidden)closeDossier();});$('#clearFilters').onclick=()=>{['mRole','mSource','mSector','mOrgType','mCompFilter','mRecency','mAging','mWork'].forEach(id=>$('#'+id).value='');mobileWork='';applyMobile();};[['consultName','input'],['consultFirm','change'],['consultArea','change']].forEach(p=>{const el=$('#'+p[0]);if(el)el.addEventListener(p[1],renderConsultants);});boot();
+$$('.nav button').forEach(b=>b.onclick=()=>switchView(b.dataset.view));['q','role','source','sector','orgType','compFilter','recency','aging','sort'].forEach(id=>$('#'+id).addEventListener(id==='q'?'input':'change',renderOpportunities));$('#checkSearch').addEventListener('input',renderCheckYourself);$('#checkCategory').addEventListener('change',renderCheckYourself);$$('#viewToggle button').forEach(b=>b.onclick=()=>{oppViewMode=b.dataset.vm;$$('#viewToggle button').forEach(x=>x.classList.toggle('active',x===b));renderOpportunities();});$('#openFilters').onclick=()=>{syncMobileFromDesktop();$('#filterDialog').showModal();};$('#applyFilters').onclick=()=>applyMobile();$('#dossierClose').onclick=closeDossier;$('#copyDigest').onclick=copyDigest;$('#dossierOverlay').addEventListener('click',e=>{if(e.target.id==='dossierOverlay')closeDossier();});document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!$('#dossierOverlay').hidden)closeDossier();});$('#clearFilters').onclick=()=>{['mRole','mSource','mSector','mOrgType','mCompFilter','mRecency','mAging','mWork'].forEach(id=>$('#'+id).value='');mobileWork='';applyMobile();};[['consultName','input'],['consultFirm','change'],['consultArea','change']].forEach(p=>{const el=$('#'+p[0]);if(el)el.addEventListener(p[1],renderConsultants);});boot();
 </script>
 </body>
 </html>
