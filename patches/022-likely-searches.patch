@@ -1,0 +1,98 @@
+diff --git a/index.html b/index.html
+index 5c3ff71..80dcff0 100644
+--- a/index.html
++++ b/index.html
+@@ -152,6 +152,11 @@ dialog{border:0;padding:0;background:transparent;width:min(520px,100%);max-width
+     <div id="agingSearches" class="feed"></div>
+     <div class="panel-note">The searches open the longest — often the hardest to fill or the most selective.</div>
+   </div>
++  <div class="briefing-section panel">
++    <div class="panel-title"><h2>Likely searches</h2><span>Pre-search signals · derived from radar data, not predictions</span></div>
++    <div id="likelySearches" class="feed"></div>
++    <div class="panel-note">Signals are computed from the radar's own history — repeated searches, interim leadership, peer search density. Each entry shows the exact data behind it; nothing here is invented.</div>
++  </div>
+   <div class="briefing-section panel">
+     <div class="panel-title"><h2>Firm landscape</h2><span>Which firms work which segments</span></div>
+     <div id="firmMatrix" style="overflow-x:auto"></div>
+@@ -308,6 +313,73 @@ function renderClosingSoon(){
+         +'</a>';
+     }).join('')+'</div></div>';
+ }
++function cleanOrgName(o){
++  if(!o)return '';
++  const s=String(o).trim();
++  if(s.length<4)return '';
++  const l=s.toLowerCase();
++  if(/^(organization confidential|organization not parsed|our divisions|executive search|higher education|tbd|n\/a|unknown)$/.test(l))return '';
++  if(/opens in new tab|click here|apply now/i.test(s))return '';
++  if(/^\d{4}$/.test(s))return '';
++  if(/^a\s+(well-established|leading|growing|dynamic|national|reputable)/i.test(s))return '';
++  return s;
++}
++function renderLikelySearches(){
++  const el=$('#likelySearches');if(!el)return;
++  const hj=(history.jobs||[]);
++  const byOrg={};
++  hj.forEach(function(j){
++    const name=cleanOrgName(j.organization);
++    if(!name)return;
++    const k=name.toLowerCase();
++    (byOrg[k]=byOrg[k]||{name:name,jobs:[]}).jobs.push(j);
++  });
++  const active=(payload.jobs||[]);
++  const entries=[];
++  Object.keys(byOrg).forEach(function(k){
++    const g=byOrg[k], jobs=g.jobs;
++    const ids={};jobs.forEach(function(j){ids[j.id]=1;});
++    const n=Object.keys(ids).length;
++    const hasInterim=jobs.some(function(j){return j.succession_reason==='Interim leadership';});
++    if(n<2&&!hasInterim)return;
++    const sorted=jobs.slice().sort(function(a,b){return recency(b).localeCompare(recency(a));});
++    const latest=sorted[0];
++    const hasOpen=jobs.some(function(j){return j.status==='open';});
++    const signals=[];
++    let rank=3;
++    if(n>=2){
++      const first=jobs.map(function(j){return recency(j);}).filter(function(v){return v&&v!=='0000-00-00';}).sort()[0];
++      signals.push(n+' CEO searches captured'+(first?' since '+fmtDate(first,false):''));
++      rank=hasOpen?2:1;
++    }
++    if(hasInterim){
++      const dj=jobs.filter(function(j){return j.succession_reason==='Interim leadership';})
++        .map(function(j){return recency(j);}).filter(function(v){return v&&v!=='0000-00-00';}).sort().pop();
++      signals.push('Interim leadership noted'+(dj?' '+fmtDate(dj,false):''));
++      rank=0;
++    }
++    const sec=(sectorTags(latest)[0]||''), tier=sizeTier(latest);
++    if(sec&&tier&&tier!=='Unknown'){
++      const peers=active.filter(function(j){return j.id!==latest.id&&(sectorTags(j)[0]||'')===sec&&sizeTier(j)===tier;}).length;
++      if(peers>=3)signals.push(peers+' peer orgs ('+sec+', '+tier+') actively searching');
++    }
++    entries.push({name:g.name,latest:latest,signals:signals,rank:rank});
++  });
++  entries.sort(function(a,b){return a.rank-b.rank||b.signals.length-a.signals.length;});
++  const top=entries.slice(0,8);
++  el.innerHTML=top.map(function(e){
++    const j=e.latest;
++    const sec=(sectorTags(j)[0]||'Sector not classified'), tier=sizeTier(j);
++    return '<article class="op-card" data-id="'+esc(j.id)+'" data-url="'+esc(j.url||j.source_url||'#')+'" tabindex="0" role="link" aria-label="Pre-search signal: '+esc(e.name)+'">'
++      +'<div class="op-kicker">Pre-search signal</div>'
++      +'<h3 class="op-title">'+esc(e.name)+'</h3>'
++      +'<div class="op-org">'+esc(sec)+' \u00b7 '+esc(tier)+'</div>'
++      +'<div class="op-meta">'+e.signals.map(function(s){return '<span>'+esc(s)+'</span>';}).join('')+'</div>'
++      +'<div class="op-foot" style="color:var(--teal);font-weight:700">Why listed: '+esc(e.signals[0])+'</div>'
++      +'</article>';
++  }).join('')||'<div class="empty">No strong pre-search signals right now.</div>';
++  bindCards(el);
++}
+ function renderAgingSearches(){
+   const el=$('#agingSearches');if(!el)return;
+   const ranked=(payload.jobs||[])
+@@ -582,6 +654,7 @@ function renderMarket(){
+   renderPayBenchmarks();
+   renderNotableWeek();
+   renderAgingSearches();
++  renderLikelySearches();
+   renderFirmMatrix();
+   renderTrend();
+   // Baseline marker on the activity chart.
