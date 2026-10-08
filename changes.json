@@ -1,475 +1,6 @@
 {
-  "generated_at": "2026-10-08T01:55:32.745686+00:00",
+  "generated_at": "2026-10-08T02:13:59.394379+00:00",
   "events": [
-    {
-      "at": "2026-09-28T10:33:39.076800+00:00",
-      "type": "updated",
-      "job_id": "9d9450d05842e801",
-      "source": "DSG Global",
-      "title": "Executive Director",
-      "organization": "Sigler Western Museum",
-      "changes": {
-        "organization": {
-          "from": "The Education Fund",
-          "to": "Sigler Western Museum"
-        },
-        "location": {
-          "from": "Miami, FL",
-          "to": "Wickenburg, AZ"
-        },
-        "url": {
-          "from": "https://www.dsgco.com/search/23059-the-education-fund-executive-director/",
-          "to": "https://www.dsgco.com/search/23354-sigler-western-museum-executive-director/"
-        },
-        "posted_date": {
-          "from": "2026-05-06",
-          "to": "2026-08-26"
-        },
-        "compensation_text": {
-          "from": "Compensation and Benefits The starting salary range for this position is $140,000 - $170,000, with additional bonus potential. If the Executive Director succeeds the President, the salary will increase commensurate with the responsi",
-          "to": "Compensation & Benefits Salary is competitive and commensurate with experience. The salary range for this role is $225,000-$250,000 and includes a comprehensive benefits package featuring employer-subsidized medical, dental, and vision coverage; a generous 403(b) retirem"
-        },
-        "compensation_min": {
-          "from": 140000,
-          "to": 225000
-        },
-        "compensation_max": {
-          "from": 170000,
-          "to": 250000
-        },
-        "sector_tags": {
-          "from": [
-            "Health",
-            "Education",
-            "Civic / Public",
-            "Environment",
-            "Arts / Culture",
-            "Media / Journalism"
-          ],
-          "to": [
-            "Health",
-            "Philanthropy",
-            "Education",
-            "Civic / Public",
-            "Environment",
-            "Arts / Culture",
-            "Media / Journalism"
-          ]
-        },
-        "organization_types": {
-          "from": [
-            "College / University",
-            "K-12 / Education",
-            "Health System / Provider",
-            "Media / Journalism",
-            "Other Nonprofit"
-          ],
-          "to": [
-            "Foundation / Philanthropy",
-            "College / University",
-            "Health System / Provider",
-            "Media / Journalism",
-            "Arts / Culture",
-            "Other Nonprofit"
-          ]
-        },
-        "mandate_tags": {
-          "from": [
-            "Growth / scale",
-            "Fundraising / revenue",
-            "Strategy / transformation",
-            "Operations / infrastructure",
-            "Culture / talent",
-            "Digital / AI"
-          ],
-          "to": [
-            "Growth / scale",
-            "Fundraising / revenue",
-            "Strategy / transformation",
-            "Operations / infrastructure",
-            "Membership / stakeholders",
-            "Culture / talent",
-            "Digital / AI",
-            "Financial sustainability"
-          ]
-        },
-        "succession_reason": {
-          "from": "Retirement",
-          "to": "Planned succession"
-        }
-      }
-    },
-    {
-      "at": "2026-09-28T10:33:39.076800+00:00",
-      "type": "updated",
-      "job_id": "9d9450d05842e801",
-      "source": "DSG Global",
-      "title": "Executive Director",
-      "organization": "Stonewall Columbus",
-      "changes": {
-        "organization": {
-          "from": "The Education Fund",
-          "to": "Stonewall Columbus"
-        },
-        "location": {
-          "from": "Miami, FL",
-          "to": "Columbus, OH"
-        },
-        "url": {
-          "from": "https://www.dsgco.com/search/23059-the-education-fund-executive-director/",
-          "to": "https://www.dsgco.com/search/23450-stonewall-columbus-executive-director/"
-        },
-        "posted_date": {
-          "from": "2026-05-06",
-          "to": "2026-09-21"
-        },
-        "compensation_text": {
-          "from": "Compensation and Benefits The starting salary range for this position is $140,000 - $170,000, with additional bonus potential. If the Executive Director succeeds the President, the salary will increase commensurate with the responsi",
-          "to": "Compensation and Benefits The salary range for this position is $125,000 to $140,000, accompanied by a generous benefits package. Details will be provided to candidates selected to advance in the search process. Contact DSG"
-        },
-        "compensation_min": {
-          "from": 140000,
-          "to": 125000
-        },
-        "compensation_max": {
-          "from": 170000,
-          "to": 140000
-        },
-        "sector_tags": {
-          "from": [
-            "Health",
-            "Education",
-            "Civic / Public",
-            "Environment",
-            "Arts / Culture",
-            "Media / Journalism"
-          ],
-          "to": [
-            "Health",
-            "Philanthropy",
-            "Education",
-            "Civic / Public",
-            "Environment",
-            "Arts / Culture",
-            "Media / Journalism",
-            "Faith"
-          ]
-        },
-        "organization_types": {
-          "from": [
-            "College / University",
-            "K-12 / Education",
-            "Health System / Provider",
-            "Media / Journalism",
-            "Other Nonprofit"
-          ],
-          "to": [
-            "Foundation / Philanthropy",
-            "Health System / Provider",
-            "Media / Journalism",
-            "Arts / Culture",
-            "Advocacy / Civil Rights",
-            "Other Nonprofit"
-          ]
-        },
-        "mandate_tags": {
-          "from": [
-            "Growth / scale",
-            "Fundraising / revenue",
-            "Strategy / transformation",
-            "Operations / infrastructure",
-            "Culture / talent",
-            "Digital / AI"
-          ],
-          "to": [
-            "Growth / scale",
-            "Fundraising / revenue",
-            "Strategy / transformation",
-            "Operations / infrastructure",
-            "External affairs / advocacy",
-            "Membership / stakeholders",
-            "Culture / talent",
-            "Digital / AI",
-            "Financial sustainability"
-          ]
-        }
-      }
-    },
-    {
-      "at": "2026-09-28T10:33:39.076800+00:00",
-      "type": "updated",
-      "job_id": "9d9450d05842e801",
-      "source": "DSG Global",
-      "title": "Executive Director",
-      "organization": "The Doctors Clinic",
-      "changes": {
-        "organization": {
-          "from": "The Education Fund",
-          "to": "The Doctors Clinic"
-        },
-        "location": {
-          "from": "Miami, FL",
-          "to": "Silverdale, WA"
-        },
-        "url": {
-          "from": "https://www.dsgco.com/search/23059-the-education-fund-executive-director/",
-          "to": "https://www.dsgco.com/search/23372-the-doctors-clinic-executive-director/"
-        },
-        "posted_date": {
-          "from": "2026-05-06",
-          "to": "2026-08-26"
-        },
-        "sector_tags": {
-          "from": [
-            "Health",
-            "Education",
-            "Civic / Public",
-            "Environment",
-            "Arts / Culture",
-            "Media / Journalism"
-          ],
-          "to": [
-            "Health",
-            "Philanthropy",
-            "Education",
-            "Civic / Public",
-            "Environment",
-            "Media / Journalism"
-          ]
-        },
-        "organization_types": {
-          "from": [
-            "College / University",
-            "K-12 / Education",
-            "Health System / Provider",
-            "Media / Journalism",
-            "Other Nonprofit"
-          ],
-          "to": [
-            "Foundation / Philanthropy",
-            "Health System / Provider",
-            "Media / Journalism",
-            "Advocacy / Civil Rights",
-            "Human Services / Community",
-            "Other Nonprofit"
-          ]
-        },
-        "mandate_tags": {
-          "from": [
-            "Growth / scale",
-            "Fundraising / revenue",
-            "Strategy / transformation",
-            "Operations / infrastructure",
-            "Culture / talent",
-            "Digital / AI"
-          ],
-          "to": [
-            "Growth / scale",
-            "Fundraising / revenue",
-            "Strategy / transformation",
-            "Operations / infrastructure",
-            "External affairs / advocacy",
-            "Membership / stakeholders",
-            "Culture / talent",
-            "Digital / AI"
-          ]
-        },
-        "succession_reason": {
-          "from": "Retirement",
-          "to": "Planned succession"
-        }
-      }
-    },
-    {
-      "at": "2026-09-28T10:33:39.076800+00:00",
-      "type": "closed",
-      "job_id": "6d2efc11ac38fb2f",
-      "source": "DSG Global",
-      "title": "Executive Director for Housing and Residence Life",
-      "organization": "North Carolina A&T State University"
-    },
-    {
-      "at": "2026-09-28T10:33:39.076800+00:00",
-      "type": "updated",
-      "job_id": "bdb4fab450cecd43",
-      "source": "Kittleman Associates",
-      "title": "President and CEO",
-      "organization": "Viability, Inc.",
-      "changes": {
-        "organization": {
-          "from": "Mid-Ohio Food Collective",
-          "to": "Viability, Inc."
-        },
-        "location": {
-          "from": "Grove City, OH, United States",
-          "to": "Springfield, MA, United States"
-        },
-        "url": {
-          "from": "https://www.kittlemansearch.com/opportunities/president-ceo-mid-ohio-food-collective",
-          "to": "https://www.kittlemansearch.com/opportunities/president-ceo-viability"
-        },
-        "posted_date": {
-          "from": "2026-09-10",
-          "to": "2026-09-16"
-        },
-        "sector_tags": {
-          "from": [
-            "Education",
-            "Civic / Public",
-            "Human Services"
-          ],
-          "to": [
-            "Philanthropy",
-            "Human Services"
-          ]
-        },
-        "organization_types": {
-          "from": [
-            "Unclassified"
-          ],
-          "to": [
-            "Foundation / Philanthropy",
-            "Advocacy / Civil Rights",
-            "Human Services / Community",
-            "Other Nonprofit"
-          ]
-        },
-        "mandate_tags": {
-          "from": [
-            "Financial sustainability"
-          ],
-          "to": [
-            "Growth / scale",
-            "Fundraising / revenue",
-            "Operations / infrastructure",
-            "External affairs / advocacy",
-            "Membership / stakeholders",
-            "Culture / talent",
-            "Financial sustainability"
-          ]
-        }
-      }
-    },
-    {
-      "at": "2026-09-28T10:33:39.076800+00:00",
-      "type": "updated",
-      "job_id": "bdb4fab450cecd43",
-      "source": "Kittleman Associates",
-      "title": "President and CEO",
-      "organization": "Schoodic Institute at Acadia National Park",
-      "changes": {
-        "organization": {
-          "from": "Mid-Ohio Food Collective",
-          "to": "Schoodic Institute at Acadia National Park"
-        },
-        "location": {
-          "from": "Grove City, OH, United States",
-          "to": "Winter Harbor, ME, United States"
-        },
-        "url": {
-          "from": "https://www.kittlemansearch.com/opportunities/president-ceo-mid-ohio-food-collective",
-          "to": "https://www.kittlemansearch.com/opportunities/president-ceo-schoodic-institute"
-        },
-        "posted_date": {
-          "from": "2026-09-10",
-          "to": "2026-09-14"
-        },
-        "sector_tags": {
-          "from": [
-            "Education",
-            "Civic / Public",
-            "Human Services"
-          ],
-          "to": [
-            "Education",
-            "Environment"
-          ]
-        },
-        "organization_types": {
-          "from": [
-            "Unclassified"
-          ],
-          "to": [
-            "College / University"
-          ]
-        },
-        "mandate_tags": {
-          "from": [
-            "Financial sustainability"
-          ],
-          "to": [
-            "Growth / scale",
-            "Fundraising / revenue",
-            "Financial sustainability"
-          ]
-        }
-      }
-    },
-    {
-      "at": "2026-09-29T10:34:07.801665+00:00",
-      "type": "removed_false_positive",
-      "job_id": "62e62841416b764c",
-      "source": "Bridge Partners",
-      "title": "CEO and Executive Director",
-      "organization": "Functional Expertise",
-      "url": "https://bridgepartnersllc.com/function/ceo/"
-    },
-    {
-      "at": "2026-09-29T10:34:07.801665+00:00",
-      "type": "updated",
-      "job_id": "acf48ae0f359e233",
-      "source": "BoardWalk Consulting",
-      "title": "Executive Director",
-      "organization": "Florida Rights Restoration Coalition",
-      "changes": {
-        "posted_date": {
-          "from": "2026-09-07",
-          "to": "2026-09-08"
-        }
-      }
-    },
-    {
-      "at": "2026-09-29T10:34:07.801665+00:00",
-      "type": "updated",
-      "job_id": "b31f942adf5dca3b",
-      "source": "BoardWalk Consulting",
-      "title": "Executive Director",
-      "organization": "Gateway Early Childhood Alliance",
-      "changes": {
-        "posted_date": {
-          "from": "2026-08-29",
-          "to": "2026-08-30"
-        }
-      }
-    },
-    {
-      "at": "2026-09-29T10:34:07.801665+00:00",
-      "type": "updated",
-      "job_id": "e39688bc3548ed3e",
-      "source": "BoardWalk Consulting",
-      "title": "CEO",
-      "organization": "The Colorado Health Foundation",
-      "changes": {
-        "posted_date": {
-          "from": "2026-07-30",
-          "to": "2026-07-31"
-        }
-      }
-    },
-    {
-      "at": "2026-09-29T10:34:07.801665+00:00",
-      "type": "updated",
-      "job_id": "dfcd1a39e5a39154",
-      "source": "BoardWalk Consulting",
-      "title": "President & CEO",
-      "organization": "Community Foundation for Greater Atlanta",
-      "changes": {
-        "posted_date": {
-          "from": "2026-07-30",
-          "to": "2026-07-31"
-        }
-      }
-    },
     {
       "at": "2026-09-29T10:34:07.801665+00:00",
       "type": "updated",
@@ -15012,6 +14543,213 @@
     },
     {
       "at": "2026-10-08T01:55:32.745686+00:00",
+      "type": "updated",
+      "job_id": "f9f133cf2577cc30",
+      "source": "Spano Pratt",
+      "title": "Chief Executive Officer – Profile",
+      "organization": "Rock River",
+      "changes": {
+        "organization": {
+          "from": "Emergency Nurses Association",
+          "to": "Rock River"
+        },
+        "url": {
+          "from": "https://spanopratt.com/wp-content/uploads/2026/05/ENA-CEO-Job-Profile-Final.pdf",
+          "to": "https://spanopratt.com/wp-content/uploads/2026/10/Rock-River-Community-Clinic-Job-Profile-CEO.pdf"
+        }
+      }
+    },
+    {
+      "at": "2026-10-08T02:13:59.394379+00:00",
+      "type": "removed_false_positive",
+      "job_id": "62e62841416b764c",
+      "source": "Bridge Partners",
+      "title": "CEO and Executive Director",
+      "organization": "Functional Expertise",
+      "url": "https://bridgepartnersllc.com/function/ceo/"
+    },
+    {
+      "at": "2026-10-08T02:13:59.394379+00:00",
+      "type": "reopened",
+      "job_id": "62e62841416b764c",
+      "source": "Bridge Partners",
+      "title": "CEO and Executive Director",
+      "organization": "Functional Expertise"
+    },
+    {
+      "at": "2026-10-08T02:13:59.394379+00:00",
+      "type": "updated",
+      "job_id": "62e62841416b764c",
+      "source": "Bridge Partners",
+      "title": "CEO and Executive Director",
+      "organization": "Functional Expertise",
+      "changes": {
+        "status": {
+          "from": "closed",
+          "to": "open"
+        }
+      }
+    },
+    {
+      "at": "2026-10-08T02:13:59.394379+00:00",
+      "type": "updated",
+      "job_id": "b8e982953accafdb",
+      "source": "DSG Global",
+      "title": "Chief Executive Officer",
+      "organization": "Aeris Insight",
+      "changes": {
+        "organization": {
+          "from": "La Clinica de La Raza",
+          "to": "Aeris Insight"
+        },
+        "location": {
+          "from": "Oakland, CA",
+          "to": "Remote"
+        },
+        "url": {
+          "from": "https://www.dsgco.com/search/21682-la-clinica-de-la-raza-chief-executive-officer/",
+          "to": "https://www.dsgco.com/search/23172-aeris/"
+        },
+        "posted_date": {
+          "from": "2025-12-11",
+          "to": "2026-07-08"
+        },
+        "compensation_text": {
+          "from": "salary range for this position is $425,000 - $495,000, with a generous benefits package and bonus potential. Actual pay for the finalist candidate will be adjusted based on various factors, inc",
+          "to": "Compensation and Benefits Salary is competitive and commensurate with experience. The salary range for this role is $230,000 - $250,000 with a generous benefits package. The exact salary that will be offered to the CEO will be determined based on a consideration of the succe"
+        },
+        "compensation_min": {
+          "from": 425000,
+          "to": 230000
+        },
+        "compensation_max": {
+          "from": 495000,
+          "to": 250000
+        }
+      }
+    },
+    {
+      "at": "2026-10-08T02:13:59.394379+00:00",
+      "type": "updated",
+      "job_id": "9d9450d05842e801",
+      "source": "DSG Global",
+      "title": "Executive Director",
+      "organization": "The Doctors Clinic",
+      "changes": {
+        "organization": {
+          "from": "Stonewall Columbus",
+          "to": "The Doctors Clinic"
+        },
+        "location": {
+          "from": "Columbus, OH",
+          "to": "Silverdale, WA"
+        },
+        "url": {
+          "from": "https://www.dsgco.com/search/23450-stonewall-columbus-executive-director/",
+          "to": "https://www.dsgco.com/search/23372-the-doctors-clinic-executive-director/"
+        },
+        "posted_date": {
+          "from": "2026-09-21",
+          "to": "2026-08-26"
+        }
+      }
+    },
+    {
+      "at": "2026-10-08T02:13:59.394379+00:00",
+      "type": "closed",
+      "job_id": "6d2efc11ac38fb2f",
+      "source": "DSG Global",
+      "title": "Executive Director for Housing and Residence Life",
+      "organization": "North Carolina A&T State University"
+    },
+    {
+      "at": "2026-10-08T02:13:59.394379+00:00",
+      "type": "closed",
+      "job_id": "d4292837ee938bae",
+      "source": "DSG Global",
+      "title": "President",
+      "organization": "Highline College"
+    },
+    {
+      "at": "2026-10-08T02:13:59.394379+00:00",
+      "type": "updated",
+      "job_id": "bdb4fab450cecd43",
+      "source": "Kittleman Associates",
+      "title": "President and CEO",
+      "organization": "Gettysburg Foundation",
+      "changes": {
+        "organization": {
+          "from": "Mid-Ohio Food Collective",
+          "to": "Gettysburg Foundation"
+        },
+        "location": {
+          "from": "Grove City, OH, United States",
+          "to": "Gettysburg, PA, United States"
+        },
+        "url": {
+          "from": "https://www.kittlemansearch.com/opportunities/president-ceo-mid-ohio-food-collective",
+          "to": "https://www.kittlemansearch.com/opportunities/president-chief-executive-officer-gettysburg-foundation"
+        },
+        "posted_date": {
+          "from": "2026-09-10",
+          "to": "2026-10-01"
+        }
+      }
+    },
+    {
+      "at": "2026-10-08T02:13:59.394379+00:00",
+      "type": "updated",
+      "job_id": "bdb4fab450cecd43",
+      "source": "Kittleman Associates",
+      "title": "President and CEO",
+      "organization": "Viability, Inc.",
+      "changes": {
+        "organization": {
+          "from": "Mid-Ohio Food Collective",
+          "to": "Viability, Inc."
+        },
+        "location": {
+          "from": "Grove City, OH, United States",
+          "to": "Springfield, MA, United States"
+        },
+        "url": {
+          "from": "https://www.kittlemansearch.com/opportunities/president-ceo-mid-ohio-food-collective",
+          "to": "https://www.kittlemansearch.com/opportunities/president-ceo-viability"
+        },
+        "posted_date": {
+          "from": "2026-09-10",
+          "to": "2026-09-16"
+        }
+      }
+    },
+    {
+      "at": "2026-10-08T02:13:59.394379+00:00",
+      "type": "updated",
+      "job_id": "bdb4fab450cecd43",
+      "source": "Kittleman Associates",
+      "title": "President and CEO",
+      "organization": "Schoodic Institute at Acadia National Park",
+      "changes": {
+        "organization": {
+          "from": "Mid-Ohio Food Collective",
+          "to": "Schoodic Institute at Acadia National Park"
+        },
+        "location": {
+          "from": "Grove City, OH, United States",
+          "to": "Winter Harbor, ME, United States"
+        },
+        "url": {
+          "from": "https://www.kittlemansearch.com/opportunities/president-ceo-mid-ohio-food-collective",
+          "to": "https://www.kittlemansearch.com/opportunities/president-ceo-schoodic-institute"
+        },
+        "posted_date": {
+          "from": "2026-09-10",
+          "to": "2026-09-14"
+        }
+      }
+    },
+    {
+      "at": "2026-10-08T02:13:59.394379+00:00",
       "type": "updated",
       "job_id": "f9f133cf2577cc30",
       "source": "Spano Pratt",
