@@ -57,6 +57,45 @@ dialog{border:0;padding:0;background:transparent;width:min(520px,100%);max-width
 @media(max-width:940px){.stat-grid{grid-template-columns:repeat(2,1fr)}.market-grid{grid-template-columns:1fr}.control-card{grid-template-columns:1.5fr repeat(2,1fr)}.desktop-extra{display:none}.source-card{grid-template-columns:1fr 140px 60px}.source-notes{grid-column:1/-1}}
 @media(max-width:680px){.shell{padding:0 14px 54px}.mast{padding:22px 2px 14px}.mast-row{display:block}.update{text-align:left;margin-top:12px;min-width:0}.update strong{display:inline;margin-left:4px}.kicker{font-size:10px}h1{font-size:34px;max-width:330px}.deck{font-size:14px}.nav{padding-top:10px;margin:0 -4px}.nav button{padding:8px 10px}.market{padding-top:16px}.stat-grid{gap:8px}.stat-click{appearance:none;text-align:left;cursor:pointer;color:inherit}.stat-click:hover{transform:translateY(-1px);box-shadow:var(--shadow)}.comp-pill{font-weight:700;color:var(--teal)}
 .stat-card{padding:14px}.stat-value{font-size:27px}.stat-note{font-size:10px}.market-grid{gap:9px;margin-top:9px}.panel{padding:15px;border-radius:15px}.trend{height:165px;gap:5px}.week-label{font-size:9px}.role-grid{gap:6px}.role-box{padding:10px}.role-box b{font-size:20px}.section-head{align-items:flex-start}.section-head p{display:none}.controls{padding:8px 0}.control-card{grid-template-columns:1fr auto;padding:8px}.control-card .desktop-filter{display:none}.filter-button{display:block}.search-wrap input{padding-top:9px;padding-bottom:9px}.results-meta{margin:0 2px 13px}.date-group{margin-bottom:19px}.op-card{padding:15px 45px 14px 15px;border-radius:14px}.op-card-title{font-size:18px}.op-org{font-size:14px}.op-meta{gap:6px 10px;margin-top:8px}.op-foot{margin-top:9px}.save{right:10px;top:9px}.card-arrow{right:14px!important;bottom:11px!important}.source-summary{grid-template-columns:repeat(2,1fr);margin-top:17px}.source-card{grid-template-columns:1fr auto;padding:13px}.source-count{display:none}.source-notes{grid-column:1/-1}.method{font-size:10px}.panel-title{margin-bottom:12px}.panel-title span{display:none}.rank-row{grid-template-columns:minmax(90px,1.2fr) 1.6fr 28px}}
+
+.dossier-overlay{position:fixed;inset:0;background:rgba(24,31,29,.55);z-index:100;display:flex;align-items:flex-start;justify-content:center;padding:24px 14px;overflow:auto}
+.dossier-overlay[hidden]{display:none}
+.dossier-panel{position:relative;background:var(--card);border:1px solid var(--line);border-radius:18px;max-width:720px;width:100%;padding:28px 28px 24px;box-shadow:0 24px 64px rgba(24,31,29,.25);margin:20px 0}
+.dossier-close{position:absolute;top:14px;right:14px;border:1px solid var(--line);background:var(--paper-2);border-radius:50%;width:34px;height:34px;font-size:15px;cursor:pointer;color:var(--muted)}
+.dossier-close:hover{color:var(--ink);border-color:#b7c6c1}
+.dossier-kicker{font-size:12px;color:var(--muted);font-weight:700;margin-bottom:6px}
+.dossier-title{font-family:Georgia,"Times New Roman",serif;font-size:30px;font-weight:500;margin:0 0 4px;line-height:1.15}
+.dossier-org{font-size:17px;font-weight:770}
+.dossier-loc{font-size:13px;color:var(--muted);margin-top:4px}
+.dossier-sec{margin-top:18px;padding-top:16px;border-top:1px solid var(--line)}
+.dossier-sec h4{font-family:Georgia,serif;font-size:15px;font-weight:600;margin:0 0 10px;color:var(--ink)}
+.pay-compare{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.pay-box{background:var(--paper-2);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.pay-box .pay-label{font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:800}
+.pay-box .pay-val{font-family:Georgia,serif;font-size:22px;margin-top:4px}
+.pay-box .pay-note{font-size:11px;color:var(--muted);margin-top:2px}
+.similar-list{display:grid;gap:8px}
+.similar-card{background:var(--paper-2);border:1px solid var(--line);border-radius:12px;padding:12px 14px;cursor:pointer}
+.similar-card:hover{border-color:#b7c6c1}
+.similar-card .s-title{font-weight:750;font-size:14px}
+.similar-card .s-org{font-size:12px;color:var(--muted)}
+.dossier-cta{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap}
+.btn-primary{background:var(--teal);color:#fff;border:0;border-radius:10px;padding:12px 20px;font-weight:750;cursor:pointer;font-size:14px;text-decoration:none;display:inline-block}
+.btn-primary:hover{background:#0a423e}
+.btn-ghost{background:transparent;border:1px solid var(--line);border-radius:10px;padding:12px 18px;font-weight:700;cursor:pointer;color:var(--ink);font-size:14px}
+.placement-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+.placement-card .p-title{font-weight:750;font-size:16px}
+.placement-card .p-org{font-size:14px;margin-top:2px}
+.placement-card .p-meta{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px;font-size:12px;color:var(--muted)}
+.placement-card .p-status{display:inline-block;margin-top:8px;font-size:11px;font-weight:800;padding:3px 9px;border-radius:999px;background:#f0efeb;border:1px solid #dedbd3;color:#676d69}
+.closing-strip{margin:0 0 12px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px}
+.closing-label{display:block;font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:800;margin-bottom:8px}
+.closing-items{display:flex;gap:10px;overflow-x:auto;padding-bottom:4px;scrollbar-width:thin}
+.closing-item{flex:0 0 240px;border:1px solid var(--line);border-radius:10px;padding:10px 12px;text-decoration:none;color:inherit;background:var(--paper);display:grid;gap:3px}
+.closing-item:hover{border-color:#b7c6c1}
+.closing-item strong{font-size:13px;line-height:1.25}
+.closing-item span{font-size:12px;color:var(--ink)}
+.closing-item em{font-style:normal;font-size:11px;color:var(--teal);font-weight:700}
 </style>
 </head>
 <body>
@@ -75,6 +114,7 @@ dialog{border:0;padding:0;background:transparent;width:min(520px,100%);max-width
     <button data-view="opportunities">Opportunities</button>
     <button data-view="saved">Saved</button>
     <button data-view="firms">Firms</button>
+    <button data-view="placements">Placements</button>
     <button data-view="sources">Source health</button>
   </nav>
 </header>
@@ -108,6 +148,11 @@ dialog{border:0;padding:0;background:transparent;width:min(520px,100%);max-width
     <div class="panel-note">Chosen by revenue scale and pay, not recency — the largest organizations and the highest posted ranges surface here.</div>
   </div>
   <div class="briefing-section panel">
+    <div class="panel-title"><h2>Aging searches</h2><span>Longest-open CEO searches</span></div>
+    <div id="agingSearches" class="feed"></div>
+    <div class="panel-note">The searches open the longest — often the hardest to fill or the most selective.</div>
+  </div>
+  <div class="briefing-section panel">
     <div class="panel-title"><h2>Firm landscape</h2><span>Which firms work which segments</span></div>
     <div id="firmMatrix" style="overflow-x:auto"></div>
     <div class="panel-note">Rows are search firms; columns are organization revenue tiers. Cell counts are open searches. Click a firm to filter opportunities.</div>
@@ -136,6 +181,7 @@ dialog{border:0;padding:0;background:transparent;width:min(520px,100%);max-width
 
 
 <section id="opportunitiesView" class="view">
+  <div id="closingSoon"></div>
   <div class="controls">
     <div class="control-card">
       <div class="search-wrap"><span class="search-icon">⌕</span><input id="q" autocomplete="off" placeholder="Search role, organization, location or firm"></div>
@@ -145,6 +191,7 @@ dialog{border:0;padding:0;background:transparent;width:min(520px,100%);max-width
       <select id="orgType" class="desktop-filter desktop-extra"><option value="">All organization types</option></select>
       <select id="compFilter" class="desktop-filter desktop-extra"><option value="">Any compensation</option><option value="disclosed">Compensation disclosed</option><option value="reported">Latest CEO comp available</option></select>
       <select id="recency" class="desktop-filter desktop-extra"><option value="">Any date</option><option value="7">Last 7 days</option><option value="30">Last 30 days</option><option value="90">Last 90 days</option></select>
+      <select id="aging" class="desktop-filter desktop-extra" aria-label="Search age"><option value="">Any age</option><option value="under30">Open under 30 days</option><option value="30to90">Open 30&ndash;90 days</option><option value="over90">Open 90+ days</option></select>
       <select id="sort" class="desktop-filter" aria-label="Sort order"><option value="newest">Newest first</option><option value="org">Organization A–Z</option></select>
       <button class="filter-button" id="openFilters">Filters</button>
     </div>
@@ -158,6 +205,11 @@ dialog{border:0;padding:0;background:transparent;width:min(520px,100%);max-width
   <div id="savedJobs"></div>
 </section>
 
+<section id="placementsView" class="view">
+  <div class="section-head" style="margin-top:22px"><h2>Placements</h2><p>Recently closed searches. A closed search may mean a hire was made, the search was paused, or the listing was removed — <strong>the radar does not yet track confirmed placements.</strong></p></div>
+  <div id="placementList" class="feed"></div>
+</section>
+
 <section id="sourcesView" class="view">
   <div id="sourceSummary" class="source-summary"></div>
   <div id="sourceList" class="source-list"></div>
@@ -169,6 +221,12 @@ dialog{border:0;padding:0;background:transparent;width:min(520px,100%);max-width
   <div id="firmList" class="source-list"></div>
   <div class="method">Firm descriptions are short editorial summaries. Placement mix (roles, sectors, organization types) is derived from currently open roles the radar has observed from each firm.</div>
 </section>
+<div id="dossierOverlay" class="dossier-overlay" hidden>
+  <div class="dossier-panel" role="dialog" aria-modal="true" aria-labelledby="dossierTitle">
+    <button class="dossier-close" id="dossierClose" aria-label="Close dossier">✕</button>
+    <div id="dossierBody"></div>
+  </div>
+</div>
 </main>
 </div>
 
@@ -182,6 +240,7 @@ dialog{border:0;padding:0;background:transparent;width:min(520px,100%);max-width
       <select id="mOrgType"><option value="">All organization types</option></select>
       <select id="mCompFilter"><option value="">Any compensation</option><option value="disclosed">Compensation disclosed</option><option value="reported">Latest CEO comp available</option></select>
       <select id="mRecency"><option value="">Any date</option><option value="7">Last 7 days</option><option value="30">Last 30 days</option><option value="90">Last 90 days</option></select>
+      <select id="mAging"><option value="">Any age</option><option value="under30">Open under 30 days</option><option value="30to90">Open 30&ndash;90 days</option><option value="over90">Open 90+ days</option></select>
       <select id="mWork"><option value="">Any work arrangement</option><option>Remote</option><option>Hybrid</option><option>On-site / unspecified</option></select>
     </div>
     <div class="sheet-actions"><button type="button" class="clear" id="clearFilters">Clear</button><button class="apply" value="apply" id="applyFilters">Show results</button></div>
@@ -204,6 +263,8 @@ function recency(j){return j.posted_date || (j.first_seen||'').slice(0,10) || '0
 function daysSince(v){if(!v)return 99999;const d=new Date(v.length===10?v+'T12:00:00Z':v);return Math.floor((Date.now()-d.getTime())/86400000);}
 function isNew(j){if(j.baseline_seed||daysSince(j.first_seen)>7)return false;if(j.posted_date)return daysSince(j.posted_date)<=7;return true;}
 function isLongRunning(j){return !!j.posted_date && daysSince(j.posted_date)>=90;}
+function daysOpen(j){return daysSince(recency(j));}
+function daysUntil(v){if(!v)return 99999;const d=new Date(v.length===10?v+'T12:00:00Z':v);if(isNaN(d))return 99999;return Math.floor((d.getTime()-Date.now())/86400000);}
 function verifiedBadge(j){const v=(j.last_seen||'').slice(0,10);return v?`Verified ${fmtDate(v,false)}`:'';}
 function roleType(j){if(j.role_type)return j.role_type;const t=(j.title||'').toLowerCase();if(/chief executive officer|\bceo\b/.test(t))return 'CEO';if(t.includes('executive director'))return 'Executive Director';if(t.includes('president'))return 'President';return 'Other';}
 function dateBadge(j){if(j.posted_date){const approx=j.posted_date_status==='approximate'||j.date_basis==='posted_relative';return `${approx?'Approx. ':''}posted ${fmtDate(j.posted_date,false)}`;}return `First seen ${fmtDate((j.first_seen||'').slice(0,10),false)||'date unavailable'}`;}
@@ -213,21 +274,62 @@ function orgTypes(j){const a=Array.isArray(j.organization_types)&&j.organization
 function mandates(j){return Array.isArray(j.mandate_tags)?j.mandate_tags.filter(Boolean):[];}
 function compensation(j){if(j.compensation_min&&j.compensation_max){return j.compensation_min===j.compensation_max?money(j.compensation_min):`${money(j.compensation_min)}–${money(j.compensation_max)}`;}if(j.compensation_min)return `${money(j.compensation_min)}+`;return '';}
 function scaleText(j){const bits=[];if(j.org_revenue)bits.push(`Revenue ${money(j.org_revenue)}${j.org_financial_year?` (FY${j.org_financial_year})`:''}`);if(j.org_assets)bits.push(`Assets ${money(j.org_assets)}`);return bits.join(' · ');}
-function jobCard(j,compact=false){const fav=saved();const direct=j.link_quality==='direct'||(j.url&&j.source_url&&j.url!==j.source_url);const link=j.url||j.source_url||'#';const tags=[...orgTypes(j).slice(0,2),...sectorTags(j).slice(0,2)];return `<article class="op-card" tabindex="0" role="link" data-url="${esc(link)}" aria-label="Open ${esc(j.title)} at ${esc(j.organization)}">
+function jobCard(j,compact=false){const fav=saved();const direct=j.link_quality==='direct'||(j.url&&j.source_url&&j.url!==j.source_url);const link=j.url||j.source_url||'#';const tags=[...orgTypes(j).slice(0,2),...sectorTags(j).slice(0,2)];return `<article class="op-card" tabindex="0" role="link" data-id="${esc(j.id)}" data-url="${esc(link)}" aria-label="Open ${esc(j.title)} at ${esc(j.organization)}">
   <button class="save ${fav.has(j.id)?'on':''}" data-save="${esc(j.id)}" aria-label="Save role">${fav.has(j.id)?'★':'☆'}</button>
   <div class="op-kicker">${esc(j.source)}${direct?' · direct posting':' · source listing'}</div>
   <h3 class="op-title">${esc(j.title)}</h3>
   <div class="op-org">${esc(j.organization||'Organization confidential')}${j.parent_organization?` <span style="font-weight:400;color:var(--muted)">· part of ${esc(j.parent_organization)}</span>`:''}</div>
-  <div class="op-meta">${isNew(j)?'<span class="tag new">'+esc(j.posted_date?'New search':'New to radar')+'</span>':''}<span class="tag ${j.posted_date_status==='approximate'?'approx':''}">${esc(dateBadge(j))}</span>${isLongRunning(j)?`<span class="tag long">Open ${daysSince(j.posted_date)} days</span>`:''}${j.carried_over?'<span class="tag long" title="Source was unreachable; role carried over from last healthy check">Carried over</span>':''}${j.location?`<span>${esc(j.location)}</span>`:''}${tags.map(t=>`<span>${esc(t)}</span>`).join('')}${j.application_deadline?`<span>Apply by ${esc(fmtDate(j.application_deadline,false))}</span>`:''}</div>
+  <div class="op-meta">${isNew(j)?'<span class="tag new">'+esc(j.posted_date?'New search':'New to radar')+'</span>':''}<span class="tag ${j.posted_date_status==='approximate'?'approx':''}">${esc(dateBadge(j))}</span>${(()=>{const d=daysOpen(j);return d<99999?`<span class="tag ${d>=90?'long':''}">Open ${d} ${d===1?'day':'days'}</span>`:'';})()}${j.carried_over?'<span class="tag long" title="Source was unreachable; role carried over from last healthy check">Carried over</span>':''}${j.location?`<span>${esc(j.location)}</span>`:''}${tags.map(t=>`<span>${esc(t)}</span>`).join('')}${j.application_deadline?`<span>Apply by ${esc(fmtDate(j.application_deadline,false))}</span>`:''}</div>
   ${(compensation(j)||j.latest_reported_ceo_comp)?`<div class="op-pay"><span class="op-sec-label">Pay</span>${compensation(j)?`<span class="comp-pill" title="Published compensation">${esc(compensation(j))} <em>posted</em></span>`:''}${j.latest_reported_ceo_comp?`<span class="ceo-pay" title="${j.ceo_pay_context==='parent_org'?'Parent organization CEO pay from public Form 990 — this role is not the top executive':'Latest reported CEO compensation from public Form 990'}">${esc(money(j.latest_reported_ceo_comp))} <em>${j.ceo_pay_context==='parent_org'?'parent org 990':'990 CEO pay'}</em>${j.latest_reported_ceo_comp_year?' · '+j.latest_reported_ceo_comp_year:''}${j.ceo_pay_stale?' (stale)':''}</span>`:''}</div>`:''}
   ${!compact&&(j.org_mission||j.org_headcount||j.org_revenue_contributions!=null||j.org_net_assets!=null)?`<div class="op-orgintel"><span class="op-sec-label">Organization <em>· Form 990</em></span>${j.org_mission?`<p class="org-mission">${esc(j.org_mission)}</p>`:''}<div class="org-facts">${j.org_headcount?`<span><b>${esc(j.org_headcount.toLocaleString())}</b> employees</span>`:''}${j.org_board_size?`<span><b>${j.org_board_size}</b> board members</span>`:''}${j.org_program_ratio?`<span><b>${Math.round(j.org_program_ratio*100)}%</b> program spend</span>`:''}${j.org_revenue?`<span><b>${esc(money(j.org_revenue))}</b> revenue</span>`:''}${j.org_net_assets!=null?`<span><b>${esc(money(j.org_net_assets))}</b> net assets</span>`:''}</div>${(j.org_revenue_contributions!=null&&j.org_revenue)?(()=>{const c=j.org_revenue_contributions||0,p=j.org_revenue_program||0,t=j.org_revenue,o=Math.max(0,t-c-p),cp=Math.round(c/t*100),pp=Math.round(p/t*100),op=100-cp-pp;return `<div class="rev-mix"><div class="rev-bar"><div class="rev-seg rev-contrib" style="width:${cp}%" title="Contributions ${cp}%"></div><div class="rev-seg rev-prog" style="width:${pp}%" title="Program revenue ${pp}%"></div><div class="rev-seg rev-other" style="width:${op}%" title="Other ${op}%"></div></div><div class="rev-legend"><span><i class="sw rev-contrib"></i>Contributions ${cp}%</span><span><i class="sw rev-prog"></i>Program ${pp}%</span><span><i class="sw rev-other"></i>Other ${op}%</span></div></div>`;})():''}</div>`:''}
   ${!compact&&j.succession_reason?`<div class="op-foot">Succession: ${esc(j.succession_reason)}</div>`:''}
   <div class="op-foot">${esc(direct?'Open specific posting':'Open source listing')} ↗${j.last_seen?` · Verified ${esc(fmtDate((j.last_seen||'').slice(0,10),false))}`:''}</div>
 </article>`;}
-function bindCards(scope=document){scope.querySelectorAll('.op-card').forEach(c=>{const go=()=>{const u=c.dataset.url;if(u&&u!=='#')window.open(u,'_blank','noopener');};c.onclick=e=>{if(e.target.closest('[data-save]'))return;go();};c.onkeydown=e=>{if((e.key==='Enter'||e.key===' ')&&!e.target.closest('[data-save]')){e.preventDefault();go();}};});scope.querySelectorAll('[data-save]').forEach(b=>b.onclick=e=>{e.stopPropagation();const s=saved(),id=b.dataset.save;s.has(id)?s.delete(id):s.add(id);setSaved(s);renderAll();});}
-function currentJobs(){let jobs=[...(payload.jobs||[])];const q=($('#q')?.value||'').trim().toLowerCase(),role=$('#role')?.value||'',src=$('#source')?.value||'',sector=$('#sector')?.value||'',orgType=$('#orgType')?.value||'',compFilter=$('#compFilter')?.value||'',r=+($('#recency')?.value||0);if(q)jobs=jobs.filter(j=>[j.title,j.organization,j.parent_organization,j.location,j.source,...sectorTags(j),...orgTypes(j),...mandates(j),j.compensation_text].join(' ').toLowerCase().includes(q));if(role)jobs=jobs.filter(j=>roleType(j)===role);if(src)jobs=jobs.filter(j=>j.source===src);if(sector)jobs=jobs.filter(j=>sectorTags(j).includes(sector));if(orgType)jobs=jobs.filter(j=>orgTypes(j).includes(orgType));if(compFilter==='disclosed')jobs=jobs.filter(j=>j.compensation_min||j.compensation_text);if(compFilter==='reported')jobs=jobs.filter(j=>j.latest_reported_ceo_comp);if(r)jobs=jobs.filter(j=>daysSince(recency(j))<=r);if(mobileWork)jobs=jobs.filter(j=>(j.work_arrangement||'')===mobileWork);const sortMode=$('#sort')?.value||'newest';if(sortMode==='org')jobs.sort((a,b)=>(a.organization||'').localeCompare(b.organization||'')||recency(b).localeCompare(recency(a)));else jobs.sort((a,b)=>recency(b).localeCompare(recency(a))||(a.organization||'').localeCompare(b.organization||''));$('#sortLabel').textContent=sortMode==='org'?'Organization A–Z':'Newest first';return jobs;}
+function bindCards(scope=document){scope.querySelectorAll('.op-card').forEach(c=>{const go=()=>{const id=c.dataset.id;if(id&&typeof openDossier==='function'){openDossier(id);return;}const u=c.dataset.url;if(u&&u!=='#')window.open(u,'_blank','noopener');};c.onclick=e=>{if(e.target.closest('[data-save]'))return;go();};c.onkeydown=e=>{if((e.key==='Enter'||e.key===' ')&&!e.target.closest('[data-save]')){e.preventDefault();go();}};});scope.querySelectorAll('[data-save]').forEach(b=>b.onclick=e=>{e.stopPropagation();const s=saved(),id=b.dataset.save;s.has(id)?s.delete(id):s.add(id);setSaved(s);renderAll();});}
+function currentJobs(){let jobs=[...(payload.jobs||[])];const q=($('#q')?.value||'').trim().toLowerCase(),role=$('#role')?.value||'',src=$('#source')?.value||'',sector=$('#sector')?.value||'',orgType=$('#orgType')?.value||'',compFilter=$('#compFilter')?.value||'',r=+($('#recency')?.value||0);if(q)jobs=jobs.filter(j=>[j.title,j.organization,j.parent_organization,j.location,j.source,...sectorTags(j),...orgTypes(j),...mandates(j),j.compensation_text].join(' ').toLowerCase().includes(q));if(role)jobs=jobs.filter(j=>roleType(j)===role);if(src)jobs=jobs.filter(j=>j.source===src);if(sector)jobs=jobs.filter(j=>sectorTags(j).includes(sector));if(orgType)jobs=jobs.filter(j=>orgTypes(j).includes(orgType));if(compFilter==='disclosed')jobs=jobs.filter(j=>j.compensation_min||j.compensation_text);if(compFilter==='reported')jobs=jobs.filter(j=>j.latest_reported_ceo_comp);if(r)jobs=jobs.filter(j=>daysSince(recency(j))<=r);if(mobileWork)jobs=jobs.filter(j=>(j.work_arrangement||'')===mobileWork);const agingF=$('#aging')?.value||'';if(agingF==='under30')jobs=jobs.filter(j=>daysOpen(j)<30);else if(agingF==='30to90')jobs=jobs.filter(j=>{const d=daysOpen(j);return d>=30&&d<90;});else if(agingF==='over90')jobs=jobs.filter(j=>daysOpen(j)>=90);const sortMode=$('#sort')?.value||'newest';if(sortMode==='org')jobs.sort((a,b)=>(a.organization||'').localeCompare(b.organization||'')||recency(b).localeCompare(recency(a)));else jobs.sort((a,b)=>recency(b).localeCompare(recency(a))||(a.organization||'').localeCompare(b.organization||''));$('#sortLabel').textContent=sortMode==='org'?'Organization A–Z':'Newest first';return jobs;}
 function groupFeed(jobs,target){const el=$(target);if(!jobs.length){el.innerHTML='<div class="empty">No roles match these filters.</div>';return;}const groups=new Map();jobs.forEach(j=>{const k=recency(j);if(!groups.has(k))groups.set(k,[]);groups.get(k).push(j);});el.innerHTML=[...groups.entries()].map(([d,items])=>`<section class="date-group"><div class="date-head">${d==='0000-00-00'?'Date unavailable':fmtDate(d)}</div><div class="feed">${items.map(j=>jobCard(j)).join('')}</div></section>`).join('');bindCards(el);}
-function renderOpportunities(){const jobs=currentJobs();$('#resultsCount').innerHTML=`<strong>${jobs.length}</strong> active ${jobs.length===1?'search':'searches'}`;if(oppViewMode==='table')renderOppTable(jobs);else groupFeed(jobs,'#jobs');}
+
+function renderClosingSoon(){
+  const el=$('#closingSoon');if(!el)return;
+  const soon=(payload.jobs||[])
+    .map(function(j){return {j:j,d:daysUntil(j.application_deadline)};})
+    .filter(function(x){return x.d>=0&&x.d<=14;})
+    .sort(function(a,b){return a.d-b.d;});
+  if(!soon.length){el.innerHTML='';el.style.display='none';return;}
+  el.style.display='';
+  el.innerHTML='<div class="closing-strip" role="region" aria-label="Closing soon"><span class="closing-label">Closing soon</span><div class="closing-items">'
+    +soon.map(function(x){
+      const j=x.j,d=x.d;
+      const when=d===0?'Closes today':d===1?'Closes tomorrow':'Closes in '+d+' days';
+      return '<a class="closing-item" href="'+esc(j.url||j.source_url||'#')+'" target="_blank" rel="noopener">'
+        +'<strong>'+esc(j.title)+'</strong>'
+        +'<span>'+esc(j.organization||'Organization confidential')+'</span>'
+        +'<em>'+when+' \u00b7 '+esc(fmtDate(j.application_deadline,false))+' \u00b7 '+esc(j.source)+'</em>'
+        +'</a>';
+    }).join('')+'</div></div>';
+}
+function renderAgingSearches(){
+  const el=$('#agingSearches');if(!el)return;
+  const ranked=(payload.jobs||[])
+    .filter(j=>['CEO','President','Executive Director'].indexOf(roleType(j))>=0)
+    .map(j=>({j:j,d:daysOpen(j)}))
+    .filter(function(x){return x.d<99999;})
+    .sort(function(a,b){return b.d-a.d;})
+    .slice(0,5);
+  el.innerHTML=ranked.map(function(x){
+    const j=x.j,d=x.d;
+    return '<article class="op-card" data-id="'+esc(j.id)+'" data-url="'+esc(j.url||j.source_url||'#')+'" tabindex="0" role="link" aria-label="Open '+esc(j.title)+' at '+esc(j.organization)+'">'
+      +'<div class="op-kicker">'+esc(j.source)+'</div>'
+      +'<h3 class="op-title">'+esc(j.title)+'</h3>'
+      +'<div class="op-org">'+esc(j.organization||'Organization confidential')+'</div>'
+      +'<div class="op-meta"><span>'+esc(j.location||'Location not listed')+'</span><span class="tag '+(d>=90?'long':'')+'">Open '+d+' '+(d===1?'day':'days')+'</span></div>'
+      +'<div class="op-foot" style="color:var(--teal);font-weight:700">Why it matters: open '+d+' '+(d===1?'day':'days')+' \u2014 among the longest-running CEO searches on the radar</div>'
+      +'</article>';
+  }).join('')||'<div class="empty">No aging searches right now.</div>';
+  bindCards(el);
+}
+
+function renderOpportunities(){renderClosingSoon();const jobs=currentJobs();$('#resultsCount').innerHTML=`<strong>${jobs.length}</strong> active ${jobs.length===1?'search':'searches'}`;if(oppViewMode==='table')renderOppTable(jobs);else groupFeed(jobs,'#jobs');}
 function renderSaved(){const ids=saved(),jobs=(payload.jobs||[]).filter(j=>ids.has(j.id)).sort((a,b)=>recency(b).localeCompare(recency(a)));groupFeed(jobs,'#savedJobs');}
 function stat(label,value,note){return `<div class="stat-card"><div class="stat-label">${label}</div><div class="stat-value">${value}</div><div class="stat-note">${note}</div></div>`;}
 /* Phase 3: Market tab redesign — size tiers, pay dot plot, firm matrix, notable week. */
@@ -479,6 +581,7 @@ function renderMarket(){
   renderPayDotPlot();
   renderPayBenchmarks();
   renderNotableWeek();
+  renderAgingSearches();
   renderFirmMatrix();
   renderTrend();
   // Baseline marker on the activity chart.
@@ -557,13 +660,28 @@ return `<div class="source-card firm-card${isTop?' expandable':''}"${isTop?` tab
 // Expandable firm profiles
 document.querySelectorAll('.firm-card.expandable').forEach(c=>{c.onclick=e=>{if(e.target.tagName==='A')return;c.classList.toggle('expanded');const hint=c.querySelector('.firm-expand-hint');if(hint)hint.textContent=c.classList.contains('expanded')?'Click to collapse':'Click to expand profile';};c.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();c.click();}};});}
 function populateFilters(){const jobs=payload.jobs||[],sources=[...new Set(jobs.map(j=>j.source).filter(Boolean))].sort(),sectors=[...new Set(jobs.flatMap(sectorTags))].sort(),types=[...new Set(jobs.flatMap(orgTypes))].sort();for(const id of ['source','mSource'])$('#'+id).innerHTML='<option value="">All firms</option>'+sources.map(x=>`<option value="${esc(x)}">${esc(x)}</option>`).join('');for(const id of ['sector','mSector'])$('#'+id).innerHTML='<option value="">All sectors</option>'+sectors.map(x=>`<option value="${esc(x)}">${esc(x)}</option>`).join('');for(const id of ['orgType','mOrgType'])$('#'+id).innerHTML='<option value="">All organization types</option>'+types.map(x=>`<option value="${esc(x)}">${esc(x)}</option>`).join('');}
-function switchView(v){activeView=v;$$('.view').forEach(x=>x.classList.remove('active'));$('#'+v+'View').classList.add('active');$$('.nav button').forEach(b=>b.classList.toggle('active',b.dataset.view===v));if(v==='opportunities')renderOpportunities();if(v==='saved')renderSaved();if(v==='firms')renderFirms();if(v==='sources')renderSources();if(v==='market')renderMarket();window.scrollTo({top:0,behavior:'smooth'});}
-function syncMobileFromDesktop(){$('#mRole').value=$('#role').value;$('#mSource').value=$('#source').value;$('#mSector').value=$('#sector').value;$('#mOrgType').value=$('#orgType').value;$('#mCompFilter').value=$('#compFilter').value;$('#mRecency').value=$('#recency').value;$('#mWork').value=mobileWork;}
-function applyMobile(){$('#role').value=$('#mRole').value;$('#source').value=$('#mSource').value;$('#sector').value=$('#mSector').value;$('#orgType').value=$('#mOrgType').value;$('#compFilter').value=$('#mCompFilter').value;$('#recency').value=$('#mRecency').value;mobileWork=$('#mWork').value;renderOpportunities();}
+
+function findJob(id){return (payload.jobs||[]).find(j=>j.id===id)||((typeof history!=='undefined'&&history.jobs)||[]).find(j=>j.id===id);}
+function similarRoles(j){const secs=new Set(sectorTags(j)),tier=sizeTier(j);return (payload.jobs||[]).filter(o=>o.id!==j.id&&sizeTier(o)===tier&&sectorTags(o).some(s=>secs.has(s))).slice(0,3);}
+function whyMatters(j){const w=[];if(j.org_revenue)w.push(`${money(j.org_revenue)} revenue (${sizeTier(j)})`);if(j.compensation_min)w.push(`posted ${compensation(j)}`);if(j.latest_reported_ceo_comp&&j.ceo_pay_context!=='parent_org')w.push(`990 CEO pay ${money(j.latest_reported_ceo_comp)}`);return w.join(' \u00b7 ')||'A notable search on the radar';}
+function openDossier(id){const j=findJob(id);if(!j)return;const link=j.url||j.source_url||'#';const sim=similarRoles(j);const wm=whyMatters(j);
+const payHtml=(compensation(j)||j.latest_reported_ceo_comp)?`<div class="dossier-sec"><h4>Pay picture</h4><div class="pay-compare">${compensation(j)?`<div class="pay-box"><div class="pay-label">Posted range</div><div class="pay-val">${esc(compensation(j))}</div><div class="pay-note"><span class="trust">Verified</span> from posting</div></div>`:''}${j.latest_reported_ceo_comp&&j.ceo_pay_context!=='parent_org'?`<div class="pay-box"><div class="pay-label">990 CEO pay</div><div class="pay-val">${esc(money(j.latest_reported_ceo_comp))}</div><div class="pay-note"><span class="trust">Reported${j.latest_reported_ceo_comp_year?' '+j.latest_reported_ceo_comp_year:''}</span></div></div>`:''}</div></div>`:'';
+const orgHtml=(j.org_mission||j.org_headcount||j.org_revenue)?`<div class="dossier-sec"><h4>Organization <span class="trust">Reported</span></h4>${j.org_mission?`<p style="font-style:italic;font-size:14px;line-height:1.6">${esc(j.org_mission)}</p>`:''}<div class="org-facts" style="display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:10px;font-size:13px;color:var(--muted)">${j.org_headcount?`<span><b style="color:var(--ink)">${esc(j.org_headcount.toLocaleString())}</b> employees</span>`:''}${j.org_board_size?`<span><b style="color:var(--ink)">${j.org_board_size}</b> board members</span>`:''}${j.org_program_ratio?`<span><b style="color:var(--ink)">${Math.round(j.org_program_ratio*100)}%</b> program spend</span>`:''}${j.org_revenue?`<span><b style="color:var(--ink)">${esc(money(j.org_revenue))}</b> revenue</span>`:''}${j.org_net_assets!=null?`<span><b style="color:var(--ink)">${esc(money(j.org_net_assets))}</b> net assets</span>`:''}</div></div>`:'';
+const simHtml=sim.length?`<div class="dossier-sec"><h4>Similar roles</h4><div class="similar-list">${sim.map(s=>`<div class="similar-card" data-sim="${esc(s.id)}" tabindex="0"><div class="s-title">${esc(s.title)}</div><div class="s-org">${esc(s.organization||'')} \u00b7 ${esc(s.source||'')}</div></div>`).join('')}</div></div>`:'';
+$('#dossierBody').innerHTML=`<div class="dossier-kicker">${esc(j.source||'')}</div><h2 class="dossier-title" id="dossierTitle">${esc(j.title||'')}</h2><div class="dossier-org">${esc(j.organization||'Organization confidential')}</div><div class="dossier-loc">${esc(j.location||'Location not listed')}${j.application_deadline?` \u00b7 Apply by ${esc(fmtDate(j.application_deadline,false))}`:''}</div><div class="dossier-sec"><h4>Why it matters</h4><p style="font-size:14px;line-height:1.6">${esc(wm)}</p></div>${payHtml}${orgHtml}${simHtml}<div class="dossier-cta">${link&&link!=='#'?`<a class="btn-primary" href="${esc(link)}" target="_blank" rel="noopener">View original posting \u2197</a>`:''}<button class="btn-ghost" id="dossierSave" data-save="${esc(j.id)}">${saved().has(j.id)?'\u2605 Saved':'\u2606 Save role'}</button></div>`;
+$('#dossierOverlay').hidden=false;document.body.style.overflow='hidden';
+$$('#dossierBody [data-sim]').forEach(c=>{c.onclick=()=>openDossier(c.dataset.sim);c.onkeydown=e=>{if(e.key==='Enter')openDossier(c.dataset.sim);};});
+const sv=$('#dossierSave');if(sv)sv.onclick=e=>{e.stopPropagation();const s=saved();s.has(j.id)?s.delete(j.id):s.add(j.id);setSaved(s);openDossier(j.id);renderAll();};}
+function closeDossier(){$('#dossierOverlay').hidden=true;document.body.style.overflow='';}
+function renderPlacements(){const el=$('#placementList');if(!el)return;const hist=(typeof history!=='undefined'&&history.jobs)||[];const closed=hist.filter(j=>j.status==='closed').sort((a,b)=>(b.last_seen||'').localeCompare(a.last_seen||'')).slice(0,30);if(!closed.length){el.innerHTML='<div class="empty">No closed searches in history yet.</div>';return;}el.innerHTML=closed.map(j=>{const days=j.first_seen&&j.last_seen?Math.max(1,Math.round((new Date(j.last_seen)-new Date(j.first_seen))/86400000)):null;return `<div class="placement-card"><div class="p-title">${esc(j.title||'')}</div><div class="p-org">${esc(j.organization||'')} \u00b7 ${esc(j.source||'')}</div><div class="p-meta">${j.location?`<span>${esc(j.location)}</span>`:''}${j.last_seen?`<span>Closed ${esc(fmtDate((j.last_seen||'').slice(0,10),false))}</span>`:''}${days?`<span>Open ${days} days</span>`:''}</div><span class="p-status">Closed \u2014 outcome unknown</span></div>`;}).join('');}
+
+function switchView(v){activeView=v;$$('.view').forEach(x=>x.classList.remove('active'));$('#'+v+'View').classList.add('active');$$('.nav button').forEach(b=>b.classList.toggle('active',b.dataset.view===v));if(v==='opportunities')renderOpportunities();if(v==='saved')renderSaved();if(v==='firms')renderFirms();if(v==='placements')renderPlacements();if(v==='sources')renderSources();if(v==='market')renderMarket();window.scrollTo({top:0,behavior:'smooth'});}
+function syncMobileFromDesktop(){$('#mRole').value=$('#role').value;$('#mSource').value=$('#source').value;$('#mSector').value=$('#sector').value;$('#mOrgType').value=$('#orgType').value;$('#mCompFilter').value=$('#compFilter').value;$('#mRecency').value=$('#recency').value;$('#mAging').value=$('#aging').value;$('#mWork').value=mobileWork;}
+function applyMobile(){$('#role').value=$('#mRole').value;$('#source').value=$('#mSource').value;$('#sector').value=$('#mSector').value;$('#orgType').value=$('#mOrgType').value;$('#compFilter').value=$('#mCompFilter').value;$('#recency').value=$('#mRecency').value;$('#aging').value=$('#mAging').value;mobileWork=$('#mWork').value;renderOpportunities();}
 function renderAll(){renderMarket();renderOpportunities();renderSaved();renderFirms();renderSources();}
 async function fetchJson(name,current,validator){try{const r=await fetch(name+'?ts='+Date.now(),{cache:'no-store'});if(r.ok){const d=await r.json();if(validator(d))return d;}}catch(e){}return current;}
 async function boot(){payload=await fetchJson('jobs.json',payload,d=>Array.isArray(d.jobs));meta=await fetchJson('meta.json',meta,d=>Array.isArray(d.sources));history=await fetchJson('history.json',history,d=>Array.isArray(d.jobs));changes=await fetchJson('changes.json',changes,d=>Array.isArray(d.events));const generated=payload.generated_at||meta.generated_at;$('#lastRefresh').textContent=generated?`Updated ${fmtDate(generated)} · ${new Date(generated).toLocaleTimeString([],{hour:'numeric',minute:'2-digit'})}`:'Not run yet';populateFilters();renderAll();}
-$$('.nav button').forEach(b=>b.onclick=()=>switchView(b.dataset.view));['q','role','source','sector','orgType','compFilter','recency','sort'].forEach(id=>$('#'+id).addEventListener(id==='q'?'input':'change',renderOpportunities));$$('#viewToggle button').forEach(b=>b.onclick=()=>{oppViewMode=b.dataset.vm;$$('#viewToggle button').forEach(x=>x.classList.toggle('active',x===b));renderOpportunities();});$('#openFilters').onclick=()=>{syncMobileFromDesktop();$('#filterDialog').showModal();};$('#applyFilters').onclick=()=>applyMobile();$('#clearFilters').onclick=()=>{['mRole','mSource','mSector','mOrgType','mCompFilter','mRecency','mWork'].forEach(id=>$('#'+id).value='');mobileWork='';applyMobile();};boot();
+$$('.nav button').forEach(b=>b.onclick=()=>switchView(b.dataset.view));['q','role','source','sector','orgType','compFilter','recency','aging','sort'].forEach(id=>$('#'+id).addEventListener(id==='q'?'input':'change',renderOpportunities));$$('#viewToggle button').forEach(b=>b.onclick=()=>{oppViewMode=b.dataset.vm;$$('#viewToggle button').forEach(x=>x.classList.toggle('active',x===b));renderOpportunities();});$('#openFilters').onclick=()=>{syncMobileFromDesktop();$('#filterDialog').showModal();};$('#applyFilters').onclick=()=>applyMobile();$('#dossierClose').onclick=closeDossier;$('#dossierOverlay').addEventListener('click',e=>{if(e.target.id==='dossierOverlay')closeDossier();});document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!$('#dossierOverlay').hidden)closeDossier();});$('#clearFilters').onclick=()=>{['mRole','mSource','mSector','mOrgType','mCompFilter','mRecency','mAging','mWork'].forEach(id=>$('#'+id).value='');mobileWork='';applyMobile();};boot();
 </script>
 </body>
 </html>
