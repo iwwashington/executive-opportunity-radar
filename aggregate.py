@@ -2287,7 +2287,7 @@ def fetch_wikipedia_description(org_name: str) -> tuple[str, str]:
             "action": "query", "format": "json", "prop": "extracts",
             "exintro": True, "explaintext": True, "exchars": 300,
             "titles": org_name
-        }, timeout=10, headers={"User-Agent": "ExecutiveOpportunityRadar/1.0"})
+        }, timeout=10, headers={"User-Agent": HEADERS["User-Agent"]})
         if r.status_code == 200:
             pages = r.json().get("query", {}).get("pages", {})
             for pid, p in pages.items():
