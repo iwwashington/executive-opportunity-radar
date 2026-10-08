@@ -1,0 +1,160 @@
+diff --git a/index.html b/index.html
+index 02d4c5c..55f4e94 100644
+--- a/index.html
++++ b/index.html
+@@ -29,7 +29,15 @@ h1{font-family:Georgia,"Times New Roman",serif;font-weight:500;font-size:42px;li
+ .date-group{margin-bottom:24px}.date-head{display:flex;align-items:center;gap:12px;font-size:11px;text-transform:uppercase;letter-spacing:.1em;font-weight:850;color:var(--muted);margin:0 2px 9px}.date-head:after{content:"";height:1px;background:var(--line);flex:1}.feed{display:grid;gap:9px}
+ .op-card{position:relative;background:var(--card);border:1px solid var(--line);border-radius:15px;padding:17px 56px 16px 18px;box-shadow:0 2px 12px rgba(24,31,29,.025);cursor:pointer;transition:transform .14s ease,border-color .14s ease,box-shadow .14s ease;outline:none}.op-card:hover,.op-card:focus-visible{border-color:#b7c6c1;box-shadow:0 8px 24px rgba(24,31,29,.065);transform:translateY(-1px)}.op-card:focus-visible{box-shadow:0 0 0 3px rgba(13,85,80,.16)}.op-card-title{font-family:Georgia,"Times New Roman",serif;font-size:20px;line-height:1.18;font-weight:500;margin:0}.op-org{font-size:15px;font-weight:770;margin-top:3px}.op-meta{display:flex;gap:7px 13px;align-items:center;flex-wrap:wrap;margin-top:10px;color:var(--muted);font-size:12px}.tag{display:inline-flex;align-items:center;gap:5px;border-radius:999px;padding:3px 7px;background:var(--paper-2);border:1px solid #e5e1d8}.tag.new{background:var(--teal-2);border-color:#cfe2dd;color:var(--teal);font-weight:850}.tag.approx{background:var(--gold-2);border-color:#ead7b7;color:#7a531f}.tag.long{background:#f0efeb;border-color:#dedbd3;color:#676d69}.op-990v3{margin-top:10px;padding-top:10px;border-top:1px solid var(--line);font-size:12px}.rev-mix-label{font-weight:700;color:var(--ink);display:block;margin-bottom:6px}.rev-bar{display:flex;height:8px;border-radius:999px;overflow:hidden;background:#ebe7df;margin-bottom:6px}.rev-seg{height:100%}.rev-contrib{background:var(--teal)}.rev-prog{background:var(--gold)}.rev-other{background:#d8d4c9}.rev-legend{display:flex;gap:12px;flex-wrap:wrap;color:var(--muted);font-size:11px}.rev-legend .sw{display:inline-block;width:8px;height:8px;border-radius:2px;margin-right:4px}.org-mission{margin-top:8px;font-size:13px;line-height:1.5;color:var(--ink);font-style:italic}.org-scale{margin-top:6px;font-size:12px;color:var(--muted)}.net-assets{margin-top:8px;color:var(--ink)}.op-foot{display:flex;gap:10px;align-items:center;margin-top:11px;color:var(--muted);font-size:11px}.firm{font-weight:750;color:#4f5b57}.link-note{opacity:.75}.card-arrow{position:absolute;right:18px;top:50%;transform:translateY(-50%);font-size:20px;color:#8a928e;transition:transform .14s ease,color .14s ease}.op-card:hover .card-arrow{transform:translate(3px,-50%);color:var(--teal)}.save{position:absolute;right:15px;top:12px;border:0;background:transparent;color:#a2a6a3;font-size:19px;line-height:1;padding:5px;cursor:pointer;z-index:3;border-radius:50%}.save:hover{background:#efede7}.save.on{color:var(--gold)}.op-card .card-arrow{top:auto;bottom:13px;transform:none}.op-card:hover .card-arrow{transform:translateX(3px)}
+ .empty{border:1px dashed #c9c5bc;background:rgba(255,254,250,.65);border-radius:16px;padding:38px 20px;text-align:center;color:var(--muted)}
+-.source-summary{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:22px 0 14px}.mini-stat{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:13px}.mini-stat b{font-family:Georgia,"Times New Roman",serif;font-size:25px;font-weight:500;display:block}.mini-stat span{font-size:11px;color:var(--muted)}.source-list{display:grid;gap:8px}.firm-card.expandable{cursor:pointer}.firm-card.expandable:hover{border-color:#b7c6c1}.firm-profile{display:none;margin-top:12px;padding-top:12px;border-top:1px solid var(--line)}.firm-card.expanded .firm-profile{display:block}.firm-block{margin-bottom:12px}.firm-block h4{font-family:Georgia,serif;font-size:14px;font-weight:600;margin:0 0 6px;color:var(--ink)}.firm-block p{font-size:13px;line-height:1.5;margin:0 0 6px;color:var(--ink)}.firm-examples{font-size:12px;color:var(--muted);font-style:italic}.firm-expand-hint{font-size:11px;color:var(--teal);margin-top:8px;font-weight:600}.trust{font-size:10px;background:#f0efeb;border:1px solid #dedbd3;border-radius:999px;padding:2px 6px;color:#676d69;font-weight:700}.inferred{border-left:3px solid var(--gold);padding-left:10px}.source-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;display:grid;grid-template-columns:minmax(190px,1.2fr) 170px 70px 1.7fr;gap:15px;align-items:start}.source-name{font-weight:780}.source-name a{color:inherit;text-decoration:none}.source-group{font-size:10px;color:var(--muted);margin-top:2px}.source-status{font-size:11px;font-weight:850}.s-ok{color:var(--green)}.s-warn{color:var(--gold)}.s-bad{color:var(--red)}.s-muted{color:var(--muted)}.source-count{font-variant-numeric:tabular-nums;text-align:center}.source-notes{font-size:11px;color:var(--muted)}.source-error{color:var(--red);font-weight:700;margin-bottom:3px}
++.source-summary{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:22px 0 14px}.mini-stat{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:13px}.mini-stat b{font-family:Georgia,"Times New Roman",serif;font-size:25px;font-weight:500;display:block}.mini-stat span{font-size:11px;color:var(--muted)}.source-list{display:grid;gap:8px}.firm-card.expandable{cursor:pointer}.firm-card.expandable:hover{border-color:#b7c6c1}.firm-profile{display:none;margin-top:12px;padding-top:12px;border-top:1px solid var(--line)}.firm-card.expanded .firm-profile{display:block}.firm-block{margin-bottom:12px}.firm-block h4{font-family:Georgia,serif;font-size:14px;font-weight:600;margin:0 0 6px;color:var(--ink)}.firm-block p{font-size:13px;line-height:1.5;margin:0 0 6px;color:var(--ink)}.firm-examples{font-size:12px;color:var(--muted);font-style:italic}.closing-strip{margin:0 0 12px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;box-shadow:var(--shadow)}
++.closing-label{display:block;font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:800;margin-bottom:8px}
++.closing-items{display:flex;gap:10px;overflow-x:auto;padding-bottom:4px;scrollbar-width:thin}
++.closing-item{flex:0 0 240px;border:1px solid var(--line);border-radius:10px;padding:10px 12px;text-decoration:none;color:inherit;background:var(--paper);display:grid;gap:3px}
++.closing-item:hover{border-color:#b7c6c1}
++.closing-item strong{font-size:13px;line-height:1.25}
++.closing-item span{font-size:12px;color:var(--ink)}
++.closing-item em{font-style:normal;font-size:11px;color:var(--teal);font-weight:700}
++.firm-expand-hint{font-size:11px;color:var(--teal);margin-top:8px;font-weight:600}.trust{font-size:10px;background:#f0efeb;border:1px solid #dedbd3;border-radius:999px;padding:2px 6px;color:#676d69;font-weight:700}.inferred{border-left:3px solid var(--gold);padding-left:10px}.source-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;display:grid;grid-template-columns:minmax(190px,1.2fr) 170px 70px 1.7fr;gap:15px;align-items:start}.source-name{font-weight:780}.source-name a{color:inherit;text-decoration:none}.source-group{font-size:10px;color:var(--muted);margin-top:2px}.source-status{font-size:11px;font-weight:850}.s-ok{color:var(--green)}.s-warn{color:var(--gold)}.s-bad{color:var(--red)}.s-muted{color:var(--muted)}.source-count{font-variant-numeric:tabular-nums;text-align:center}.source-notes{font-size:11px;color:var(--muted)}.source-error{color:var(--red);font-weight:700;margin-bottom:3px}
+ .firm-mix{display:flex;gap:10px;font-size:11px;color:var(--muted);margin-top:5px}.firm-mix span:first-child{flex:0 0 62px;font-weight:750;color:var(--ink)}.firm-mix b{color:var(--ink)}
+ .take-line{font-size:14px;padding:7px 0;border-bottom:1px solid var(--line)}.take-line:last-child{border-bottom:0}.take-line:first-child{font-weight:750}
+ .method{font-size:11px;color:var(--muted);margin:18px 2px 0;max-width:900px}.method strong{color:var(--ink)}
+@@ -82,6 +90,11 @@ dialog{border:0;padding:0;background:transparent;width:min(520px,100%);max-width
+     <div id="notableWeek" class="feed"></div>
+     <div class="panel-note">Chosen by revenue scale and pay, not recency — the largest organizations and the highest posted ranges surface here.</div>
+   </div>
++  <div class="briefing-section panel">
++    <div class="panel-title"><h2>Aging searches</h2><span>Longest-open CEO searches</span></div>
++    <div id="agingSearches" class="feed"></div>
++    <div class="panel-note">The searches open the longest — often the hardest to fill or the most selective.</div>
++  </div>
+   <div class="briefing-section panel">
+     <div class="panel-title"><h2>Firm landscape</h2><span>Which firms work which segments</span></div>
+     <div id="firmMatrix" style="overflow-x:auto"></div>
+@@ -111,6 +124,7 @@ dialog{border:0;padding:0;background:transparent;width:min(520px,100%);max-width
+ 
+ 
+ <section id="opportunitiesView" class="view">
++  <div id="closingSoon"></div>
+   <div class="controls">
+     <div class="control-card">
+       <div class="search-wrap"><span class="search-icon">⌕</span><input id="q" autocomplete="off" placeholder="Search role, organization, location or firm"></div>
+@@ -120,6 +134,7 @@ dialog{border:0;padding:0;background:transparent;width:min(520px,100%);max-width
+       <select id="orgType" class="desktop-filter desktop-extra"><option value="">All organization types</option></select>
+       <select id="compFilter" class="desktop-filter desktop-extra"><option value="">Any compensation</option><option value="disclosed">Compensation disclosed</option><option value="reported">Latest CEO comp available</option></select>
+       <select id="recency" class="desktop-filter desktop-extra"><option value="">Any date</option><option value="7">Last 7 days</option><option value="30">Last 30 days</option><option value="90">Last 90 days</option></select>
++      <select id="aging" class="desktop-filter desktop-extra" aria-label="Search age"><option value="">Any age</option><option value="under30">Open under 30 days</option><option value="30to90">Open 30&ndash;90 days</option><option value="over90">Open 90+ days</option></select>
+       <select id="sort" class="desktop-filter" aria-label="Sort order"><option value="newest">Newest first</option><option value="org">Organization A–Z</option></select>
+       <button class="filter-button" id="openFilters">Filters</button>
+     </div>
+@@ -157,6 +172,7 @@ dialog{border:0;padding:0;background:transparent;width:min(520px,100%);max-width
+       <select id="mOrgType"><option value="">All organization types</option></select>
+       <select id="mCompFilter"><option value="">Any compensation</option><option value="disclosed">Compensation disclosed</option><option value="reported">Latest CEO comp available</option></select>
+       <select id="mRecency"><option value="">Any date</option><option value="7">Last 7 days</option><option value="30">Last 30 days</option><option value="90">Last 90 days</option></select>
++      <select id="mAging"><option value="">Any age</option><option value="under30">Open under 30 days</option><option value="30to90">Open 30&ndash;90 days</option><option value="over90">Open 90+ days</option></select>
+       <select id="mWork"><option value="">Any work arrangement</option><option>Remote</option><option>Hybrid</option><option>On-site / unspecified</option></select>
+     </div>
+     <div class="sheet-actions"><button type="button" class="clear" id="clearFilters">Clear</button><button class="apply" value="apply" id="applyFilters">Show results</button></div>
+@@ -179,6 +195,8 @@ function recency(j){return j.posted_date || (j.first_seen||'').slice(0,10) || '0
+ function daysSince(v){if(!v)return 99999;const d=new Date(v.length===10?v+'T12:00:00Z':v);return Math.floor((Date.now()-d.getTime())/86400000);}
+ function isNew(j){if(j.baseline_seed||daysSince(j.first_seen)>7)return false;if(j.posted_date)return daysSince(j.posted_date)<=7;return true;}
+ function isLongRunning(j){return !!j.posted_date && daysSince(j.posted_date)>=90;}
++function daysOpen(j){return daysSince(recency(j));}
++function daysUntil(v){if(!v)return 99999;const d=new Date(v.length===10?v+'T12:00:00Z':v);if(isNaN(d))return 99999;return Math.floor((d.getTime()-Date.now())/86400000);}
+ function verifiedBadge(j){const v=(j.last_seen||'').slice(0,10);return v?`Verified ${fmtDate(v,false)}`:'';}
+ function roleType(j){if(j.role_type)return j.role_type;const t=(j.title||'').toLowerCase();if(/chief executive officer|\bceo\b/.test(t))return 'CEO';if(t.includes('executive director'))return 'Executive Director';if(t.includes('president'))return 'President';return 'Other';}
+ function dateBadge(j){if(j.posted_date){const approx=j.posted_date_status==='approximate'||j.date_basis==='posted_relative';return `${approx?'Approx. ':''}posted ${fmtDate(j.posted_date,false)}`;}return `First seen ${fmtDate((j.first_seen||'').slice(0,10),false)||'date unavailable'}`;}
+@@ -193,15 +211,38 @@ function jobCard(j,compact=false){const fav=saved();const direct=j.link_quality=
+   <div class="op-kicker">${esc(j.source)}${direct?' · direct posting':' · source listing'}</div>
+   <h3 class="op-title">${esc(j.title)}</h3>
+   <div class="op-org">${esc(j.organization||'Organization confidential')}${j.parent_organization?` <span style="font-weight:400;color:var(--muted)">· part of ${esc(j.parent_organization)}</span>`:''}</div>
+-  <div class="op-meta">${isNew(j)?'<span class="tag new">'+esc(j.posted_date?'New search':'New to radar')+'</span>':''}<span class="tag ${j.posted_date_status==='approximate'?'approx':''}">${esc(dateBadge(j))}</span>${isLongRunning(j)?`<span class="tag long">Open ${daysSince(j.posted_date)} days</span>`:''}${j.carried_over?'<span class="tag long" title="Source was unreachable; role carried over from last healthy check">Carried over</span>':''}${j.location?`<span>${esc(j.location)}</span>`:''}${compensation(j)?`<span class="comp-pill" title="Published compensation">${esc(compensation(j))}</span>`:''}${j.latest_reported_ceo_comp?`<span title="${j.ceo_pay_context==='parent_org'?'Parent organization CEO pay from public Form 990 — this role is not the top executive':'Latest reported CEO compensation from public Form 990'}">${esc(money(j.latest_reported_ceo_comp))} ${j.ceo_pay_context==='parent_org'?'parent org CEO pay':'latest reported CEO comp'}${j.latest_reported_ceo_comp_year?' · '+j.latest_reported_ceo_comp_year:''}${j.ceo_pay_stale?' (stale)':''}</span>`:''}${tags.map(t=>`<span>${esc(t)}</span>`).join('')}${j.application_deadline?`<span>Apply by ${esc(fmtDate(j.application_deadline,false))}</span>`:''}${scaleText(j)?`<span>${esc(scaleText(j))}</span>`:''}</div>
++  <div class="op-meta">${isNew(j)?'<span class="tag new">'+esc(j.posted_date?'New search':'New to radar')+'</span>':''}<span class="tag ${j.posted_date_status==='approximate'?'approx':''}">${esc(dateBadge(j))}</span>${(()=>{const d=daysOpen(j);return d<99999?`<span class="tag ${d>=90?'long':''}">Open ${d} ${d===1?'day':'days'}</span>`:'';})()}${j.carried_over?'<span class="tag long" title="Source was unreachable; role carried over from last healthy check">Carried over</span>':''}${j.location?`<span>${esc(j.location)}</span>`:''}${compensation(j)?`<span class="comp-pill" title="Published compensation">${esc(compensation(j))}</span>`:''}${j.latest_reported_ceo_comp?`<span title="${j.ceo_pay_context==='parent_org'?'Parent organization CEO pay from public Form 990 — this role is not the top executive':'Latest reported CEO compensation from public Form 990'}">${esc(money(j.latest_reported_ceo_comp))} ${j.ceo_pay_context==='parent_org'?'parent org CEO pay':'latest reported CEO comp'}${j.latest_reported_ceo_comp_year?' · '+j.latest_reported_ceo_comp_year:''}${j.ceo_pay_stale?' (stale)':''}</span>`:''}${tags.map(t=>`<span>${esc(t)}</span>`).join('')}${j.application_deadline?`<span>Apply by ${esc(fmtDate(j.application_deadline,false))}</span>`:''}${scaleText(j)?`<span>${esc(scaleText(j))}</span>`:''}</div>
+   ${!compact&&(j.org_revenue_contributions!=null||j.org_net_assets!=null)?`<div class="op-990v3">${(j.org_revenue_contributions!=null&&j.org_revenue)?(()=>{const c=j.org_revenue_contributions||0,p=j.org_revenue_program||0,t=j.org_revenue,o=Math.max(0,t-c-p),cp=Math.round(c/t*100),pp=Math.round(p/t*100),op=100-cp-pp;return `<div class="rev-mix"><span class="rev-mix-label">Revenue mix <span class="trust">Reported</span></span><div class="rev-bar"><div class="rev-seg rev-contrib" style="width:${cp}%" title="Contributions ${cp}%"></div><div class="rev-seg rev-prog" style="width:${pp}%" title="Program revenue ${pp}%"></div><div class="rev-seg rev-other" style="width:${op}%" title="Other ${op}%"></div></div><div class="rev-legend"><span><i class="sw rev-contrib"></i>Contributions ${cp}%</span><span><i class="sw rev-prog"></i>Program ${pp}%</span><span><i class="sw rev-other"></i>Other ${op}%</span></div></div>`;})():''}${j.org_net_assets!=null?`<div class="net-assets">Net assets ${esc(money(j.org_net_assets))} <span class="trust">Reported${j.org_financial_year?' '+j.org_financial_year:''}</span></div>`:''}${j.org_mission?`<div class="org-mission">${esc(j.org_mission)} <span class="trust">Reported</span></div>`:''}${j.org_headcount?`<div class="org-scale">${esc(j.org_headcount.toLocaleString())} employees${j.org_board_size?` · ${j.org_board_size}-member board`:''}${j.org_program_ratio?` · ${Math.round(j.org_program_ratio*100)}% program spend`:''} <span class="trust">Reported</span></div>`:''}</div>`:''}
+   ${!compact&&j.succession_reason?`<div class="op-foot">Succession: ${esc(j.succession_reason)}</div>`:''}
+   <div class="op-foot">${esc(direct?'Open specific posting':'Open source listing')} ↗${j.last_seen?` · Verified ${esc(fmtDate((j.last_seen||'').slice(0,10),false))}`:''}</div>
+ </article>`;}
+ function bindCards(scope=document){scope.querySelectorAll('.op-card').forEach(c=>{const go=()=>{const u=c.dataset.url;if(u&&u!=='#')window.open(u,'_blank','noopener');};c.onclick=e=>{if(e.target.closest('[data-save]'))return;go();};c.onkeydown=e=>{if((e.key==='Enter'||e.key===' ')&&!e.target.closest('[data-save]')){e.preventDefault();go();}};});scope.querySelectorAll('[data-save]').forEach(b=>b.onclick=e=>{e.stopPropagation();const s=saved(),id=b.dataset.save;s.has(id)?s.delete(id):s.add(id);setSaved(s);renderAll();});}
+-function currentJobs(){let jobs=[...(payload.jobs||[])];const q=($('#q')?.value||'').trim().toLowerCase(),role=$('#role')?.value||'',src=$('#source')?.value||'',sector=$('#sector')?.value||'',orgType=$('#orgType')?.value||'',compFilter=$('#compFilter')?.value||'',r=+($('#recency')?.value||0);if(q)jobs=jobs.filter(j=>[j.title,j.organization,j.parent_organization,j.location,j.source,...sectorTags(j),...orgTypes(j),...mandates(j),j.compensation_text].join(' ').toLowerCase().includes(q));if(role)jobs=jobs.filter(j=>roleType(j)===role);if(src)jobs=jobs.filter(j=>j.source===src);if(sector)jobs=jobs.filter(j=>sectorTags(j).includes(sector));if(orgType)jobs=jobs.filter(j=>orgTypes(j).includes(orgType));if(compFilter==='disclosed')jobs=jobs.filter(j=>j.compensation_min||j.compensation_text);if(compFilter==='reported')jobs=jobs.filter(j=>j.latest_reported_ceo_comp);if(r)jobs=jobs.filter(j=>daysSince(recency(j))<=r);if(mobileWork)jobs=jobs.filter(j=>(j.work_arrangement||'')===mobileWork);const sortMode=$('#sort')?.value||'newest';if(sortMode==='org')jobs.sort((a,b)=>(a.organization||'').localeCompare(b.organization||'')||recency(b).localeCompare(recency(a)));else jobs.sort((a,b)=>recency(b).localeCompare(recency(a))||(a.organization||'').localeCompare(b.organization||''));$('#sortLabel').textContent=sortMode==='org'?'Organization A–Z':'Newest first';return jobs;}
++function currentJobs(){let jobs=[...(payload.jobs||[])];const q=($('#q')?.value||'').trim().toLowerCase(),role=$('#role')?.value||'',src=$('#source')?.value||'',sector=$('#sector')?.value||'',orgType=$('#orgType')?.value||'',compFilter=$('#compFilter')?.value||'',r=+($('#recency')?.value||0);if(q)jobs=jobs.filter(j=>[j.title,j.organization,j.parent_organization,j.location,j.source,...sectorTags(j),...orgTypes(j),...mandates(j),j.compensation_text].join(' ').toLowerCase().includes(q));if(role)jobs=jobs.filter(j=>roleType(j)===role);if(src)jobs=jobs.filter(j=>j.source===src);if(sector)jobs=jobs.filter(j=>sectorTags(j).includes(sector));if(orgType)jobs=jobs.filter(j=>orgTypes(j).includes(orgType));if(compFilter==='disclosed')jobs=jobs.filter(j=>j.compensation_min||j.compensation_text);if(compFilter==='reported')jobs=jobs.filter(j=>j.latest_reported_ceo_comp);if(r)jobs=jobs.filter(j=>daysSince(recency(j))<=r);if(mobileWork)jobs=jobs.filter(j=>(j.work_arrangement||'')===mobileWork);const agingF=$('#aging')?.value||'';
++if(agingF==='under30')jobs=jobs.filter(j=>daysOpen(j)<30);
++else if(agingF==='30to90')jobs=jobs.filter(j=>{const d=daysOpen(j);return d>=30&&d<90;});
++else if(agingF==='over90')jobs=jobs.filter(j=>daysOpen(j)>=90);
++const sortMode=$('#sort')?.value||'newest';if(sortMode==='org')jobs.sort((a,b)=>(a.organization||'').localeCompare(b.organization||'')||recency(b).localeCompare(recency(a)));else jobs.sort((a,b)=>recency(b).localeCompare(recency(a))||(a.organization||'').localeCompare(b.organization||''));$('#sortLabel').textContent=sortMode==='org'?'Organization A–Z':'Newest first';return jobs;}
+ function groupFeed(jobs,target){const el=$(target);if(!jobs.length){el.innerHTML='<div class="empty">No roles match these filters.</div>';return;}const groups=new Map();jobs.forEach(j=>{const k=recency(j);if(!groups.has(k))groups.set(k,[]);groups.get(k).push(j);});el.innerHTML=[...groups.entries()].map(([d,items])=>`<section class="date-group"><div class="date-head">${d==='0000-00-00'?'Date unavailable':fmtDate(d)}</div><div class="feed">${items.map(j=>jobCard(j)).join('')}</div></section>`).join('');bindCards(el);}
+-function renderOpportunities(){const jobs=currentJobs();$('#resultsCount').innerHTML=`<strong>${jobs.length}</strong> active ${jobs.length===1?'search':'searches'}`;groupFeed(jobs,'#jobs');}
++function renderClosingSoon(){
++  const el=$('#closingSoon');if(!el)return;
++  const soon=(payload.jobs||[])
++    .map(function(j){return {j:j,d:daysUntil(j.application_deadline)};})
++    .filter(function(x){return x.d>=0&&x.d<=14;})
++    .sort(function(a,b){return a.d-b.d;});
++  if(!soon.length){el.innerHTML='';el.style.display='none';return;}
++  el.style.display='';
++  el.innerHTML='<div class="closing-strip" role="region" aria-label="Closing soon"><span class="closing-label">Closing soon</span><div class="closing-items">'
++    +soon.map(function(x){
++      const j=x.j,d=x.d;
++      const when=d===0?'Closes today':d===1?'Closes tomorrow':'Closes in '+d+' days';
++      return '<a class="closing-item" href="'+esc(j.url||j.source_url||'#')+'" target="_blank" rel="noopener">'
++        +'<strong>'+esc(j.title)+'</strong>'
++        +'<span>'+esc(j.organization||'Organization confidential')+'</span>'
++        +'<em>'+when+' \u00b7 '+esc(fmtDate(j.application_deadline,false))+' \u00b7 '+esc(j.source)+'</em>'
++        +'</a>';
++    }).join('')+'</div></div>';
++}
++function renderOpportunities(){renderClosingSoon();const jobs=currentJobs();$('#resultsCount').innerHTML=`<strong>${jobs.length}</strong> active ${jobs.length===1?'search':'searches'}`;groupFeed(jobs,'#jobs');}
+ function renderSaved(){const ids=saved(),jobs=(payload.jobs||[]).filter(j=>ids.has(j.id)).sort((a,b)=>recency(b).localeCompare(recency(a)));groupFeed(jobs,'#savedJobs');}
+ function stat(label,value,note){return `<div class="stat-card"><div class="stat-label">${label}</div><div class="stat-value">${value}</div><div class="stat-note">${note}</div></div>`;}
+ /* Phase 3: Market tab redesign — size tiers, pay dot plot, firm matrix, notable week. */
+@@ -307,6 +348,26 @@ function renderPayDotPlot(){
+   $('#payNote').textContent=`${nPosted} searches with posted pay ranges and ${n990} with 990 CEO pay plotted. Each row is an organization revenue tier (990). Dots show annual pay.`;
+ }
+ 
++function renderAgingSearches(){
++  const el=$('#agingSearches');if(!el)return;
++  const ranked=(payload.jobs||[])
++    .filter(j=>['CEO','President','Executive Director'].indexOf(roleType(j))>=0)
++    .map(j=>({j:j,d:daysOpen(j)}))
++    .filter(function(x){return x.d<99999;})
++    .sort(function(a,b){return b.d-a.d;})
++    .slice(0,5);
++  el.innerHTML=ranked.map(function(x){
++    const j=x.j,d=x.d;
++    return '<article class="op-card" data-url="'+esc(j.url||j.source_url||'#')+'" tabindex="0" role="link" aria-label="Open '+esc(j.title)+' at '+esc(j.organization)+'">'
++      +'<div class="op-kicker">'+esc(j.source)+'</div>'
++      +'<h3 class="op-title">'+esc(j.title)+'</h3>'
++      +'<div class="op-org">'+esc(j.organization||'Organization confidential')+'</div>'
++      +'<div class="op-meta"><span>'+esc(j.location||'Location not listed')+'</span><span class="tag '+(d>=90?'long':'')+'">Open '+d+' '+(d===1?'day':'days')+'</span></div>'
++      +'<div class="op-foot" style="color:var(--teal);font-weight:700">Why it matters: open '+d+' '+(d===1?'day':'days')+' \u2014 among the longest-running CEO searches on the radar</div>'
++      +'</article>';
++  }).join('')||'<div class="empty">No aging searches right now.</div>';
++  bindCards(el);
++}
+ function renderNotableWeek(){
+   const el=$('#notableWeek');if(!el)return;
+   const jobs=payload.jobs||[];
+@@ -392,6 +453,7 @@ function renderMarket(){
+   renderLeadInsight();
+   renderPayDotPlot();
+   renderNotableWeek();
++  renderAgingSearches();
+   renderFirmMatrix();
+   renderTrend();
+   // Baseline marker on the activity chart.
+@@ -471,12 +533,12 @@ return `<div class="source-card firm-card${isTop?' expandable':''}"${isTop?` tab
+ document.querySelectorAll('.firm-card.expandable').forEach(c=>{c.onclick=e=>{if(e.target.tagName==='A')return;c.classList.toggle('expanded');const hint=c.querySelector('.firm-expand-hint');if(hint)hint.textContent=c.classList.contains('expanded')?'Click to collapse':'Click to expand profile';};c.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();c.click();}};});}
+ function populateFilters(){const jobs=payload.jobs||[],sources=[...new Set(jobs.map(j=>j.source).filter(Boolean))].sort(),sectors=[...new Set(jobs.flatMap(sectorTags))].sort(),types=[...new Set(jobs.flatMap(orgTypes))].sort();for(const id of ['source','mSource'])$('#'+id).innerHTML='<option value="">All firms</option>'+sources.map(x=>`<option value="${esc(x)}">${esc(x)}</option>`).join('');for(const id of ['sector','mSector'])$('#'+id).innerHTML='<option value="">All sectors</option>'+sectors.map(x=>`<option value="${esc(x)}">${esc(x)}</option>`).join('');for(const id of ['orgType','mOrgType'])$('#'+id).innerHTML='<option value="">All organization types</option>'+types.map(x=>`<option value="${esc(x)}">${esc(x)}</option>`).join('');}
+ function switchView(v){activeView=v;$$('.view').forEach(x=>x.classList.remove('active'));$('#'+v+'View').classList.add('active');$$('.nav button').forEach(b=>b.classList.toggle('active',b.dataset.view===v));if(v==='opportunities')renderOpportunities();if(v==='saved')renderSaved();if(v==='firms')renderFirms();if(v==='sources')renderSources();if(v==='market')renderMarket();window.scrollTo({top:0,behavior:'smooth'});}
+-function syncMobileFromDesktop(){$('#mRole').value=$('#role').value;$('#mSource').value=$('#source').value;$('#mSector').value=$('#sector').value;$('#mOrgType').value=$('#orgType').value;$('#mCompFilter').value=$('#compFilter').value;$('#mRecency').value=$('#recency').value;$('#mWork').value=mobileWork;}
+-function applyMobile(){$('#role').value=$('#mRole').value;$('#source').value=$('#mSource').value;$('#sector').value=$('#mSector').value;$('#orgType').value=$('#mOrgType').value;$('#compFilter').value=$('#mCompFilter').value;$('#recency').value=$('#mRecency').value;mobileWork=$('#mWork').value;renderOpportunities();}
++function syncMobileFromDesktop(){$('#mRole').value=$('#role').value;$('#mSource').value=$('#source').value;$('#mSector').value=$('#sector').value;$('#mOrgType').value=$('#orgType').value;$('#mCompFilter').value=$('#compFilter').value;$('#mRecency').value=$('#recency').value;$('#mAging').value=$('#aging').value;$('#mWork').value=mobileWork;}
++function applyMobile(){$('#role').value=$('#mRole').value;$('#source').value=$('#mSource').value;$('#sector').value=$('#mSector').value;$('#orgType').value=$('#mOrgType').value;$('#compFilter').value=$('#mCompFilter').value;$('#recency').value=$('#mRecency').value;$('#aging').value=$('#mAging').value;mobileWork=$('#mWork').value;renderOpportunities();}
+ function renderAll(){renderMarket();renderOpportunities();renderSaved();renderFirms();renderSources();}
+ async function fetchJson(name,current,validator){try{const r=await fetch(name+'?ts='+Date.now(),{cache:'no-store'});if(r.ok){const d=await r.json();if(validator(d))return d;}}catch(e){}return current;}
+ async function boot(){payload=await fetchJson('jobs.json',payload,d=>Array.isArray(d.jobs));meta=await fetchJson('meta.json',meta,d=>Array.isArray(d.sources));history=await fetchJson('history.json',history,d=>Array.isArray(d.jobs));changes=await fetchJson('changes.json',changes,d=>Array.isArray(d.events));const generated=payload.generated_at||meta.generated_at;$('#lastRefresh').textContent=generated?`Updated ${fmtDate(generated)} · ${new Date(generated).toLocaleTimeString([],{hour:'numeric',minute:'2-digit'})}`:'Not run yet';populateFilters();renderAll();}
+-$$('.nav button').forEach(b=>b.onclick=()=>switchView(b.dataset.view));['q','role','source','sector','orgType','compFilter','recency','sort'].forEach(id=>$('#'+id).addEventListener(id==='q'?'input':'change',renderOpportunities));$('#openFilters').onclick=()=>{syncMobileFromDesktop();$('#filterDialog').showModal();};$('#applyFilters').onclick=()=>applyMobile();$('#clearFilters').onclick=()=>{['mRole','mSource','mSector','mOrgType','mCompFilter','mRecency','mWork'].forEach(id=>$('#'+id).value='');mobileWork='';applyMobile();};boot();
++$$('.nav button').forEach(b=>b.onclick=()=>switchView(b.dataset.view));['q','role','source','sector','orgType','compFilter','recency','aging','sort'].forEach(id=>$('#'+id).addEventListener(id==='q'?'input':'change',renderOpportunities));$('#openFilters').onclick=()=>{syncMobileFromDesktop();$('#filterDialog').showModal();};$('#applyFilters').onclick=()=>applyMobile();$('#clearFilters').onclick=()=>{['mRole','mSource','mSector','mOrgType','mCompFilter','mRecency','mAging','mWork'].forEach(id=>$('#'+id).value='');mobileWork='';applyMobile();};boot();
+ </script>
+ </body>
+ </html>
+\ No newline at end of file
