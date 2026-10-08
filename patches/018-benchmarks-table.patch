@@ -1,0 +1,141 @@
+diff --git a/index.html b/index.html
+index 02d4c5c..97d6b9e 100644
+--- a/index.html
++++ b/index.html
+@@ -22,6 +22,26 @@ h1{font-family:Georgia,"Times New Roman",serif;font-weight:500;font-size:42px;li
+ .market-grid{display:grid;grid-template-columns:1.55fr 1fr;gap:14px;margin-top:14px}.panel{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:19px;box-shadow:var(--shadow);min-width:0}.panel-title{display:flex;justify-content:space-between;gap:15px;align-items:baseline;margin-bottom:16px}.panel-title h2{font-family:Georgia,"Times New Roman",serif;font-size:20px;font-weight:500;margin:0}.panel-title span{font-size:11px;color:var(--muted)}
+ .trend{height:205px;display:flex;align-items:flex-end;gap:8px;border-bottom:1px solid var(--line);padding:10px 4px 0}.week{flex:1;min-width:0;height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:7px}.bar{width:min(28px,70%);min-height:2px;background:var(--teal);border-radius:5px 5px 0 0;opacity:.9;position:relative}.bar:hover{opacity:1}.bar:hover:after{content:attr(data-count);position:absolute;bottom:calc(100% + 6px);left:50%;transform:translateX(-50%);background:var(--ink);color:#fff;font-size:11px;padding:3px 6px;border-radius:5px}.week-label{font-size:10px;color:var(--muted);white-space:nowrap}
+ .rank{display:grid;gap:10px}.rank-row{display:grid;grid-template-columns:minmax(110px,1.3fr) 2fr 34px;gap:10px;align-items:center}.rank-name{font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.rank-track{height:7px;background:#ebe7df;border-radius:999px;overflow:hidden}.rank-fill{height:100%;background:var(--teal);border-radius:999px}.rank-n{font-size:12px;color:var(--muted);text-align:right;font-variant-numeric:tabular-nums}.panel-note{margin-top:14px;padding-top:12px;border-top:1px solid var(--line);font-size:11px;color:var(--muted)}
++.bench-table{width:100%;border-collapse:collapse;font-size:12.5px;margin-top:4px}
++.bench-table th{text-align:left;font-size:10.5px;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);font-weight:800;padding:8px 10px;border-bottom:2px solid var(--line);white-space:nowrap}
++.bench-table td{padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top;font-variant-numeric:tabular-nums}
++.bench-table tr:last-child td{border-bottom:0}
++.bench-table .row-label{font-weight:750;color:var(--ink)}
++.bench-n{display:block;font-size:10.5px;color:var(--muted);font-weight:400;margin-top:2px}
++.bench-sub{font-family:Georgia,serif;font-size:15px;font-weight:600;margin:18px 0 2px}
++.opp-table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:15px;background:var(--card);box-shadow:var(--shadow)}
++table.opp-table{width:100%;border-collapse:collapse;font-size:12.5px;min-width:860px}
++.opp-table th{text-align:left;font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:800;padding:10px 12px;border-bottom:2px solid var(--line);white-space:nowrap;cursor:pointer;user-select:none;background:var(--card)}
++.opp-table th:hover{color:var(--teal)}
++.opp-table td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
++.opp-table tbody tr:hover{background:#f7f4ec}
++.opp-table .t-title a{color:var(--ink);font-weight:700;text-decoration:none}
++.opp-table .t-title a:hover{color:var(--teal);text-decoration:underline}
++.opp-table .num{font-variant-numeric:tabular-nums;white-space:nowrap}
++.opp-table .muted{color:var(--muted)}
++.view-toggle{display:inline-flex;background:var(--paper-2);border:1px solid var(--line);border-radius:999px;padding:2px;gap:2px}
++.view-toggle button{border:0;background:transparent;color:var(--muted);padding:5px 12px;border-radius:999px;font-weight:750;font-size:12px;cursor:pointer;white-space:nowrap}
++.view-toggle button.active{background:var(--ink);color:#fff}
+ .role-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.role-box{background:var(--paper-2);border:1px solid var(--line);border-radius:12px;padding:13px}.role-box b{display:block;font-family:Georgia,"Times New Roman",serif;font-size:23px;font-weight:500}.role-box span{font-size:11px;color:var(--muted)}
+ .recent{margin-top:14px}.section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin:0 2px 12px}.section-head h2{font-family:Georgia,"Times New Roman",serif;font-size:23px;font-weight:500;margin:0}.section-head p{margin:0;color:var(--muted);font-size:12px}
+ .controls{position:sticky;top:0;z-index:20;padding:12px 0;background:linear-gradient(var(--paper) 75%,rgba(244,241,234,0));margin-top:6px}.control-card{background:rgba(255,254,250,.94);backdrop-filter:blur(12px);border:1px solid var(--line);border-radius:15px;padding:10px;display:grid;grid-template-columns:1.7fr repeat(4,minmax(125px,.7fr));gap:8px;box-shadow:var(--shadow)}.control-card input,.control-card select,.filter-sheet select{border:1px solid var(--line);background:white;border-radius:10px;padding:10px 11px;color:var(--ink);min-width:0}.search-wrap{position:relative}.search-wrap input{width:100%;padding-left:34px}.search-icon{position:absolute;left:11px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:14px}.filter-button{display:none;border:1px solid var(--line);background:white;border-radius:10px;padding:10px 12px;font-weight:750;color:var(--ink)}
+@@ -73,6 +93,11 @@ dialog{border:0;padding:0;background:transparent;width:min(520px,100%);max-width
+     <div id="payDotPlot"></div>
+     <div class="panel-note" id="payNote"></div>
+   </div>
++  <div class="briefing-section panel">
++    <div class="panel-title"><h2>Pay benchmarks</h2><span>Posted pay, by role type and organization revenue</span></div>
++    <div id="payBenchmarks"></div>
++    <div class="panel-note">Posted pay ranges, not 990 data. Percentiles are computed from the midpoint of each posted range; only roles with a disclosed range are included.</div>
++  </div>
+   <div class="briefing-section">
+     <div class="panel-title"><h2>By the numbers</h2><span>This week at a glance</span></div>
+     <div class="stat-grid" id="marketStats"></div>
+@@ -124,7 +149,7 @@ dialog{border:0;padding:0;background:transparent;width:min(520px,100%);max-width
+       <button class="filter-button" id="openFilters">Filters</button>
+     </div>
+   </div>
+-  <div class="results-meta"><span id="resultsCount"></span><span id="sortLabel">Newest first</span></div>
++  <div class="results-meta"><span id="resultsCount"></span><span class="view-toggle" id="viewToggle" role="tablist" aria-label="Opportunities view"><button data-vm="cards" class="active" role="tab">Cards</button><button data-vm="table" role="tab">Table</button></span><span id="sortLabel">Newest first</span></div>
+   <div id="jobs"></div>
+ </section>
+ 
+@@ -201,7 +226,7 @@ function jobCard(j,compact=false){const fav=saved();const direct=j.link_quality=
+ function bindCards(scope=document){scope.querySelectorAll('.op-card').forEach(c=>{const go=()=>{const u=c.dataset.url;if(u&&u!=='#')window.open(u,'_blank','noopener');};c.onclick=e=>{if(e.target.closest('[data-save]'))return;go();};c.onkeydown=e=>{if((e.key==='Enter'||e.key===' ')&&!e.target.closest('[data-save]')){e.preventDefault();go();}};});scope.querySelectorAll('[data-save]').forEach(b=>b.onclick=e=>{e.stopPropagation();const s=saved(),id=b.dataset.save;s.has(id)?s.delete(id):s.add(id);setSaved(s);renderAll();});}
+ function currentJobs(){let jobs=[...(payload.jobs||[])];const q=($('#q')?.value||'').trim().toLowerCase(),role=$('#role')?.value||'',src=$('#source')?.value||'',sector=$('#sector')?.value||'',orgType=$('#orgType')?.value||'',compFilter=$('#compFilter')?.value||'',r=+($('#recency')?.value||0);if(q)jobs=jobs.filter(j=>[j.title,j.organization,j.parent_organization,j.location,j.source,...sectorTags(j),...orgTypes(j),...mandates(j),j.compensation_text].join(' ').toLowerCase().includes(q));if(role)jobs=jobs.filter(j=>roleType(j)===role);if(src)jobs=jobs.filter(j=>j.source===src);if(sector)jobs=jobs.filter(j=>sectorTags(j).includes(sector));if(orgType)jobs=jobs.filter(j=>orgTypes(j).includes(orgType));if(compFilter==='disclosed')jobs=jobs.filter(j=>j.compensation_min||j.compensation_text);if(compFilter==='reported')jobs=jobs.filter(j=>j.latest_reported_ceo_comp);if(r)jobs=jobs.filter(j=>daysSince(recency(j))<=r);if(mobileWork)jobs=jobs.filter(j=>(j.work_arrangement||'')===mobileWork);const sortMode=$('#sort')?.value||'newest';if(sortMode==='org')jobs.sort((a,b)=>(a.organization||'').localeCompare(b.organization||'')||recency(b).localeCompare(recency(a)));else jobs.sort((a,b)=>recency(b).localeCompare(recency(a))||(a.organization||'').localeCompare(b.organization||''));$('#sortLabel').textContent=sortMode==='org'?'Organization A–Z':'Newest first';return jobs;}
+ function groupFeed(jobs,target){const el=$(target);if(!jobs.length){el.innerHTML='<div class="empty">No roles match these filters.</div>';return;}const groups=new Map();jobs.forEach(j=>{const k=recency(j);if(!groups.has(k))groups.set(k,[]);groups.get(k).push(j);});el.innerHTML=[...groups.entries()].map(([d,items])=>`<section class="date-group"><div class="date-head">${d==='0000-00-00'?'Date unavailable':fmtDate(d)}</div><div class="feed">${items.map(j=>jobCard(j)).join('')}</div></section>`).join('');bindCards(el);}
+-function renderOpportunities(){const jobs=currentJobs();$('#resultsCount').innerHTML=`<strong>${jobs.length}</strong> active ${jobs.length===1?'search':'searches'}`;groupFeed(jobs,'#jobs');}
++function renderOpportunities(){const jobs=currentJobs();$('#resultsCount').innerHTML=`<strong>${jobs.length}</strong> active ${jobs.length===1?'search':'searches'}`;if(oppViewMode==='table')renderOppTable(jobs);else groupFeed(jobs,'#jobs');}
+ function renderSaved(){const ids=saved(),jobs=(payload.jobs||[]).filter(j=>ids.has(j.id)).sort((a,b)=>recency(b).localeCompare(recency(a)));groupFeed(jobs,'#savedJobs');}
+ function stat(label,value,note){return `<div class="stat-card"><div class="stat-label">${label}</div><div class="stat-value">${value}</div><div class="stat-note">${note}</div></div>`;}
+ /* Phase 3: Market tab redesign — size tiers, pay dot plot, firm matrix, notable week. */
+@@ -372,6 +397,61 @@ function renderFirmMatrix(){
+   el.innerHTML=h;
+ }
+ 
++function pctile(sorted,p){if(!sorted.length)return null;const i=(p/100)*(sorted.length-1),lo=Math.floor(i),hi=Math.ceil(i);return sorted[lo]+(sorted[hi]-sorted[lo])*(i-lo);}
++function benchMid(j){return (j.compensation_min+(j.compensation_max||j.compensation_min))/2;}
++function benchRow(label,vals){
++  if(!vals.length)return `<tr><td class="row-label">${esc(label)}</td><td colspan="3"><span class="muted">No disclosed pay</span></td></tr>`;
++  const s=[...vals].sort((a,b)=>a-b);
++  const cell=p=>`<td>${money(Math.round(pctile(s,p)/1000)*1000)}<span class="bench-n">n=${s.length}</span></td>`;
++  return `<tr><td class="row-label">${esc(label)}</td>${cell(25)}${cell(50)}${cell(75)}</tr>`;
++}
++function renderPayBenchmarks(){
++  const el=$('#payBenchmarks');if(!el)return;
++  const jobs=(payload.jobs||[]).filter(j=>j.compensation_min);
++  const byRole=['CEO','Executive Director','President'].map(r=>benchRow(r,jobs.filter(j=>roleType(j)===r).map(benchMid))).join('');
++  const byTier=TIER_ORDER.filter(t=>t!=='Unknown').map(t=>benchRow(t,jobs.filter(j=>sizeTier(j)===t).map(benchMid))).join('');
++  el.innerHTML=`<div class="bench-sub">By role type</div><div style="overflow-x:auto"><table class="bench-table"><thead><tr><th>Role type</th><th>25th percentile</th><th>Median</th><th>75th percentile</th></tr></thead><tbody>${byRole}</tbody></table></div><div class="bench-sub">By organization revenue</div><div style="overflow-x:auto"><table class="bench-table"><thead><tr><th>Revenue tier</th><th>25th percentile</th><th>Median</th><th>75th percentile</th></tr></thead><tbody>${byTier}</tbody></table></div>`;
++}
++let oppViewMode='cards';
++let tableSort={key:'days',dir:1};
++const TABLE_COLS=[
++  {key:'title',label:'Title',get:j=>(j.title||'').toLowerCase()},
++  {key:'org',label:'Organization',get:j=>(j.organization||'').toLowerCase()},
++  {key:'loc',label:'Location',get:j=>(j.location||'').toLowerCase()},
++  {key:'pay',label:'Posted pay',num:true,get:j=>j.compensation_min||null},
++  {key:'ceo990',label:'990 CEO pay',num:true,get:j=>(j.latest_reported_ceo_comp&&j.ceo_pay_context!=='parent_org')?j.latest_reported_ceo_comp:null},
++  {key:'firm',label:'Firm',get:j=>(j.source||'').toLowerCase()},
++  {key:'days',label:'Days open',num:true,get:j=>{const d=daysSince(recency(j));return d>=99999?null:d;}},
++  {key:'deadline',label:'Deadline',get:j=>j.application_deadline||null},
++];
++function sortTableJobs(jobs){
++  const col=TABLE_COLS.find(c=>c.key===tableSort.key)||TABLE_COLS[6],dir=tableSort.dir;
++  return [...jobs].sort((a,b)=>{
++    let va=col.get(a),vb=col.get(b);
++    const aN=va==null||va==='',bN=vb==null||vb===''; 
++    if(aN&&bN)return (a.title||'').localeCompare(b.title||'');
++    if(aN)return 1;if(bN)return -1;
++    let cmp=col.num?(va-vb):String(va).localeCompare(String(vb));
++    if(!cmp)cmp=(a.title||'').localeCompare(b.title||'');
++    return cmp*dir;
++  });
++}
++function renderOppTable(jobs){
++  const el=$('#jobs');if(!el)return;
++  const sorted=sortTableJobs(jobs);
++  const col=TABLE_COLS.find(c=>c.key===tableSort.key)||TABLE_COLS[6];
++  $('#sortLabel').textContent=`Table: ${col.label} ${tableSort.dir===1?'ascending':'descending'}`;
++  const rows=sorted.map(j=>{
++    const link=j.url||j.source_url||'#';
++    const title=link==='#'?esc(j.title||'—'):`<a href="${esc(link)}" target="_blank" rel="noopener">${esc(j.title||'—')}</a>`;
++    const d=daysSince(recency(j));
++    const dl=j.application_deadline?fmtDate(j.application_deadline,false):null;
++    const ceo=(j.latest_reported_ceo_comp&&j.ceo_pay_context!=='parent_org')?money(j.latest_reported_ceo_comp)+(j.latest_reported_ceo_comp_year?' · '+j.latest_reported_ceo_comp_year:''):null;
++    return `<tr><td class="t-title">${title}</td><td>${esc(j.organization||'—')}</td><td class="muted">${esc(j.location||'—')}</td><td class="num">${esc(compensation(j)||'—')}</td><td class="num">${esc(ceo||'—')}</td><td class="muted">${esc(j.source||'—')}</td><td class="num">${d>=99999?'—':d}</td><td class="num muted">${esc(dl||'—')}</td></tr>`;
++  }).join('');
++  el.innerHTML=`<div class="opp-table-wrap"><table class="opp-table"><thead><tr>${TABLE_COLS.map(c=>`<th data-col="${c.key}">${esc(c.label)}${c.key===tableSort.key?(tableSort.dir===1?' ▲':' ▼'):''}</th>`).join('')}</tr></thead><tbody>${rows||'<tr><td colspan="8" class="muted">No roles match these filters.</td></tr>'}</tbody></table></div>`;
++  el.querySelectorAll('th[data-col]').forEach(th=>th.onclick=()=>{const k=th.dataset.col;if(tableSort.key===k)tableSort.dir*=-1;else tableSort={key:k,dir:1};renderOppTable(currentJobs());});
++}
+ function renderMarket(){
+   const jobs=payload.jobs||[];
+   const new7=jobs.filter(isNew).length;
+@@ -391,6 +471,7 @@ function renderMarket(){
+   ].join('');
+   renderLeadInsight();
+   renderPayDotPlot();
++  renderPayBenchmarks();
+   renderNotableWeek();
+   renderFirmMatrix();
+   renderTrend();
+@@ -476,7 +557,7 @@ function applyMobile(){$('#role').value=$('#mRole').value;$('#source').value=$('
+ function renderAll(){renderMarket();renderOpportunities();renderSaved();renderFirms();renderSources();}
+ async function fetchJson(name,current,validator){try{const r=await fetch(name+'?ts='+Date.now(),{cache:'no-store'});if(r.ok){const d=await r.json();if(validator(d))return d;}}catch(e){}return current;}
+ async function boot(){payload=await fetchJson('jobs.json',payload,d=>Array.isArray(d.jobs));meta=await fetchJson('meta.json',meta,d=>Array.isArray(d.sources));history=await fetchJson('history.json',history,d=>Array.isArray(d.jobs));changes=await fetchJson('changes.json',changes,d=>Array.isArray(d.events));const generated=payload.generated_at||meta.generated_at;$('#lastRefresh').textContent=generated?`Updated ${fmtDate(generated)} · ${new Date(generated).toLocaleTimeString([],{hour:'numeric',minute:'2-digit'})}`:'Not run yet';populateFilters();renderAll();}
+-$$('.nav button').forEach(b=>b.onclick=()=>switchView(b.dataset.view));['q','role','source','sector','orgType','compFilter','recency','sort'].forEach(id=>$('#'+id).addEventListener(id==='q'?'input':'change',renderOpportunities));$('#openFilters').onclick=()=>{syncMobileFromDesktop();$('#filterDialog').showModal();};$('#applyFilters').onclick=()=>applyMobile();$('#clearFilters').onclick=()=>{['mRole','mSource','mSector','mOrgType','mCompFilter','mRecency','mWork'].forEach(id=>$('#'+id).value='');mobileWork='';applyMobile();};boot();
++$$('.nav button').forEach(b=>b.onclick=()=>switchView(b.dataset.view));['q','role','source','sector','orgType','compFilter','recency','sort'].forEach(id=>$('#'+id).addEventListener(id==='q'?'input':'change',renderOpportunities));$$('#viewToggle button').forEach(b=>b.onclick=()=>{oppViewMode=b.dataset.vm;$$('#viewToggle button').forEach(x=>x.classList.toggle('active',x===b));renderOpportunities();});$('#openFilters').onclick=()=>{syncMobileFromDesktop();$('#filterDialog').showModal();};$('#applyFilters').onclick=()=>applyMobile();$('#clearFilters').onclick=()=>{['mRole','mSource','mSector','mOrgType','mCompFilter','mRecency','mWork'].forEach(id=>$('#'+id).value='');mobileWork='';applyMobile();};boot();
+ </script>
+ </body>
+ </html>
+\ No newline at end of file
