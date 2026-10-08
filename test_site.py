@@ -56,7 +56,7 @@ def run_browser_test():
                     "() => document.querySelectorAll('#firmList .source-card').length > 0",
                     timeout=20000,
                 )
-                for view in ["market", "digest", "opportunities", "saved", "firms", "placements", "sources"]:
+                for view in ["market", "digest", "opportunities", "saved", "firms", "checkyourself", "placements", "sources"]:
                     desktop.locator(f'.nav button[data-view="{view}"]').click()
                     assert desktop.locator(f'#{view}View.active').count() == 1, f"View {view} did not open"
                 meta = json.loads((ROOT / "meta.json").read_text(encoding="utf-8"))
@@ -66,6 +66,52 @@ def run_browser_test():
                     assert desktop.locator("#firmList .blocked-banner").count() > 0, (
                         "Blocked-source warning missing from Firms"
                     )
+
+                check_types = {
+                    "attention": {"blocked", "failed", "partial-suspected"},
+                    "manual": {"manual", "auto", "awaiting-first-run"},
+                    "noboard": {"no-public-list"},
+                }
+                expected = {
+                    kind: sum(
+                        1 for s in meta["sources"]
+                        if s.get("status") in states
+                        and s.get("mode") != "legacy"
+                    ) for kind, states in check_types.items()
+                }
+                expected_total = sum(expected.values())
+                desktop.locator('.nav button[data-view="checkyourself"]').click()
+                assert desktop.locator("#checkyourselfView.active").count() == 1
+                assert desktop.locator("#checkList .check-card").count() == expected_total, (
+                    f"Check Yourself should list {expected_total} coverage gaps"
+                )
+                assert desktop.locator("#checkList .check-card a[href^='https://']").count() == expected_total, (
+                    "Every listed firm should link to its source website"
+                )
+                assert desktop.locator("#checkSummary .mini-stat b").first.inner_text() == str(
+                    expected["attention"] + expected["manual"]
+                ), "Direct-check counter mismatch"
+                for kind, count in expected.items():
+                    desktop.locator("#checkCategory").select_option(kind)
+                    assert desktop.locator("#checkList .check-card").count() == count, (
+                        f"Filter {kind} should display {count} sources"
+                    )
+                desktop.locator("#checkCategory").select_option("")
+                desktop.locator("#checkSearch").fill("unlikely-radar-firm-00000")
+                assert desktop.locator("#checkList .check-card").count() == 0, "Search filter is broken"
+                desktop.locator("#checkSearch").fill("")
+                assert desktop.locator("#checkList .check-card").count() == expected_total
+                if expected["noboard"]:
+                    desktop.locator("#checkCategory").select_option("noboard")
+                    assert desktop.locator("#checkList a").first.inner_text().startswith(
+                        "Visit firm website"
+                    ), "No-public-list sources must not be presented as verified openings"
+                    desktop.locator("#checkCategory").select_option("")
+                print(
+                    f"PASS: Check Yourself shows {expected_total} firm sources with "
+                    "accurate status counts, usable links, and working filters"
+                )
+
                 assert not errors, f"JavaScript errors on desktop: {errors}"
                 print("PASS: Desktop loads data, Firms displays, warnings exist, and all tabs open")
 
@@ -85,6 +131,15 @@ def run_browser_test():
                 )
                 assert mobile_display != "none", "Mobile firm matrix is hidden"
                 assert table_display == "none", "Desktop matrix is still displayed on mobile"
+
+                mobile.locator('.nav button[data-view="checkyourself"]').click()
+                assert mobile.locator("#checkyourselfView.active").count() == 1
+                assert mobile.locator("#checkList .check-card").count() == expected_total
+                assert mobile.locator("#checkList .check-card a").first.is_visible()
+                assert mobile.locator("#checkSearch").is_visible()
+                assert mobile.locator("#checkCategory").is_visible()
+                print("PASS: Check Yourself works on mobile")
+
                 assert not mobile_errors, f"JavaScript errors on mobile: {mobile_errors}"
                 print("PASS: Mobile loads and shows the compact firm matrix")
             finally:
