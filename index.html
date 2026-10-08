@@ -57,6 +57,25 @@ table.opp-table{width:100%;border-collapse:collapse;font-size:12.5px;min-width:8
 .blocked-banner p{font-size:13px;line-height:1.55;color:#78350f;margin:0 0 10px}
 .btn-blocked{display:inline-block;background:#d97706;color:#fff;font-weight:700;font-size:14px;padding:10px 18px;border-radius:9px;text-decoration:none}
 .btn-blocked:hover{background:#b45309;color:#fff}
+/* Check Yourself tab */
+.check-hero{background:var(--card);border:1px solid var(--line);border-radius:15px;padding:20px;margin:22px 0 16px}
+.check-hero h2{font-family:Georgia,serif;font-size:24px;font-weight:500;margin:0 0 8px}
+.check-hero p{font-size:14px;line-height:1.6;color:var(--ink);margin:0}
+.check-hero p+p{margin-top:8px}
+.check-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin-bottom:10px}
+.check-card h3{font-size:17px;font-weight:780;margin:0 0 4px}
+.check-card h3 a{color:inherit;text-decoration:none}
+.check-card h3 a:hover{color:var(--teal)}
+.check-card .check-desc{font-size:13px;color:var(--muted);line-height:1.5;margin:0 0 12px}
+.check-card .btn-blocked{font-size:15px;padding:12px 20px}
+.check-why{font-size:12px;color:var(--muted);margin-top:8px;font-style:italic}
+/* Firm filter chips */
+.firm-filters{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 14px}
+.firm-filters button{border:1px solid var(--line);background:var(--card);color:var(--muted);padding:7px 14px;border-radius:999px;font-weight:700;font-size:12.5px;cursor:pointer}
+.firm-filters button.active{background:var(--ink);color:#fff;border-color:var(--ink)}
+/* Compact inline check-directly link in firm cards */
+.check-direct-link{display:inline-block;margin-top:8px;font-size:13px;font-weight:700;color:var(--teal);text-decoration:none}
+.check-direct-link:hover{text-decoration:underline}
 .blocked-stale{font-size:12px;color:#92400e;font-style:italic;margin-top:8px}
 .firm-mix{display:flex;gap:10px;font-size:11px;color:var(--muted);margin-top:5px}.firm-mix span:first-child{flex:0 0 62px;font-weight:750;color:var(--ink)}.firm-mix b{color:var(--ink)}
 .take-line{font-size:14px;padding:7px 0;border-bottom:1px solid var(--line)}.take-line:last-child{border-bottom:0}.take-line:first-child{font-weight:750}
@@ -153,8 +172,11 @@ h1{font-size:30px;max-width:none}
 .op-card-title{font-size:17px;line-height:1.22}
 .op-org{font-size:13.5px}
 .op-meta{font-size:11.5px}
-.op-pay .comp-pill{font-size:13px}
-.op-pay .ceo-pay{font-size:12px}
+.op-pay{flex-direction:column;align-items:flex-start;gap:5px}
+.op-pay .op-sec-label{margin-bottom:0}
+.op-pay .comp-pill{font-size:17px}
+.op-pay .ceo-pay{font-size:14px}
+.op-pay em{font-size:12px}
 .org-facts{font-size:11.5px;gap:5px 12px}
 .org-mission{font-size:12.5px}
 .results-meta{flex-wrap:wrap;row-gap:8px}
@@ -178,6 +200,24 @@ h1{font-size:30px;max-width:none}
 .digest-move b{font-size:14px}
 /* Prevent any stray horizontal scroll from flex children */
 .panel>*,.briefing-flow>*{min-width:0}
+/* Benchmark tables become stacked cards on phones */
+.bench-table thead{display:none}
+.bench-table,.bench-table tbody,.bench-table tr,.bench-table td{display:block;width:100%}
+.bench-table tr{border:1px solid var(--line);border-radius:12px;margin-bottom:10px;padding:10px 12px;background:var(--card)}
+.bench-table tr:last-child td{border-bottom:0}
+.bench-table td{border:0;padding:3px 0;font-size:15px}
+.bench-table td.row-label{font-size:14px;font-weight:750;margin-bottom:2px;padding-bottom:6px;border-bottom:1px solid var(--line)}
+.bench-table td[data-label]::before{content:attr(data-label);display:block;font-size:10px;color:var(--muted);font-weight:800;text-transform:uppercase;letter-spacing:.06em;margin-bottom:1px}
+.bench-table .bench-n{margin-left:6px}
+/* Firm matrix becomes a compact list on phones */
+#firmMatrix table{display:none}
+.firm-matrix-mobile{display:block}
+.fmm-row{border:1px solid var(--line);border-radius:12px;margin-bottom:8px;padding:10px 12px;background:var(--card)}
+.fmm-head{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.fmm-head b{font-size:14px}
+.fmm-total{font-size:18px;font-weight:800;color:var(--teal);font-variant-numeric:tabular-nums}
+.fmm-tiers{margin-top:4px;font-size:12px;color:var(--muted)}
+.fmm-tiers b{color:var(--ink);font-weight:700}
 }
 
 </style>
@@ -199,6 +239,7 @@ h1{font-size:30px;max-width:none}
     <button data-view="opportunities">Opportunities</button>
     <button data-view="saved">Saved</button>
     <button data-view="firms">Firms</button>
+    <button data-view="checkyourself">Check yourself</button>
     <button data-view="placements">Placements</button>
     <button data-view="sources">Source health</button>
   </nav>
@@ -352,6 +393,15 @@ h1{font-size:30px;max-width:none}
 </div>
 <div id="consultList" class="source-list"></div>
 <div class="method" id="consultMethod" hidden>Consultant attributions are captured from firm postings where a lead consultant is named. Consultants appear here only when observed in the radar's data.</div>
+</section>
+<section id="checkyourselfView" class="view">
+  <div class="check-hero">
+    <h2>Check yourself</h2>
+    <p>These firms have open executive searches right now, but the radar can't pull them automatically — usually bot protection or a site structure our scraper can't read.</p>
+    <p><b>Tap through to browse their current openings directly.</b> Anything you find here won't appear in the Opportunities tab.</p>
+  </div>
+  <div id="checkList" class="source-list"></div>
+  <div class="method">Firms appear here when their status is blocked, failed, partially checkable, or manual. If a firm's site starts working with the scraper, they'll move back to automatic coverage.</div>
 </section>
 <div id="dossierOverlay" class="dossier-overlay" hidden>
   <div class="dossier-panel" role="dialog" aria-modal="true" aria-labelledby="dossierTitle">
@@ -688,6 +738,7 @@ function renderFirmMatrix(){
   ).slice(0,20);
   const tiers=TIER_ORDER.filter(t=>names.some(f=>firms[f][t]));
   let h=`<table style="border-collapse:collapse;font-size:12px;min-width:640px;width:100%">`;
+  let mh=`<div class="firm-matrix-mobile" style="display:none">`;
   h+=`<tr><th style="text-align:left;padding:8px;border-bottom:2px solid var(--line)">Firm</th>`+
     tiers.map(t=>`<th style="padding:8px;border-bottom:2px solid var(--line);text-align:center">${esc(t)}</th>`).join('')+
     `<th style="padding:8px;border-bottom:2px solid var(--line);text-align:center">Total</th></tr>`;
@@ -701,25 +752,29 @@ function renderFirmMatrix(){
         return `<td style="padding:8px;border-bottom:1px solid var(--line);text-align:center;${bg};${fg}">${n||''}</td>`;
       }).join('')+
       `<td style="padding:8px;border-bottom:1px solid var(--line);text-align:center;font-weight:700">${total}</td></tr>`;
+    const tierBits=tiers.filter(t=>firms[f][t]).map(t=>`<b>${esc(t)}</b> ${firms[f][t]}`).join(' · ');
+    mh+=`<div class="fmm-row"><div class="fmm-head"><b>${esc(f)}</b><span class="fmm-total">${total}</span></div>`+
+      (tierBits?`<div class="fmm-tiers">${tierBits}</div>`:`<div class="fmm-tiers"><span class="muted">No current openings</span></div>`)+`</div>`;
   });
-  h+=`</table><div class="method" style="margin-top:6px">Top 20 firms by current openings — most active first. The full firm directory is alphabetical under the Firms tab. Firms the radar cannot auto-check (blocked sites, manual listings) are flagged prominently there — a missing firm here does not mean zero openings.</div>`;
+  mh+=`</div>`;
+  h+=`</table>${mh}<div class="method" style="margin-top:6px">Top 20 firms by current openings — most active first. The full firm directory is alphabetical under the Firms tab. Firms the radar cannot auto-check (blocked sites, manual listings) are flagged prominently there — a missing firm here does not mean zero openings.</div>`;
   el.innerHTML=h;
 }
 
 function pctile(sorted,p){if(!sorted.length)return null;const i=(p/100)*(sorted.length-1),lo=Math.floor(i),hi=Math.ceil(i);return sorted[lo]+(sorted[hi]-sorted[lo])*(i-lo);}
 function benchMid(j){return (j.compensation_min+(j.compensation_max||j.compensation_min))/2;}
 function benchRow(label,vals){
-  if(!vals.length)return `<tr><td class="row-label">${esc(label)}</td><td colspan="3"><span class="muted">No disclosed pay</span></td></tr>`;
+  if(!vals.length)return `<tr><td class="row-label">${esc(label)}</td><td data-label="Pay range" colspan="3"><span class="muted">No disclosed pay</span></td></tr>`;
   const s=[...vals].sort((a,b)=>a-b);
-  const cell=p=>`<td>${money(Math.round(pctile(s,p)/1000)*1000)}<span class="bench-n">n=${s.length}</span></td>`;
-  return `<tr><td class="row-label">${esc(label)}</td>${cell(25)}${cell(50)}${cell(75)}</tr>`;
+  const cell=(p,label)=>`<td data-label="${label}">${money(Math.round(pctile(s,p)/1000)*1000)}<span class="bench-n">n=${s.length}</span></td>`;
+  return `<tr><td class="row-label">${esc(label)}</td>${cell(25,'25th percentile')}${cell(50,'Median')}${cell(75,'75th percentile')}</tr>`;
 }
 function renderPayBenchmarks(){
   const el=$('#payBenchmarks');if(!el)return;
   const jobs=(payload.jobs||[]).filter(j=>j.compensation_min);
   const byRole=['CEO','Executive Director','President'].map(r=>benchRow(r,jobs.filter(j=>roleType(j)===r).map(benchMid))).join('');
   const byTier=TIER_ORDER.filter(t=>t!=='Unknown').map(t=>benchRow(t,jobs.filter(j=>sizeTier(j)===t).map(benchMid))).join('');
-  el.innerHTML=`<div class="bench-sub">By role type</div><div style="overflow-x:auto"><table class="bench-table"><thead><tr><th>Role type</th><th>25th percentile</th><th>Median</th><th>75th percentile</th></tr></thead><tbody>${byRole}</tbody></table></div><div class="bench-sub">By organization revenue</div><div style="overflow-x:auto"><table class="bench-table"><thead><tr><th>Revenue tier</th><th>25th percentile</th><th>Median</th><th>75th percentile</th></tr></thead><tbody>${byTier}</tbody></table></div>`;
+  el.innerHTML=`<div class="bench-sub">By role type</div><div><table class="bench-table"><thead><tr><th>Role type</th><th>25th percentile</th><th>Median</th><th>75th percentile</th></tr></thead><tbody>${byRole}</tbody></table></div><div class="bench-sub">By organization revenue</div><div><table class="bench-table"><thead><tr><th>Revenue tier</th><th>25th percentile</th><th>Median</th><th>75th percentile</th></tr></thead><tbody>${byTier}</tbody></table></div>`;
 }
 let oppViewMode='cards';
 let tableSort={key:'days',dir:1};
@@ -931,7 +986,14 @@ const examples=sj.slice(0,3).map(j=>esc(j.title)+' at '+esc(j.organization)).joi
 const inferred=sj.length>=3?`Places ${esc(topTags(sj,sectorTags,1)[0]||'varied')} leaders, typically at ${esc(topTags(sj,j=>[sizeTier(j)],1)[0]||'varied')} organizations.`:'';
 const trackRec=hj.length?`${hj.length} searches observed all-time · ${sj.length} open now`:`${sj.length} open ${sj.length===1?'search':'searches'}`;
 const profile=isTop?`<div class="firm-profile"><div class="firm-block"><h4>What they are</h4><p>${esc(desc)}</p></div><div class="firm-block"><h4>Track record</h4><p>${esc(trackRec)}.</p>${payBand?`<p>Posted pay ${payBand} <span class="trust">Verified</span></p>`:''}</p></div><div class="firm-block"><h4>Example searches</h4><p class="firm-examples">${examples?examples.split('; ').map(e=>{const jj=sj.find(x=>(x.title+' at '+x.organization)===e);return jj&&jj.url?`<a href="${esc(jj.url)}" target="_blank" rel="noopener">${esc(e)} ↗</a>`:esc(e);}).join('<br>'):''}</p></div></div>`:`<div class="firm-mix"><span><b>${sj.length}</b> open</span><span>${esc(desc.split('.')[0]+'.')}</span></div>`;
-return `${blockedBanner(s,sj)}<div class="source-card firm-card${isTop?' expandable':''}${blockedBanner(s,sj)?' firm-blocked':''}"${isTop?` tabindex="0" role="button" data-firm="${esc(s.source)}"`:''}><div><div class="source-name">${isTop?esc(s.source):`<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.source)} ↗</a>`}</div><div class="source-group">${esc(desc.split(".")[0]+".")}</div></div><div class="source-status ${cls}">${esc(label)}</div><div class="source-count">${sj.length||'—'}</div><div class="source-notes">${profile}</div>${isTop?'<div class="firm-expand-hint">Click to expand profile</div>':''}</div>`;}).join('')||'<div class="empty" style="padding:22px">No firm data yet.</div>';
+const checkSelf=isCheckYourself(s);
+const directLink=checkSelf&&s.url?`<a class="check-direct-link" href="${esc(s.url)}" target="_blank" rel="noopener">Browse current searches \u2192</a>`:'';
+if(firmFilter!=='all'&&firmFilterLabel(s)!==firmFilter)return '';
+return `<div class="source-card firm-card${isTop?' expandable':''}"${isTop?` tabindex="0" role="button" data-firm="${esc(s.source)}"`:''}><div><div class="source-name">${isTop?esc(s.source):`<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.source)} ↗</a>`}</div><div class="source-group">${esc(desc.split(".")[0]+".")}</div></div><div class="source-status ${cls}">${esc(label)}</div><div class="source-count">${sj.length||'—'}</div><div class="source-notes">${profile}${directLink}</div>${isTop?'<div class="firm-expand-hint">Click to expand profile</div>':''}</div>`;}).join('')||'<div class="empty" style="padding:22px">No firm data yet.</div>';
+var existingFilter=document.querySelector('.firm-filters');if(existingFilter)existingFilter.remove();
+const filterBar=`<div class="firm-filters" role="tablist" aria-label="Filter firms"><button data-ff="all" class="${firmFilter==='all'?'active':''}">All</button><button data-ff="live" class="${firmFilter==='live'?'active':''}">Live</button><button data-ff="checkyourself" class="${firmFilter==='checkyourself'?'active':''}">Check yourself</button><button data-ff="nopublic" class="${firmFilter==='nopublic'?'active':''}">No public board</button></div>';
+$('#firmList').insertAdjacentHTML('beforebegin',filterBar);
+$$('.firm-filters button').forEach(b=>b.onclick=()=>{firmFilter=b.dataset.ff;renderFirms();});}
 // Expandable firm profiles
 document.querySelectorAll('.firm-card.expandable').forEach(c=>{c.onclick=e=>{if(e.target.tagName==='A')return;c.classList.toggle('expanded');const hint=c.querySelector('.firm-expand-hint');if(hint)hint.textContent=c.classList.contains('expanded')?'Click to collapse':'Click to expand profile';};c.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();c.click();}};});}
 function deriveConsultants(){const jobs=payload.jobs||[],hist=(typeof history!=='undefined'&&history.jobs)||[],seen={},map={},openIds={};jobs.forEach(j=>{openIds[j.id]=1;});jobs.concat(hist).forEach(j=>{if(!j||seen[j.id])return;seen[j.id]=1;const name=(j.consultant||'').trim();if(!name)return;const firm=j.source||'Unknown',key=name.toLowerCase()+'|'+firm;let c=map[key];if(!c)c=map[key]={name:name,firm:firm,title:'',titles:{},url:j.consultant_url||'',searches:[],open:0};if(j.consultant_title)c.titles[j.consultant_title]=(c.titles[j.consultant_title]||0)+1;if(!c.url&&j.consultant_url)c.url=j.consultant_url;c.searches.push(j);if(openIds[j.id])c.open++;});return Object.keys(map).map(k=>{const c=map[k],areas={};c.searches.forEach(j=>sectorTags(j).forEach(t=>{areas[t]=(areas[t]||0)+1;}));c.areas=Object.keys(areas).sort((a,b)=>areas[b]-areas[a]).slice(0,4);const tt=Object.keys(c.titles).sort((a,b)=>c.titles[b]-c.titles[a]);c.title=tt.length?tt[0]:'';c.searches.sort((a,b)=>(b.first_seen||'').localeCompare(a.first_seen||''));return c;}).sort((a,b)=>(b.open-a.open)||(b.searches.length-a.searches.length)||(a.name.toLowerCase()<b.name.toLowerCase()?-1:1));}
@@ -952,7 +1014,7 @@ const sv=$('#dossierSave');if(sv)sv.onclick=e=>{e.stopPropagation();const s=save
 function closeDossier(){$('#dossierOverlay').hidden=true;document.body.style.overflow='';}
 function renderPlacements(){const el=$('#placementList');if(!el)return;const hist=(typeof history!=='undefined'&&history.jobs)||[];const closed=hist.filter(j=>j.status==='closed').sort((a,b)=>(b.last_seen||'').localeCompare(a.last_seen||'')).slice(0,30);if(!closed.length){el.innerHTML='<div class="empty">No closed searches in history yet.</div>';return;}el.innerHTML=closed.map(j=>{const days=j.first_seen&&j.last_seen?Math.max(1,Math.round((new Date(j.last_seen)-new Date(j.first_seen))/86400000)):null;return `<div class="placement-card"><div class="p-title">${esc(j.title||'')}</div><div class="p-org">${esc(j.organization||'')} \u00b7 ${esc(j.source||'')}</div><div class="p-meta">${j.location?`<span>${esc(j.location)}</span>`:''}${j.last_seen?`<span>Closed ${esc(fmtDate((j.last_seen||'').slice(0,10),false))}</span>`:''}${days?`<span>Open ${days} days</span>`:''}</div><span class="p-status">Closed \u2014 outcome unknown</span></div>`;}).join('');}
 
-function switchView(v){activeView=v;$$('.view').forEach(x=>x.classList.remove('active'));$('#'+v+'View').classList.add('active');$$('.nav button').forEach(b=>b.classList.toggle('active',b.dataset.view===v));if(v==='opportunities')renderOpportunities();if(v==='saved')renderSaved();if(v==='firms'){renderFirms();renderConsultants();}if(v==='placements')renderPlacements();if(v==='sources')renderSources();if(v==='market')renderMarket();if(v==='digest')renderDigest();window.scrollTo({top:0,behavior:'smooth'});}
+function switchView(v){activeView=v;$$('.view').forEach(x=>x.classList.remove('active'));$('#'+v+'View').classList.add('active');$$('.nav button').forEach(b=>b.classList.toggle('active',b.dataset.view===v));if(v==='opportunities')renderOpportunities();if(v==='saved')renderSaved();if(v==='firms'){renderFirms();renderConsultants();}if(v==='checkyourself')renderCheckYourself();if(v==='placements')renderPlacements();if(v==='sources')renderSources();if(v==='market')renderMarket();if(v==='digest')renderDigest();window.scrollTo({top:0,behavior:'smooth'});}
 function syncMobileFromDesktop(){$('#mRole').value=$('#role').value;$('#mSource').value=$('#source').value;$('#mSector').value=$('#sector').value;$('#mOrgType').value=$('#orgType').value;$('#mCompFilter').value=$('#compFilter').value;$('#mRecency').value=$('#recency').value;$('#mAging').value=$('#aging').value;$('#mWork').value=mobileWork;}
 function applyMobile(){$('#role').value=$('#mRole').value;$('#source').value=$('#mSource').value;$('#sector').value=$('#mSector').value;$('#orgType').value=$('#mOrgType').value;$('#compFilter').value=$('#mCompFilter').value;$('#recency').value=$('#mRecency').value;$('#aging').value=$('#mAging').value;mobileWork=$('#mWork').value;renderOpportunities();}
 function renderAll(){renderMarket();renderDigest();renderOpportunities();renderSaved();renderFirms();renderConsultants();renderSources();}
