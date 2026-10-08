@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-08T01:16:40.661207+00:00",
+  "generated_at": "2026-10-08T01:27:36.263440+00:00",
   "baseline_initialized_at": "2026-09-19T05:58:00+00:00",
   "baseline_week": "2026-09-19",
   "source_count": 61,
@@ -15,7 +15,7 @@
       "count": 0,
       "prior_count": 0,
       "error": "",
-      "checked_at": "2026-10-08T01:16:40.684122+00:00",
+      "checked_at": "2026-10-08T01:27:36.280209+00:00",
       "fetch_mode": "",
       "preserved": false
     },
@@ -30,7 +30,7 @@
       "count": 1,
       "prior_count": 1,
       "error": "",
-      "checked_at": "2026-10-08T01:16:40.684135+00:00",
+      "checked_at": "2026-10-08T01:27:36.280233+00:00",
       "fetch_mode": "static",
       "preserved": false
     },
@@ -45,7 +45,7 @@
       "count": 0,
       "prior_count": 0,
       "error": "",
-      "checked_at": "2026-10-08T01:16:41.610004+00:00",
+      "checked_at": "2026-10-08T01:27:37.113442+00:00",
       "fetch_mode": "",
       "preserved": false
     },
@@ -60,7 +60,7 @@
       "count": 6,
       "prior_count": 6,
       "error": "",
-      "checked_at": "2026-10-08T01:16:41.610012+00:00",
+      "checked_at": "2026-10-08T01:27:37.113455+00:00",
       "fetch_mode": "static",
       "preserved": false
     },
@@ -75,7 +75,7 @@
       "count": 2,
       "prior_count": 2,
       "error": "",
-      "checked_at": "2026-10-08T01:16:45.053010+00:00",
+      "checked_at": "2026-10-08T01:27:39.107166+00:00",
       "fetch_mode": "static",
       "preserved": false
     },
@@ -90,7 +90,7 @@
       "count": 8,
       "prior_count": 8,
       "error": "",
-      "checked_at": "2026-10-08T01:16:46.215864+00:00",
+      "checked_at": "2026-10-08T01:27:40.095837+00:00",
       "fetch_mode": "static",
       "preserved": false
     },
@@ -105,7 +105,7 @@
       "count": 3,
       "prior_count": 3,
       "error": "",
-      "checked_at": "2026-10-08T01:16:58.908386+00:00",
+      "checked_at": "2026-10-08T01:27:51.505434+00:00",
       "fetch_mode": "static",
       "preserved": false
     },
@@ -117,10 +117,10 @@
       "notes": "Current job board only. Detail-page parser extracts the client organization from retained-search prose such as “on behalf of” or “retained by.”",
       "status": "ok",
       "ok": true,
-      "count": 8,
+      "count": 7,
       "prior_count": 8,
       "error": "",
-      "checked_at": "2026-10-08T01:17:01.988152+00:00",
+      "checked_at": "2026-10-08T01:27:54.414758+00:00",
       "fetch_mode": "static",
       "preserved": false
     },
@@ -135,7 +135,7 @@
       "count": 0,
       "prior_count": 46,
       "error": "No source page parsed successfully. static: page content indicates blocking (403/captcha/Cloudflare) | static: page content indicates blocking (403/captcha/Cloudflare) | static: page content indicates blocking (403/captcha/Cloudflare) | static: page content indicates blocking (403/captcha/Cloudflare) | static: page content indicates blocking (403/captcha/Cloudflare) | static: page content indicates blocking (403/captcha/Cloudflare) | static: page content indicates blocking (403/captcha/Cloudflar",
-      "checked_at": "2026-10-08T01:17:10.156269+00:00",
+      "checked_at": "2026-10-08T01:27:58.996665+00:00",
       "fetch_mode": "static",
       "preserved": true
     },
@@ -150,7 +150,7 @@
       "count": 3,
       "prior_count": 3,
       "error": "",
-      "checked_at": "2026-10-08T01:17:14.122048+00:00",
+      "checked_at": "2026-10-08T01:28:01.854478+00:00",
       "fetch_mode": "static",
       "preserved": false
     },
@@ -165,7 +165,7 @@
       "count": 0,
       "prior_count": 2,
       "error": "Found only 0 matching roles; this source is expected to expose at least 6. Preserving prior roles and flagging coverage for review. static ValueError: Korn Ferry rendered board exposed no client job detail links",
-      "checked_at": "2026-10-08T01:17:15.265819+00:00",
+      "checked_at": "2026-10-08T01:28:02.889337+00:00",
       "fetch_mode": "browser+static",
       "preserved": true
     },
@@ -177,10 +177,10 @@
       "notes": "Active Searches. Only numbered /search/ assignment pages are eligible; detail pages are checked for closure and labeled Date Posted.",
       "status": "ok",
       "ok": true,
-      "count": 27,
-      "prior_count": 6,
+      "count": 6,
+      "prior_count": 9,
       "error": "",
-      "checked_at": "2026-10-08T01:18:13.610463+00:00",
+      "checked_at": "2026-10-08T01:28:58.204220+00:00",
       "fetch_mode": "static",
       "preserved": false
     },
@@ -195,7 +195,7 @@
       "count": 26,
       "prior_count": 23,
       "error": "",
-      "checked_at": "2026-10-08T01:18:55.476178+00:00",
+      "checked_at": "2026-10-08T01:29:09.168434+00:00",
       "fetch_mode": "static",
       "preserved": false
     },
@@ -210,7 +210,7 @@
       "count": 0,
       "prior_count": 0,
       "error": "No source page parsed successfully. browser: page content indicates blocking (403/captcha/Cloudflare) | static HTTPError: 403 Client Error: Forbidden for url: https://www.wittkieffer.com/search-open-positions/",
-      "checked_at": "2026-10-08T01:18:55.699690+00:00",
+      "checked_at": "2026-10-08T01:29:09.406881+00:00",
       "fetch_mode": "browser",
       "preserved": true
     },
@@ -225,7 +225,7 @@
       "count": 0,
       "prior_count": 0,
       "error": "No source page parsed successfully. static ValueError: Batten jobs page contained no /open-searches/ assignment links",
-      "checked_at": "2026-10-08T01:19:10.989527+00:00",
+      "checked_at": "2026-10-08T01:29:24.816344+00:00",
       "fetch_mode": "static",
       "preserved": true
     },
@@ -240,7 +240,7 @@
       "count": 0,
       "prior_count": 5,
       "error": "No source page parsed successfully. static: page content indicates blocking (403/captcha/Cloudflare)",
-      "checked_at": "2026-10-08T01:19:11.241538+00:00",
+      "checked_at": "2026-10-08T01:29:25.057543+00:00",
       "fetch_mode": "static",
       "preserved": true
     },
@@ -255,7 +255,7 @@
       "count": 5,
       "prior_count": 5,
       "error": "",
-      "checked_at": "2026-10-08T01:19:14.325272+00:00",
+      "checked_at": "2026-10-08T01:29:28.356919+00:00",
       "fetch_mode": "browser",
       "preserved": false
     },
@@ -270,7 +270,7 @@
       "count": 2,
       "prior_count": 2,
       "error": "",
-      "checked_at": "2026-10-08T01:19:22.976721+00:00",
+      "checked_at": "2026-10-08T01:29:35.541643+00:00",
       "fetch_mode": "static",
       "preserved": false
     },
@@ -285,7 +285,7 @@
       "count": 0,
       "prior_count": 16,
       "error": "Found 0 vs 16 previously open; preserving prior roles pending another healthy parse. static: page content indicates blocking (403/captcha/Cloudflare)",
-      "checked_at": "2026-10-08T01:19:23.184076+00:00",
+      "checked_at": "2026-10-08T01:29:35.796004+00:00",
       "fetch_mode": "static+browser",
       "preserved": true
     },
@@ -295,14 +295,14 @@
       "mode": "automated",
       "group": "Working in prior aggregator",
       "notes": "Current Executive Searches only. About/news pages cannot enter the feed.",
-      "status": "blocked",
-      "ok": false,
-      "count": 0,
+      "status": "ok",
+      "ok": true,
+      "count": 1,
       "prior_count": 1,
-      "error": "No source page parsed successfully. static HTTPError: 429 Client Error: Too Many Requests for url: https://www.developmentguild.com/current-searches/",
-      "checked_at": "2026-10-08T01:19:27.223999+00:00",
-      "fetch_mode": "",
-      "preserved": true
+      "error": "",
+      "checked_at": "2026-10-08T01:29:39.994615+00:00",
+      "fetch_mode": "static",
+      "preserved": false
     },
     {
       "source": "The Moran Company",
@@ -315,7 +315,7 @@
       "count": 6,
       "prior_count": 6,
       "error": "",
-      "checked_at": "2026-10-08T01:19:27.460524+00:00",
+      "checked_at": "2026-10-08T01:29:40.209899+00:00",
       "fetch_mode": "static",
       "preserved": false
     },
@@ -330,7 +330,7 @@
       "count": 1,
       "prior_count": 1,
       "error": "",
-      "checked_at": "2026-10-08T01:19:28.475704+00:00",
+      "checked_at": "2026-10-08T01:29:41.273120+00:00",
       "fetch_mode": "static",
       "preserved": false
     },
@@ -345,7 +345,7 @@
       "count": 0,
       "prior_count": 0,
       "error": "",
-      "checked_at": "2026-10-08T01:19:28.720141+00:00",
+      "checked_at": "2026-10-08T01:29:41.532328+00:00",
       "fetch_mode": "",
       "preserved": false
     },
@@ -360,7 +360,7 @@
       "count": 0,
       "prior_count": 0,
       "error": "",
-      "checked_at": "2026-10-08T01:19:28.720149+00:00",
+      "checked_at": "2026-10-08T01:29:41.532346+00:00",
       "fetch_mode": "",
       "preserved": false
     },
@@ -375,7 +375,7 @@
       "count": 0,
       "prior_count": 0,
       "error": "",
-      "checked_at": "2026-10-08T01:19:28.720152+00:00",
+      "checked_at": "2026-10-08T01:29:41.532352+00:00",
       "fetch_mode": "",
       "preserved": false
     },
@@ -390,7 +390,7 @@
       "count": 0,
       "prior_count": 0,
       "error": "",
-      "checked_at": "2026-10-08T01:19:28.720155+00:00",
+      "checked_at": "2026-10-08T01:29:41.532357+00:00",
       "fetch_mode": "",
       "preserved": false
     },
@@ -405,7 +405,7 @@
       "count": 0,
       "prior_count": 0,
       "error": "",
-      "checked_at": "2026-10-08T01:19:28.720158+00:00",
+      "checked_at": "2026-10-08T01:29:41.532361+00:00",
       "fetch_mode": "",
       "preserved": false
     },
@@ -420,7 +420,7 @@
       "count": 2,
       "prior_count": 2,
       "error": "",
-      "checked_at": "2026-10-08T01:19:28.720161+00:00",
+      "checked_at": "2026-10-08T01:29:41.532365+00:00",
       "fetch_mode": "static",
       "preserved": false
     },
@@ -435,7 +435,7 @@
       "count": 3,
       "prior_count": 2,
       "error": "",
-      "checked_at": "2026-10-08T01:19:34.158258+00:00",
+      "checked_at": "2026-10-08T01:29:47.944853+00:00",
       "fetch_mode": "static",
       "preserved": false
     },
@@ -450,7 +450,7 @@
       "count": 0,
       "prior_count": 0,
       "error": "",
-      "checked_at": "2026-10-08T01:19:34.603313+00:00",
+      "checked_at": "2026-10-08T01:29:48.265968+00:00",
       "fetch_mode": "",
       "preserved": false
     },
@@ -465,7 +465,7 @@
       "count": 0,
       "prior_count": 0,
       "error": "browser: page content indicates blocking (403/captcha/Cloudflare)",
-      "checked_at": "2026-10-08T01:19:34.603322+00:00",
+      "checked_at": "2026-10-08T01:29:48.265988+00:00",
       "fetch_mode": "static+browser",
       "preserved": true
     },
@@ -480,7 +480,7 @@
       "count": 5,
       "prior_count": 5,
       "error": "",
-      "checked_at": "2026-10-08T01:19:41.334399+00:00",
+      "checked_at": "2026-10-08T01:29:54.795284+00:00",
       "fetch_mode": "static",
       "preserved": false
     },
@@ -495,7 +495,7 @@
       "count": 0,
       "prior_count": 0,
       "error": "",
-      "checked_at": "2026-10-08T01:19:43.330417+00:00",
+      "checked_at": "2026-10-08T01:29:56.552691+00:00",
       "fetch_mode": "static",
       "preserved": false
     },
@@ -510,7 +510,7 @@
       "count": 0,
       "prior_count": 0,
       "error": "",
-      "checked_at": "2026-10-08T01:19:43.605408+00:00",
+      "checked_at": "2026-10-08T01:29:56.796780+00:00",
       "fetch_mode": "",
       "preserved": false
     },
@@ -525,7 +525,7 @@
       "count": 0,
       "prior_count": 0,
       "error": "",
-      "checked_at": "2026-10-08T01:19:43.605424+00:00",
+      "checked_at": "2026-10-08T01:29:56.796799+00:00",
       "fetch_mode": "",
       "preserved": false
     },
@@ -540,7 +540,7 @@
       "count": 0,
       "prior_count": 0,
       "error": "",
-      "checked_at": "2026-10-08T01:19:43.605428+00:00",
+      "checked_at": "2026-10-08T01:29:56.796805+00:00",
       "fetch_mode": "",
       "preserved": false
     },
@@ -555,7 +555,7 @@
       "count": 0,
       "prior_count": 0,
       "error": "",
-      "checked_at": "2026-10-08T01:19:43.605431+00:00",
+      "checked_at": "2026-10-08T01:29:56.796813+00:00",
       "fetch_mode": "",
       "preserved": false
     },
@@ -570,7 +570,7 @@
       "count": 0,
       "prior_count": 0,
       "error": "",
-      "checked_at": "2026-10-08T01:19:43.605434+00:00",
+      "checked_at": "2026-10-08T01:29:56.796820+00:00",
       "fetch_mode": "",
       "preserved": false
     },
@@ -585,7 +585,7 @@
       "count": 0,
       "prior_count": 0,
       "error": "",
-      "checked_at": "2026-10-08T01:19:43.605437+00:00",
+      "checked_at": "2026-10-08T01:29:56.796824+00:00",
       "fetch_mode": "",
       "preserved": false
     },
@@ -600,7 +600,7 @@
       "count": 0,
       "prior_count": 0,
       "error": "",
-      "checked_at": "2026-10-08T01:19:43.605449+00:00",
+      "checked_at": "2026-10-08T01:29:56.796866+00:00",
       "fetch_mode": "",
       "preserved": false
     },
@@ -615,7 +615,7 @@
       "count": 0,
       "prior_count": 0,
       "error": "",
-      "checked_at": "2026-10-08T01:19:43.605452+00:00",
+      "checked_at": "2026-10-08T01:29:56.796871+00:00",
       "fetch_mode": "",
       "preserved": false
     },
@@ -630,7 +630,7 @@
       "count": 0,
       "prior_count": 0,
       "error": "",
-      "checked_at": "2026-10-08T01:19:43.605455+00:00",
+      "checked_at": "2026-10-08T01:29:56.796875+00:00",
       "fetch_mode": "",
       "preserved": false
     },
@@ -645,7 +645,7 @@
       "count": 0,
       "prior_count": 0,
       "error": "",
-      "checked_at": "2026-10-08T01:19:43.605457+00:00",
+      "checked_at": "2026-10-08T01:29:56.796879+00:00",
       "fetch_mode": "",
       "preserved": false
     },
@@ -660,7 +660,7 @@
       "count": 0,
       "prior_count": 0,
       "error": "",
-      "checked_at": "2026-10-08T01:19:43.605459+00:00",
+      "checked_at": "2026-10-08T01:29:56.796883+00:00",
       "fetch_mode": "",
       "preserved": false
     },
@@ -675,7 +675,7 @@
       "count": 0,
       "prior_count": 0,
       "error": "",
-      "checked_at": "2026-10-08T01:19:43.605461+00:00",
+      "checked_at": "2026-10-08T01:29:56.796886+00:00",
       "fetch_mode": "",
       "preserved": false
     },
@@ -690,7 +690,7 @@
       "count": 0,
       "prior_count": 0,
       "error": "",
-      "checked_at": "2026-10-08T01:19:43.605464+00:00",
+      "checked_at": "2026-10-08T01:29:56.796890+00:00",
       "fetch_mode": "",
       "preserved": false
     },
@@ -705,7 +705,7 @@
       "count": 0,
       "prior_count": 0,
       "error": "",
-      "checked_at": "2026-10-08T01:19:43.605466+00:00",
+      "checked_at": "2026-10-08T01:29:56.796894+00:00",
       "fetch_mode": "",
       "preserved": false
     },
@@ -720,7 +720,7 @@
       "count": 0,
       "prior_count": 0,
       "error": "",
-      "checked_at": "2026-10-08T01:19:43.605468+00:00",
+      "checked_at": "2026-10-08T01:29:56.796898+00:00",
       "fetch_mode": "",
       "preserved": false
     },
@@ -735,7 +735,7 @@
       "count": 0,
       "prior_count": 0,
       "error": "",
-      "checked_at": "2026-10-08T01:19:43.605470+00:00",
+      "checked_at": "2026-10-08T01:29:56.796902+00:00",
       "fetch_mode": "",
       "preserved": false
     },
@@ -750,7 +750,7 @@
       "count": 0,
       "prior_count": 0,
       "error": "",
-      "checked_at": "2026-10-08T01:19:43.605472+00:00",
+      "checked_at": "2026-10-08T01:29:56.796905+00:00",
       "fetch_mode": "",
       "preserved": false
     },
@@ -765,7 +765,7 @@
       "count": 0,
       "prior_count": 0,
       "error": "",
-      "checked_at": "2026-10-08T01:19:43.605475+00:00",
+      "checked_at": "2026-10-08T01:29:56.796909+00:00",
       "fetch_mode": "",
       "preserved": false
     },
@@ -780,7 +780,7 @@
       "count": 0,
       "prior_count": 0,
       "error": "",
-      "checked_at": "2026-10-08T01:19:43.605477+00:00",
+      "checked_at": "2026-10-08T01:29:56.796913+00:00",
       "fetch_mode": "",
       "preserved": false
     },
@@ -795,7 +795,7 @@
       "count": 0,
       "prior_count": 0,
       "error": "",
-      "checked_at": "2026-10-08T01:19:43.605479+00:00",
+      "checked_at": "2026-10-08T01:29:56.796916+00:00",
       "fetch_mode": "",
       "preserved": false
     },
@@ -810,7 +810,7 @@
       "count": 0,
       "prior_count": 0,
       "error": "",
-      "checked_at": "2026-10-08T01:19:43.605481+00:00",
+      "checked_at": "2026-10-08T01:29:56.796921+00:00",
       "fetch_mode": "",
       "preserved": false
     },
@@ -825,7 +825,7 @@
       "count": 0,
       "prior_count": 0,
       "error": "",
-      "checked_at": "2026-10-08T01:19:43.605483+00:00",
+      "checked_at": "2026-10-08T01:29:56.796924+00:00",
       "fetch_mode": "",
       "preserved": false
     },
@@ -840,7 +840,7 @@
       "count": 0,
       "prior_count": 0,
       "error": "",
-      "checked_at": "2026-10-08T01:19:43.605540+00:00",
+      "checked_at": "2026-10-08T01:29:56.797132+00:00",
       "fetch_mode": "",
       "preserved": false
     },
@@ -855,7 +855,7 @@
       "count": 0,
       "prior_count": 0,
       "error": "",
-      "checked_at": "2026-10-08T01:19:43.605542+00:00",
+      "checked_at": "2026-10-08T01:29:56.797138+00:00",
       "fetch_mode": "",
       "preserved": false
     },
@@ -870,7 +870,7 @@
       "count": 0,
       "prior_count": 0,
       "error": "",
-      "checked_at": "2026-10-08T01:19:43.605544+00:00",
+      "checked_at": "2026-10-08T01:29:56.797142+00:00",
       "fetch_mode": "",
       "preserved": false
     },
@@ -885,7 +885,7 @@
       "count": 0,
       "prior_count": 0,
       "error": "",
-      "checked_at": "2026-10-08T01:19:43.605546+00:00",
+      "checked_at": "2026-10-08T01:29:56.797146+00:00",
       "fetch_mode": "",
       "preserved": false
     },
@@ -900,7 +900,7 @@
       "count": 0,
       "prior_count": 0,
       "error": "",
-      "checked_at": "2026-10-08T01:19:43.605548+00:00",
+      "checked_at": "2026-10-08T01:29:56.797149+00:00",
       "fetch_mode": "",
       "preserved": false
     },
@@ -915,54 +915,54 @@
       "count": 0,
       "prior_count": 0,
       "error": "",
-      "checked_at": "2026-10-08T01:19:43.605550+00:00",
+      "checked_at": "2026-10-08T01:29:56.797153+00:00",
       "fetch_mode": "",
       "preserved": false
     }
   ],
   "market_take": {
-    "generated_at": "2026-10-08T01:16:40.661207+00:00",
+    "generated_at": "2026-10-08T01:27:36.263440+00:00",
     "sentences": [
-      "63 new chief-executive searches surfaced in the past 7 days; 23 closed.",
-      "New searches lean education (31 of 63).",
-      "The most common board mandate is culture / talent (97 of 156 open searches).",
+      "65 new chief-executive searches surfaced in the past 7 days; 29 closed.",
+      "New searches lean arts / culture (41 of 65).",
+      "The most common board mandate is culture / talent (96 of 151 open searches).",
       "Isaacson, Miller is running the most open searches (46).",
-      "90 open searches disclose compensation."
+      "85 open searches disclose compensation."
     ],
     "comparisons": {
       "new_searches": {
-        "this_week": 63,
-        "trailing_4wk_avg": 4.5,
-        "trailing_4wk_total": 18
+        "this_week": 65,
+        "trailing_4wk_avg": 2.8,
+        "trailing_4wk_total": 11
       },
       "by_sector": {
         "Environment": {
-          "this_week": 18,
-          "trailing_4wk_avg": 1.5
+          "this_week": 19,
+          "trailing_4wk_avg": 1.2
         },
         "Health": {
-          "this_week": 8,
-          "trailing_4wk_avg": 1.5
+          "this_week": 9,
+          "trailing_4wk_avg": 0.0
         },
         "Unclassified": {
           "this_week": 1,
-          "trailing_4wk_avg": 0.0
+          "trailing_4wk_avg": 0.2
         },
         "Associations": {
           "this_week": 1,
           "trailing_4wk_avg": 0.0
         },
         "Arts / Culture": {
-          "this_week": 1,
+          "this_week": 17,
           "trailing_4wk_avg": 0.0
         },
         "Education": {
-          "this_week": 25,
+          "this_week": 9,
           "trailing_4wk_avg": 0.8
         },
         "Civic / Public": {
           "this_week": 6,
-          "trailing_4wk_avg": 0.2
+          "trailing_4wk_avg": 0.0
         },
         "Media / Journalism": {
           "this_week": 2,
