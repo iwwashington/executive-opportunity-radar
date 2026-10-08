@@ -96,6 +96,82 @@ dialog{border:0;padding:0;background:transparent;width:min(520px,100%);max-width
 .closing-item strong{font-size:13px;line-height:1.25}
 .closing-item span{font-size:12px;color:var(--ink)}
 .closing-item em{font-style:normal;font-size:11px;color:var(--teal);font-weight:700}
+
+/* ===== Mobile responsiveness overhaul (390px-first) ===== */
+img,svg,video{max-width:100%;height:auto}
+.op-card a,.dossier-panel a,.panel a,.source-card a{overflow-wrap:break-word;word-break:break-word}
+@media(max-width:768px){
+.role-grid{grid-template-columns:repeat(2,1fr)}
+.dossier-panel{padding:24px 20px}
+.dossier-title{font-size:26px}
+.pay-compare{grid-template-columns:1fr}
+.panel-title{flex-wrap:wrap;row-gap:6px}
+}
+@media(max-width:480px){
+.shell{padding:0 12px 48px}
+h1{font-size:30px;max-width:none}
+.deck{font-size:13.5px}
+.mast{padding:18px 0 12px}
+.nav{gap:2px}
+.nav button{padding:8px 9px;font-size:13.5px}
+/* Market panels stack tighter */
+.briefing-lead h2{font-size:25px}
+.briefing-section{margin-top:26px}
+.briefing-section>.panel-title h2{font-size:21px}
+.panel{padding:14px;border-radius:14px}
+.stat-grid{gap:8px}
+.stat-card{padding:13px 12px}
+.stat-value{font-size:24px}
+.stat-label{font-size:10px}
+.role-grid{grid-template-columns:1fr}
+.role-box b{font-size:19px}
+/* Tables: tighter on phones */
+.bench-table{font-size:11.5px}
+.bench-table th,.bench-table td{padding:7px 8px}
+.bench-sub{font-size:14px}
+/* Firm landscape matrix */
+#firmMatrix table{font-size:11px}
+#firmMatrix th,#firmMatrix td{padding:6px 8px}
+/* Trend chart */
+.trend{height:150px;gap:4px}
+.week-label{font-size:8px}
+.bar{border-radius:4px 4px 0 0}
+/* Rank rows */
+.rank-row{grid-template-columns:minmax(80px,1.1fr) 1.4fr 26px;gap:8px}
+.rank-name{font-size:11.5px}
+/* Opportunities */
+.section-head h2{font-size:20px}
+.op-card{padding:14px 42px 13px 14px;border-radius:13px}
+.op-card-title{font-size:17px;line-height:1.22}
+.op-org{font-size:13.5px}
+.op-meta{font-size:11.5px}
+.op-pay .comp-pill{font-size:13px}
+.op-pay .ceo-pay{font-size:12px}
+.org-facts{font-size:11.5px;gap:5px 12px}
+.org-mission{font-size:12.5px}
+.results-meta{flex-wrap:wrap;row-gap:8px}
+.view-toggle button{padding:5px 10px;font-size:11.5px}
+.control-card{padding:7px;gap:7px}
+.search-wrap input{font-size:16px}
+/* Closing strip */
+.closing-item{flex:0 0 220px}
+/* Dossier: near-full-screen on phones */
+.dossier-overlay{padding:0;align-items:stretch}
+.dossier-panel{border-radius:0;border-left:0;border-right:0;margin:0;max-width:none;min-height:100dvh;padding:20px 16px calc(20px + env(safe-area-inset-bottom))}
+.dossier-title{font-size:23px;padding-right:40px}
+.dossier-org{font-size:15px}
+.dossier-close{top:12px;right:12px;width:38px;height:38px;font-size:16px}
+.dossier-sec{margin-top:14px;padding-top:12px}
+.pay-box{padding:10px 12px}
+.pay-box .pay-val{font-size:19px}
+/* Firms tab */
+.source-summary{grid-template-columns:repeat(2,1fr);gap:8px}
+/* Digest */
+.digest-move b{font-size:14px}
+/* Prevent any stray horizontal scroll from flex children */
+.panel>*,.briefing-flow>*{min-width:0}
+}
+
 </style>
 </head>
 <body>
