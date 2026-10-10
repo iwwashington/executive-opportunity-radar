@@ -38,6 +38,11 @@ jobs:
           pip install -r requirements.txt
           python -m playwright install --with-deps chromium
 
+      - name: Verify pipeline controls
+        run: |
+          python test_aggregate.py
+          python test_coverage.py
+
       - name: Update public-source data
         run: python aggregate.py
 
@@ -70,3 +75,18 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+      # Publish the warnings before making the run visibly fail for degraded collection.
+      - name: Flag incomplete automated collection
+        run: |
+          python - <<'PYHEALTH'
+          import json, os
+          from pathlib import Path
+          meta = json.loads(Path('meta.json').read_text())
+          coverage = meta['coverage']
+          with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as report:
+              report.write(f"Healthy automated sources: {coverage['automated_healthy']}/{coverage['automated_expected']}\n\n")
+              report.write("Sources requiring review: " + ", ".join(coverage['sources_requiring_review']) + "\n")
+          if coverage['automated_status'] != 'complete':
+              raise SystemExit('Automated collection degraded; published coverage warnings and preserved prior roles.')
+          PYHEALTH

@@ -101,7 +101,7 @@
     "url": "https://scionexecutivesearch.com/search-jobs/?_page=1",
     "mode": "automated",
     "group": "Previously stopped working",
-    "notes": "Current job board only. Detail-page parser extracts the client organization from retained-search prose such as \u201con behalf of\u201d or \u201cretained by.\u201d",
+    "notes": "Current job board only. Detail-page parser extracts the client organization from retained-search prose such as “on behalf of” or “retained by.”",
     "date_policy": "source",
     "render_fallback": true,
     "allow_zero": false,
@@ -624,12 +624,12 @@
   {
     "name": "JDG Associates",
     "url": "https://jdgsearch.com/active-searches/",
-    "mode": "auto",
+    "mode": "automated",
     "group": "Executive search firms",
-    "notes": "Washington, D.C.-based executive search firm serving corporate, government and association clients.",
+    "notes": "Washington, D.C.-based executive search firm serving corporate, government and association clients. Automated collection enabled after source-mode repair; zero results require review until validated.",
     "date_policy": "source",
     "render_fallback": false,
-    "allow_zero": true,
+    "allow_zero": false,
     "urls": [
       "https://jdgsearch.com/active-searches/"
     ]
@@ -665,12 +665,12 @@
   {
     "name": "Staffing Advisors",
     "url": "https://www.staffingadvisors.com/jobs/",
-    "mode": "auto",
+    "mode": "automated",
     "group": "Executive search firms",
-    "notes": "Retained executive search firm (founded 2002); serves associations, foundations, nonprofits and social enterprises.",
+    "notes": "Retained executive search firm (founded 2002); serves associations, foundations, nonprofits and social enterprises. Automated collection enabled after source-mode repair; zero results require review until validated.",
     "date_policy": "source",
     "render_fallback": false,
-    "allow_zero": true,
+    "allow_zero": false,
     "urls": [
       "https://www.staffingadvisors.com/jobs/"
     ]
@@ -691,12 +691,12 @@
   {
     "name": "Morris & Berger",
     "url": "https://morrisberger.com/searches/",
-    "mode": "auto",
+    "mode": "automated",
     "group": "Executive search firms",
-    "notes": "Boutique executive search firm collaborating with nonprofit organizations on leadership talent.",
+    "notes": "Boutique executive search firm collaborating with nonprofit organizations on leadership talent. Automated collection enabled after source-mode repair; zero results require review until validated.",
     "date_policy": "source",
     "render_fallback": false,
-    "allow_zero": true,
+    "allow_zero": false,
     "urls": [
       "https://morrisberger.com/searches/"
     ]
@@ -788,12 +788,12 @@
   {
     "name": "Good Insight",
     "url": "https://good-insight.org/careers/",
-    "mode": "auto",
+    "mode": "automated",
     "group": "Executive search firms",
-    "notes": "Woman-owned executive search firm exclusively focused on nonprofits, associations, and grantmakers.",
+    "notes": "Woman-owned executive search firm exclusively focused on nonprofits, associations, and grantmakers. Automated collection enabled after source-mode repair; zero results require review until validated.",
     "date_policy": "source",
     "render_fallback": false,
-    "allow_zero": true,
+    "allow_zero": false,
     "urls": [
       "https://good-insight.org/careers/"
     ]
@@ -815,12 +815,12 @@
   {
     "name": "CBIZ Talent Solutions",
     "url": "https://talentsolutions.cbiz.com/job-seekers/open-positions",
-    "mode": "auto",
+    "mode": "automated",
     "group": "Executive search firms",
-    "notes": "End-to-end recruiting and talent firm; nonprofit executive search within broader practice.",
+    "notes": "End-to-end recruiting and talent firm; nonprofit executive search within broader practice. Automated collection enabled after source-mode repair; zero results require review until validated.",
     "date_policy": "source",
     "render_fallback": false,
-    "allow_zero": true,
+    "allow_zero": false,
     "urls": [
       "https://talentsolutions.cbiz.com/job-seekers/open-positions"
     ]
@@ -828,12 +828,12 @@
   {
     "name": "Valtas Group",
     "url": "https://valtasgroup.hire.trakstar.com/",
-    "mode": "auto",
+    "mode": "automated",
     "group": "Executive search firms",
-    "notes": "Nonprofit interim leadership and executive search plus board advisory services.",
+    "notes": "Nonprofit interim leadership and executive search plus board advisory services. Automated collection enabled after source-mode repair; zero results require review until validated.",
     "date_policy": "source",
     "render_fallback": false,
-    "allow_zero": true,
+    "allow_zero": false,
     "urls": [
       "https://valtasgroup.hire.trakstar.com/"
     ]
@@ -882,12 +882,12 @@
   {
     "name": "CMP / Career Management Partners",
     "url": "https://www.careermp.com/open-roles-executive-search",
-    "mode": "auto",
+    "mode": "automated",
     "group": "Executive search firms",
-    "notes": "Minority- and woman-owned talent-solutions firm; executive search within broader practice.",
+    "notes": "Minority- and woman-owned talent-solutions firm; executive search within broader practice. Automated collection enabled after source-mode repair; zero results require review until validated.",
     "date_policy": "source",
     "render_fallback": false,
-    "allow_zero": true,
+    "allow_zero": false,
     "urls": [
       "https://www.careermp.com/open-roles-executive-search"
     ]

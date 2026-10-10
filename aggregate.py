@@ -2130,19 +2130,35 @@ def _page_blocked(html: str) -> bool:
     return bool(html and BLOCKED_SIGNALS.search(html[:8000]))
 
 
+def incomplete_listing_page(html: str) -> bool:
+    text=BeautifulSoup(html or "", "html.parser").get_text(" ",strip=True)
+    match=re.search(r"Showing\s+(\d[\d,]*)\s*[-–]\s*(\d[\d,]*)\s+of\s+(\d[\d,]*)\s+(?:jobs|results)",text,re.I)
+    if not match:return False
+    start,end,total=(int(n.replace(",","")) for n in match.groups())
+    return start>1 or end<total
+
+
 def scrape_source(source: dict, today: date, prior_count: int) -> tuple[list[Job],dict]:
     now=now_iso()
+    source={**source, "mode": "automated" if source.get("mode")=="auto" else source.get("mode")}
     health={
         "source":source["name"],"url":source["url"],"mode":source["mode"],
         "group":source.get("group",""),"notes":source.get("notes",""),
         "status":source["mode"],"ok":None,"count":0,"prior_count":prior_count,
-        "error":"","checked_at":now,"fetch_mode":"","preserved":False,
+        "error":"","checked_at":None,"attempted_at":None,"fetch_mode":"","preserved":True,
+        "pages_expected":0,"pages_parsed":0,
     }
-    if source["mode"]!="automated": return [],health
+    if source["mode"]!="automated":
+        if source["mode"] not in {"manual","retired","legacy","no-public-list"}:
+            health.update(status="failed",ok=False,error="Unknown source mode; configuration requires repair.")
+        return [],health
+    health["attempted_at"]=now
 
-    errors=[]; all_found=[]; fetch_modes=[]; parse_successes=0
+    errors=[]; all_found=[]; fetch_modes=[]; parse_successes=0; partial_listing=False
     urls=source.get("urls") or [source["url"]]
+    health["pages_expected"]=len(urls)
     for url in urls:
+        parsed_before=parse_successes
         html=""; page_found=[]
         if source.get("browser_first"):
             try:
@@ -2179,6 +2195,11 @@ def scrape_source(source: dict, today: date, prior_count: int) -> tuple[list[Job
             except Exception as exc:
                 errors.append(f"browser {type(exc).__name__}: {exc}")
 
+        if parse_successes>parsed_before:
+            health["pages_parsed"]+=1
+        partial_listing=partial_listing or incomplete_listing_page(html)
+
+    health["checked_at"]=now_iso()
     found=dedupe(all_found)
     health["count"]=len(found); health["fetch_mode"]="+".join(dict.fromkeys(fetch_modes))
     error_blob=" | ".join(errors)
@@ -2190,6 +2211,19 @@ def scrape_source(source: dict, today: date, prior_count: int) -> tuple[list[Job
         health["error"]=("No source page parsed successfully. " + error_blob)[:500]
         return [],health
 
+    if partial_listing and len(urls)==1:
+        health.update(ok=False,status="partial-suspected",preserved=True,
+                      error="Page reports additional listings beyond the fetched range; pagination requires validation.")
+        return found,health
+    if health["pages_parsed"] != health["pages_expected"]:
+        health.update(ok=False,status="partial-suspected",preserved=True,
+                      error=("Not every configured page parsed successfully. " + error_blob)[:500])
+        return found,health
+    if not found and not source.get("allow_zero",False):
+        health.update(ok=False,status="partial-suspected",preserved=True,
+                      error="Unexpected zero results; prior roles preserved pending validation.")
+        return found,health
+
     min_expected=int(source.get("min_expected_matches",0) or 0)
     if min_expected and len(found)<min_expected:
         health["ok"]=False; health["status"]="partial-suspected"; health["preserved"]=True
@@ -2197,12 +2231,12 @@ def scrape_source(source: dict, today: date, prior_count: int) -> tuple[list[Job
         return found,health
 
     # Unexpected collapses are treated as partial, not as mass closures.
-    if prior_count>=5 and len(found)<max(2,int(prior_count*0.35)) and not source.get("allow_zero",False) and not source.get("authoritative_parser",False):
+    if prior_count>=5 and len(found)<max(2,int(prior_count*0.35)):
         health["ok"]=False; health["status"]="partial-suspected"; health["preserved"]=True
         health["error"]=(f"Found {len(found)} vs {prior_count} previously open; preserving prior roles pending another healthy parse. " + error_blob)[:500]
         return found,health
 
-    health["ok"]=True
+    health["ok"]=True; health["preserved"]=False
     # Zero roles is "no matches" only when nothing was blocked.
     if blocked:
         health["status"]="blocked"; health["ok"]=False; health["preserved"]=True
@@ -2557,6 +2591,31 @@ def build_market_take(current: list[dict], all_history: list[dict], events: list
     return {"generated_at": now, "sentences": sentences, "comparisons": comparisons}
 
 
+def coverage_summary(rows: list[dict]) -> dict:
+    active=[r for r in rows if r.get("mode") not in {"retired","legacy"}]
+    automated=[r for r in active if r.get("mode") in {"automated","auto"}]
+    healthy=sum(r.get("ok") is True for r in automated)
+    gaps=[r["source"] for r in active if r.get("ok") is not True]
+    return {"status":"complete" if active and not gaps else "incomplete",
+            "automated_status":"complete" if automated and healthy==len(automated) else "degraded",
+            "automated_expected":len(automated),"automated_healthy":healthy,
+            "sources_requiring_review":gaps}
+
+
+def write_verified_json(path: Path, data: dict) -> None:
+    """Stage and read back before replacement; metadata is published last."""
+    staged=path.with_suffix(path.suffix+".tmp")
+    try:
+        staged.write_text(json.dumps(data,indent=2,ensure_ascii=False),encoding="utf-8")
+        if json.loads(staged.read_text(encoding="utf-8")) != data:
+            raise ValueError(f"Write readback mismatch: {path.name}")
+        staged.replace(path)
+        if json.loads(path.read_text(encoding="utf-8")) != data:
+            raise ValueError(f"Published readback mismatch: {path.name}")
+    finally:
+        staged.unlink(missing_ok=True)
+
+
 def main() -> int:
     today=datetime.now(timezone.utc).date(); now=now_iso()
     # One-shot site patches: large site edits (index.html etc.) cannot go through
@@ -2582,7 +2641,11 @@ def main() -> int:
             _sp.run(["git","add","-A"],capture_output=True)
     except Exception as _e:
         print(f"site patch step skipped: {_e}",flush=True)
+    previous_meta=load_json(META_PATH,{})
     sources=load_json(SOURCES_PATH,[])
+    names=[source.get("name") for source in sources]
+    if not sources or any(not name for name in names) or len(names)!=len(set(names)):
+        raise ValueError("Source registry must contain unique, nonempty names")
     history_payload=load_json(HISTORY_PATH,{"jobs":[]}); history_jobs=history_payload.get("jobs",[])
     changes_payload=load_json(CHANGES_PATH,{"events":[]}); events=changes_payload.get("events",[])
     old_open=old_open_by_source(history_jobs)
@@ -2613,7 +2676,7 @@ def main() -> int:
         health_rows.append(health)
         print(f"{source['name']}: {health['status']} ({health['count']})")
 
-        unhealthy=health["status"] in {"failed","blocked","partial-suspected"}
+        unhealthy=health["ok"] is not True
         if unhealthy:
             # We may still merge richer roles we did find, but never close anything from this source.
             for job in found:
@@ -2705,10 +2768,21 @@ def main() -> int:
     events=events[-MAX_CHANGE_EVENTS:]
 
     baseline=history_payload.get("baseline_initialized_at") or history_payload.get("generated_at") or now
-    JOBS_PATH.write_text(json.dumps({"generated_at":now,"baseline_initialized_at":baseline,"jobs":current},indent=2,ensure_ascii=False),encoding="utf-8")
-    HISTORY_PATH.write_text(json.dumps({"generated_at":now,"baseline_initialized_at":baseline,"jobs":all_history},indent=2,ensure_ascii=False),encoding="utf-8")
-    CHANGES_PATH.write_text(json.dumps({"generated_at":now,"events":events},indent=2,ensure_ascii=False),encoding="utf-8")
-    META_PATH.write_text(json.dumps({"generated_at":now,"baseline_initialized_at":baseline,"baseline_week":(baseline[:10] if baseline else None),"source_count":len(sources),"sources":health_rows,"market_take":take},indent=2,ensure_ascii=False),encoding="utf-8")
+    completed=now_iso()
+    coverage=coverage_summary(health_rows)
+    for path, data in (
+        (JOBS_PATH,{"generated_at":completed,"baseline_initialized_at":baseline,"jobs":current}),
+        (HISTORY_PATH,{"generated_at":completed,"baseline_initialized_at":baseline,"jobs":all_history}),
+        (CHANGES_PATH,{"generated_at":completed,"events":events}),
+    ):
+        write_verified_json(path,data)
+    write_verified_json(META_PATH,{
+        "generated_at":completed,"attempted_at":now,"completed_at":completed,
+        "last_healthy_automated_check_at":completed if coverage["automated_status"]=="complete" else previous_meta.get("last_healthy_automated_check_at"),
+        "write_readback":"passed","coverage":coverage,
+        "baseline_initialized_at":baseline,"baseline_week":baseline[:10] if baseline else None,
+        "source_count":len(sources),"sources":health_rows,"market_take":take,
+    })
     print(f"Wrote {len(current)} open roles; {len(all_history)} total historical roles; {len(sources)} tracked sources.")
     return 0
 
