@@ -107,3 +107,47 @@ The first v6 run may take longer than earlier runs because Korn Ferry uses a dee
 - Synthetic parser regression tests passed for the specific failure patterns identified during live review: DSG organization/date extraction; LeaderFit/Sixth & I; Isaacson, Miller/RIT; Scion organization extraction; Sandler organization extraction; Korn Ferry/DBIA; and rejection of false-positive service/about/insights/function URLs.
 
 The first GitHub Action run remains the live-environment stress test for dynamic sites, blocking behavior, and source-page changes.
+
+
+## Coverage controls (October 2026)
+
+The daily updater distinguishes a completed publication from a healthy source check.
+Seven legacy `auto` entries now execute as `automated`. Manual and unavailable
+sources do not receive check timestamps and cannot close previously captured roles.
+Every configured page must parse before a source can contribute disappearance
+counts; unexpected zero results and large count collapses preserve previous roles,
+including for authoritative parsers. This protects history; it does not prove that
+an upstream site exposed every listing or that two syndicated listings are independent.
+
+All four data files are staged, read back and given the same completion timestamp.
+Metadata is written last. The browser warns about inconsistent files, incomplete
+coverage, unverified writes, and refreshes older than 36 hours (or future timestamps).
+Historical files are not retroactively certified. `last_healthy_automated_check_at`
+advances only when every configured automated source passes; manual coverage stays
+visible separately. This is not certification of the personal Executive Opportunity Watch.
+
+Pipeline and browser regression checks run on relevant pull requests and before
+scheduled collection. Degraded collection is published with warnings, then marked
+failed in GitHub Actions so it cannot look like a fully healthy refresh. Notification
+delivery still depends on the repository owner's GitHub notification settings.
+
+Ownership: the repository owner (iwwashington) reviews failed runs and sources needing
+manual checks; the updater records evidence and preserves history. Weekly, review
+unexpected zeros, blocked sources and discovered omissions against the canonical
+Watch source panel. Monthly, reconcile names, URLs and execution modes. Add a
+regression case for each confirmed failure before closing it. Live known-positive
+and independent negative controls in the Watch remain separate from offline tests.
+
+The browser's stale warning works when an old page is available and opened. It does
+not send an alert by itself. An outside-service heartbeat monitor is not implemented;
+another automation on the same service cannot reliably detect a platform-wide outage.
+No additional AI is needed for an independent timestamp/heartbeat monitor.
+
+A live CBIZ check during this repair exposed another gap: its first response shows
+12 of 31 jobs and requires interactive pagination. The source now runs, but this
+partial page is flagged for review rather than certified complete. Full CBIZ page
+traversal and employer-name extraction remain follow-up parser work. Other sites
+with unrecognized pagination can still be incomplete; configured-page success is
+not proof of complete upstream inventory. Explicit `allow_zero` remains a source
+policy, not an independent negative control, and should be reviewed against live
+known-positive/negative controls before treating empty boards as conclusive.

@@ -127,6 +127,23 @@ def run_browser_test():
                     "accurate status counts, usable links, and working filters"
                 )
 
+                # Freeze synthetic states in the browser; production files remain untouched.
+                original = desktop.evaluate("() => ({payload,meta,history,changes})")
+                desktop.evaluate("""() => {
+                    const now=new Date().toISOString();
+                    [payload,meta,history,changes].forEach(d=>d.generated_at=now);
+                    meta.completed_at=now;meta.coverage={status:'complete'};
+                    meta.write_readback='passed';renderCoverageHealth();
+                }""")
+                assert desktop.locator('#coverageHealth').inner_text() == 'Current configured coverage verified'
+                desktop.evaluate("meta.completed_at='2020-01-01T00:00:00Z';renderCoverageHealth()")
+                assert 'overdue' in desktop.locator('#coverageHealth').inner_text()
+                desktop.evaluate("meta.completed_at=new Date().toISOString();meta.coverage.status='incomplete';history.generated_at='old';renderCoverageHealth()")
+                warning=desktop.locator('#coverageHealth').inner_text()
+                assert 'Coverage incomplete' in warning and 'do not agree' in warning
+                desktop.evaluate("d => {payload=d.payload;meta=d.meta;history=d.history;changes=d.changes;renderCoverageHealth();}",original)
+                print('PASS: Coverage, stale timestamps and inconsistent files are visible')
+
                 assert not errors, f"JavaScript errors on desktop: {errors}"
                 print("PASS: Desktop loads data, Firms displays, warnings exist, and all tabs open")
 

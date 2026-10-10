@@ -3,6 +3,11 @@ name: Radar frontend smoke test
 on:
   pull_request:
     paths:
+      - 'aggregate.py'
+      - 'sources.json'
+      - 'test_aggregate.py'
+      - 'test_coverage.py'
+      - 'requirements.txt'
       - 'index.html'
       - 'test_site.py'
       - '.github/workflows/check-site.yml'
@@ -24,7 +29,11 @@ jobs:
           python-version: '3.12'
       - name: Install browser testing dependencies
         run: |
-          python -m pip install playwright
+          python -m pip install -r requirements.txt
           python -m playwright install --with-deps chromium
+      - name: Verify pipeline controls
+        run: |
+          python test_aggregate.py
+          python test_coverage.py
       - name: Verify JavaScript syntax and browser startup
         run: python test_site.py
