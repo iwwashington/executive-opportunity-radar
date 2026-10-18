@@ -1,673 +1,6 @@
 {
-  "generated_at": "2026-10-17T10:44:37.658948+00:00",
+  "generated_at": "2026-10-18T10:44:58.787540+00:00",
   "events": [
-    {
-      "at": "2026-10-08T10:36:29.199566+00:00",
-      "type": "updated",
-      "job_id": "9d9450d05842e801",
-      "source": "DSG Global",
-      "title": "Executive Director",
-      "organization": "La Casa de las Madres",
-      "changes": {
-        "organization": {
-          "from": "The Education Fund",
-          "to": "La Casa de las Madres"
-        },
-        "location": {
-          "from": "Miami, FL",
-          "to": "San Francisco, CA"
-        },
-        "url": {
-          "from": "https://www.dsgco.com/search/23059-the-education-fund-executive-director/",
-          "to": "https://www.dsgco.com/search/23396-la-casa-executive-director/"
-        },
-        "posted_date": {
-          "from": "2026-05-06",
-          "to": "2026-08-31"
-        },
-        "compensation_text": {
-          "from": "Compensation and Benefits The starting salary range for this position is $180,000 - $220,000, with additional bonus potential. If the Executive Director succeeds the President, the salary will increase commensurate with the responsi",
-          "to": "Compensation and Benefits The salary range for this position is $200,000 - $220,000 and is commensurate with skills and experience. La Casa de las Madres also offers a comprehensive benefits package. La Casa de las Madres i"
-        },
-        "compensation_min": {
-          "from": 180000,
-          "to": 200000
-        }
-      }
-    },
-    {
-      "at": "2026-10-08T10:36:29.199566+00:00",
-      "type": "updated",
-      "job_id": "b8e982953accafdb",
-      "source": "DSG Global",
-      "title": "Chief Executive Officer",
-      "organization": "La Clinica de La Raza",
-      "changes": {
-        "organization": {
-          "from": "Renewable Thermal Collaborative",
-          "to": "La Clinica de La Raza"
-        },
-        "location": {
-          "from": "Remote, Washington D.C. preferred",
-          "to": "Oakland, CA"
-        },
-        "url": {
-          "from": "https://www.dsgco.com/search/23132-rtc-chief-executive-officer/",
-          "to": "https://www.dsgco.com/search/21682-la-clinica-de-la-raza-chief-executive-officer/"
-        },
-        "posted_date": {
-          "from": "2026-06-11",
-          "to": "2025-12-11"
-        },
-        "compensation_text": {
-          "from": "Compensation & Benefits The compensation for this role is anticipated to range from $275,000 - $350,000, commensurate with experience. Travel is expected to be 15-20% of the role, both in the U.S. and internationally. The Renewable Thermal Col",
-          "to": "salary range for this position is $425,000 - $495,000, with a generous benefits package and bonus potential. Actual pay for the finalist candidate will be adjusted based on various factors, inc"
-        },
-        "compensation_min": {
-          "from": 275000,
-          "to": 425000
-        },
-        "compensation_max": {
-          "from": 350000,
-          "to": 495000
-        }
-      }
-    },
-    {
-      "at": "2026-10-08T10:36:29.199566+00:00",
-      "type": "closed",
-      "job_id": "6d2efc11ac38fb2f",
-      "source": "DSG Global",
-      "title": "Executive Director for Housing and Residence Life",
-      "organization": "North Carolina A&T State University"
-    },
-    {
-      "at": "2026-10-08T10:36:29.199566+00:00",
-      "type": "closed",
-      "job_id": "d4292837ee938bae",
-      "source": "DSG Global",
-      "title": "President",
-      "organization": "Highline College"
-    },
-    {
-      "at": "2026-10-08T10:36:29.199566+00:00",
-      "type": "closed",
-      "job_id": "ac8630d8b62bd70f",
-      "source": "DSG Global",
-      "title": "President & CEO",
-      "organization": "Keiro"
-    },
-    {
-      "at": "2026-10-08T10:36:29.199566+00:00",
-      "type": "closed",
-      "job_id": "78d9bfcdbeebcb4c",
-      "source": "DSG Global",
-      "title": "Executive Director, Washington D.C. Metro",
-      "organization": "GreenLight Fund"
-    },
-    {
-      "at": "2026-10-08T10:36:29.199566+00:00",
-      "type": "updated",
-      "job_id": "bdb4fab450cecd43",
-      "source": "Kittleman Associates",
-      "title": "President and CEO",
-      "organization": "Gettysburg Foundation",
-      "changes": {
-        "organization": {
-          "from": "Mid-Ohio Food Collective",
-          "to": "Gettysburg Foundation"
-        },
-        "location": {
-          "from": "Grove City, OH, United States",
-          "to": "Gettysburg, PA, United States"
-        },
-        "url": {
-          "from": "https://www.kittlemansearch.com/opportunities/president-ceo-mid-ohio-food-collective",
-          "to": "https://www.kittlemansearch.com/opportunities/president-chief-executive-officer-gettysburg-foundation"
-        },
-        "posted_date": {
-          "from": "2026-09-10",
-          "to": "2026-10-01"
-        }
-      }
-    },
-    {
-      "at": "2026-10-08T10:36:29.199566+00:00",
-      "type": "updated",
-      "job_id": "bdb4fab450cecd43",
-      "source": "Kittleman Associates",
-      "title": "President and CEO",
-      "organization": "Viability, Inc.",
-      "changes": {
-        "organization": {
-          "from": "Mid-Ohio Food Collective",
-          "to": "Viability, Inc."
-        },
-        "location": {
-          "from": "Grove City, OH, United States",
-          "to": "Springfield, MA, United States"
-        },
-        "url": {
-          "from": "https://www.kittlemansearch.com/opportunities/president-ceo-mid-ohio-food-collective",
-          "to": "https://www.kittlemansearch.com/opportunities/president-ceo-viability"
-        },
-        "posted_date": {
-          "from": "2026-09-10",
-          "to": "2026-09-16"
-        }
-      }
-    },
-    {
-      "at": "2026-10-08T10:36:29.199566+00:00",
-      "type": "updated",
-      "job_id": "bdb4fab450cecd43",
-      "source": "Kittleman Associates",
-      "title": "President and CEO",
-      "organization": "Schoodic Institute at Acadia National Park",
-      "changes": {
-        "organization": {
-          "from": "Mid-Ohio Food Collective",
-          "to": "Schoodic Institute at Acadia National Park"
-        },
-        "location": {
-          "from": "Grove City, OH, United States",
-          "to": "Winter Harbor, ME, United States"
-        },
-        "url": {
-          "from": "https://www.kittlemansearch.com/opportunities/president-ceo-mid-ohio-food-collective",
-          "to": "https://www.kittlemansearch.com/opportunities/president-ceo-schoodic-institute"
-        },
-        "posted_date": {
-          "from": "2026-09-10",
-          "to": "2026-09-14"
-        }
-      }
-    },
-    {
-      "at": "2026-10-08T10:36:29.199566+00:00",
-      "type": "updated",
-      "job_id": "f9f133cf2577cc30",
-      "source": "Spano Pratt",
-      "title": "Chief Executive Officer – Profile",
-      "organization": "Rock River",
-      "changes": {
-        "organization": {
-          "from": "Emergency Nurses Association",
-          "to": "Rock River"
-        },
-        "url": {
-          "from": "https://spanopratt.com/wp-content/uploads/2026/05/ENA-CEO-Job-Profile-Final.pdf",
-          "to": "https://spanopratt.com/wp-content/uploads/2026/10/Rock-River-Community-Clinic-Job-Profile-CEO.pdf"
-        }
-      }
-    },
-    {
-      "at": "2026-10-08T16:27:51.768389+00:00",
-      "type": "removed_false_positive",
-      "job_id": "62e62841416b764c",
-      "source": "Bridge Partners",
-      "title": "CEO and Executive Director",
-      "organization": "Functional Expertise",
-      "url": "https://bridgepartnersllc.com/function/ceo/"
-    },
-    {
-      "at": "2026-10-08T16:27:51.768389+00:00",
-      "type": "reopened",
-      "job_id": "62e62841416b764c",
-      "source": "Bridge Partners",
-      "title": "CEO and Executive Director",
-      "organization": "Functional Expertise"
-    },
-    {
-      "at": "2026-10-08T16:27:51.768389+00:00",
-      "type": "updated",
-      "job_id": "62e62841416b764c",
-      "source": "Bridge Partners",
-      "title": "CEO and Executive Director",
-      "organization": "Functional Expertise",
-      "changes": {
-        "status": {
-          "from": "closed",
-          "to": "open"
-        }
-      }
-    },
-    {
-      "at": "2026-10-08T16:27:51.768389+00:00",
-      "type": "updated",
-      "job_id": "75143dcc943a8139",
-      "source": "Scion Executive Search",
-      "title": "Chief Executive Officer",
-      "organization": "Volunteers of America Western Washington, one of the region's most comprehensive human services organizations",
-      "changes": {
-        "posted_date": {
-          "from": "2026-10-01",
-          "to": "2026-10-08"
-        }
-      }
-    },
-    {
-      "at": "2026-10-08T16:27:51.768389+00:00",
-      "type": "updated",
-      "job_id": "1ae253d1667bd31d",
-      "source": "Scion Executive Search",
-      "title": "Chief Executive Officer",
-      "organization": "Vayu Health",
-      "changes": {
-        "posted_date": {
-          "from": "2026-10-01",
-          "to": "2026-10-08"
-        }
-      }
-    },
-    {
-      "at": "2026-10-08T16:27:51.768389+00:00",
-      "type": "updated",
-      "job_id": "4ab2e84d73594bee",
-      "source": "Scion Executive Search",
-      "title": "Senior Executive Director",
-      "organization": "American Heart Association",
-      "changes": {
-        "posted_date": {
-          "from": "2026-10-02",
-          "to": "2026-10-08"
-        }
-      }
-    },
-    {
-      "at": "2026-10-08T16:27:51.768389+00:00",
-      "type": "updated",
-      "job_id": "b8e982953accafdb",
-      "source": "DSG Global",
-      "title": "Chief Executive Officer",
-      "organization": "Aeris Insight",
-      "changes": {
-        "organization": {
-          "from": "Renewable Thermal Collaborative",
-          "to": "Aeris Insight"
-        },
-        "location": {
-          "from": "Remote, Washington D.C. preferred",
-          "to": "Remote"
-        },
-        "url": {
-          "from": "https://www.dsgco.com/search/23132-rtc-chief-executive-officer/",
-          "to": "https://www.dsgco.com/search/23172-aeris/"
-        },
-        "posted_date": {
-          "from": "2026-06-11",
-          "to": "2026-07-08"
-        },
-        "compensation_text": {
-          "from": "Compensation & Benefits The compensation for this role is anticipated to range from $275,000 - $350,000, commensurate with experience. Travel is expected to be 15-20% of the role, both in the U.S. and internationally. The Renewable Thermal Col",
-          "to": "Compensation and Benefits Salary is competitive and commensurate with experience. The salary range for this role is $230,000 - $250,000 with a generous benefits package. The exact salary that will be offered to the CEO will be determined based on a consideration of the succe"
-        },
-        "compensation_min": {
-          "from": 275000,
-          "to": 230000
-        },
-        "compensation_max": {
-          "from": 350000,
-          "to": 250000
-        }
-      }
-    },
-    {
-      "at": "2026-10-08T16:27:51.768389+00:00",
-      "type": "reopened",
-      "job_id": "d4292837ee938bae",
-      "source": "DSG Global",
-      "title": "President",
-      "organization": "Endowment for Health"
-    },
-    {
-      "at": "2026-10-08T16:27:51.768389+00:00",
-      "type": "updated",
-      "job_id": "d4292837ee938bae",
-      "source": "DSG Global",
-      "title": "President",
-      "organization": "Endowment for Health",
-      "changes": {
-        "organization": {
-          "from": "Highline College",
-          "to": "Endowment for Health"
-        },
-        "location": {
-          "from": "Des Moines, WA",
-          "to": "Concord, NH"
-        },
-        "url": {
-          "from": "https://www.dsgco.com/search/23231-highline-college-president/",
-          "to": "https://www.dsgco.com/search/23249-endowment-for-health-president/"
-        },
-        "posted_date": {
-          "from": "2026-06-29",
-          "to": "2026-09-28"
-        },
-        "compensation_text": {
-          "from": "Salary is competitive and commensurate with experience. The anticipated salary range for this role is $300,000-$320,000 and includes a generous benefits package . This is an on-campus position. Pave a path to positive impact Partner with Us Active Searches Ex",
-          "to": "Compensation and Benefits Salary is competitive and commensurate with experience. The salary range for this role is $275,000 - $300,000 with a generous benefits package. The exact salary that will be offered to the President will be determined based on a consideration of the"
-        },
-        "compensation_min": {
-          "from": 300000,
-          "to": 275000
-        },
-        "compensation_max": {
-          "from": 320000,
-          "to": 300000
-        },
-        "status": {
-          "from": "closed",
-          "to": "open"
-        }
-      }
-    },
-    {
-      "at": "2026-10-08T16:27:51.768389+00:00",
-      "type": "updated",
-      "job_id": "64ee69a30199e1a8",
-      "source": "DSG Global",
-      "title": "CEO",
-      "organization": "Fort Worth Report",
-      "changes": {
-        "organization": {
-          "from": "Aspiranet",
-          "to": "Fort Worth Report"
-        },
-        "location": {
-          "from": "South San Francisco, CA",
-          "to": "Fort Worth, TX"
-        },
-        "url": {
-          "from": "https://www.dsgco.com/search/23462-aspiranet-ceo/",
-          "to": "https://www.dsgco.com/search/23370-fort-worth-report-ceo/"
-        },
-        "posted_date": {
-          "from": "2026-09-15",
-          "to": "2026-08-10"
-        },
-        "compensation_text": {
-          "from": "Compensation and Benefits The salary range for this position is $400,000 – $475,000 commensurate with experience. Aspiranet values its employees and offers a comprehensive benefits package. Contact DSG | Koya has been exclu",
-          "to": "Compensation and Benefits Salary and bonus subject to qualifications and experience. Benefits include PTO, paid holidays, insurance benefits including medical, dental, vision, life insurance plans and 401k plan. This is a full time role based in Fort Worth, Texas. The Fort Worth Report is an equal opportunity employer. We a"
-        },
-        "compensation_min": {
-          "from": 400000,
-          "to": 401000
-        },
-        "compensation_max": {
-          "from": 475000,
-          "to": 401000
-        }
-      }
-    },
-    {
-      "at": "2026-10-08T16:27:51.768389+00:00",
-      "type": "reopened",
-      "job_id": "78d9bfcdbeebcb4c",
-      "source": "DSG Global",
-      "title": "Executive Director, Washington D.C. Metro",
-      "organization": "GreenLight Fund"
-    },
-    {
-      "at": "2026-10-08T16:27:51.768389+00:00",
-      "type": "updated",
-      "job_id": "78d9bfcdbeebcb4c",
-      "source": "DSG Global",
-      "title": "Executive Director, Washington D.C. Metro",
-      "organization": "GreenLight Fund",
-      "changes": {
-        "status": {
-          "from": "closed",
-          "to": "open"
-        }
-      }
-    },
-    {
-      "at": "2026-10-08T16:27:51.768389+00:00",
-      "type": "updated",
-      "job_id": "b8e982953accafdb",
-      "source": "DSG Global",
-      "title": "Chief Executive Officer",
-      "organization": "Health Federation of Philadelphia",
-      "changes": {
-        "organization": {
-          "from": "Renewable Thermal Collaborative",
-          "to": "Health Federation of Philadelphia"
-        },
-        "location": {
-          "from": "Remote, Washington D.C. preferred",
-          "to": "Philadelphia, PA"
-        },
-        "url": {
-          "from": "https://www.dsgco.com/search/23132-rtc-chief-executive-officer/",
-          "to": "https://www.dsgco.com/search/23240-health-federation-of-philadelphia-chief-executive-officer/"
-        },
-        "posted_date": {
-          "from": "2026-06-11",
-          "to": "2026-09-02"
-        },
-        "compensation_text": {
-          "from": "Compensation & Benefits The compensation for this role is anticipated to range from $275,000 - $350,000, commensurate with experience. Travel is expected to be 15-20% of the role, both in the U.S. and internationally. The Renewable Thermal Col",
-          "to": "Compensation and Benefits Salary is competitive and commensurate with experience. The salary range for this role is $305,000 - $345,000 with a generous benefits package. The exact salary that will be offered to the CEO will be determined based on a consideration of the succe"
-        },
-        "compensation_min": {
-          "from": 275000,
-          "to": 305000
-        },
-        "compensation_max": {
-          "from": 350000,
-          "to": 345000
-        }
-      }
-    },
-    {
-      "at": "2026-10-08T16:27:51.768389+00:00",
-      "type": "updated",
-      "job_id": "9d9450d05842e801",
-      "source": "DSG Global",
-      "title": "Executive Director",
-      "organization": "HIPS",
-      "changes": {
-        "organization": {
-          "from": "La Casa de las Madres",
-          "to": "HIPS"
-        },
-        "location": {
-          "from": "San Francisco, CA",
-          "to": "Washington, DC"
-        },
-        "url": {
-          "from": "https://www.dsgco.com/search/23396-la-casa-executive-director/",
-          "to": "https://www.dsgco.com/search/22962-hips-executive-director/"
-        },
-        "posted_date": {
-          "from": "2026-08-31",
-          "to": "2026-06-04"
-        },
-        "compensation_text": {
-          "from": "Compensation and Benefits The salary range for this position is $200,000 - $220,000 and is commensurate with skills and experience. La Casa de las Madres also offers a comprehensive benefits package. La Casa de las Madres i",
-          "to": "Compensation and Benefits The salary range for this role is $130,000-$140,000. HIPS offers an excellent benefits package that includes: 100% employer-sponsored medical, dental, vision, and life plans for each employee"
-        },
-        "compensation_min": {
-          "from": 200000,
-          "to": 130000
-        },
-        "compensation_max": {
-          "from": 220000,
-          "to": 140000
-        }
-      }
-    },
-    {
-      "at": "2026-10-08T16:27:51.768389+00:00",
-      "type": "updated",
-      "job_id": "9d9450d05842e801",
-      "source": "DSG Global",
-      "title": "Executive Director",
-      "organization": "Homeowners of Tomorrow Alliance",
-      "changes": {
-        "organization": {
-          "from": "La Casa de las Madres",
-          "to": "Homeowners of Tomorrow Alliance"
-        },
-        "location": {
-          "from": "San Francisco, CA",
-          "to": "Flexible with preference for Bay Area, CA or New York, NY"
-        },
-        "url": {
-          "from": "https://www.dsgco.com/search/23396-la-casa-executive-director/",
-          "to": "https://www.dsgco.com/search/22628-hota/"
-        },
-        "posted_date": {
-          "from": "2026-08-31",
-          "to": "2025-12-18"
-        },
-        "compensation_text": {
-          "from": "Compensation and Benefits The salary range for this position is $200,000 - $220,000 and is commensurate with skills and experience. La Casa de las Madres also offers a comprehensive benefits package. La Casa de las Madres i",
-          "to": "Compensation and Benefits As a new organization, Homeowners of Tomorrow Alliance will be incubated at SageSure and the Executive Director will be hired by that entity initially. SageSure offers a competitive salary based on experience and skills, as well as an excellent benefits package. The estimated annual salary range for the Executive Director is $190,000 - $210,000 with the ability to increase for an ideal candidate. The exact salary will be dependent upon experience and location. Contact DSG | Koya ha"
-        },
-        "compensation_min": {
-          "from": 200000,
-          "to": 190000
-        },
-        "compensation_max": {
-          "from": 220000,
-          "to": 210000
-        }
-      }
-    },
-    {
-      "at": "2026-10-08T16:27:51.768389+00:00",
-      "type": "updated",
-      "job_id": "9d9450d05842e801",
-      "source": "DSG Global",
-      "title": "Executive Director",
-      "organization": "Illinois Board of Examiners",
-      "changes": {
-        "organization": {
-          "from": "La Casa de las Madres",
-          "to": "Illinois Board of Examiners"
-        },
-        "location": {
-          "from": "San Francisco, CA",
-          "to": "Naperville, IL"
-        },
-        "url": {
-          "from": "https://www.dsgco.com/search/23396-la-casa-executive-director/",
-          "to": "https://www.dsgco.com/search/23347-ilboe-executive-director/"
-        },
-        "posted_date": {
-          "from": "2026-08-31",
-          "to": "2026-08-13"
-        },
-        "compensation_text": {
-          "from": "Compensation and Benefits The salary range for this position is $200,000 - $220,000 and is commensurate with skills and experience. La Casa de las Madres also offers a comprehensive benefits package. La Casa de las Madres i",
-          "to": "Compensation & Work Environment This is a full-time, hybrid work environment. The annual salary range for this position is $150,000 to $175,000 and will be commensurate with the successful candidate’s skills and experience. A generous benefits package will be provided. Contact Submi"
-        },
-        "compensation_min": {
-          "from": 200000,
-          "to": 150000
-        },
-        "compensation_max": {
-          "from": 220000,
-          "to": 175000
-        }
-      }
-    },
-    {
-      "at": "2026-10-08T16:27:51.768389+00:00",
-      "type": "reopened",
-      "job_id": "ac8630d8b62bd70f",
-      "source": "DSG Global",
-      "title": "President & CEO",
-      "organization": "Keiro"
-    },
-    {
-      "at": "2026-10-08T16:27:51.768389+00:00",
-      "type": "updated",
-      "job_id": "ac8630d8b62bd70f",
-      "source": "DSG Global",
-      "title": "President & CEO",
-      "organization": "Keiro",
-      "changes": {
-        "status": {
-          "from": "closed",
-          "to": "open"
-        }
-      }
-    },
-    {
-      "at": "2026-10-08T16:27:51.768389+00:00",
-      "type": "updated",
-      "job_id": "b8e982953accafdb",
-      "source": "DSG Global",
-      "title": "Chief Executive Officer",
-      "organization": "Kin On",
-      "changes": {
-        "organization": {
-          "from": "Renewable Thermal Collaborative",
-          "to": "Kin On"
-        },
-        "location": {
-          "from": "Remote, Washington D.C. preferred",
-          "to": "Seattle, WA"
-        },
-        "url": {
-          "from": "https://www.dsgco.com/search/23132-rtc-chief-executive-officer/",
-          "to": "https://www.dsgco.com/search/23171-kin-on-chief-executive-officer/"
-        },
-        "posted_date": {
-          "from": "2026-06-11",
-          "to": "2026-06-14"
-        },
-        "compensation_text": {
-          "from": "Compensation & Benefits The compensation for this role is anticipated to range from $275,000 - $350,000, commensurate with experience. Travel is expected to be 15-20% of the role, both in the U.S. and internationally. The Renewable Thermal Col",
-          "to": "Compensation and Benefits Salary is competitive and commensurate with experience. The good faith estimated salary range for this role is $250,000 - $350,000 with a generous benefits package. How to Apply Kin On is an equal opportunity employer committed to building a diverse and inclusive leader"
-        },
-        "compensation_min": {
-          "from": 275000,
-          "to": 250000
-        }
-      }
-    },
-    {
-      "at": "2026-10-08T16:27:51.768389+00:00",
-      "type": "updated",
-      "job_id": "b8e982953accafdb",
-      "source": "DSG Global",
-      "title": "Chief Executive Officer",
-      "organization": "La Clinica de La Raza",
-      "changes": {
-        "organization": {
-          "from": "Renewable Thermal Collaborative",
-          "to": "La Clinica de La Raza"
-        },
-        "location": {
-          "from": "Remote, Washington D.C. preferred",
-          "to": "Oakland, CA"
-        },
-        "url": {
-          "from": "https://www.dsgco.com/search/23132-rtc-chief-executive-officer/",
-          "to": "https://www.dsgco.com/search/21682-la-clinica-de-la-raza-chief-executive-officer/"
-        },
-        "posted_date": {
-          "from": "2026-06-11",
-          "to": "2025-12-11"
-        },
-        "compensation_text": {
-          "from": "Compensation & Benefits The compensation for this role is anticipated to range from $275,000 - $350,000, commensurate with experience. Travel is expected to be 15-20% of the role, both in the U.S. and internationally. The Renewable Thermal Col",
-          "to": "salary range for this position is $425,000 - $495,000, with a generous benefits package and bonus potential. Actual pay for the finalist candidate will be adjusted based on various factors, inc"
-        },
-        "compensation_min": {
-          "from": 275000,
-          "to": 425000
-        },
-        "compensation_max": {
-          "from": 350000,
-          "to": 495000
-        }
-      }
-    },
     {
       "at": "2026-10-08T16:27:51.768389+00:00",
       "type": "updated",
@@ -7920,6 +7253,522 @@
     },
     {
       "at": "2026-10-17T10:44:37.658948+00:00",
+      "type": "updated",
+      "job_id": "781dce5164d4ab71",
+      "source": "Carney Sandoe",
+      "title": "Head of School",
+      "organization": "Polytechnic School",
+      "changes": {
+        "organization": {
+          "from": "Weber School",
+          "to": "Polytechnic School"
+        },
+        "location": {
+          "from": "GA – Atlanta",
+          "to": "CA – Pasadena"
+        }
+      }
+    },
+    {
+      "at": "2026-10-18T10:44:58.787540+00:00",
+      "type": "removed_false_positive",
+      "job_id": "d096dd70724b642b",
+      "source": "FaithSearch Partners",
+      "title": "Executive Director",
+      "organization": "California Senior Living Ministry",
+      "url": "https://faithsearchpartners.com/news/california-senior-living-ministry-seeks-executive-director/"
+    },
+    {
+      "at": "2026-10-18T10:44:58.787540+00:00",
+      "type": "removed_false_positive",
+      "job_id": "bee6f9816737451e",
+      "source": "FaithSearch Partners",
+      "title": "Chief Executive Officer",
+      "organization": "Well-respected Christian Media Ministry in MD",
+      "url": "https://faithsearchpartners.com/news/well-respected-christian-media-ministry-in-md-seeking-chief-executive-officer/"
+    },
+    {
+      "at": "2026-10-18T10:44:58.787540+00:00",
+      "type": "removed_false_positive",
+      "job_id": "960b70cdf38a6974",
+      "source": "FaithSearch Partners",
+      "title": "President",
+      "organization": "Organization confidential",
+      "url": "https://faithsearchpartners.com/news/faithsearch-launches-president-search-for-university-of-toccoa-falls/"
+    },
+    {
+      "at": "2026-10-18T10:44:58.787540+00:00",
+      "type": "removed_false_positive",
+      "job_id": "62e62841416b764c",
+      "source": "Bridge Partners",
+      "title": "CEO and Executive Director",
+      "organization": "Functions",
+      "url": "https://bridgepartnersllc.com/function/ceo/"
+    },
+    {
+      "at": "2026-10-18T10:44:58.787540+00:00",
+      "type": "updated",
+      "job_id": "4a559e8b34e0cffa",
+      "source": "BoardWalk Consulting",
+      "title": "President & CEO",
+      "organization": "One Hundred Miles",
+      "changes": {
+        "posted_date": {
+          "from": "2026-10-03",
+          "to": "2026-09-27"
+        }
+      }
+    },
+    {
+      "at": "2026-10-18T10:44:58.787540+00:00",
+      "type": "updated",
+      "job_id": "acf48ae0f359e233",
+      "source": "BoardWalk Consulting",
+      "title": "Executive Director",
+      "organization": "Florida Rights Restoration Coalition",
+      "changes": {
+        "posted_date": {
+          "from": "2026-09-17",
+          "to": "2026-09-18"
+        }
+      }
+    },
+    {
+      "at": "2026-10-18T10:44:58.787540+00:00",
+      "type": "updated",
+      "job_id": "b31f942adf5dca3b",
+      "source": "BoardWalk Consulting",
+      "title": "Executive Director",
+      "organization": "Gateway Early Childhood Alliance",
+      "changes": {
+        "posted_date": {
+          "from": "2026-08-18",
+          "to": "2026-08-19"
+        }
+      }
+    },
+    {
+      "at": "2026-10-18T10:44:58.787540+00:00",
+      "type": "updated",
+      "job_id": "e39688bc3548ed3e",
+      "source": "BoardWalk Consulting",
+      "title": "CEO",
+      "organization": "The Colorado Health Foundation",
+      "changes": {
+        "posted_date": {
+          "from": "2026-08-18",
+          "to": "2026-08-19"
+        }
+      }
+    },
+    {
+      "at": "2026-10-18T10:44:58.787540+00:00",
+      "type": "updated",
+      "job_id": "dfcd1a39e5a39154",
+      "source": "BoardWalk Consulting",
+      "title": "President & CEO",
+      "organization": "Community Foundation for Greater Atlanta",
+      "changes": {
+        "posted_date": {
+          "from": "2026-07-19",
+          "to": "2026-07-20"
+        }
+      }
+    },
+    {
+      "at": "2026-10-18T10:44:58.787540+00:00",
+      "type": "updated",
+      "job_id": "70879d341e410a6b",
+      "source": "BoardWalk Consulting",
+      "title": "Executive Director",
+      "organization": "Atlanta Ballet",
+      "changes": {
+        "posted_date": {
+          "from": "2026-05-20",
+          "to": "2026-04-21"
+        }
+      }
+    },
+    {
+      "at": "2026-10-18T10:44:58.787540+00:00",
+      "type": "reopened",
+      "job_id": "62e62841416b764c",
+      "source": "Bridge Partners",
+      "title": "CEO and Executive Director",
+      "organization": "Functions"
+    },
+    {
+      "at": "2026-10-18T10:44:58.787540+00:00",
+      "type": "updated",
+      "job_id": "62e62841416b764c",
+      "source": "Bridge Partners",
+      "title": "CEO and Executive Director",
+      "organization": "Functions",
+      "changes": {
+        "status": {
+          "from": "closed",
+          "to": "open"
+        }
+      }
+    },
+    {
+      "at": "2026-10-18T10:44:58.787540+00:00",
+      "type": "updated",
+      "job_id": "b8e982953accafdb",
+      "source": "DSG Global",
+      "title": "Chief Executive Officer",
+      "organization": "Aeris Insight",
+      "changes": {
+        "organization": {
+          "from": "Health Federation of Philadelphia",
+          "to": "Aeris Insight"
+        },
+        "location": {
+          "from": "Philadelphia, PA",
+          "to": "Remote"
+        },
+        "url": {
+          "from": "https://www.dsgco.com/search/23240-health-federation-of-philadelphia-chief-executive-officer/",
+          "to": "https://www.dsgco.com/search/23172-aeris/"
+        },
+        "posted_date": {
+          "from": "2026-09-02",
+          "to": "2026-07-08"
+        },
+        "compensation_text": {
+          "from": "Compensation and Benefits Salary is competitive and commensurate with experience. The salary range for this role is $305,000 - $345,000 with a generous benefits package. The exact salary that will be offered to the CEO will be determined based on a consideration of the succe",
+          "to": "Compensation and Benefits Salary is competitive and commensurate with experience. The salary range for this role is $230,000 - $250,000 with a generous benefits package. The exact salary that will be offered to the CEO will be determined based on a consideration of the succe"
+        },
+        "compensation_min": {
+          "from": 305000,
+          "to": 230000
+        },
+        "compensation_max": {
+          "from": 345000,
+          "to": 250000
+        }
+      }
+    },
+    {
+      "at": "2026-10-18T10:44:58.787540+00:00",
+      "type": "updated",
+      "job_id": "b8e982953accafdb",
+      "source": "DSG Global",
+      "title": "Chief Executive Officer",
+      "organization": "Kin On",
+      "changes": {
+        "organization": {
+          "from": "Health Federation of Philadelphia",
+          "to": "Kin On"
+        },
+        "location": {
+          "from": "Philadelphia, PA",
+          "to": "Seattle, WA"
+        },
+        "url": {
+          "from": "https://www.dsgco.com/search/23240-health-federation-of-philadelphia-chief-executive-officer/",
+          "to": "https://www.dsgco.com/search/23171-kin-on-chief-executive-officer/"
+        },
+        "posted_date": {
+          "from": "2026-09-02",
+          "to": "2026-06-14"
+        },
+        "compensation_text": {
+          "from": "Compensation and Benefits Salary is competitive and commensurate with experience. The salary range for this role is $305,000 - $345,000 with a generous benefits package. The exact salary that will be offered to the CEO will be determined based on a consideration of the succe",
+          "to": "Compensation and Benefits Salary is competitive and commensurate with experience. The good faith estimated salary range for this role is $250,000 - $350,000 with a generous benefits package. How to Apply Kin On is an equal opportunity employer committed to building a diverse and inclusive leader"
+        },
+        "compensation_min": {
+          "from": 305000,
+          "to": 250000
+        },
+        "compensation_max": {
+          "from": 345000,
+          "to": 350000
+        }
+      }
+    },
+    {
+      "at": "2026-10-18T10:44:58.787540+00:00",
+      "type": "reopened",
+      "job_id": "9d9450d05842e801",
+      "source": "DSG Global",
+      "title": "Executive Director",
+      "organization": "La Casa de las Madres"
+    },
+    {
+      "at": "2026-10-18T10:44:58.787540+00:00",
+      "type": "updated",
+      "job_id": "9d9450d05842e801",
+      "source": "DSG Global",
+      "title": "Executive Director",
+      "organization": "La Casa de las Madres",
+      "changes": {
+        "organization": {
+          "from": "The Doctors Clinic",
+          "to": "La Casa de las Madres"
+        },
+        "location": {
+          "from": "Silverdale, WA",
+          "to": "San Francisco, CA"
+        },
+        "url": {
+          "from": "https://www.dsgco.com/search/23372-the-doctors-clinic-executive-director/",
+          "to": "https://www.dsgco.com/search/23396-la-casa-executive-director/"
+        },
+        "posted_date": {
+          "from": "2026-08-26",
+          "to": "2026-08-31"
+        },
+        "compensation_text": {
+          "from": "Compensation & Benefits Salary is competitive and commensurate with experience. The salary range for this role is $300,000 - $350,000 with a generous benefits package. Contact DSG | Koya has been exclusively retained for this engagement, which is being led by Naree Viner a",
+          "to": "Compensation and Benefits The salary range for this position is $200,000 - $220,000 and is commensurate with skills and experience. La Casa de las Madres also offers a comprehensive benefits package. La Casa de las Madres i"
+        },
+        "compensation_min": {
+          "from": 300000,
+          "to": 200000
+        },
+        "compensation_max": {
+          "from": 350000,
+          "to": 220000
+        },
+        "status": {
+          "from": "closed",
+          "to": "open"
+        }
+      }
+    },
+    {
+      "at": "2026-10-18T10:44:58.787540+00:00",
+      "type": "updated",
+      "job_id": "b8e982953accafdb",
+      "source": "DSG Global",
+      "title": "Chief Executive Officer",
+      "organization": "La Clinica de La Raza",
+      "changes": {
+        "organization": {
+          "from": "Health Federation of Philadelphia",
+          "to": "La Clinica de La Raza"
+        },
+        "location": {
+          "from": "Philadelphia, PA",
+          "to": "Oakland, CA"
+        },
+        "url": {
+          "from": "https://www.dsgco.com/search/23240-health-federation-of-philadelphia-chief-executive-officer/",
+          "to": "https://www.dsgco.com/search/21682-la-clinica-de-la-raza-chief-executive-officer/"
+        },
+        "posted_date": {
+          "from": "2026-09-02",
+          "to": "2025-12-11"
+        },
+        "compensation_text": {
+          "from": "Compensation and Benefits Salary is competitive and commensurate with experience. The salary range for this role is $305,000 - $345,000 with a generous benefits package. The exact salary that will be offered to the CEO will be determined based on a consideration of the succe",
+          "to": "salary range for this position is $425,000 - $495,000, with a generous benefits package and bonus potential. Actual pay for the finalist candidate will be adjusted based on various factors, inc"
+        },
+        "compensation_min": {
+          "from": 305000,
+          "to": 425000
+        },
+        "compensation_max": {
+          "from": 345000,
+          "to": 495000
+        }
+      }
+    },
+    {
+      "at": "2026-10-18T10:44:58.787540+00:00",
+      "type": "closed",
+      "job_id": "ac8630d8b62bd70f",
+      "source": "DSG Global",
+      "title": "President & CEO",
+      "organization": "Keiro"
+    },
+    {
+      "at": "2026-10-18T10:44:58.787540+00:00",
+      "type": "updated",
+      "job_id": "bdb4fab450cecd43",
+      "source": "Kittleman Associates",
+      "title": "President and CEO",
+      "organization": "Gettysburg Foundation",
+      "changes": {
+        "organization": {
+          "from": "Mid-Ohio Food Collective",
+          "to": "Gettysburg Foundation"
+        },
+        "location": {
+          "from": "Grove City, OH, United States",
+          "to": "Gettysburg, PA, United States"
+        },
+        "url": {
+          "from": "https://www.kittlemansearch.com/opportunities/president-ceo-mid-ohio-food-collective",
+          "to": "https://www.kittlemansearch.com/opportunities/president-chief-executive-officer-gettysburg-foundation"
+        },
+        "posted_date": {
+          "from": "2026-09-10",
+          "to": "2026-10-01"
+        }
+      }
+    },
+    {
+      "at": "2026-10-18T10:44:58.787540+00:00",
+      "type": "updated",
+      "job_id": "bdb4fab450cecd43",
+      "source": "Kittleman Associates",
+      "title": "President and CEO",
+      "organization": "Viability, Inc.",
+      "changes": {
+        "organization": {
+          "from": "Mid-Ohio Food Collective",
+          "to": "Viability, Inc."
+        },
+        "location": {
+          "from": "Grove City, OH, United States",
+          "to": "Springfield, MA, United States"
+        },
+        "url": {
+          "from": "https://www.kittlemansearch.com/opportunities/president-ceo-mid-ohio-food-collective",
+          "to": "https://www.kittlemansearch.com/opportunities/president-ceo-viability"
+        },
+        "posted_date": {
+          "from": "2026-09-10",
+          "to": "2026-09-16"
+        }
+      }
+    },
+    {
+      "at": "2026-10-18T10:44:58.787540+00:00",
+      "type": "updated",
+      "job_id": "bdb4fab450cecd43",
+      "source": "Kittleman Associates",
+      "title": "President and CEO",
+      "organization": "Schoodic Institute at Acadia National Park",
+      "changes": {
+        "organization": {
+          "from": "Mid-Ohio Food Collective",
+          "to": "Schoodic Institute at Acadia National Park"
+        },
+        "location": {
+          "from": "Grove City, OH, United States",
+          "to": "Winter Harbor, ME, United States"
+        },
+        "url": {
+          "from": "https://www.kittlemansearch.com/opportunities/president-ceo-mid-ohio-food-collective",
+          "to": "https://www.kittlemansearch.com/opportunities/president-ceo-schoodic-institute"
+        },
+        "posted_date": {
+          "from": "2026-09-10",
+          "to": "2026-09-14"
+        }
+      }
+    },
+    {
+      "at": "2026-10-18T10:44:58.787540+00:00",
+      "type": "updated",
+      "job_id": "dc33d30ecc1362e5",
+      "source": "NPAG",
+      "title": "Executive Director",
+      "organization": "HealthQ",
+      "changes": {
+        "organization": {
+          "from": "Sobrato Early Academic Language (SEAL)",
+          "to": "HealthQ"
+        },
+        "location": {
+          "from": "Remote (within U.S., California preferred)",
+          "to": "Location not listed"
+        },
+        "url": {
+          "from": "https://www.npag.com/seal-ed",
+          "to": "https://www.npag.com/hq-ed"
+        }
+      }
+    },
+    {
+      "at": "2026-10-18T10:44:58.787540+00:00",
+      "type": "updated",
+      "job_id": "f9f133cf2577cc30",
+      "source": "Spano Pratt",
+      "title": "Chief Executive Officer – Profile",
+      "organization": "Rock River",
+      "changes": {
+        "organization": {
+          "from": "Emergency Nurses Association",
+          "to": "Rock River"
+        },
+        "url": {
+          "from": "https://spanopratt.com/wp-content/uploads/2026/05/ENA-CEO-Job-Profile-Final.pdf",
+          "to": "https://spanopratt.com/wp-content/uploads/2026/10/Rock-River-Community-Clinic-Job-Profile-CEO.pdf"
+        }
+      }
+    },
+    {
+      "at": "2026-10-18T10:44:58.787540+00:00",
+      "type": "reopened",
+      "job_id": "d096dd70724b642b",
+      "source": "FaithSearch Partners",
+      "title": "Executive Director",
+      "organization": "California Senior Living Ministry"
+    },
+    {
+      "at": "2026-10-18T10:44:58.787540+00:00",
+      "type": "updated",
+      "job_id": "d096dd70724b642b",
+      "source": "FaithSearch Partners",
+      "title": "Executive Director",
+      "organization": "California Senior Living Ministry",
+      "changes": {
+        "status": {
+          "from": "closed",
+          "to": "open"
+        }
+      }
+    },
+    {
+      "at": "2026-10-18T10:44:58.787540+00:00",
+      "type": "reopened",
+      "job_id": "960b70cdf38a6974",
+      "source": "FaithSearch Partners",
+      "title": "President",
+      "organization": "Organization confidential"
+    },
+    {
+      "at": "2026-10-18T10:44:58.787540+00:00",
+      "type": "updated",
+      "job_id": "960b70cdf38a6974",
+      "source": "FaithSearch Partners",
+      "title": "President",
+      "organization": "Organization confidential",
+      "changes": {
+        "status": {
+          "from": "closed",
+          "to": "open"
+        }
+      }
+    },
+    {
+      "at": "2026-10-18T10:44:58.787540+00:00",
+      "type": "reopened",
+      "job_id": "bee6f9816737451e",
+      "source": "FaithSearch Partners",
+      "title": "Chief Executive Officer",
+      "organization": "Well-respected Christian Media Ministry in MD"
+    },
+    {
+      "at": "2026-10-18T10:44:58.787540+00:00",
+      "type": "updated",
+      "job_id": "bee6f9816737451e",
+      "source": "FaithSearch Partners",
+      "title": "Chief Executive Officer",
+      "organization": "Well-respected Christian Media Ministry in MD",
+      "changes": {
+        "status": {
+          "from": "closed",
+          "to": "open"
+        }
+      }
+    },
+    {
+      "at": "2026-10-18T10:44:58.787540+00:00",
       "type": "updated",
       "job_id": "781dce5164d4ab71",
       "source": "Carney Sandoe",
