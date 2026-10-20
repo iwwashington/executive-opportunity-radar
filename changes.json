@@ -1,262 +1,6 @@
 {
-  "generated_at": "2026-10-19T10:49:59.377901+00:00",
+  "generated_at": "2026-10-20T15:09:13.597037+00:00",
   "events": [
-    {
-      "at": "2026-10-08T16:27:51.768389+00:00",
-      "type": "new",
-      "job_id": "862fa78486466aba",
-      "source": "Vetted Solutions",
-      "title": "Chief Executive Officer",
-      "organization": "Foundation for Financial Planning (FFP)"
-    },
-    {
-      "at": "2026-10-08T16:27:51.768389+00:00",
-      "type": "new",
-      "job_id": "a2821b884b886b90",
-      "source": "Vetted Solutions",
-      "title": "Chief Executive Officer",
-      "organization": "International Board of Lactation Consultant Examiners (IBLCE)"
-    },
-    {
-      "at": "2026-10-08T16:27:51.768389+00:00",
-      "type": "new",
-      "job_id": "ca9cb308f704f02a",
-      "source": "Vetted Solutions",
-      "title": "Executive Director",
-      "organization": "National Council for Teachers of Mathematics"
-    },
-    {
-      "at": "2026-10-08T16:27:51.768389+00:00",
-      "type": "new",
-      "job_id": "8ff9cfa25c84db2c",
-      "source": "Vetted Solutions",
-      "title": "Executive Director",
-      "organization": "Rare Disease Company Coalition (RDCC)"
-    },
-    {
-      "at": "2026-10-08T16:27:51.768389+00:00",
-      "type": "new",
-      "job_id": "960b70cdf38a6974",
-      "source": "FaithSearch Partners",
-      "title": "President",
-      "organization": "Organization confidential"
-    },
-    {
-      "at": "2026-10-08T16:27:51.768389+00:00",
-      "type": "new",
-      "job_id": "bee6f9816737451e",
-      "source": "FaithSearch Partners",
-      "title": "Chief Executive Officer",
-      "organization": "Well-respected Christian Media Ministry in MD"
-    },
-    {
-      "at": "2026-10-08T16:27:51.768389+00:00",
-      "type": "new",
-      "job_id": "8590d2c5e8581b96",
-      "source": "FaithSearch Partners",
-      "title": "President",
-      "organization": "Trevecca Nazarene University"
-    },
-    {
-      "at": "2026-10-08T16:27:51.768389+00:00",
-      "type": "new",
-      "job_id": "2982c6271c581d79",
-      "source": "Vanderbloemen",
-      "title": "Executive Director",
-      "organization": "VALEO"
-    },
-    {
-      "at": "2026-10-08T16:27:51.768389+00:00",
-      "type": "new",
-      "job_id": "9cf5396d27ff02d3",
-      "source": "Clover Search Works",
-      "title": "Executive Director",
-      "organization": "Tavon Learning Center"
-    },
-    {
-      "at": "2026-10-08T16:27:51.768389+00:00",
-      "type": "new",
-      "job_id": "d52b93f681daecd8",
-      "source": "Clover Search Works",
-      "title": "Executive Director",
-      "organization": "Clean & Prosperous"
-    },
-    {
-      "at": "2026-10-08T16:27:51.768389+00:00",
-      "type": "new",
-      "job_id": "9278b21c04cfa5a7",
-      "source": "Clover Search Works",
-      "title": "Executive Director",
-      "organization": "Camas Meditation Hall"
-    },
-    {
-      "at": "2026-10-08T16:27:51.768389+00:00",
-      "type": "new",
-      "job_id": "5e0b12b867aa55bc",
-      "source": "Academic Search",
-      "title": "President",
-      "organization": "Augsburg University"
-    },
-    {
-      "at": "2026-10-08T16:27:51.768389+00:00",
-      "type": "new",
-      "job_id": "d72bedb48d5ac82d",
-      "source": "Academic Search",
-      "title": "President",
-      "organization": "Methodist Theological School in Ohio"
-    },
-    {
-      "at": "2026-10-08T16:27:51.768389+00:00",
-      "type": "new",
-      "job_id": "a22543fc8fa023af",
-      "source": "Academic Search",
-      "title": "President",
-      "organization": "Phoenix College"
-    },
-    {
-      "at": "2026-10-08T16:27:51.768389+00:00",
-      "type": "new",
-      "job_id": "d186bd3a4851450e",
-      "source": "Academic Search",
-      "title": "Vice President for Institutional Advancement and Executive Director",
-      "organization": "SUNY Purchase"
-    },
-    {
-      "at": "2026-10-08T16:27:51.768389+00:00",
-      "type": "new",
-      "job_id": "88d149e1f2f3386f",
-      "source": "Academic Search",
-      "title": "President",
-      "organization": "William Penn University"
-    },
-    {
-      "at": "2026-10-08T16:27:51.768389+00:00",
-      "type": "new",
-      "job_id": "1e7dacf68f85246b",
-      "source": "AGB Search",
-      "title": "President and Chief Executive Officer",
-      "organization": "Kean University Foundation"
-    },
-    {
-      "at": "2026-10-08T16:27:51.768389+00:00",
-      "type": "new",
-      "job_id": "d8fd633139f36e90",
-      "source": "AGB Search",
-      "title": "President",
-      "organization": "Elizabethtown College"
-    },
-    {
-      "at": "2026-10-08T16:27:51.768389+00:00",
-      "type": "new",
-      "job_id": "dfb7823a6abaa618",
-      "source": "Carney Sandoe",
-      "title": "Head of School",
-      "organization": "Allen-Stevenson School"
-    },
-    {
-      "at": "2026-10-08T16:27:51.768389+00:00",
-      "type": "new",
-      "job_id": "fc79ef2545479a39",
-      "source": "Carney Sandoe",
-      "title": "Head of School",
-      "organization": "American School of Bangkok"
-    },
-    {
-      "at": "2026-10-08T16:27:51.768389+00:00",
-      "type": "new",
-      "job_id": "51f45b8b17a85896",
-      "source": "Carney Sandoe",
-      "title": "Head of School",
-      "organization": "Berkshire Country Day School"
-    },
-    {
-      "at": "2026-10-08T16:27:51.768389+00:00",
-      "type": "new",
-      "job_id": "e43730a79e5301d1",
-      "source": "Carney Sandoe",
-      "title": "Head of School",
-      "organization": "Buckingham Friends School"
-    },
-    {
-      "at": "2026-10-08T16:27:51.768389+00:00",
-      "type": "new",
-      "job_id": "9462547f1cbf985e",
-      "source": "Carney Sandoe",
-      "title": "Head of School",
-      "organization": "Catskill Montessori School"
-    },
-    {
-      "at": "2026-10-08T16:27:51.768389+00:00",
-      "type": "new",
-      "job_id": "39d6f9af6b03e432",
-      "source": "Carney Sandoe",
-      "title": "Head of School",
-      "organization": "Chestnut Hill School"
-    },
-    {
-      "at": "2026-10-08T16:27:51.768389+00:00",
-      "type": "new",
-      "job_id": "782227ae6ef33739",
-      "source": "Carney Sandoe",
-      "title": "Head of School",
-      "organization": "Christ School"
-    },
-    {
-      "at": "2026-10-08T16:27:51.768389+00:00",
-      "type": "new",
-      "job_id": "9a57b4c6326ad956",
-      "source": "Carney Sandoe",
-      "title": "Head of School",
-      "organization": "Derryfield School"
-    },
-    {
-      "at": "2026-10-08T16:27:51.768389+00:00",
-      "type": "new",
-      "job_id": "7c8ffe457e66221f",
-      "source": "Carney Sandoe",
-      "title": "Head of School",
-      "organization": "Durham Academy"
-    },
-    {
-      "at": "2026-10-08T16:27:51.768389+00:00",
-      "type": "new",
-      "job_id": "e4ac69ec9b9bc13a",
-      "source": "Carney Sandoe",
-      "title": "President",
-      "organization": "Edgewood Campus School"
-    },
-    {
-      "at": "2026-10-08T16:27:51.768389+00:00",
-      "type": "new",
-      "job_id": "ecdf65145691eb86",
-      "source": "Carney Sandoe",
-      "title": "Head of School",
-      "organization": "Frances Xavier Warde School"
-    },
-    {
-      "at": "2026-10-08T16:27:51.768389+00:00",
-      "type": "new",
-      "job_id": "d768b5a465db6585",
-      "source": "Carney Sandoe",
-      "title": "Head of School",
-      "organization": "Fulton Science Academy Atherton"
-    },
-    {
-      "at": "2026-10-08T16:27:51.768389+00:00",
-      "type": "new",
-      "job_id": "88dfd5fc5161bcb6",
-      "source": "Carney Sandoe",
-      "title": "Head of School",
-      "organization": "Galloway School"
-    },
-    {
-      "at": "2026-10-08T16:27:51.768389+00:00",
-      "type": "new",
-      "job_id": "bb1b07e643e32e96",
-      "source": "Carney Sandoe",
-      "title": "Head of School",
-      "organization": "Good Shepherd Episcopal School"
-    },
     {
       "at": "2026-10-08T16:27:51.768389+00:00",
       "type": "new",
@@ -7797,6 +7541,432 @@
     },
     {
       "at": "2026-10-19T10:49:59.377901+00:00",
+      "type": "updated",
+      "job_id": "781dce5164d4ab71",
+      "source": "Carney Sandoe",
+      "title": "Head of School",
+      "organization": "Polytechnic School",
+      "changes": {
+        "organization": {
+          "from": "Weber School",
+          "to": "Polytechnic School"
+        },
+        "location": {
+          "from": "GA – Atlanta",
+          "to": "CA – Pasadena"
+        }
+      }
+    },
+    {
+      "at": "2026-10-20T15:09:13.597037+00:00",
+      "type": "removed_false_positive",
+      "job_id": "d096dd70724b642b",
+      "source": "FaithSearch Partners",
+      "title": "Executive Director",
+      "organization": "California Senior Living Ministry",
+      "url": "https://faithsearchpartners.com/news/california-senior-living-ministry-seeks-executive-director/"
+    },
+    {
+      "at": "2026-10-20T15:09:13.597037+00:00",
+      "type": "removed_false_positive",
+      "job_id": "bee6f9816737451e",
+      "source": "FaithSearch Partners",
+      "title": "Chief Executive Officer",
+      "organization": "Well-respected Christian Media Ministry in MD",
+      "url": "https://faithsearchpartners.com/news/well-respected-christian-media-ministry-in-md-seeking-chief-executive-officer/"
+    },
+    {
+      "at": "2026-10-20T15:09:13.597037+00:00",
+      "type": "removed_false_positive",
+      "job_id": "960b70cdf38a6974",
+      "source": "FaithSearch Partners",
+      "title": "President",
+      "organization": "Organization confidential",
+      "url": "https://faithsearchpartners.com/news/faithsearch-launches-president-search-for-university-of-toccoa-falls/"
+    },
+    {
+      "at": "2026-10-20T15:09:13.597037+00:00",
+      "type": "removed_false_positive",
+      "job_id": "62e62841416b764c",
+      "source": "Bridge Partners",
+      "title": "CEO and Executive Director",
+      "organization": "Functions",
+      "url": "https://bridgepartnersllc.com/function/ceo/"
+    },
+    {
+      "at": "2026-10-20T15:09:13.597037+00:00",
+      "type": "updated",
+      "job_id": "4a559e8b34e0cffa",
+      "source": "BoardWalk Consulting",
+      "title": "President & CEO",
+      "organization": "One Hundred Miles",
+      "changes": {
+        "posted_date": {
+          "from": "2026-09-28",
+          "to": "2026-09-29"
+        }
+      }
+    },
+    {
+      "at": "2026-10-20T15:09:13.597037+00:00",
+      "type": "updated",
+      "job_id": "acf48ae0f359e233",
+      "source": "BoardWalk Consulting",
+      "title": "Executive Director",
+      "organization": "Florida Rights Restoration Coalition",
+      "changes": {
+        "posted_date": {
+          "from": "2026-09-19",
+          "to": "2026-09-20"
+        }
+      }
+    },
+    {
+      "at": "2026-10-20T15:09:13.597037+00:00",
+      "type": "updated",
+      "job_id": "b31f942adf5dca3b",
+      "source": "BoardWalk Consulting",
+      "title": "Executive Director",
+      "organization": "Gateway Early Childhood Alliance",
+      "changes": {
+        "posted_date": {
+          "from": "2026-08-20",
+          "to": "2026-08-21"
+        }
+      }
+    },
+    {
+      "at": "2026-10-20T15:09:13.597037+00:00",
+      "type": "updated",
+      "job_id": "e39688bc3548ed3e",
+      "source": "BoardWalk Consulting",
+      "title": "CEO",
+      "organization": "The Colorado Health Foundation",
+      "changes": {
+        "posted_date": {
+          "from": "2026-07-21",
+          "to": "2026-07-22"
+        }
+      }
+    },
+    {
+      "at": "2026-10-20T15:09:13.597037+00:00",
+      "type": "updated",
+      "job_id": "70879d341e410a6b",
+      "source": "BoardWalk Consulting",
+      "title": "Executive Director",
+      "organization": "Atlanta Ballet",
+      "changes": {
+        "posted_date": {
+          "from": "2026-04-22",
+          "to": "2026-04-23"
+        }
+      }
+    },
+    {
+      "at": "2026-10-20T15:09:13.597037+00:00",
+      "type": "reopened",
+      "job_id": "62e62841416b764c",
+      "source": "Bridge Partners",
+      "title": "CEO and Executive Director",
+      "organization": "Functions"
+    },
+    {
+      "at": "2026-10-20T15:09:13.597037+00:00",
+      "type": "updated",
+      "job_id": "62e62841416b764c",
+      "source": "Bridge Partners",
+      "title": "CEO and Executive Director",
+      "organization": "Functions",
+      "changes": {
+        "status": {
+          "from": "closed",
+          "to": "open"
+        }
+      }
+    },
+    {
+      "at": "2026-10-20T15:09:13.597037+00:00",
+      "type": "new",
+      "job_id": "335cdf742b722ff1",
+      "source": "Bridge Partners",
+      "title": "Executive Director",
+      "organization": "Acumen"
+    },
+    {
+      "at": "2026-10-20T15:09:13.597037+00:00",
+      "type": "closed",
+      "job_id": "0515b993abd11a80",
+      "source": "Bridge Partners",
+      "title": "Executive Director",
+      "organization": "Movement Labs"
+    },
+    {
+      "at": "2026-10-20T15:09:13.597037+00:00",
+      "type": "reopened",
+      "job_id": "5f6d6ff78ad47b55",
+      "source": "Scion Executive Search",
+      "title": "Executive Director",
+      "organization": "Alamo Area Resource Center (AARC)"
+    },
+    {
+      "at": "2026-10-20T15:09:13.597037+00:00",
+      "type": "updated",
+      "job_id": "5f6d6ff78ad47b55",
+      "source": "Scion Executive Search",
+      "title": "Executive Director",
+      "organization": "Alamo Area Resource Center (AARC)",
+      "changes": {
+        "organization": {
+          "from": "Organization confidential",
+          "to": "Alamo Area Resource Center (AARC)"
+        },
+        "posted_date": {
+          "from": "2026-10-05",
+          "to": "2026-10-19"
+        },
+        "compensation_text": {
+          "from": "COMPENSATION AND BENEFITS: In addition to a competitive base salary of $180,000 to $200,000, commensurate with experience, our client also provides a comprehensive benefits package which includes medical, dental, and vision insuran",
+          "to": "COMPENSATION AND BENEFITS: In addition to a competitive base salary of $180,000 to $200,000, AARC also provides a comprehensive benefits package which includes medical, dental, and vision insurance; Health Savings Account (HSA); De"
+        },
+        "status": {
+          "from": "closed",
+          "to": "open"
+        }
+      }
+    },
+    {
+      "at": "2026-10-20T15:09:13.597037+00:00",
+      "type": "new",
+      "job_id": "9bbf585a1ec1514c",
+      "source": "Lindauer",
+      "title": "Executive Director, Annual and Special Giving",
+      "organization": "Annual and Special Giving"
+    },
+    {
+      "at": "2026-10-20T15:09:13.597037+00:00",
+      "type": "updated",
+      "job_id": "77848288e74a48a7",
+      "source": "Lindauer",
+      "title": "Executive Director, Major Gifts",
+      "organization": "Major Gifts",
+      "changes": {
+        "compensation_text": {
+          "from": "salary range for this position is $225,000–$334,000. Other searches for Cedars-Sinai Project Coordinator, Office of the Vice President of Development Program Manager of Talent, Training, and",
+          "to": "salary range for this position is $225,000–$334,000. Other searches for Cedars-Sinai Executive Director, Annual and Special Giving Project Coordinator, Office of the Vice President of Develop"
+        }
+      }
+    },
+    {
+      "at": "2026-10-20T15:09:13.597037+00:00",
+      "type": "closed",
+      "job_id": "78d9bfcdbeebcb4c",
+      "source": "DSG Global",
+      "title": "Executive Director, Washington D.C. Metro",
+      "organization": "GreenLight Fund"
+    },
+    {
+      "at": "2026-10-20T15:09:13.597037+00:00",
+      "type": "closed",
+      "job_id": "9d9450d05842e801",
+      "source": "DSG Global",
+      "title": "Executive Director",
+      "organization": "La Casa de las Madres"
+    },
+    {
+      "at": "2026-10-20T15:09:13.597037+00:00",
+      "type": "new",
+      "job_id": "03ce902b35b9de89",
+      "source": "Kittleman Associates",
+      "title": "Executive Director",
+      "organization": "Teton Valley Health Care Foundation"
+    },
+    {
+      "at": "2026-10-20T15:09:13.597037+00:00",
+      "type": "updated",
+      "job_id": "bdb4fab450cecd43",
+      "source": "Kittleman Associates",
+      "title": "President and CEO",
+      "organization": "Gettysburg Foundation",
+      "changes": {
+        "organization": {
+          "from": "Mid-Ohio Food Collective",
+          "to": "Gettysburg Foundation"
+        },
+        "location": {
+          "from": "Grove City, OH, United States",
+          "to": "Gettysburg, PA, United States"
+        },
+        "url": {
+          "from": "https://www.kittlemansearch.com/opportunities/president-ceo-mid-ohio-food-collective",
+          "to": "https://www.kittlemansearch.com/opportunities/president-chief-executive-officer-gettysburg-foundation"
+        },
+        "posted_date": {
+          "from": "2026-09-10",
+          "to": "2026-10-01"
+        }
+      }
+    },
+    {
+      "at": "2026-10-20T15:09:13.597037+00:00",
+      "type": "updated",
+      "job_id": "bdb4fab450cecd43",
+      "source": "Kittleman Associates",
+      "title": "President and CEO",
+      "organization": "Viability, Inc.",
+      "changes": {
+        "organization": {
+          "from": "Mid-Ohio Food Collective",
+          "to": "Viability, Inc."
+        },
+        "location": {
+          "from": "Grove City, OH, United States",
+          "to": "Springfield, MA, United States"
+        },
+        "url": {
+          "from": "https://www.kittlemansearch.com/opportunities/president-ceo-mid-ohio-food-collective",
+          "to": "https://www.kittlemansearch.com/opportunities/president-ceo-viability"
+        },
+        "posted_date": {
+          "from": "2026-09-10",
+          "to": "2026-09-16"
+        }
+      }
+    },
+    {
+      "at": "2026-10-20T15:09:13.597037+00:00",
+      "type": "updated",
+      "job_id": "bdb4fab450cecd43",
+      "source": "Kittleman Associates",
+      "title": "President and CEO",
+      "organization": "Schoodic Institute at Acadia National Park",
+      "changes": {
+        "organization": {
+          "from": "Mid-Ohio Food Collective",
+          "to": "Schoodic Institute at Acadia National Park"
+        },
+        "location": {
+          "from": "Grove City, OH, United States",
+          "to": "Winter Harbor, ME, United States"
+        },
+        "url": {
+          "from": "https://www.kittlemansearch.com/opportunities/president-ceo-mid-ohio-food-collective",
+          "to": "https://www.kittlemansearch.com/opportunities/president-ceo-schoodic-institute"
+        },
+        "posted_date": {
+          "from": "2026-09-10",
+          "to": "2026-09-14"
+        }
+      }
+    },
+    {
+      "at": "2026-10-20T15:09:13.597037+00:00",
+      "type": "updated",
+      "job_id": "dc33d30ecc1362e5",
+      "source": "NPAG",
+      "title": "Executive Director",
+      "organization": "HealthQ",
+      "changes": {
+        "organization": {
+          "from": "Sobrato Early Academic Language (SEAL)",
+          "to": "HealthQ"
+        },
+        "location": {
+          "from": "Remote (within U.S., California preferred)",
+          "to": "Location not listed"
+        },
+        "url": {
+          "from": "https://www.npag.com/seal-ed",
+          "to": "https://www.npag.com/hq-ed"
+        }
+      }
+    },
+    {
+      "at": "2026-10-20T15:09:13.597037+00:00",
+      "type": "updated",
+      "job_id": "f9f133cf2577cc30",
+      "source": "Spano Pratt",
+      "title": "Chief Executive Officer – Profile",
+      "organization": "Rock River",
+      "changes": {
+        "organization": {
+          "from": "Emergency Nurses Association",
+          "to": "Rock River"
+        },
+        "url": {
+          "from": "https://spanopratt.com/wp-content/uploads/2026/05/ENA-CEO-Job-Profile-Final.pdf",
+          "to": "https://spanopratt.com/wp-content/uploads/2026/10/Rock-River-Community-Clinic-Job-Profile-CEO.pdf"
+        }
+      }
+    },
+    {
+      "at": "2026-10-20T15:09:13.597037+00:00",
+      "type": "reopened",
+      "job_id": "d096dd70724b642b",
+      "source": "FaithSearch Partners",
+      "title": "Executive Director",
+      "organization": "California Senior Living Ministry"
+    },
+    {
+      "at": "2026-10-20T15:09:13.597037+00:00",
+      "type": "updated",
+      "job_id": "d096dd70724b642b",
+      "source": "FaithSearch Partners",
+      "title": "Executive Director",
+      "organization": "California Senior Living Ministry",
+      "changes": {
+        "status": {
+          "from": "closed",
+          "to": "open"
+        }
+      }
+    },
+    {
+      "at": "2026-10-20T15:09:13.597037+00:00",
+      "type": "reopened",
+      "job_id": "960b70cdf38a6974",
+      "source": "FaithSearch Partners",
+      "title": "President",
+      "organization": "Organization confidential"
+    },
+    {
+      "at": "2026-10-20T15:09:13.597037+00:00",
+      "type": "updated",
+      "job_id": "960b70cdf38a6974",
+      "source": "FaithSearch Partners",
+      "title": "President",
+      "organization": "Organization confidential",
+      "changes": {
+        "status": {
+          "from": "closed",
+          "to": "open"
+        }
+      }
+    },
+    {
+      "at": "2026-10-20T15:09:13.597037+00:00",
+      "type": "reopened",
+      "job_id": "bee6f9816737451e",
+      "source": "FaithSearch Partners",
+      "title": "Chief Executive Officer",
+      "organization": "Well-respected Christian Media Ministry in MD"
+    },
+    {
+      "at": "2026-10-20T15:09:13.597037+00:00",
+      "type": "updated",
+      "job_id": "bee6f9816737451e",
+      "source": "FaithSearch Partners",
+      "title": "Chief Executive Officer",
+      "organization": "Well-respected Christian Media Ministry in MD",
+      "changes": {
+        "status": {
+          "from": "closed",
+          "to": "open"
+        }
+      }
+    },
+    {
+      "at": "2026-10-20T15:09:13.597037+00:00",
       "type": "updated",
       "job_id": "781dce5164d4ab71",
       "source": "Carney Sandoe",
