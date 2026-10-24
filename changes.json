@@ -1,646 +1,6 @@
 {
-  "generated_at": "2026-10-23T15:09:45.634449+00:00",
+  "generated_at": "2026-10-24T14:02:20.517213+00:00",
   "events": [
-    {
-      "at": "2026-10-11T10:33:05.381578+00:00",
-      "type": "reopened",
-      "job_id": "62e62841416b764c",
-      "source": "Bridge Partners",
-      "title": "CEO and Executive Director",
-      "organization": "Functional Expertise"
-    },
-    {
-      "at": "2026-10-11T10:33:05.381578+00:00",
-      "type": "updated",
-      "job_id": "62e62841416b764c",
-      "source": "Bridge Partners",
-      "title": "CEO and Executive Director",
-      "organization": "Functional Expertise",
-      "changes": {
-        "status": {
-          "from": "closed",
-          "to": "open"
-        }
-      }
-    },
-    {
-      "at": "2026-10-11T10:33:05.381578+00:00",
-      "type": "updated",
-      "job_id": "2b029eca636bbb93",
-      "source": "Scion Executive Search",
-      "title": "President",
-      "organization": "Organization confidential",
-      "changes": {
-        "organization": {
-          "from": "founder, connecting revenue, profitability, demand, staffing, and capacity decisions",
-          "to": "Organization confidential"
-        },
-        "location": {
-          "from": "Short Hills, NJ",
-          "to": "Location not listed"
-        }
-      }
-    },
-    {
-      "at": "2026-10-11T10:33:05.381578+00:00",
-      "type": "updated",
-      "job_id": "75143dcc943a8139",
-      "source": "Scion Executive Search",
-      "title": "Chief Executive Officer",
-      "organization": "Organization confidential",
-      "changes": {
-        "organization": {
-          "from": "Volunteers of America Western Washington, one of the region's most comprehensive human services organizations",
-          "to": "Organization confidential"
-        },
-        "location": {
-          "from": "Everett, WA 98201",
-          "to": "Location not listed"
-        }
-      }
-    },
-    {
-      "at": "2026-10-11T10:33:05.381578+00:00",
-      "type": "updated",
-      "job_id": "68edc02998881b46",
-      "source": "Scion Executive Search",
-      "title": "Interim Executive Director",
-      "organization": "Organization confidential",
-      "changes": {
-        "organization": {
-          "from": "Our Divisions",
-          "to": "Organization confidential"
-        },
-        "location": {
-          "from": "Phoenix, AZ 85016",
-          "to": "Location not listed"
-        }
-      }
-    },
-    {
-      "at": "2026-10-11T10:33:05.381578+00:00",
-      "type": "closed",
-      "job_id": "2927463d94d4b795",
-      "source": "Scion Executive Search",
-      "title": "Executive Director",
-      "organization": "Health Affairs Publishing"
-    },
-    {
-      "at": "2026-10-11T10:33:05.381578+00:00",
-      "type": "updated",
-      "job_id": "b8e982953accafdb",
-      "source": "DSG Global",
-      "title": "Chief Executive Officer",
-      "organization": "Aeris Insight",
-      "changes": {
-        "organization": {
-          "from": "Renewable Thermal Collaborative",
-          "to": "Aeris Insight"
-        },
-        "location": {
-          "from": "Remote, Washington D.C. preferred",
-          "to": "Remote"
-        },
-        "url": {
-          "from": "https://www.dsgco.com/search/23132-rtc-chief-executive-officer/",
-          "to": "https://www.dsgco.com/search/23172-aeris/"
-        },
-        "posted_date": {
-          "from": "2026-06-11",
-          "to": "2026-07-08"
-        },
-        "compensation_text": {
-          "from": "Compensation & Benefits The compensation for this role is anticipated to range from $275,000 - $350,000, commensurate with experience. Travel is expected to be 15-20% of the role, both in the U.S. and internationally. The Renewable Thermal Col",
-          "to": "Compensation and Benefits Salary is competitive and commensurate with experience. The salary range for this role is $230,000 - $250,000 with a generous benefits package. The exact salary that will be offered to the CEO will be determined based on a consideration of the succe"
-        },
-        "compensation_min": {
-          "from": 275000,
-          "to": 230000
-        },
-        "compensation_max": {
-          "from": 350000,
-          "to": 250000
-        }
-      }
-    },
-    {
-      "at": "2026-10-11T10:33:05.381578+00:00",
-      "type": "closed",
-      "job_id": "6d2efc11ac38fb2f",
-      "source": "DSG Global",
-      "title": "Executive Director for Housing and Residence Life",
-      "organization": "North Carolina A&T State University"
-    },
-    {
-      "at": "2026-10-11T10:33:05.381578+00:00",
-      "type": "closed",
-      "job_id": "ac8630d8b62bd70f",
-      "source": "DSG Global",
-      "title": "President & CEO",
-      "organization": "Keiro"
-    },
-    {
-      "at": "2026-10-11T10:33:05.381578+00:00",
-      "type": "closed",
-      "job_id": "9d9450d05842e801",
-      "source": "DSG Global",
-      "title": "Executive Director",
-      "organization": "The Alliance for Community Development"
-    },
-    {
-      "at": "2026-10-11T10:33:05.381578+00:00",
-      "type": "updated",
-      "job_id": "bdb4fab450cecd43",
-      "source": "Kittleman Associates",
-      "title": "President and CEO",
-      "organization": "Gettysburg Foundation",
-      "changes": {
-        "organization": {
-          "from": "Mid-Ohio Food Collective",
-          "to": "Gettysburg Foundation"
-        },
-        "location": {
-          "from": "Grove City, OH, United States",
-          "to": "Gettysburg, PA, United States"
-        },
-        "url": {
-          "from": "https://www.kittlemansearch.com/opportunities/president-ceo-mid-ohio-food-collective",
-          "to": "https://www.kittlemansearch.com/opportunities/president-chief-executive-officer-gettysburg-foundation"
-        },
-        "posted_date": {
-          "from": "2026-09-10",
-          "to": "2026-10-01"
-        }
-      }
-    },
-    {
-      "at": "2026-10-11T10:33:05.381578+00:00",
-      "type": "updated",
-      "job_id": "bdb4fab450cecd43",
-      "source": "Kittleman Associates",
-      "title": "President and CEO",
-      "organization": "Viability, Inc.",
-      "changes": {
-        "organization": {
-          "from": "Mid-Ohio Food Collective",
-          "to": "Viability, Inc."
-        },
-        "location": {
-          "from": "Grove City, OH, United States",
-          "to": "Springfield, MA, United States"
-        },
-        "url": {
-          "from": "https://www.kittlemansearch.com/opportunities/president-ceo-mid-ohio-food-collective",
-          "to": "https://www.kittlemansearch.com/opportunities/president-ceo-viability"
-        },
-        "posted_date": {
-          "from": "2026-09-10",
-          "to": "2026-09-16"
-        }
-      }
-    },
-    {
-      "at": "2026-10-11T10:33:05.381578+00:00",
-      "type": "updated",
-      "job_id": "bdb4fab450cecd43",
-      "source": "Kittleman Associates",
-      "title": "President and CEO",
-      "organization": "Schoodic Institute at Acadia National Park",
-      "changes": {
-        "organization": {
-          "from": "Mid-Ohio Food Collective",
-          "to": "Schoodic Institute at Acadia National Park"
-        },
-        "location": {
-          "from": "Grove City, OH, United States",
-          "to": "Winter Harbor, ME, United States"
-        },
-        "url": {
-          "from": "https://www.kittlemansearch.com/opportunities/president-ceo-mid-ohio-food-collective",
-          "to": "https://www.kittlemansearch.com/opportunities/president-ceo-schoodic-institute"
-        },
-        "posted_date": {
-          "from": "2026-09-10",
-          "to": "2026-09-14"
-        }
-      }
-    },
-    {
-      "at": "2026-10-11T10:33:05.381578+00:00",
-      "type": "closed",
-      "job_id": "8b61dd17e658944b",
-      "source": "Kittleman Associates",
-      "title": "President & CEO",
-      "organization": "Families in Transition"
-    },
-    {
-      "at": "2026-10-11T10:33:05.381578+00:00",
-      "type": "updated",
-      "job_id": "f9f133cf2577cc30",
-      "source": "Spano Pratt",
-      "title": "Chief Executive Officer – Profile",
-      "organization": "Rock River",
-      "changes": {
-        "organization": {
-          "from": "Emergency Nurses Association",
-          "to": "Rock River"
-        },
-        "url": {
-          "from": "https://spanopratt.com/wp-content/uploads/2026/05/ENA-CEO-Job-Profile-Final.pdf",
-          "to": "https://spanopratt.com/wp-content/uploads/2026/10/Rock-River-Community-Clinic-Job-Profile-CEO.pdf"
-        }
-      }
-    },
-    {
-      "at": "2026-10-11T10:33:05.381578+00:00",
-      "type": "closed",
-      "job_id": "3c4717ec05be2ee4",
-      "source": "Armstrong McGuire",
-      "title": "Executive Director",
-      "organization": "National Association for Music Education"
-    },
-    {
-      "at": "2026-10-11T10:33:05.381578+00:00",
-      "type": "reopened",
-      "job_id": "960b70cdf38a6974",
-      "source": "FaithSearch Partners",
-      "title": "President",
-      "organization": "Organization confidential"
-    },
-    {
-      "at": "2026-10-11T10:33:05.381578+00:00",
-      "type": "updated",
-      "job_id": "960b70cdf38a6974",
-      "source": "FaithSearch Partners",
-      "title": "President",
-      "organization": "Organization confidential",
-      "changes": {
-        "status": {
-          "from": "closed",
-          "to": "open"
-        }
-      }
-    },
-    {
-      "at": "2026-10-11T10:33:05.381578+00:00",
-      "type": "reopened",
-      "job_id": "bee6f9816737451e",
-      "source": "FaithSearch Partners",
-      "title": "Chief Executive Officer",
-      "organization": "Well-respected Christian Media Ministry in MD"
-    },
-    {
-      "at": "2026-10-11T10:33:05.381578+00:00",
-      "type": "updated",
-      "job_id": "bee6f9816737451e",
-      "source": "FaithSearch Partners",
-      "title": "Chief Executive Officer",
-      "organization": "Well-respected Christian Media Ministry in MD",
-      "changes": {
-        "status": {
-          "from": "closed",
-          "to": "open"
-        }
-      }
-    },
-    {
-      "at": "2026-10-11T10:33:05.381578+00:00",
-      "type": "reopened",
-      "job_id": "8590d2c5e8581b96",
-      "source": "FaithSearch Partners",
-      "title": "President",
-      "organization": "Trevecca Nazarene University"
-    },
-    {
-      "at": "2026-10-11T10:33:05.381578+00:00",
-      "type": "updated",
-      "job_id": "8590d2c5e8581b96",
-      "source": "FaithSearch Partners",
-      "title": "President",
-      "organization": "Trevecca Nazarene University",
-      "changes": {
-        "status": {
-          "from": "closed",
-          "to": "open"
-        }
-      }
-    },
-    {
-      "at": "2026-10-12T10:38:40.325561+00:00",
-      "type": "removed_false_positive",
-      "job_id": "8590d2c5e8581b96",
-      "source": "FaithSearch Partners",
-      "title": "President",
-      "organization": "Trevecca Nazarene University",
-      "url": "https://faithsearchpartners.com/news/trevecca-nazarene-university-seeks-next-president/"
-    },
-    {
-      "at": "2026-10-12T10:38:40.325561+00:00",
-      "type": "removed_false_positive",
-      "job_id": "bee6f9816737451e",
-      "source": "FaithSearch Partners",
-      "title": "Chief Executive Officer",
-      "organization": "Well-respected Christian Media Ministry in MD",
-      "url": "https://faithsearchpartners.com/news/well-respected-christian-media-ministry-in-md-seeking-chief-executive-officer/"
-    },
-    {
-      "at": "2026-10-12T10:38:40.325561+00:00",
-      "type": "removed_false_positive",
-      "job_id": "960b70cdf38a6974",
-      "source": "FaithSearch Partners",
-      "title": "President",
-      "organization": "Organization confidential",
-      "url": "https://faithsearchpartners.com/news/faithsearch-launches-president-search-for-university-of-toccoa-falls/"
-    },
-    {
-      "at": "2026-10-12T10:38:40.325561+00:00",
-      "type": "removed_false_positive",
-      "job_id": "62e62841416b764c",
-      "source": "Bridge Partners",
-      "title": "CEO and Executive Director",
-      "organization": "Functional Expertise",
-      "url": "https://bridgepartnersllc.com/function/ceo/"
-    },
-    {
-      "at": "2026-10-12T10:38:40.325561+00:00",
-      "type": "updated",
-      "job_id": "4a559e8b34e0cffa",
-      "source": "BoardWalk Consulting",
-      "title": "President & CEO",
-      "organization": "One Hundred Miles",
-      "changes": {
-        "posted_date": {
-          "from": "2026-09-27",
-          "to": "2026-09-28"
-        }
-      }
-    },
-    {
-      "at": "2026-10-12T10:38:40.325561+00:00",
-      "type": "updated",
-      "job_id": "acf48ae0f359e233",
-      "source": "BoardWalk Consulting",
-      "title": "Executive Director",
-      "organization": "Florida Rights Restoration Coalition",
-      "changes": {
-        "posted_date": {
-          "from": "2026-09-11",
-          "to": "2026-09-12"
-        }
-      }
-    },
-    {
-      "at": "2026-10-12T10:38:40.325561+00:00",
-      "type": "updated",
-      "job_id": "b31f942adf5dca3b",
-      "source": "BoardWalk Consulting",
-      "title": "Executive Director",
-      "organization": "Gateway Early Childhood Alliance",
-      "changes": {
-        "posted_date": {
-          "from": "2026-09-11",
-          "to": "2026-09-12"
-        }
-      }
-    },
-    {
-      "at": "2026-10-12T10:38:40.325561+00:00",
-      "type": "updated",
-      "job_id": "e39688bc3548ed3e",
-      "source": "BoardWalk Consulting",
-      "title": "CEO",
-      "organization": "The Colorado Health Foundation",
-      "changes": {
-        "posted_date": {
-          "from": "2026-08-12",
-          "to": "2026-08-13"
-        }
-      }
-    },
-    {
-      "at": "2026-10-12T10:38:40.325561+00:00",
-      "type": "updated",
-      "job_id": "dfcd1a39e5a39154",
-      "source": "BoardWalk Consulting",
-      "title": "President & CEO",
-      "organization": "Community Foundation for Greater Atlanta",
-      "changes": {
-        "posted_date": {
-          "from": "2026-07-13",
-          "to": "2026-07-14"
-        }
-      }
-    },
-    {
-      "at": "2026-10-12T10:38:40.325561+00:00",
-      "type": "updated",
-      "job_id": "70879d341e410a6b",
-      "source": "BoardWalk Consulting",
-      "title": "Executive Director",
-      "organization": "Atlanta Ballet",
-      "changes": {
-        "posted_date": {
-          "from": "2026-05-14",
-          "to": "2026-05-15"
-        }
-      }
-    },
-    {
-      "at": "2026-10-12T10:38:40.325561+00:00",
-      "type": "reopened",
-      "job_id": "62e62841416b764c",
-      "source": "Bridge Partners",
-      "title": "CEO and Executive Director",
-      "organization": "Functional Expertise"
-    },
-    {
-      "at": "2026-10-12T10:38:40.325561+00:00",
-      "type": "updated",
-      "job_id": "62e62841416b764c",
-      "source": "Bridge Partners",
-      "title": "CEO and Executive Director",
-      "organization": "Functional Expertise",
-      "changes": {
-        "status": {
-          "from": "closed",
-          "to": "open"
-        }
-      }
-    },
-    {
-      "at": "2026-10-12T10:38:40.325561+00:00",
-      "type": "updated",
-      "job_id": "2b029eca636bbb93",
-      "source": "Scion Executive Search",
-      "title": "President",
-      "organization": "founder, connecting revenue, profitability, demand, staffing, and capacity decisions",
-      "changes": {
-        "organization": {
-          "from": "Organization confidential",
-          "to": "founder, connecting revenue, profitability, demand, staffing, and capacity decisions"
-        },
-        "location": {
-          "from": "Location not listed",
-          "to": "Short Hills, NJ"
-        }
-      }
-    },
-    {
-      "at": "2026-10-12T10:38:40.325561+00:00",
-      "type": "updated",
-      "job_id": "75143dcc943a8139",
-      "source": "Scion Executive Search",
-      "title": "Chief Executive Officer",
-      "organization": "Volunteers of America Western Washington, one of the region's most comprehensive human services organizations",
-      "changes": {
-        "organization": {
-          "from": "Organization confidential",
-          "to": "Volunteers of America Western Washington, one of the region's most comprehensive human services organizations"
-        },
-        "location": {
-          "from": "Location not listed",
-          "to": "Everett, WA 98201"
-        }
-      }
-    },
-    {
-      "at": "2026-10-12T10:38:40.325561+00:00",
-      "type": "reopened",
-      "job_id": "2927463d94d4b795",
-      "source": "Scion Executive Search",
-      "title": "Executive Director",
-      "organization": "Health Affairs Publishing"
-    },
-    {
-      "at": "2026-10-12T10:38:40.325561+00:00",
-      "type": "updated",
-      "job_id": "2927463d94d4b795",
-      "source": "Scion Executive Search",
-      "title": "Executive Director",
-      "organization": "Health Affairs Publishing",
-      "changes": {
-        "status": {
-          "from": "closed",
-          "to": "open"
-        }
-      }
-    },
-    {
-      "at": "2026-10-12T10:38:40.325561+00:00",
-      "type": "updated",
-      "job_id": "68edc02998881b46",
-      "source": "Scion Executive Search",
-      "title": "Interim Executive Director",
-      "organization": "Our Divisions",
-      "changes": {
-        "organization": {
-          "from": "Organization confidential",
-          "to": "Our Divisions"
-        },
-        "location": {
-          "from": "Location not listed",
-          "to": "Phoenix, AZ 85016"
-        }
-      }
-    },
-    {
-      "at": "2026-10-12T10:38:40.325561+00:00",
-      "type": "reopened",
-      "job_id": "9d9450d05842e801",
-      "source": "DSG Global",
-      "title": "Executive Director",
-      "organization": "La Casa de las Madres"
-    },
-    {
-      "at": "2026-10-12T10:38:40.325561+00:00",
-      "type": "updated",
-      "job_id": "9d9450d05842e801",
-      "source": "DSG Global",
-      "title": "Executive Director",
-      "organization": "La Casa de las Madres",
-      "changes": {
-        "organization": {
-          "from": "The Alliance for Community Development",
-          "to": "La Casa de las Madres"
-        },
-        "location": {
-          "from": "Bay Area, CA",
-          "to": "San Francisco, CA"
-        },
-        "url": {
-          "from": "https://www.dsgco.com/search/23294-acd/",
-          "to": "https://www.dsgco.com/search/23396-la-casa-executive-director/"
-        },
-        "posted_date": {
-          "from": "2026-06-24",
-          "to": "2026-08-31"
-        },
-        "compensation_text": {
-          "from": "Compensation and Benefits Salary is competitive and commensurate with experience. The anticipated starting salary for this role is between $120,000 and $145,000. The exact salary that will be offered to the Executive Director will be determined based on a considerati",
-          "to": "Compensation and Benefits The salary range for this position is $200,000 - $220,000 and is commensurate with skills and experience. La Casa de las Madres also offers a comprehensive benefits package. La Casa de las Madres i"
-        },
-        "compensation_min": {
-          "from": 120000,
-          "to": 200000
-        },
-        "compensation_max": {
-          "from": 120000,
-          "to": 220000
-        },
-        "status": {
-          "from": "closed",
-          "to": "open"
-        }
-      }
-    },
-    {
-      "at": "2026-10-12T10:38:40.325561+00:00",
-      "type": "reopened",
-      "job_id": "6d2efc11ac38fb2f",
-      "source": "DSG Global",
-      "title": "Executive Director for Housing and Residence Life",
-      "organization": "North Carolina A&T State University"
-    },
-    {
-      "at": "2026-10-12T10:38:40.325561+00:00",
-      "type": "updated",
-      "job_id": "6d2efc11ac38fb2f",
-      "source": "DSG Global",
-      "title": "Executive Director for Housing and Residence Life",
-      "organization": "North Carolina A&T State University",
-      "changes": {
-        "status": {
-          "from": "closed",
-          "to": "open"
-        }
-      }
-    },
-    {
-      "at": "2026-10-12T10:38:40.325561+00:00",
-      "type": "updated",
-      "job_id": "bdb4fab450cecd43",
-      "source": "Kittleman Associates",
-      "title": "President and CEO",
-      "organization": "Gettysburg Foundation",
-      "changes": {
-        "organization": {
-          "from": "Mid-Ohio Food Collective",
-          "to": "Gettysburg Foundation"
-        },
-        "location": {
-          "from": "Grove City, OH, United States",
-          "to": "Gettysburg, PA, United States"
-        },
-        "url": {
-          "from": "https://www.kittlemansearch.com/opportunities/president-ceo-mid-ohio-food-collective",
-          "to": "https://www.kittlemansearch.com/opportunities/president-chief-executive-officer-gettysburg-foundation"
-        },
-        "posted_date": {
-          "from": "2026-09-10",
-          "to": "2026-10-01"
-        }
-      }
-    },
     {
       "at": "2026-10-12T10:38:40.325561+00:00",
       "type": "updated",
@@ -8034,6 +7394,702 @@
     },
     {
       "at": "2026-10-23T15:09:45.634449+00:00",
+      "type": "updated",
+      "job_id": "781dce5164d4ab71",
+      "source": "Carney Sandoe",
+      "title": "Head of School",
+      "organization": "St. Margaret's Episcopal School",
+      "changes": {
+        "organization": {
+          "from": "Weber School",
+          "to": "St. Margaret's Episcopal School"
+        },
+        "location": {
+          "from": "GA – Atlanta",
+          "to": "CA – San Juan Capistrano"
+        }
+      }
+    },
+    {
+      "at": "2026-10-24T14:02:20.517213+00:00",
+      "type": "removed_false_positive",
+      "job_id": "d096dd70724b642b",
+      "source": "FaithSearch Partners",
+      "title": "Executive Director",
+      "organization": "California Senior Living Ministry",
+      "url": "https://faithsearchpartners.com/news/california-senior-living-ministry-seeks-executive-director/"
+    },
+    {
+      "at": "2026-10-24T14:02:20.517213+00:00",
+      "type": "removed_false_positive",
+      "job_id": "bee6f9816737451e",
+      "source": "FaithSearch Partners",
+      "title": "Chief Executive Officer",
+      "organization": "Well-respected Christian Media Ministry in MD",
+      "url": "https://faithsearchpartners.com/news/well-respected-christian-media-ministry-in-md-seeking-chief-executive-officer/"
+    },
+    {
+      "at": "2026-10-24T14:02:20.517213+00:00",
+      "type": "removed_false_positive",
+      "job_id": "960b70cdf38a6974",
+      "source": "FaithSearch Partners",
+      "title": "President",
+      "organization": "Organization confidential",
+      "url": "https://faithsearchpartners.com/news/faithsearch-launches-president-search-for-university-of-toccoa-falls/"
+    },
+    {
+      "at": "2026-10-24T14:02:20.517213+00:00",
+      "type": "removed_false_positive",
+      "job_id": "62e62841416b764c",
+      "source": "Bridge Partners",
+      "title": "CEO and Executive Director",
+      "organization": "Functions",
+      "url": "https://bridgepartnersllc.com/function/ceo/"
+    },
+    {
+      "at": "2026-10-24T14:02:20.517213+00:00",
+      "type": "updated",
+      "job_id": "1c9c2526dd47f4f5",
+      "source": "BoardWalk Consulting",
+      "title": "Chief Executive Officer",
+      "organization": "Tahoe Community Foundation",
+      "changes": {
+        "posted_date": {
+          "from": "2026-10-16",
+          "to": "2026-10-17"
+        }
+      }
+    },
+    {
+      "at": "2026-10-24T14:02:20.517213+00:00",
+      "type": "updated",
+      "job_id": "4a559e8b34e0cffa",
+      "source": "BoardWalk Consulting",
+      "title": "President & CEO",
+      "organization": "One Hundred Miles",
+      "changes": {
+        "posted_date": {
+          "from": "2026-10-02",
+          "to": "2026-10-03"
+        }
+      }
+    },
+    {
+      "at": "2026-10-24T14:02:20.517213+00:00",
+      "type": "updated",
+      "job_id": "acf48ae0f359e233",
+      "source": "BoardWalk Consulting",
+      "title": "Executive Director",
+      "organization": "Florida Rights Restoration Coalition",
+      "changes": {
+        "posted_date": {
+          "from": "2026-09-23",
+          "to": "2026-09-24"
+        }
+      }
+    },
+    {
+      "at": "2026-10-24T14:02:20.517213+00:00",
+      "type": "updated",
+      "job_id": "b31f942adf5dca3b",
+      "source": "BoardWalk Consulting",
+      "title": "Executive Director",
+      "organization": "Gateway Early Childhood Alliance",
+      "changes": {
+        "posted_date": {
+          "from": "2026-08-24",
+          "to": "2026-08-25"
+        }
+      }
+    },
+    {
+      "at": "2026-10-24T14:02:20.517213+00:00",
+      "type": "updated",
+      "job_id": "e39688bc3548ed3e",
+      "source": "BoardWalk Consulting",
+      "title": "CEO",
+      "organization": "The Colorado Health Foundation",
+      "changes": {
+        "posted_date": {
+          "from": "2026-07-25",
+          "to": "2026-07-26"
+        }
+      }
+    },
+    {
+      "at": "2026-10-24T14:02:20.517213+00:00",
+      "type": "updated",
+      "job_id": "70879d341e410a6b",
+      "source": "BoardWalk Consulting",
+      "title": "Executive Director",
+      "organization": "Atlanta Ballet",
+      "changes": {
+        "posted_date": {
+          "from": "2026-04-26",
+          "to": "2026-04-27"
+        }
+      }
+    },
+    {
+      "at": "2026-10-24T14:02:20.517213+00:00",
+      "type": "reopened",
+      "job_id": "62e62841416b764c",
+      "source": "Bridge Partners",
+      "title": "CEO and Executive Director",
+      "organization": "Functions"
+    },
+    {
+      "at": "2026-10-24T14:02:20.517213+00:00",
+      "type": "updated",
+      "job_id": "62e62841416b764c",
+      "source": "Bridge Partners",
+      "title": "CEO and Executive Director",
+      "organization": "Functions",
+      "changes": {
+        "status": {
+          "from": "closed",
+          "to": "open"
+        }
+      }
+    },
+    {
+      "at": "2026-10-24T14:02:20.517213+00:00",
+      "type": "new",
+      "job_id": "76fc67e458714d47",
+      "source": "Scion Executive Search",
+      "title": "Chief Executive Officer",
+      "organization": "Girl Scouts of San Jacinto Council (GSSJC), one of the largest councils in the Girl Scout Movement"
+    },
+    {
+      "at": "2026-10-24T14:02:20.517213+00:00",
+      "type": "updated",
+      "job_id": "75143dcc943a8139",
+      "source": "Scion Executive Search",
+      "title": "Chief Executive Officer",
+      "organization": "Organization confidential",
+      "changes": {
+        "organization": {
+          "from": "Volunteers of America Western Washington, one of the region's most comprehensive human services organizations",
+          "to": "Organization confidential"
+        },
+        "location": {
+          "from": "Everett, WA 98201",
+          "to": "Location not listed"
+        }
+      }
+    },
+    {
+      "at": "2026-10-24T14:02:20.517213+00:00",
+      "type": "updated",
+      "job_id": "77848288e74a48a7",
+      "source": "Lindauer",
+      "title": "Executive Director, Major Gifts",
+      "organization": "Major Gifts",
+      "changes": {
+        "compensation_text": {
+          "from": "salary range for this position is $225,000–$334,000. Other searches for Cedars-Sinai Director, Principal Gifts Senior Major Gift Officer (Board of Governors) Executive Director, Annual and Sp",
+          "to": "salary range for this position is $225,000–$334,000. Other searches for Cedars-Sinai Director, Principal Gifts Senior Major Gift Officer (Board of Governors) Project Coordinator, Office of th"
+        }
+      }
+    },
+    {
+      "at": "2026-10-24T14:02:20.517213+00:00",
+      "type": "closed",
+      "job_id": "9bbf585a1ec1514c",
+      "source": "Lindauer",
+      "title": "Executive Director, Annual and Special Giving",
+      "organization": "Annual and Special Giving"
+    },
+    {
+      "at": "2026-10-24T14:02:20.517213+00:00",
+      "type": "updated",
+      "job_id": "b8e982953accafdb",
+      "source": "DSG Global",
+      "title": "Chief Executive Officer",
+      "organization": "Aeris Insight",
+      "changes": {
+        "organization": {
+          "from": "Mid-America Science Museum",
+          "to": "Aeris Insight"
+        },
+        "location": {
+          "from": "Hot Springs, AR",
+          "to": "Remote"
+        },
+        "url": {
+          "from": "https://www.dsgco.com/search/23299-mid-america-science-museum-chief-executive-officer/",
+          "to": "https://www.dsgco.com/search/23172-aeris/"
+        },
+        "posted_date": {
+          "from": "2026-08-11",
+          "to": "2026-07-08"
+        },
+        "compensation_text": {
+          "from": "Compensation & Benefits The total compensation range for this role is $150,000-200,000, plus a competitive benefits package which includes employer-subsidized medical and dental insurance, a Simple IRA with employer match, pai",
+          "to": "Compensation and Benefits Salary is competitive and commensurate with experience. The salary range for this role is $230,000 - $250,000 with a generous benefits package. The exact salary that will be offered to the CEO will be determined based on a consideration of the succe"
+        },
+        "compensation_min": {
+          "from": 150000,
+          "to": 230000
+        },
+        "compensation_max": {
+          "from": 200000,
+          "to": 250000
+        }
+      }
+    },
+    {
+      "at": "2026-10-24T14:02:20.517213+00:00",
+      "type": "updated",
+      "job_id": "64ee69a30199e1a8",
+      "source": "DSG Global",
+      "title": "CEO",
+      "organization": "Aspiranet",
+      "changes": {
+        "organization": {
+          "from": "Fort Worth Report",
+          "to": "Aspiranet"
+        },
+        "location": {
+          "from": "Fort Worth, TX",
+          "to": "South San Francisco, CA"
+        },
+        "url": {
+          "from": "https://www.dsgco.com/search/23370-fort-worth-report-ceo/",
+          "to": "https://www.dsgco.com/search/23462-aspiranet-ceo/"
+        },
+        "posted_date": {
+          "from": "2026-08-10",
+          "to": "2026-09-15"
+        },
+        "compensation_text": {
+          "from": "Compensation and Benefits Salary and bonus subject to qualifications and experience. Benefits include PTO, paid holidays, insurance benefits including medical, dental, vision, life insurance plans and 401k plan. This is a full time role based in Fort Worth, Texas. The Fort Worth Report is an equal opportunity employer. We a",
+          "to": "Compensation and Benefits The salary range for this position is $400,000 – $475,000 commensurate with experience. Aspiranet values its employees and offers a comprehensive benefits package. Contact DSG | Koya has been exclu"
+        },
+        "compensation_min": {
+          "from": 401000,
+          "to": 400000
+        },
+        "compensation_max": {
+          "from": 401000,
+          "to": 475000
+        }
+      }
+    },
+    {
+      "at": "2026-10-24T14:02:20.517213+00:00",
+      "type": "updated",
+      "job_id": "9d9450d05842e801",
+      "source": "DSG Global",
+      "title": "Executive Director",
+      "organization": "La Casa de las Madres",
+      "changes": {
+        "organization": {
+          "from": "The Education Fund",
+          "to": "La Casa de las Madres"
+        },
+        "location": {
+          "from": "Miami, FL",
+          "to": "San Francisco, CA"
+        },
+        "url": {
+          "from": "https://www.dsgco.com/search/23059-the-education-fund-executive-director/",
+          "to": "https://www.dsgco.com/search/23396-la-casa-executive-director/"
+        },
+        "posted_date": {
+          "from": "2026-10-01",
+          "to": "2026-08-31"
+        },
+        "compensation_text": {
+          "from": "Compensation and Benefits The starting salary range for this position is $180,000 - $220,000, with additional bonus potential. If the Executive Director succeeds the President, the salary will increase commensurate with the responsi",
+          "to": "Compensation and Benefits The salary range for this position is $200,000 - $220,000 and is commensurate with skills and experience. La Casa de las Madres also offers a comprehensive benefits package. La Casa de las Madres i"
+        },
+        "compensation_min": {
+          "from": 180000,
+          "to": 200000
+        }
+      }
+    },
+    {
+      "at": "2026-10-24T14:02:20.517213+00:00",
+      "type": "updated",
+      "job_id": "9d9450d05842e801",
+      "source": "DSG Global",
+      "title": "Executive Director",
+      "organization": "Sigler Western Museum",
+      "changes": {
+        "organization": {
+          "from": "The Education Fund",
+          "to": "Sigler Western Museum"
+        },
+        "location": {
+          "from": "Miami, FL",
+          "to": "Wickenburg, AZ"
+        },
+        "url": {
+          "from": "https://www.dsgco.com/search/23059-the-education-fund-executive-director/",
+          "to": "https://www.dsgco.com/search/23354-sigler-western-museum-executive-director/"
+        },
+        "posted_date": {
+          "from": "2026-10-01",
+          "to": "2026-08-26"
+        },
+        "compensation_text": {
+          "from": "Compensation and Benefits The starting salary range for this position is $180,000 - $220,000, with additional bonus potential. If the Executive Director succeeds the President, the salary will increase commensurate with the responsi",
+          "to": "Compensation & Benefits Salary is competitive and commensurate with experience. The salary range for this role is $225,000-$250,000 and includes a comprehensive benefits package featuring employer-subsidized medical, dental, and vision coverage; a generous 403(b) retirem"
+        },
+        "compensation_min": {
+          "from": 180000,
+          "to": 225000
+        },
+        "compensation_max": {
+          "from": 220000,
+          "to": 250000
+        }
+      }
+    },
+    {
+      "at": "2026-10-24T14:02:20.517213+00:00",
+      "type": "updated",
+      "job_id": "9d9450d05842e801",
+      "source": "DSG Global",
+      "title": "Executive Director",
+      "organization": "The Alliance for Community Development",
+      "changes": {
+        "organization": {
+          "from": "The Education Fund",
+          "to": "The Alliance for Community Development"
+        },
+        "location": {
+          "from": "Miami, FL",
+          "to": "Bay Area, CA"
+        },
+        "url": {
+          "from": "https://www.dsgco.com/search/23059-the-education-fund-executive-director/",
+          "to": "https://www.dsgco.com/search/23294-acd/"
+        },
+        "posted_date": {
+          "from": "2026-10-01",
+          "to": "2026-06-24"
+        },
+        "compensation_text": {
+          "from": "Compensation and Benefits The starting salary range for this position is $180,000 - $220,000, with additional bonus potential. If the Executive Director succeeds the President, the salary will increase commensurate with the responsi",
+          "to": "Compensation and Benefits Salary is competitive and commensurate with experience. The anticipated starting salary for this role is between $120,000 and $145,000. The exact salary that will be offered to the Executive Director will be determined based on a considerati"
+        },
+        "compensation_min": {
+          "from": 180000,
+          "to": 120000
+        },
+        "compensation_max": {
+          "from": 220000,
+          "to": 120000
+        }
+      }
+    },
+    {
+      "at": "2026-10-24T14:02:20.517213+00:00",
+      "type": "closed",
+      "job_id": "6d2efc11ac38fb2f",
+      "source": "DSG Global",
+      "title": "Executive Director for Housing and Residence Life",
+      "organization": "North Carolina A&T State University"
+    },
+    {
+      "at": "2026-10-24T14:02:20.517213+00:00",
+      "type": "closed",
+      "job_id": "d4292837ee938bae",
+      "source": "DSG Global",
+      "title": "President",
+      "organization": "Highline College"
+    },
+    {
+      "at": "2026-10-24T14:02:20.517213+00:00",
+      "type": "closed",
+      "job_id": "ac8630d8b62bd70f",
+      "source": "DSG Global",
+      "title": "President & CEO",
+      "organization": "Keiro"
+    },
+    {
+      "at": "2026-10-24T14:02:20.517213+00:00",
+      "type": "closed",
+      "job_id": "78d9bfcdbeebcb4c",
+      "source": "DSG Global",
+      "title": "Executive Director, Washington D.C. Metro",
+      "organization": "GreenLight Fund"
+    },
+    {
+      "at": "2026-10-24T14:02:20.517213+00:00",
+      "type": "updated",
+      "job_id": "bdb4fab450cecd43",
+      "source": "Kittleman Associates",
+      "title": "President and CEO",
+      "organization": "Gettysburg Foundation",
+      "changes": {
+        "organization": {
+          "from": "Mid-Ohio Food Collective",
+          "to": "Gettysburg Foundation"
+        },
+        "location": {
+          "from": "Grove City, OH, United States",
+          "to": "Gettysburg, PA, United States"
+        },
+        "url": {
+          "from": "https://www.kittlemansearch.com/opportunities/president-ceo-mid-ohio-food-collective",
+          "to": "https://www.kittlemansearch.com/opportunities/president-chief-executive-officer-gettysburg-foundation"
+        },
+        "posted_date": {
+          "from": "2026-09-10",
+          "to": "2026-10-01"
+        }
+      }
+    },
+    {
+      "at": "2026-10-24T14:02:20.517213+00:00",
+      "type": "updated",
+      "job_id": "bdb4fab450cecd43",
+      "source": "Kittleman Associates",
+      "title": "President and CEO",
+      "organization": "Viability, Inc.",
+      "changes": {
+        "organization": {
+          "from": "Mid-Ohio Food Collective",
+          "to": "Viability, Inc."
+        },
+        "location": {
+          "from": "Grove City, OH, United States",
+          "to": "Springfield, MA, United States"
+        },
+        "url": {
+          "from": "https://www.kittlemansearch.com/opportunities/president-ceo-mid-ohio-food-collective",
+          "to": "https://www.kittlemansearch.com/opportunities/president-ceo-viability"
+        },
+        "posted_date": {
+          "from": "2026-09-10",
+          "to": "2026-09-16"
+        }
+      }
+    },
+    {
+      "at": "2026-10-24T14:02:20.517213+00:00",
+      "type": "updated",
+      "job_id": "bdb4fab450cecd43",
+      "source": "Kittleman Associates",
+      "title": "President and CEO",
+      "organization": "Schoodic Institute at Acadia National Park",
+      "changes": {
+        "organization": {
+          "from": "Mid-Ohio Food Collective",
+          "to": "Schoodic Institute at Acadia National Park"
+        },
+        "location": {
+          "from": "Grove City, OH, United States",
+          "to": "Winter Harbor, ME, United States"
+        },
+        "url": {
+          "from": "https://www.kittlemansearch.com/opportunities/president-ceo-mid-ohio-food-collective",
+          "to": "https://www.kittlemansearch.com/opportunities/president-ceo-schoodic-institute"
+        },
+        "posted_date": {
+          "from": "2026-09-10",
+          "to": "2026-09-14"
+        }
+      }
+    },
+    {
+      "at": "2026-10-24T14:02:20.517213+00:00",
+      "type": "closed",
+      "job_id": "0ed0268f19b6dc5c",
+      "source": "Kittleman Associates",
+      "title": "President & CEO",
+      "organization": "Madison Community Foundation"
+    },
+    {
+      "at": "2026-10-24T14:02:20.517213+00:00",
+      "type": "updated",
+      "job_id": "6f9a7dec04efa8ce",
+      "source": "WittKieffer",
+      "title": "Chief Executive Officer",
+      "organization": "More Info",
+      "changes": {
+        "organization": {
+          "from": "New York Health Plan Association",
+          "to": "More Info"
+        },
+        "location": {
+          "from": "Location not listed",
+          "to": "Oak Brook, IL"
+        },
+        "url": {
+          "from": "https://www.wittkieffer.com/search-open-positions/",
+          "to": "https://www.wittkieffer.com/positions/a1wun000002inkzmag"
+        }
+      }
+    },
+    {
+      "at": "2026-10-24T14:02:20.517213+00:00",
+      "type": "closed",
+      "job_id": "fbba784d516a2e13",
+      "source": "WittKieffer",
+      "title": "Chief Executive Officer Hendrick Health Abilene, Texas",
+      "organization": "United States The Chief Executive Officer opportunity at Hendrick Health in Abilene, Texas represents a rare chance to lead one of Texas’ most respected faith-based health systems. For more than a century, Hendrick has served as a trusted healthcare provider and community steward across West Central Texas, guided by a mission rooted in faith, compassion, service, and […] More Info"
+    },
+    {
+      "at": "2026-10-24T14:02:20.517213+00:00",
+      "type": "updated",
+      "job_id": "dc33d30ecc1362e5",
+      "source": "NPAG",
+      "title": "Executive Director",
+      "organization": "HealthQ",
+      "changes": {
+        "organization": {
+          "from": "Sobrato Early Academic Language (SEAL)",
+          "to": "HealthQ"
+        },
+        "location": {
+          "from": "Remote (within U.S., California preferred)",
+          "to": "Location not listed"
+        },
+        "url": {
+          "from": "https://www.npag.com/seal-ed",
+          "to": "https://www.npag.com/hq-ed"
+        }
+      }
+    },
+    {
+      "at": "2026-10-24T14:02:20.517213+00:00",
+      "type": "updated",
+      "job_id": "667625faad058369",
+      "source": "Development Guild",
+      "title": "Executive Director",
+      "organization": "Mindhaven",
+      "changes": {
+        "location": {
+          "from": "Cambridge, MA",
+          "to": "Colchester, VT"
+        }
+      }
+    },
+    {
+      "at": "2026-10-24T14:02:20.517213+00:00",
+      "type": "updated",
+      "job_id": "f9f133cf2577cc30",
+      "source": "Spano Pratt",
+      "title": "Chief Executive Officer – Profile",
+      "organization": "Rock River",
+      "changes": {
+        "organization": {
+          "from": "Emergency Nurses Association",
+          "to": "Rock River"
+        },
+        "url": {
+          "from": "https://spanopratt.com/wp-content/uploads/2026/05/ENA-CEO-Job-Profile-Final.pdf",
+          "to": "https://spanopratt.com/wp-content/uploads/2026/10/Rock-River-Community-Clinic-Job-Profile-CEO.pdf"
+        }
+      }
+    },
+    {
+      "at": "2026-10-24T14:02:20.517213+00:00",
+      "type": "closed",
+      "job_id": "ff4f906954ef1cfa",
+      "source": "Armstrong McGuire",
+      "title": "President and Chief Executive Officer",
+      "organization": "Feeding Southwest Virginia"
+    },
+    {
+      "at": "2026-10-24T14:02:20.517213+00:00",
+      "type": "reopened",
+      "job_id": "d096dd70724b642b",
+      "source": "FaithSearch Partners",
+      "title": "Executive Director",
+      "organization": "California Senior Living Ministry"
+    },
+    {
+      "at": "2026-10-24T14:02:20.517213+00:00",
+      "type": "updated",
+      "job_id": "d096dd70724b642b",
+      "source": "FaithSearch Partners",
+      "title": "Executive Director",
+      "organization": "California Senior Living Ministry",
+      "changes": {
+        "status": {
+          "from": "closed",
+          "to": "open"
+        }
+      }
+    },
+    {
+      "at": "2026-10-24T14:02:20.517213+00:00",
+      "type": "reopened",
+      "job_id": "960b70cdf38a6974",
+      "source": "FaithSearch Partners",
+      "title": "President",
+      "organization": "Organization confidential"
+    },
+    {
+      "at": "2026-10-24T14:02:20.517213+00:00",
+      "type": "updated",
+      "job_id": "960b70cdf38a6974",
+      "source": "FaithSearch Partners",
+      "title": "President",
+      "organization": "Organization confidential",
+      "changes": {
+        "status": {
+          "from": "closed",
+          "to": "open"
+        }
+      }
+    },
+    {
+      "at": "2026-10-24T14:02:20.517213+00:00",
+      "type": "reopened",
+      "job_id": "bee6f9816737451e",
+      "source": "FaithSearch Partners",
+      "title": "Chief Executive Officer",
+      "organization": "Well-respected Christian Media Ministry in MD"
+    },
+    {
+      "at": "2026-10-24T14:02:20.517213+00:00",
+      "type": "updated",
+      "job_id": "bee6f9816737451e",
+      "source": "FaithSearch Partners",
+      "title": "Chief Executive Officer",
+      "organization": "Well-respected Christian Media Ministry in MD",
+      "changes": {
+        "status": {
+          "from": "closed",
+          "to": "open"
+        }
+      }
+    },
+    {
+      "at": "2026-10-24T14:02:20.517213+00:00",
+      "type": "new",
+      "job_id": "cfcbeee1a44e4ddd",
+      "source": "AGB Search",
+      "title": "President & Chief Executive Officer",
+      "organization": "Medical College of Virginia Foundation"
+    },
+    {
+      "at": "2026-10-24T14:02:20.517213+00:00",
+      "type": "updated",
+      "job_id": "781dce5164d4ab71",
+      "source": "Carney Sandoe",
+      "title": "Head of School",
+      "organization": "Polytechnic School",
+      "changes": {
+        "organization": {
+          "from": "Weber School",
+          "to": "Polytechnic School"
+        },
+        "location": {
+          "from": "GA – Atlanta",
+          "to": "CA – Pasadena"
+        }
+      }
+    },
+    {
+      "at": "2026-10-24T14:02:20.517213+00:00",
       "type": "updated",
       "job_id": "781dce5164d4ab71",
       "source": "Carney Sandoe",
