@@ -1,829 +1,6 @@
 {
-  "generated_at": "2026-11-08T16:42:50.400806+00:00",
+  "generated_at": "2026-11-09T20:49:18.142896+00:00",
   "events": [
-    {
-      "at": "2026-10-28T16:42:13.839968+00:00",
-      "type": "updated",
-      "job_id": "9d9450d05842e801",
-      "source": "DSG Global",
-      "title": "Executive Director",
-      "organization": "La Casa de las Madres",
-      "changes": {
-        "organization": {
-          "from": "The Education Fund",
-          "to": "La Casa de las Madres"
-        },
-        "location": {
-          "from": "Miami, FL",
-          "to": "San Francisco, CA"
-        },
-        "url": {
-          "from": "https://www.dsgco.com/search/23059-the-education-fund-executive-director/",
-          "to": "https://www.dsgco.com/search/23396-la-casa-executive-director/"
-        },
-        "posted_date": {
-          "from": "2026-10-01",
-          "to": "2026-08-31"
-        },
-        "compensation_text": {
-          "from": "Compensation and Benefits The starting salary range for this position is $180,000 - $220,000, with additional bonus potential. If the Executive Director succeeds the President, the salary will increase commensurate with the responsi",
-          "to": "Compensation and Benefits The salary range for this position is $200,000 - $220,000 and is commensurate with skills and experience. La Casa de las Madres also offers a comprehensive benefits package. La Casa de las Madres i"
-        },
-        "compensation_min": {
-          "from": 180000,
-          "to": 200000
-        }
-      }
-    },
-    {
-      "at": "2026-10-28T16:42:13.839968+00:00",
-      "type": "updated",
-      "job_id": "b8e982953accafdb",
-      "source": "DSG Global",
-      "title": "Chief Executive Officer",
-      "organization": "La Clinica de La Raza",
-      "changes": {
-        "organization": {
-          "from": "Health Federation of Philadelphia",
-          "to": "La Clinica de La Raza"
-        },
-        "location": {
-          "from": "Philadelphia, PA",
-          "to": "Oakland, CA"
-        },
-        "url": {
-          "from": "https://www.dsgco.com/search/23240-health-federation-of-philadelphia-chief-executive-officer/",
-          "to": "https://www.dsgco.com/search/21682-la-clinica-de-la-raza-chief-executive-officer/"
-        },
-        "posted_date": {
-          "from": "2026-09-02",
-          "to": "2025-12-11"
-        },
-        "compensation_text": {
-          "from": "Compensation and Benefits Salary is competitive and commensurate with experience. The salary range for this role is $305,000 - $345,000 with a generous benefits package. The exact salary that will be offered to the CEO will be determined based on a consideration of the succe",
-          "to": "salary range for this position is $425,000 - $495,000, with a generous benefits package and bonus potential. Actual pay for the finalist candidate will be adjusted based on various factors, inc"
-        },
-        "compensation_min": {
-          "from": 305000,
-          "to": 425000
-        },
-        "compensation_max": {
-          "from": 345000,
-          "to": 495000
-        }
-      }
-    },
-    {
-      "at": "2026-10-28T16:42:13.839968+00:00",
-      "type": "updated",
-      "job_id": "9d9450d05842e801",
-      "source": "DSG Global",
-      "title": "Executive Director",
-      "organization": "Lawrenceville Together",
-      "changes": {
-        "organization": {
-          "from": "The Education Fund",
-          "to": "Lawrenceville Together"
-        },
-        "location": {
-          "from": "Miami, FL",
-          "to": "Pittsburgh, PA"
-        },
-        "url": {
-          "from": "https://www.dsgco.com/search/23059-the-education-fund-executive-director/",
-          "to": "https://www.dsgco.com/search/23534-lawrenceville-together-executive-director/"
-        },
-        "posted_date": {
-          "from": "2026-10-01",
-          "to": "2026-10-26"
-        },
-        "compensation_text": {
-          "from": "Compensation and Benefits The starting salary range for this position is $180,000 - $220,000, with additional bonus potential. If the Executive Director succeeds the President, the salary will increase commensurate with the responsi",
-          "to": "Compensation and Benefits The salary range for this position is $115,000 to $130,000. Benefits include: Paid vacation Paid sick days Paid holidays SIMPLE IRA with up to 3% employer match Monthly ICHRA stipend to purchase hea"
-        },
-        "compensation_min": {
-          "from": 180000,
-          "to": 115000
-        },
-        "compensation_max": {
-          "from": 220000,
-          "to": 130000
-        }
-      }
-    },
-    {
-      "at": "2026-10-28T16:42:13.839968+00:00",
-      "type": "updated",
-      "job_id": "b8e982953accafdb",
-      "source": "DSG Global",
-      "title": "Chief Executive Officer",
-      "organization": "Mid-America Science Museum",
-      "changes": {
-        "organization": {
-          "from": "Health Federation of Philadelphia",
-          "to": "Mid-America Science Museum"
-        },
-        "location": {
-          "from": "Philadelphia, PA",
-          "to": "Hot Springs, AR"
-        },
-        "url": {
-          "from": "https://www.dsgco.com/search/23240-health-federation-of-philadelphia-chief-executive-officer/",
-          "to": "https://www.dsgco.com/search/23299-mid-america-science-museum-chief-executive-officer/"
-        },
-        "posted_date": {
-          "from": "2026-09-02",
-          "to": "2026-08-11"
-        },
-        "compensation_text": {
-          "from": "Compensation and Benefits Salary is competitive and commensurate with experience. The salary range for this role is $305,000 - $345,000 with a generous benefits package. The exact salary that will be offered to the CEO will be determined based on a consideration of the succe",
-          "to": "Compensation & Benefits The total compensation range for this role is $150,000-200,000, plus a competitive benefits package which includes employer-subsidized medical and dental insurance, a Simple IRA with employer match, pai"
-        },
-        "compensation_min": {
-          "from": 305000,
-          "to": 150000
-        },
-        "compensation_max": {
-          "from": 345000,
-          "to": 200000
-        }
-      }
-    },
-    {
-      "at": "2026-10-28T16:42:13.839968+00:00",
-      "type": "updated",
-      "job_id": "9d9450d05842e801",
-      "source": "DSG Global",
-      "title": "Executive Director",
-      "organization": "National Museum of Women in the Arts",
-      "changes": {
-        "organization": {
-          "from": "The Education Fund",
-          "to": "National Museum of Women in the Arts"
-        },
-        "location": {
-          "from": "Miami, FL",
-          "to": "Washington, DC"
-        },
-        "url": {
-          "from": "https://www.dsgco.com/search/23059-the-education-fund-executive-director/",
-          "to": "https://www.dsgco.com/search/23346-national-museum-of-women-in-the-arts-executive-director/"
-        },
-        "posted_date": {
-          "from": "2026-10-01",
-          "to": "2026-10-21"
-        },
-        "compensation_text": {
-          "from": "Compensation and Benefits The starting salary range for this position is $180,000 - $220,000, with additional bonus potential. If the Executive Director succeeds the President, the salary will increase commensurate with the responsi",
-          "to": "Compensation and Benefits The compensation range for this role is $400,000 - $450,000, commensurate with experience and accomplishments plus attractive benefits. Contact DSG | Koya has been exclusively retained for this engag"
-        },
-        "compensation_min": {
-          "from": 180000,
-          "to": 400000
-        },
-        "compensation_max": {
-          "from": 220000,
-          "to": 450000
-        }
-      }
-    },
-    {
-      "at": "2026-10-28T16:42:13.839968+00:00",
-      "type": "updated",
-      "job_id": "8cbe95a1133c0bc5",
-      "source": "DSG Global",
-      "title": "President and CEO",
-      "organization": "National Network to End Domestic Violence (NNEDV)",
-      "changes": {
-        "organization": {
-          "from": "American Board of Surgery (ABS)",
-          "to": "National Network to End Domestic Violence (NNEDV)"
-        },
-        "location": {
-          "from": "Remote or Philadelphia, PA",
-          "to": "Remote or Washington, DC"
-        },
-        "url": {
-          "from": "https://www.dsgco.com/search/23269-american-board-of-surgery-abs-president-and-ceo/",
-          "to": "https://www.dsgco.com/search/23584-nnedv-president-and-ceo/"
-        },
-        "posted_date": {
-          "from": "2026-09-15",
-          "to": "2026-10-27"
-        }
-      }
-    },
-    {
-      "at": "2026-10-28T16:42:13.839968+00:00",
-      "type": "updated",
-      "job_id": "9d9450d05842e801",
-      "source": "DSG Global",
-      "title": "Executive Director",
-      "organization": "Newtrax",
-      "changes": {
-        "organization": {
-          "from": "The Education Fund",
-          "to": "Newtrax"
-        },
-        "location": {
-          "from": "Miami, FL",
-          "to": "White Bear Lake, MN"
-        },
-        "url": {
-          "from": "https://www.dsgco.com/search/23059-the-education-fund-executive-director/",
-          "to": "https://www.dsgco.com/search/23458-newtrax-executive-director/"
-        },
-        "posted_date": {
-          "from": "2026-10-01",
-          "to": "2026-09-09"
-        },
-        "compensation_text": {
-          "from": "Compensation and Benefits The starting salary range for this position is $180,000 - $220,000, with additional bonus potential. If the Executive Director succeeds the President, the salary will increase commensurate with the responsi",
-          "to": "Compensation and Benefits The salary range for this position is $140,000 to $160,000. Contact DSG | Koya has been exclusively retained for this engagement, which is being led by Alicia Salerno. Submit a compelling cover lett"
-        },
-        "compensation_min": {
-          "from": 180000,
-          "to": 140000
-        },
-        "compensation_max": {
-          "from": 220000,
-          "to": 160000
-        }
-      }
-    },
-    {
-      "at": "2026-10-28T16:42:13.839968+00:00",
-      "type": "reopened",
-      "job_id": "6d2efc11ac38fb2f",
-      "source": "DSG Global",
-      "title": "Executive Director for Housing and Residence Life",
-      "organization": "North Carolina A&T State University"
-    },
-    {
-      "at": "2026-10-28T16:42:13.839968+00:00",
-      "type": "updated",
-      "job_id": "6d2efc11ac38fb2f",
-      "source": "DSG Global",
-      "title": "Executive Director for Housing and Residence Life",
-      "organization": "North Carolina A&T State University",
-      "changes": {
-        "status": {
-          "from": "closed",
-          "to": "open"
-        }
-      }
-    },
-    {
-      "at": "2026-10-28T16:42:13.839968+00:00",
-      "type": "updated",
-      "job_id": "9d9450d05842e801",
-      "source": "DSG Global",
-      "title": "Executive Director",
-      "organization": "Sigler Western Museum",
-      "changes": {
-        "organization": {
-          "from": "The Education Fund",
-          "to": "Sigler Western Museum"
-        },
-        "location": {
-          "from": "Miami, FL",
-          "to": "Wickenburg, AZ"
-        },
-        "url": {
-          "from": "https://www.dsgco.com/search/23059-the-education-fund-executive-director/",
-          "to": "https://www.dsgco.com/search/23354-sigler-western-museum-executive-director/"
-        },
-        "posted_date": {
-          "from": "2026-10-01",
-          "to": "2026-08-26"
-        },
-        "compensation_text": {
-          "from": "Compensation and Benefits The starting salary range for this position is $180,000 - $220,000, with additional bonus potential. If the Executive Director succeeds the President, the salary will increase commensurate with the responsi",
-          "to": "Compensation & Benefits Salary is competitive and commensurate with experience. The salary range for this role is $225,000-$250,000 and includes a comprehensive benefits package featuring employer-subsidized medical, dental, and vision coverage; a generous 403(b) retirem"
-        },
-        "compensation_min": {
-          "from": 180000,
-          "to": 225000
-        },
-        "compensation_max": {
-          "from": 220000,
-          "to": 250000
-        }
-      }
-    },
-    {
-      "at": "2026-10-28T16:42:13.839968+00:00",
-      "type": "updated",
-      "job_id": "9d9450d05842e801",
-      "source": "DSG Global",
-      "title": "Executive Director",
-      "organization": "Stonewall Columbus",
-      "changes": {
-        "organization": {
-          "from": "The Education Fund",
-          "to": "Stonewall Columbus"
-        },
-        "location": {
-          "from": "Miami, FL",
-          "to": "Columbus, OH"
-        },
-        "url": {
-          "from": "https://www.dsgco.com/search/23059-the-education-fund-executive-director/",
-          "to": "https://www.dsgco.com/search/23450-stonewall-columbus-executive-director/"
-        },
-        "posted_date": {
-          "from": "2026-10-01",
-          "to": "2026-09-21"
-        },
-        "compensation_text": {
-          "from": "Compensation and Benefits The starting salary range for this position is $180,000 - $220,000, with additional bonus potential. If the Executive Director succeeds the President, the salary will increase commensurate with the responsi",
-          "to": "Compensation and Benefits The salary range for this position is $125,000 to $140,000, accompanied by a generous benefits package. Details will be provided to candidates selected to advance in the search process. Contact DSG"
-        },
-        "compensation_min": {
-          "from": 180000,
-          "to": 125000
-        },
-        "compensation_max": {
-          "from": 220000,
-          "to": 140000
-        }
-      }
-    },
-    {
-      "at": "2026-10-28T16:42:13.839968+00:00",
-      "type": "updated",
-      "job_id": "9d9450d05842e801",
-      "source": "DSG Global",
-      "title": "Executive Director",
-      "organization": "The Alliance for Community Development",
-      "changes": {
-        "organization": {
-          "from": "The Education Fund",
-          "to": "The Alliance for Community Development"
-        },
-        "location": {
-          "from": "Miami, FL",
-          "to": "Bay Area, CA"
-        },
-        "url": {
-          "from": "https://www.dsgco.com/search/23059-the-education-fund-executive-director/",
-          "to": "https://www.dsgco.com/search/23294-acd/"
-        },
-        "posted_date": {
-          "from": "2026-10-01",
-          "to": "2026-06-24"
-        },
-        "compensation_text": {
-          "from": "Compensation and Benefits The starting salary range for this position is $180,000 - $220,000, with additional bonus potential. If the Executive Director succeeds the President, the salary will increase commensurate with the responsi",
-          "to": "Compensation and Benefits Salary is competitive and commensurate with experience. The anticipated starting salary for this role is between $120,000 and $145,000. The exact salary that will be offered to the Executive Director will be determined based on a considerati"
-        },
-        "compensation_min": {
-          "from": 180000,
-          "to": 120000
-        },
-        "compensation_max": {
-          "from": 220000,
-          "to": 120000
-        }
-      }
-    },
-    {
-      "at": "2026-10-28T16:42:13.839968+00:00",
-      "type": "updated",
-      "job_id": "9d9450d05842e801",
-      "source": "DSG Global",
-      "title": "Executive Director",
-      "organization": "The Doctors Clinic",
-      "changes": {
-        "organization": {
-          "from": "The Education Fund",
-          "to": "The Doctors Clinic"
-        },
-        "location": {
-          "from": "Miami, FL",
-          "to": "Silverdale, WA"
-        },
-        "url": {
-          "from": "https://www.dsgco.com/search/23059-the-education-fund-executive-director/",
-          "to": "https://www.dsgco.com/search/23372-the-doctors-clinic-executive-director/"
-        },
-        "posted_date": {
-          "from": "2026-10-01",
-          "to": "2026-08-26"
-        }
-      }
-    },
-    {
-      "at": "2026-10-28T16:42:13.839968+00:00",
-      "type": "closed",
-      "job_id": "ac8630d8b62bd70f",
-      "source": "DSG Global",
-      "title": "President & CEO",
-      "organization": "Keiro"
-    },
-    {
-      "at": "2026-10-28T16:42:13.839968+00:00",
-      "type": "new",
-      "job_id": "9befdb422c18c0ef",
-      "source": "Kittleman Associates",
-      "title": "Chief Executive Officer",
-      "organization": "American Society for Nondestructive Testing"
-    },
-    {
-      "at": "2026-10-28T16:42:13.839968+00:00",
-      "type": "new",
-      "job_id": "9ff05f2f19b635b5",
-      "source": "Kittleman Associates",
-      "title": "Executive Director",
-      "organization": "Lake Waramaug Conservancy"
-    },
-    {
-      "at": "2026-10-28T16:42:13.839968+00:00",
-      "type": "updated",
-      "job_id": "bdb4fab450cecd43",
-      "source": "Kittleman Associates",
-      "title": "President and CEO",
-      "organization": "Gettysburg Foundation",
-      "changes": {
-        "organization": {
-          "from": "Mid-Ohio Food Collective",
-          "to": "Gettysburg Foundation"
-        },
-        "location": {
-          "from": "Grove City, OH, United States",
-          "to": "Gettysburg, PA, United States"
-        },
-        "url": {
-          "from": "https://www.kittlemansearch.com/opportunities/president-ceo-mid-ohio-food-collective",
-          "to": "https://www.kittlemansearch.com/opportunities/president-chief-executive-officer-gettysburg-foundation"
-        },
-        "posted_date": {
-          "from": "2026-09-10",
-          "to": "2026-10-01"
-        }
-      }
-    },
-    {
-      "at": "2026-10-28T16:42:13.839968+00:00",
-      "type": "updated",
-      "job_id": "bdb4fab450cecd43",
-      "source": "Kittleman Associates",
-      "title": "President and CEO",
-      "organization": "Viability, Inc.",
-      "changes": {
-        "organization": {
-          "from": "Mid-Ohio Food Collective",
-          "to": "Viability, Inc."
-        },
-        "location": {
-          "from": "Grove City, OH, United States",
-          "to": "Springfield, MA, United States"
-        },
-        "url": {
-          "from": "https://www.kittlemansearch.com/opportunities/president-ceo-mid-ohio-food-collective",
-          "to": "https://www.kittlemansearch.com/opportunities/president-ceo-viability"
-        },
-        "posted_date": {
-          "from": "2026-09-10",
-          "to": "2026-09-16"
-        }
-      }
-    },
-    {
-      "at": "2026-10-28T16:42:13.839968+00:00",
-      "type": "updated",
-      "job_id": "bdb4fab450cecd43",
-      "source": "Kittleman Associates",
-      "title": "President and CEO",
-      "organization": "Schoodic Institute at Acadia National Park",
-      "changes": {
-        "organization": {
-          "from": "Mid-Ohio Food Collective",
-          "to": "Schoodic Institute at Acadia National Park"
-        },
-        "location": {
-          "from": "Grove City, OH, United States",
-          "to": "Winter Harbor, ME, United States"
-        },
-        "url": {
-          "from": "https://www.kittlemansearch.com/opportunities/president-ceo-mid-ohio-food-collective",
-          "to": "https://www.kittlemansearch.com/opportunities/president-ceo-schoodic-institute"
-        },
-        "posted_date": {
-          "from": "2026-09-10",
-          "to": "2026-09-14"
-        }
-      }
-    },
-    {
-      "at": "2026-10-28T16:42:13.839968+00:00",
-      "type": "updated",
-      "job_id": "dc33d30ecc1362e5",
-      "source": "NPAG",
-      "title": "Executive Director",
-      "organization": "Climate Resilience Funder Collaborative",
-      "changes": {
-        "organization": {
-          "from": "Sobrato Early Academic Language (SEAL)",
-          "to": "Climate Resilience Funder Collaborative"
-        },
-        "location": {
-          "from": "Remote (within U.S., California preferred)",
-          "to": "Remote"
-        },
-        "url": {
-          "from": "https://www.npag.com/seal-ed",
-          "to": "https://www.npag.com/crfc-ed"
-        }
-      }
-    },
-    {
-      "at": "2026-10-28T16:42:13.839968+00:00",
-      "type": "updated",
-      "job_id": "dc33d30ecc1362e5",
-      "source": "NPAG",
-      "title": "Executive Director",
-      "organization": "HealthQ",
-      "changes": {
-        "organization": {
-          "from": "Sobrato Early Academic Language (SEAL)",
-          "to": "HealthQ"
-        },
-        "location": {
-          "from": "Remote (within U.S., California preferred)",
-          "to": "Location not listed"
-        },
-        "url": {
-          "from": "https://www.npag.com/seal-ed",
-          "to": "https://www.npag.com/hq-ed"
-        }
-      }
-    },
-    {
-      "at": "2026-10-28T16:42:13.839968+00:00",
-      "type": "updated",
-      "job_id": "f9f133cf2577cc30",
-      "source": "Spano Pratt",
-      "title": "Chief Executive Officer – Profile",
-      "organization": "Rock River",
-      "changes": {
-        "organization": {
-          "from": "Emergency Nurses Association",
-          "to": "Rock River"
-        },
-        "url": {
-          "from": "https://spanopratt.com/wp-content/uploads/2026/05/ENA-CEO-Job-Profile-Final.pdf",
-          "to": "https://spanopratt.com/wp-content/uploads/2026/10/Rock-River-Community-Clinic-Job-Profile-CEO.pdf"
-        }
-      }
-    },
-    {
-      "at": "2026-10-28T16:42:13.839968+00:00",
-      "type": "updated",
-      "job_id": "ad852aae8f10f876",
-      "source": "McCormack + Kristel",
-      "title": "Chief Executive Officer",
-      "organization": "Aids Foundation Chicago President And Ceo",
-      "changes": {
-        "organization": {
-          "from": "Independent Film And Television Alliance President And Ceo",
-          "to": "Aids Foundation Chicago President And Ceo"
-        },
-        "url": {
-          "from": "https://www.mccormackkristel.com/current-searches/independent-film-and-television-alliance-president-and-ceo",
-          "to": "https://www.mccormackkristel.com/current-searches/aids-foundation-chicago-president-and-ceo"
-        }
-      }
-    },
-    {
-      "at": "2026-10-28T16:42:13.839968+00:00",
-      "type": "updated",
-      "job_id": "ad852aae8f10f876",
-      "source": "McCormack + Kristel",
-      "title": "Chief Executive Officer",
-      "organization": "Resource Center Ceo",
-      "changes": {
-        "organization": {
-          "from": "Independent Film And Television Alliance President And Ceo",
-          "to": "Resource Center Ceo"
-        },
-        "url": {
-          "from": "https://www.mccormackkristel.com/current-searches/independent-film-and-television-alliance-president-and-ceo",
-          "to": "https://www.mccormackkristel.com/current-searches/resource-center-ceo"
-        }
-      }
-    },
-    {
-      "at": "2026-10-28T16:42:13.839968+00:00",
-      "type": "closed",
-      "job_id": "5c7c41cae498f0b0",
-      "source": "McCormack + Kristel",
-      "title": "President &amp; Chief Executive Officer",
-      "organization": "Independent Film &amp; Television Alliance®"
-    },
-    {
-      "at": "2026-10-28T16:42:13.839968+00:00",
-      "type": "closed",
-      "job_id": "7b6ab3443988a150",
-      "source": "McCormack + Kristel",
-      "title": "President and CEO",
-      "organization": "AIDS Foundation Chicago"
-    },
-    {
-      "at": "2026-10-28T16:42:13.839968+00:00",
-      "type": "new",
-      "job_id": "71af4773a636be24",
-      "source": "Vetted Solutions",
-      "title": "President & Chief Executive Officer",
-      "organization": "Associations West (AW)"
-    },
-    {
-      "at": "2026-10-28T16:42:13.839968+00:00",
-      "type": "updated",
-      "job_id": "781dce5164d4ab71",
-      "source": "Carney Sandoe",
-      "title": "Head of School",
-      "organization": "Learning Prep School",
-      "changes": {
-        "organization": {
-          "from": "Weber School",
-          "to": "Learning Prep School"
-        },
-        "location": {
-          "from": "GA – Atlanta",
-          "to": "MA – West Newton"
-        }
-      }
-    },
-    {
-      "at": "2026-10-28T16:42:13.839968+00:00",
-      "type": "updated",
-      "job_id": "781dce5164d4ab71",
-      "source": "Carney Sandoe",
-      "title": "Head of School",
-      "organization": "Polytechnic School",
-      "changes": {
-        "organization": {
-          "from": "Weber School",
-          "to": "Polytechnic School"
-        },
-        "location": {
-          "from": "GA – Atlanta",
-          "to": "CA – Pasadena"
-        }
-      }
-    },
-    {
-      "at": "2026-10-28T16:42:13.839968+00:00",
-      "type": "updated",
-      "job_id": "781dce5164d4ab71",
-      "source": "Carney Sandoe",
-      "title": "Head of School",
-      "organization": "St. Margaret's Episcopal School",
-      "changes": {
-        "organization": {
-          "from": "Weber School",
-          "to": "St. Margaret's Episcopal School"
-        },
-        "location": {
-          "from": "GA – Atlanta",
-          "to": "CA – San Juan Capistrano"
-        }
-      }
-    },
-    {
-      "at": "2026-10-28T16:42:13.839968+00:00",
-      "type": "updated",
-      "job_id": "781dce5164d4ab71",
-      "source": "Carney Sandoe",
-      "title": "Head of School",
-      "organization": "The Wesley School",
-      "changes": {
-        "organization": {
-          "from": "Weber School",
-          "to": "The Wesley School"
-        },
-        "location": {
-          "from": "GA – Atlanta",
-          "to": "CA – North Hollywood"
-        }
-      }
-    },
-    {
-      "at": "2026-10-29T16:57:43.473304+00:00",
-      "type": "removed_false_positive",
-      "job_id": "62e62841416b764c",
-      "source": "Bridge Partners",
-      "title": "CEO and Executive Director",
-      "organization": "Functions",
-      "url": "https://bridgepartnersllc.com/function/ceo/"
-    },
-    {
-      "at": "2026-10-29T16:57:43.473304+00:00",
-      "type": "updated",
-      "job_id": "1c9c2526dd47f4f5",
-      "source": "BoardWalk Consulting",
-      "title": "Chief Executive Officer",
-      "organization": "Tahoe Community Foundation",
-      "changes": {
-        "posted_date": {
-          "from": "2026-10-14",
-          "to": "2026-10-15"
-        }
-      }
-    },
-    {
-      "at": "2026-10-29T16:57:43.473304+00:00",
-      "type": "updated",
-      "job_id": "4a559e8b34e0cffa",
-      "source": "BoardWalk Consulting",
-      "title": "President & CEO",
-      "organization": "One Hundred Miles",
-      "changes": {
-        "posted_date": {
-          "from": "2026-09-30",
-          "to": "2026-10-01"
-        }
-      }
-    },
-    {
-      "at": "2026-10-29T16:57:43.473304+00:00",
-      "type": "updated",
-      "job_id": "acf48ae0f359e233",
-      "source": "BoardWalk Consulting",
-      "title": "Executive Director",
-      "organization": "Florida Rights Restoration Coalition",
-      "changes": {
-        "posted_date": {
-          "from": "2026-08-29",
-          "to": "2026-08-30"
-        }
-      }
-    },
-    {
-      "at": "2026-10-29T16:57:43.473304+00:00",
-      "type": "updated",
-      "job_id": "b31f942adf5dca3b",
-      "source": "BoardWalk Consulting",
-      "title": "Executive Director",
-      "organization": "Gateway Early Childhood Alliance",
-      "changes": {
-        "posted_date": {
-          "from": "2026-08-29",
-          "to": "2026-08-30"
-        }
-      }
-    },
-    {
-      "at": "2026-10-29T16:57:43.473304+00:00",
-      "type": "updated",
-      "job_id": "e39688bc3548ed3e",
-      "source": "BoardWalk Consulting",
-      "title": "CEO",
-      "organization": "The Colorado Health Foundation",
-      "changes": {
-        "posted_date": {
-          "from": "2026-07-30",
-          "to": "2026-07-31"
-        }
-      }
-    },
-    {
-      "at": "2026-10-29T16:57:43.473304+00:00",
-      "type": "updated",
-      "job_id": "70879d341e410a6b",
-      "source": "BoardWalk Consulting",
-      "title": "Executive Director",
-      "organization": "Atlanta Ballet",
-      "changes": {
-        "posted_date": {
-          "from": "2026-05-01",
-          "to": "2026-05-02"
-        }
-      }
-    },
-    {
-      "at": "2026-10-29T16:57:43.473304+00:00",
-      "type": "reopened",
-      "job_id": "62e62841416b764c",
-      "source": "Bridge Partners",
-      "title": "CEO and Executive Director",
-      "organization": "Functions"
-    },
-    {
-      "at": "2026-10-29T16:57:43.473304+00:00",
-      "type": "updated",
-      "job_id": "62e62841416b764c",
-      "source": "Bridge Partners",
-      "title": "CEO and Executive Director",
-      "organization": "Functions",
-      "changes": {
-        "status": {
-          "from": "closed",
-          "to": "open"
-        }
-      }
-    },
     {
       "at": "2026-10-29T16:57:43.473304+00:00",
       "type": "updated",
@@ -8817,6 +7994,677 @@
     },
     {
       "at": "2026-11-08T16:42:50.400806+00:00",
+      "type": "updated",
+      "job_id": "781dce5164d4ab71",
+      "source": "Carney Sandoe",
+      "title": "Head of School",
+      "organization": "The Wesley School",
+      "changes": {
+        "organization": {
+          "from": "Weber School",
+          "to": "The Wesley School"
+        },
+        "location": {
+          "from": "GA – Atlanta",
+          "to": "CA – North Hollywood"
+        }
+      }
+    },
+    {
+      "at": "2026-11-09T20:49:18.142896+00:00",
+      "type": "removed_false_positive",
+      "job_id": "d096dd70724b642b",
+      "source": "FaithSearch Partners",
+      "title": "Executive Director",
+      "organization": "California Senior Living Ministry",
+      "url": "https://faithsearchpartners.com/news/california-senior-living-ministry-seeks-executive-director/"
+    },
+    {
+      "at": "2026-11-09T20:49:18.142896+00:00",
+      "type": "removed_false_positive",
+      "job_id": "960b70cdf38a6974",
+      "source": "FaithSearch Partners",
+      "title": "President",
+      "organization": "Organization confidential",
+      "url": "https://faithsearchpartners.com/news/faithsearch-launches-president-search-for-university-of-toccoa-falls/"
+    },
+    {
+      "at": "2026-11-09T20:49:18.142896+00:00",
+      "type": "removed_false_positive",
+      "job_id": "62e62841416b764c",
+      "source": "Bridge Partners",
+      "title": "CEO and Executive Director",
+      "organization": "Functions",
+      "url": "https://bridgepartnersllc.com/function/ceo/"
+    },
+    {
+      "at": "2026-11-09T20:49:18.142896+00:00",
+      "type": "updated",
+      "job_id": "1c9c2526dd47f4f5",
+      "source": "BoardWalk Consulting",
+      "title": "Chief Executive Officer",
+      "organization": "Tahoe Community Foundation",
+      "changes": {
+        "posted_date": {
+          "from": "2026-10-11",
+          "to": "2026-10-12"
+        }
+      }
+    },
+    {
+      "at": "2026-11-09T20:49:18.142896+00:00",
+      "type": "updated",
+      "job_id": "4a559e8b34e0cffa",
+      "source": "BoardWalk Consulting",
+      "title": "President & CEO",
+      "organization": "One Hundred Miles",
+      "changes": {
+        "posted_date": {
+          "from": "2026-10-09",
+          "to": "2026-10-10"
+        }
+      }
+    },
+    {
+      "at": "2026-11-09T20:49:18.142896+00:00",
+      "type": "updated",
+      "job_id": "acf48ae0f359e233",
+      "source": "BoardWalk Consulting",
+      "title": "Executive Director",
+      "organization": "Florida Rights Restoration Coalition",
+      "changes": {
+        "posted_date": {
+          "from": "2026-09-09",
+          "to": "2026-09-10"
+        }
+      }
+    },
+    {
+      "at": "2026-11-09T20:49:18.142896+00:00",
+      "type": "updated",
+      "job_id": "b31f942adf5dca3b",
+      "source": "BoardWalk Consulting",
+      "title": "Executive Director",
+      "organization": "Gateway Early Childhood Alliance",
+      "changes": {
+        "posted_date": {
+          "from": "2026-09-09",
+          "to": "2026-09-10"
+        }
+      }
+    },
+    {
+      "at": "2026-11-09T20:49:18.142896+00:00",
+      "type": "updated",
+      "job_id": "e39688bc3548ed3e",
+      "source": "BoardWalk Consulting",
+      "title": "CEO",
+      "organization": "The Colorado Health Foundation",
+      "changes": {
+        "posted_date": {
+          "from": "2026-08-10",
+          "to": "2026-08-11"
+        }
+      }
+    },
+    {
+      "at": "2026-11-09T20:49:18.142896+00:00",
+      "type": "updated",
+      "job_id": "70879d341e410a6b",
+      "source": "BoardWalk Consulting",
+      "title": "Executive Director",
+      "organization": "Atlanta Ballet",
+      "changes": {
+        "posted_date": {
+          "from": "2026-05-12",
+          "to": "2026-05-13"
+        }
+      }
+    },
+    {
+      "at": "2026-11-09T20:49:18.142896+00:00",
+      "type": "reopened",
+      "job_id": "62e62841416b764c",
+      "source": "Bridge Partners",
+      "title": "CEO and Executive Director",
+      "organization": "Functions"
+    },
+    {
+      "at": "2026-11-09T20:49:18.142896+00:00",
+      "type": "updated",
+      "job_id": "62e62841416b764c",
+      "source": "Bridge Partners",
+      "title": "CEO and Executive Director",
+      "organization": "Functions",
+      "changes": {
+        "status": {
+          "from": "closed",
+          "to": "open"
+        }
+      }
+    },
+    {
+      "at": "2026-11-09T20:49:18.142896+00:00",
+      "type": "updated",
+      "job_id": "c726c18c21f167f5",
+      "source": "Scion Executive Search",
+      "title": "Executive Director",
+      "organization": "Organization confidential",
+      "changes": {
+        "location": {
+          "from": "Concord, NH 3301",
+          "to": "Albuquerque, NM 87108"
+        },
+        "url": {
+          "from": "https://scionexecutivesearch.com/job/15556/?jobTitle=executive-director-concord-nh",
+          "to": "https://scionexecutivesearch.com/job/15384/?jobTitle=executive-director-albuquerque-nm"
+        },
+        "posted_date": {
+          "from": "2026-10-26",
+          "to": "2026-10-27"
+        },
+        "compensation_text": {
+          "from": "COMPENSATION AND BENEFITS: This full-time, on-site executive role offers an exceptional opportunity to lead a highly respected, mission-driven animal welfare organization into its next chapter of impact. The position provides a competitive salary range of $90,000 to $115,000 (DOE), along with relocation support for the right candidate. PMSPCA offers a comprehensive benefits package that includes medical coverage",
+          "to": "COMPENSATION AND BENEFITS: This full-time, on-site executive role offers an extraordinary opportunity to lead one of New Mexico's most respected and mission-driven animal welfare organizations into its next chapter of impact. The position offers a competitive salary range of $150,000 to $170,000 (DOE), along with relocation assistance, a comprehensive benefits package that includes medical, dental, and vision coverage, with the orga"
+        },
+        "compensation_min": {
+          "from": 90000,
+          "to": 150000
+        },
+        "compensation_max": {
+          "from": 115000,
+          "to": 170000
+        }
+      }
+    },
+    {
+      "at": "2026-11-09T20:49:18.142896+00:00",
+      "type": "updated",
+      "job_id": "64ee69a30199e1a8",
+      "source": "DSG Global",
+      "title": "CEO",
+      "organization": "Aspiranet",
+      "changes": {
+        "organization": {
+          "from": "Fort Worth Report",
+          "to": "Aspiranet"
+        },
+        "location": {
+          "from": "Fort Worth, TX",
+          "to": "South San Francisco, CA"
+        },
+        "url": {
+          "from": "https://www.dsgco.com/search/23370-fort-worth-report-ceo/",
+          "to": "https://www.dsgco.com/search/23462-aspiranet-ceo/"
+        },
+        "posted_date": {
+          "from": "2026-08-10",
+          "to": "2026-09-15"
+        },
+        "compensation_text": {
+          "from": "Compensation and Benefits Salary and bonus subject to qualifications and experience. Benefits include PTO, paid holidays, insurance benefits including medical, dental, vision, life insurance plans and 401k plan. This is a full time role based in Fort Worth, Texas. The Fort Worth Report is an equal opportunity employer. We a",
+          "to": "Compensation and Benefits The salary range for this position is $400,000 – $475,000 commensurate with experience. Aspiranet values its employees and offers a comprehensive benefits package. Contact DSG | Koya has been exclu"
+        },
+        "compensation_min": {
+          "from": 401000,
+          "to": 400000
+        },
+        "compensation_max": {
+          "from": 401000,
+          "to": 475000
+        }
+      }
+    },
+    {
+      "at": "2026-11-09T20:49:18.142896+00:00",
+      "type": "updated",
+      "job_id": "8cbe95a1133c0bc5",
+      "source": "DSG Global",
+      "title": "President and CEO",
+      "organization": "Confidential Search",
+      "changes": {
+        "organization": {
+          "from": "American Board of Surgery (ABS)",
+          "to": "Confidential Search"
+        },
+        "location": {
+          "from": "Remote or Philadelphia, PA",
+          "to": "New York City, NY"
+        },
+        "url": {
+          "from": "https://www.dsgco.com/search/23269-american-board-of-surgery-abs-president-and-ceo/",
+          "to": "https://www.dsgco.com/search/23577-confidential-search-president-and-ceo/"
+        },
+        "posted_date": {
+          "from": "2026-09-15",
+          "to": "2026-11-03"
+        }
+      }
+    },
+    {
+      "at": "2026-11-09T20:49:18.142896+00:00",
+      "type": "updated",
+      "job_id": "9d9450d05842e801",
+      "source": "DSG Global",
+      "title": "Executive Director",
+      "organization": "Documented",
+      "changes": {
+        "organization": {
+          "from": "Newtrax",
+          "to": "Documented"
+        },
+        "location": {
+          "from": "White Bear Lake, MN",
+          "to": "New York, NY"
+        },
+        "url": {
+          "from": "https://www.dsgco.com/search/23458-newtrax-executive-director/",
+          "to": "https://www.dsgco.com/search/23564-documented-executive-director/"
+        },
+        "posted_date": {
+          "from": "2026-09-09",
+          "to": "2026-10-28"
+        },
+        "compensation_text": {
+          "from": "Compensation and Benefits The salary range for this position is $140,000 to $160,000. Contact DSG | Koya has been exclusively retained for this engagement, which is being led by Alicia Salerno. Submit a compelling cover lett",
+          "to": "Compensation and Benefits Salary is competitive and commensurate with experience. The salary range for this role is $225-250,000 with a generous benefits package. Contact DSG | Koya has been exclusively retained for this engagement, which is being"
+        },
+        "compensation_min": {
+          "from": 140000,
+          "to": 250000
+        },
+        "compensation_max": {
+          "from": 160000,
+          "to": 250000
+        }
+      }
+    },
+    {
+      "at": "2026-11-09T20:49:18.142896+00:00",
+      "type": "closed",
+      "job_id": "d4292837ee938bae",
+      "source": "DSG Global",
+      "title": "President",
+      "organization": "Endowment for Health"
+    },
+    {
+      "at": "2026-11-09T20:49:18.142896+00:00",
+      "type": "closed",
+      "job_id": "b8e982953accafdb",
+      "source": "DSG Global",
+      "title": "Chief Executive Officer",
+      "organization": "Aeris Insight"
+    },
+    {
+      "at": "2026-11-09T20:49:18.142896+00:00",
+      "type": "updated",
+      "job_id": "bdb4fab450cecd43",
+      "source": "Kittleman Associates",
+      "title": "President and CEO",
+      "organization": "Gettysburg Foundation",
+      "changes": {
+        "organization": {
+          "from": "Mid-Ohio Food Collective",
+          "to": "Gettysburg Foundation"
+        },
+        "location": {
+          "from": "Grove City, OH, United States",
+          "to": "Gettysburg, PA, United States"
+        },
+        "url": {
+          "from": "https://www.kittlemansearch.com/opportunities/president-ceo-mid-ohio-food-collective",
+          "to": "https://www.kittlemansearch.com/opportunities/president-chief-executive-officer-gettysburg-foundation"
+        },
+        "posted_date": {
+          "from": "2026-09-10",
+          "to": "2026-10-01"
+        }
+      }
+    },
+    {
+      "at": "2026-11-09T20:49:18.142896+00:00",
+      "type": "updated",
+      "job_id": "bdb4fab450cecd43",
+      "source": "Kittleman Associates",
+      "title": "President and CEO",
+      "organization": "Viability, Inc.",
+      "changes": {
+        "organization": {
+          "from": "Mid-Ohio Food Collective",
+          "to": "Viability, Inc."
+        },
+        "location": {
+          "from": "Grove City, OH, United States",
+          "to": "Springfield, MA, United States"
+        },
+        "url": {
+          "from": "https://www.kittlemansearch.com/opportunities/president-ceo-mid-ohio-food-collective",
+          "to": "https://www.kittlemansearch.com/opportunities/president-ceo-viability"
+        },
+        "posted_date": {
+          "from": "2026-09-10",
+          "to": "2026-09-16"
+        }
+      }
+    },
+    {
+      "at": "2026-11-09T20:49:18.142896+00:00",
+      "type": "updated",
+      "job_id": "bdb4fab450cecd43",
+      "source": "Kittleman Associates",
+      "title": "President and CEO",
+      "organization": "Schoodic Institute at Acadia National Park",
+      "changes": {
+        "organization": {
+          "from": "Mid-Ohio Food Collective",
+          "to": "Schoodic Institute at Acadia National Park"
+        },
+        "location": {
+          "from": "Grove City, OH, United States",
+          "to": "Winter Harbor, ME, United States"
+        },
+        "url": {
+          "from": "https://www.kittlemansearch.com/opportunities/president-ceo-mid-ohio-food-collective",
+          "to": "https://www.kittlemansearch.com/opportunities/president-ceo-schoodic-institute"
+        },
+        "posted_date": {
+          "from": "2026-09-10",
+          "to": "2026-09-14"
+        }
+      }
+    },
+    {
+      "at": "2026-11-09T20:49:18.142896+00:00",
+      "type": "new",
+      "job_id": "7ae2f65aedc6bb72",
+      "source": "WittKieffer",
+      "title": "President",
+      "organization": "Phoebe Putney Health System, Inc."
+    },
+    {
+      "at": "2026-11-09T20:49:18.142896+00:00",
+      "type": "new",
+      "job_id": "2716f69c60d3db5d",
+      "source": "WittKieffer",
+      "title": "President St. Thomas University Miami Gardens, Florida",
+      "organization": "United States St. Thomas University (STU) seeks its next President at a significant moment in the institution’s history. The University enters this presidential transition following a period of substantial institutional growth. Enrollment has increased significantly over the past several years, accompanied by the expansion of academic offerings, investments in facilities and student life, growth in athletics, and […] More Info"
+    },
+    {
+      "at": "2026-11-09T20:49:18.142896+00:00",
+      "type": "reopened",
+      "job_id": "d920be166ac50d4f",
+      "source": "WittKieffer",
+      "title": "President",
+      "organization": "St. Thomas University"
+    },
+    {
+      "at": "2026-11-09T20:49:18.142896+00:00",
+      "type": "updated",
+      "job_id": "d920be166ac50d4f",
+      "source": "WittKieffer",
+      "title": "President",
+      "organization": "St. Thomas University",
+      "changes": {
+        "organization": {
+          "from": "Colorado State University Global",
+          "to": "St. Thomas University"
+        },
+        "status": {
+          "from": "closed",
+          "to": "open"
+        }
+      }
+    },
+    {
+      "at": "2026-11-09T20:49:18.142896+00:00",
+      "type": "updated",
+      "job_id": "dc33d30ecc1362e5",
+      "source": "NPAG",
+      "title": "Executive Director",
+      "organization": "Climate Resilience Funder Collaborative",
+      "changes": {
+        "organization": {
+          "from": "Sobrato Early Academic Language (SEAL)",
+          "to": "Climate Resilience Funder Collaborative"
+        },
+        "location": {
+          "from": "Remote (within U.S., California preferred)",
+          "to": "Remote"
+        },
+        "url": {
+          "from": "https://www.npag.com/seal-ed",
+          "to": "https://www.npag.com/crfc-ed"
+        }
+      }
+    },
+    {
+      "at": "2026-11-09T20:49:18.142896+00:00",
+      "type": "updated",
+      "job_id": "dc33d30ecc1362e5",
+      "source": "NPAG",
+      "title": "Executive Director",
+      "organization": "HealthQ",
+      "changes": {
+        "organization": {
+          "from": "Sobrato Early Academic Language (SEAL)",
+          "to": "HealthQ"
+        },
+        "location": {
+          "from": "Remote (within U.S., California preferred)",
+          "to": "Location not listed"
+        },
+        "url": {
+          "from": "https://www.npag.com/seal-ed",
+          "to": "https://www.npag.com/hq-ed"
+        }
+      }
+    },
+    {
+      "at": "2026-11-09T20:49:18.142896+00:00",
+      "type": "updated",
+      "job_id": "f9f133cf2577cc30",
+      "source": "Spano Pratt",
+      "title": "Chief Executive Officer – Profile",
+      "organization": "Rock River",
+      "changes": {
+        "organization": {
+          "from": "Emergency Nurses Association",
+          "to": "Rock River"
+        },
+        "url": {
+          "from": "https://spanopratt.com/wp-content/uploads/2026/05/ENA-CEO-Job-Profile-Final.pdf",
+          "to": "https://spanopratt.com/wp-content/uploads/2026/10/Rock-River-Community-Clinic-Job-Profile-CEO.pdf"
+        }
+      }
+    },
+    {
+      "at": "2026-11-09T20:49:18.142896+00:00",
+      "type": "updated",
+      "job_id": "ad852aae8f10f876",
+      "source": "McCormack + Kristel",
+      "title": "Chief Executive Officer",
+      "organization": "Aids Foundation Chicago President And Ceo",
+      "changes": {
+        "organization": {
+          "from": "Independent Film And Television Alliance President And Ceo",
+          "to": "Aids Foundation Chicago President And Ceo"
+        },
+        "url": {
+          "from": "https://www.mccormackkristel.com/current-searches/independent-film-and-television-alliance-president-and-ceo",
+          "to": "https://www.mccormackkristel.com/current-searches/aids-foundation-chicago-president-and-ceo"
+        }
+      }
+    },
+    {
+      "at": "2026-11-09T20:49:18.142896+00:00",
+      "type": "updated",
+      "job_id": "ad852aae8f10f876",
+      "source": "McCormack + Kristel",
+      "title": "Chief Executive Officer",
+      "organization": "Resource Center Ceo",
+      "changes": {
+        "organization": {
+          "from": "Independent Film And Television Alliance President And Ceo",
+          "to": "Resource Center Ceo"
+        },
+        "url": {
+          "from": "https://www.mccormackkristel.com/current-searches/independent-film-and-television-alliance-president-and-ceo",
+          "to": "https://www.mccormackkristel.com/current-searches/resource-center-ceo"
+        }
+      }
+    },
+    {
+      "at": "2026-11-09T20:49:18.142896+00:00",
+      "type": "new",
+      "job_id": "4453eccfdc3fa3a3",
+      "source": "FaithSearch Partners",
+      "title": "CEO",
+      "organization": "Hope Rises International"
+    },
+    {
+      "at": "2026-11-09T20:49:18.142896+00:00",
+      "type": "reopened",
+      "job_id": "d096dd70724b642b",
+      "source": "FaithSearch Partners",
+      "title": "Executive Director",
+      "organization": "California Senior Living Ministry"
+    },
+    {
+      "at": "2026-11-09T20:49:18.142896+00:00",
+      "type": "updated",
+      "job_id": "d096dd70724b642b",
+      "source": "FaithSearch Partners",
+      "title": "Executive Director",
+      "organization": "California Senior Living Ministry",
+      "changes": {
+        "status": {
+          "from": "closed",
+          "to": "open"
+        }
+      }
+    },
+    {
+      "at": "2026-11-09T20:49:18.142896+00:00",
+      "type": "reopened",
+      "job_id": "960b70cdf38a6974",
+      "source": "FaithSearch Partners",
+      "title": "President",
+      "organization": "Organization confidential"
+    },
+    {
+      "at": "2026-11-09T20:49:18.142896+00:00",
+      "type": "updated",
+      "job_id": "960b70cdf38a6974",
+      "source": "FaithSearch Partners",
+      "title": "President",
+      "organization": "Organization confidential",
+      "changes": {
+        "status": {
+          "from": "closed",
+          "to": "open"
+        }
+      }
+    },
+    {
+      "at": "2026-11-09T20:49:18.142896+00:00",
+      "type": "updated",
+      "job_id": "d8fd633139f36e90",
+      "source": "AGB Search",
+      "title": "President",
+      "organization": "Keene State College",
+      "changes": {
+        "organization": {
+          "from": "Arkansas Colleges of Health Education",
+          "to": "Keene State College"
+        },
+        "location": {
+          "from": "Arkansas",
+          "to": "New Hampshire"
+        },
+        "url": {
+          "from": "https://www.agbsearch.com/searches/president-arkansas-colleges-of-health-education",
+          "to": "https://www.agbsearch.com/searches/president-keene-state-college"
+        }
+      }
+    },
+    {
+      "at": "2026-11-09T20:49:18.142896+00:00",
+      "type": "updated",
+      "job_id": "d8fd633139f36e90",
+      "source": "AGB Search",
+      "title": "President",
+      "organization": "De Anza College",
+      "changes": {
+        "organization": {
+          "from": "Arkansas Colleges of Health Education",
+          "to": "De Anza College"
+        },
+        "location": {
+          "from": "Arkansas",
+          "to": "California"
+        },
+        "url": {
+          "from": "https://www.agbsearch.com/searches/president-arkansas-colleges-of-health-education",
+          "to": "https://www.agbsearch.com/searches/president-de-anza-college"
+        }
+      }
+    },
+    {
+      "at": "2026-11-09T20:49:18.142896+00:00",
+      "type": "updated",
+      "job_id": "781dce5164d4ab71",
+      "source": "Carney Sandoe",
+      "title": "Head of School",
+      "organization": "Learning Prep School",
+      "changes": {
+        "organization": {
+          "from": "Weber School",
+          "to": "Learning Prep School"
+        },
+        "location": {
+          "from": "GA – Atlanta",
+          "to": "MA – West Newton"
+        }
+      }
+    },
+    {
+      "at": "2026-11-09T20:49:18.142896+00:00",
+      "type": "updated",
+      "job_id": "781dce5164d4ab71",
+      "source": "Carney Sandoe",
+      "title": "Head of School",
+      "organization": "Polytechnic School",
+      "changes": {
+        "organization": {
+          "from": "Weber School",
+          "to": "Polytechnic School"
+        },
+        "location": {
+          "from": "GA – Atlanta",
+          "to": "CA – Pasadena"
+        }
+      }
+    },
+    {
+      "at": "2026-11-09T20:49:18.142896+00:00",
+      "type": "updated",
+      "job_id": "781dce5164d4ab71",
+      "source": "Carney Sandoe",
+      "title": "Head of School",
+      "organization": "St. Margaret's Episcopal School",
+      "changes": {
+        "organization": {
+          "from": "Weber School",
+          "to": "St. Margaret's Episcopal School"
+        },
+        "location": {
+          "from": "GA – Atlanta",
+          "to": "CA – San Juan Capistrano"
+        }
+      }
+    },
+    {
+      "at": "2026-11-09T20:49:18.142896+00:00",
       "type": "updated",
       "job_id": "781dce5164d4ab71",
       "source": "Carney Sandoe",
