@@ -293,7 +293,11 @@ h1,h2,h3{font-family:var(--display)}
 @media(min-width:769px){.control-card .desktop-extra{display:block}}
 @media(min-width:769px) and (max-width:1100px){.control-card{grid-template-columns:repeat(4,minmax(0,1fr))}}
 /* role cards */
-#jobs .feed,#savedJobs .feed{grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:12px}
+#jobs,#savedJobs{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:12px;align-items:stretch}
+#jobs .date-group,#jobs .feed,#savedJobs .date-group,#savedJobs .feed{display:contents}
+#jobs>:not(.date-group),#savedJobs>:not(.date-group),#jobs .date-head,#savedJobs .date-head,#jobs .empty,#savedJobs .empty{grid-column:1/-1;margin:10px 0 0}
+#jobs .date-group:first-child .date-head,#savedJobs .date-group:first-child .date-head{margin-top:0}
+.op-org{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .date-head{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700}
 .op-card{display:flex;flex-direction:column;padding:18px 18px 14px;border-color:var(--line);box-shadow:0 1px 0 rgba(11,16,19,.03)}
 .op-card:hover,.op-card:focus-visible{border-color:var(--teal);box-shadow:0 14px 34px rgba(11,16,19,.09)}
@@ -316,7 +320,7 @@ h1,h2,h3{font-family:var(--display)}
 .save{top:13px;right:12px;color:#a5afab}
 .save.on{color:var(--gold)}
 .tag.new{background:var(--signal);border-color:var(--signal);color:#05301f}
-@media(max-width:768px){.mast{padding-top:30px}.radar{width:340px;height:340px;top:-120px;right:-140px}.mast-stats{gap:10px 22px}.mast-stats b{font-size:26px}.nav{margin-top:22px}.nav button{padding:13px 11px 12px;font-size:13.5px}#jobs .feed,#savedJobs .feed{grid-template-columns:1fr}.mast-row{flex-direction:column;gap:16px}.mast .update{align-self:flex-start;text-align:left}}
+@media(max-width:768px){#jobs,#savedJobs{grid-template-columns:1fr}.mast{padding-top:30px}.radar{width:340px;height:340px;top:-120px;right:-140px}.mast-stats{gap:10px 22px}.mast-stats b{font-size:26px}.nav{margin-top:22px}.nav button{padding:13px 11px 12px;font-size:13.5px}#jobs .feed,#savedJobs .feed{grid-template-columns:1fr}.mast-row{flex-direction:column;gap:16px}.mast .update{align-self:flex-start;text-align:left}}
 @media(max-width:420px){.op-facts{grid-template-columns:1fr 1fr;gap:9px 12px}.op-title{font-size:18px}}
 
 </style>
