@@ -581,7 +581,7 @@ function jobCard(j,compact=false){const fav=saved();const direct=j.link_quality=
   <h3 class="op-title">${esc(j.title)}</h3>
   <div class="op-org">${esc(j.organization||'Organization confidential')}${j.parent_organization?` <span class="op-parent">· part of ${esc(j.parent_organization)}</span>`:''}</div>
   <dl class="op-facts">
-    <div><dt>Location</dt><dd>${j.location?esc(j.location):miss('Not posted')}</dd></div>
+    <div><dt>Location</dt><dd>${j.location&&!/not (listed|posted|specified)|unavailable|^tbd$|^n\/a$|^unknown$/i.test(j.location.trim())?esc(j.location):miss('Not posted')}</dd></div>
     <div><dt>Posted pay</dt><dd class="${compensation(j)?'pay':''}">${compensation(j)?esc(compensation(j)):miss('Not posted')}</dd></div>
     <div><dt>Last CEO pay (990)</dt><dd>${ceo}</dd></div>
     <div><dt>Org revenue</dt><dd>${rev}</dd></div>
