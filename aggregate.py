@@ -264,6 +264,15 @@ def infer_organization(role: str, lines: list[str]) -> str:
     return "Organization not parsed"
 
 
+# Full state or province names ("Newton, Massachusetts", "Ithaca, New York").
+# The city is limited to one or two capitalized words so a sentence before it
+# is not swallowed into the location.
+_FULL_STATE_NAMES = ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota', 'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming', 'District of Columbia', 'D\\.C\\.', 'DC', 'Puerto Rico', 'Ontario', 'Quebec', 'British Columbia', 'Alberta']
+_FULL_STATE_RE = re.compile(
+    r"\b(?:Salt Lake City|(?:[A-Z][a-z.'-]+ )?[A-Z][a-z.'-]+),\s*(?:" + "|".join(sorted(_FULL_STATE_NAMES, key=len, reverse=True)) + r")\b"
+)
+
+
 def infer_location(lines: list[str]) -> str:
     for line in lines:
         s = clean(line)
@@ -272,8 +281,36 @@ def infer_location(lines: list[str]) -> str:
         m = re.search(r"\b([A-Z][A-Za-z .'-]+),\s*([A-Z]{2})\b", s)
         if m:
             return clean(m.group(0))
+        m = _FULL_STATE_RE.search(s)
+        if m:
+            return clean(m.group(0))
         if re.search(r"\b(hybrid|onsite|on-site)\b", s, re.I) and len(s) <= 110:
             return s
+    return ""
+
+
+def jsonld_location(dsoup) -> str:
+    """Location from a page's schema.org JobPosting data, when the page has it."""
+    for tag in dsoup.find_all("script", type="application/ld+json"):
+        try:
+            data=json.loads(tag.string or tag.get_text() or "")
+        except Exception:
+            continue
+        items=data if isinstance(data,list) else (data.get("@graph") if isinstance(data,dict) and isinstance(data.get("@graph"),list) else [data])
+        for item in items:
+            if not isinstance(item,dict) or "JobPosting" not in str(item.get("@type","")):
+                continue
+            places=item.get("jobLocation")
+            for place in (places if isinstance(places,list) else [places]):
+                addr=place.get("address") if isinstance(place,dict) else None
+                if not isinstance(addr,dict):
+                    continue
+                parts=[clean(str(addr.get(k) or "")) for k in ("addressLocality","addressRegion")]
+                parts=[x for x in parts if x]
+                if parts:
+                    return ", ".join(parts)
+            if str(item.get("jobLocationType","")).upper()=="TELECOMMUTE":
+                return "Remote"
     return ""
 
 
@@ -1350,15 +1387,19 @@ def parse_isaacson(html: str, source: dict, today: date) -> list[Job]:
         if has_closed_signal(plain): continue
         h1=dsoup.find("h1"); title=clean(h1.get_text(" ",strip=True)) if h1 else clean(a.get_text(" ",strip=True))
         if not is_target_role(title): continue
-        org=""
+        org=""; loc=""
         # Isaacson detail convention: h1 role, first h2 client organization | location.
         for h2 in dsoup.find_all("h2"):
             txt=clean(h2.get_text(" ",strip=True))
             if not txt or is_target_role(txt): continue
-            left=clean(txt.split("|",1)[0])
-            if likely_org(left,title): org=left; break
+            left,_,right=(clean(x) for x in txt.partition("|"))
+            if likely_org(left,title):
+                org=left
+                # The right side of the pipe is the role's location ("Newton, Massachusetts").
+                if right and len(right)<=80 and "," in right: loc=right
+                break
         if not org: org=infer_organization(title,[clean(x) for x in dsoup.stripped_strings])
-        loc=infer_location([pipe])
+        if not loc: loc=infer_location([pipe])
         # IM dates are known to be unreliable/missing; first seen is the honest fallback.
         out.append(build_job(source=source,title=title,organization=org,location=loc,url=url,today=today,context=plain,posted=None,posted_status="unavailable"))
     return dedupe(out)
@@ -1453,7 +1494,10 @@ def candidate_from_node(node, source: dict, today: date, detail_budget: list[int
                 # Detail pages may contain many unrelated dates. Trust only a labeled posting date.
                 posted, posted_status=extract_labeled_posted_date(detail_text,today)
             if not location:
-                location=infer_location([detail_text])
+                location=jsonld_location(dsoup) or infer_location([detail_text])
+                # Some pages run the organization name straight into the city.
+                if organization and location.startswith(organization+" "):
+                    location=location[len(organization)+1:]
             if organization=="Organization not parsed":
                 for pattern in (
                     r"on behalf of (?:our client,?\s+)?([A-Z][^.;]{2,110})",
@@ -2113,6 +2157,8 @@ def changed_fields(prior: dict, current: Job) -> dict:
     changes={}
     for fieldname in MATERIAL_CHANGE_FIELDS:
         before=prior.get(fieldname); after=getattr(current,fieldname)
+        # Filling in a location that was a placeholder is not a material change.
+        if fieldname=="location" and before=="Location not listed": continue
         if before not in (None,"") and after not in (None,"") and before!=after:
             changes[fieldname]={"from":before,"to":after}
     return changes

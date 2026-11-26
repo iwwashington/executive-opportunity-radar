@@ -113,5 +113,14 @@ print("== Fix 8: baseline marker ==")
 src = Path(__file__).parent.joinpath("aggregate.py").read_text()
 check("baseline_week in meta writer", '"baseline_week"' in src)
 
+print("== Fix 9: locations written out in full ==")
+from bs4 import BeautifulSoup
+check("full state name read", agg.infer_location(["William James College | Newton, Massachusetts"])=="Newton, Massachusetts")
+check("sentence not swallowed", agg.infer_location(["The museum is located in Richmond, Virginia"])=="Richmond, Virginia")
+check("two-letter state still first", agg.infer_location(["based in Boston, MA"])=="Boston, MA")
+_ld='<script type="application/ld+json">{"@type":"JobPosting","jobLocation":{"@type":"Place","address":{"addressLocality":"Ithaca","addressRegion":"New York"}}}</script>'
+check("JobPosting location read", agg.jsonld_location(BeautifulSoup(_ld,"lxml"))=="Ithaca, New York")
+check("no JobPosting, no location", agg.jsonld_location(BeautifulSoup("<p>hi</p>","lxml"))=="")
+
 print(f"\n{PASS} passed, {FAIL} failed")
 sys.exit(1 if FAIL else 0)
