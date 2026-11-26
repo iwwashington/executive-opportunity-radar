@@ -56,7 +56,7 @@ def run_browser_test():
                     "() => document.querySelectorAll('#firmList .source-card').length > 0",
                     timeout=20000,
                 )
-                expected_nav = ["market", "digest", "opportunities", "checkyourself", "saved", "firms", "placements", "sources"]
+                expected_nav = ["opportunities", "saved", "market", "digest", "firms", "placements", "checkyourself", "sources"]
                 actual_nav = desktop.locator(".nav button[data-view]").evaluate_all(
                     "(buttons) => buttons.map(button => button.dataset.view)"
                 )
