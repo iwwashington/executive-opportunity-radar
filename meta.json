@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T19:41:10.262022+00:00",
+  "generated_at": "2026-11-27T19:30:24.593483+00:00",
   "baseline_initialized_at": "2026-09-19T05:58:00+00:00",
   "baseline_week": "2026-09-19",
   "source_count": 61,
@@ -15,7 +15,7 @@
       "count": 0,
       "prior_count": 0,
       "error": "",
-      "checked_at": "2026-11-26T19:41:10.283782+00:00",
+      "checked_at": "2026-11-27T19:30:24.609712+00:00",
       "fetch_mode": "",
       "preserved": false
     },
@@ -30,7 +30,7 @@
       "count": 1,
       "prior_count": 1,
       "error": "",
-      "checked_at": "2026-11-26T19:41:10.283807+00:00",
+      "checked_at": "2026-11-27T19:30:24.609728+00:00",
       "fetch_mode": "static",
       "preserved": false
     },
@@ -45,7 +45,7 @@
       "count": 0,
       "prior_count": 0,
       "error": "",
-      "checked_at": "2026-11-26T19:41:11.025623+00:00",
+      "checked_at": "2026-11-27T19:30:25.655582+00:00",
       "fetch_mode": "",
       "preserved": false
     },
@@ -60,7 +60,7 @@
       "count": 7,
       "prior_count": 7,
       "error": "",
-      "checked_at": "2026-11-26T19:41:11.025636+00:00",
+      "checked_at": "2026-11-27T19:30:25.655594+00:00",
       "fetch_mode": "static",
       "preserved": false
     },
@@ -75,7 +75,7 @@
       "count": 3,
       "prior_count": 3,
       "error": "",
-      "checked_at": "2026-11-26T19:41:12.912310+00:00",
+      "checked_at": "2026-11-27T19:30:30.404691+00:00",
       "fetch_mode": "static",
       "preserved": false
     },
@@ -90,7 +90,7 @@
       "count": 6,
       "prior_count": 6,
       "error": "",
-      "checked_at": "2026-11-26T19:41:13.523967+00:00",
+      "checked_at": "2026-11-27T19:30:31.425368+00:00",
       "fetch_mode": "static",
       "preserved": false
     },
@@ -105,7 +105,7 @@
       "count": 1,
       "prior_count": 1,
       "error": "",
-      "checked_at": "2026-11-26T19:41:28.356654+00:00",
+      "checked_at": "2026-11-27T19:30:50.467171+00:00",
       "fetch_mode": "static",
       "preserved": false
     },
@@ -120,7 +120,7 @@
       "count": 0,
       "prior_count": 0,
       "error": "",
-      "checked_at": "2026-11-26T19:41:29.520292+00:00",
+      "checked_at": "2026-11-27T19:30:51.970965+00:00",
       "fetch_mode": "static+browser",
       "preserved": false
     },
@@ -135,7 +135,7 @@
       "count": 0,
       "prior_count": 41,
       "error": "No source page parsed successfully. static: page content indicates blocking (403/captcha/Cloudflare) | static: page content indicates blocking (403/captcha/Cloudflare) | static: page content indicates blocking (403/captcha/Cloudflare) | static: page content indicates blocking (403/captcha/Cloudflare) | static: page content indicates blocking (403/captcha/Cloudflare) | static: page content indicates blocking (403/captcha/Cloudflare) | static: page content indicates blocking (403/captcha/Cloudflar",
-      "checked_at": "2026-11-26T19:41:50.880717+00:00",
+      "checked_at": "2026-11-27T19:31:36.770543+00:00",
       "fetch_mode": "static",
       "preserved": true
     },
@@ -150,7 +150,7 @@
       "count": 4,
       "prior_count": 4,
       "error": "",
-      "checked_at": "2026-11-26T19:41:52.687214+00:00",
+      "checked_at": "2026-11-27T19:31:46.140945+00:00",
       "fetch_mode": "static",
       "preserved": false
     },
@@ -164,9 +164,9 @@
       "ok": false,
       "count": 0,
       "prior_count": 2,
-      "error": "Found only 0 matching roles; this source is expected to expose at least 6. Preserving prior roles and flagging coverage for review. static ValueError: Korn Ferry rendered board exposed no client job detail links",
-      "checked_at": "2026-11-26T19:41:54.918234+00:00",
-      "fetch_mode": "browser+static",
+      "error": "Found only 0 matching roles; this source is expected to expose at least 6. Preserving prior roles and flagging coverage for review. static HTTPError: 403 Client Error: Forbidden for url: https://jobs.candidate.kornferry.com/jobs/",
+      "checked_at": "2026-11-27T19:31:47.998180+00:00",
+      "fetch_mode": "browser",
       "preserved": true
     },
     {
@@ -177,10 +177,10 @@
       "notes": "Active Searches. Only numbered /search/ assignment pages are eligible; detail pages are checked for closure and labeled Date Posted.",
       "status": "ok",
       "ok": true,
-      "count": 3,
+      "count": 8,
       "prior_count": 3,
       "error": "",
-      "checked_at": "2026-11-26T19:42:40.912836+00:00",
+      "checked_at": "2026-11-27T19:32:52.597124+00:00",
       "fetch_mode": "static",
       "preserved": false
     },
@@ -195,7 +195,7 @@
       "count": 28,
       "prior_count": 25,
       "error": "",
-      "checked_at": "2026-11-26T19:42:49.830383+00:00",
+      "checked_at": "2026-11-27T19:33:12.808790+00:00",
       "fetch_mode": "static",
       "preserved": false
     },
@@ -210,7 +210,7 @@
       "count": 3,
       "prior_count": 2,
       "error": "",
-      "checked_at": "2026-11-26T19:42:50.097074+00:00",
+      "checked_at": "2026-11-27T19:33:13.187168+00:00",
       "fetch_mode": "browser",
       "preserved": false
     },
@@ -225,7 +225,7 @@
       "count": 0,
       "prior_count": 0,
       "error": "No source page parsed successfully. static ValueError: Batten jobs page contained no /open-searches/ assignment links",
-      "checked_at": "2026-11-26T19:42:58.993729+00:00",
+      "checked_at": "2026-11-27T19:33:29.178754+00:00",
       "fetch_mode": "static",
       "preserved": true
     },
@@ -240,7 +240,7 @@
       "count": 0,
       "prior_count": 5,
       "error": "No source page parsed successfully. static: page content indicates blocking (403/captcha/Cloudflare)",
-      "checked_at": "2026-11-26T19:42:59.473878+00:00",
+      "checked_at": "2026-11-27T19:33:30.200262+00:00",
       "fetch_mode": "static",
       "preserved": true
     },
@@ -255,7 +255,7 @@
       "count": 3,
       "prior_count": 3,
       "error": "",
-      "checked_at": "2026-11-26T19:42:59.659244+00:00",
+      "checked_at": "2026-11-27T19:33:33.472334+00:00",
       "fetch_mode": "browser",
       "preserved": false
     },
@@ -270,7 +270,7 @@
       "count": 5,
       "prior_count": 3,
       "error": "",
-      "checked_at": "2026-11-26T19:43:09.301432+00:00",
+      "checked_at": "2026-11-27T19:33:42.674655+00:00",
       "fetch_mode": "static",
       "preserved": false
     },
@@ -285,7 +285,7 @@
       "count": 0,
       "prior_count": 15,
       "error": "Found 0 vs 15 previously open; preserving prior roles pending another healthy parse. static: page content indicates blocking (403/captcha/Cloudflare)",
-      "checked_at": "2026-11-26T19:43:09.517536+00:00",
+      "checked_at": "2026-11-27T19:33:42.963875+00:00",
       "fetch_mode": "static+browser",
       "preserved": true
     },
@@ -300,7 +300,7 @@
       "count": 1,
       "prior_count": 1,
       "error": "",
-      "checked_at": "2026-11-26T19:43:13.767817+00:00",
+      "checked_at": "2026-11-27T19:33:47.343400+00:00",
       "fetch_mode": "static",
       "preserved": false
     },
@@ -315,7 +315,7 @@
       "count": 0,
       "prior_count": 6,
       "error": "No source page parsed successfully. static ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
-      "checked_at": "2026-11-26T19:43:13.929242+00:00",
+      "checked_at": "2026-11-27T19:33:47.714105+00:00",
       "fetch_mode": "",
       "preserved": true
     },
@@ -330,7 +330,7 @@
       "count": 1,
       "prior_count": 1,
       "error": "",
-      "checked_at": "2026-11-26T19:43:14.063424+00:00",
+      "checked_at": "2026-11-27T19:33:48.029514+00:00",
       "fetch_mode": "static",
       "preserved": false
     },
@@ -345,7 +345,7 @@
       "count": 0,
       "prior_count": 0,
       "error": "",
-      "checked_at": "2026-11-26T19:43:14.331769+00:00",
+      "checked_at": "2026-11-27T19:33:48.747288+00:00",
       "fetch_mode": "",
       "preserved": false
     },
@@ -360,7 +360,7 @@
       "count": 0,
       "prior_count": 0,
       "error": "",
-      "checked_at": "2026-11-26T19:43:14.331781+00:00",
+      "checked_at": "2026-11-27T19:33:48.747298+00:00",
       "fetch_mode": "",
       "preserved": false
     },
@@ -375,7 +375,7 @@
       "count": 0,
       "prior_count": 0,
       "error": "",
-      "checked_at": "2026-11-26T19:43:14.331786+00:00",
+      "checked_at": "2026-11-27T19:33:48.747303+00:00",
       "fetch_mode": "",
       "preserved": false
     },
@@ -390,7 +390,7 @@
       "count": 0,
       "prior_count": 0,
       "error": "",
-      "checked_at": "2026-11-26T19:43:14.331791+00:00",
+      "checked_at": "2026-11-27T19:33:48.747307+00:00",
       "fetch_mode": "",
       "preserved": false
     },
@@ -405,7 +405,7 @@
       "count": 0,
       "prior_count": 0,
       "error": "",
-      "checked_at": "2026-11-26T19:43:14.331795+00:00",
+      "checked_at": "2026-11-27T19:33:48.747310+00:00",
       "fetch_mode": "",
       "preserved": false
     },
@@ -420,7 +420,7 @@
       "count": 2,
       "prior_count": 2,
       "error": "",
-      "checked_at": "2026-11-26T19:43:14.331800+00:00",
+      "checked_at": "2026-11-27T19:33:48.747314+00:00",
       "fetch_mode": "static",
       "preserved": false
     },
@@ -435,7 +435,7 @@
       "count": 1,
       "prior_count": 1,
       "error": "",
-      "checked_at": "2026-11-26T19:43:19.928813+00:00",
+      "checked_at": "2026-11-27T19:33:56.247567+00:00",
       "fetch_mode": "static",
       "preserved": false
     },
@@ -450,7 +450,7 @@
       "count": 0,
       "prior_count": 0,
       "error": "",
-      "checked_at": "2026-11-26T19:43:20.222869+00:00",
+      "checked_at": "2026-11-27T19:33:56.460880+00:00",
       "fetch_mode": "",
       "preserved": false
     },
@@ -465,7 +465,7 @@
       "count": 0,
       "prior_count": 0,
       "error": "browser: page content indicates blocking (403/captcha/Cloudflare)",
-      "checked_at": "2026-11-26T19:43:20.222882+00:00",
+      "checked_at": "2026-11-27T19:33:56.460899+00:00",
       "fetch_mode": "static+browser",
       "preserved": true
     },
@@ -475,14 +475,14 @@
       "mode": "automated",
       "group": "Additional sites to check",
       "notes": "Open Executive Searches.",
-      "status": "failed",
-      "ok": false,
-      "count": 0,
+      "status": "ok",
+      "ok": true,
+      "count": 5,
       "prior_count": 5,
-      "error": "No source page parsed successfully. static ReadTimeout: HTTPSConnectionPool(host='www.nonprofithr.com', port=443): Read timed out. (read timeout=30)",
-      "checked_at": "2026-11-26T19:43:26.282212+00:00",
-      "fetch_mode": "",
-      "preserved": true
+      "error": "",
+      "checked_at": "2026-11-27T19:34:01.963024+00:00",
+      "fetch_mode": "static",
+      "preserved": false
     },
     {
       "source": "POLIHIRE",
@@ -495,7 +495,7 @@
       "count": 0,
       "prior_count": 0,
       "error": "",
-      "checked_at": "2026-11-26T19:43:56.397576+00:00",
+      "checked_at": "2026-11-27T19:34:08.514799+00:00",
       "fetch_mode": "static",
       "preserved": false
     },
@@ -510,7 +510,7 @@
       "count": 0,
       "prior_count": 0,
       "error": "",
-      "checked_at": "2026-11-26T19:43:56.568447+00:00",
+      "checked_at": "2026-11-27T19:34:08.887069+00:00",
       "fetch_mode": "",
       "preserved": false
     },
@@ -525,7 +525,7 @@
       "count": 6,
       "prior_count": 6,
       "error": "",
-      "checked_at": "2026-11-26T19:43:56.568462+00:00",
+      "checked_at": "2026-11-27T19:34:08.887092+00:00",
       "fetch_mode": "static",
       "preserved": false
     },
@@ -540,7 +540,7 @@
       "count": 0,
       "prior_count": 0,
       "error": "No source page parsed successfully. static: page content indicates blocking (403/captcha/Cloudflare)",
-      "checked_at": "2026-11-26T19:43:57.653706+00:00",
+      "checked_at": "2026-11-27T19:34:10.234476+00:00",
       "fetch_mode": "static",
       "preserved": true
     },
@@ -555,7 +555,7 @@
       "count": 0,
       "prior_count": 0,
       "error": "",
-      "checked_at": "2026-11-26T19:43:57.973605+00:00",
+      "checked_at": "2026-11-27T19:34:10.748101+00:00",
       "fetch_mode": "",
       "preserved": false
     },
@@ -570,7 +570,7 @@
       "count": 3,
       "prior_count": 1,
       "error": "",
-      "checked_at": "2026-11-26T19:43:57.973624+00:00",
+      "checked_at": "2026-11-27T19:34:10.748123+00:00",
       "fetch_mode": "static",
       "preserved": false
     },
@@ -585,7 +585,7 @@
       "count": 7,
       "prior_count": 7,
       "error": "",
-      "checked_at": "2026-11-26T19:43:58.104371+00:00",
+      "checked_at": "2026-11-27T19:34:11.506942+00:00",
       "fetch_mode": "static",
       "preserved": false
     },
@@ -600,7 +600,7 @@
       "count": 0,
       "prior_count": 0,
       "error": "",
-      "checked_at": "2026-11-26T19:43:58.243873+00:00",
+      "checked_at": "2026-11-27T19:34:11.938860+00:00",
       "fetch_mode": "",
       "preserved": false
     },
@@ -615,7 +615,7 @@
       "count": 0,
       "prior_count": 0,
       "error": "",
-      "checked_at": "2026-11-26T19:43:58.243888+00:00",
+      "checked_at": "2026-11-27T19:34:11.938872+00:00",
       "fetch_mode": "",
       "preserved": false
     },
@@ -625,12 +625,12 @@
       "mode": "automated",
       "group": "Executive search firms",
       "notes": "Management consulting for arts and creative industries; executive search for theaters, museums, performing arts.",
-      "status": "checked-no-matches",
+      "status": "ok",
       "ok": true,
-      "count": 0,
+      "count": 3,
       "prior_count": 2,
       "error": "",
-      "checked_at": "2026-11-26T19:43:58.243895+00:00",
+      "checked_at": "2026-11-27T19:34:11.938876+00:00",
       "fetch_mode": "static",
       "preserved": false
     },
@@ -645,7 +645,7 @@
       "count": 0,
       "prior_count": 0,
       "error": "",
-      "checked_at": "2026-11-26T19:43:58.473484+00:00",
+      "checked_at": "2026-11-27T19:34:12.692693+00:00",
       "fetch_mode": "",
       "preserved": false
     },
@@ -660,7 +660,7 @@
       "count": 0,
       "prior_count": 0,
       "error": "",
-      "checked_at": "2026-11-26T19:43:58.473501+00:00",
+      "checked_at": "2026-11-27T19:34:12.692705+00:00",
       "fetch_mode": "",
       "preserved": false
     },
@@ -675,7 +675,7 @@
       "count": 0,
       "prior_count": 0,
       "error": "",
-      "checked_at": "2026-11-26T19:43:58.473507+00:00",
+      "checked_at": "2026-11-27T19:34:12.692709+00:00",
       "fetch_mode": "",
       "preserved": false
     },
@@ -690,7 +690,7 @@
       "count": 0,
       "prior_count": 0,
       "error": "",
-      "checked_at": "2026-11-26T19:43:58.473512+00:00",
+      "checked_at": "2026-11-27T19:34:12.692713+00:00",
       "fetch_mode": "",
       "preserved": false
     },
@@ -705,7 +705,7 @@
       "count": 3,
       "prior_count": 3,
       "error": "",
-      "checked_at": "2026-11-26T19:43:58.473517+00:00",
+      "checked_at": "2026-11-27T19:34:12.692716+00:00",
       "fetch_mode": "static",
       "preserved": false
     },
@@ -720,7 +720,7 @@
       "count": 1,
       "prior_count": 1,
       "error": "",
-      "checked_at": "2026-11-26T19:43:59.155037+00:00",
+      "checked_at": "2026-11-27T19:34:13.268839+00:00",
       "fetch_mode": "static",
       "preserved": false
     },
@@ -735,7 +735,7 @@
       "count": 5,
       "prior_count": 5,
       "error": "",
-      "checked_at": "2026-11-26T19:43:59.295619+00:00",
+      "checked_at": "2026-11-27T19:34:13.487519+00:00",
       "fetch_mode": "static",
       "preserved": false
     },
@@ -750,7 +750,7 @@
       "count": 8,
       "prior_count": 8,
       "error": "",
-      "checked_at": "2026-11-26T19:43:59.903561+00:00",
+      "checked_at": "2026-11-27T19:34:14.046173+00:00",
       "fetch_mode": "static",
       "preserved": false
     },
@@ -765,7 +765,7 @@
       "count": 3,
       "prior_count": 1,
       "error": "",
-      "checked_at": "2026-11-26T19:44:05.737477+00:00",
+      "checked_at": "2026-11-27T19:34:19.149926+00:00",
       "fetch_mode": "static",
       "preserved": false
     },
@@ -780,7 +780,7 @@
       "count": 27,
       "prior_count": 20,
       "error": "",
-      "checked_at": "2026-11-26T19:44:05.914115+00:00",
+      "checked_at": "2026-11-27T19:34:19.470386+00:00",
       "fetch_mode": "static",
       "preserved": false
     },
@@ -795,7 +795,7 @@
       "count": 0,
       "prior_count": 0,
       "error": "",
-      "checked_at": "2026-11-26T19:44:06.374120+00:00",
+      "checked_at": "2026-11-27T19:34:19.840702+00:00",
       "fetch_mode": "",
       "preserved": false
     },
@@ -810,7 +810,7 @@
       "count": 0,
       "prior_count": 0,
       "error": "No source page parsed successfully. static: page content indicates blocking (403/captcha/Cloudflare)",
-      "checked_at": "2026-11-26T19:44:06.374162+00:00",
+      "checked_at": "2026-11-27T19:34:19.840727+00:00",
       "fetch_mode": "static",
       "preserved": true
     },
@@ -825,7 +825,7 @@
       "count": 0,
       "prior_count": 0,
       "error": "",
-      "checked_at": "2026-11-26T19:44:06.530557+00:00",
+      "checked_at": "2026-11-27T19:34:20.104596+00:00",
       "fetch_mode": "",
       "preserved": false
     },
@@ -840,7 +840,7 @@
       "count": 0,
       "prior_count": 0,
       "error": "",
-      "checked_at": "2026-11-26T19:44:06.530580+00:00",
+      "checked_at": "2026-11-27T19:34:20.104617+00:00",
       "fetch_mode": "",
       "preserved": false
     },
@@ -855,7 +855,7 @@
       "count": 0,
       "prior_count": 0,
       "error": "",
-      "checked_at": "2026-11-26T19:44:06.530587+00:00",
+      "checked_at": "2026-11-27T19:34:20.104623+00:00",
       "fetch_mode": "",
       "preserved": false
     },
@@ -870,7 +870,7 @@
       "count": 0,
       "prior_count": 0,
       "error": "",
-      "checked_at": "2026-11-26T19:44:06.530593+00:00",
+      "checked_at": "2026-11-27T19:34:20.104628+00:00",
       "fetch_mode": "",
       "preserved": false
     },
@@ -880,14 +880,14 @@
       "mode": "automated",
       "group": "Executive search firms",
       "notes": "Boutique consulting serving progressive nonprofits; fundraising, executive searches, staffing.",
-      "status": "blocked",
-      "ok": false,
+      "status": "checked-no-matches",
+      "ok": true,
       "count": 0,
       "prior_count": 0,
-      "error": "No source page parsed successfully. static: page content indicates blocking (403/captcha/Cloudflare)",
-      "checked_at": "2026-11-26T19:44:06.530598+00:00",
+      "error": "",
+      "checked_at": "2026-11-27T19:34:20.104631+00:00",
       "fetch_mode": "static",
-      "preserved": true
+      "preserved": false
     },
     {
       "source": "CMP / Career Management Partners",
@@ -900,7 +900,7 @@
       "count": 0,
       "prior_count": 0,
       "error": "",
-      "checked_at": "2026-11-26T19:44:06.729924+00:00",
+      "checked_at": "2026-11-27T19:34:20.331925+00:00",
       "fetch_mode": "",
       "preserved": false
     },
@@ -915,34 +915,30 @@
       "count": 0,
       "prior_count": 0,
       "error": "",
-      "checked_at": "2026-11-26T19:44:06.729945+00:00",
+      "checked_at": "2026-11-27T19:34:20.331942+00:00",
       "fetch_mode": "",
       "preserved": false
     }
   ],
   "market_take": {
-    "generated_at": "2026-11-26T19:41:10.262022+00:00",
+    "generated_at": "2026-11-27T19:30:24.593483+00:00",
     "sentences": [
-      "60 new chief-executive searches surfaced in the past 7 days; 36 closed.",
-      "New searches lean education (16 of 60).",
-      "The most common board mandate is fundraising / revenue (75 of 191 open searches).",
+      "62 new chief-executive searches surfaced in the past 7 days; 35 closed.",
+      "New searches lean education (16 of 62).",
+      "The most common board mandate is fundraising / revenue (76 of 193 open searches).",
       "Isaacson, Miller is running the most open searches (41).",
-      "87 open searches disclose compensation."
+      "89 open searches disclose compensation."
     ],
     "comparisons": {
       "new_searches": {
-        "this_week": 60,
-        "trailing_4wk_avg": 6.2,
-        "trailing_4wk_total": 25
+        "this_week": 62,
+        "trailing_4wk_avg": 6.8,
+        "trailing_4wk_total": 27
       },
       "by_sector": {
         "Environment": {
           "this_week": 8,
-          "trailing_4wk_avg": 0.5
-        },
-        "Unclassified": {
-          "this_week": 10,
-          "trailing_4wk_avg": 0.2
+          "trailing_4wk_avg": 0.8
         },
         "International": {
           "this_week": 8,
@@ -961,19 +957,19 @@
           "trailing_4wk_avg": 1.0
         },
         "Health": {
-          "this_week": 3,
+          "this_week": 4,
           "trailing_4wk_avg": 0.8
         },
-        "Media / Journalism": {
-          "this_week": 1,
+        "Philanthropy": {
+          "this_week": 5,
           "trailing_4wk_avg": 0.2
+        },
+        "Unclassified": {
+          "this_week": 9,
+          "trailing_4wk_avg": 0.5
         },
         "Arts / Culture": {
           "this_week": 1,
-          "trailing_4wk_avg": 0.0
-        },
-        "Philanthropy": {
-          "this_week": 2,
           "trailing_4wk_avg": 0.0
         }
       }
